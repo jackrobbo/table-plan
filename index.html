@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Sundays</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Karla:wght@400;500;600;700&family=Spline+Sans+Mono:wght@400;500;600&display=swap">
+<style>
+  :root{
+    --paper:#f6f7f2; --card:#ffffff; --ink:#182219; --muted:#5a6a5d; --line:#dde3da;
+    --spruce:#1f4430; --leaf:#2e7d4f; --leaf-soft:#e3efe7;
+    --ticket:#ffd84d; --ticket-ink:#231d05; --danger:#a34a2a;
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --paper:#111a14; --card:#18241b; --ink:#e6ece5; --muted:#98a89b; --line:#2a382e;
+      --spruce:#a9d4b6; --leaf:#5cbb80; --leaf-soft:#1d3226;
+      --ticket:#f2c832; --ticket-ink:#231d05; --danger:#d9825d;
+    }
+  }
+  :root[data-theme="dark"]{
+    --paper:#111a14; --card:#18241b; --ink:#e6ece5; --muted:#98a89b; --line:#2a382e;
+    --spruce:#a9d4b6; --leaf:#5cbb80; --leaf-soft:#1d3226;
+    --ticket:#f2c832; --ticket-ink:#231d05; --danger:#d9825d;
+  }
+  *{box-sizing:border-box; -webkit-tap-highlight-color:transparent;}
+  body{margin:0; background:var(--paper); color:var(--ink);
+    font-family:'Karla',-apple-system,sans-serif; font-size:16px; line-height:1.55;}
+  .wrap{max-width:680px; margin:0 auto; padding:28px 18px 80px;}
+  h1,h2,h3{font-family:'Fraunces',Georgia,serif; line-height:1.15; margin:0; text-wrap:balance;}
+  h1{font-size:40px; font-weight:700; color:var(--spruce);}
+  h2{font-size:24px; font-weight:600; margin-bottom:6px;}
+  h3{font-size:17px; font-weight:600;}
+  p{margin:0 0 12px; max-width:60ch;}
+  .muted{color:var(--muted); font-size:14.5px;}
+  .eyebrow{font-size:11.5px; font-weight:700; letter-spacing:0.13em; text-transform:uppercase; color:var(--leaf); margin:0 0 10px;}
+  .steps{display:flex; gap:8px; margin:18px 0 26px;}
+  .stepdot{flex:1; height:4px; border-radius:99px; background:var(--line);}
+  .stepdot.on{background:var(--leaf);}
+  .panel{display:none;} .panel.show{display:block; animation:fade .25s ease;}
+  @keyframes fade{from{opacity:0; transform:translateY(4px);} to{opacity:1; transform:none;}}
+  .chips{display:flex; gap:8px; flex-wrap:wrap; margin:8px 0 18px;}
+  .chip{border:1.5px solid var(--line); background:var(--card); color:var(--ink); border-radius:999px;
+    padding:9px 18px; font:inherit; font-weight:600; cursor:pointer; font-size:15px;}
+  .chip.on{background:var(--spruce); border-color:var(--spruce); color:var(--paper);}
+  :root[data-theme="dark"] .chip.on, .chip.on{color:#f6f7f2;}
+  label.f{display:block; font-size:12.5px; font-weight:700; text-transform:uppercase; letter-spacing:0.05em; color:var(--muted); margin:0 0 4px;}
+  input,select{font:inherit; font-size:16px; padding:10px 12px; border:1.5px solid var(--line); border-radius:10px;
+    background:var(--card); color:var(--ink); width:100%;}
+  .grid2{display:grid; grid-template-columns:1fr 1fr; gap:12px; max-width:420px;}
+  .btn{display:inline-block; border:none; background:var(--spruce); color:#f6f7f2; font:inherit; font-weight:700;
+    font-size:16px; padding:13px 26px; border-radius:12px; cursor:pointer; margin-top:10px;}
+  .btn:disabled{opacity:0.45; cursor:default;}
+  .btn.ghost{background:transparent; color:var(--leaf); border:1.5px solid var(--line);}
+  .targets{display:flex; gap:10px; margin:16px 0 4px; flex-wrap:wrap;}
+  .ticketc{background:var(--ticket); color:var(--ticket-ink); border-radius:4px 4px 10px 10px; padding:10px 14px 8px;
+    min-width:130px; position:relative; box-shadow:0 2px 0 rgba(0,0,0,0.12);}
+  .ticketc::before{content:''; position:absolute; top:0; left:0; right:0; height:4px; background:var(--spruce); border-radius:4px 4px 0 0;}
+  .ticketc .big{font-family:'Spline Sans Mono',monospace; font-weight:600; font-size:21px; display:block; margin-top:4px; font-variant-numeric:tabular-nums;}
+  .ticketc .lbl{font-size:11px; font-weight:700; text-transform:uppercase; letter-spacing:0.03em;}
+  .rgrid{display:grid; grid-template-columns:repeat(auto-fill,minmax(150px,1fr)); gap:10px; margin:10px 0 22px;}
+  .rcard{background:var(--card); border:1.5px solid var(--line); border-radius:12px; padding:12px 12px 10px; cursor:pointer; position:relative;}
+  .rcard .emoji{font-size:26px; display:block; margin-bottom:6px;}
+  .rcard .nm{font-weight:700; font-size:14px; line-height:1.3; display:block;}
+  .rcard .mc{font-size:12px; color:var(--muted); font-variant-numeric:tabular-nums; margin-top:3px; display:block;}
+  .rcard.on{border-color:var(--leaf); background:var(--leaf-soft);}
+  .rcard.on::after{content:'✓'; position:absolute; top:8px; right:10px; color:var(--leaf); font-weight:700;}
+  .coursehead{margin:20px 0 4px; display:flex; justify-content:space-between; align-items:baseline;}
+  .coursehead .need{font-size:12.5px; color:var(--muted); font-variant-numeric:tabular-nums;}
+  .coursehead .need.ok{color:var(--leaf); font-weight:700;}
+  .day{background:var(--card); border:1px solid var(--line); border-left:4px solid var(--leaf); border-radius:12px;
+    padding:2px 16px 6px; margin:12px 0;}
+  .day h3{padding:12px 0 8px; display:flex; justify-content:space-between; gap:8px; align-items:baseline;}
+  .day h3 .tot{font-size:12.5px; font-weight:600; color:var(--muted); font-variant-numeric:tabular-nums; white-space:nowrap;}
+  .meal{display:flex; gap:10px; padding:9px 0; border-top:0.5px solid var(--line); align-items:baseline; font-size:14.5px;}
+  .meal .slot{flex:0 0 66px; font-size:10.5px; font-weight:700; text-transform:uppercase; letter-spacing:0.04em; color:var(--muted); padding-top:3px;}
+  .meal .nm{flex:1; font-weight:600;}
+  .meal .mc{font-size:12px; color:var(--muted); white-space:nowrap; font-variant-numeric:tabular-nums;}
+  details.method{margin:0 0 6px;} details.method summary{cursor:pointer; font-size:13px; color:var(--leaf); font-weight:600;}
+  details.method ol{margin:6px 0 4px; padding-left:1.2em; font-size:14px;} details.method li{margin-bottom:4px;}
+  .sgroup h4{margin:20px 0 6px; font-size:12.5px; font-weight:700; text-transform:uppercase; letter-spacing:0.04em; color:var(--muted);}
+  .sitem{display:flex; justify-content:space-between; gap:10px; padding:9px 14px; background:var(--card);
+    border-bottom:0.5px solid var(--line); font-size:14.5px; align-items:baseline;}
+  .sgroup .sitem:first-of-type{border-radius:12px 12px 0 0;}
+  .sgroup .sitem:last-of-type{border-radius:0 0 12px 12px; border-bottom:none;}
+  .sitem a{color:var(--leaf); text-decoration:none; font-weight:600;}
+  .sitem .use{display:block; font-size:12px; color:var(--muted); margin-top:1px;}
+  .sitem .pr{font-family:'Spline Sans Mono',monospace; font-size:13.5px; white-space:nowrap; font-variant-numeric:tabular-nums;}
+  .total{background:var(--card); border:1px solid var(--line); border-radius:12px; padding:13px 16px; margin:16px 0 6px;
+    display:flex; justify-content:space-between; font-weight:700; font-size:16px; font-variant-numeric:tabular-nums;}
+  .note{background:var(--leaf-soft); border-radius:12px; padding:11px 14px; font-size:13.5px; margin:12px 0; color:var(--ink);}
+  .warn{color:var(--danger); font-weight:700;}
+  footer{margin-top:34px; border-top:1px solid var(--line); padding-top:14px;}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <p class="eyebrow">Sundays · proof of concept</p>
+  <h1 id="hero">Your week, decided.</h1>
+  <p class="muted" style="margin-top:8px">Pick a goal, pick meals you actually like, and get a Mon–Fri plan that hits your numbers — with the shopping list priced at Morrisons, sized to real packs.</p>
+  <div class="steps"><div class="stepdot on" id="d1"></div><div class="stepdot" id="d2"></div><div class="stepdot" id="d3"></div></div>
+
+  <!-- STEP 1 -->
+  <section id="s1" class="panel show">
+    <h2>What's the goal?</h2>
+    <div class="chips" id="goalChips">
+      <button class="chip on" data-g="lose">Lose weight</button>
+      <button class="chip" data-g="maintain">Maintain</button>
+      <button class="chip" data-g="gain">Build</button>
+    </div>
+    <h3 style="margin-bottom:2px">About you <span class="muted" style="font-weight:400">(optional — better numbers if you share)</span></h3>
+    <div class="grid2" style="margin-top:10px">
+      <div><label class="f">Sex</label><select id="sex"><option value="">Skip</option><option value="f">Female</option><option value="m">Male</option></select></div>
+      <div><label class="f">Age</label><input id="age" type="number" inputmode="numeric" placeholder="e.g. 34"></div>
+      <div><label class="f">Height cm</label><input id="ht" type="number" inputmode="numeric" placeholder="e.g. 168"></div>
+      <div><label class="f">Weight kg</label><input id="wt" type="number" inputmode="numeric" placeholder="e.g. 74"></div>
+      <div style="grid-column:1/-1"><label class="f">Activity</label><select id="act">
+        <option value="1.2">Mostly sitting</option><option value="1.375" selected>Lightly active</option><option value="1.55">Active / training</option></select></div>
+    </div>
+    <h3 style="margin:18px 0 2px">Cooking dinners for</h3>
+    <div class="chips" id="hhChips">
+      <button class="chip" data-h="1">Just me</button>
+      <button class="chip on" data-h="2">Two of us</button>
+    </div>
+    <div class="targets" id="targetRow"></div>
+    <p class="muted" id="targetNote"></p>
+    <button class="btn" onclick="toStep(2)">Pick your meals →</button>
+    <p class="muted" style="margin-top:14px">General nutrition guidance, not medical advice. If you have a medical condition or take medication, talk to your GP before changing your diet.</p>
+  </section>
+
+  <!-- STEP 2 -->
+  <section id="s2" class="panel">
+    <h2>Tick what you'd happily eat</h2>
+    <p class="muted">The planner only ever uses meals you've picked.</p>
+    <div id="bank"></div>
+    <button class="btn" id="buildBtn" onclick="toStep(3)" disabled>Build my week →</button>
+    <button class="btn ghost" onclick="toStep(1)">← Back</button>
+  </section>
+
+  <!-- STEP 3 -->
+  <section id="s3" class="panel">
+    <h2>Monday to Friday, sorted</h2>
+    <p class="muted" id="planSummary"></p>
+    <div id="week"></div>
+    <h2 style="margin-top:26px">The shop</h2>
+    <p class="muted">Every line links to the real Morrisons product. Prices verified Sept 2026.</p>
+    <div id="shop"></div>
+    <div class="note"><b>Store cupboard check</b> — staples this week's cooking dips into; buy only if you're out:<span id="cupboard"></span></div>
+    <button class="btn" onclick="buildPlan()">↻ Regenerate week</button>
+    <button class="btn ghost" onclick="toStep(2)">← Change meals</button>
+  </section>
+
+  <footer><p class="muted">Sundays proof of concept · recipe bank and prices proven on a live 4-week household rotation · not medical advice.</p></footer>
+</div>
+
+<script>
+/* ================= PRODUCT BANK (Morrisons, verified Sept 2026; prices in pence) ================= */
+const P={
+  breast:{n:'Morrisons British Chicken Breast Fillets 1kg',pr:699,pack:1000,u:'g',s:'morrisons-british-chicken-breast-fillets-1kg/108444711'},
+  thigh:{n:'Morrisons British Boneless Chicken Thigh Fillets 1kg',pr:725,pack:1000,u:'g',s:'morrisons-british-boneless-chicken-thigh-fillets-1kg/108854278'},
+  mince:{n:'Morrisons British Beef Steak Mince 5% Fat 250g',pr:295,pack:250,u:'g',s:'morrisons-british-beef-steak-mince-5-fat-250g/109897499'},
+  sizzle:{n:'Morrisons British Beef Sizzle Steak 320g',pr:525,pack:320,u:'g',s:'morrisons-british-beef-sizzle-steak-320g/112613434'},
+  rump:{n:'Morrisons British Beef Rump Steak 200g',pr:293,pack:200,u:'g',s:'morrisons-british-beef-rump-steak-200g/115888652'},
+  prawns:{n:'Morrisons Savers King Prawns 150g',pr:249,pack:150,u:'g',s:'morrisons-savers-king-prawns/112570964'},
+  roast:{n:'Morrisons Roast Chicken Breast Slices 180g',pr:375,pack:180,u:'g',s:'morrisons-roast-chicken-slices-180g/112780136'},
+  ham:{n:'Morrisons British Cooked Ham 120g',pr:200,pack:120,u:'g',s:'morrisons-british-cooked-ham-120g/112634551'},
+  bacon:{n:'Morrisons Lean Smoked Bacon Medallions 8pk',pr:325,pack:8,u:'medallions',s:'morrisons-8-lean-smoked-bacon-medallions/111008110'},
+  eggs:{n:'Morrisons Medium Free Range Eggs 6 Pack',pr:180,pack:6,u:'eggs',s:'morrisons-medium-free-range-eggs-6-pack/105828736'},
+  milk:{n:'Morrisons British Semi Skimmed Milk 4 Pint',pr:165,pack:2272,u:'ml',s:'morrisons-british-semi-skimmed-milk-4-pint/113240422'},
+  yog:{n:'Morrisons Protein Yogurt 200g pot',pr:75,pack:1,u:'pots',s:'morrisons-strawberry-protein-yogurt/113699428'},
+  greek:{n:'Morrisons Greek Style Yogurt 500g',pr:115,pack:500,u:'g',s:'morrisons-greek-style-yogurt-500g/103078919'},
+  loaf:{n:'Morrisons White Farmhouse Loaf 800g',pr:110,pack:16,u:'slices',s:'morrisons-white-farmhouse-loaf-800g/113876869'},
+  wraps:{n:'Morrisons Plain Tortilla Wraps 8pk',pr:140,pack:8,u:'wraps',s:'morrisons-plain-tortilla-wraps-8-pack/112909657'},
+  mission:{n:'Mission Protein Tortilla Wraps 6pk',pr:180,pack:6,u:'wraps',s:'mission-protein-tortilla-wraps-367g/114821317'},
+  pittas:{n:'Morrisons Stonebaked Wholemeal Pittas 6pk',pr:50,pack:6,u:'pittas',s:'morrisons-stonebaked-wholemeal-pittas/109515921'},
+  houm:{n:'Morrisons Red Pepper Houmous 200g',pr:130,pack:200,u:'g',s:'morrisons-red-pepper-houmous-200g/109734809'},
+  blueb:{n:'Morrisons Savers Blueberries 125g',pr:129,pack:125,u:'g',s:'morrisons-savers-blueberries-125g/113455600'},
+  banana:{n:'Fyffes Bananas 5 Pack',pr:78,pack:5,u:'bananas',s:'fyffes-bananas-5-pack/115455355'},
+  apple:{n:'Gala Apple (loose)',pr:45,pack:1,u:'apples',s:'morrisons-loose-royal-gala-apples/109861752'},
+  lemon:{n:'Lemon (loose)',pr:37,pack:1,u:'lemons',s:'morrisons-loose-lemon/108379999'},
+  iceberg:{n:'Morrisons British Iceberg Lettuce',pr:89,pack:1,u:'heads',s:'morrisons-british-iceberg-lettuce/108370943'},
+  cuc:{n:'Whole Cucumber',pr:99,pack:1,u:'cucumbers',s:'morrisons-whole-cucumber/108413093'},
+  plum:{n:'Morrisons Baby Plum Tomatoes 250g',pr:77,pack:250,u:'g',s:'morrisons-baby-plum-tomatoes-250g/108388174'},
+  salad:{n:'Morrisons Crispy Salad 120g',pr:100,pack:120,u:'g',s:'morrisons-crispy-salad-120g/115831779'},
+  onions:{n:'Morrisons Brown Onions 3 Pack',pr:95,pack:3,u:'onions',s:'morrisons-brown-onions-3-pack/113301635'},
+  spring:{n:'Morrisons Salad Onions (bunch)',pr:69,pack:1,u:'bunches',s:'morrisons-salad-onions-minimum-100g/108336382'},
+  carrots:{n:'Morrisons British Carrots 500g',pr:44,pack:500,u:'g',s:'morrisons-british-carrots-500g/108305383'},
+  pepper:{n:'Red Pepper (loose)',pr:70,pack:1,u:'peppers',s:'morrisons-loose-red-pepper/108407187'},
+  mixpep:{n:'Morrisons Savers Mixed Peppers 3 Pack',pr:169,pack:3,u:'peppers',s:'morrisons-savers-mixed-peppers-3-pack-colours-may-vary/112916566'},
+  chilli:{n:'Morrisons Fresh Red Chillies 50g',pr:59,pack:50,u:'g',s:'morrisons-fresh-red-chillies-50g/108384886'},
+  brocc:{n:'Morrisons British Organic Broccoli 300g',pr:140,pack:300,u:'g',s:'morrisons-british-organic-broccoli-300g/112683256'},
+  pouch:{n:'Morrisons Baby Potatoes with Chives & Butter 350g',pr:225,pack:350,u:'g',s:'morrisons-baby-potatoes-with-chives-salted-butter-350g/114805886'},
+  cobs:{n:'Morrisons 2 Sweetcorn Cobs',pr:139,pack:2,u:'cobs',s:'morrisons-2-sweetcorn-cobs/108460586'},
+  stirfry:{n:'Morrisons Vegetable Stir Fry Mix 500g',pr:247,pack:500,u:'g',s:'morrisons-stir-fry-vegetables/104896753'},
+  slices:{n:'Morrisons Crispy Potato Slices 300g',pr:150,pack:300,u:'g',s:'morrisons-crispy-potato-slices/112818018'},
+  medley:{n:'Morrisons Green Vegetable Medley 250g',pr:210,pack:250,u:'g',s:'morrisons-green-vegetable-medley-250g/115851497'},
+  spinach:{n:'Morrisons Baby Spinach 160g',pr:100,pack:160,u:'g',s:'morrisons-baby-spinach-160g/108320372'},
+  creme:{n:'Morrisons Reduced Fat Crème Fraîche 300ml',pr:75,pack:300,u:'ml',s:'morrisons-british-reduced-fat-creme-fraiche/113016990'},
+  ctoms:{n:'Morrisons Chopped Tomatoes 400g',pr:45,pack:400,u:'g',s:'morrisons-chopped-tomatoes-400g/105415501'},
+  kidney:{n:'Morrisons Red Kidney Beans 400g',pr:37,pack:400,u:'g',s:'morrisons-red-kidney-beans-400g/105408168'},
+  grenade:{n:'Grenade Oreo Protein Bars 4×60g',pr:1000,pack:4,u:'bars',s:'grenade-protein-bars-oreo-4x60g/113338551'},
+  wafer:{n:'Myprotein Protein Wafer Vanilla 40g',pr:200,pack:1,u:'wafers',s:'myprotein-protein-wafer-vanilla/114041821'},
+  pops:{n:'Novo Protein Pops Sour Cream & Onion 45g',pr:125,pack:1,u:'bags',s:'novo-protein-pops-sour-cream-and-onion/114016545'},
+  babybel:{n:'Mini Babybel Original 6×20g',pr:245,pack:6,u:'cheeses',s:'mini-babybel-original-cheese-snacks/103090117'},
+};
+const CUPBOARD_INFO={
+  rice:'Easy Cook Long Grain Rice 1kg · £1.25', spaghetti:'Spaghetti 500g · £0.75', fusilli:'Fusilli 500g · £0.75',
+  noodles:'Fine Egg Noodles 250g · £0.95', lasagne:'Lasagne Sheets 300g · £0.75', granola:'FUEL10K Protein Granola 400g · £3.75',
+  butter:'Spreadable Butter 500g · £2.18', puree:'Tomato Puree 200g · £0.59', tuna:'Tuna Chunks in Brine 4×145g · £2.49',
+  peri:"Nando's Peri-Peri Rub 25g · £1.25", fajita:'Fajita Seasoning 40g · £1.09', fivespice:'Chinese 5 Spice 33g · £1.09',
+  soy:'Light Soy Sauce 150ml · £0.90', honey:'Clear Honey 454g · £1.95', teriyaki:'Teriyaki Stir Fry Sauce 152g · £0.55',
+  mayo:'Light Mayonnaise 500ml · £0.99', seafood:'Seafood Sauce 250ml · £0.63', cheddar:'Savers Mature Cheddar 625g · £3.39',
+  frozenfruit:'Frozen Summer Fruits 430g · £3.35', sweetcorn:'Savers Sweetcorn tin 326g · £0.50', nuts:'Mixed Nuts 180g · £2.55',
+  garlic:'Garlic 400g net · £2.00', parmesan:'Grated Parmigiano Reggiano 100g · £2.80', cornflour:'Cornflour 500g · £2.50',
+  oil:'Vegetable Oil 1L · £1.45', herbs:'Mixed Herbs 14g · £1.09', oregano:'Oregano 28g · £1.90', isolate:'Whey Isolate 1kg (MyProtein) · ~£26',
+};
+
+/* ================= RECIPE BANK (per-portion macros; fresh qtys for stated serves) ================= */
+const R=[
+ // breakfasts (serve 1)
+ {id:'BE',c:'breakfast',e:'🍳',n:'Scrambled Eggs on Toast',p:29,k:500,serves:1,fresh:[['eggs',3],['loaf',2]],cup:['butter'],
+  m:['Whisk 3 eggs with a splash of milk; scramble gently.','Toast 2 slices, butter, pile the eggs on.']},
+ {id:'BS',c:'breakfast',e:'🥤',n:'Protein Smoothie',p:31,k:315,serves:1,fresh:[['banana',1],['milk',200]],cup:['isolate','frozenfruit'],
+  m:['Blend a scoop of isolate, 1 banana, 200ml milk and a handful of frozen berries.']},
+ {id:'BO',c:'breakfast',e:'🫐',n:'Yogurt, Berries & Granola',p:26,k:320,serves:1,fresh:[['yog',1],['blueb',100]],cup:['granola'],
+  m:['Empty a protein yogurt pot into a bowl.','Top with 100g blueberries and 30g protein granola.']},
+ {id:'BB',c:'breakfast',e:'🍌',n:'Yogurt & Banana Bowl',p:24,k:320,serves:1,fresh:[['yog',1],['banana',1]],cup:['nuts'],
+  m:['Yogurt pot in a bowl, sliced banana on top, 15g chopped nuts to finish.']},
+ {id:'BG',c:'breakfast',e:'🥚',n:'Boiled Eggs & Soldiers',p:29,k:500,serves:1,fresh:[['eggs',3],['loaf',2]],cup:['butter'],
+  m:['Soft-boil 3 eggs (~6 min).','Butter 2 slices of toast, cut into soldiers, dip away.']},
+ {id:'BC',c:'breakfast',e:'🌯',n:'Bacon & Egg Breakfast Wrap',p:36,k:450,serves:1,fresh:[['bacon',3],['eggs',2],['mission',1]],cup:[],
+  m:['Grill 3 bacon medallions; scramble 2 eggs.','Warm a protein wrap, fill and roll.']},
+ // lunches (serve 1)
+ {id:'LT',c:'lunch',e:'🐟',n:'Tuna Mayo Pasta Salad',p:36,k:440,serves:1,fresh:[['salad',30]],cup:['tuna','fusilli','mayo','sweetcorn'],
+  m:['Cook 60g fusilli; cool.','Mix a drained tin of tuna with 1 tbsp light mayo.','Toss with pasta, 40g sweetcorn and salad.']},
+ {id:'LE',c:'lunch',e:'🥪',n:'Chicken-Mayo Sandwich',p:33,k:410,serves:1,fresh:[['roast',80],['loaf',2],['salad',20]],cup:['mayo','butter'],
+  m:['Mix 80g roast chicken slices with light mayo.','Build the sandwich with salad.']},
+ {id:'LH',c:'lunch',e:'🥪',n:'Ham & Cheese Sandwich',p:27,k:425,serves:1,fresh:[['ham',60],['loaf',2],['salad',20]],cup:['cheddar','butter'],
+  m:['Butter 2 slices; layer 60g ham, 30g cheddar and salad.']},
+ {id:'LR',c:'lunch',e:'🍤',n:'Prawn Salad',p:23,k:180,serves:1,fresh:[['prawns',150],['iceberg',0.25],['cuc',0.25],['plum',60]],cup:['seafood'],
+  m:['Prawns into a bowl with shredded iceberg, cucumber and halved baby plums.','Dress with Marie Rose sauce.']},
+ {id:'LW',c:'lunch',e:'🌯',n:'Chicken & Hummus Wrap',p:25,k:380,serves:1,fresh:[['roast',80],['houm',30],['iceberg',0.15],['plum',40],['wraps',1]],cup:[],
+  m:['Spread red pepper houmous over a wrap.','Add chicken slices, iceberg and tomatoes; roll.']},
+ {id:'LB',c:'lunch',e:'🍫',n:'Protein Grab-Bag',p:41,k:443,serves:1,fresh:[['grenade',1],['yog',1],['apple',1]],cup:[],
+  m:['Zero prep: a Grenade bar, a protein yogurt pot and an apple.']},
+ // snacks (serve 1)
+ {id:'SG',c:'snack',e:'🍫',n:'Grenade Oreo Bar',p:21,k:233,serves:1,fresh:[['grenade',1]],cup:[],m:[]},
+ {id:'SW',c:'snack',e:'🧇',n:'Protein Wafer',p:15,k:194,serves:1,fresh:[['wafer',1]],cup:[],m:[]},
+ {id:'SN',c:'snack',e:'🍿',n:'Protein Pops',p:10,k:187,serves:1,fresh:[['pops',1]],cup:[],m:[]},
+ {id:'SK',c:'snack',e:'🥛',n:'Protein Yogurt Pot',p:20,k:130,serves:1,fresh:[['yog',1]],cup:[],m:[]},
+ {id:'SD',c:'snack',e:'🧀',n:'Babybel ×2',p:9,k:118,serves:1,fresh:[['babybel',2]],cup:[],m:[]},
+ // dinners (serve 2; macros are your portion)
+ {id:'DSB',c:'dinner',e:'🍝',n:'Spaghetti Bolognese',p:40,k:520,serves:2,fresh:[['mince',250],['onions',1],['carrots',80],['pepper',0.5],['ctoms',400]],cup:['spaghetti','puree','herbs','parmesan','garlic'],
+  m:['Brown the mince; soften the chopped veg.','Add tomatoes, purée and herbs; simmer 20 min.','Serve over spaghetti with parmesan.']},
+ {id:'DFR',c:'dinner',e:'🍚',n:'Chicken Fried Rice',p:50,k:565,serves:2,fresh:[['breast',300],['eggs',2],['onions',0.5],['pepper',0.5],['spring',0.5]],cup:['rice','soy','teriyaki','garlic'],
+  m:['Cook the diced chicken; scramble the eggs; set both aside.','Fry onion and pepper, then the cold rice and garlic; add soy.','Everything back in, stir through teriyaki, top with spring onion.']},
+ {id:'DPP',c:'dinner',e:'🍗',n:'Peri Peri Chicken Thighs',p:55,k:590,serves:2,fresh:[['thigh',600],['pouch',350],['cobs',2]],cup:['peri','oil'],
+  m:['Coat the thighs in peri-peri and oil; roast or air-fry ~22 min.','Microwave the buttered potato pouch; boil the corn cobs.']},
+ {id:'DBT',c:'dinner',e:'🌮',n:'Beef Tacos',p:44,k:615,serves:2,fresh:[['mince',250],['kidney',400],['wraps',4],['iceberg',0.15],['plum',40],['greek',50]],cup:['puree','fajita','garlic','cheddar'],
+  m:['Brown the mince; add seasoning, garlic, purée, beans and a splash of water; simmer till saucy.','Load warm tortillas with iceberg, tomatoes, cheddar and a spoon of Greek yogurt.']},
+ {id:'DHS',c:'dinner',e:'🍯',n:'Honey & Soy Chicken',p:42,k:475,serves:2,fresh:[['breast',280],['brocc',240]],cup:['rice','soy','honey','cornflour','garlic'],
+  m:['Fry the sliced chicken.','Add soy, honey, garlic and water; thicken with a cornflour slurry to a glossy glaze.','Steam broccoli, cook rice, pour every drop of sauce over.']},
+ {id:'DQ',c:'dinner',e:'🫑',n:'Chicken Fajitas',p:43,k:535,serves:2,fresh:[['breast',300],['pepper',1],['onions',0.5],['wraps',4]],cup:['fajita','oil','cheddar'],
+  m:['Toss chicken strips in fajita seasoning; sear hot.','Add pepper and onion for 3–4 min; serve sizzling with warm tortillas and cheddar.']},
+ {id:'DST',c:'dinner',e:'🥩',n:'Steak Night',p:43,k:655,serves:2,fresh:[['rump',400],['slices',300],['medley',250]],cup:['oil'],
+  m:['Oven the crispy potato slices.','Sear the steaks 3–4 min a side; rest.','Steam the green veg medley.']},
+ {id:'DGY',c:'dinner',e:'🥙',n:'Greek Chicken Gyros',p:52,k:515,serves:2,fresh:[['thigh',500],['pittas',2],['iceberg',0.2],['plum',40],['cuc',0.25],['greek',150],['lemon',0.5]],cup:['oregano','garlic','oil'],
+  m:['Marinate sliced thighs in oil, oregano, garlic, lemon; grill till charred.','Mix tzatziki: Greek yogurt, grated cucumber, garlic, lemon.','Build on warm pittas with iceberg and tomatoes.']},
+ {id:'DCT',c:'dinner',e:'🥡',n:'Chinese 5-Spice Stir Fry',p:46,k:560,serves:2,fresh:[['thigh',500],['stirfry',400]],cup:['rice','soy','fivespice'],
+  m:['Fry the thighs with 5-spice till cooked.','Add stir-fry veg 3–4 min with a splash of soy; serve on rice.']},
+ {id:'DFJ',c:'dinner',e:'🌯',n:'Steak Fajitas',p:31,k:475,serves:2,fresh:[['sizzle',320],['mixpep',3],['onions',1],['wraps',3]],cup:['fajita'],
+  m:['Sear the sliced sizzle steak fast; set aside.','Fry peppers and onion; return steak with seasoning.','Serve with warm tortillas.']},
+ {id:'DCP',c:'dinner',e:'🍝',n:'Creamy Chicken Pasta',p:50,k:560,serves:2,fresh:[['breast',280],['creme',100],['spinach',80]],cup:['fusilli','parmesan','garlic'],
+  m:['Cook the chicken with garlic.','Stir in crème fraîche and a splash of pasta water; wilt the spinach in.','Toss with pasta, finish with parmesan.']},
+ {id:'DLA',c:'dinner',e:'🍜',n:'Lasagne',p:42,k:575,serves:2,fresh:[['mince',300],['onions',1],['carrots',80],['ctoms',400],['milk',300]],cup:['lasagne','cornflour','cheddar','puree'],
+  m:['Make the ragu: mince, veg, tomatoes, purée; simmer.','Cheese sauce from scratch: whisk cornflour into cold milk, heat till thick, melt in cheddar.','Layer, top with cheddar, bake 35–40 min at 200°C.']},
+ {id:'DSP',c:'dinner',e:'🍗',n:'Salt & Pepper Chicken',p:46,k:570,serves:2,fresh:[['breast',280],['pepper',1],['onions',1],['chilli',10],['spring',0.5],['eggs',2]],cup:['rice','cornflour','fivespice'],
+  m:['Toss diced chicken in seasoned cornflour; fry till crisp.','Stir-fry pepper, onion, chilli.','Egg-fried rice; combine everything.']},
+ {id:'DTS',c:'dinner',e:'🍜',n:'Teriyaki Chicken Noodles',p:46,k:540,serves:2,fresh:[['breast',280],['stirfry',400]],cup:['noodles','teriyaki'],
+  m:['Fry the sliced chicken.','Add stir-fry veg, then teriyaki sauce and cooked noodles; toss.']},
+];
+const TOPUPS=[{n:'Banana',p:1,k:95,prod:'banana',qty:1},{n:'Protein yogurt pot',p:20,k:130,prod:'yog',qty:1},{n:'Babybel ×2',p:9,k:118,prod:'babybel',qty:2}];
+
+/* ================= STATE + TARGETS ================= */
+const $=s=>document.querySelector(s);
+let state={goal:'lose',hh:2,liked:new Set(['BE','BO','BS','LR','LW','LE','SG','SK','SW','DFR','DPP','DBT','DHS','DGY','DCP']),plan:null,targets:null};
+
+function targets(){
+  const sex=$('#sex').value, age=+$('#age').value||0, ht=+$('#ht').value||0, wt=+$('#wt').value||0, act=+$('#act').value;
+  let tdee=null;
+  if(sex&&age&&ht&&wt){
+    const bmr=10*wt+6.25*ht-5*age+(sex==='m'?5:-161);
+    tdee=Math.round(bmr*act);
+  }
+  const offsets={lose:-500,maintain:0,gain:300};
+  let target=tdee? tdee+offsets[state.goal] : {lose:1500,maintain:2000,gain:2400}[state.goal];
+  target=Math.max(1300,Math.round(target/10)*10);
+  const protein=wt? Math.round(wt*(state.goal==='maintain'?1.6:1.8)) : Math.round(target*(state.goal==='maintain'?0.25:0.30)/4);
+  const band=[target-100,target+60];
+  state.targets={target,band,protein,est:!tdee};
+  $('#targetRow').innerHTML=
+    `<div class="ticketc"><span class="lbl">Daily calories</span><span class="big">${band[0]}–${band[1]}</span></div>`+
+    `<div class="ticketc"><span class="lbl">Protein floor</span><span class="big">${protein}g</span></div>`;
+  $('#targetNote').textContent=(tdee?`Based on your stats (est. maintenance ${tdee} kcal). `:'Using a sensible default — add your stats for a personal number. ')+
+    'Every generated day is checked against this band.';
+}
+
+/* ================= UI WIRING ================= */
+document.querySelectorAll('#goalChips .chip').forEach(b=>b.onclick=()=>{
+  document.querySelectorAll('#goalChips .chip').forEach(x=>x.classList.remove('on'));
+  b.classList.add('on'); state.goal=b.dataset.g; targets();
+});
+document.querySelectorAll('#hhChips .chip').forEach(b=>b.onclick=()=>{
+  document.querySelectorAll('#hhChips .chip').forEach(x=>x.classList.remove('on'));
+  b.classList.add('on'); state.hh=+b.dataset.h;
+});
+['sex','age','ht','wt','act'].forEach(id=>$('#'+id).addEventListener('input',targets));
+
+const MIN={breakfast:3,lunch:3,snack:2,dinner:5};
+function renderBank(){
+  const courses=[['breakfast','Breakfasts'],['lunch','Lunches'],['snack','Snacks'],['dinner','Dinners']];
+  $('#bank').innerHTML=courses.map(([c,label])=>{
+    const picked=R.filter(r=>r.c===c&&state.liked.has(r.id)).length;
+    const ok=picked>=MIN[c];
+    return `<div class="coursehead"><h3>${label}</h3><span class="need ${ok?'ok':''}">${picked} picked · need ${MIN[c]}+</span></div>
+    <div class="rgrid">`+R.filter(r=>r.c===c).map(r=>
+      `<div class="rcard ${state.liked.has(r.id)?'on':''}" onclick="toggleLike('${r.id}')">
+        <span class="emoji">${r.e}</span><span class="nm">${r.n}</span><span class="mc">${r.p}g · ${r.k} kcal</span></div>`).join('')+`</div>`;
+  }).join('');
+  $('#buildBtn').disabled=!Object.keys(MIN).every(c=>R.filter(r=>r.c===c&&state.liked.has(r.id)).length>=MIN[c]);
+}
+function toggleLike(id){ state.liked.has(id)?state.liked.delete(id):state.liked.add(id); renderBank(); }
+
+function toStep(n){
+  [1,2,3].forEach(i=>{ $('#s'+i).classList.toggle('show',i===n); $('#d'+i).classList.toggle('on',i<=n); });
+  if(n===2) renderBank();
+  if(n===3) buildPlan();
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+
+/* ================= SOLVER (greedy, guardrail-checked) ================= */
+const DAYS=['Monday','Tuesday','Wednesday','Thursday','Friday'];
+const shuffle=a=>{a=a.slice();for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]];}return a;};
+
+function buildPlan(){
+  const {band,protein}=state.targets||{};
+  if(!state.targets) targets();
+  const T=state.targets;
+  const pool=c=>R.filter(r=>r.c===c&&state.liked.has(r.id));
+  const dinners=shuffle(pool('dinner')).slice(0,5);
+  while(dinners.length<5) dinners.push(dinners[dinners.length%Math.max(1,pool('dinner').length)]);
+  const useCount={};
+  const days=[];
+  for(let d=0;d<5;d++){
+    const din=dinners[d];
+    let best=null;
+    for(let t=0;t<400;t++){
+      const b=pool('breakfast')[Math.floor(Math.random()*pool('breakfast').length)];
+      const l=pool('lunch')[Math.floor(Math.random()*pool('lunch').length)];
+      const s=pool('snack')[Math.floor(Math.random()*pool('snack').length)];
+      for(const tu of [null,...TOPUPS]){
+        const P0=b.p+l.p+s.p+din.p+(tu?tu.p:0);
+        const K0=b.k+l.k+s.k+din.k+(tu?tu.k:0);
+        if(K0<T.band[0]||K0>T.band[1]||P0<T.protein) continue;
+        const rep=(useCount[b.id]||0)+(useCount[l.id]||0)+(useCount[s.id]||0);
+        const score=Math.abs((T.band[0]+T.band[1])/2-K0)+rep*40;
+        if(!best||score<best.score) best={b,l,s,din,tu,P:P0,K:K0,score};
+      }
+    }
+    if(!best){ // relax: closest miss
+      for(let t=0;t<400;t++){
+        const b=pool('breakfast')[Math.floor(Math.random()*pool('breakfast').length)];
+        const l=pool('lunch')[Math.floor(Math.random()*pool('lunch').length)];
+        const s=pool('snack')[Math.floor(Math.random()*pool('snack').length)];
+        const P0=b.p+l.p+s.p+din.p, K0=b.k+l.k+s.k+din.k;
+        const miss=Math.max(0,T.band[0]-K0)+Math.max(0,K0-T.band[1])+Math.max(0,(T.protein-P0))*8;
+        if(!best||miss<best.score) best={b,l,s,din,tu:null,P:P0,K:K0,score:miss,out:true};
+      }
+    }
+    [best.b,best.l,best.s].forEach(x=>useCount[x.id]=(useCount[x.id]||0)+1);
+    days.push(best);
+  }
+  state.plan=days;
+  renderPlan();
+}
+
+/* ================= RENDER PLAN + LEDGER ================= */
+function money(p){return '£'+(p/100).toFixed(2);}
+function renderPlan(){
+  const T=state.targets;
+  const anyOut=state.plan.some(d=>d.out);
+  $('#planSummary').innerHTML=`Target ${T.band[0]}–${T.band[1]} kcal · ≥${T.protein}g protein a day, dinners for ${state.hh===2?'two':'one'}.`+
+    (anyOut?' <span class="warn">One or more days fell outside the band — pick a few more meals for more room.</span>':' Every day checked against your band.');
+  $('#week').innerHTML=state.plan.map((d,i)=>{
+    const rows=[['Breakfast',d.b],['Lunch',d.l],['Snack',d.s],['Dinner',d.din]].map(([slot,r])=>
+      `<div class="meal"><span class="slot">${slot}</span><span class="nm">${r.e} ${r.n}</span><span class="mc">${r.p}g · ${r.k}</span></div>`
+      +(r.m.length?`<details class="method"><summary>How to make it</summary><ol>${r.m.map(x=>`<li>${x}</li>`).join('')}</ol></details>`:''));
+    if(d.tu) rows.push(`<div class="meal"><span class="slot">Top-up</span><span class="nm">${d.tu.n}</span><span class="mc">${d.tu.p}g · ${d.tu.k}</span></div>`);
+    return `<div class="day" ${d.out?'style="border-left-color:var(--danger)"':''}>
+      <h3>${DAYS[i]} <span class="tot">${d.P}g protein · ${d.K} kcal${d.out?' ⚠︎':''}</span></h3>${rows.join('')}</div>`;
+  }).join('');
+
+  // ledger: aggregate fresh needs
+  const need={}, usedBy={}, cup=new Set();
+  const add=(prod,qty,who)=>{ need[prod]=(need[prod]||0)+qty; (usedBy[prod]=usedBy[prod]||new Set()).add(who); };
+  state.plan.forEach(d=>{
+    [d.b,d.l,d.s].forEach(r=>{ r.fresh.forEach(([pk,q])=>add(pk,q,r.n)); r.cup.forEach(c=>cup.add(c)); });
+    const scale=state.hh===2?1:0.5;
+    d.din.fresh.forEach(([pk,q])=>add(pk,q*scale,d.din.n));
+    d.din.cup.forEach(c=>cup.add(c));
+    if(d.tu) add(d.tu.prod,d.tu.qty,'top-ups');
+  });
+  let total=0;
+  const lines=Object.entries(need).map(([pk,q])=>{
+    const prod=P[pk];
+    const packs=Math.max(1,Math.ceil(q/prod.pack));
+    const cost=packs*prod.pr; total+=cost;
+    const bought=packs*prod.pack;
+    const fmt=v=>prod.u==='g'||prod.u==='ml'? Math.round(v)+prod.u : (Math.round(v*10)/10)+' '+prod.u;
+    const note=bought-q>0.01? `${fmt(q)} used of ${fmt(bought)} — ${[...usedBy[pk]].slice(0,3).join(', ')}` : [...usedBy[pk]].slice(0,3).join(', ');
+    return {name:prod.n+(packs>1?` ×${packs}`:''), slug:prod.s, cost, note};
+  }).sort((a,b)=>b.cost-a.cost);
+  $('#shop').innerHTML=`<div class="sgroup">`+lines.map(l=>
+    `<div class="sitem"><span><a href="https://groceries.morrisons.com/products/${l.slug}" target="_blank" rel="noopener">${l.name}</a><span class="use">${l.note}</span></span><span class="pr">${money(l.cost)}</span></div>`).join('')+`</div>
+    <div class="total"><span>Estimated weekly shop</span><span>${money(total)}</span></div>
+    <p class="muted">≈ ${money(Math.round(total/5))} per day, all meals included — before anything already in your cupboard.</p>`;
+  $('#cupboard').innerHTML='<br>'+[...cup].map(c=>CUPBOARD_INFO[c]||c).join(' · ');
+}
+targets();
+</script>
+</body>
+</html>
