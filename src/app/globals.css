@@ -158,3 +158,16 @@ a.linkbtn{text-decoration:none;}
 :root[data-theme="dark"] .retailer-logo .logo-dark{display:block;}
 .estimate-flag{background:var(--warn-soft); color:var(--warn-ink); border-radius:var(--radius-sm); padding:12px 14px; font-size:14px; margin:12px 0;}
 .estimate-flag button{display:block; margin-top:6px; padding:0; min-height:0; background:none; border:0; color:inherit; font-weight:600; text-decoration:underline; cursor:pointer;}
+/* ---- week plan + list ---- */
+.daycard{background:var(--card); border-radius:var(--radius); padding:6px 16px 10px; margin:12px 0; border-left:4px solid var(--ok);}
+.daycard.adjusted{border-left-color:var(--warn);}
+.daycard header{display:flex; justify-content:space-between; align-items:baseline; gap:8px; padding:10px 0 4px;}
+.daytot{font-size:13px; color:var(--ink2); font-variant-numeric:tabular-nums; white-space:nowrap;}
+.meal{display:flex; gap:12px; padding:10px 0; border-top:1px solid var(--line);}
+.meal .slot{flex:0 0 68px; font-size:11px; font-weight:600; letter-spacing:.05em; text-transform:uppercase; color:var(--ink2); padding-top:3px;}
+.meal .mbody{flex:1; min-width:0;} .mname{font-weight:600; font-size:15px; margin-bottom:4px;}
+.tags span.adj{background:var(--warn-soft); color:var(--warn-ink); font-weight:600;}
+.reserved{margin:8px 0 0; font-size:12px;}
+.list{padding:4px 16px;} .line{display:flex; justify-content:space-between; gap:12px; padding:12px 0; border-bottom:1px solid var(--line);} .line:last-child{border-bottom:0;}
+.line .price{font-variant-numeric:tabular-nums; font-weight:600; white-space:nowrap;} .line b{font-size:15px; font-weight:600;}
+.flag{color:var(--warn-ink); font-size:12px; font-weight:600;}

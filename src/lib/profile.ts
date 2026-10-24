@@ -1,3 +1,4 @@
+import type { Plan } from './planner/types';
 import type { Allergen } from './allergens';
 import type { Goal, Sex, Stats } from './targets';
 import type { HeightUnit, WeightUnit } from './units';
@@ -31,6 +32,8 @@ export interface Profile {
   skippedRecipes: string[];
   step: OnboardingStep;
   completed: boolean;
+  /** The generated week (M4). Null until first generated; replaced on regenerate. */
+  plan: Plan | null;
 }
 
 export const emptyProfile = (): Profile => ({
@@ -51,6 +54,7 @@ export const emptyProfile = (): Profile => ({
   skippedRecipes: [],
   step: 'goal',
   completed: false,
+  plan: null,
 });
 
 export type { Goal, Sex };
