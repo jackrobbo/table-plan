@@ -6,7 +6,7 @@ import type { Subscription } from '../billing/types';
 import { fileWaitlistStore } from './waitlistFile';
 
 const URL_ = process.env.NEXT_PUBLIC_SUPABASE_URL;
-const ANON = process.env.NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY;
+const ANON = process.env.NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY || process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
 
 /** Service-role client (bypasses RLS). Server-only: SUPABASE_SERVICE_ROLE_KEY must never be exposed to the browser. */
 function admin(): SupabaseClient | null {

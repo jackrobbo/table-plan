@@ -10,7 +10,8 @@ const memory = (): KV => {
 let backend: Backend | null = null;
 
 const SUPABASE_URL = process.env.NEXT_PUBLIC_SUPABASE_URL;
-const SUPABASE_KEY = process.env.NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY;
+// Accept either name: Vercel's Supabase setup uses NEXT_PUBLIC_SUPABASE_ANON_KEY.
+const SUPABASE_KEY = process.env.NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY || process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
 
 /** True when no Supabase project is configured, so the app runs on the localStorage mock (previews, tests). */
 export const isMocked = !SUPABASE_URL || !SUPABASE_KEY;
