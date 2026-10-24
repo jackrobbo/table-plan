@@ -4,6 +4,7 @@ import type { ServerUser, SubscriptionStore } from '../billing/server';
 import type { Subscription } from '../billing/types';
 import type { AccountStore } from './account';
 import type { SignupStore } from './signup';
+import type { RateStore } from './guard';
 import { fileWaitlistStore } from './waitlistFile';
 
 const URL_ = process.env.NEXT_PUBLIC_SUPABASE_URL;
@@ -128,6 +129,19 @@ export function getAccountStore(): AccountStore | null {
     async deleteUser(userId) {
       const { error } = await sb.auth.admin.deleteUser(userId);
       if (error && error.status !== 404) throw new Error(error.message);
+    },
+  };
+}
+
+/** Shared request counter in Postgres (`rate_limit_hit`), so limits hold across serverless instances. */
+export function getRateStore(): RateStore | null {
+  const sb = admin();
+  if (!sb) return null;
+  return {
+    async hit(key, limit, windowSeconds) {
+      const { data, error } = await sb.rpc('rate_limit_hit', { p_key: key, p_limit: limit, p_window_seconds: windowSeconds });
+      if (error) throw new Error(error.message);
+      return data === true;
     },
   };
 }

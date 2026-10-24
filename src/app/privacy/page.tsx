@@ -24,7 +24,7 @@ export default function Privacy() {
         <li><b>Your subscription</b>: plan, status, trial and renewal dates, and your Stripe customer reference. Your card details go straight to Stripe; we never see or store them. (Contract.)</li>
         <li><b>Feedback you send us</b>, linked to your account so we can follow up. (Legitimate interests: improving the service.)</li>
         <li><b>Waitlist signups</b>: your email and when you agreed to hear from us. (Consent.)</li>
-        <li><b>Technical data</b> such as your IP address and browser type, which our hosting provider logs when you use the service, and which we use to keep it secure and stop abuse. (Legitimate interests.)</li>
+        <li><b>Technical data</b> such as your IP address and browser type, which our hosting provider logs when you use the service, and which we use to keep it secure and stop abuse. To limit abuse we also keep a scrambled (hashed) version of your address for up to a day, so we can slow down anyone sending too many requests. (Legitimate interests.)</li>
       </ul>
 
       <h2>What we don&apos;t do</h2>
