@@ -7,3 +7,5 @@ next-env.d.ts
 *.tsbuildinfo
 .private
 *.jsonl
+.env*.local
+.env

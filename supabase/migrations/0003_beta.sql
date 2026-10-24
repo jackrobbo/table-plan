@@ -18,6 +18,7 @@ create table public.invites (
   redeemed_at  timestamptz
 );
 alter table public.invites enable row level security;
+create index invites_waitlist_idx on public.invites (waitlist_id);
 
 -- Atomic single-use redemption: returns true only for the one request that wins.
 create or replace function public.redeem_invite(p_code text, p_email text) returns boolean
@@ -37,4 +38,5 @@ create table public.feedback (
   created_at timestamptz not null default now()
 );
 alter table public.feedback enable row level security;
-create policy "own feedback insert" on public.feedback for insert with check (auth.uid() = user_id);
+create index feedback_user_idx on public.feedback (user_id);
+create policy "own feedback insert" on public.feedback for insert with check ((select auth.uid()) = user_id);

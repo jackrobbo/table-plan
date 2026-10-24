@@ -10,7 +10,7 @@ create table public.subscriptions (
   updated_at           timestamptz not null default now()
 );
 alter table public.subscriptions enable row level security;
-create policy "own subscription read" on public.subscriptions for select using (auth.uid() = user_id);
+create policy "own subscription read" on public.subscriptions for select using ((select auth.uid()) = user_id);
 -- no insert/update/delete policies: webhooks use the service role, which bypasses RLS.
 
 -- Webhook idempotency: Stripe retries, so remember which events were processed.

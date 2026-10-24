@@ -55,6 +55,8 @@ create table public.recipe_ingredients (
   primary key (recipe_slug, ingredient_slug)
 );
 
+create index recipe_ingredients_ingredient_idx on public.recipe_ingredients (ingredient_slug);
+
 -- Edits snapshot the previous row, so saved plans can pin the version they used.
 create table public.recipe_versions (
   recipe_slug text not null,
@@ -63,7 +65,7 @@ create table public.recipe_versions (
   primary key (recipe_slug, version)
 );
 
-create or replace function public.snapshot_recipe() returns trigger language plpgsql as $$
+create or replace function public.snapshot_recipe() returns trigger language plpgsql set search_path = public as $$
 begin
   insert into public.recipe_versions (recipe_slug, version, snapshot) values (old.slug, old.version, to_jsonb(old))
     on conflict do nothing;
@@ -94,15 +96,18 @@ create table public.profiles (
   skipped_recipes text[] not null default '{}',
   onboarding_step text not null default 'goal',
   completed       boolean not null default false,
+  -- weekly cycle (M5): weeks keyed by Monday, and reminder opt-in/shown state
+  weeks           jsonb not null default '{}'::jsonb,
+  reminders       jsonb not null default '{"on": false, "shown": []}'::jsonb,
   created_at      timestamptz not null default now(),
   updated_at      timestamptz not null default now()
 );
 
 alter table public.profiles enable row level security;
-create policy "own profile read"   on public.profiles for select using (auth.uid() = user_id);
-create policy "own profile insert" on public.profiles for insert with check (auth.uid() = user_id);
-create policy "own profile update" on public.profiles for update using (auth.uid() = user_id);
-create policy "own profile delete" on public.profiles for delete using (auth.uid() = user_id);
+create policy "own profile read"   on public.profiles for select using ((select auth.uid()) = user_id);
+create policy "own profile insert" on public.profiles for insert with check ((select auth.uid()) = user_id);
+create policy "own profile update" on public.profiles for update using ((select auth.uid()) = user_id) with check ((select auth.uid()) = user_id);
+create policy "own profile delete" on public.profiles for delete using ((select auth.uid()) = user_id);
 
 -- Catalogue tables: world-readable (live recipes only), writable only by the service role.
 alter table public.ingredients enable row level security;
@@ -116,7 +121,7 @@ create policy "live recipes read" on public.recipes for select using (status = '
 create policy "live recipe lines read" on public.recipe_ingredients for select
   using (exists (select 1 from public.recipes r where r.slug = recipe_slug and r.status = 'live'));
 
-create or replace function public.touch_updated_at() returns trigger language plpgsql as $$
+create or replace function public.touch_updated_at() returns trigger language plpgsql set search_path = public as $$
 begin new.updated_at = now(); return new; end $$;
 create trigger profiles_touch before update on public.profiles
   for each row execute function public.touch_updated_at();

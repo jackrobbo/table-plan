@@ -61,3 +61,9 @@ Waitlist (`/waitlist`), invite gate (`NEXT_PUBLIC_INVITE_ONLY=1`; preview with t
 (`npm run beta:invites -- 50`, written to gitignored `.private/`), in-app feedback, consent-gated cookieless analytics,
 error and 404 pages. Local waitlist testing: set `WAITLIST_FILE=.private/waitlist.jsonl`. **See `design/beta-checklist.md` for the
 blockers before real users.** One-paste database setup: `npm run supabase:bundle` → `supabase/setup.sql`.
+
+## Real backend (Supabase)
+Set `NEXT_PUBLIC_SUPABASE_URL` and `NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY` (see `.env.example`; both are browser-safe) and the app
+uses Supabase Auth (email one-time code) and Postgres (`profiles` incl. weeks, `recipes`). Without them it falls back to the
+localStorage mock, which is what tests and the Artifact preview use. Still mocked: billing (until Stripe), and the server-side
+stores for waitlist/invites/subscriptions, which need `SUPABASE_SERVICE_ROLE_KEY` set in the host's environment (never in the repo).

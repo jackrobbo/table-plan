@@ -1,4 +1,5 @@
 import { createMockBackend } from './mock';
+import { createSupabaseBackend, createSupabaseClient } from './supabase';
 import type { Backend, KV } from './types';
 
 const memory = (): KV => {
@@ -8,19 +9,20 @@ const memory = (): KV => {
 
 let backend: Backend | null = null;
 
-/**
- * Single seam for persistence. Mocked for now (localStorage in the browser).
- * Swap in the Supabase implementation of Backend here once a project exists —
- * schema is in supabase/migrations.
- */
+const SUPABASE_URL = process.env.NEXT_PUBLIC_SUPABASE_URL;
+const SUPABASE_KEY = process.env.NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY;
+
+/** True when no Supabase project is configured, so the app runs on the localStorage mock (previews, tests). */
+export const isMocked = !SUPABASE_URL || !SUPABASE_KEY;
+
+/** Single seam for persistence: Supabase when NEXT_PUBLIC_SUPABASE_URL/_PUBLISHABLE_KEY are set, otherwise the mock. */
 export function getBackend(): Backend {
   if (!backend) {
     let kv: KV;
     try { kv = typeof window !== 'undefined' ? window.localStorage : memory(); } catch { kv = memory(); }
-    backend = createMockBackend(kv);
+    backend = isMocked ? createMockBackend(kv) : createSupabaseBackend(createSupabaseClient(SUPABASE_URL!, SUPABASE_KEY!), kv);
   }
   return backend;
 }
-export const isMocked = true;
 export * from './types';
 export { MOCK_CODE } from './mock';

@@ -7,7 +7,7 @@ error/404 pages. **None of it is live until the blockers below are cleared.**
 ## Blockers (nothing ships to real users until these are done)
 | # | Blocker | Owner | Notes |
 |---|---|---|---|
-| 1 | **Supabase project + real backend** | Jack + Claude | Create project; paste `supabase/setup.sql` (`npm run supabase:bundle`) into the SQL editor; enable Email OTP; then Claude replaces the mock `Backend` and `src/lib/server/context.ts`. Until then data lives only in each browser's localStorage. |
+| 1 | **Supabase project + real backend** | DONE except email | Database applied and seeded (74 ingredients, 46 products, 31 recipes), row-level security tested, app uses Supabase when `NEXT_PUBLIC_SUPABASE_URL` + `_PUBLISHABLE_KEY` are set (add both to Vercel). Still to do by hand: edit the "Magic Link" email template to show `{{ .Token }}` and connect an SMTP provider (built-in email is heavily rate-limited). Original notes: paste `supabase/setup.sql` (`npm run supabase:bundle`) into the SQL editor; enable Email OTP; then Claude replaces the mock `Backend` and `src/lib/server/context.ts`. Until then data lives only in each browser's localStorage. |
 | 2 | **Invite enforcement at the server** | Claude | Today the gate is a UI check. The real gate must be server-side (redeem via `redeem_invite()` before the auth user is created, e.g. an auth hook or a signup route). Do not rely on the client check. |
 | 3 | **Stripe live** | Jack + Claude | Products/prices, webhook endpoint, 4 env vars (see README). Test the full trial → charge → cancel cycle in Stripe test mode first. |
 | 4 | **Dietitian sign-off** | Jack | Deficit method, 1,300 kcal floor, protein cap (35% of kcal), carb/fat split. Gates every launch claim. |
