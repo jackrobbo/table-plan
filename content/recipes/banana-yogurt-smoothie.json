@@ -1,0 +1,28 @@
+{
+ "slug": "banana-yogurt-smoothie",
+ "name": "Banana Yogurt Smoothie",
+ "course": "breakfast",
+ "emoji": "🥤",
+ "serves": 1,
+ "status": "live",
+ "ingredients": [
+  {
+   "ingredient": "milk",
+   "qty": 250
+  },
+  {
+   "ingredient": "banana",
+   "qty": 1
+  },
+  {
+   "ingredient": "greek",
+   "qty": 100
+  }
+ ],
+ "cupboard": [],
+ "cupboard_qty": {},
+ "method": [
+  "Blend everything until smooth."
+ ],
+ "source": "table-plan"
+}

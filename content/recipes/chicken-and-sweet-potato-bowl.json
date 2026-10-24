@@ -1,0 +1,35 @@
+{
+ "slug": "chicken-and-sweet-potato-bowl",
+ "name": "Chicken and Sweet Potato Bowl",
+ "course": "lunch",
+ "emoji": "🍠",
+ "serves": 1,
+ "status": "live",
+ "ingredients": [
+  {
+   "ingredient": "breast",
+   "qty": 120
+  },
+  {
+   "ingredient": "sweetpot",
+   "qty": 200
+  },
+  {
+   "ingredient": "brocc",
+   "qty": 100
+  }
+ ],
+ "cupboard": [
+  "oil",
+  "paprika"
+ ],
+ "cupboard_qty": {
+  "oil": 5,
+  "paprika": 2
+ },
+ "method": [
+  "Roast the diced sweet potato in half the oil at 200°C for 25 minutes.",
+  "Fry the sliced chicken with the paprika for 6–8 minutes until cooked through, steam the broccoli, and serve together."
+ ],
+ "source": "table-plan"
+}

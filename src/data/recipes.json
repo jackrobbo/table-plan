@@ -1,5 +1,33 @@
 [
  {
+  "id": "apple-and-almonds",
+  "c": "snack",
+  "e": "🍏",
+  "n": "Apple and Nuts",
+  "p": 4,
+  "k": 159,
+  "serves": 1,
+  "cost": 66,
+  "b": "medium",
+  "macros_only": false,
+  "fresh": [
+   [
+    "apple",
+    1
+   ]
+  ],
+  "cup": [
+   "nuts"
+  ],
+  "m": [
+   "Slice the apple and eat with the nuts."
+  ],
+  "allergens": [
+   "nuts",
+   "peanuts"
+  ]
+ },
+ {
   "id": "apple-and-peanut-butter",
   "c": "snack",
   "e": "🍎",
@@ -128,6 +156,46 @@
   "allergens": [
    "gluten",
    "milk"
+  ]
+ },
+ {
+  "id": "bacon-and-egg-bowl",
+  "c": "breakfast",
+  "e": "🥓",
+  "n": "Bacon and Egg Bowl",
+  "p": 42,
+  "k": 336,
+  "serves": 1,
+  "cost": 234,
+  "b": "high",
+  "macros_only": false,
+  "fresh": [
+   [
+    "bacon",
+    3
+   ],
+   [
+    "eggs",
+    2
+   ],
+   [
+    "plum",
+    80
+   ],
+   [
+    "spinach",
+    40
+   ]
+  ],
+  "cup": [
+   "oil"
+  ],
+  "m": [
+   "Grill the bacon for 4–5 minutes each side until cooked through, then chop.",
+   "Fry the eggs in the oil and wilt the spinach in the pan. Serve with halved tomatoes and the bacon."
+  ],
+  "allergens": [
+   "eggs"
   ]
  },
  {
@@ -273,6 +341,39 @@
   ],
   "allergens": [
    "gluten",
+   "milk"
+  ]
+ },
+ {
+  "id": "banana-yogurt-smoothie",
+  "c": "breakfast",
+  "e": "🥤",
+  "n": "Banana Yogurt Smoothie",
+  "p": 14,
+  "k": 308,
+  "serves": 1,
+  "cost": 57,
+  "b": "low",
+  "macros_only": false,
+  "fresh": [
+   [
+    "milk",
+    250
+   ],
+   [
+    "banana",
+    1
+   ],
+   [
+    "greek",
+    100
+   ]
+  ],
+  "cup": [],
+  "m": [
+   "Blend everything until smooth."
+  ],
+  "allergens": [
    "milk"
   ]
  },
@@ -580,6 +681,35 @@
   ]
  },
  {
+  "id": "berries-and-greek-yogurt",
+  "c": "snack",
+  "e": "🫐",
+  "n": "Berries and Greek Yogurt",
+  "p": 5,
+  "k": 134,
+  "serves": 1,
+  "cost": 106,
+  "b": "high",
+  "macros_only": false,
+  "fresh": [
+   [
+    "greek",
+    100
+   ],
+   [
+    "blueb",
+    80
+   ]
+  ],
+  "cup": [],
+  "m": [
+   "Spoon the yogurt over the blueberries."
+  ],
+  "allergens": [
+   "milk"
+  ]
+ },
+ {
   "id": "berry-overnight-oats",
   "c": "breakfast",
   "e": "🫐",
@@ -817,6 +947,48 @@
   ]
  },
  {
+  "id": "chicken-and-avocado-salad",
+  "c": "lunch",
+  "e": "🥗",
+  "n": "Chicken and Avocado Salad",
+  "p": 32,
+  "k": 303,
+  "serves": 1,
+  "cost": 223,
+  "b": "high",
+  "macros_only": false,
+  "fresh": [
+   [
+    "breast",
+    120
+   ],
+   [
+    "avocado",
+    0.5
+   ],
+   [
+    "salad",
+    60
+   ],
+   [
+    "plum",
+    80
+   ],
+   [
+    "cuc",
+    0.25
+   ]
+  ],
+  "cup": [
+   "oil"
+  ],
+  "m": [
+   "Fry the sliced chicken in the oil for 6–8 minutes until cooked through and golden, then let it cool a little.",
+   "Toss with the salad leaves, tomatoes, cucumber and sliced avocado."
+  ],
+  "allergens": []
+ },
+ {
   "id": "chicken-and-avocado-sandwich",
   "c": "lunch",
   "e": "🥑",
@@ -985,6 +1157,84 @@
    "gluten",
    "sesame"
   ]
+ },
+ {
+  "id": "chicken-and-sweet-potato-bowl",
+  "c": "lunch",
+  "e": "🍠",
+  "n": "Chicken and Sweet Potato Bowl",
+  "p": 36,
+  "k": 380,
+  "serves": 1,
+  "cost": 155,
+  "b": "medium",
+  "macros_only": false,
+  "fresh": [
+   [
+    "breast",
+    120
+   ],
+   [
+    "sweetpot",
+    200
+   ],
+   [
+    "brocc",
+    100
+   ]
+  ],
+  "cup": [
+   "oil",
+   "paprika"
+  ],
+  "m": [
+   "Roast the diced sweet potato in half the oil at 200°C for 25 minutes.",
+   "Fry the sliced chicken with the paprika for 6–8 minutes until cooked through, steam the broccoli, and serve together."
+  ],
+  "allergens": []
+ },
+ {
+  "id": "chicken-and-veg-traybake",
+  "c": "dinner",
+  "e": "🍗",
+  "n": "Chicken and Veg Traybake",
+  "p": 47,
+  "k": 516,
+  "serves": 2,
+  "cost": 227,
+  "b": "medium",
+  "macros_only": false,
+  "fresh": [
+   [
+    "thigh",
+    400
+   ],
+   [
+    "potatoes",
+    400
+   ],
+   [
+    "carrots",
+    150
+   ],
+   [
+    "courgette",
+    200
+   ],
+   [
+    "onions",
+    1
+   ]
+  ],
+  "cup": [
+   "oil",
+   "herbs"
+  ],
+  "m": [
+   "Heat the oven to 200°C. Toss the chopped potatoes, carrots and onion in the oil and herbs and roast for 15 minutes.",
+   "Add the chicken thighs and courgette and roast for 30 minutes more, until the chicken is cooked through with no pink."
+  ],
+  "allergens": []
  },
  {
   "id": "chicken-burrito-bowl",
@@ -1584,6 +1834,69 @@
   ]
  },
  {
+  "id": "cottage-cheese-and-cucumber",
+  "c": "snack",
+  "e": "🥒",
+  "n": "Cottage Cheese and Cucumber",
+  "p": 13,
+  "k": 100,
+  "serves": 1,
+  "cost": 80,
+  "b": "medium",
+  "macros_only": false,
+  "fresh": [
+   [
+    "cottage",
+    100
+   ],
+   [
+    "cuc",
+    0.25
+   ]
+  ],
+  "cup": [],
+  "m": [
+   "Cube the cucumber and stir through the cottage cheese."
+  ],
+  "allergens": [
+   "milk"
+  ]
+ },
+ {
+  "id": "cottage-cheese-berry-bowl",
+  "c": "breakfast",
+  "e": "🫐",
+  "n": "Cottage Cheese Berry Bowl",
+  "p": 21,
+  "k": 224,
+  "serves": 1,
+  "cost": 179,
+  "b": "high",
+  "macros_only": false,
+  "fresh": [
+   [
+    "cottage",
+    150
+   ],
+   [
+    "blueb",
+    80
+   ]
+  ],
+  "cup": [
+   "nuts"
+  ],
+  "m": [
+   "Spoon the cottage cheese into a bowl.",
+   "Top with the blueberries and chopped nuts."
+  ],
+  "allergens": [
+   "milk",
+   "nuts",
+   "peanuts"
+  ]
+ },
+ {
   "id": "cottage-cheese-rice-cakes",
   "c": "snack",
   "e": "🍘",
@@ -1696,6 +2009,64 @@
   ]
  },
  {
+  "id": "cucumber-and-houmous",
+  "c": "snack",
+  "e": "🥒",
+  "n": "Cucumber and Houmous",
+  "p": 4,
+  "k": 99,
+  "serves": 1,
+  "cost": 76,
+  "b": "medium",
+  "macros_only": false,
+  "fresh": [
+   [
+    "cuc",
+    0.5
+   ],
+   [
+    "houm",
+    40
+   ]
+  ],
+  "cup": [],
+  "m": [
+   "Slice the cucumber into sticks and dip into the houmous."
+  ],
+  "allergens": [
+   "sesame"
+  ]
+ },
+ {
+  "id": "egg-and-tomatoes",
+  "c": "snack",
+  "e": "🍅",
+  "n": "Egg and Tomatoes",
+  "p": 6,
+  "k": 82,
+  "serves": 1,
+  "cost": 57,
+  "b": "medium",
+  "macros_only": false,
+  "fresh": [
+   [
+    "eggs",
+    1
+   ],
+   [
+    "plum",
+    80
+   ]
+  ],
+  "cup": [],
+  "m": [
+   "Boil the egg for 8 minutes, cool and peel, and serve with the tomatoes."
+  ],
+  "allergens": [
+   "eggs"
+  ]
+ },
+ {
   "id": "egg-mayo-sandwich",
   "c": "lunch",
   "e": "🥪",
@@ -1732,6 +2103,40 @@
    "gluten",
    "mustard",
    "soya"
+  ]
+ },
+ {
+  "id": "eggs-and-avocado-plate",
+  "c": "breakfast",
+  "e": "🥑",
+  "n": "Eggs and Avocado Plate",
+  "p": 14,
+  "k": 237,
+  "serves": 1,
+  "cost": 117,
+  "b": "medium",
+  "macros_only": false,
+  "fresh": [
+   [
+    "eggs",
+    2
+   ],
+   [
+    "avocado",
+    0.5
+   ],
+   [
+    "plum",
+    60
+   ]
+  ],
+  "cup": [],
+  "m": [
+   "Boil the eggs for 7–8 minutes, cool a little and peel.",
+   "Serve with sliced avocado and halved tomatoes."
+  ],
+  "allergens": [
+   "eggs"
   ]
  },
  {
@@ -1915,6 +2320,37 @@
   ],
   "allergens": [
    "milk"
+  ]
+ },
+ {
+  "id": "greek-yogurt-berries-and-nuts",
+  "c": "breakfast",
+  "e": "🥣",
+  "n": "Greek Yogurt, Berries and Nuts",
+  "p": 10,
+  "k": 264,
+  "serves": 1,
+  "cost": 118,
+  "b": "medium",
+  "macros_only": false,
+  "fresh": [
+   [
+    "greek",
+    150
+   ]
+  ],
+  "cup": [
+   "frozenfruit",
+   "nuts"
+  ],
+  "m": [
+   "Spoon the yogurt into a bowl and top with the frozen fruit, which thaws into a sauce within a few minutes.",
+   "Scatter over the chopped nuts."
+  ],
+  "allergens": [
+   "milk",
+   "nuts",
+   "peanuts"
   ]
  },
  {
@@ -2321,6 +2757,180 @@
   ]
  },
  {
+  "id": "lean-beef-and-veg-stew",
+  "c": "dinner",
+  "e": "🍲",
+  "n": "Lean Beef and Veg Stew",
+  "p": 35,
+  "k": 510,
+  "serves": 2,
+  "cost": 230,
+  "b": "medium",
+  "macros_only": false,
+  "fresh": [
+   [
+    "mince",
+    250
+   ],
+   [
+    "potatoes",
+    400
+   ],
+   [
+    "carrots",
+    200
+   ],
+   [
+    "onions",
+    1
+   ],
+   [
+    "ctoms",
+    400
+   ],
+   [
+    "kidney",
+    200
+   ]
+  ],
+  "cup": [
+   "puree",
+   "oil"
+  ],
+  "m": [
+   "Brown the mince in the oil with the chopped onion until no pink remains, then stir in the purée.",
+   "Add the diced potatoes and carrots, tomatoes, beans and 200 ml water. Cover and simmer for 30 minutes until the potatoes are tender."
+  ],
+  "allergens": []
+ },
+ {
+  "id": "lean-cottage-pie",
+  "c": "dinner",
+  "e": "🥧",
+  "n": "Lean Cottage Pie",
+  "p": 41,
+  "k": 609,
+  "serves": 2,
+  "cost": 255,
+  "b": "medium",
+  "macros_only": false,
+  "fresh": [
+   [
+    "mince",
+    300
+   ],
+   [
+    "potatoes",
+    600
+   ],
+   [
+    "carrots",
+    150
+   ],
+   [
+    "peas",
+    100
+   ],
+   [
+    "passata",
+    200
+   ],
+   [
+    "onions",
+    1
+   ]
+  ],
+  "cup": [
+   "butter",
+   "oil"
+  ],
+  "m": [
+   "Brown the mince in the oil with the chopped onion, then add the grated carrot, peas and passata and simmer for 15 minutes.",
+   "Boil and mash the potatoes with the butter, spoon over the mince and bake at 200°C for 20 minutes until golden."
+  ],
+  "allergens": [
+   "milk"
+  ]
+ },
+ {
+  "id": "lemon-pork-with-sweet-potato",
+  "c": "dinner",
+  "e": "🥩",
+  "n": "Lemon Pork with Sweet Potato",
+  "p": 37,
+  "k": 590,
+  "serves": 2,
+  "cost": 245,
+  "b": "medium",
+  "macros_only": false,
+  "fresh": [
+   [
+    "porkloin",
+    300
+   ],
+   [
+    "sweetpot",
+    400
+   ],
+   [
+    "brocc",
+    200
+   ],
+   [
+    "lemon",
+    1
+   ]
+  ],
+  "cup": [
+   "oil",
+   "herbs"
+  ],
+  "m": [
+   "Roast the diced sweet potato in half the oil at 200°C for 30 minutes.",
+   "Rub the pork steaks with the herbs, lemon juice and remaining oil and fry for 5–6 minutes each side until cooked through. Rest, then serve with steamed broccoli."
+  ],
+  "allergens": []
+ },
+ {
+  "id": "lentil-and-tomato-soup",
+  "c": "lunch",
+  "e": "🍅",
+  "n": "Lentil and Tomato Soup",
+  "p": 16,
+  "k": 286,
+  "serves": 1,
+  "cost": 62,
+  "b": "low",
+  "macros_only": false,
+  "fresh": [
+   [
+    "lentils",
+    50
+   ],
+   [
+    "passata",
+    200
+   ],
+   [
+    "carrots",
+    80
+   ],
+   [
+    "onions",
+    0.5
+   ]
+  ],
+  "cup": [
+   "cumin",
+   "oil"
+  ],
+  "m": [
+   "Soften the chopped onion and carrot in the oil for 5 minutes.",
+   "Add the lentils, cumin, passata and 350 ml water and simmer for 20 minutes until the lentils collapse."
+  ],
+  "allergens": []
+ },
+ {
   "id": "lentil-and-veg-soup",
   "c": "lunch",
   "e": "🥣",
@@ -2363,9 +2973,57 @@
    "Add the lentils, passata, cumin and 500 ml stock and simmer for 20 minutes until the lentils collapse. Serve with bread."
   ],
   "allergens": [
+   "eggs",
    "gluten",
    "soya"
   ]
+ },
+ {
+  "id": "light-chicken-and-chickpea-curry",
+  "c": "dinner",
+  "e": "🍛",
+  "n": "Light Chicken and Chickpea Curry",
+  "p": 52,
+  "k": 555,
+  "serves": 2,
+  "cost": 221,
+  "b": "medium",
+  "macros_only": false,
+  "fresh": [
+   [
+    "breast",
+    300
+   ],
+   [
+    "chickpeas",
+    240
+   ],
+   [
+    "passata",
+    300
+   ],
+   [
+    "spinach",
+    100
+   ],
+   [
+    "onions",
+    1
+   ],
+   [
+    "tikka",
+    60
+   ]
+  ],
+  "cup": [
+   "rice",
+   "oil"
+  ],
+  "m": [
+   "Fry the sliced onion in the oil for 5 minutes, add the diced chicken and cook until sealed.",
+   "Stir in the tikka paste, chickpeas and passata and simmer for 15 minutes until the chicken is cooked through, then wilt in the spinach. Serve over the cooked rice."
+  ],
+  "allergens": []
  },
  {
   "id": "one-pot-chicken-and-rice",
@@ -2407,7 +3065,9 @@
    "Stir in the rice and 450 ml hot stock, cover and cook on a low heat for 20 minutes until the rice is tender and the chicken is cooked through.",
    "Stir through the peas for the last 3 minutes."
   ],
-  "allergens": []
+  "allergens": [
+   "eggs"
+  ]
  },
  {
   "id": "peanut-butter-banana-toast",
@@ -2552,6 +3212,52 @@
    "milk",
    "mustard",
    "sulphites"
+  ]
+ },
+ {
+  "id": "pesto-chicken-and-roast-veg",
+  "c": "dinner",
+  "e": "🍗",
+  "n": "Pesto Chicken and Roast Veg",
+  "p": 48,
+  "k": 437,
+  "serves": 2,
+  "cost": 224,
+  "b": "medium",
+  "macros_only": false,
+  "fresh": [
+   [
+    "breast",
+    350
+   ],
+   [
+    "pesto",
+    40
+   ],
+   [
+    "courgette",
+    300
+   ],
+   [
+    "plum",
+    200
+   ],
+   [
+    "potatoes",
+    300
+   ]
+  ],
+  "cup": [
+   "oil"
+  ],
+  "m": [
+   "Heat the oven to 200°C. Toss the diced potatoes in the oil and roast for 15 minutes.",
+   "Add the courgette and tomatoes. Spread the pesto over the chicken, add to the tray and roast for 25 minutes until the chicken is cooked through."
+  ],
+  "allergens": [
+   "eggs",
+   "milk",
+   "nuts"
   ]
  },
  {
@@ -2914,6 +3620,90 @@
   ]
  },
  {
+  "id": "salmon-and-potato-salad",
+  "c": "lunch",
+  "e": "🐟",
+  "n": "Salmon and Potato Salad",
+  "p": 27,
+  "k": 415,
+  "serves": 1,
+  "cost": 342,
+  "b": "high",
+  "macros_only": false,
+  "fresh": [
+   [
+    "salmon",
+    110
+   ],
+   [
+    "potatoes",
+    150
+   ],
+   [
+    "cuc",
+    0.25
+   ],
+   [
+    "salad",
+    40
+   ],
+   [
+    "lemon",
+    0.5
+   ]
+  ],
+  "cup": [
+   "oil"
+  ],
+  "m": [
+   "Boil the diced potatoes for 12–15 minutes until tender, and bake the salmon brushed with the oil at 200°C for 12 minutes.",
+   "Flake the salmon over the potatoes, cucumber and salad leaves and finish with lemon."
+  ],
+  "allergens": [
+   "fish"
+  ]
+ },
+ {
+  "id": "salmon-and-veg-parcels",
+  "c": "dinner",
+  "e": "🐟",
+  "n": "Salmon and Veg Parcels",
+  "p": 30,
+  "k": 418,
+  "serves": 2,
+  "cost": 321,
+  "b": "high",
+  "macros_only": false,
+  "fresh": [
+   [
+    "salmon",
+    220
+   ],
+   [
+    "potatoes",
+    300
+   ],
+   [
+    "brocc",
+    200
+   ],
+   [
+    "lemon",
+    0.5
+   ]
+  ],
+  "cup": [
+   "oil"
+  ],
+  "m": [
+   "Heat the oven to 200°C. Boil the sliced potatoes for 8 minutes.",
+   "Divide the potatoes, broccoli and salmon between two foil parcels, drizzle with the oil and lemon, seal, and bake for 18 minutes until the salmon flakes."
+  ],
+  "allergens": [
+   "fish"
+  ]
+ },
+ {
   "id": "salmon-rice-and-broccoli",
   "c": "dinner",
   "e": "🍣",
@@ -3045,6 +3835,7 @@
    "Soften the sliced onion in the oil, add a splash of hot stock for a quick gravy, and serve with the peas."
   ],
   "allergens": [
+   "eggs",
    "gluten",
    "milk",
    "sulphites"
@@ -3229,6 +4020,45 @@
   ]
  },
  {
+  "id": "smoked-salmon-and-egg-plate",
+  "c": "breakfast",
+  "e": "🐟",
+  "n": "Smoked Salmon and Egg Plate",
+  "p": 24,
+  "k": 280,
+  "serves": 1,
+  "cost": 281,
+  "b": "high",
+  "macros_only": false,
+  "fresh": [
+   [
+    "smokedsalmon",
+    50
+   ],
+   [
+    "eggs",
+    2
+   ],
+   [
+    "cuc",
+    0.15
+   ],
+   [
+    "avocado",
+    0.25
+   ]
+  ],
+  "cup": [],
+  "m": [
+   "Boil the eggs for 8 minutes, then cool and halve.",
+   "Plate with the smoked salmon, sliced cucumber and avocado."
+  ],
+  "allergens": [
+   "eggs",
+   "fish"
+  ]
+ },
+ {
   "id": "smoked-salmon-bagel",
   "c": "breakfast",
   "e": "🥯",
@@ -3392,6 +4222,48 @@
   ]
  },
  {
+  "id": "spinach-and-mushroom-frittata",
+  "c": "lunch",
+  "e": "🍳",
+  "n": "Spinach and Mushroom Frittata",
+  "p": 26,
+  "k": 350,
+  "serves": 1,
+  "cost": 175,
+  "b": "high",
+  "macros_only": false,
+  "fresh": [
+   [
+    "eggs",
+    3
+   ],
+   [
+    "spinach",
+    60
+   ],
+   [
+    "mushrooms",
+    60
+   ],
+   [
+    "plum",
+    50
+   ]
+  ],
+  "cup": [
+   "cheddar",
+   "oil"
+  ],
+  "m": [
+   "Soften the sliced mushrooms in the oil for 3 minutes, add the spinach and tomatoes until wilted.",
+   "Pour over the beaten eggs, scatter the cheese and cook on a low heat for 6–8 minutes until set, finishing under the grill if you like."
+  ],
+  "allergens": [
+   "eggs",
+   "milk"
+  ]
+ },
+ {
   "id": "steak-and-chips",
   "c": "dinner",
   "e": "🥩",
@@ -3399,7 +4271,7 @@
   "p": 58,
   "k": 806,
   "serves": 2,
-  "cost": 378,
+  "cost": 525,
   "b": "high",
   "macros_only": false,
   "fresh": [
@@ -3483,7 +4355,7 @@
   "p": 54,
   "k": 681,
   "serves": 2,
-  "cost": 479,
+  "cost": 626,
   "b": "high",
   "macros_only": false,
   "fresh": [
@@ -3564,6 +4436,47 @@
   "allergens": [
    "gluten",
    "milk"
+  ]
+ },
+ {
+  "id": "sweet-potato-and-egg-hash",
+  "c": "breakfast",
+  "e": "🍠",
+  "n": "Sweet Potato and Egg Hash",
+  "p": 16,
+  "k": 380,
+  "serves": 1,
+  "cost": 135,
+  "b": "medium",
+  "macros_only": false,
+  "fresh": [
+   [
+    "sweetpot",
+    200
+   ],
+   [
+    "eggs",
+    2
+   ],
+   [
+    "onions",
+    0.5
+   ],
+   [
+    "pepper",
+    0.5
+   ]
+  ],
+  "cup": [
+   "oil",
+   "paprika"
+  ],
+  "m": [
+   "Fry the diced sweet potato in the oil for 10–12 minutes until soft and golden, then add the chopped onion, pepper and paprika for 3 minutes.",
+   "Make two wells, crack in the eggs, cover and cook for 3–4 minutes until the whites are set."
+  ],
+  "allergens": [
+   "eggs"
   ]
  },
  {
@@ -3683,6 +4596,51 @@
    "gluten",
    "milk",
    "soya"
+  ]
+ },
+ {
+  "id": "tuna-and-bean-salad",
+  "c": "lunch",
+  "e": "🥗",
+  "n": "Tuna and Bean Salad",
+  "p": 34,
+  "k": 263,
+  "serves": 1,
+  "cost": 165,
+  "b": "high",
+  "macros_only": false,
+  "fresh": [
+   [
+    "kidney",
+    100
+   ],
+   [
+    "plum",
+    100
+   ],
+   [
+    "cuc",
+    0.25
+   ],
+   [
+    "spring",
+    0.25
+   ],
+   [
+    "lemon",
+    0.5
+   ]
+  ],
+  "cup": [
+   "tuna",
+   "oil"
+  ],
+  "m": [
+   "Drain the beans and tuna and mix with the chopped tomatoes, cucumber and spring onion.",
+   "Dress with the oil and a squeeze of lemon."
+  ],
+  "allergens": [
+   "fish"
   ]
  },
  {
@@ -3820,12 +4778,163 @@
   ]
  },
  {
+  "id": "tuna-rice-cake",
+  "c": "snack",
+  "e": "🍘",
+  "n": "Tuna Rice Cake",
+  "p": 17,
+  "k": 147,
+  "serves": 1,
+  "cost": 62,
+  "b": "medium",
+  "macros_only": false,
+  "fresh": [
+   [
+    "ricecakes",
+    20
+   ],
+   [
+    "cuc",
+    0.1
+   ]
+  ],
+  "cup": [
+   "tuna"
+  ],
+  "m": [
+   "Pile the drained tuna onto the rice cakes and top with sliced cucumber."
+  ],
+  "allergens": [
+   "fish"
+  ]
+ },
+ {
+  "id": "tuna-stuffed-jacket-potatoes",
+  "c": "dinner",
+  "e": "🥔",
+  "n": "Tuna Stuffed Jacket Potatoes",
+  "p": 35,
+  "k": 441,
+  "serves": 2,
+  "cost": 113,
+  "b": "low",
+  "macros_only": false,
+  "fresh": [
+   [
+    "bakepot",
+    2
+   ],
+   [
+    "plum",
+    100
+   ]
+  ],
+  "cup": [
+   "tuna",
+   "sweetcorn",
+   "mayo"
+  ],
+  "m": [
+   "Prick the potatoes and bake at 200°C for an hour (or microwave for 10 minutes and crisp in the oven for 15).",
+   "Mix the tuna, sweetcorn and mayo, split the potatoes and pile the filling in. Serve with the tomatoes."
+  ],
+  "allergens": [
+   "eggs",
+   "fish",
+   "mustard"
+  ]
+ },
+ {
+  "id": "turkey-and-bean-chilli-with-rice",
+  "c": "dinner",
+  "e": "🌶️",
+  "n": "Turkey and Bean Chilli with Rice",
+  "p": 42,
+  "k": 482,
+  "serves": 2,
+  "cost": 218,
+  "b": "medium",
+  "macros_only": false,
+  "fresh": [
+   [
+    "turkeymince",
+    300
+   ],
+   [
+    "kidney",
+    200
+   ],
+   [
+    "ctoms",
+    400
+   ],
+   [
+    "onions",
+    1
+   ],
+   [
+    "mixpep",
+    1
+   ]
+  ],
+  "cup": [
+   "rice",
+   "paprika",
+   "cumin",
+   "oil"
+  ],
+  "m": [
+   "Brown the turkey mince in the oil with the chopped onion and pepper until no pink remains.",
+   "Add the spices, tomatoes and beans and simmer for 20 minutes. Serve over the cooked rice."
+  ],
+  "allergens": []
+ },
+ {
+  "id": "turkey-and-veg-soup",
+  "c": "lunch",
+  "e": "🍲",
+  "n": "Turkey and Veg Soup",
+  "p": 29,
+  "k": 265,
+  "serves": 1,
+  "cost": 149,
+  "b": "medium",
+  "macros_only": false,
+  "fresh": [
+   [
+    "turkeymince",
+    120
+   ],
+   [
+    "carrots",
+    80
+   ],
+   [
+    "onions",
+    0.5
+   ],
+   [
+    "passata",
+    200
+   ]
+  ],
+  "cup": [
+   "cumin",
+   "oil"
+  ],
+  "m": [
+   "Brown the turkey mince in the oil with the chopped onion and carrot until no pink remains.",
+   "Add the cumin, passata and 300 ml water and simmer for 15 minutes."
+  ],
+  "allergens": []
+ },
+ {
   "id": "turkey-keema-curry",
   "c": "dinner",
   "e": "🍛",
   "n": "Turkey Keema Curry",
   "p": 43,
-  "k": 564,
+  "k": 571,
   "serves": 2,
   "cost": 210,
   "b": "medium",
@@ -3863,6 +4972,51 @@
    "Serve over the cooked rice."
   ],
   "allergens": []
+ },
+ {
+  "id": "turkey-meatball-traybake",
+  "c": "dinner",
+  "e": "🍝",
+  "n": "Turkey Meatball Traybake",
+  "p": 40,
+  "k": 480,
+  "serves": 2,
+  "cost": 206,
+  "b": "medium",
+  "macros_only": false,
+  "fresh": [
+   [
+    "turkeymince",
+    300
+   ],
+   [
+    "eggs",
+    1
+   ],
+   [
+    "onions",
+    1
+   ],
+   [
+    "potatoes",
+    400
+   ],
+   [
+    "carrots",
+    200
+   ]
+  ],
+  "cup": [
+   "oil",
+   "herbs"
+  ],
+  "m": [
+   "Heat the oven to 200°C. Mix the turkey mince with the egg, grated onion and herbs and roll into 12 meatballs.",
+   "Toss the chopped potatoes and carrots in the oil, roast for 15 minutes, add the meatballs and roast for 20 minutes more until cooked through."
+  ],
+  "allergens": [
+   "eggs"
+  ]
  },
  {
   "id": "turkey-meatballs-and-spaghetti",
@@ -3909,6 +5063,46 @@
    "eggs",
    "gluten",
    "milk"
+  ]
+ },
+ {
+  "id": "veggie-omelette",
+  "c": "breakfast",
+  "e": "🍳",
+  "n": "Veggie Omelette",
+  "p": 14,
+  "k": 189,
+  "serves": 1,
+  "cost": 122,
+  "b": "medium",
+  "macros_only": false,
+  "fresh": [
+   [
+    "eggs",
+    2
+   ],
+   [
+    "mushrooms",
+    60
+   ],
+   [
+    "spinach",
+    40
+   ],
+   [
+    "plum",
+    50
+   ]
+  ],
+  "cup": [
+   "oil"
+  ],
+  "m": [
+   "Fry the sliced mushrooms and tomatoes in the oil for 3 minutes, then add the spinach until wilted.",
+   "Pour in the beaten eggs, cook until just set and fold in half."
+  ],
+  "allergens": [
+   "eggs"
   ]
  },
  {

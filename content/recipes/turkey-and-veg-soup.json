@@ -1,0 +1,39 @@
+{
+ "slug": "turkey-and-veg-soup",
+ "name": "Turkey and Veg Soup",
+ "course": "lunch",
+ "emoji": "🍲",
+ "serves": 1,
+ "status": "live",
+ "ingredients": [
+  {
+   "ingredient": "turkeymince",
+   "qty": 120
+  },
+  {
+   "ingredient": "carrots",
+   "qty": 80
+  },
+  {
+   "ingredient": "onions",
+   "qty": 0.5
+  },
+  {
+   "ingredient": "passata",
+   "qty": 200
+  }
+ ],
+ "cupboard": [
+  "cumin",
+  "oil"
+ ],
+ "cupboard_qty": {
+  "cumin": 2,
+  "oil": 4
+ },
+ "method": [
+  "Brown the turkey mince in the oil with the chopped onion and carrot until no pink remains.",
+  "Add the cumin, passata and 300 ml water and simmer for 15 minutes."
+ ],
+ "source": "table-plan"
+}

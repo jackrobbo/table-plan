@@ -1,0 +1,39 @@
+{
+ "slug": "sweet-potato-and-egg-hash",
+ "name": "Sweet Potato and Egg Hash",
+ "course": "breakfast",
+ "emoji": "🍠",
+ "serves": 1,
+ "status": "live",
+ "ingredients": [
+  {
+   "ingredient": "sweetpot",
+   "qty": 200
+  },
+  {
+   "ingredient": "eggs",
+   "qty": 2
+  },
+  {
+   "ingredient": "onions",
+   "qty": 0.5
+  },
+  {
+   "ingredient": "pepper",
+   "qty": 0.5
+  }
+ ],
+ "cupboard": [
+  "oil",
+  "paprika"
+ ],
+ "cupboard_qty": {
+  "oil": 5,
+  "paprika": 2
+ },
+ "method": [
+  "Fry the diced sweet potato in the oil for 10–12 minutes until soft and golden, then add the chopped onion, pepper and paprika for 3 minutes.",
+  "Make two wells, crack in the eggs, cover and cook for 3–4 minutes until the whites are set."
+ ],
+ "source": "table-plan"
+}

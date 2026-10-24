@@ -1,0 +1,24 @@
+{
+ "slug": "egg-and-tomatoes",
+ "name": "Egg and Tomatoes",
+ "course": "snack",
+ "emoji": "🍅",
+ "serves": 1,
+ "status": "live",
+ "ingredients": [
+  {
+   "ingredient": "eggs",
+   "qty": 1
+  },
+  {
+   "ingredient": "plum",
+   "qty": 80
+  }
+ ],
+ "cupboard": [],
+ "cupboard_qty": {},
+ "method": [
+  "Boil the egg for 8 minutes, cool and peel, and serve with the tomatoes."
+ ],
+ "source": "table-plan"
+}

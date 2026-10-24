@@ -10,20 +10,22 @@ const UA = 'TablePlanPriceCheck/0.1 (+https://table-plan-app.vercel.app)';
 type Entry = Partial<LabelNutrition> & { product: string; fetched_at: string; /** bold allergens in the ingredients list; absent when the page has none */ allergens?: string[] };
 
 const ingredients = JSON.parse(fs.readFileSync('content/ingredients.json', 'utf8')) as IngredientDef[];
+const map = fs.existsSync('content/cofid-map.json') ? (JSON.parse(fs.readFileSync('content/cofid-map.json', 'utf8')) as Record<string, { labelPage?: string }>) : {};
 const have: Record<string, Entry> = fs.existsSync(FILE) ? JSON.parse(fs.readFileSync(FILE, 'utf8')) : {};
 const all = process.argv.includes('--all');
 
 async function main() {
-  const todo = ingredients.filter((i) => i.product && (all || have[i.slug]?.product !== i.product!.slug));
+  // A mapped product, or a `labelPage` in cofid-map.json for cupboard items we only need allergens for (stock cubes, spices).
+  const todo = ingredients.map((i) => ({ i, page: i.product?.slug ?? map[i.slug]?.labelPage })).filter((t): t is { i: IngredientDef; page: string } => !!t.page && (all || have[t.i.slug]?.product !== t.page));
   console.log(`${todo.length} product pages to read`);
   let ok = 0, none = 0;
-  for (const i of todo) {
+  for (const { i, page } of todo) {
     try {
-      const r = await fetch(BASE + i.product!.slug, { headers: { 'user-agent': UA }, signal: AbortSignal.timeout(20000) });
+      const r = await fetch(BASE + page, { headers: { 'user-agent': UA }, signal: AbortSignal.timeout(20000) });
       const html = r.status === 200 ? await r.text() : '';
       const n = html ? parseNutritionTable(html) : null;
       const allergens = html ? parseDeclaredAllergens(html) : null;
-      if (n || allergens) have[i.slug] = { ...(n ?? {}), ...(allergens ? { allergens } : {}), product: i.product!.slug, fetched_at: new Date().toISOString() };
+      if (n || allergens) have[i.slug] = { ...(n ?? {}), ...(allergens ? { allergens } : {}), product: page, fetched_at: new Date().toISOString() };
       else delete have[i.slug];
       if (n) ok++; else { none++; console.log(`  no label table: ${i.slug} (HTTP ${r.status})`); }
     } catch (e) { console.log(`  error: ${i.slug}: ${(e as Error).message}`); }

@@ -1,0 +1,37 @@
+{
+ "slug": "veggie-omelette",
+ "name": "Veggie Omelette",
+ "course": "breakfast",
+ "emoji": "🍳",
+ "serves": 1,
+ "status": "live",
+ "ingredients": [
+  {
+   "ingredient": "eggs",
+   "qty": 2
+  },
+  {
+   "ingredient": "mushrooms",
+   "qty": 60
+  },
+  {
+   "ingredient": "spinach",
+   "qty": 40
+  },
+  {
+   "ingredient": "plum",
+   "qty": 50
+  }
+ ],
+ "cupboard": [
+  "oil"
+ ],
+ "cupboard_qty": {
+  "oil": 4
+ },
+ "method": [
+  "Fry the sliced mushrooms and tomatoes in the oil for 3 minutes, then add the spinach until wilted.",
+  "Pour in the beaten eggs, cook until just set and fold in half."
+ ],
+ "source": "table-plan"
+}

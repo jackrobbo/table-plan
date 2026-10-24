@@ -1,0 +1,24 @@
+{
+ "slug": "berries-and-greek-yogurt",
+ "name": "Berries and Greek Yogurt",
+ "course": "snack",
+ "emoji": "🫐",
+ "serves": 1,
+ "status": "live",
+ "ingredients": [
+  {
+   "ingredient": "greek",
+   "qty": 100
+  },
+  {
+   "ingredient": "blueb",
+   "qty": 80
+  }
+ ],
+ "cupboard": [],
+ "cupboard_qty": {},
+ "method": [
+  "Spoon the yogurt over the blueberries."
+ ],
+ "source": "table-plan"
+}

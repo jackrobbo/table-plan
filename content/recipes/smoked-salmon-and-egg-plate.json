@@ -1,0 +1,33 @@
+{
+ "slug": "smoked-salmon-and-egg-plate",
+ "name": "Smoked Salmon and Egg Plate",
+ "course": "breakfast",
+ "emoji": "🐟",
+ "serves": 1,
+ "status": "live",
+ "ingredients": [
+  {
+   "ingredient": "smokedsalmon",
+   "qty": 50
+  },
+  {
+   "ingredient": "eggs",
+   "qty": 2
+  },
+  {
+   "ingredient": "cuc",
+   "qty": 0.15
+  },
+  {
+   "ingredient": "avocado",
+   "qty": 0.25
+  }
+ ],
+ "cupboard": [],
+ "cupboard_qty": {},
+ "method": [
+  "Boil the eggs for 8 minutes, then cool and halve.",
+  "Plate with the smoked salmon, sliced cucumber and avocado."
+ ],
+ "source": "table-plan"
+}

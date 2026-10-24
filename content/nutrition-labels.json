@@ -181,6 +181,16 @@
   "product": "morrisons-chopped-tomatoes-400g/105415501",
   "fetched_at": "2026-10-24T16:23:49.071Z"
  },
+ "curry": {
+  "kcal": 334,
+  "protein_g": 13.6,
+  "carbs_g": 26.9,
+  "fat_g": 13,
+  "basis": "per 100g:",
+  "allergens": [],
+  "product": "morrisons-mild-curry-powder/106623695",
+  "fetched_at": "2026-10-24T17:19:54.432Z"
+ },
  "eggs": {
   "kcal": 131,
   "protein_g": 12.6,
@@ -614,6 +624,18 @@
   "allergens": [],
   "product": "morrisons-stir-fry-vegetables/104896753",
   "fetched_at": "2026-10-24T16:23:35.700Z"
+ },
+ "stock": {
+  "kcal": 7,
+  "protein_g": 0,
+  "carbs_g": 0,
+  "fat_g": 0,
+  "basis": "(as prepared) per 100ml",
+  "allergens": [
+   "eggs"
+  ],
+  "product": "morrisons-chicken-stock-cubes-12-s/105712961",
+  "fetched_at": "2026-10-24T17:19:46.692Z"
  },
  "sweetpot": {
   "allergens": [],

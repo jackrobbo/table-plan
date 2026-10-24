@@ -1,0 +1,24 @@
+{
+ "slug": "cottage-cheese-and-cucumber",
+ "name": "Cottage Cheese and Cucumber",
+ "course": "snack",
+ "emoji": "🥒",
+ "serves": 1,
+ "status": "live",
+ "ingredients": [
+  {
+   "ingredient": "cottage",
+   "qty": 100
+  },
+  {
+   "ingredient": "cuc",
+   "qty": 0.25
+  }
+ ],
+ "cupboard": [],
+ "cupboard_qty": {},
+ "method": [
+  "Cube the cucumber and stir through the cottage cheese."
+ ],
+ "source": "table-plan"
+}

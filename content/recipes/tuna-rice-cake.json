@@ -1,0 +1,28 @@
+{
+ "slug": "tuna-rice-cake",
+ "name": "Tuna Rice Cake",
+ "course": "snack",
+ "emoji": "🍘",
+ "serves": 1,
+ "status": "live",
+ "ingredients": [
+  {
+   "ingredient": "ricecakes",
+   "qty": 20
+  },
+  {
+   "ingredient": "cuc",
+   "qty": 0.1
+  }
+ ],
+ "cupboard": [
+  "tuna"
+ ],
+ "cupboard_qty": {
+  "tuna": 60
+ },
+ "method": [
+  "Pile the drained tuna onto the rice cakes and top with sliced cucumber."
+ ],
+ "source": "table-plan"
+}

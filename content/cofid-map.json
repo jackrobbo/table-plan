@@ -397,18 +397,23 @@
   "code": "11-981"
  },
  "stock": {
-  "negligible": true
+  "negligible": true,
+  "labelPage": "morrisons-chicken-stock-cubes-12-s/105712961"
  },
  "cumin": {
-  "negligible": true
+  "negligible": true,
+  "labelPage": "morrisons-ground-cumin-33g/106623863"
  },
  "paprika": {
-  "negligible": true
+  "negligible": true,
+  "labelPage": "morrisons-smoked-paprika/113965183"
  },
  "curry": {
-  "negligible": true
+  "negligible": true,
+  "labelPage": "morrisons-mild-curry-powder/106623695"
  },
  "chilliflakes": {
-  "negligible": true
+  "negligible": true,
+  "labelPage": "morrisons-chilli-flakes/106628453"
  }
 }

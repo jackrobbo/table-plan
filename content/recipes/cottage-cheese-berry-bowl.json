@@ -1,0 +1,29 @@
+{
+ "slug": "cottage-cheese-berry-bowl",
+ "name": "Cottage Cheese Berry Bowl",
+ "course": "breakfast",
+ "emoji": "🫐",
+ "serves": 1,
+ "status": "live",
+ "ingredients": [
+  {
+   "ingredient": "cottage",
+   "qty": 150
+  },
+  {
+   "ingredient": "blueb",
+   "qty": 80
+  }
+ ],
+ "cupboard": [
+  "nuts"
+ ],
+ "cupboard_qty": {
+  "nuts": 10
+ },
+ "method": [
+  "Spoon the cottage cheese into a bowl.",
+  "Top with the blueberries and chopped nuts."
+ ],
+ "source": "table-plan"
+}

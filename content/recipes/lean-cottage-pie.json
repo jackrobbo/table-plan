@@ -1,0 +1,47 @@
+{
+ "slug": "lean-cottage-pie",
+ "name": "Lean Cottage Pie",
+ "course": "dinner",
+ "emoji": "🥧",
+ "serves": 2,
+ "status": "live",
+ "ingredients": [
+  {
+   "ingredient": "mince",
+   "qty": 300
+  },
+  {
+   "ingredient": "potatoes",
+   "qty": 600
+  },
+  {
+   "ingredient": "carrots",
+   "qty": 150
+  },
+  {
+   "ingredient": "peas",
+   "qty": 100
+  },
+  {
+   "ingredient": "passata",
+   "qty": 200
+  },
+  {
+   "ingredient": "onions",
+   "qty": 1
+  }
+ ],
+ "cupboard": [
+  "butter",
+  "oil"
+ ],
+ "cupboard_qty": {
+  "butter": 15,
+  "oil": 5
+ },
+ "method": [
+  "Brown the mince in the oil with the chopped onion, then add the grated carrot, peas and passata and simmer for 15 minutes.",
+  "Boil and mash the potatoes with the butter, spoon over the mince and bake at 200°C for 20 minutes until golden."
+ ],
+ "source": "table-plan"
+}

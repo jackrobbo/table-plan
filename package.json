@@ -15,7 +15,8 @@
     "supabase:bundle": "node scripts/bundle-sql.mjs",
     "probe": "NODE_USE_ENV_PROXY=1 NODE_NO_WARNINGS=1 tsx scripts/probe-products.ts",
     "labels:fetch": "NODE_USE_ENV_PROXY=1 NODE_NO_WARNINGS=1 tsx scripts/fetch-labels.ts",
-    "nutrition:apply": "tsx scripts/apply-nutrition.ts"
+    "nutrition:apply": "tsx scripts/apply-nutrition.ts",
+    "catalogue:payload": "tsx scripts/catalogue-payload.ts"
   },
   "dependencies": {
     "@supabase/supabase-js": "^2.118.0",

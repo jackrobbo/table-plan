@@ -1,0 +1,41 @@
+{
+ "slug": "salmon-and-potato-salad",
+ "name": "Salmon and Potato Salad",
+ "course": "lunch",
+ "emoji": "🐟",
+ "serves": 1,
+ "status": "live",
+ "ingredients": [
+  {
+   "ingredient": "salmon",
+   "qty": 110
+  },
+  {
+   "ingredient": "potatoes",
+   "qty": 150
+  },
+  {
+   "ingredient": "cuc",
+   "qty": 0.25
+  },
+  {
+   "ingredient": "salad",
+   "qty": 40
+  },
+  {
+   "ingredient": "lemon",
+   "qty": 0.5
+  }
+ ],
+ "cupboard": [
+  "oil"
+ ],
+ "cupboard_qty": {
+  "oil": 4
+ },
+ "method": [
+  "Boil the diced potatoes for 12–15 minutes until tender, and bake the salmon brushed with the oil at 200°C for 12 minutes.",
+  "Flake the salmon over the potatoes, cucumber and salad leaves and finish with lemon."
+ ],
+ "source": "table-plan"
+}

@@ -1,0 +1,41 @@
+{
+ "slug": "chicken-and-avocado-salad",
+ "name": "Chicken and Avocado Salad",
+ "course": "lunch",
+ "emoji": "🥗",
+ "serves": 1,
+ "status": "live",
+ "ingredients": [
+  {
+   "ingredient": "breast",
+   "qty": 120
+  },
+  {
+   "ingredient": "avocado",
+   "qty": 0.5
+  },
+  {
+   "ingredient": "salad",
+   "qty": 60
+  },
+  {
+   "ingredient": "plum",
+   "qty": 80
+  },
+  {
+   "ingredient": "cuc",
+   "qty": 0.25
+  }
+ ],
+ "cupboard": [
+  "oil"
+ ],
+ "cupboard_qty": {
+  "oil": 5
+ },
+ "method": [
+  "Fry the sliced chicken in the oil for 6–8 minutes until cooked through and golden, then let it cool a little.",
+  "Toss with the salad leaves, tomatoes, cucumber and sliced avocado."
+ ],
+ "source": "table-plan"
+}

@@ -1,0 +1,41 @@
+{
+ "slug": "pesto-chicken-and-roast-veg",
+ "name": "Pesto Chicken and Roast Veg",
+ "course": "dinner",
+ "emoji": "🍗",
+ "serves": 2,
+ "status": "live",
+ "ingredients": [
+  {
+   "ingredient": "breast",
+   "qty": 350
+  },
+  {
+   "ingredient": "pesto",
+   "qty": 40
+  },
+  {
+   "ingredient": "courgette",
+   "qty": 300
+  },
+  {
+   "ingredient": "plum",
+   "qty": 200
+  },
+  {
+   "ingredient": "potatoes",
+   "qty": 300
+  }
+ ],
+ "cupboard": [
+  "oil"
+ ],
+ "cupboard_qty": {
+  "oil": 5
+ },
+ "method": [
+  "Heat the oven to 200°C. Toss the diced potatoes in the oil and roast for 15 minutes.",
+  "Add the courgette and tomatoes. Spread the pesto over the chicken, add to the tray and roast for 25 minutes until the chicken is cooked through."
+ ],
+ "source": "table-plan"
+}

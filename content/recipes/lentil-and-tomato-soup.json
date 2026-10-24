@@ -1,0 +1,39 @@
+{
+ "slug": "lentil-and-tomato-soup",
+ "name": "Lentil and Tomato Soup",
+ "course": "lunch",
+ "emoji": "🍅",
+ "serves": 1,
+ "status": "live",
+ "ingredients": [
+  {
+   "ingredient": "lentils",
+   "qty": 50
+  },
+  {
+   "ingredient": "passata",
+   "qty": 200
+  },
+  {
+   "ingredient": "carrots",
+   "qty": 80
+  },
+  {
+   "ingredient": "onions",
+   "qty": 0.5
+  }
+ ],
+ "cupboard": [
+  "cumin",
+  "oil"
+ ],
+ "cupboard_qty": {
+  "cumin": 2,
+  "oil": 4
+ },
+ "method": [
+  "Soften the chopped onion and carrot in the oil for 5 minutes.",
+  "Add the lentils, cumin, passata and 350 ml water and simmer for 20 minutes until the lentils collapse."
+ ],
+ "source": "table-plan"
+}

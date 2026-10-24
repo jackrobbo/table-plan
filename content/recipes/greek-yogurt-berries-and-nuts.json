@@ -1,0 +1,27 @@
+{
+ "slug": "greek-yogurt-berries-and-nuts",
+ "name": "Greek Yogurt, Berries and Nuts",
+ "course": "breakfast",
+ "emoji": "🥣",
+ "serves": 1,
+ "status": "live",
+ "ingredients": [
+  {
+   "ingredient": "greek",
+   "qty": 150
+  }
+ ],
+ "cupboard": [
+  "frozenfruit",
+  "nuts"
+ ],
+ "cupboard_qty": {
+  "frozenfruit": 80,
+  "nuts": 15
+ },
+ "method": [
+  "Spoon the yogurt into a bowl and top with the frozen fruit, which thaws into a sauce within a few minutes.",
+  "Scatter over the chopped nuts."
+ ],
+ "source": "table-plan"
+}

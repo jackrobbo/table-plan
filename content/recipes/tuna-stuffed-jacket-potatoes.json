@@ -1,0 +1,33 @@
+{
+ "slug": "tuna-stuffed-jacket-potatoes",
+ "name": "Tuna Stuffed Jacket Potatoes",
+ "course": "dinner",
+ "emoji": "🥔",
+ "serves": 2,
+ "status": "live",
+ "ingredients": [
+  {
+   "ingredient": "bakepot",
+   "qty": 2
+  },
+  {
+   "ingredient": "plum",
+   "qty": 100
+  }
+ ],
+ "cupboard": [
+  "tuna",
+  "sweetcorn",
+  "mayo"
+ ],
+ "cupboard_qty": {
+  "tuna": 224,
+  "sweetcorn": 120,
+  "mayo": 40
+ },
+ "method": [
+  "Prick the potatoes and bake at 200°C for an hour (or microwave for 10 minutes and crisp in the oven for 15).",
+  "Mix the tuna, sweetcorn and mayo, split the potatoes and pile the filling in. Serve with the tomatoes."
+ ],
+ "source": "table-plan"
+}

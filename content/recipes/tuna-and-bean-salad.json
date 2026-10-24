@@ -1,0 +1,43 @@
+{
+ "slug": "tuna-and-bean-salad",
+ "name": "Tuna and Bean Salad",
+ "course": "lunch",
+ "emoji": "🥗",
+ "serves": 1,
+ "status": "live",
+ "ingredients": [
+  {
+   "ingredient": "kidney",
+   "qty": 100
+  },
+  {
+   "ingredient": "plum",
+   "qty": 100
+  },
+  {
+   "ingredient": "cuc",
+   "qty": 0.25
+  },
+  {
+   "ingredient": "spring",
+   "qty": 0.25
+  },
+  {
+   "ingredient": "lemon",
+   "qty": 0.5
+  }
+ ],
+ "cupboard": [
+  "tuna",
+  "oil"
+ ],
+ "cupboard_qty": {
+  "tuna": 112,
+  "oil": 5
+ },
+ "method": [
+  "Drain the beans and tuna and mix with the chopped tomatoes, cucumber and spring onion.",
+  "Dress with the oil and a squeeze of lemon."
+ ],
+ "source": "table-plan"
+}

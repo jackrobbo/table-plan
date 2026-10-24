@@ -1,0 +1,37 @@
+{
+ "slug": "salmon-and-veg-parcels",
+ "name": "Salmon and Veg Parcels",
+ "course": "dinner",
+ "emoji": "🐟",
+ "serves": 2,
+ "status": "live",
+ "ingredients": [
+  {
+   "ingredient": "salmon",
+   "qty": 220
+  },
+  {
+   "ingredient": "potatoes",
+   "qty": 300
+  },
+  {
+   "ingredient": "brocc",
+   "qty": 200
+  },
+  {
+   "ingredient": "lemon",
+   "qty": 0.5
+  }
+ ],
+ "cupboard": [
+  "oil"
+ ],
+ "cupboard_qty": {
+  "oil": 5
+ },
+ "method": [
+  "Heat the oven to 200°C. Boil the sliced potatoes for 8 minutes.",
+  "Divide the potatoes, broccoli and salmon between two foil parcels, drizzle with the oil and lemon, seal, and bake for 18 minutes until the salmon flakes."
+ ],
+ "source": "table-plan"
+}

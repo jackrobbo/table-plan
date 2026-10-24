@@ -1,0 +1,24 @@
+{
+ "slug": "cucumber-and-houmous",
+ "name": "Cucumber and Houmous",
+ "course": "snack",
+ "emoji": "🥒",
+ "serves": 1,
+ "status": "live",
+ "ingredients": [
+  {
+   "ingredient": "cuc",
+   "qty": 0.5
+  },
+  {
+   "ingredient": "houm",
+   "qty": 40
+  }
+ ],
+ "cupboard": [],
+ "cupboard_qty": {},
+ "method": [
+  "Slice the cucumber into sticks and dip into the houmous."
+ ],
+ "source": "table-plan"
+}

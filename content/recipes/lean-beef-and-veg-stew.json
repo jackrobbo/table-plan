@@ -1,0 +1,47 @@
+{
+ "slug": "lean-beef-and-veg-stew",
+ "name": "Lean Beef and Veg Stew",
+ "course": "dinner",
+ "emoji": "🍲",
+ "serves": 2,
+ "status": "live",
+ "ingredients": [
+  {
+   "ingredient": "mince",
+   "qty": 250
+  },
+  {
+   "ingredient": "potatoes",
+   "qty": 400
+  },
+  {
+   "ingredient": "carrots",
+   "qty": 200
+  },
+  {
+   "ingredient": "onions",
+   "qty": 1
+  },
+  {
+   "ingredient": "ctoms",
+   "qty": 400
+  },
+  {
+   "ingredient": "kidney",
+   "qty": 200
+  }
+ ],
+ "cupboard": [
+  "puree",
+  "oil"
+ ],
+ "cupboard_qty": {
+  "puree": 20,
+  "oil": 6
+ },
+ "method": [
+  "Brown the mince in the oil with the chopped onion until no pink remains, then stir in the purée.",
+  "Add the diced potatoes and carrots, tomatoes, beans and 200 ml water. Cover and simmer for 30 minutes until the potatoes are tender."
+ ],
+ "source": "table-plan"
+}

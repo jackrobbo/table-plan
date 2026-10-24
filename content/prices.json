@@ -24,11 +24,11 @@
   "status": "ok"
  },
  "rump": {
-  "price_pence": 293,
-  "checked_at": "2026-10-24T13:06:27.518Z",
-  "last_ok_at": null,
-  "status": "changed_big",
-  "note": "moved 50% (293p → 440p); held for review"
+  "price_pence": 440,
+  "checked_at": "2026-10-24T17:30:00.000Z",
+  "last_ok_at": "2026-10-24T17:30:00.000Z",
+  "status": "ok",
+  "note": "reviewed: +50% (293p -> 440p) confirmed against the live Morrisons page"
  },
  "prawns": {
   "price_pence": 249,

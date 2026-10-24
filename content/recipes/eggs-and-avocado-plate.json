@@ -1,0 +1,29 @@
+{
+ "slug": "eggs-and-avocado-plate",
+ "name": "Eggs and Avocado Plate",
+ "course": "breakfast",
+ "emoji": "🥑",
+ "serves": 1,
+ "status": "live",
+ "ingredients": [
+  {
+   "ingredient": "eggs",
+   "qty": 2
+  },
+  {
+   "ingredient": "avocado",
+   "qty": 0.5
+  },
+  {
+   "ingredient": "plum",
+   "qty": 60
+  }
+ ],
+ "cupboard": [],
+ "cupboard_qty": {},
+ "method": [
+  "Boil the eggs for 7–8 minutes, cool a little and peel.",
+  "Serve with sliced avocado and halved tomatoes."
+ ],
+ "source": "table-plan"
+}

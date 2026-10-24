@@ -1,0 +1,24 @@
+{
+ "slug": "apple-and-almonds",
+ "name": "Apple and Nuts",
+ "course": "snack",
+ "emoji": "🍏",
+ "serves": 1,
+ "status": "live",
+ "ingredients": [
+  {
+   "ingredient": "apple",
+   "qty": 1
+  }
+ ],
+ "cupboard": [
+  "nuts"
+ ],
+ "cupboard_qty": {
+  "nuts": 15
+ },
+ "method": [
+  "Slice the apple and eat with the nuts."
+ ],
+ "source": "table-plan"
+}

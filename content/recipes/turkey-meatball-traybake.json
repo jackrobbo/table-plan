@@ -1,0 +1,43 @@
+{
+ "slug": "turkey-meatball-traybake",
+ "name": "Turkey Meatball Traybake",
+ "course": "dinner",
+ "emoji": "🍝",
+ "serves": 2,
+ "status": "live",
+ "ingredients": [
+  {
+   "ingredient": "turkeymince",
+   "qty": 300
+  },
+  {
+   "ingredient": "eggs",
+   "qty": 1
+  },
+  {
+   "ingredient": "onions",
+   "qty": 1
+  },
+  {
+   "ingredient": "potatoes",
+   "qty": 400
+  },
+  {
+   "ingredient": "carrots",
+   "qty": 200
+  }
+ ],
+ "cupboard": [
+  "oil",
+  "herbs"
+ ],
+ "cupboard_qty": {
+  "oil": 12,
+  "herbs": 2
+ },
+ "method": [
+  "Heat the oven to 200°C. Mix the turkey mince with the egg, grated onion and herbs and roll into 12 meatballs.",
+  "Toss the chopped potatoes and carrots in the oil, roast for 15 minutes, add the meatballs and roast for 20 minutes more until cooked through."
+ ],
+ "source": "table-plan"
+}

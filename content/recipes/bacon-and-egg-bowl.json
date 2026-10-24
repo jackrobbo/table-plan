@@ -1,0 +1,37 @@
+{
+ "slug": "bacon-and-egg-bowl",
+ "name": "Bacon and Egg Bowl",
+ "course": "breakfast",
+ "emoji": "🥓",
+ "serves": 1,
+ "status": "live",
+ "ingredients": [
+  {
+   "ingredient": "bacon",
+   "qty": 3
+  },
+  {
+   "ingredient": "eggs",
+   "qty": 2
+  },
+  {
+   "ingredient": "plum",
+   "qty": 80
+  },
+  {
+   "ingredient": "spinach",
+   "qty": 40
+  }
+ ],
+ "cupboard": [
+  "oil"
+ ],
+ "cupboard_qty": {
+  "oil": 3
+ },
+ "method": [
+  "Grill the bacon for 4–5 minutes each side until cooked through, then chop.",
+  "Fry the eggs in the oil and wilt the spinach in the pan. Serve with halved tomatoes and the bacon."
+ ],
+ "source": "table-plan"
+}

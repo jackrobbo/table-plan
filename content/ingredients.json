@@ -119,7 +119,7 @@
   "product": {
    "retailer": "morrisons",
    "name": "Morrisons British Beef Rump Steak 200g",
-   "price_pence": 293,
+   "price_pence": 440,
    "pack_size": 200,
    "slug": "morrisons-british-beef-rump-steak-200g/115888652"
   },
@@ -2936,7 +2936,9 @@
   "unit": "g",
   "cupboard": true,
   "note": "Chicken Stock Cubes 12 · £1.30",
-  "allergens": [],
+  "allergens": [
+   "eggs"
+  ],
   "per100": null,
   "product": null,
   "cupboardPrice": {
@@ -2974,9 +2976,19 @@
   "cupboard": true,
   "note": "Mild Curry Powder",
   "allergens": [],
-  "per100": null,
+  "per100": {
+   "kcal": 334,
+   "protein_g": 13.6,
+   "carbs_g": 26.9,
+   "fat_g": 13
+  },
   "product": null,
-  "negligible": true
+  "negligible": true,
+  "cofid": {
+   "name": "Pack label (no CoFID cross-check)",
+   "verified": true,
+   "basis": "label"
+  }
  },
  {
   "slug": "chilliflakes",

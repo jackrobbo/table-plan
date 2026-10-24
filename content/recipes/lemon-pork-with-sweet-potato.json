@@ -1,0 +1,39 @@
+{
+ "slug": "lemon-pork-with-sweet-potato",
+ "name": "Lemon Pork with Sweet Potato",
+ "course": "dinner",
+ "emoji": "🥩",
+ "serves": 2,
+ "status": "live",
+ "ingredients": [
+  {
+   "ingredient": "porkloin",
+   "qty": 300
+  },
+  {
+   "ingredient": "sweetpot",
+   "qty": 400
+  },
+  {
+   "ingredient": "brocc",
+   "qty": 200
+  },
+  {
+   "ingredient": "lemon",
+   "qty": 1
+  }
+ ],
+ "cupboard": [
+  "oil",
+  "herbs"
+ ],
+ "cupboard_qty": {
+  "oil": 10,
+  "herbs": 2
+ },
+ "method": [
+  "Roast the diced sweet potato in half the oil at 200°C for 30 minutes.",
+  "Rub the pork steaks with the herbs, lemon juice and remaining oil and fry for 5–6 minutes each side until cooked through. Rest, then serve with steamed broccoli."
+ ],
+ "source": "table-plan"
+}

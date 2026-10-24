@@ -77,8 +77,8 @@ describe('allergen safety net', () => {
 
 describe('the launch bank', () => {
   const live = RECIPES.filter((r) => !r.macros_only);
-  it('has 100 meals with a cost and tier each, and every tier in every course', () => {
-    expect(RECIPES.length).toBe(100);
+  it('has a cost and tier for every meal, and every tier in every course', () => {
+    expect(RECIPES.length).toBeGreaterThanOrEqual(100);
     for (const r of live) { expect(r.cost, r.id).toBeGreaterThan(0); expect(['low', 'medium', 'high'], r.id).toContain(r.b); }
     for (const c of ['breakfast', 'lunch', 'snack', 'dinner'] as const)
       for (const b of ['low', 'medium', 'high'] as const) expect(live.filter((r) => r.c === c && r.b === b).length, `${c} ${b}`).toBeGreaterThanOrEqual(3);
@@ -89,6 +89,17 @@ describe('the launch bank', () => {
       expect(r.k, r.id).toBeLessThan(1000);
       expect(r.p * 4, r.id).toBeLessThan(r.k);
     }
+  });
+  it('leaves enough meals for every one of the 14 allergens, so excluding one still gives a varied week', () => {
+    for (const a of ['celery', 'gluten', 'crustaceans', 'eggs', 'fish', 'lupin', 'milk', 'molluscs', 'mustard', 'nuts', 'peanuts', 'sesame', 'soya', 'sulphites'])
+      for (const [c, min] of [['breakfast', 5], ['lunch', 5], ['snack', 3], ['dinner', 5]] as const)
+        expect(RECIPES.filter((r) => r.c === c && !r.allergens.includes(a)).length, `${a} / ${c}`).toBeGreaterThanOrEqual(min);
+  });
+  it('has enough lighter meals for weight-loss targets (about 1,300–1,500 kcal a day)', () => {
+    expect(RECIPES.filter((r) => r.c === 'dinner' && r.k <= 560).length).toBeGreaterThanOrEqual(12);
+    expect(RECIPES.filter((r) => r.c === 'lunch' && r.k <= 420).length).toBeGreaterThanOrEqual(8);
+    expect(RECIPES.filter((r) => r.c === 'breakfast' && r.k <= 380).length).toBeGreaterThanOrEqual(8);
+    expect(RECIPES.filter((r) => r.c === 'snack' && r.k <= 180).length).toBeGreaterThanOrEqual(8);
   });
   it('flags fish, crustaceans and milk on the recipes that contain them', () => {
     const by = (id: string) => RECIPES.find((r) => r.id === id)!.allergens;

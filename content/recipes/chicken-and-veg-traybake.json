@@ -1,0 +1,43 @@
+{
+ "slug": "chicken-and-veg-traybake",
+ "name": "Chicken and Veg Traybake",
+ "course": "dinner",
+ "emoji": "🍗",
+ "serves": 2,
+ "status": "live",
+ "ingredients": [
+  {
+   "ingredient": "thigh",
+   "qty": 400
+  },
+  {
+   "ingredient": "potatoes",
+   "qty": 400
+  },
+  {
+   "ingredient": "carrots",
+   "qty": 150
+  },
+  {
+   "ingredient": "courgette",
+   "qty": 200
+  },
+  {
+   "ingredient": "onions",
+   "qty": 1
+  }
+ ],
+ "cupboard": [
+  "oil",
+  "herbs"
+ ],
+ "cupboard_qty": {
+  "oil": 15,
+  "herbs": 2
+ },
+ "method": [
+  "Heat the oven to 200°C. Toss the chopped potatoes, carrots and onion in the oil and herbs and roast for 15 minutes.",
+  "Add the chicken thighs and courgette and roast for 30 minutes more, until the chicken is cooked through with no pink."
+ ],
+ "source": "table-plan"
+}

@@ -1,0 +1,39 @@
+{
+ "slug": "spinach-and-mushroom-frittata",
+ "name": "Spinach and Mushroom Frittata",
+ "course": "lunch",
+ "emoji": "🍳",
+ "serves": 1,
+ "status": "live",
+ "ingredients": [
+  {
+   "ingredient": "eggs",
+   "qty": 3
+  },
+  {
+   "ingredient": "spinach",
+   "qty": 60
+  },
+  {
+   "ingredient": "mushrooms",
+   "qty": 60
+  },
+  {
+   "ingredient": "plum",
+   "qty": 50
+  }
+ ],
+ "cupboard": [
+  "cheddar",
+  "oil"
+ ],
+ "cupboard_qty": {
+  "cheddar": 20,
+  "oil": 5
+ },
+ "method": [
+  "Soften the sliced mushrooms in the oil for 3 minutes, add the spinach and tomatoes until wilted.",
+  "Pour over the beaten eggs, scatter the cheese and cook on a low heat for 6–8 minutes until set, finishing under the grill if you like."
+ ],
+ "source": "table-plan"
+}
