@@ -1,5 +1,6 @@
 'use client';
 import Link from 'next/link';
+import MorrisonsLogo from '@/components/RetailerLogo';
 import Screen from '@/components/Screen';
 
 export default function Welcome() {
@@ -16,7 +17,8 @@ export default function Welcome() {
       <div className="card">
         <h3>Priced at Morrisons</h3>
         <p className="muted" style={{ margin: '4px 0 0' }}>Your list shows estimated Morrisons prices, dated, so you know what the week will cost before you shop.</p>
-        <div className="stores"><span>Morrisons</span><span>More supermarkets soon</span></div>
+        <MorrisonsLogo />
+        <p className="muted" style={{ margin: '8px 0 0' }}>More supermarkets soon.</p>
       </div>
     </Screen>
   );

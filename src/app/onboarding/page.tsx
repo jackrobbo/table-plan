@@ -56,7 +56,7 @@ export default function Onboarding() {
       {step === 'activity' && <ActivityStep p={profile} update={update} />}
       {step === 'meals' && <MealsStep p={profile} update={update} />}
       {step === 'allergies' && <AllergiesStep p={profile} update={update} />}
-      {step === 'target' && <TargetStep p={profile} />}
+      {step === 'target' && <TargetStep p={profile} update={update} />}
       {step === 'dislikes' && <DislikesStep p={profile} update={update} />}
       {step === 'taste' && <TasteStep p={profile} update={update} />}
     </Screen>
@@ -246,7 +246,7 @@ function AllergiesStep({ p, update }: SP) {
   );
 }
 
-function TargetStep({ p }: { p: Profile }) {
+function TargetStep({ p, update }: SP) {
   const t = computeTargets(p.goal ?? 'lose', p.stats);
   const hh = 1 + p.meals.dinner.extraServings;
   return (
@@ -257,6 +257,10 @@ function TargetStep({ p }: { p: Profile }) {
         <div><div className="n">≥{t.protein}g<small>protein a day</small></div></div>
         <div className="pair"><div className="n">~{t.carbs}g<small>carbs</small></div><div className="n">~{t.fat}g<small>fat</small></div></div>
       </div>
+      {t.estimated && (
+        <div className="estimate-flag"><b>This is a general estimate.</b> Without your height, weight, age and sex we can only use a typical number for your goal, so it may be too high or too low for you.
+          <button onClick={() => update((x) => ({ ...x, step: 'height' }))}>Add my stats for a personal target</button></div>
+      )}
       <div className="note"><b>Steady, not extreme.</b> {t.maintenance ? `Estimated maintenance is ${t.maintenance} kcal. ` : 'Using a sensible default; add your stats for a personal number. '}We never plan below 1,300 kcal.</div>
       <p className="muted">Every day is kept inside this band. Change anything later. Not medical or dietetic advice: talk to your GP before changing your diet if you have a medical condition.</p>
     </>

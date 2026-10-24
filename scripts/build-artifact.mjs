@@ -5,7 +5,11 @@ import { build } from 'esbuild';
 const out = process.argv[2];
 const r = await build({
   entryPoints: ['scripts/artifact/entry.tsx'], bundle: true, write: false, minify: true, format: 'iife', jsx: 'automatic',
-  define: { 'process.env.NODE_ENV': '"production"' },
+  define: {
+    'process.env.NODE_ENV': '"production"',
+    __LOGO_MORRISONS_LIGHT__: JSON.stringify('data:image/svg+xml;base64,' + fs.readFileSync('public/logos/morrisons-light.svg').toString('base64')),
+    __LOGO_MORRISONS_DARK__: JSON.stringify('data:image/svg+xml;base64,' + fs.readFileSync('public/logos/morrisons-dark.svg').toString('base64')),
+  },
   alias: {
     '@': path.resolve('src'),
     'next/navigation': path.resolve('scripts/artifact/shim-navigation.ts'),

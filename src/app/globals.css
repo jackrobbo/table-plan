@@ -147,3 +147,14 @@ input.text:focus{outline:2px solid var(--ok);}
 .value input::-webkit-outer-spin-button,.value input::-webkit-inner-spin-button{-webkit-appearance:none; margin:0;}
 .value input[type=number]{-moz-appearance:textfield; appearance:textfield;}
 a.linkbtn{text-decoration:none;}
+.retailer-logo{display:inline-flex; margin-top:12px;}
+.retailer-logo img{height:100%; width:auto; display:block;}
+.retailer-logo .logo-dark{display:none;}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]) .retailer-logo .logo-light{display:none;}
+  :root:not([data-theme="light"]) .retailer-logo .logo-dark{display:block;}
+}
+:root[data-theme="dark"] .retailer-logo .logo-light{display:none;}
+:root[data-theme="dark"] .retailer-logo .logo-dark{display:block;}
+.estimate-flag{background:var(--warn-soft); color:var(--warn-ink); border-radius:var(--radius-sm); padding:12px 14px; font-size:14px; margin:12px 0;}
+.estimate-flag button{display:block; margin-top:6px; padding:0; min-height:0; background:none; border:0; color:inherit; font-weight:600; text-decoration:underline; cursor:pointer;}
