@@ -212,6 +212,8 @@ a.linkbtn{text-decoration:none;}
 .line.got .lbody{opacity:.45; text-decoration:line-through;}
 .line{align-items:center;} .line .lbody{flex:1; min-width:0;}
 .line .tick{margin-right:2px;}
+.shoplink{display:inline-block; margin-left:8px; font-size:12px; font-weight:600; color:var(--new); text-decoration:none; white-space:nowrap;}
+@media (hover:hover){ .shoplink:hover{text-decoration:underline;} }
 .rgrid{display:grid; grid-template-columns:repeat(2,1fr); gap:10px; margin:10px 0 18px;}
 .rcard{background:var(--card); border:1.5px solid transparent; border-radius:var(--radius); padding:12px; text-align:left; cursor:pointer; display:flex; flex-direction:column; gap:2px; transition:border-color .18s, transform .18s;}
 .rcard .emoji{font-size:28px;} .rcard .nm{font-weight:600; font-size:14px; line-height:1.25;}

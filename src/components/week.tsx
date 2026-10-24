@@ -71,6 +71,9 @@ export function ShoppingList({ shopping, have, onToggle }: { shopping: Shopping;
             )}
             <div className="lbody">
               <b>{l.name}{l.packs > 1 ? ` ×${l.packs}` : ''}</b>
+              {l.slug && (
+                <a className="shoplink" href={`https://groceries.morrisons.com/products/${l.slug}`} target="_blank" rel="noopener noreferrer" aria-label={`Open ${l.name} at Morrisons (opens in a new tab)`}>Morrisons ↗</a>
+              )}
               <div className="muted">{l.usedBy.slice(0, 3).join(', ')}</div>
               {l.status && l.status !== 'ok' && <div className="flag">May be unavailable at the moment</div>}
             </div>
