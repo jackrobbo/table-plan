@@ -91,7 +91,7 @@ export default function SignIn() {
       {!sent ? (
         <>
           <h2>What&apos;s your email?</h2>
-          <p className="sub">We&apos;ll send a {OTP_LENGTH}-digit code. No password. We only use your email for Table Plan, never for anything else.</p>
+          <p className="sub">We&apos;ll send {OTP_LENGTH === 8 ? 'an' : 'a'} {OTP_LENGTH}-digit code. No password. We only use your email for Table Plan, never for anything else.</p>
           <input id="email" className="text" type="email" inputMode="email" autoComplete="email" placeholder="you@example.co.uk" value={email}
             aria-label="Email" onChange={(e) => setEmail(e.target.value)} onKeyDown={(e) => e.key === 'Enter' && send()} />
           {needsInvite && <>
