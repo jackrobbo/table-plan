@@ -9,6 +9,7 @@ import { PRICES_META, RECIPES } from '@/data';
 import { safeRecipes } from '@/lib/allergens';
 import { addDays, dayLabel, weekLabel } from '@/lib/cycle/dates';
 import { ensureWeeks, saveList, savePlan, saveProgress, snapshot, type Week } from '@/lib/cycle/week';
+import { BUDGETS, BUDGET_LABEL, budgetHelp, tierMark } from '@/lib/budget';
 import { planInputFrom } from '@/lib/planner/fromProfile';
 import { buildShopping } from '@/lib/planner/shopping';
 import { explainMisses, planWeek } from '@/lib/planner/solve';
@@ -63,7 +64,8 @@ export default function PlanNext() {
   const picksOk = planned.every((c) => have_(c) >= needed(c));
 
   const build = (liked: string[]) => {
-    const input = { ...planInputFrom(profile), liked };
+    // Meals the person picked by hand are never capped by the spend setting; auto-picked ones are.
+    const input = { ...planInputFrom(profile), liked, ...(liked === profile.likedRecipes ? {} : { budget: 'high' as const }) };
     const built = planWeek(input, 24, Math.floor(Math.random() * 1e6));
     track('week_generated', { days_in_band: built.days.filter((d) => d.inBand).length, mode: liked === profile.likedRecipes ? 'auto' : 'own' });
     setDraft(built);
@@ -110,7 +112,14 @@ export default function PlanNext() {
             <div className="line"><div className="lbody"><b>Daily target</b><div className="muted">{t.band[0].toLocaleString('en-GB')}–{t.band[1].toLocaleString('en-GB')} kcal · ≥{t.protein}g protein</div></div></div>
             <div className="line"><div className="lbody"><b>Cooking days</b><div className="muted">Mon–Fri</div></div></div>
           </div>
-          <p className="muted">To change these, edit your answers from the home screen. New settings apply from the next week still to plan.</p>
+          <h3 style={{ marginTop: 18 }}>Weekly spend</h3>
+          <div className="chips" role="group" aria-label="Weekly spend">
+            {BUDGETS.map((b) => (
+              <button key={b} className={'chip lg' + (profile.budget === b ? ' on' : '')} aria-pressed={profile.budget === b} onClick={() => update((p) => ({ ...p, budget: b }))}>{BUDGET_LABEL[b]}</button>
+            ))}
+          </div>
+          <p className="muted" style={{ marginTop: -4 }}>{budgetHelp(profile.budget)} We only go over this on a day that can&apos;t hit your targets without it.</p>
+          <p className="muted">To change your meals or targets, edit your answers from the home screen. New settings apply from the next week still to plan.</p>
           <button className="btn" onClick={() => build(profile.likedRecipes)}>Pick for me</button>
           <button className="btn ghost" style={{ marginTop: 8 }} onClick={() => setStep('pick')}>Pick my own (optional)</button>
         </div>
@@ -126,7 +135,7 @@ export default function PlanNext() {
               <div className="rgrid">
                 {safe.filter((r) => r.c === c).map((r) => (
                   <button key={r.id} className={'rcard' + (picks.includes(r.id) ? ' on' : '')} aria-pressed={picks.includes(r.id)} onClick={() => togglePick(r.id)}>
-                    <span className="emoji">{r.e}</span><span className="nm">{r.n}</span><span className="muted">{r.p}g · {r.k} kcal</span>
+                    <span className="emoji">{r.e}</span><span className="nm">{r.n}</span><span className="muted">{r.p}g · {r.k} kcal · {tierMark(r.b)}</span>
                   </button>
                 ))}
               </div>
@@ -143,6 +152,7 @@ export default function PlanNext() {
           ) : (<>
             <p className="sub">{draft.days.filter((d) => d.inBand).length} of {draft.days.length} days in band. Resized or topped-up days are highlighted.</p>
             {explainMisses(draft.days, t.band, t.protein).map((i) => <div key={i} className="estimate-flag">{i}</div>)}
+            {draft.notes?.map((n) => <p key={n} className="muted">{n}</p>)}
             {shopping && <PriceNote totalPence={shopping.totalPence} />}
             {draft.days.map((d, i) => <DayCard key={d.day} d={d} index={i} label={dayLabel(addDays(week.start, i))} />)}
             <button className="btn ghost" onClick={() => build(picks.length ? picks : profile.likedRecipes)}>Shuffle</button>

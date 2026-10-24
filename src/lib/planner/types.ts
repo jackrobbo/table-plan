@@ -1,4 +1,4 @@
-import type { Topup } from '@/data';
+import type { Budget, Topup } from '@/data';
 import type { Allergen } from '../allergens';
 import type { MealTime } from '../profile';
 import type { Goal, Stats } from '../targets';
@@ -14,6 +14,10 @@ export interface PlanInput {
   dislikes: readonly string[];
   /** Recipe ids the user kept in the taste swipe. Planned meals only come from these. */
   liked: readonly string[];
+  /** Recipe ids the user skipped in the taste swipe: never added when the spend cap leaves too few liked meals. */
+  skipped?: readonly string[];
+  /** Spend cap on auto-picked meals. Undefined = no cap (e.g. the user hand-picked their meals). */
+  budget?: Budget;
 }
 
 export interface PlannedMeal {
@@ -45,4 +49,6 @@ export interface Plan {
   seed: number;
   days: PlannedDay[];
   issues: string[];
+  /** Things worth knowing that are not problems, e.g. the spend cap had to be relaxed for a course. */
+  notes?: string[];
 }

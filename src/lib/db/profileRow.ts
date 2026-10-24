@@ -22,6 +22,7 @@ export interface ProfileRow {
   onboarding_step: string;
   completed: boolean;
   weeks: Profile['weeks'];
+  budget: Profile['budget'];
   reminders: Profile['reminders'];
 }
 
@@ -33,7 +34,7 @@ export function profileToRow(userId: string, p: Profile): ProfileRow {
     height_cm: p.stats.heightCm ?? null, weight_kg: p.stats.weightKg ?? null, age: p.stats.age ?? null, sex: p.stats.sex ?? null,
     activity: p.stats.activity, skipped_stats: SKIP_KEYS.filter((k) => p.skipped[k]), meals: p.meals,
     allergies: p.allergies, no_allergies: p.noAllergies, dislikes: p.dislikes, liked_recipes: p.likedRecipes,
-    skipped_recipes: p.skippedRecipes, onboarding_step: p.step, completed: p.completed, weeks: p.weeks, reminders: p.reminders,
+    skipped_recipes: p.skippedRecipes, onboarding_step: p.step, completed: p.completed, weeks: p.weeks, budget: p.budget, reminders: p.reminders,
   };
 }
 
@@ -51,6 +52,6 @@ export function rowToProfile(r: Partial<ProfileRow>): Profile {
     meals: { ...d.meals, ...(r.meals ?? {}) }, allergies: r.allergies ?? d.allergies, noAllergies: r.no_allergies ?? d.noAllergies,
     dislikes: r.dislikes ?? d.dislikes, likedRecipes: r.liked_recipes ?? d.likedRecipes, skippedRecipes: r.skipped_recipes ?? d.skippedRecipes,
     step: (r.onboarding_step as OnboardingStep) ?? d.step, completed: r.completed ?? d.completed,
-    weeks: r.weeks ?? d.weeks, reminders: { ...d.reminders, ...(r.reminders ?? {}) },
+    weeks: r.weeks ?? d.weeks, budget: r.budget ?? d.budget, reminders: { ...d.reminders, ...(r.reminders ?? {}) },
   };
 }

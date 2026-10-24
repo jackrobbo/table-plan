@@ -1,5 +1,6 @@
 'use client';
 import { PRODUCTS, RECIPES } from '@/data';
+import { tierMark } from '@/lib/budget';
 import { buildShopping, type Shopping } from '@/lib/planner/shopping';
 import type { Plan, PlannedDay, PlannedMeal } from '@/lib/planner/types';
 
@@ -100,6 +101,7 @@ export function RecipeSheet({ id, onClose, portions }: { id: string | null; onCl
         <h2>{r.n}</h2>
         <div className="tags" style={{ margin: '8px 0 14px' }}>
           <span className="p">P {r.p}g</span><span>{r.k} kcal</span><span>serves {r.serves}</span>
+          {r.cost != null && <span title="Cost of the ingredients used, per portion">≈ {money(r.cost)} a portion · {tierMark(r.b)}</span>}
         </div>
         <p className="group-title">Ingredients (whole dish)</p>
         <ul className="plain">{r.fresh.map(([k, q]) => <li key={k}>{PRODUCTS[k]?.n ?? k}: {Math.round(q * 10) / 10} {PRODUCTS[k]?.u}</li>)}{r.cup.length > 0 && <li className="muted">Cupboard: {r.cup.join(', ')}</li>}</ul>

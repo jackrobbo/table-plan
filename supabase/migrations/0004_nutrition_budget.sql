@@ -13,6 +13,6 @@ alter table public.recipes
   add column if not exists cost_pence integer,
   add column if not exists budget text check (budget in ('low', 'medium', 'high'));
 
--- Profiles: the person's spend preference for planning ('any' = no preference).
+-- Profiles: spend cap for auto-picked weeks. low = cheapest-tier meals, medium = up to mid-priced, high = no cap.
 alter table public.profiles
-  add column if not exists budget text not null default 'any' check (budget in ('any', 'low', 'medium', 'high'));
+  add column if not exists budget text not null default 'medium' check (budget in ('low', 'medium', 'high'));

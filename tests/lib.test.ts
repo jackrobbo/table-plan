@@ -63,6 +63,18 @@ describe('allergens', () => {
   });
 });
 
+import { tasteDeck } from '@/lib/onboarding';
+describe('taste deck', () => {
+  it('interleaves cost tiers so early cards are a mix, keeping every meal exactly once', () => {
+    const pool = RECIPES.filter((r) => r.c === 'dinner');
+    const deck = tasteDeck(pool);
+    expect(deck).toHaveLength(pool.length);
+    expect(new Set(deck.map((r) => r.id)).size).toBe(pool.length);
+    expect(deck.slice(0, 3).map((r) => r.b)).toEqual(['low', 'medium', 'high']);
+    expect(tasteDeck(pool).map((r) => r.id)).toEqual(deck.map((r) => r.id));   // stable
+  });
+});
+
 describe('onboarding', () => {
   const stats = { sex: 'f' as const, age: 34, heightCm: 168, weightKg: 74, activity: 1.375 };
 

@@ -1,6 +1,7 @@
 import type { Weeks } from './cycle/week';
 import type { Allergen } from './allergens';
 import type { Goal, Sex, Stats } from './targets';
+import type { Budget } from './content/macros';
 import type { HeightUnit, WeightUnit } from './units';
 
 export type MealTime = 'breakfast' | 'lunch' | 'dinner';
@@ -34,6 +35,8 @@ export interface Profile {
   completed: boolean;
   /** Weekly cycle (M5): every week the user can see, keyed by Monday. */
   weeks: Weeks;
+  /** Spend cap for auto-picked weeks: 'low' = cheapest-tier meals, 'medium' = up to mid-priced, 'high' = no cap. */
+  budget: Budget;
   /** Reminder opt-in, and which nudges have already been shown (`${week}:${kind}`). */
   reminders: { on: boolean; shown: string[] };
 }
@@ -57,6 +60,7 @@ export const emptyProfile = (): Profile => ({
   step: 'goal',
   completed: false,
   weeks: {},
+  budget: 'medium',
   reminders: { on: false, shown: [] },
 });
 

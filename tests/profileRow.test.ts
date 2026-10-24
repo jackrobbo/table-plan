@@ -10,7 +10,7 @@ describe('profile <-> row mapping', () => {
       skipped: { weight: true as const }, allergies: ['milk' as const], dislikes: ['Liver'], likedRecipes: ['beef-tacos'], skippedRecipes: ['lasagne'],
       step: 'taste' as const, completed: true,
       weeks: { '2026-10-26': { start: '2026-10-26', status: 'planned' as const, plan: null, picks: [], haveAlready: ['eggs'], ticks: { '0:1': true } } },
-      reminders: { on: true, shown: ['2026-11-02:opens'] },
+      budget: 'low' as const, reminders: { on: true, shown: ['2026-11-02:opens'] },
     };
     expect(rowToProfile(profileToRow('u1', p))).toEqual(p);
   });
@@ -25,5 +25,6 @@ describe('profile <-> row mapping', () => {
     expect(p.stats.heightCm).toBe(168.5);
     expect(p.meals.dinner.extraServings).toBe(1);
     expect(p.weeks).toEqual({});
+    expect(p.budget).toBe('medium');   // rows written before budgets existed
   });
 });

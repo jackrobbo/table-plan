@@ -5,7 +5,8 @@ import topups from './topups.json';
 import pricesMeta from './prices-meta.json';
 
 export type Course = 'breakfast' | 'lunch' | 'snack' | 'dinner';
-export type Budget = 'low' | 'medium' | 'high';
+export type { Budget } from '@/lib/content/macros';
+import type { Budget } from '@/lib/content/macros';
 
 /** st: set only when the latest price check was not clean (delisted, out_of_stock, changed_big, error). */
 export interface Product { n: string; pr: number; pack: number; u: string; s: string; st?: string }

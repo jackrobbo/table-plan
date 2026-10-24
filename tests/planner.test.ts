@@ -94,6 +94,54 @@ describe('planner: preferences', () => {
   });
 });
 
+describe('planner: spend cap', () => {
+  const tierOf = (id: string) => RECIPES.find((r) => r.id === id)!.b;
+  const mealCost = (plan: ReturnType<typeof generatePlan>) => plan.days.flatMap((d) => d.meals).reduce((a, m) => a + (RECIPES.find((r) => r.id === m.recipeId)!.cost ?? 0), 0);
+
+  it('low only uses cheapest-tier meals, medium never uses the priciest, high has no cap', () => {
+    const low = generatePlan(base({ goal: 'maintain', budget: 'low' }), 5), med = generatePlan(base({ goal: 'maintain', budget: 'medium' }), 5);
+    for (const m of low.days.flatMap((d) => d.meals)) expect(tierOf(m.recipeId), m.recipeId).toBe('low');
+    for (const m of med.days.flatMap((d) => d.meals)) expect(tierOf(m.recipeId), m.recipeId).not.toBe('high');
+    expect(low.days.every((d) => d.inBand)).toBe(true);
+  });
+  it('a lower cap means cheaper meals on average', () => {
+    const avg = (b: 'low' | 'medium' | 'high') => [1, 2, 3, 4].reduce((a, sd) => a + mealCost(generatePlan(base({ goal: 'maintain', budget: b }), sd)), 0);
+    expect(avg('low')).toBeLessThan(avg('medium'));
+    expect(avg('medium')).toBeLessThanOrEqual(avg('high'));
+  });
+  const pricey = RECIPES.filter((r) => r.c === 'dinner' && r.b === 'high').slice(0, 6).map((r) => r.id);
+  const withPriceyDinners = () => [...likedAll().filter((id) => RECIPES.find((r) => r.id === id)!.c !== 'dinner'), ...pricey];
+
+  it('with too few liked meals inside the cap, adds cheap meals the person has not rated, never ones they skipped', () => {
+    const cheapDinners = RECIPES.filter((r) => r.c === 'dinner' && r.b === 'low').map((r) => r.id);
+    const skipped = cheapDinners.slice(0, 3);
+    const plan = generatePlan(base({ goal: 'maintain', budget: 'low', liked: withPriceyDinners(), skipped }), 2);
+    expect(plan.days).toHaveLength(5);
+    expect(plan.notes?.[0]).toMatch(/added a few dinners you haven't rated yet/);
+    const dinners = plan.days.flatMap((d) => d.meals).filter((m) => m.slot === 'dinner').map((m) => m.recipeId);
+    for (const id of dinners) { expect(pricey).not.toContain(id); expect(skipped).not.toContain(id); expect(tierOf(id)).toBe('low'); }
+  });
+  it('lifts the cap for a course only when nothing unrated fits either, and says so', () => {
+    // every cheap and mid-priced dinner is skipped, so only the high-tier ones the person liked remain
+    const skipped = RECIPES.filter((r) => r.c === 'dinner' && r.b !== 'high').map((r) => r.id);
+    const plan = generatePlan(base({ goal: 'maintain', budget: 'low', liked: withPriceyDinners(), skipped }), 2);
+    expect(plan.days).toHaveLength(5);
+    expect(plan.notes?.join(' ')).toMatch(/enough dinners within your spend limit/);
+    for (const m of plan.days.flatMap((d) => d.meals).filter((m) => m.slot === 'dinner')) expect(pricey).toContain(m.recipeId);
+    for (const m of plan.days.flatMap((d) => d.meals).filter((m) => m.slot === 'breakfast')) expect(tierOf(m.recipeId)).toBe('low');
+  });
+  it('lifts the cap one tier for a day that cannot hit targets from capped meals, and says so', () => {
+    // 1,500 kcal with 133 g protein is tight enough that cheapest-tier meals alone can miss on some days.
+    const plan = generatePlan(base({ budget: 'low' }), 5);
+    expect(plan.days.every((d) => d.inBand)).toBe(true);
+    const tiers = plan.days.flatMap((d) => d.meals).map((m) => tierOf(m.recipeId));
+    if (tiers.some((t) => t !== 'low')) expect(plan.notes?.join(' ')).toMatch(/pricier meals/);
+  });
+  it('says nothing when the cap is not relaxed', () => {
+    expect(generatePlan(base({ goal: 'maintain', budget: 'medium' }), 1).notes).toEqual([]);
+  });
+});
+
 describe('rng', () => {
   it('weighted picks follow the weights and stay deterministic', () => {
     const R = rng(7), hits = { a: 0, b: 0 };

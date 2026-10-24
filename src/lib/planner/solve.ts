@@ -1,4 +1,4 @@
-import { PRODUCTS, RECIPES, TOPUPS, type Recipe, type Topup } from '@/data';
+import { PRODUCTS, RECIPES, TOPUPS, type Budget, type Course, type Recipe, type Topup } from '@/data';
 import { safeRecipes } from '../allergens';
 import { computeTargets } from '../targets';
 import { rng } from './rng';
@@ -29,19 +29,50 @@ function dislikeHits(r: Recipe, dislikes: readonly string[]): number {
   return dislikes.filter((d) => text.includes(d.toLowerCase().replace(/s$/, ''))).length;
 }
 
-interface Pools { breakfast: Recipe[]; lunch: Recipe[]; dinner: Recipe[]; snack: Recipe[] }
+interface Pools { breakfast: Recipe[]; lunch: Recipe[]; dinner: Recipe[]; snack: Recipe[]; relaxed: Course[]; discovered: Course[] }
 
-function pools(input: PlanInput): Pools {
+const TIERS: Budget[] = ['low', 'medium', 'high'];
+/** Fewest meals a course needs before the spend cap gives way (dinners need a week's worth to avoid repeats). */
+const MIN_POOL: Record<Course, number> = { breakfast: 3, lunch: 3, dinner: 5, snack: 5 };
+/** When the cap leaves too few liked meals, unrated cheap ones are added up to this many. */
+const FILL_TO: Record<Course, number> = { breakfast: 6, lunch: 6, dinner: 8, snack: 0 };
+
+/**
+ * Candidate meals per course. With a spend cap: liked meals within it; if that leaves too few, meals the person has not rated
+ * (never skipped ones) within it; only then is the cap lifted a tier at a time, for that course alone.
+ * `unseen` is each course's unrated meals in a random order, so the extras differ week to week.
+ */
+function pools(input: PlanInput, unseen: Record<Course, Recipe[]>): Pools {
   const safe = safeRecipes(input.allergies);
   const liked = new Set(input.liked);
-  const planned = (c: 'breakfast' | 'lunch' | 'dinner') => (input.meals[c].mode === 'plan' ? safe.filter((r) => r.c === c && liked.has(r.id)) : []);
-  return { breakfast: planned('breakfast'), lunch: planned('lunch'), dinner: planned('dinner'), snack: safe.filter((r) => r.c === 'snack') };
+  const relaxed: Course[] = [], discovered: Course[] = [];
+  const cap = input.budget;
+  const inTier = (r: Recipe, t: number) => !r.b || TIERS.indexOf(r.b) <= t;   // macros-only meals have no tier and are never capped
+
+  const choose = (c: Course, base: Recipe[]): Recipe[] => {
+    if (!cap || cap === 'high') return base;
+    const t0 = TIERS.indexOf(cap);
+    let pool = base.filter((r) => inTier(r, t0));
+    if (pool.length < MIN_POOL[c]) {
+      const extra = unseen[c].filter((r) => inTier(r, t0)).slice(0, Math.max(0, FILL_TO[c] - pool.length));
+      if (extra.length) { pool = [...pool, ...extra]; discovered.push(c); }
+    }
+    for (let t = t0 + 1; pool.length < MIN_POOL[c] && t < TIERS.length; t++) { pool = base.filter((r) => inTier(r, t)); if (!relaxed.includes(c)) relaxed.push(c); }
+    return pool;
+  };
+  const planned = (c: 'breakfast' | 'lunch' | 'dinner') => (input.meals[c].mode === 'plan' ? choose(c, safe.filter((r) => r.c === c && liked.has(r.id))) : []);
+  return { breakfast: planned('breakfast'), lunch: planned('lunch'), dinner: planned('dinner'), snack: choose('snack', safe.filter((r) => r.c === 'snack')), relaxed, discovered };
 }
+
+const COURSE_PLURAL: Record<Course, string> = { breakfast: 'breakfasts', lunch: 'lunches', dinner: 'dinners', snack: 'snacks' };
 
 export function generatePlan(input: PlanInput, seed = 1): Plan {
   const T = computeTargets(input.goal, input.stats);
   const R = rng(seed);
-  const P = pools(input);
+  const skipped = new Set(input.skipped ?? []), likedSet = new Set(input.liked);
+  const safeAll = safeRecipes(input.allergies);
+  const unseen = Object.fromEntries((['breakfast', 'lunch', 'dinner', 'snack'] as const).map((c) => [c, R.shuffle(safeAll.filter((r) => r.c === c && !likedSet.has(r.id) && !skipped.has(r.id)))])) as Record<Course, Recipe[]>;
+  const P = pools(input, unseen);
   const issues: string[] = [];
 
   let reserveK = 0, reserveP = 0;
@@ -55,6 +86,9 @@ export function generatePlan(input: PlanInput, seed = 1): Plan {
   }
   if (!P.snack.length) issues.push('No snacks available after allergies.');
   if (issues.length) return { seed, days: [], issues };
+  const notes: string[] = [];
+  if (P.discovered.length) notes.push(`To keep within your spend limit we added a few ${list(P.discovered.map((c) => COURSE_PLURAL[c]))} you haven't rated yet.`);
+  if (P.relaxed.length) notes.push(`There weren't enough ${list(P.relaxed.map((c) => COURSE_PLURAL[c]))} within your spend limit, so a few pricier ones are included.`);
 
   // Where a day's calories usually go, used to steer sampling (breakfast/lunch/dinner share what snacks leave).
   const planned = (['breakfast', 'lunch', 'dinner'] as const).filter((c) => input.meals[c].mode === 'plan');
@@ -66,12 +100,20 @@ export function generatePlan(input: PlanInput, seed = 1): Plan {
     const z = Math.log(r.k / Math.max(target, 1));
     return Math.exp(-(z * z) / (2 * 0.45 * 0.45)) * (0.4 + Math.min(1.6, r.p / r.k / Math.max(proteinPerKcal, 1e-6)));
   };
-  /** Every set of 1–3 distinct snacks, for the exhaustive fallback. */
-  const SNACK_SETS = P.snack
-    .flatMap((a, i) => [[a], ...P.snack.slice(i + 1).flatMap((b, j) => [[a, b], ...P.snack.slice(i + j + 2).map((c) => [a, b, c])])])
-    .map((items) => ({ items, k: items.reduce((a, x) => a + x.k, 0), p: items.reduce((a, x) => a + x.p, 0) }));
   const MAX_TOPUP_K = TOPUPS.map((t) => t.k).sort((a, b) => b - a).slice(0, 2).reduce((a, k) => a + k, 0);
-  const AVG_SNACK_KCAL = P.snack.reduce((a, x) => a + x.k, 0) / Math.max(1, P.snack.length);
+  /** What a day's search draws from: the meal pools plus every set of 1–3 distinct snacks (for the exhaustive fallback). */
+  const space = (pool: Pools) => ({
+    pool,
+    snackSets: pool.snack
+      .flatMap((a, i) => [[a], ...pool.snack.slice(i + 1).flatMap((b, j) => [[a, b], ...pool.snack.slice(i + j + 2).map((c) => [a, b, c])])])
+      .map((items) => ({ items, k: items.reduce((a, x) => a + x.k, 0), p: items.reduce((a, x) => a + x.p, 0) })),
+    avgSnackK: pool.snack.reduce((a, x) => a + x.k, 0) / Math.max(1, pool.snack.length),
+  });
+  const capped = space(P);
+  // The spend cap is a preference, not a rule: if a day cannot land in band from capped meals, the cap is lifted one tier
+  // at a time for that day only (low → medium → anything).
+  const ladder = input.budget ? TIERS.slice(TIERS.indexOf(input.budget) + 1).map((t) => space(pools({ ...input, budget: t }, unseen))) : [];
+  const overCap: string[] = [];
 
   const dinners: Recipe[] = [];
   if (input.meals.dinner.mode === 'plan') {
@@ -85,6 +127,7 @@ export function generatePlan(input: PlanInput, seed = 1): Plan {
 
   for (let d = 0; d < DAY_NAMES.length; d++) {
     let din = dinners[d] ?? null;
+    let S = capped;
     let best: { day: PlannedDay; score: number } | null = null;
     let closest: { day: PlannedDay; miss: number } | null = null;
 
@@ -141,47 +184,56 @@ export function generatePlan(input: PlanInput, seed = 1): Plan {
       }
     };
 
-    for (let t = 0; t < TRIALS; t++) {
-      // Sample meals whose size and protein density suit this person's day, not uniformly: with a bank of ~100 meals, uniform
-      // sampling rarely lands a tight (small, high-protein) day. Everything is still random, so weeks vary.
-      const b = P.breakfast.length ? R.pickWeighted(P.breakfast, (r) => fit(r, slotTarget.breakfast)) : null;
-      const l = P.lunch.length ? R.pickWeighted(P.lunch, (r) => fit(r, slotTarget.lunch)) : null;
-      // Snacks auto-fill: as many as the day's calorie gap calls for (1–3), give or take one.
-      const gap = mid - ((b?.k ?? 0) + (l?.k ?? 0) + (din?.k ?? 0));
-      const n = Math.min(3, Math.max(1, Math.round(gap / AVG_SNACK_KCAL)));
-      const count = R.pick([n, n, n, Math.max(1, n - 1), Math.min(3, n + 1)]);
-      const snacks: Recipe[] = [];
-      for (let i = 0; i < count && snacks.length < P.snack.length; i++) {
-        const left = P.snack.filter((x) => !snacks.includes(x));
-        snacks.push(R.pickWeighted(left, (x) => fit(x, Math.max(60, gap / count))));
+    const searchDay = () => {
+      for (let t = 0; t < TRIALS; t++) {
+        // Sample meals whose size and protein density suit this person's day, not uniformly: with a bank of ~100 meals, uniform
+        // sampling rarely lands a tight (small, high-protein) day. Everything is still random, so weeks vary.
+        const b = S.pool.breakfast.length ? R.pickWeighted(S.pool.breakfast, (r) => fit(r, slotTarget.breakfast)) : null;
+        const l = S.pool.lunch.length ? R.pickWeighted(S.pool.lunch, (r) => fit(r, slotTarget.lunch)) : null;
+        // Snacks auto-fill: as many as the day's calorie gap calls for (1–3), give or take one.
+        const gap = mid - ((b?.k ?? 0) + (l?.k ?? 0) + (din?.k ?? 0));
+        const n = Math.min(3, Math.max(1, Math.round(gap / S.avgSnackK)));
+        const count = R.pick([n, n, n, Math.max(1, n - 1), Math.min(3, n + 1)]);
+        const snacks: Recipe[] = [];
+        for (let i = 0; i < count && snacks.length < S.pool.snack.length; i++) {
+          const left = S.pool.snack.filter((x) => !snacks.includes(x));
+          snacks.push(R.pickWeighted(left, (x) => fit(x, Math.max(60, gap / count))));
+        }
+        consider(b, l, snacks);
       }
-      consider(b, l, snacks);
-    }
 
-    /** Every breakfast × lunch × snack-set that could possibly land in band with the current dinner (pruned by calories first). */
-    const exhaustive = () => {
-      let sinceBest = 0;   // once something lands in band, a few hundred more candidates are plenty to pick a good one
-      for (const b of P.breakfast.length ? P.breakfast : [null]) {
-        for (const l of P.lunch.length ? P.lunch : [null]) {
-          const flex = (l?.k ?? 0) + (din?.k ?? 0);
-          const lowK = lo - (b?.k ?? 0) - SCALE_MAX * flex - MAX_TOPUP_K, highK = hi - (b?.k ?? 0) - SCALE_MIN * flex;
-          for (const set of SNACK_SETS) {
-            if (set.k < lowK || set.k > highK) continue;
-            if (best && ++sinceBest > 400) return;
-            consider(b, l, set.items, set.k, set.p);
+      /** Every breakfast × lunch × snack-set that could possibly land in band with the current dinner (pruned by calories first). */
+      const exhaustive = () => {
+        let sinceBest = 0;   // once something lands in band, a few hundred more candidates are plenty to pick a good one
+        for (const b of S.pool.breakfast.length ? S.pool.breakfast : [null]) {
+          for (const l of S.pool.lunch.length ? S.pool.lunch : [null]) {
+            const flex = (l?.k ?? 0) + (din?.k ?? 0);
+            const lowK = lo - (b?.k ?? 0) - SCALE_MAX * flex - MAX_TOPUP_K, highK = hi - (b?.k ?? 0) - SCALE_MIN * flex;
+            for (const set of S.snackSets) {
+              if (set.k < lowK || set.k > highK) continue;
+              if (best && ++sinceBest > 400) return;
+              consider(b, l, set.items, set.k, set.p);
+            }
           }
         }
+      };
+      if (!best) {
+        // Sampling found nothing in band. Check every combination with this dinner, and if the dinner itself is the problem
+        // (too big or too small for the day) swap it, trying dinners not yet used this week first. Rare, so the cost is fine.
+        exhaustive();
+        if (!best && input.meals.dinner.mode === 'plan') {
+          const used = new Set(days.map((x) => x.meals.find((m) => m.slot === 'dinner')?.recipeId));
+          const alts = S.pool.dinner.filter((x) => x !== din).sort((a, b) => Number(used.has(a.id)) - Number(used.has(b.id)) || fit(b, slotTarget.dinner) - fit(a, slotTarget.dinner));
+          for (const alt of alts) { din = alt; exhaustive(); if (best) break; }
+        }
       }
+
     };
-    if (!best) {
-      // Sampling found nothing in band. Check every combination with this dinner, and if the dinner itself is the problem
-      // (too big or too small for the day) swap it, trying dinners not yet used this week first. Rare, so the cost is fine.
-      exhaustive();
-      if (!best && input.meals.dinner.mode === 'plan') {
-        const used = new Set(days.map((x) => x.meals.find((m) => m.slot === 'dinner')?.recipeId));
-        const alts = P.dinner.filter((x) => x !== din).sort((a, b) => Number(used.has(a.id)) - Number(used.has(b.id)) || fit(b, slotTarget.dinner) - fit(a, slotTarget.dinner));
-        for (const alt of alts) { din = alt; exhaustive(); if (best) break; }
-      }
+    searchDay();
+    for (const next of ladder) {
+      if (best) break;
+      S = next; din = dinners[d] ?? null; searchDay();
+      if (best) overCap.push(DAY_NAMES[d]);
     }
 
     if (!best) {
@@ -197,8 +249,9 @@ export function generatePlan(input: PlanInput, seed = 1): Plan {
     best.day.topups.forEach((t) => bought.add(t.prod));
     days.push(best.day);
   }
+  if (overCap.length) notes.push(`${list(overCap)} needed some pricier meals to hit your calorie and protein targets.`);
   issues.push(...explainMisses(days, T.band, T.protein));
-  return { seed, days, issues };
+  return { seed, days, issues, notes };
 }
 
 /**

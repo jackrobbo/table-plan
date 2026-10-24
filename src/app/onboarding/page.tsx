@@ -2,10 +2,11 @@
 import { useEffect, useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { ALLERGENS, safeRecipes, type Allergen } from '@/lib/allergens';
+import { tierMark } from '@/lib/budget';
 import { DISLIKE_GROUPS } from '@/lib/dislikes';
 import {
   SKIPPABLE, advance, back, canContinue, setAllergies, skipStat, stepIndex, STEPS, swipe, swipeCourses,
-  tasteProgress, MIN_LIKES, type SkippableStep,
+  tasteDeck, tasteProgress, MIN_LIKES, type SkippableStep,
 } from '@/lib/onboarding';
 import type { Goal, Profile, MealTime } from '@/lib/profile';
 import { computeTargets, type Sex } from '@/lib/targets';
@@ -297,7 +298,7 @@ function TasteStep({ p, update }: SP) {
   const [tab, setTab] = useState<MealTime>(courses[0] ?? 'dinner');
   const prog = tasteProgress(p);
   const seen = new Set([...p.likedRecipes, ...p.skippedRecipes]);
-  const pool = safeRecipes(p.allergies).filter((r) => r.c === tab);
+  const pool = tasteDeck(safeRecipes(p.allergies).filter((r) => r.c === tab));
   const next = pool.find((r) => !seen.has(r.id));
   const label: Record<MealTime, string> = { breakfast: 'Breakfast', lunch: 'Lunch', dinner: 'Dinner' };
   return (
@@ -316,7 +317,7 @@ function TasteStep({ p, update }: SP) {
               <span className="kind">{label[tab]}</span>
               <h3>{next.n}</h3>
               <div className="tags">
-                <span className="p">P {next.p}g</span><span>{next.k} kcal</span>{next.serves > 1 && <span>serves {next.serves}</span>}
+                <span className="p">P {next.p}g</span><span>{next.k} kcal</span>{tierMark(next.b) && <span title="Cost per portion">{tierMark(next.b)}</span>}{next.serves > 1 && <span>serves {next.serves}</span>}
               </div>
             </div>
           </div>

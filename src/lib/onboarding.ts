@@ -1,5 +1,5 @@
 import { safeRecipes } from './allergens';
-import type { Course } from '@/data';
+import type { Course, Recipe } from '@/data';
 import type { MealTime, OnboardingStep, Profile } from './profile';
 
 export const STEPS: OnboardingStep[] = [
@@ -87,4 +87,16 @@ export function advance(p: Profile): Profile {
 export function back(p: Profile): Profile {
   const b = prevStep(p.step);
   return b ? { ...p, step: b } : p;
+}
+
+/**
+ * Order for the taste swipe: cost tiers interleaved (low, medium, high, low, …) so the first cards are a mix of everyday and
+ * pricier meals rather than whatever sits first in the bank. Stable, so a resumed swipe shows the same next card.
+ */
+export function tasteDeck(pool: Recipe[]): Recipe[] {
+  const lanes = (['low', 'medium', 'high'] as const).map((t) => pool.filter((r) => r.b === t));
+  const rest = pool.filter((r) => !r.b);   // macros-only meals have no tier
+  const out: Recipe[] = [];
+  for (let i = 0; lanes.some((l) => i < l.length); i++) for (const l of lanes) if (i < l.length) out.push(l[i]);
+  return [...out, ...rest];
 }
