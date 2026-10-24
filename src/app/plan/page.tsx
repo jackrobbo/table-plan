@@ -3,6 +3,7 @@ import { useEffect, useMemo, useState } from 'react';
 import { useRouter } from 'next/navigation';
 import PriceNote from '@/components/PriceNote';
 import Screen from '@/components/Screen';
+import MealImage from '@/components/MealImage';
 import { DayCard, RecipeSheet, ShoppingList, listAsText, money, recipeById } from '@/components/week';
 import { addDays, dayLabel, londonDate, weekLabel } from '@/lib/cycle/dates';
 import { dueReminders } from '@/lib/cycle/reminders';
@@ -155,7 +156,7 @@ export default function Plan() {
                 const days = plan.days.filter((d) => d.meals.some((m) => m.recipeId === id)).map((d) => d.day.slice(0, 3));
                 return (
                   <button key={id} className="rcard" onClick={() => setSheet(id)}>
-                    <span className="emoji">{r.e}</span><span className="nm">{r.n}</span><span className="muted">{days.join(' · ')}</span>
+                    {r.img ? <MealImage r={r} size="thumb" sizes="(max-width: 430px) 45vw, 200px" /> : <span className="emoji">{r.e}</span>}<span className="nm">{r.n}</span><span className="muted">{days.join(' · ')}</span>
                   </button>
                 );
               })}

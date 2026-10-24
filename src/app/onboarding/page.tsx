@@ -11,6 +11,7 @@ import {
 import type { Goal, Profile, MealTime } from '@/lib/profile';
 import { computeTargets, type Sex } from '@/lib/targets';
 import { cmToFtIn, ftInToCm, kgToLb, kgToStLb, lbToKg, stLbToKg } from '@/lib/units';
+import MealImage from '@/components/MealImage';
 import Screen from '@/components/Screen';
 import { track } from '@/lib/analytics';
 import { useProfile } from '@/lib/useProfile';
@@ -312,7 +313,7 @@ function TasteStep({ p, update }: SP) {
       {next ? (
         <>
           <div className="swipecard">
-            <div className="photo" aria-hidden>{next.e}</div>
+            {next.img ? <MealImage r={next} size="hero" sizes="(max-width: 430px) 100vw, 430px" /> : <div className="photo" aria-hidden>{next.e}</div>}
             <div className="body">
               <span className="kind">{label[tab]}</span>
               <h3>{next.n}</h3>

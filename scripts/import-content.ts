@@ -21,7 +21,8 @@ for (const i of ingredients) {
   const e = i.product && prices[i.slug];
   if (e && i.product && (e.status === 'ok' || e.status === 'out_of_stock')) i.product.price_pence = e.price_pence;
 }
-const issues = validateContent(ingredients, recipes);
+const images = fs.existsSync('content/images/manifest.json') ? readJson<Record<string, { colour: string }>>('content/images/manifest.json') : {};
+const issues = validateContent(ingredients, recipes, images);
 for (const i of issues) console.log(`${i.level === 'error' ? '✖' : '⚠'} ${i.where}: ${i.message}`);
 const errors = issues.filter((i) => i.level === 'error').length;
 console.log(`${recipes.length} recipes, ${ingredients.length} ingredients — ${errors} errors, ${issues.length - errors} warnings`);
@@ -36,6 +37,7 @@ const resolved = new Map(recipes.map((r) => {
 }));
 const byStatus = (s: string) => recipes.filter((r) => r.status === s).length;
 console.log(`live ${byStatus('live')} · verified ${byStatus('verified')} · draft ${byStatus('draft')}`);
+console.log(`photos: ${recipes.filter((r) => r.image && images[r.slug]).length}/${recipes.filter((r) => r.status === 'live').length} live meals have a header photo (the rest show their emoji)`);
 
 // ---- compiled app data (live recipes only; shape consumed by src/data/index.ts) ----
 const out = (f: string, v: unknown) => fs.writeFileSync(`src/data/${f}.json`, JSON.stringify(v, null, 1) + '\n');
@@ -52,6 +54,7 @@ out('cupboard', Object.fromEntries(ingredients.filter((i) => i.cupboard).map((i)
 out('recipes', recipes.filter((r) => r.status === 'live').map((r) => ({
   id: r.slug, c: r.course, e: r.emoji ?? '🍽️', n: r.name, p: resolved.get(r.slug)!.m.protein_g, k: resolved.get(r.slug)!.m.kcal, serves: r.serves,
   cost: resolved.get(r.slug)!.cost, b: resolved.get(r.slug)!.budget,
+  ...(r.image && images[r.slug] ? { img: { a: r.image.alt, c: images[r.slug].colour } } : {}),
   macros_only: r.macros_only ?? false,
   fresh: r.ingredients.map((l) => [l.ingredient, l.qty]), cup: r.cupboard, m: r.method,
   allergens: deriveAllergens(r, ingMap),
@@ -71,8 +74,8 @@ for (const i of ingredients) {
 for (const r of recipes) {
   const { m, cost, budget } = resolved.get(r.slug)!;
   // The hash covers what we derive too (macros, cost, allergens), so a change to an ingredient's data re-syncs its recipes.
-  const hash = crypto.createHash('sha256').update(JSON.stringify([r, m, cost, deriveAllergens(r, ingMap)])).digest('hex').slice(0, 16);
-  sql.push(`insert into public.recipes (slug,name,course,emoji,serves,kcal,protein_g,carbs_g,fat_g,method,allergens,status,source,macros_only,content_hash,cost_pence,budget) values (${q(r.slug)},${q(r.name)},${q(r.course)},${q(r.emoji)},${r.serves},${m.kcal},${m.protein_g},${n(m.carbs_g)},${n(m.fat_g)},${arr(r.method)},${arr(deriveAllergens(r, ingMap))},${q(r.status)},${q(r.source)},${!!r.macros_only},${q(hash)},${n(cost)},${q(budget)}) on conflict (slug) do update set name=excluded.name,course=excluded.course,emoji=excluded.emoji,serves=excluded.serves,kcal=excluded.kcal,protein_g=excluded.protein_g,carbs_g=excluded.carbs_g,fat_g=excluded.fat_g,method=excluded.method,allergens=excluded.allergens,status=excluded.status,source=excluded.source,macros_only=excluded.macros_only,content_hash=excluded.content_hash,cost_pence=excluded.cost_pence,budget=excluded.budget where public.recipes.content_hash is distinct from excluded.content_hash;`);
+  const hash = crypto.createHash('sha256').update(JSON.stringify([r, m, cost, deriveAllergens(r, ingMap), images[r.slug]?.colour ?? null])).digest('hex').slice(0, 16);
+  sql.push(`insert into public.recipes (slug,name,course,emoji,serves,kcal,protein_g,carbs_g,fat_g,method,allergens,status,source,macros_only,content_hash,cost_pence,budget,image_alt,image_colour) values (${q(r.slug)},${q(r.name)},${q(r.course)},${q(r.emoji)},${r.serves},${m.kcal},${m.protein_g},${n(m.carbs_g)},${n(m.fat_g)},${arr(r.method)},${arr(deriveAllergens(r, ingMap))},${q(r.status)},${q(r.source)},${!!r.macros_only},${q(hash)},${n(cost)},${q(budget)},${q(r.image?.alt)},${q(r.image && images[r.slug] ? images[r.slug].colour : null)}) on conflict (slug) do update set name=excluded.name,course=excluded.course,emoji=excluded.emoji,serves=excluded.serves,kcal=excluded.kcal,protein_g=excluded.protein_g,carbs_g=excluded.carbs_g,fat_g=excluded.fat_g,method=excluded.method,allergens=excluded.allergens,status=excluded.status,source=excluded.source,macros_only=excluded.macros_only,content_hash=excluded.content_hash,cost_pence=excluded.cost_pence,budget=excluded.budget,image_alt=excluded.image_alt,image_colour=excluded.image_colour where public.recipes.content_hash is distinct from excluded.content_hash;`);
   sql.push(`delete from public.recipe_ingredients where recipe_slug=${q(r.slug)};`);
   for (const l of r.ingredients) sql.push(`insert into public.recipe_ingredients (recipe_slug,ingredient_slug,qty,cupboard) values (${q(r.slug)},${q(l.ingredient)},${l.qty},false);`);
   for (const c of r.cupboard) sql.push(`insert into public.recipe_ingredients (recipe_slug,ingredient_slug,qty,cupboard) values (${q(r.slug)},${q(c)},${r.cupboard_qty?.[c] ?? 0},true);`);

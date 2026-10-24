@@ -1,5 +1,7 @@
 'use client';
+import { createPortal } from 'react-dom';
 import { PRODUCTS, RECIPES } from '@/data';
+import MealImage from '@/components/MealImage';
 import { tierMark } from '@/lib/budget';
 import { buildShopping, type Shopping } from '@/lib/planner/shopping';
 import type { Plan, PlannedDay, PlannedMeal } from '@/lib/planner/types';
@@ -96,11 +98,13 @@ export function RecipeSheet({ id, onClose, portions }: { id: string | null; onCl
   if (!id) return null;
   const r = recipeById.get(id);
   if (!r) return null;
-  return (
+  // Portalled to <body>: <main> keeps a transform from its entrance animation, which would otherwise become the containing
+  // block for this fixed overlay and push the sheet off the bottom of the screen.
+  return createPortal(
     <div className="sheet-wrap" onClick={onClose}>
       <div className="sheet" role="dialog" aria-label={r.n} onClick={(e) => e.stopPropagation()}>
         <div className="grab" />
-        <div className="sheet-hero" aria-hidden>{r.e}</div>
+        {r.img ? <MealImage r={r} size="sheet" sizes="(max-width: 430px) 100vw, 430px" /> : <div className="sheet-hero" aria-hidden>{r.e}</div>}
         <h2>{r.n}</h2>
         <div className="tags" style={{ margin: '8px 0 14px' }}>
           <span className="p">P {r.p}g</span><span>{r.k} kcal</span><span>serves {r.serves}</span>
@@ -112,6 +116,7 @@ export function RecipeSheet({ id, onClose, portions }: { id: string | null; onCl
         {r.m.length > 0 && (<><p className="group-title">How to make it</p><ol className="plain">{r.m.map((x, i) => <li key={i}>{x}</li>)}</ol></>)}
         <button className="btn ghost" style={{ marginTop: 14 }} onClick={onClose}>Close</button>
       </div>
-    </div>
+    </div>,
+    document.body,
   );
 }

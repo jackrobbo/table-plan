@@ -3,6 +3,7 @@ import { useEffect, useMemo, useState } from 'react';
 import { useRouter } from 'next/navigation';
 import PriceNote from '@/components/PriceNote';
 import InstallSheet from '@/components/InstallSheet';
+import MealImage from '@/components/MealImage';
 import Screen from '@/components/Screen';
 import { DayCard, ShoppingList, listAsText } from '@/components/week';
 import { PRICES_META, RECIPES } from '@/data';
@@ -135,7 +136,7 @@ export default function PlanNext() {
               <div className="rgrid">
                 {safe.filter((r) => r.c === c).map((r) => (
                   <button key={r.id} className={'rcard' + (picks.includes(r.id) ? ' on' : '')} aria-pressed={picks.includes(r.id)} onClick={() => togglePick(r.id)}>
-                    <span className="emoji">{r.e}</span><span className="nm">{r.n}</span><span className="muted">{r.p}g · {r.k} kcal · {tierMark(r.b)}</span>
+                    {r.img ? <MealImage r={r} size="thumb" sizes="(max-width: 430px) 45vw, 200px" /> : <span className="emoji">{r.e}</span>}<span className="nm">{r.n}</span><span className="muted">{r.p}g · {r.k} kcal · {tierMark(r.b)}</span>
                   </button>
                 ))}
               </div>

@@ -59,7 +59,7 @@ export function createSupabaseBackend(sb: SupabaseClient): Backend {
       if (error) throw new Error(error.message);
       return (data ?? []).map((r): Recipe => ({
         id: r.slug, c: r.course, e: r.emoji ?? '🍽️', n: r.name, p: Number(r.protein_g), k: r.kcal, serves: r.serves, m: r.method,
-        allergens: r.allergens, macros_only: r.macros_only, cost: r.cost_pence ?? null, b: r.budget ?? null,
+        allergens: r.allergens, macros_only: r.macros_only, cost: r.cost_pence ?? null, b: r.budget ?? null, ...(r.image_alt && r.image_colour ? { img: { a: r.image_alt, c: r.image_colour } } : {}),
         fresh: r.recipe_ingredients.filter((l: { cupboard: boolean }) => !l.cupboard).map((l: { ingredient_slug: string; qty: number }) => [l.ingredient_slug, Number(l.qty)]),
         cup: r.recipe_ingredients.filter((l: { cupboard: boolean }) => l.cupboard).map((l: { ingredient_slug: string }) => l.ingredient_slug),
       }));

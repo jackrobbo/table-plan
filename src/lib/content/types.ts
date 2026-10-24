@@ -51,6 +51,11 @@ export interface RecipeDef {
   macros_only?: boolean;
   /** Provenance, e.g. 'poc' (grandfathered, macros not CoFID-verified). */
   source?: string;
+  /**
+   * Header photo. The picture itself is not in this file: put `<slug>.jpg` (or .png/.webp) in content/images/originals/ and run
+   * `npm run images:build`, which makes the sized files and records them in content/images/manifest.json. The alt text is required.
+   */
+  image?: { alt: string; /** who took it, if not us */ credit?: string };
 }
 
 export interface Issue { where: string; level: 'error' | 'warning'; message: string }

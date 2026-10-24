@@ -31,6 +31,17 @@ Add recipes as `content/recipes/<slug>.json` (or an array of recipes in one file
    a decision (`prefer` + `why` in the map record the call). Labels stated "as consumed/boiled" are ignored for as-sold weights.
 4. `npm run content:import`, then `npm run content:verify -- --table` to eyeball macros, cost and tier per recipe.
 
+## Meal photos
+A meal can have a header photo; without one it shows its emoji, so nothing is ever blank.
+1. Put the original in `content/images/originals/<slug>.jpg` (or .png/.webp): landscape, at least 1200x900, ideally the phone's full-size
+   export. Originals are gitignored (keep them in your own storage); only the sized files are committed.
+2. Add `"image": { "alt": "A folded omelette with spinach on a white plate" }` to the recipe (alt text is required, 12+ characters;
+   optional `credit` if someone else took it).
+3. `npm run images:build` makes `public/meals/<slug>-480|960|1440.webp` (cropped to 4:3), records the photo's average colour
+   (the placeholder while it loads) in `content/images/manifest.json`, and skips unchanged originals.
+4. `npm run content:import` fails if a recipe has alt text but no built photo (or the reverse) and reports how many meals have one.
+Shooting tips: same backdrop and light for every dish, top-down or about 45 degrees, the real portion as written, no filters.
+
 ## Status workflow
 `draft` → `verified` → `live`. Only `live` recipes reach the app.
 - **verified / live (non-PoC)** needs every counted line (fresh and cupboard) to have `cofid.verified: true` + `per100` and a
