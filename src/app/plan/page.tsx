@@ -4,6 +4,7 @@ import { useRouter } from 'next/navigation';
 import PriceNote from '@/components/PriceNote';
 import Screen from '@/components/Screen';
 import MealImage from '@/components/MealImage';
+import BasketButton from '@/components/BasketButton';
 import { DayCard, RecipeSheet, ShoppingList, listAsText, money, recipeById } from '@/components/week';
 import { addDays, dayLabel, londonDate, weekLabel } from '@/lib/cycle/dates';
 import { dueReminders } from '@/lib/cycle/reminders';
@@ -141,6 +142,7 @@ export default function Plan() {
             <PriceNote totalPence={shopping.totalPence} />
             <ShoppingList shopping={shopping} have={week.haveAlready}
               onToggle={(k) => update((p) => { const w = p.weeks[week.start]; const have = w.haveAlready.includes(k) ? w.haveAlready.filter((x) => x !== k) : [...w.haveAlready, k]; return { ...p, weeks: { ...p.weeks, [week.start]: { ...w, haveAlready: have } } }; })} />
+            <BasketButton shopping={shopping} have={week.haveAlready} />
             <div className="note"><b>Store cupboard check.</b> Buy only if you&apos;re out:<br />{shopping.cupboard.join(' · ')}</div>
             <button className="btn" onClick={() => copy(listAsText(plan, week.haveAlready, `Estimated Morrisons prices, checked ${PRICES_META.checkedAt ? shortDate(PRICES_META.checkedAt) : 'not yet'}`), 'this')}>
               Save to Notes (copy list)
@@ -225,6 +227,7 @@ function UpcomingCard({ week, status, weeks, now, onPlan, onSkip, onUndo, onCopy
       <h2 style={{ marginTop: 22 }}>Ingredients</h2>
       <PriceNote totalPence={shopping.totalPence} />
       <ShoppingList shopping={shopping} have={week.haveAlready} onToggle={onToggleHave} />
+      <BasketButton shopping={shopping} have={week.haveAlready} />
       <p className="muted">{shopping.lines.length - week.haveAlready.length} items · ≈ {money(shopping.lines.filter((l) => !week.haveAlready.includes(l.key)).reduce((a, l) => a + l.costPence, 0))}</p>
       <button className="btn" onClick={() => onCopy(listAsText(plan, week.haveAlready, `Estimated Morrisons prices, checked ${PRICES_META.checkedAt ? shortDate(PRICES_META.checkedAt) : 'not yet'}`))}>Save to Notes (copy list)</button>
       {copied === week.start && <p className="muted" role="status">Copied. Paste it into Notes.</p>}

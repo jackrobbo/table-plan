@@ -1,6 +1,7 @@
 'use client';
 import { useEffect, useMemo, useState } from 'react';
 import { useRouter } from 'next/navigation';
+import BasketButton from '@/components/BasketButton';
 import PriceNote from '@/components/PriceNote';
 import InstallSheet from '@/components/InstallSheet';
 import MealImage from '@/components/MealImage';
@@ -182,6 +183,7 @@ export default function PlanNext() {
           <p className="sub">Everything is ticked. Untick what you already have.</p>
           <PriceNote totalPence={shopping.lines.filter((l) => !have.includes(l.key)).reduce((a, l) => a + l.costPence, 0)} />
           <ShoppingList shopping={shopping} have={have} onToggle={(k) => setHave((h) => (h.includes(k) ? h.filter((x) => x !== k) : [...h, k]))} />
+          <BasketButton shopping={shopping} have={have} />
           <div className="note"><b>Store cupboard check.</b> Buy only if you&apos;re out:<br />{shopping.cupboard.join(' · ')}</div>
         </div>
       )}

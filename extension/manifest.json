@@ -1,0 +1,20 @@
+{
+  "manifest_version": 3,
+  "name": "Table Plan for Morrisons (beta)",
+  "version": "0.1.0",
+  "description": "Fills your Morrisons trolley from your Table Plan shopping list, using the buttons on the Morrisons website in your own browser.",
+  "icons": { "16": "icons/16.png", "48": "icons/48.png", "128": "icons/128.png" },
+  "permissions": ["storage"],
+  "content_scripts": [
+    {
+      "matches": ["https://groceries.morrisons.com/*"],
+      "js": ["morrisons.js"],
+      "run_at": "document_idle"
+    },
+    {
+      "matches": ["https://table-plan-app.vercel.app/*", "http://localhost:3000/*"],
+      "js": ["tableplan.js"],
+      "run_at": "document_start"
+    }
+  ]
+}
