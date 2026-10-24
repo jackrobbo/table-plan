@@ -22,10 +22,9 @@ export default function Waitlist() {
 
   return (
     <Screen footer={state !== 'done' ? <button className="btn" disabled={!email || !consent || state === 'busy'} onClick={submit}>Join the waitlist</button> : <Link className="btn ghost" href="/">Back to start</Link>}>
-      <div className="brand"><div className="logo">T</div>Table Plan</div>
       {state !== 'done' ? (<>
-        <h1>The bottleneck to health is money.</h1>
-        <p className="sub" style={{ maxWidth: '36ch' }}>A month of Sundays costs less than one day of meal prep. Real meals, planned to your goal, priced at Morrisons. We&apos;re opening in small groups. Join the list for an invite.</p>
+        <h1>Your goals.<br />Your meals.<br />Your budget.</h1>
+        <p className="sub" style={{ maxWidth: '38ch' }}>Table Plan turns your nutritional goals and favourite meals into a realistic weekly meal plan and shopping list, without the cost of a meal-kit subscription. We&apos;re opening in small groups. Join the list for an invite.</p>
         <label className="f" htmlFor="wl-email" style={{ fontSize: 13, color: 'var(--ink2)' }}>Email</label>
         <input id="wl-email" className="text" type="email" inputMode="email" autoComplete="email" placeholder="you@example.co.uk" value={email} onChange={(e) => setEmail(e.target.value)} />
         <div style={{ position: 'absolute', left: -9999 }} aria-hidden><input tabIndex={-1} autoComplete="off" value={company} onChange={(e) => setCompany(e.target.value)} /></div>

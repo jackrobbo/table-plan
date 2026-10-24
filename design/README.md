@@ -38,7 +38,7 @@ Colour roles used in the wireframes (replace with a real design system):
 Rows A–F, numbered in flow order. Arrows on the canvas give the trigger for each transition; dashed arrows are alternate paths/states.
 
 ### A · Arrive, sign in, set the goal
-- **01 Welcome** — wordmark/logo, headline "Cook real food based on your needs and goals.", subline about real supermarket prices; "Check out in one tap" card with supermarket logos; CTA "Create my plan", "I have an account".
+- **01 Welcome** — wordmark/logo, headline "Your goals. Your meals. Your budget." (brand messaging; supersedes the earlier "Cook real food…" line in the mock), subline about real supermarket prices; "Check out in one tap" card with supermarket logos; CTA "Create my plan", "I have an account".
 - **02 Sign in: email** — one email field, "Send code". Copy: we only use your email for Table Plan.
 - **03 Sign in: code** — 6-digit OTP boxes, auto-submit on 6th digit, resend timer.
 - **04 Goal** — Lose / Maintain / Gain (radio cards). Lose = "Steady loss, about 1 lb a week". Step 1 of 8.

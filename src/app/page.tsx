@@ -10,10 +10,9 @@ export default function Welcome() {
       <Link className="linkbtn accent" href="/signin">I have an account</Link>
       {process.env.NEXT_PUBLIC_INVITE_ONLY === '1' && <Link className="linkbtn" href="/waitlist">No invite yet? Join the waitlist</Link>}
     </>}>
-      <div className="brand"><div className="logo">T</div>Table Plan</div>
-      <h1>Cook real food based on your needs and goals.</h1>
-      <p className="sub" style={{ maxWidth: '36ch' }}>
-        No expensive meal prep or food boxes. Real meals at real supermarket prices, planned for the week and priced as a shopping list.
+      <h1>Your goals.<br />Your meals.<br />Your budget.</h1>
+      <p className="sub" style={{ maxWidth: '38ch' }}>
+        Table Plan turns your nutritional goals and favourite meals into a realistic weekly meal plan and shopping list. Eat towards your goals, buy only what you need, and shop at your usual supermarket &mdash; without the cost of a meal-kit subscription.
       </p>
       <div className="card">
         <h3>Priced at Morrisons</h3>

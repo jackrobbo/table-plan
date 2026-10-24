@@ -1,5 +1,10 @@
 # Table Plan
 
+**Your goals. Your meals. Your budget.**
+
+Table Plan turns your nutritional goals and favourite meals into a realistic weekly meal plan and shopping list. Eat towards
+your goals, buy only what you need, and shop at your usual supermarket — without the cost of a meal-kit subscription.
+
 UK meal-planning PWA (Next.js). See `design/phase-1-plan.md` for the roadmap.
 
 - `npm run dev` — app at http://localhost:3000 (sign-in code is `123456` while the backend is mocked)

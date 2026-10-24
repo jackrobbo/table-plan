@@ -2,6 +2,7 @@
 import { useEffect, useMemo, useState } from 'react';
 import { useRouter } from 'next/navigation';
 import PriceNote from '@/components/PriceNote';
+import InstallSheet from '@/components/InstallSheet';
 import Screen from '@/components/Screen';
 import { DayCard, ShoppingList, listAsText } from '@/components/week';
 import { PRICES_META, RECIPES } from '@/data';
@@ -170,6 +171,8 @@ export default function PlanNext() {
           {copied === 'fail' && <textarea className="copybox" readOnly onFocus={(e) => e.currentTarget.select()} value={listAsText(draft, have, 'Estimated Morrisons prices')} />}
         </div>
       )}
+
+      <InstallSheet when={step === 'saved'} />
     </Screen>
   );
 }
