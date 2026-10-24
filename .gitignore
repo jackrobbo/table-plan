@@ -2,3 +2,9 @@
 .vercel
 node_modules
 *.log
+.next
+out
+.env*.local
+.env
+next-env.d.ts
+.mcp.json
