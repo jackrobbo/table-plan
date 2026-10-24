@@ -1,8 +1,7 @@
 'use client';
-import { useEffect, useState } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { getBackend } from '@/lib/db';
+import { useSignedIn } from '@/lib/useSignedIn';
 
 /** Focused flows keep the brand but drop the nav, so nobody wanders off mid-setup. */
 const FOCUSED = ['/signin', '/onboarding', '/plan/next', '/subscribe'];
@@ -10,13 +9,7 @@ const FOCUSED = ['/signin', '/onboarding', '/plan/next', '/subscribe'];
 /** Site header: logo + BETA on the left, nav on the right. Nav follows sign-in state (re-read on every route change). */
 export default function SiteHeader() {
   const path = usePathname() ?? '/';
-  const [signedIn, setSignedIn] = useState<boolean | null>(null);
-
-  useEffect(() => {
-    let live = true;
-    getBackend().auth.getSession().then((s) => { if (live) setSignedIn(!!s); }).catch(() => { if (live) setSignedIn(false); });
-    return () => { live = false; };
-  }, [path]);
+  const signedIn = useSignedIn(path);
 
   const focused = FOCUSED.some((p) => path === p || path.startsWith(p + '/'));
   const link = (href: string, label: string) => (

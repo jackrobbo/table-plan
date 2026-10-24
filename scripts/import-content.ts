@@ -51,12 +51,16 @@ out('prices-meta', { checkedAt: checked.at(-1) ?? null, oldestCheckAt: checked[0
 for (const r of recipes.filter((r) => r.status === 'live'))
   for (const l of r.ingredients) if (unavailable.includes(l.ingredient)) console.log(`⚠ ${r.slug}: "${l.ingredient}" is delisted/out of stock at Morrisons`);
 out('cupboard', Object.fromEntries(ingredients.filter((i) => i.cupboard).map((i) => [i.slug, i.note ?? i.name])));
+// "Easy Cook Long Grain Rice 1kg" → "Easy Cook Long Grain Rice": the recipe sheet shows what you use, not the pack you buy.
+const shortName = (n: string) => n.replace(/\s+\d[\d.,×x\s]*(?:g|kg|ml|l|cl)\b.*$/i, '').replace(/\s+\d+$/, '').replace(/^Savers\s+/, '');
+out('cupboard-names', Object.fromEntries(ingredients.filter((i) => i.cupboard).map((i) => [i.slug, shortName(i.name)])));
 out('recipes', recipes.filter((r) => r.status === 'live').map((r) => ({
   id: r.slug, c: r.course, e: r.emoji ?? '🍽️', n: r.name, p: resolved.get(r.slug)!.m.protein_g, k: resolved.get(r.slug)!.m.kcal, serves: r.serves,
+  cb: resolved.get(r.slug)!.m.carbs_g ?? null, f: resolved.get(r.slug)!.m.fat_g ?? null,
   cost: resolved.get(r.slug)!.cost, b: resolved.get(r.slug)!.budget,
   ...(r.image && images[r.slug] ? { img: { a: r.image.alt, c: images[r.slug].colour } } : {}),
   macros_only: r.macros_only ?? false,
-  fresh: r.ingredients.map((l) => [l.ingredient, l.qty]), cup: r.cupboard, m: r.method,
+  fresh: r.ingredients.map((l) => [l.ingredient, l.qty]), cup: r.cupboard, ...(r.cupboard_qty ? { cq: r.cupboard_qty } : {}), m: r.method,
   allergens: deriveAllergens(r, ingMap),
 })));
 

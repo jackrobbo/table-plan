@@ -2,10 +2,12 @@
 import Link from 'next/link';
 import MorrisonsLogo from '@/components/RetailerLogo';
 import Screen from '@/components/Screen';
+import { useSignedIn } from '@/lib/useSignedIn';
 
 export default function Welcome() {
+  const signedIn = useSignedIn();
   return (
-    <Screen footer={<>
+    <Screen footer={signedIn ? <Link className="btn" href="/plan">Go to my plan</Link> : <>
       <Link className="btn" href="/signin?new=1">Create my plan</Link>
       <Link className="linkbtn accent" href="/signin">I have an account</Link>
       {process.env.NEXT_PUBLIC_INVITE_ONLY === '1' && <Link className="linkbtn" href="/waitlist">No invite yet? Join the waitlist</Link>}

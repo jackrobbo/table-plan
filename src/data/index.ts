@@ -1,5 +1,6 @@
 import products from './products.json';
 import cupboard from './cupboard.json';
+import cupboardNames from './cupboard-names.json';
 import recipes from './recipes.json';
 import topups from './topups.json';
 import pricesMeta from './prices-meta.json';
@@ -13,6 +14,10 @@ export interface Product { n: string; pr: number; pack: number; u: string; s: st
 export interface Recipe {
   id: string; c: Course; e: string; n: string; p: number; k: number; serves: number;
   fresh: [string, number][]; cup: string[]; m: string[]; allergens: string[]; macros_only?: boolean;
+  /** Carbs and fat per portion (grams), when known. */
+  cb?: number | null; f?: number | null;
+  /** Grams (or ml) of each cupboard item in the whole recipe. */
+  cq?: Record<string, number>;
   /** Marginal cost of one portion in pence, and its low/medium/high tier (see BUDGET_LIMITS). null for macros-only meals. */
   cost?: number | null; b?: Budget | null;
   /** Header photo: alt text and the placeholder colour. Files are /meals/<id>-<width>.webp (see src/lib/images.ts). */
@@ -22,7 +27,9 @@ export interface Topup { n: string; p: number; k: number; prod: string; qty: num
 
 export const PRODUCTS = products as Record<string, Product>;
 export const CUPBOARD = cupboard as Record<string, string>;
-export const RECIPES = recipes as Recipe[];
+/** Cupboard item display names (no price), for the recipe sheet. */
+export const CUPBOARD_NAMES = cupboardNames as Record<string, string>;
+export const RECIPES = recipes as unknown as Recipe[];
 export const TOPUPS = topups as Topup[];
 
 export const PRICES_META = pricesMeta as { checkedAt: string | null; oldestCheckAt: string | null; unavailable: string[]; heldForReview: string[] };

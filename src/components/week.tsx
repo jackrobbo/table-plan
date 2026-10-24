@@ -3,6 +3,7 @@ import { createPortal } from 'react-dom';
 import { PRODUCTS, RECIPES } from '@/data';
 import MealImage from '@/components/MealImage';
 import { tierMark } from '@/lib/budget';
+import { allergenNames, cupboardLines } from '@/lib/recipeFacts';
 import { buildShopping, type Shopping } from '@/lib/planner/shopping';
 import type { Plan, PlannedDay, PlannedMeal } from '@/lib/planner/types';
 
@@ -98,6 +99,8 @@ export function RecipeSheet({ id, onClose, portions }: { id: string | null; onCl
   if (!id) return null;
   const r = recipeById.get(id);
   if (!r) return null;
+  const allergens = allergenNames(r);
+  const cupboard = cupboardLines(r);
   // Portalled to <body>: <main> keeps a transform from its entrance animation, which would otherwise become the containing
   // block for this fixed overlay and push the sheet off the bottom of the screen.
   return createPortal(
@@ -106,12 +109,19 @@ export function RecipeSheet({ id, onClose, portions }: { id: string | null; onCl
         <div className="grab" />
         {r.img ? <MealImage r={r} size="sheet" sizes="(max-width: 430px) 100vw, 430px" /> : <div className="sheet-hero" aria-hidden>{r.e}</div>}
         <h2>{r.n}</h2>
-        <div className="tags" style={{ margin: '8px 0 14px' }}>
-          <span className="p">P {r.p}g</span><span>{r.k} kcal</span><span>serves {r.serves}</span>
+        <div className="tags" style={{ margin: '8px 0 10px' }}>
+          <span className="p">P {r.p}g</span>
+          {r.cb != null && <span>C {r.cb}g</span>}
+          {r.f != null && <span>F {r.f}g</span>}
+          <span>{r.k} kcal</span><span>serves {r.serves}</span>
           {r.cost != null && <span title="Cost of the ingredients used, per portion">≈ {money(r.cost)} a portion · {tierMark(r.b)}</span>}
         </div>
+        <p className="contains">
+          {allergens.length ? <><b>Contains:</b> {allergens.join(', ')}.</> : <b>No major allergens declared on the products used.</b>}{' '}
+          <span className="muted">From the pack labels. &ldquo;May contain&rdquo; traces aren&apos;t included, so check the packs if you have a serious allergy.</span>
+        </p>
         <p className="group-title">Ingredients (whole dish)</p>
-        <ul className="plain">{r.fresh.map(([k, q]) => <li key={k}>{PRODUCTS[k]?.n ?? k}: {Math.round(q * 10) / 10} {PRODUCTS[k]?.u}</li>)}{r.cup.length > 0 && <li className="muted">Cupboard: {r.cup.join(', ')}</li>}</ul>
+        <ul className="plain">{r.fresh.map(([k, q]) => <li key={k}>{PRODUCTS[k]?.n ?? k}: {Math.round(q * 10) / 10} {PRODUCTS[k]?.u}</li>)}{cupboard.length > 0 && <li className="muted">From your cupboard: {cupboard.join(' · ')}</li>}</ul>
         {portions && <div className="note">Your portion for your macros is one serving; the plan scales the rest for the household.</div>}
         {r.m.length > 0 && (<><p className="group-title">How to make it</p><ol className="plain">{r.m.map((x, i) => <li key={i}>{x}</li>)}</ol></>)}
         <button className="btn ghost" style={{ marginTop: 14 }} onClick={onClose}>Close</button>

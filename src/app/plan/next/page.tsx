@@ -40,6 +40,7 @@ export default function PlanNext() {
   const [draft, setDraft] = useState<Plan | null>(null);
   const [have, setHave] = useState<string[]>([]);
   const [copied, setCopied] = useState<string | null>(null);
+  const [building, setBuilding] = useState(false);
 
   const snap = useMemo(() => (profile ? snapshot(ensureWeeks(profile.weeks, now), now) : null), [profile, now]);
   // After saving, the week is no longer "to plan"; keep showing it on the confirmation step.
@@ -65,12 +66,18 @@ export default function PlanNext() {
   const picksOk = planned.every((c) => have_(c) >= needed(c));
 
   const build = (liked: string[]) => {
-    // Meals the person picked by hand are never capped by the spend setting; auto-picked ones are.
-    const input = { ...planInputFrom(profile), liked, ...(liked === profile.likedRecipes ? {} : { budget: 'high' as const }) };
-    const built = planWeek(input, 24, Math.floor(Math.random() * 1e6));
-    track('week_generated', { days_in_band: built.days.filter((d) => d.inBand).length, mode: liked === profile.likedRecipes ? 'auto' : 'own' });
-    setDraft(built);
-    setStep('review');
+    if (building) return;
+    setBuilding(true);
+    // Let the "building" state paint first: the planner blocks the main thread for a moment.
+    setTimeout(() => {
+      // Meals the person picked by hand are never capped by the spend setting; auto-picked ones are.
+      const input = { ...planInputFrom(profile), liked, ...(liked === profile.likedRecipes ? {} : { budget: 'high' as const }) };
+      const built = planWeek(input, 24, Math.floor(Math.random() * 1e6));
+      track('week_generated', { days_in_band: built.days.filter((d) => d.inBand).length, mode: liked === profile.likedRecipes ? 'auto' : 'own' });
+      setDraft(built);
+      setStep('review');
+      setBuilding(false);
+    }, 60);
   };
   const togglePick = (id: string) =>
     update((p) => {
@@ -91,17 +98,25 @@ export default function PlanNext() {
   const back = () => (step === 'setup' ? router.push('/plan') : step === 'pick' ? setStep('setup') : step === 'review' ? setStep(picks.length ? 'pick' : 'setup') : step === 'list' ? setStep('review') : router.push('/plan'));
 
   return (
-    <Screen onBack={step === 'saved' ? undefined : back}
+    <Screen onBack={step === 'saved' || building ? undefined : back}
       progress={step === 'saved' ? undefined : { step: barIndex + 1, total: BAR.length }}
       footer={
-        step === 'pick' ? <button className="btn" disabled={!picksOk} onClick={() => build(picks)}>Build my week</button>
+        building ? undefined
+        : step === 'pick' ? <button className="btn" disabled={!picksOk} onClick={() => build(picks)}>Build my week</button>
         : step === 'review' && draft?.days.length ? <button className="btn" onClick={() => { setHave([]); setStep('list'); }}>Save and continue</button>
         : step === 'list' ? <button className="btn" onClick={save}>Save list · {shopping!.lines.length - have.length} items</button>
         : step === 'saved' ? <button className="btn" onClick={() => router.push('/plan')}>Done</button> : undefined
       }>
-      {step !== 'saved' && <p className="step">{BAR[barIndex]} · Plan {weekLabel(week.start)}</p>}
+      {building && (
+        <div className="fade" role="status" aria-live="polite">
+          <h2>Building your week…</h2>
+          <p className="sub">Checking every day against your targets and your spend.</p>
+          <div className="skeleton-stack"><div className="skeleton sk-card" /><div className="skeleton sk-card" /><div className="skeleton sk-card" /></div>
+        </div>
+      )}
+      {!building && step !== 'saved' && <p className="step">{BAR[barIndex]} · Plan {weekLabel(week.start)}</p>}
 
-      {step === 'setup' && (
+      {!building && step === 'setup' && (
         <div className="fade">
           <h2>Same settings as usual?</h2>
           <p className="sub">Pick by midnight Sun {dayLabel(addDays(week.start, -1))}. Cooking starts Mon {dayLabel(week.start)}.</p>
@@ -126,7 +141,7 @@ export default function PlanNext() {
         </div>
       )}
 
-      {step === 'pick' && (
+      {!building && step === 'pick' && (
         <div className="fade">
           <h2>Pick your own</h2>
           <p className="sub">Choose at least {MIN_PICKS} of each from meals you like. We&apos;ll plan the days around them and fill in snacks.</p>
@@ -145,7 +160,7 @@ export default function PlanNext() {
         </div>
       )}
 
-      {step === 'review' && (
+      {!building && step === 'review' && (
         <div className="fade">
           <h1>Your week</h1>
           {!draft || !draft.days.length ? (
@@ -161,7 +176,7 @@ export default function PlanNext() {
         </div>
       )}
 
-      {step === 'list' && shopping && (
+      {!building && step === 'list' && shopping && (
         <div className="fade">
           <h2>Ingredients</h2>
           <p className="sub">Everything is ticked. Untick what you already have.</p>
@@ -171,7 +186,7 @@ export default function PlanNext() {
         </div>
       )}
 
-      {step === 'saved' && draft && (
+      {!building && step === 'saved' && draft && (
         <div className="fade">
           <h1>List saved</h1>
           <p className="sub">{weekLabel(week.start)} is planned. It starts Mon {dayLabel(week.start)}.</p>

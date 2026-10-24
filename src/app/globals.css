@@ -94,6 +94,8 @@ input.text:focus{outline:2px solid var(--ok);}
 .chip.on{background:var(--btn); color:var(--btn-ink);}
 .chip.amber.on{background:var(--warn); color:#1c1300;}
 .chip.lg{min-height:40px; font-size:15px;}
+.contains{font-size:13px; margin:0 0 4px; line-height:1.45;}
+.contains .muted{display:inline;}
 .group-title{font-size:12px; font-weight:600; letter-spacing:.06em; text-transform:uppercase; color:var(--ink2); margin:18px 0 0;}
 .mealrow{background:var(--card); border-radius:var(--radius); padding:12px 14px; margin:10px 0;}
 .mealrow .top{display:flex; align-items:center; justify-content:space-between; gap:10px;}
