@@ -63,6 +63,47 @@ Monday-open / Sunday-deadline cycle.
   all" in the user's own session.
 - **Phase 3:** retailer partnership for true in-app basket + fulfilment (the Cherrypick route).
 
+## What's needed apart from UI
+Start the UI from **Apple HIG + a Table Plan palette**, implemented as design tokens /
+CSS variables (reuse the handoff's colour roles: green = protein / "in band", amber =
+needs-attention, blue = "new", neutrals; full light + dark). That keeps the design system
+a small job — the weight of the build is everything *under* the UI:
+
+**Engine (logic)**
+- **Planner/solver** — guardrail logic (days-never-fail resize + top-up, snacks auto-fill,
+  allergy hard-exclude, dislikes ranking, taste-weighting). Proven in the PoC; port + harden.
+- **Weekly-cycle state machine** — week states (`to_plan → … → done/missed`),
+  Monday-open / Sunday-deadline transitions, "Pick for me" builder, missed-week handling.
+- **Shopping-list generation** — aggregate the week's ingredients, pack-aware right-sizing,
+  cupboard split, Save-to-Notes / export.
+
+**Data**
+- **Database** (Supabase/Postgres) — users, taste profile, weeks/plans, recipes, SKUs,
+  prices, ticks.
+- **Recipe bank as structured data** — grow 31 → 100–150, each with ingredients,
+  CoFID-verified macros, allergens, course, macros-only flag. The biggest and slowest
+  lift — it's content, not code.
+- **Pricing pipeline** — OSP scrape + cache + nightly SKU-health + Monday refresh +
+  staleness timestamps.
+
+**Plumbing**
+- **Auth** (email OTP) + accounts + GDPR handling of optional stats.
+- **Payments** — Stripe (annual/monthly, 1-week trial), paywall gating, manage/cancel.
+- **Notifications** — web push (Mon/Sun reminders) + Add-to-Home-Screen (required for iOS push).
+- **PWA shell** — installability, offline-first ticks (localStorage/IndexedDB, synced).
+- **Infra/ops** — Vercel hosting, the nightly scheduled scrape job, secrets, analytics,
+  error monitoring.
+
+**Non-code**
+- **Dietitian sign-off** on the macro method (gates launch claims).
+- **Affiliate deal** with Morrisons (post-launch).
+- **Waitlist** (parallel, ships in days).
+- **Legal** — privacy policy for special-category health data, ToS, not-medical-advice disclaimer.
+
+**Sequencing takeaway:** the UI leans on HIG tokens, so the critical path is the **data
+(recipe bank + CoFID) and the engine** — point effort there first, not the screens. That's
+why the milestones below are mostly backend.
+
 ## Milestones (~6–10 wks for the cut-line MVP)
 | # | Milestone | ~size | Notes |
 |---|---|---|---|
