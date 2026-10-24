@@ -7,7 +7,7 @@ export function useSignedIn(recheck?: unknown): boolean | null {
   const [signedIn, setSignedIn] = useState<boolean | null>(null);
   useEffect(() => {
     let live = true;
-    getBackend().auth.getSession().then((s) => { if (live) setSignedIn(!!s); }).catch(() => { if (live) setSignedIn(false); });
+    getBackend().auth.getSession().then((s) => { if (live) setSignedIn(!!s); }).catch(() => { if (live) setSignedIn(null); });   // couldn't check (offline): unknown, not signed out
     return () => { live = false; };
   }, [recheck]);
   return signedIn;

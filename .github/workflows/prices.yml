@@ -6,6 +6,9 @@ on:
   workflow_dispatch:
 permissions:
   contents: write
+concurrency:
+  group: prices
+  cancel-in-progress: false
 jobs:
   refresh:
     runs-on: ubuntu-latest
@@ -16,6 +19,10 @@ jobs:
       - run: npm ci
       - run: npm run prices:refresh
       - run: npm run content:import
+      # Fresh prices change costs and budget tiers, which the planner tests rely on. Never publish prices that break them:
+      # the run goes red (GitHub emails the repo owner) and nothing is committed.
+      - run: npm run typecheck
+      - run: npm test
       - name: Commit if changed
         run: |
           git config user.name "table-plan-bot"

@@ -32,6 +32,7 @@ export function createMockBackend(kv: KV): Backend {
       return raw ? (JSON.parse(raw) as Session) : null;
     },
     async signOut() { kv.removeItem(SESSION_KEY); },
+    onSignedOut() { return () => undefined; },
   };
 
   const profiles: ProfileRepo = {

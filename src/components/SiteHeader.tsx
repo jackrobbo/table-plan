@@ -1,6 +1,7 @@
 'use client';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
+import StatusBanner from '@/components/StatusBanner';
 import { useSignedIn } from '@/lib/useSignedIn';
 
 /** Focused flows keep the brand but drop the nav, so nobody wanders off mid-setup. */
@@ -17,6 +18,7 @@ export default function SiteHeader() {
   );
 
   return (
+    <>
     <header className="site-header">
       <div className="site-header-in">
         <Link href={signedIn ? '/plan' : '/'} className="hbrand" aria-label="Table Plan, beta">
@@ -31,5 +33,7 @@ export default function SiteHeader() {
         )}
       </div>
     </header>
+    <StatusBanner />
+    </>
   );
 }

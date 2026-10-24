@@ -74,6 +74,7 @@ export default function InstallSheet({ when, delayMs = 900 }: { when: boolean; d
             <li><span className="n">3</span><span>Tap <b>Add</b></span></li>
           </ol>
         )}
+        {platform === 'ios' && <p className="muted" style={{ margin: '0 0 12px' }}>The first time you open it from your home screen you&apos;ll sign in once more with a code, then you stay signed in.</p>}
         <div className="install-actions">
           {platform === 'ios'
             ? <button ref={primary} className="btn" onClick={notNow}>Got it</button>

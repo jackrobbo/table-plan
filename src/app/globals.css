@@ -137,6 +137,8 @@ input.text:focus{outline:2px solid var(--ok);}
 
 /* ---- welcome ---- */
 .logo{width:46px; height:46px; border-radius:12px; background:var(--btn); color:var(--btn-ink); display:grid; place-items:center; font-weight:800; font-size:20px;}
+.status-banner{position:sticky; top:calc(var(--header-h) + env(safe-area-inset-top,0px)); z-index:19; background:var(--warn-soft); color:var(--warn-ink); padding:8px 20px; font-size:13px; text-align:center;}
+.status-banner .linkbtn{display:inline; min-height:0; padding:0; margin-left:4px; font-size:13px; font-weight:600; text-decoration:underline; color:inherit;}
 .site-header{position:sticky; top:0; z-index:20; padding-top:env(safe-area-inset-top,0px);
   background:color-mix(in srgb,var(--bg) 82%,transparent); -webkit-backdrop-filter:saturate(1.6) blur(14px); backdrop-filter:saturate(1.6) blur(14px);}
 .site-header-in{max-width:430px; margin:0 auto; height:var(--header-h); display:flex; align-items:center; justify-content:space-between; gap:12px;

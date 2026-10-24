@@ -1,8 +1,9 @@
-import { createClient, type SupabaseClient } from '@supabase/supabase-js';
+import { createClient, isAuthRetryableFetchError, type SupabaseClient } from '@supabase/supabase-js';
 import type { Recipe } from '@/data';
 import { createSupabaseBilling } from '../billing/supabase';
 import { profileToRow, rowToProfile } from './profileRow';
-import type { AuthService, Backend, ProfileRepo, RecipeRepo, Session } from './types';
+import { clearStatus, setStatus } from '../status';
+import { AuthUnavailableError, type AuthService, type Backend, type ProfileRepo, type RecipeRepo, type Session } from './types';
 
 const toSession = (s: { user: { id: string; email?: string | null } } | null): Session | null =>
   s ? { userId: s.user.id, email: s.user.email ?? '' } : null;
@@ -13,6 +14,7 @@ export function createSupabaseClient(url: string, key: string): SupabaseClient {
 
 /** Real backend: Supabase Auth (email OTP) + Postgres with row-level security. Billing reads the Stripe-fed `subscriptions` table. */
 export function createSupabaseBackend(sb: SupabaseClient): Backend {
+  let signingOut = false;   // our own sign-out is not an "unexpected" one
   const auth: AuthService = {
     async sendCode(email) {
       const { error } = await sb.auth.signInWithOtp({ email: email.trim().toLowerCase(), options: { shouldCreateUser: true } });
@@ -24,10 +26,20 @@ export function createSupabaseBackend(sb: SupabaseClient): Backend {
       return toSession(data.session)!;
     },
     async getSession() {
-      const { data } = await sb.auth.getSession();
+      const { data, error } = await sb.auth.getSession();
+      // An expired access token that can't be renewed because there's no signal is not the same as being signed out:
+      // the refresh token is still stored and works once we're back online.
+      if (!data.session && error && isAuthRetryableFetchError(error)) throw new AuthUnavailableError();
       return toSession(data.session);
     },
-    async signOut() { await sb.auth.signOut(); },
+    async signOut() {
+      signingOut = true;
+      try { await sb.auth.signOut(); } finally { signingOut = false; }
+    },
+    onSignedOut(cb) {
+      const { data } = sb.auth.onAuthStateChange((event) => { if (event === 'SIGNED_OUT' && !signingOut) cb(); });
+      return () => data.subscription.unsubscribe();
+    },
   };
 
   // Saves are queued so rapid edits can't land out of order.
@@ -40,8 +52,13 @@ export function createSupabaseBackend(sb: SupabaseClient): Backend {
     },
     save(userId, p) {
       const run = queue.then(async () => {
-        const { error } = await sb.from('profiles').upsert(profileToRow(userId, p), { onConflict: 'user_id' });
-        if (error) console.error('profile save failed', error.message);
+        try {
+          const { error } = await sb.from('profiles').upsert(profileToRow(userId, p), { onConflict: 'user_id' });
+          if (error) { console.error('profile save failed', error.message); setStatus({ kind: 'save-failed' }); } else clearStatus('save-failed');
+        } catch (e) {
+          console.error('profile save failed', e);
+          setStatus({ kind: 'save-failed' });
+        }
       });
       queue = run.catch(() => undefined);
       return run;
