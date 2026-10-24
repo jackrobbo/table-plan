@@ -29,8 +29,7 @@ describe('planner: days never fail', () => {
       const T = computeTargets(input.goal, input.stats);
       const plan = generatePlan(input, i + 1);
       expect(plan.days).toHaveLength(5);
-      // The 31-recipe bank tops out around 2,500 kcal a day; above that days are flagged, never faked.
-      if (T.target > 2500) { expect(plan.days.every((d) => d.inBand) || plan.issues.length > 0).toBe(true); days += 5; continue; }
+      // Past what the bank can reach a day would be flagged, never faked; the 100-meal bank covers every profile sampled here.
       for (const d of plan.days) {
         days++; if (d.adjusted) adjusted++;
         expect(d.inBand, `${goal} ${JSON.stringify(input.stats)} ${d.day}: ${d.kcal}kcal ${d.protein}g`).toBe(true);
@@ -92,6 +91,16 @@ describe('planner: preferences', () => {
     const plan = generatePlan(base({ liked: [] }), 1);
     expect(plan.days).toEqual([]);
     expect(plan.issues[0]).toMatch(/No breakfast recipes/);
+  });
+});
+
+describe('rng', () => {
+  it('weighted picks follow the weights and stay deterministic', () => {
+    const R = rng(7), hits = { a: 0, b: 0 };
+    for (let i = 0; i < 2000; i++) hits[R.pickWeighted(['a', 'b'] as const, (x) => (x === 'a' ? 9 : 1))]++;
+    expect(hits.a / 2000).toBeGreaterThan(0.85); expect(hits.a / 2000).toBeLessThan(0.95);
+    expect(rng(3).weightedShuffle([1, 2, 3, 4], (x) => x)).toEqual(rng(3).weightedShuffle([1, 2, 3, 4], (x) => x));
+    expect(rng(3).weightedShuffle([1, 2, 3], () => 1).sort()).toEqual([1, 2, 3]);
   });
 });
 

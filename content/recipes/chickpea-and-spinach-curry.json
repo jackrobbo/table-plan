@@ -1,0 +1,48 @@
+{
+ "slug": "chickpea-and-spinach-curry",
+ "name": "Chickpea and Spinach Curry",
+ "course": "dinner",
+ "emoji": "🍛",
+ "serves": 2,
+ "status": "live",
+ "ingredients": [
+  {
+   "ingredient": "chickpeas",
+   "qty": 480
+  },
+  {
+   "ingredient": "spinach",
+   "qty": 100
+  },
+  {
+   "ingredient": "tikka",
+   "qty": 60
+  },
+  {
+   "ingredient": "coconut",
+   "qty": 200
+  },
+  {
+   "ingredient": "passata",
+   "qty": 200
+  },
+  {
+   "ingredient": "onions",
+   "qty": 1
+  }
+ ],
+ "cupboard": [
+  "rice",
+  "oil"
+ ],
+ "cupboard_qty": {
+  "rice": 140,
+  "oil": 10
+ },
+ "method": [
+  "Fry the sliced onion in the oil for 5 minutes, then stir in the tikka paste.",
+  "Add the drained chickpeas, passata and coconut milk and simmer for 12 minutes.",
+  "Stir through the spinach until wilted and serve over the cooked rice."
+ ],
+ "source": "table-plan"
+}

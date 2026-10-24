@@ -2062,7 +2062,9 @@
   "name": "Morrisons Boneless 2 Atlantic Salmon Fillets",
   "unit": "g",
   "cupboard": false,
-  "allergens": [],
+  "allergens": [
+   "fish"
+  ],
   "per100": {
    "kcal": 217,
    "protein_g": 20.4,
@@ -2088,7 +2090,9 @@
   "name": "Morrisons 2 Cod Fillets 220g",
   "unit": "g",
   "cupboard": false,
-  "allergens": [],
+  "allergens": [
+   "fish"
+  ],
   "per100": {
    "kcal": 75,
    "protein_g": 17.5,
@@ -2196,7 +2200,9 @@
   "name": "Morrisons Greek Feta 200g",
   "unit": "g",
   "cupboard": false,
-  "allergens": [],
+  "allergens": [
+   "milk"
+  ],
   "per100": {
    "kcal": 303,
    "protein_g": 16.2,
@@ -2251,7 +2257,9 @@
   "name": "Morrisons 50% Reduced Fat Soft Cheese 200g",
   "unit": "g",
   "cupboard": false,
-  "allergens": [],
+  "allergens": [
+   "milk"
+  ],
   "per100": {
    "kcal": 143,
    "protein_g": 9.2,

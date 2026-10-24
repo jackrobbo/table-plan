@@ -1,0 +1,29 @@
+{
+ "slug": "tuna-and-sweetcorn-jacket-potato",
+ "name": "Tuna and Sweetcorn Jacket Potato",
+ "course": "lunch",
+ "emoji": "🥔",
+ "serves": 1,
+ "status": "live",
+ "ingredients": [
+  {
+   "ingredient": "bakepot",
+   "qty": 1
+  }
+ ],
+ "cupboard": [
+  "tuna",
+  "sweetcorn",
+  "mayo"
+ ],
+ "cupboard_qty": {
+  "tuna": 112,
+  "sweetcorn": 60,
+  "mayo": 20
+ },
+ "method": [
+  "Prick the potato and bake at 200°C for about an hour (or microwave for 8–10 minutes, then crisp in the oven for 15).",
+  "Mix the tuna, sweetcorn and mayo and spoon over the split potato."
+ ],
+ "source": "table-plan"
+}

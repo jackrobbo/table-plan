@@ -1,0 +1,49 @@
+{
+ "slug": "sweet-potato-and-chickpea-curry-with-naan",
+ "name": "Sweet Potato and Chickpea Curry with Naan",
+ "course": "dinner",
+ "emoji": "🍠",
+ "serves": 2,
+ "status": "live",
+ "ingredients": [
+  {
+   "ingredient": "sweetpot",
+   "qty": 400
+  },
+  {
+   "ingredient": "chickpeas",
+   "qty": 240
+  },
+  {
+   "ingredient": "spinach",
+   "qty": 100
+  },
+  {
+   "ingredient": "tikka",
+   "qty": 60
+  },
+  {
+   "ingredient": "coconut",
+   "qty": 200
+  },
+  {
+   "ingredient": "passata",
+   "qty": 200
+  },
+  {
+   "ingredient": "naan",
+   "qty": 4
+  }
+ ],
+ "cupboard": [
+  "oil"
+ ],
+ "cupboard_qty": {
+  "oil": 8
+ },
+ "method": [
+  "Soften the diced sweet potato in the oil for 5 minutes, stir in the tikka paste, then add the chickpeas, passata and coconut milk.",
+  "Simmer for 20 minutes until the sweet potato is tender, stir through the spinach, and serve with the warmed naans."
+ ],
+ "source": "table-plan"
+}

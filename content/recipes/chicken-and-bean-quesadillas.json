@@ -1,0 +1,41 @@
+{
+ "slug": "chicken-and-bean-quesadillas",
+ "name": "Chicken and Bean Quesadillas",
+ "course": "dinner",
+ "emoji": "🫓",
+ "serves": 2,
+ "status": "live",
+ "ingredients": [
+  {
+   "ingredient": "wraps",
+   "qty": 4
+  },
+  {
+   "ingredient": "breast",
+   "qty": 300
+  },
+  {
+   "ingredient": "kidney",
+   "qty": 200
+  },
+  {
+   "ingredient": "pepper",
+   "qty": 1
+  }
+ ],
+ "cupboard": [
+  "cheddar",
+  "fajita",
+  "oil"
+ ],
+ "cupboard_qty": {
+  "cheddar": 80,
+  "fajita": 6,
+  "oil": 10
+ },
+ "method": [
+  "Fry the diced chicken and chopped pepper with the fajita seasoning for 8 minutes until the chicken is cooked through, then stir in the beans.",
+  "Fill two wraps with the mix and cheese, top with the others and toast in a dry pan for 2–3 minutes each side. Cut into wedges."
+ ],
+ "source": "table-plan"
+}

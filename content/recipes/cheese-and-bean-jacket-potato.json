@@ -1,0 +1,29 @@
+{
+ "slug": "cheese-and-bean-jacket-potato",
+ "name": "Cheese and Bean Jacket Potato",
+ "course": "lunch",
+ "emoji": "🥔",
+ "serves": 1,
+ "status": "live",
+ "ingredients": [
+  {
+   "ingredient": "bakepot",
+   "qty": 1
+  },
+  {
+   "ingredient": "beans",
+   "qty": 200
+  }
+ ],
+ "cupboard": [
+  "cheddar"
+ ],
+ "cupboard_qty": {
+  "cheddar": 40
+ },
+ "method": [
+  "Bake the potato at 200°C for about an hour, or microwave for 8–10 minutes then crisp in the oven.",
+  "Warm the beans, spoon over the split potato and top with grated cheese."
+ ],
+ "source": "table-plan"
+}

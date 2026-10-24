@@ -1,0 +1,24 @@
+{
+ "slug": "cottage-cheese-and-blueberries",
+ "name": "Cottage Cheese and Blueberries",
+ "course": "snack",
+ "emoji": "🫐",
+ "serves": 1,
+ "status": "live",
+ "ingredients": [
+  {
+   "ingredient": "cottage",
+   "qty": 120
+  },
+  {
+   "ingredient": "blueb",
+   "qty": 60
+  }
+ ],
+ "cupboard": [],
+ "cupboard_qty": {},
+ "method": [
+  "Spoon the cottage cheese into a bowl and top with the blueberries."
+ ],
+ "source": "table-plan"
+}

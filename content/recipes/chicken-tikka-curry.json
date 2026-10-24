@@ -1,0 +1,44 @@
+{
+ "slug": "chicken-tikka-curry",
+ "name": "Chicken Tikka Curry",
+ "course": "dinner",
+ "emoji": "🍛",
+ "serves": 2,
+ "status": "live",
+ "ingredients": [
+  {
+   "ingredient": "breast",
+   "qty": 300
+  },
+  {
+   "ingredient": "onions",
+   "qty": 1
+  },
+  {
+   "ingredient": "tikka",
+   "qty": 60
+  },
+  {
+   "ingredient": "coconut",
+   "qty": 200
+  },
+  {
+   "ingredient": "passata",
+   "qty": 200
+  }
+ ],
+ "cupboard": [
+  "rice",
+  "oil"
+ ],
+ "cupboard_qty": {
+  "rice": 140,
+  "oil": 10
+ },
+ "method": [
+  "Fry the sliced onion in the oil for 5 minutes, add the diced chicken and cook until sealed.",
+  "Stir in the tikka paste, passata and coconut milk and simmer for 15 minutes until the chicken is cooked through.",
+  "Serve over the cooked rice."
+ ],
+ "source": "table-plan"
+}

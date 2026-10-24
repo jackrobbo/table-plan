@@ -1,0 +1,28 @@
+{
+ "slug": "cottage-cheese-rice-cakes",
+ "name": "Cottage Cheese Rice Cakes",
+ "course": "snack",
+ "emoji": "🍘",
+ "serves": 1,
+ "status": "live",
+ "ingredients": [
+  {
+   "ingredient": "ricecakes",
+   "qty": 20
+  },
+  {
+   "ingredient": "cottage",
+   "qty": 80
+  },
+  {
+   "ingredient": "cuc",
+   "qty": 0.2
+  }
+ ],
+ "cupboard": [],
+ "cupboard_qty": {},
+ "method": [
+  "Top the rice cakes with cottage cheese and sliced cucumber."
+ ],
+ "source": "table-plan"
+}

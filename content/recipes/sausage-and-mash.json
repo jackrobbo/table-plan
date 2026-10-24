@@ -1,0 +1,46 @@
+{
+ "slug": "sausage-and-mash",
+ "name": "Sausage and Mash",
+ "course": "dinner",
+ "emoji": "🌭",
+ "serves": 2,
+ "status": "live",
+ "ingredients": [
+  {
+   "ingredient": "sausages",
+   "qty": 6
+  },
+  {
+   "ingredient": "potatoes",
+   "qty": 500
+  },
+  {
+   "ingredient": "peas",
+   "qty": 160
+  },
+  {
+   "ingredient": "onions",
+   "qty": 1
+  },
+  {
+   "ingredient": "milk",
+   "qty": 60
+  }
+ ],
+ "cupboard": [
+  "butter",
+  "oil",
+  "stock"
+ ],
+ "cupboard_qty": {
+  "butter": 20,
+  "oil": 5,
+  "stock": 5
+ },
+ "method": [
+  "Grill or bake the sausages for 20–25 minutes, turning, until cooked through.",
+  "Boil the peeled potatoes for 15–20 minutes, then mash with the butter and milk.",
+  "Soften the sliced onion in the oil, add a splash of hot stock for a quick gravy, and serve with the peas."
+ ],
+ "source": "table-plan"
+}

@@ -1,0 +1,26 @@
+{
+ "slug": "tuna-on-crackers",
+ "name": "Tuna on Crackers",
+ "course": "snack",
+ "emoji": "🐟",
+ "serves": 1,
+ "status": "live",
+ "ingredients": [
+  {
+   "ingredient": "crackers",
+   "qty": 30
+  }
+ ],
+ "cupboard": [
+  "tuna",
+  "mayo"
+ ],
+ "cupboard_qty": {
+  "tuna": 60,
+  "mayo": 10
+ },
+ "method": [
+  "Mix the tuna with the mayo and pile onto the crackers."
+ ],
+ "source": "table-plan"
+}

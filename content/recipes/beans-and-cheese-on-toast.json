@@ -1,0 +1,29 @@
+{
+ "slug": "beans-and-cheese-on-toast",
+ "name": "Beans and Cheese on Toast",
+ "course": "breakfast",
+ "emoji": "🍞",
+ "serves": 1,
+ "status": "live",
+ "ingredients": [
+  {
+   "ingredient": "loaf",
+   "qty": 2
+  },
+  {
+   "ingredient": "beans",
+   "qty": 200
+  }
+ ],
+ "cupboard": [
+  "cheddar"
+ ],
+ "cupboard_qty": {
+  "cheddar": 30
+ },
+ "method": [
+  "Warm the beans in a pan and toast the bread.",
+  "Pile the beans onto the toast and grate the cheese over the top."
+ ],
+ "source": "table-plan"
+}

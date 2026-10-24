@@ -1,0 +1,20 @@
+{
+ "slug": "boiled-eggs",
+ "name": "Boiled Eggs",
+ "course": "snack",
+ "emoji": "🥚",
+ "serves": 1,
+ "status": "live",
+ "ingredients": [
+  {
+   "ingredient": "eggs",
+   "qty": 2
+  }
+ ],
+ "cupboard": [],
+ "cupboard_qty": {},
+ "method": [
+  "Boil for 8–9 minutes until the yolks are firm, then cool under cold water and peel."
+ ],
+ "source": "table-plan"
+}

@@ -1,0 +1,29 @@
+{
+ "slug": "smoked-salmon-bagel",
+ "name": "Smoked Salmon Bagel",
+ "course": "breakfast",
+ "emoji": "🥯",
+ "serves": 1,
+ "status": "live",
+ "ingredients": [
+  {
+   "ingredient": "bagels",
+   "qty": 1
+  },
+  {
+   "ingredient": "softcheese",
+   "qty": 40
+  },
+  {
+   "ingredient": "smokedsalmon",
+   "qty": 50
+  }
+ ],
+ "cupboard": [],
+ "cupboard_qty": {},
+ "method": [
+  "Split and toast the bagel.",
+  "Spread with soft cheese and top with the smoked salmon."
+ ],
+ "source": "table-plan"
+}

@@ -1,0 +1,54 @@
+{
+ "slug": "lamb-kofta-pittas",
+ "name": "Lamb Kofta Pittas",
+ "course": "dinner",
+ "emoji": "🥙",
+ "serves": 2,
+ "status": "live",
+ "ingredients": [
+  {
+   "ingredient": "lambmince",
+   "qty": 300
+  },
+  {
+   "ingredient": "onions",
+   "qty": 0.5
+  },
+  {
+   "ingredient": "pittas",
+   "qty": 4
+  },
+  {
+   "ingredient": "greek",
+   "qty": 100
+  },
+  {
+   "ingredient": "cuc",
+   "qty": 0.5
+  },
+  {
+   "ingredient": "plum",
+   "qty": 80
+  },
+  {
+   "ingredient": "iceberg",
+   "qty": 0.15
+  }
+ ],
+ "cupboard": [
+  "cumin",
+  "garlic",
+  "oil"
+ ],
+ "cupboard_qty": {
+  "cumin": 3,
+  "garlic": 6,
+  "oil": 5
+ },
+ "method": [
+  "Mix the lamb with the grated onion, garlic and cumin and shape into 8 koftas.",
+  "Grill or fry in the oil for 10–12 minutes, turning, until cooked through with no pink.",
+  "Warm the pittas and fill with koftas, shredded lettuce, cucumber, tomato and a spoon of yogurt."
+ ],
+ "source": "table-plan"
+}

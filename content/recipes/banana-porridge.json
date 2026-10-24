@@ -1,0 +1,33 @@
+{
+ "slug": "banana-porridge",
+ "name": "Banana Porridge",
+ "course": "breakfast",
+ "emoji": "🥣",
+ "serves": 1,
+ "status": "live",
+ "ingredients": [
+  {
+   "ingredient": "oats",
+   "qty": 50
+  },
+  {
+   "ingredient": "milk",
+   "qty": 250
+  },
+  {
+   "ingredient": "banana",
+   "qty": 1
+  }
+ ],
+ "cupboard": [
+  "honey"
+ ],
+ "cupboard_qty": {
+  "honey": 10
+ },
+ "method": [
+  "Simmer the oats in the milk for 4–5 minutes, stirring, until thick and creamy.",
+  "Top with sliced banana and a drizzle of honey."
+ ],
+ "source": "table-plan"
+}

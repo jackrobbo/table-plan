@@ -1,0 +1,41 @@
+{
+ "slug": "chicken-burrito-bowl",
+ "name": "Chicken Burrito Bowl",
+ "course": "lunch",
+ "emoji": "🥗",
+ "serves": 1,
+ "status": "live",
+ "ingredients": [
+  {
+   "ingredient": "breast",
+   "qty": 130
+  },
+  {
+   "ingredient": "kidney",
+   "qty": 80
+  },
+  {
+   "ingredient": "plum",
+   "qty": 50
+  }
+ ],
+ "cupboard": [
+  "rice",
+  "sweetcorn",
+  "fajita",
+  "cheddar",
+  "oil"
+ ],
+ "cupboard_qty": {
+  "rice": 60,
+  "sweetcorn": 50,
+  "fajita": 4,
+  "cheddar": 20,
+  "oil": 5
+ },
+ "method": [
+  "Slice the chicken and fry in the oil with the fajita seasoning for 6–8 minutes until cooked through.",
+  "Serve over cooked rice with the beans, sweetcorn, chopped tomatoes and cheese."
+ ],
+ "source": "table-plan"
+}

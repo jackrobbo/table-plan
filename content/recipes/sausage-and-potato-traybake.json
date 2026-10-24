@@ -1,0 +1,43 @@
+{
+ "slug": "sausage-and-potato-traybake",
+ "name": "Sausage and Potato Traybake",
+ "course": "dinner",
+ "emoji": "🌭",
+ "serves": 2,
+ "status": "live",
+ "ingredients": [
+  {
+   "ingredient": "sausages",
+   "qty": 6
+  },
+  {
+   "ingredient": "potatoes",
+   "qty": 600
+  },
+  {
+   "ingredient": "carrots",
+   "qty": 150
+  },
+  {
+   "ingredient": "onions",
+   "qty": 2
+  },
+  {
+   "ingredient": "courgette",
+   "qty": 200
+  }
+ ],
+ "cupboard": [
+  "oil",
+  "herbs"
+ ],
+ "cupboard_qty": {
+  "oil": 15,
+  "herbs": 2
+ },
+ "method": [
+  "Heat the oven to 200°C. Toss the chopped potatoes, carrots and onions in the oil and herbs and roast for 15 minutes.",
+  "Add the sausages and courgette and roast for a further 25–30 minutes, turning once, until the sausages are cooked through."
+ ],
+ "source": "table-plan"
+}

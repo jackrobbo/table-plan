@@ -1,0 +1,37 @@
+{
+ "slug": "crispy-beef-noodle-stir-fry",
+ "name": "Crispy Beef Noodle Stir-Fry",
+ "course": "dinner",
+ "emoji": "🍜",
+ "serves": 2,
+ "status": "live",
+ "ingredients": [
+  {
+   "ingredient": "mince",
+   "qty": 250
+  },
+  {
+   "ingredient": "mixveg",
+   "qty": 300
+  }
+ ],
+ "cupboard": [
+  "noodles",
+  "soy",
+  "teriyaki",
+  "garlic",
+  "oil"
+ ],
+ "cupboard_qty": {
+  "noodles": 150,
+  "soy": 25,
+  "teriyaki": 40,
+  "garlic": 6,
+  "oil": 10
+ },
+ "method": [
+  "Cook the noodles. Fry the mince in the oil on a high heat, breaking it up, until browned and crisp at the edges.",
+  "Add the garlic and frozen veg, stir-fry for 4 minutes, then toss in the noodles with the soy and teriyaki sauces."
+ ],
+ "source": "table-plan"
+}

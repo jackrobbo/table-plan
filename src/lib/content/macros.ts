@@ -1,4 +1,4 @@
-import type { IngredientDef, RecipeDef } from './types';
+import type { Course, IngredientDef, RecipeDef } from './types';
 
 export interface Computed {
   kcal: number; protein_g: number; carbs_g: number; fat_g: number;
@@ -59,11 +59,20 @@ export function costPerPortion(r: RecipeDef, ing: Map<string, IngredientDef>): n
 }
 
 export type Budget = 'low' | 'medium' | 'high';
-/** Cost per portion (pence) at or below which a meal counts as that tier. Tuned on the launch recipe bank; change here only. */
-export const BUDGET_LIMITS = { low: 150, medium: 250 } as const;
+/**
+ * Cost per portion (pence) at or below which a meal counts as that tier, per course: a £1.50 dinner is cheap, a £1.50 breakfast
+ * is not. Tuned on the 100-meal launch bank so each course splits roughly into thirds; change here only, then re-run content:import.
+ */
+export const BUDGET_LIMITS: Record<Course, { low: number; medium: number }> = {
+  breakfast: { low: 110, medium: 160 },
+  lunch: { low: 110, medium: 160 },
+  snack: { low: 50, medium: 100 },
+  dinner: { low: 200, medium: 260 },
+};
 
-export function budgetTier(pencePerPortion: number): Budget {
-  return pencePerPortion <= BUDGET_LIMITS.low ? 'low' : pencePerPortion <= BUDGET_LIMITS.medium ? 'medium' : 'high';
+export function budgetTier(pencePerPortion: number, course: Course): Budget {
+  const l = BUDGET_LIMITS[course];
+  return pencePerPortion <= l.low ? 'low' : pencePerPortion <= l.medium ? 'medium' : 'high';
 }
 
 export interface Resolved { kcal: number; protein_g: number; carbs_g?: number; fat_g?: number; computed: boolean; missing: string[] }

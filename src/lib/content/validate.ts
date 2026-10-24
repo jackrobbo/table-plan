@@ -6,6 +6,16 @@ const SLUG = /^[a-z0-9]+(-[a-z0-9]+)*$/;
 const COURSES = ['breakfast', 'lunch', 'snack', 'dinner'];
 const STATUSES = ['draft', 'verified', 'live'];
 const ALLERGEN_KEYS = new Set<string>(ALLERGENS.map(([k]) => k));
+/** Words in an ingredient's name that imply an allergen. A safety net: allergens drive hard exclusions, so a miss must fail the import. */
+const NAME_IMPLIES: [RegExp, string][] = [
+  [/\b(cod|salmon|tuna|haddock|fish|anchov\w*|mackerel|sardine\w*)\b/i, 'fish'],
+  [/\b(prawns?|shrimps?|crab|lobster)\b/i, 'crustaceans'],
+  [/\b(milk|cheese|cheddar|parmesan|halloumi|feta|mozzarella|yogurt|yoghurt|cream|cr[eè]me|butter|cottage)\b/i, 'milk'],
+  [/\beggs?\b/i, 'eggs'],
+  [/\bpeanut\b/i, 'peanuts'],
+  [/\bsoy\b/i, 'soya'],
+  [/\b(bread|loaf|wraps?|tortilla|pittas?|bagels?|naans?|pasta|spaghetti|fusilli|lasagne|noodles|crackers?|flour|oats)\b/i, 'gluten'],
+];
 /** Declared vs computed kcal tolerance when every ingredient has CoFID data. */
 export const KCAL_TOLERANCE = 0.15;
 /** Stricter bar to count as verified (protein gets 1.5x this). */
@@ -26,6 +36,10 @@ export function validateContent(ingredients: IngredientDef[], recipes: RecipeDef
     for (const a of i.allergens ?? []) if (!ALLERGEN_KEYS.has(a)) err(w, `unknown allergen "${a}"`);
     if (i.product && !(i.product.price_pence >= 0 && i.product.pack_size > 0)) err(w, 'product needs price_pence >= 0 and pack_size > 0');
     if (!i.cupboard && !i.product) warn(w, 'not mapped to a retailer product yet (will be unpriced)');
+    for (const [re, a] of NAME_IMPLIES) {
+      // "coconut milk", "peanut butter" and "cream crackers" are not dairy, whatever the words suggest.
+      if (re.test(i.name) && !/coconut milk|cornflour|peanut butter|cream crackers/i.test(i.name) && !(i.allergens ?? []).includes(a as never)) err(w, `name suggests "${a}" but it is not in allergens`);
+    }
   }
 
   const slugs = new Set<string>(), names = new Set<string>();

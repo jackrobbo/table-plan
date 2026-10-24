@@ -1,0 +1,33 @@
+{
+ "slug": "egg-mayo-sandwich",
+ "name": "Egg Mayo Sandwich",
+ "course": "lunch",
+ "emoji": "🥪",
+ "serves": 1,
+ "status": "live",
+ "ingredients": [
+  {
+   "ingredient": "loaf",
+   "qty": 2
+  },
+  {
+   "ingredient": "eggs",
+   "qty": 2
+  },
+  {
+   "ingredient": "salad",
+   "qty": 20
+  }
+ ],
+ "cupboard": [
+  "mayo"
+ ],
+ "cupboard_qty": {
+  "mayo": 20
+ },
+ "method": [
+  "Boil the eggs for 9 minutes, cool and peel, then mash with the mayo.",
+  "Sandwich with the salad leaves."
+ ],
+ "source": "table-plan"
+}

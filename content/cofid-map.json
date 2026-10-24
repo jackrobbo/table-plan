@@ -272,10 +272,16 @@
   "approx": "whole turkey, raw (CoFID has no raw mince)"
  },
  "salmon": {
-  "code": "16-356"
+  "code": "16-356",
+  "allergens": [
+   "fish"
+  ]
  },
  "cod": {
-  "code": "16-372"
+  "code": "16-372",
+  "allergens": [
+   "fish"
+  ]
  },
  "smokedsalmon": {
   "code": "16-412"
@@ -287,7 +293,10 @@
   "code": "12-496"
  },
  "feta": {
-  "code": "12-525"
+  "code": "12-525",
+  "allergens": [
+   "milk"
+  ]
  },
  "cottage": {
   "code": "12-550",
@@ -295,7 +304,10 @@
   "why": "Label used: product-specific 'low fat' recipe (89 kcal) vs CoFID reduced-fat (68 kcal)."
  },
  "softcheese": {
-  "code": "12-538"
+  "code": "12-538",
+  "allergens": [
+   "milk"
+  ]
  },
  "bagels": {
   "code": "11-970",

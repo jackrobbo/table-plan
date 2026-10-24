@@ -1,0 +1,35 @@
+{
+ "slug": "berry-overnight-oats",
+ "name": "Berry Overnight Oats",
+ "course": "breakfast",
+ "emoji": "🫐",
+ "serves": 1,
+ "status": "live",
+ "ingredients": [
+  {
+   "ingredient": "oats",
+   "qty": 50
+  },
+  {
+   "ingredient": "greek",
+   "qty": 100
+  },
+  {
+   "ingredient": "milk",
+   "qty": 150
+  }
+ ],
+ "cupboard": [
+  "frozenfruit",
+  "honey"
+ ],
+ "cupboard_qty": {
+  "frozenfruit": 80,
+  "honey": 10
+ },
+ "method": [
+  "Stir the oats, yogurt and milk together in a jar.",
+  "Top with the frozen fruit and honey, cover and chill overnight. The fruit thaws into a sauce."
+ ],
+ "source": "table-plan"
+}

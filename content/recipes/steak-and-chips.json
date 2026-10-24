@@ -1,0 +1,40 @@
+{
+ "slug": "steak-and-chips",
+ "name": "Steak and Chips",
+ "course": "dinner",
+ "emoji": "🥩",
+ "serves": 2,
+ "status": "live",
+ "ingredients": [
+  {
+   "ingredient": "rump",
+   "qty": 400
+  },
+  {
+   "ingredient": "chips",
+   "qty": 500
+  },
+  {
+   "ingredient": "peas",
+   "qty": 200
+  },
+  {
+   "ingredient": "mushrooms",
+   "qty": 150
+  }
+ ],
+ "cupboard": [
+  "oil",
+  "butter"
+ ],
+ "cupboard_qty": {
+  "oil": 10,
+  "butter": 10
+ },
+ "method": [
+  "Bake the chips following the pack instructions.",
+  "Fry the steaks in the oil for 2–3 minutes each side for medium, adding the butter at the end, and rest for 3 minutes.",
+  "Fry the mushrooms in the pan juices, boil the peas and serve together."
+ ],
+ "source": "table-plan"
+}

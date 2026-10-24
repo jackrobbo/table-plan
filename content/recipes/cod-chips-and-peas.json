@@ -1,0 +1,38 @@
+{
+ "slug": "cod-chips-and-peas",
+ "name": "Cod, Chips and Peas",
+ "course": "dinner",
+ "emoji": "🐟",
+ "serves": 2,
+ "status": "live",
+ "ingredients": [
+  {
+   "ingredient": "cod",
+   "qty": 220
+  },
+  {
+   "ingredient": "chips",
+   "qty": 600
+  },
+  {
+   "ingredient": "peas",
+   "qty": 200
+  },
+  {
+   "ingredient": "lemon",
+   "qty": 0.5
+  }
+ ],
+ "cupboard": [
+  "oil"
+ ],
+ "cupboard_qty": {
+  "oil": 5
+ },
+ "method": [
+  "Bake the chips following the pack instructions.",
+  "Brush the cod with the oil and bake alongside for 15–18 minutes until it flakes.",
+  "Boil the peas for 3 minutes and serve with a squeeze of lemon."
+ ],
+ "source": "table-plan"
+}

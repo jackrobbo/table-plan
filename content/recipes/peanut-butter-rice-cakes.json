@@ -1,0 +1,24 @@
+{
+ "slug": "peanut-butter-rice-cakes",
+ "name": "Peanut Butter Rice Cakes",
+ "course": "snack",
+ "emoji": "🍘",
+ "serves": 1,
+ "status": "live",
+ "ingredients": [
+  {
+   "ingredient": "ricecakes",
+   "qty": 30
+  },
+  {
+   "ingredient": "pbutter",
+   "qty": 25
+  }
+ ],
+ "cupboard": [],
+ "cupboard_qty": {},
+ "method": [
+  "Spread the rice cakes with peanut butter."
+ ],
+ "source": "table-plan"
+}

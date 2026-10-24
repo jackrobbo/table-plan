@@ -15,7 +15,9 @@ const DISLIKE_WEIGHT = 120;   // kcal-equivalents per disliked ingredient/name m
 const REPEAT_WEIGHT = 40;
 const RESIZE_WEIGHT = 220;    // prefer unadjusted portions
 const SHARE_BONUS = 25;       // reuse of a product already bought this week
-const TRIALS = 400;
+const TRIALS = 100;
+/** Typical split of a day's calories; snacks take the rest. Only steers sampling, never a constraint. */
+const KCAL_SHARE = { breakfast: 0.27, lunch: 0.3, dinner: 0.33, snack: 0.1 } as const;
 /** Top-up combinations tried per candidate day: none, any one, any two. */
 const TOPUP_SETS: Topup[][] = [[], ...TOPUPS.map((t) => [t]), ...TOPUPS.flatMap((a, i) => TOPUPS.slice(i + 1).map((b) => [a, b]))];
 
@@ -54,9 +56,26 @@ export function generatePlan(input: PlanInput, seed = 1): Plan {
   if (!P.snack.length) issues.push('No snacks available after allergies.');
   if (issues.length) return { seed, days: [], issues };
 
+  // Where a day's calories usually go, used to steer sampling (breakfast/lunch/dinner share what snacks leave).
+  const planned = (['breakfast', 'lunch', 'dinner'] as const).filter((c) => input.meals[c].mode === 'plan');
+  const totalShare = planned.reduce((a, c) => a + KCAL_SHARE[c], 0) + KCAL_SHARE.snack;
+  const slotTarget = { breakfast: (mid * KCAL_SHARE.breakfast) / totalShare, lunch: (mid * KCAL_SHARE.lunch) / totalShare, dinner: (mid * KCAL_SHARE.dinner) / totalShare };
+  const proteinPerKcal = needP / Math.max(mid, 1);
+  /** Sampling weight: close to the target size (log scale, so too big and too small are equally bad) and protein-dense enough. */
+  const fit = (r: Recipe, target: number) => {
+    const z = Math.log(r.k / Math.max(target, 1));
+    return Math.exp(-(z * z) / (2 * 0.45 * 0.45)) * (0.4 + Math.min(1.6, r.p / r.k / Math.max(proteinPerKcal, 1e-6)));
+  };
+  /** Every set of 1–3 distinct snacks, for the exhaustive fallback. */
+  const SNACK_SETS = P.snack
+    .flatMap((a, i) => [[a], ...P.snack.slice(i + 1).flatMap((b, j) => [[a, b], ...P.snack.slice(i + j + 2).map((c) => [a, b, c])])])
+    .map((items) => ({ items, k: items.reduce((a, x) => a + x.k, 0), p: items.reduce((a, x) => a + x.p, 0) }));
+  const MAX_TOPUP_K = TOPUPS.map((t) => t.k).sort((a, b) => b - a).slice(0, 2).reduce((a, k) => a + k, 0);
+  const AVG_SNACK_KCAL = P.snack.reduce((a, x) => a + x.k, 0) / Math.max(1, P.snack.length);
+
   const dinners: Recipe[] = [];
   if (input.meals.dinner.mode === 'plan') {
-    const order = R.shuffle(P.dinner).sort((a, b) => dislikeHits(a, input.dislikes) - dislikeHits(b, input.dislikes));
+    const order = R.weightedShuffle(P.dinner, (r) => fit(r, slotTarget.dinner)).sort((a, b) => dislikeHits(a, input.dislikes) - dislikeHits(b, input.dislikes));
     for (let i = 0; i < DAY_NAMES.length; i++) dinners.push(order[i % order.length]);
   }
 
@@ -65,27 +84,33 @@ export function generatePlan(input: PlanInput, seed = 1): Plan {
   const days: PlannedDay[] = [];
 
   for (let d = 0; d < DAY_NAMES.length; d++) {
-    const din = dinners[d] ?? null;
+    let din = dinners[d] ?? null;
     let best: { day: PlannedDay; score: number } | null = null;
     let closest: { day: PlannedDay; miss: number } | null = null;
 
-    for (let t = 0; t < TRIALS; t++) {
-      const b = P.breakfast.length ? R.pick(P.breakfast) : null;
-      const l = P.lunch.length ? R.pick(P.lunch) : null;
-      // Snacks auto-fill: usually one, more when the day needs the calories.
-      const snacks = R.shuffle(P.snack).slice(0, R.pick([1, 1, 2, 3]));
+    /** Scores one candidate day (b, l, snacks + every top-up set at the best portion scale) and keeps it if it beats the current best. */
+    const consider = (b: Recipe | null, l: Recipe | null, snacks: Recipe[], snackK = snacks.reduce((a, x) => a + x.k, 0), snackP = snacks.reduce((a, x) => a + x.p, 0)) => {
       const all = [b, l, din, ...snacks];
       const flexible = [l, din].filter((x): x is Recipe => !!x);
-      const fixedK = (b?.k ?? 0) + snacks.reduce((a, x) => a + x.k, 0), fixedP = (b?.p ?? 0) + snacks.reduce((a, x) => a + x.p, 0);
+      const fixedK = (b?.k ?? 0) + snackK, fixedP = (b?.p ?? 0) + snackP;
       const flexK = flexible.reduce((a, r) => a + r.k, 0), flexP = flexible.reduce((a, r) => a + r.p, 0);
 
-      // Resize cooked meals toward the middle of the band, within limits.
-      const scale = flexK ? Math.min(SCALE_MAX, Math.max(SCALE_MIN, (mid - fixedK) / flexK)) : 1;
       for (const tu of TOPUP_SETS) {
         const tuK = tu.reduce((a, x) => a + x.k, 0), tuP = tu.reduce((a, x) => a + x.p, 0);
-        for (const sc of flexK ? [1, scale] : [1]) {
-          const K = fixedK + sc * flexK + tuK;
-          const Pn = fixedP + sc * flexP + tuP;
+        const baseK = fixedK + tuK, baseP = fixedP + tuP;
+        // Resize the cooked meals as little as possible: the portion scale that puts both calories and protein in range
+        // (nearest 1), else the scale aimed at the middle of the band as the best effort.
+        const scales = new Set<number>([1]);
+        if (flexK) {
+          const minS = Math.max(SCALE_MIN, (lo - baseK) / flexK, flexP ? (needP - baseP) / flexP : 0);
+          const maxS = Math.min(SCALE_MAX, (hi - baseK) / flexK);
+          if (minS <= maxS) scales.add(Math.min(maxS, Math.max(minS, 1)));
+          scales.add(Math.min(SCALE_MAX, Math.max(SCALE_MIN, (mid - baseK) / flexK)));
+        }
+        for (const raw of scales) {
+          const sc = Math.abs(raw - 1) <= 0.02 ? 1 : raw;   // not worth flagging a 2% nudge
+          const K = baseK + sc * flexK;
+          const Pn = baseP + sc * flexP;
           const miss = Math.max(0, lo - K) + Math.max(0, K - hi) + Math.max(0, needP - Pn) * 8;
           const inBand = miss === 0;
           if (!inBand && closest && miss >= closest.miss) continue;
@@ -109,10 +134,53 @@ export function generatePlan(input: PlanInput, seed = 1): Plan {
           const day: PlannedDay = {
             day: DAY_NAMES[d], meals, topups: tu, kcal: Math.round(K + reserveK), protein: Math.round(Pn + reserveP),
             reserved: { kcal: Math.round(reserveK), protein: Math.round(reserveP) },
-            inBand, adjusted: Math.abs(sc - 1) > 0.02 || tu.length > 0,
+            inBand, adjusted: sc !== 1 || tu.length > 0,
           };
           if (inBand) best = { day, score }; else closest = { day, miss };
         }
+      }
+    };
+
+    for (let t = 0; t < TRIALS; t++) {
+      // Sample meals whose size and protein density suit this person's day, not uniformly: with a bank of ~100 meals, uniform
+      // sampling rarely lands a tight (small, high-protein) day. Everything is still random, so weeks vary.
+      const b = P.breakfast.length ? R.pickWeighted(P.breakfast, (r) => fit(r, slotTarget.breakfast)) : null;
+      const l = P.lunch.length ? R.pickWeighted(P.lunch, (r) => fit(r, slotTarget.lunch)) : null;
+      // Snacks auto-fill: as many as the day's calorie gap calls for (1–3), give or take one.
+      const gap = mid - ((b?.k ?? 0) + (l?.k ?? 0) + (din?.k ?? 0));
+      const n = Math.min(3, Math.max(1, Math.round(gap / AVG_SNACK_KCAL)));
+      const count = R.pick([n, n, n, Math.max(1, n - 1), Math.min(3, n + 1)]);
+      const snacks: Recipe[] = [];
+      for (let i = 0; i < count && snacks.length < P.snack.length; i++) {
+        const left = P.snack.filter((x) => !snacks.includes(x));
+        snacks.push(R.pickWeighted(left, (x) => fit(x, Math.max(60, gap / count))));
+      }
+      consider(b, l, snacks);
+    }
+
+    /** Every breakfast × lunch × snack-set that could possibly land in band with the current dinner (pruned by calories first). */
+    const exhaustive = () => {
+      let sinceBest = 0;   // once something lands in band, a few hundred more candidates are plenty to pick a good one
+      for (const b of P.breakfast.length ? P.breakfast : [null]) {
+        for (const l of P.lunch.length ? P.lunch : [null]) {
+          const flex = (l?.k ?? 0) + (din?.k ?? 0);
+          const lowK = lo - (b?.k ?? 0) - SCALE_MAX * flex - MAX_TOPUP_K, highK = hi - (b?.k ?? 0) - SCALE_MIN * flex;
+          for (const set of SNACK_SETS) {
+            if (set.k < lowK || set.k > highK) continue;
+            if (best && ++sinceBest > 400) return;
+            consider(b, l, set.items, set.k, set.p);
+          }
+        }
+      }
+    };
+    if (!best) {
+      // Sampling found nothing in band. Check every combination with this dinner, and if the dinner itself is the problem
+      // (too big or too small for the day) swap it, trying dinners not yet used this week first. Rare, so the cost is fine.
+      exhaustive();
+      if (!best && input.meals.dinner.mode === 'plan') {
+        const used = new Set(days.map((x) => x.meals.find((m) => m.slot === 'dinner')?.recipeId));
+        const alts = P.dinner.filter((x) => x !== din).sort((a, b) => Number(used.has(a.id)) - Number(used.has(b.id)) || fit(b, slotTarget.dinner) - fit(a, slotTarget.dinner));
+        for (const alt of alts) { din = alt; exhaustive(); if (best) break; }
       }
     }
 

@@ -1,0 +1,24 @@
+{
+ "slug": "cheese-and-crackers",
+ "name": "Cheese and Crackers",
+ "course": "snack",
+ "emoji": "🧀",
+ "serves": 1,
+ "status": "live",
+ "ingredients": [
+  {
+   "ingredient": "crackers",
+   "qty": 25
+  }
+ ],
+ "cupboard": [
+  "cheddar"
+ ],
+ "cupboard_qty": {
+  "cheddar": 30
+ },
+ "method": [
+  "Slice the cheese and serve on the crackers."
+ ],
+ "source": "table-plan"
+}

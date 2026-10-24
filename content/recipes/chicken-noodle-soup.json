@@ -1,0 +1,39 @@
+{
+ "slug": "chicken-noodle-soup",
+ "name": "Chicken Noodle Soup",
+ "course": "lunch",
+ "emoji": "🍜",
+ "serves": 1,
+ "status": "live",
+ "ingredients": [
+  {
+   "ingredient": "breast",
+   "qty": 120
+  },
+  {
+   "ingredient": "carrots",
+   "qty": 80
+  },
+  {
+   "ingredient": "spring",
+   "qty": 0.25
+  },
+  {
+   "ingredient": "loaf",
+   "qty": 1
+  }
+ ],
+ "cupboard": [
+  "noodles",
+  "stock"
+ ],
+ "cupboard_qty": {
+  "noodles": 40,
+  "stock": 5
+ },
+ "method": [
+  "Simmer the chicken in 500 ml hot stock for 12 minutes until cooked through, then shred it.",
+  "Add the sliced carrot and noodles and cook for 4 minutes. Finish with the spring onion and serve with bread."
+ ],
+ "source": "table-plan"
+}

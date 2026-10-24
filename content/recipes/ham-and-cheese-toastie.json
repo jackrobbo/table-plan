@@ -1,0 +1,31 @@
+{
+ "slug": "ham-and-cheese-toastie",
+ "name": "Ham and Cheese Toastie",
+ "course": "breakfast",
+ "emoji": "🧀",
+ "serves": 1,
+ "status": "live",
+ "ingredients": [
+  {
+   "ingredient": "loaf",
+   "qty": 2
+  },
+  {
+   "ingredient": "ham",
+   "qty": 60
+  }
+ ],
+ "cupboard": [
+  "cheddar",
+  "butter"
+ ],
+ "cupboard_qty": {
+  "cheddar": 30,
+  "butter": 8
+ },
+ "method": [
+  "Butter the outsides of the bread and fill with ham and grated cheese.",
+  "Toast in a pan for 2–3 minutes each side until golden and melted."
+ ],
+ "source": "table-plan"
+}

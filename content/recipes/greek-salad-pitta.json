@@ -1,0 +1,37 @@
+{
+ "slug": "greek-salad-pitta",
+ "name": "Greek Salad Pitta",
+ "course": "lunch",
+ "emoji": "🥙",
+ "serves": 1,
+ "status": "live",
+ "ingredients": [
+  {
+   "ingredient": "pittas",
+   "qty": 2
+  },
+  {
+   "ingredient": "feta",
+   "qty": 40
+  },
+  {
+   "ingredient": "cuc",
+   "qty": 0.25
+  },
+  {
+   "ingredient": "plum",
+   "qty": 60
+  },
+  {
+   "ingredient": "houm",
+   "qty": 40
+  }
+ ],
+ "cupboard": [],
+ "cupboard_qty": {},
+ "method": [
+  "Toast the pittas and spread the inside with houmous.",
+  "Stuff with chopped cucumber and tomatoes and crumble the feta over."
+ ],
+ "source": "table-plan"
+}

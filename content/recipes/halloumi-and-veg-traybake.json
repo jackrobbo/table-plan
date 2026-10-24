@@ -1,0 +1,42 @@
+{
+ "slug": "halloumi-and-veg-traybake",
+ "name": "Halloumi and Veg Traybake",
+ "course": "dinner",
+ "emoji": "🧀",
+ "serves": 2,
+ "status": "live",
+ "ingredients": [
+  {
+   "ingredient": "halloumi",
+   "qty": 200
+  },
+  {
+   "ingredient": "courgette",
+   "qty": 300
+  },
+  {
+   "ingredient": "mixpep",
+   "qty": 2
+  },
+  {
+   "ingredient": "onions",
+   "qty": 2
+  }
+ ],
+ "cupboard": [
+  "rice",
+  "oil",
+  "herbs"
+ ],
+ "cupboard_qty": {
+  "rice": 140,
+  "oil": 15,
+  "herbs": 2
+ },
+ "method": [
+  "Heat the oven to 200°C. Toss the chunky-chopped courgette, peppers and onions in the oil and herbs and roast for 20 minutes.",
+  "Add the halloumi cubes and roast for 12–15 minutes until golden.",
+  "Serve over the cooked rice."
+ ],
+ "source": "table-plan"
+}

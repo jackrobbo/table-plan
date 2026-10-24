@@ -1,0 +1,39 @@
+{
+ "slug": "spicy-bean-and-rice-bowl",
+ "name": "Spicy Bean and Rice Bowl",
+ "course": "lunch",
+ "emoji": "🍚",
+ "serves": 1,
+ "status": "live",
+ "ingredients": [
+  {
+   "ingredient": "kidney",
+   "qty": 120
+  },
+  {
+   "ingredient": "pepper",
+   "qty": 0.5
+  }
+ ],
+ "cupboard": [
+  "rice",
+  "sweetcorn",
+  "cheddar",
+  "oil",
+  "paprika",
+  "cumin"
+ ],
+ "cupboard_qty": {
+  "rice": 70,
+  "sweetcorn": 60,
+  "cheddar": 25,
+  "oil": 5,
+  "paprika": 2,
+  "cumin": 2
+ },
+ "method": [
+  "Cook the rice. Fry the chopped pepper in the oil with the paprika and cumin.",
+  "Add the beans and sweetcorn and heat through. Spoon over the rice and top with cheese."
+ ],
+ "source": "table-plan"
+}

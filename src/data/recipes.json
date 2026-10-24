@@ -1,5 +1,72 @@
 [
  {
+  "id": "apple-and-peanut-butter",
+  "c": "snack",
+  "e": "🍎",
+  "n": "Apple and Peanut Butter",
+  "p": 6,
+  "k": 195,
+  "serves": 1,
+  "cost": 53,
+  "b": "medium",
+  "macros_only": false,
+  "fresh": [
+   [
+    "apple",
+    1
+   ],
+   [
+    "pbutter",
+    20
+   ]
+  ],
+  "cup": [],
+  "m": [
+   "Slice the apple and dip into the peanut butter."
+  ],
+  "allergens": [
+   "peanuts"
+  ]
+ },
+ {
+  "id": "avocado-and-egg-on-toast",
+  "c": "breakfast",
+  "e": "🥑",
+  "n": "Avocado and Egg on Toast",
+  "p": 22,
+  "k": 491,
+  "serves": 1,
+  "cost": 112,
+  "b": "medium",
+  "macros_only": false,
+  "fresh": [
+   [
+    "loaf",
+    2
+   ],
+   [
+    "avocado",
+    0.5
+   ],
+   [
+    "eggs",
+    2
+   ]
+  ],
+  "cup": [
+   "oil"
+  ],
+  "m": [
+   "Fry the eggs in the oil until the whites are set.",
+   "Mash the avocado onto the toast and top with the eggs."
+  ],
+  "allergens": [
+   "eggs",
+   "gluten",
+   "soya"
+  ]
+ },
+ {
   "id": "babybel-2",
   "c": "snack",
   "e": "🧀",
@@ -8,7 +75,7 @@
   "k": 118,
   "serves": 1,
   "cost": 82,
-  "b": "low",
+  "b": "medium",
   "macros_only": false,
   "fresh": [
    [
@@ -23,6 +90,47 @@
   ]
  },
  {
+  "id": "bacon-and-broccoli-mac-and-cheese",
+  "c": "dinner",
+  "e": "🧀",
+  "n": "Bacon and Broccoli Mac and Cheese",
+  "p": 65,
+  "k": 896,
+  "serves": 2,
+  "cost": 234,
+  "b": "medium",
+  "macros_only": false,
+  "fresh": [
+   [
+    "bacon",
+    6
+   ],
+   [
+    "brocc",
+    200
+   ],
+   [
+    "milk",
+    400
+   ]
+  ],
+  "cup": [
+   "fusilli",
+   "cheddar",
+   "cornflour",
+   "oil"
+  ],
+  "m": [
+   "Boil the pasta, adding the broccoli for the last 3 minutes. Grill or fry the bacon until crisp and chop.",
+   "Whisk the cornflour into the cold milk, heat gently while stirring until thick, then melt in the cheese.",
+   "Combine the sauce, pasta, broccoli and bacon."
+  ],
+  "allergens": [
+   "gluten",
+   "milk"
+  ]
+ },
+ {
   "id": "bacon-and-egg-breakfast-wrap",
   "c": "breakfast",
   "e": "🌯",
@@ -31,7 +139,7 @@
   "k": 452,
   "serves": 1,
   "cost": 209,
-  "b": "medium",
+  "b": "high",
   "macros_only": false,
   "fresh": [
    [
@@ -55,6 +163,366 @@
   "allergens": [
    "eggs",
    "gluten",
+   "soya"
+  ]
+ },
+ {
+  "id": "bacon-butty",
+  "c": "breakfast",
+  "e": "🥓",
+  "n": "Bacon Butty",
+  "p": 46,
+  "k": 517,
+  "serves": 1,
+  "cost": 181,
+  "b": "high",
+  "macros_only": false,
+  "fresh": [
+   [
+    "bacon",
+    4
+   ],
+   [
+    "loaf",
+    2
+   ]
+  ],
+  "cup": [
+   "butter"
+  ],
+  "m": [
+   "Grill the bacon for 4–5 minutes each side until cooked through and crisp at the edges.",
+   "Butter the bread and layer in the bacon."
+  ],
+  "allergens": [
+   "gluten",
+   "milk",
+   "soya"
+  ]
+ },
+ {
+  "id": "banana-peanut-shake",
+  "c": "snack",
+  "e": "🥤",
+  "n": "Banana Peanut Shake",
+  "p": 18,
+  "k": 397,
+  "serves": 1,
+  "cost": 46,
+  "b": "low",
+  "macros_only": false,
+  "fresh": [
+   [
+    "milk",
+    300
+   ],
+   [
+    "banana",
+    1
+   ],
+   [
+    "oats",
+    20
+   ],
+   [
+    "pbutter",
+    15
+   ]
+  ],
+  "cup": [],
+  "m": [
+   "Blend everything until smooth."
+  ],
+  "allergens": [
+   "gluten",
+   "milk",
+   "peanuts"
+  ]
+ },
+ {
+  "id": "banana-porridge",
+  "c": "breakfast",
+  "e": "🥣",
+  "n": "Banana Porridge",
+  "p": 16,
+  "k": 418,
+  "serves": 1,
+  "cost": 45,
+  "b": "low",
+  "macros_only": false,
+  "fresh": [
+   [
+    "oats",
+    50
+   ],
+   [
+    "milk",
+    250
+   ],
+   [
+    "banana",
+    1
+   ]
+  ],
+  "cup": [
+   "honey"
+  ],
+  "m": [
+   "Simmer the oats in the milk for 4–5 minutes, stirring, until thick and creamy.",
+   "Top with sliced banana and a drizzle of honey."
+  ],
+  "allergens": [
+   "gluten",
+   "milk"
+  ]
+ },
+ {
+  "id": "bbq-chicken-and-sweetcorn-rice",
+  "c": "dinner",
+  "e": "🍗",
+  "n": "BBQ Chicken and Sweetcorn Rice",
+  "p": 44,
+  "k": 604,
+  "serves": 2,
+  "cost": 185,
+  "b": "low",
+  "macros_only": false,
+  "fresh": [
+   [
+    "breast",
+    300
+   ],
+   [
+    "bbq",
+    60
+   ],
+   [
+    "pepper",
+    1
+   ],
+   [
+    "onions",
+    0.5
+   ]
+  ],
+  "cup": [
+   "rice",
+   "sweetcorn",
+   "oil"
+  ],
+  "m": [
+   "Cook the rice. Fry the diced chicken, chopped pepper and onion in the oil for 8 minutes until the chicken is cooked through.",
+   "Stir in the barbecue sauce and sweetcorn, heat until bubbling and serve over the rice."
+  ],
+  "allergens": [
+   "gluten"
+  ]
+ },
+ {
+  "id": "bbq-chicken-wrap",
+  "c": "lunch",
+  "e": "🍗",
+  "n": "BBQ Chicken Wrap",
+  "p": 33,
+  "k": 426,
+  "serves": 1,
+  "cost": 121,
+  "b": "medium",
+  "macros_only": false,
+  "fresh": [
+   [
+    "breast",
+    100
+   ],
+   [
+    "wraps",
+    1
+   ],
+   [
+    "iceberg",
+    0.15
+   ],
+   [
+    "bbq",
+    20
+   ]
+  ],
+  "cup": [
+   "cheddar",
+   "oil"
+  ],
+  "m": [
+   "Fry the sliced chicken in the oil for 6–8 minutes until cooked through, then toss in the barbecue sauce.",
+   "Pile into the wrap with shredded lettuce and cheese."
+  ],
+  "allergens": [
+   "gluten",
+   "milk"
+  ]
+ },
+ {
+  "id": "bean-and-cheese-quesadilla",
+  "c": "lunch",
+  "e": "🫓",
+  "n": "Bean and Cheese Quesadilla",
+  "p": 27,
+  "k": 672,
+  "serves": 1,
+  "cost": 109,
+  "b": "low",
+  "macros_only": false,
+  "fresh": [
+   [
+    "wraps",
+    2
+   ],
+   [
+    "kidney",
+    100
+   ],
+   [
+    "pepper",
+    0.5
+   ]
+  ],
+  "cup": [
+   "cheddar",
+   "sweetcorn",
+   "oil"
+  ],
+  "m": [
+   "Fill one wrap with the beans, chopped pepper, sweetcorn and cheese and top with the second wrap.",
+   "Toast in the oiled pan for 2 minutes each side and cut into wedges."
+  ],
+  "allergens": [
+   "gluten",
+   "milk"
+  ]
+ },
+ {
+  "id": "bean-and-vegetable-chilli",
+  "c": "dinner",
+  "e": "🌶️",
+  "n": "Bean and Vegetable Chilli",
+  "p": 31,
+  "k": 731,
+  "serves": 2,
+  "cost": 156,
+  "b": "low",
+  "macros_only": false,
+  "fresh": [
+   [
+    "kidney",
+    400
+   ],
+   [
+    "chickpeas",
+    240
+   ],
+   [
+    "ctoms",
+    400
+   ],
+   [
+    "onions",
+    1
+   ],
+   [
+    "mixpep",
+    2
+   ]
+  ],
+  "cup": [
+   "rice",
+   "cheddar",
+   "puree",
+   "oil",
+   "paprika",
+   "cumin"
+  ],
+  "m": [
+   "Soften the chopped onion and peppers in the oil for 6 minutes.",
+   "Add the paprika, cumin, purée, tomatoes, beans and chickpeas and simmer for 25 minutes.",
+   "Serve on the cooked rice topped with grated cheese."
+  ],
+  "allergens": [
+   "milk"
+  ]
+ },
+ {
+  "id": "beans-and-cheese-on-toast",
+  "c": "breakfast",
+  "e": "🍞",
+  "n": "Beans and Cheese on Toast",
+  "p": 24,
+  "k": 528,
+  "serves": 1,
+  "cost": 48,
+  "b": "low",
+  "macros_only": false,
+  "fresh": [
+   [
+    "loaf",
+    2
+   ],
+   [
+    "beans",
+    200
+   ]
+  ],
+  "cup": [
+   "cheddar"
+  ],
+  "m": [
+   "Warm the beans in a pan and toast the bread.",
+   "Pile the beans onto the toast and grate the cheese over the top."
+  ],
+  "allergens": [
+   "gluten",
+   "milk",
+   "soya"
+  ]
+ },
+ {
+  "id": "beef-and-broccoli-noodles",
+  "c": "dinner",
+  "e": "🥩",
+  "n": "Beef and Broccoli Noodles",
+  "p": 53,
+  "k": 606,
+  "serves": 2,
+  "cost": 369,
+  "b": "high",
+  "macros_only": false,
+  "fresh": [
+   [
+    "sizzle",
+    320
+   ],
+   [
+    "brocc",
+    250
+   ],
+   [
+    "carrots",
+    100
+   ]
+  ],
+  "cup": [
+   "noodles",
+   "soy",
+   "teriyaki",
+   "garlic",
+   "oil"
+  ],
+  "m": [
+   "Cook the noodles. Stir-fry the beef strips in half the oil on a very high heat for 2 minutes, then set aside.",
+   "Stir-fry the broccoli, carrot and garlic for 4 minutes, return the beef, add the soy and teriyaki sauces and toss through the noodles."
+  ],
+  "allergens": [
+   "eggs",
+   "gluten",
+   "sesame",
    "soya"
   ]
  },
@@ -112,6 +580,44 @@
   ]
  },
  {
+  "id": "berry-overnight-oats",
+  "c": "breakfast",
+  "e": "🫐",
+  "n": "Berry Overnight Oats",
+  "p": 16,
+  "k": 413,
+  "serves": 1,
+  "cost": 107,
+  "b": "low",
+  "macros_only": false,
+  "fresh": [
+   [
+    "oats",
+    50
+   ],
+   [
+    "greek",
+    100
+   ],
+   [
+    "milk",
+    150
+   ]
+  ],
+  "cup": [
+   "frozenfruit",
+   "honey"
+  ],
+  "m": [
+   "Stir the oats, yogurt and milk together in a jar.",
+   "Top with the frozen fruit and honey, cover and chill overnight. The fruit thaws into a sauce."
+  ],
+  "allergens": [
+   "gluten",
+   "milk"
+  ]
+ },
+ {
   "id": "boiled-eggs-and-soldiers",
   "c": "breakfast",
   "e": "🥚",
@@ -147,6 +653,297 @@
   ]
  },
  {
+  "id": "boiled-eggs",
+  "c": "snack",
+  "e": "🥚",
+  "n": "Boiled Eggs",
+  "p": 13,
+  "k": 131,
+  "serves": 1,
+  "cost": 60,
+  "b": "medium",
+  "macros_only": false,
+  "fresh": [
+   [
+    "eggs",
+    2
+   ]
+  ],
+  "cup": [],
+  "m": [
+   "Boil for 8–9 minutes until the yolks are firm, then cool under cold water and peel."
+  ],
+  "allergens": [
+   "eggs"
+  ]
+ },
+ {
+  "id": "cheese-and-bean-jacket-potato",
+  "c": "lunch",
+  "e": "🥔",
+  "n": "Cheese and Bean Jacket Potato",
+  "p": 24,
+  "k": 535,
+  "serves": 1,
+  "cost": 59,
+  "b": "low",
+  "macros_only": false,
+  "fresh": [
+   [
+    "bakepot",
+    1
+   ],
+   [
+    "beans",
+    200
+   ]
+  ],
+  "cup": [
+   "cheddar"
+  ],
+  "m": [
+   "Bake the potato at 200°C for about an hour, or microwave for 8–10 minutes then crisp in the oven.",
+   "Warm the beans, spoon over the split potato and top with grated cheese."
+  ],
+  "allergens": [
+   "milk"
+  ]
+ },
+ {
+  "id": "cheese-and-crackers",
+  "c": "snack",
+  "e": "🧀",
+  "n": "Cheese and Crackers",
+  "p": 10,
+  "k": 236,
+  "serves": 1,
+  "cost": 20,
+  "b": "low",
+  "macros_only": false,
+  "fresh": [
+   [
+    "crackers",
+    25
+   ]
+  ],
+  "cup": [
+   "cheddar"
+  ],
+  "m": [
+   "Slice the cheese and serve on the crackers."
+  ],
+  "allergens": [
+   "gluten",
+   "milk"
+  ]
+ },
+ {
+  "id": "cheese-and-spinach-omelette",
+  "c": "breakfast",
+  "e": "🍳",
+  "n": "Cheese and Spinach Omelette",
+  "p": 32,
+  "k": 493,
+  "serves": 1,
+  "cost": 139,
+  "b": "medium",
+  "macros_only": false,
+  "fresh": [
+   [
+    "eggs",
+    3
+   ],
+   [
+    "spinach",
+    40
+   ],
+   [
+    "loaf",
+    1
+   ]
+  ],
+  "cup": [
+   "cheddar",
+   "oil"
+  ],
+  "m": [
+   "Beat the eggs. Wilt the spinach in a hot, oiled non-stick pan, then pour in the eggs.",
+   "Cook until almost set, scatter over the grated cheese, fold and serve with toast."
+  ],
+  "allergens": [
+   "eggs",
+   "gluten",
+   "milk",
+   "soya"
+  ]
+ },
+ {
+  "id": "cheesy-tuna-pasta-bake",
+  "c": "dinner",
+  "e": "🧀",
+  "n": "Cheesy Tuna Pasta Bake",
+  "p": 51,
+  "k": 673,
+  "serves": 2,
+  "cost": 128,
+  "b": "low",
+  "macros_only": false,
+  "fresh": [
+   [
+    "onions",
+    0.5
+   ],
+   [
+    "passata",
+    300
+   ]
+  ],
+  "cup": [
+   "fusilli",
+   "tuna",
+   "sweetcorn",
+   "cheddar",
+   "oil"
+  ],
+  "m": [
+   "Boil the pasta until just tender and heat the oven to 200°C.",
+   "Soften the chopped onion in the oil, then stir in the passata, tuna, sweetcorn and pasta.",
+   "Tip into a dish, cover with grated cheese and bake for 20 minutes until bubbling and golden."
+  ],
+  "allergens": [
+   "fish",
+   "gluten",
+   "milk"
+  ]
+ },
+ {
+  "id": "chicken-and-avocado-sandwich",
+  "c": "lunch",
+  "e": "🥑",
+  "n": "Chicken and Avocado Sandwich",
+  "p": 28,
+  "k": 428,
+  "serves": 1,
+  "cost": 214,
+  "b": "high",
+  "macros_only": false,
+  "fresh": [
+   [
+    "loaf",
+    2
+   ],
+   [
+    "roast",
+    70
+   ],
+   [
+    "avocado",
+    0.5
+   ],
+   [
+    "salad",
+    20
+   ]
+  ],
+  "cup": [],
+  "m": [
+   "Mash the avocado onto the bread.",
+   "Layer on the chicken and salad and close the sandwich."
+  ],
+  "allergens": [
+   "gluten",
+   "soya"
+  ]
+ },
+ {
+  "id": "chicken-and-bean-quesadillas",
+  "c": "dinner",
+  "e": "🫓",
+  "n": "Chicken and Bean Quesadillas",
+  "p": 62,
+  "k": 800,
+  "serves": 2,
+  "cost": 215,
+  "b": "medium",
+  "macros_only": false,
+  "fresh": [
+   [
+    "wraps",
+    4
+   ],
+   [
+    "breast",
+    300
+   ],
+   [
+    "kidney",
+    200
+   ],
+   [
+    "pepper",
+    1
+   ]
+  ],
+  "cup": [
+   "cheddar",
+   "fajita",
+   "oil"
+  ],
+  "m": [
+   "Fry the diced chicken and chopped pepper with the fajita seasoning for 8 minutes until the chicken is cooked through, then stir in the beans.",
+   "Fill two wraps with the mix and cheese, top with the others and toast in a dry pan for 2–3 minutes each side. Cut into wedges."
+  ],
+  "allergens": [
+   "gluten",
+   "milk",
+   "sulphites"
+  ]
+ },
+ {
+  "id": "chicken-and-egg-fried-rice",
+  "c": "lunch",
+  "e": "🍳",
+  "n": "Chicken and Egg Fried Rice",
+  "p": 41,
+  "k": 584,
+  "serves": 1,
+  "cost": 158,
+  "b": "medium",
+  "macros_only": false,
+  "fresh": [
+   [
+    "breast",
+    80
+   ],
+   [
+    "eggs",
+    2
+   ],
+   [
+    "peas",
+    60
+   ],
+   [
+    "spring",
+    0.25
+   ]
+  ],
+  "cup": [
+   "rice",
+   "soy",
+   "oil"
+  ],
+  "m": [
+   "Cook and cool the rice. Fry the diced chicken in the oil for 6 minutes until cooked through.",
+   "Push to one side, scramble the eggs, then add the rice, peas, soy sauce and spring onion and stir-fry until hot."
+  ],
+  "allergens": [
+   "eggs",
+   "gluten",
+   "soya"
+  ]
+ },
+ {
   "id": "chicken-and-hummus-wrap",
   "c": "lunch",
   "e": "🌯",
@@ -155,7 +952,7 @@
   "k": 359,
   "serves": 1,
   "cost": 230,
-  "b": "medium",
+  "b": "high",
   "macros_only": false,
   "fresh": [
    [
@@ -187,6 +984,87 @@
   "allergens": [
    "gluten",
    "sesame"
+  ]
+ },
+ {
+  "id": "chicken-burrito-bowl",
+  "c": "lunch",
+  "e": "🥗",
+  "n": "Chicken Burrito Bowl",
+  "p": 46,
+  "k": 571,
+  "serves": 1,
+  "cost": 154,
+  "b": "medium",
+  "macros_only": false,
+  "fresh": [
+   [
+    "breast",
+    130
+   ],
+   [
+    "kidney",
+    80
+   ],
+   [
+    "plum",
+    50
+   ]
+  ],
+  "cup": [
+   "rice",
+   "sweetcorn",
+   "fajita",
+   "cheddar",
+   "oil"
+  ],
+  "m": [
+   "Slice the chicken and fry in the oil with the fajita seasoning for 6–8 minutes until cooked through.",
+   "Serve over cooked rice with the beans, sweetcorn, chopped tomatoes and cheese."
+  ],
+  "allergens": [
+   "milk",
+   "sulphites"
+  ]
+ },
+ {
+  "id": "chicken-caesar-wrap",
+  "c": "lunch",
+  "e": "🌯",
+  "n": "Chicken Caesar Wrap",
+  "p": 31,
+  "k": 375,
+  "serves": 1,
+  "cost": 248,
+  "b": "high",
+  "macros_only": false,
+  "fresh": [
+   [
+    "wraps",
+    1
+   ],
+   [
+    "roast",
+    80
+   ],
+   [
+    "salad",
+    40
+   ]
+  ],
+  "cup": [
+   "parmesan",
+   "mayo"
+  ],
+  "m": [
+   "Stir the parmesan into the mayo for a quick dressing.",
+   "Fill the wrap with the chicken, salad and dressing and roll up."
+  ],
+  "allergens": [
+   "eggs",
+   "gluten",
+   "milk",
+   "mustard"
   ]
  },
  {
@@ -242,7 +1120,7 @@
   "k": 512,
   "serves": 2,
   "cost": 198,
-  "b": "medium",
+  "b": "low",
   "macros_only": false,
   "fresh": [
    [
@@ -293,7 +1171,7 @@
   "k": 462,
   "serves": 1,
   "cost": 204,
-  "b": "medium",
+  "b": "high",
   "macros_only": false,
   "fresh": [
    [
@@ -324,6 +1202,281 @@
    "mustard",
    "soya"
   ]
+ },
+ {
+  "id": "chicken-noodle-soup",
+  "c": "lunch",
+  "e": "🍜",
+  "n": "Chicken Noodle Soup",
+  "p": 38,
+  "k": 421,
+  "serves": 1,
+  "cost": 135,
+  "b": "medium",
+  "macros_only": false,
+  "fresh": [
+   [
+    "breast",
+    120
+   ],
+   [
+    "carrots",
+    80
+   ],
+   [
+    "spring",
+    0.25
+   ],
+   [
+    "loaf",
+    1
+   ]
+  ],
+  "cup": [
+   "noodles",
+   "stock"
+  ],
+  "m": [
+   "Simmer the chicken in 500 ml hot stock for 12 minutes until cooked through, then shred it.",
+   "Add the sliced carrot and noodles and cook for 4 minutes. Finish with the spring onion and serve with bread."
+  ],
+  "allergens": [
+   "eggs",
+   "gluten",
+   "soya"
+  ]
+ },
+ {
+  "id": "chicken-pesto-pasta-salad",
+  "c": "lunch",
+  "e": "🍝",
+  "n": "Chicken Pesto Pasta Salad",
+  "p": 34,
+  "k": 506,
+  "serves": 1,
+  "cost": 140,
+  "b": "medium",
+  "macros_only": false,
+  "fresh": [
+   [
+    "breast",
+    100
+   ],
+   [
+    "pesto",
+    30
+   ],
+   [
+    "plum",
+    80
+   ],
+   [
+    "spinach",
+    30
+   ]
+  ],
+  "cup": [
+   "fusilli",
+   "oil"
+  ],
+  "m": [
+   "Cook the pasta, drain and cool under cold water.",
+   "Fry the chicken in the oil for 6–8 minutes until cooked through, slice, and toss with the pasta, pesto, halved tomatoes and spinach."
+  ],
+  "allergens": [
+   "eggs",
+   "gluten",
+   "milk",
+   "nuts"
+  ]
+ },
+ {
+  "id": "chicken-thigh-special-fried-rice",
+  "c": "dinner",
+  "e": "🍳",
+  "n": "Chicken Thigh Special Fried Rice",
+  "p": 55,
+  "k": 673,
+  "serves": 2,
+  "cost": 233,
+  "b": "medium",
+  "macros_only": false,
+  "fresh": [
+   [
+    "thigh",
+    350
+   ],
+   [
+    "eggs",
+    3
+   ],
+   [
+    "peas",
+    100
+   ],
+   [
+    "spring",
+    1
+   ],
+   [
+    "carrots",
+    100
+   ]
+  ],
+  "cup": [
+   "rice",
+   "soy",
+   "oil"
+  ],
+  "m": [
+   "Cook and cool the rice. Fry the diced chicken in half the oil for 8 minutes until cooked through, with the grated carrot.",
+   "Push aside, scramble the eggs in the rest of the oil, then add the rice, peas and soy sauce and stir-fry until piping hot. Top with spring onion."
+  ],
+  "allergens": [
+   "eggs",
+   "gluten",
+   "soya"
+  ]
+ },
+ {
+  "id": "chicken-tikka-curry",
+  "c": "dinner",
+  "e": "🍛",
+  "n": "Chicken Tikka Curry",
+  "p": 45,
+  "k": 690,
+  "serves": 2,
+  "cost": 197,
+  "b": "low",
+  "macros_only": false,
+  "fresh": [
+   [
+    "breast",
+    300
+   ],
+   [
+    "onions",
+    1
+   ],
+   [
+    "tikka",
+    60
+   ],
+   [
+    "coconut",
+    200
+   ],
+   [
+    "passata",
+    200
+   ]
+  ],
+  "cup": [
+   "rice",
+   "oil"
+  ],
+  "m": [
+   "Fry the sliced onion in the oil for 5 minutes, add the diced chicken and cook until sealed.",
+   "Stir in the tikka paste, passata and coconut milk and simmer for 15 minutes until the chicken is cooked through.",
+   "Serve over the cooked rice."
+  ],
+  "allergens": []
+ },
+ {
+  "id": "chickpea-and-spinach-curry",
+  "c": "dinner",
+  "e": "🍛",
+  "n": "Chickpea and Spinach Curry",
+  "p": 28,
+  "k": 848,
+  "serves": 2,
+  "cost": 160,
+  "b": "low",
+  "macros_only": false,
+  "fresh": [
+   [
+    "chickpeas",
+    480
+   ],
+   [
+    "spinach",
+    100
+   ],
+   [
+    "tikka",
+    60
+   ],
+   [
+    "coconut",
+    200
+   ],
+   [
+    "passata",
+    200
+   ],
+   [
+    "onions",
+    1
+   ]
+  ],
+  "cup": [
+   "rice",
+   "oil"
+  ],
+  "m": [
+   "Fry the sliced onion in the oil for 5 minutes, then stir in the tikka paste.",
+   "Add the drained chickpeas, passata and coconut milk and simmer for 12 minutes.",
+   "Stir through the spinach until wilted and serve over the cooked rice."
+  ],
+  "allergens": []
+ },
+ {
+  "id": "chilli-con-carne",
+  "c": "dinner",
+  "e": "🌶️",
+  "n": "Chilli Con Carne",
+  "p": 47,
+  "k": 667,
+  "serves": 2,
+  "cost": 281,
+  "b": "high",
+  "macros_only": false,
+  "fresh": [
+   [
+    "mince",
+    300
+   ],
+   [
+    "kidney",
+    400
+   ],
+   [
+    "ctoms",
+    400
+   ],
+   [
+    "onions",
+    1
+   ],
+   [
+    "pepper",
+    1
+   ]
+  ],
+  "cup": [
+   "rice",
+   "puree",
+   "oil",
+   "paprika",
+   "cumin",
+   "chilliflakes"
+  ],
+  "m": [
+   "Brown the mince in the oil with the chopped onion and pepper until no pink remains.",
+   "Stir in the paprika, cumin, chilli flakes and purée, then the tomatoes and beans. Simmer for 20 minutes until thick.",
+   "Serve over the cooked rice."
+  ],
+  "allergens": []
  },
  {
   "id": "chinese-5-spice-stir-fry",
@@ -361,6 +1514,109 @@
   ]
  },
  {
+  "id": "cod-chips-and-peas",
+  "c": "dinner",
+  "e": "🐟",
+  "n": "Cod, Chips and Peas",
+  "p": 34,
+  "k": 656,
+  "serves": 2,
+  "cost": 401,
+  "b": "high",
+  "macros_only": false,
+  "fresh": [
+   [
+    "cod",
+    220
+   ],
+   [
+    "chips",
+    600
+   ],
+   [
+    "peas",
+    200
+   ],
+   [
+    "lemon",
+    0.5
+   ]
+  ],
+  "cup": [
+   "oil"
+  ],
+  "m": [
+   "Bake the chips following the pack instructions.",
+   "Brush the cod with the oil and bake alongside for 15–18 minutes until it flakes.",
+   "Boil the peas for 3 minutes and serve with a squeeze of lemon."
+  ],
+  "allergens": [
+   "fish"
+  ]
+ },
+ {
+  "id": "cottage-cheese-and-blueberries",
+  "c": "snack",
+  "e": "🫐",
+  "n": "Cottage Cheese and Blueberries",
+  "p": 15,
+  "k": 131,
+  "serves": 1,
+  "cost": 128,
+  "b": "high",
+  "macros_only": false,
+  "fresh": [
+   [
+    "cottage",
+    120
+   ],
+   [
+    "blueb",
+    60
+   ]
+  ],
+  "cup": [],
+  "m": [
+   "Spoon the cottage cheese into a bowl and top with the blueberries."
+  ],
+  "allergens": [
+   "milk"
+  ]
+ },
+ {
+  "id": "cottage-cheese-rice-cakes",
+  "c": "snack",
+  "e": "🍘",
+  "n": "Cottage Cheese Rice Cakes",
+  "p": 12,
+  "k": 157,
+  "serves": 1,
+  "cost": 83,
+  "b": "medium",
+  "macros_only": false,
+  "fresh": [
+   [
+    "ricecakes",
+    20
+   ],
+   [
+    "cottage",
+    80
+   ],
+   [
+    "cuc",
+    0.2
+   ]
+  ],
+  "cup": [],
+  "m": [
+   "Top the rice cakes with cottage cheese and sliced cucumber."
+  ],
+  "allergens": [
+   "milk"
+  ]
+ },
+ {
   "id": "creamy-chicken-pasta",
   "c": "dinner",
   "e": "🍝",
@@ -369,7 +1625,7 @@
   "k": 564,
   "serves": 2,
   "cost": 177,
-  "b": "medium",
+  "b": "low",
   "macros_only": false,
   "fresh": [
    [
@@ -401,6 +1657,140 @@
   ]
  },
  {
+  "id": "crispy-beef-noodle-stir-fry",
+  "c": "dinner",
+  "e": "🍜",
+  "n": "Crispy Beef Noodle Stir-Fry",
+  "p": 40,
+  "k": 544,
+  "serves": 2,
+  "cost": 208,
+  "b": "medium",
+  "macros_only": false,
+  "fresh": [
+   [
+    "mince",
+    250
+   ],
+   [
+    "mixveg",
+    300
+   ]
+  ],
+  "cup": [
+   "noodles",
+   "soy",
+   "teriyaki",
+   "garlic",
+   "oil"
+  ],
+  "m": [
+   "Cook the noodles. Fry the mince in the oil on a high heat, breaking it up, until browned and crisp at the edges.",
+   "Add the garlic and frozen veg, stir-fry for 4 minutes, then toss in the noodles with the soy and teriyaki sauces."
+  ],
+  "allergens": [
+   "eggs",
+   "gluten",
+   "sesame",
+   "soya"
+  ]
+ },
+ {
+  "id": "egg-mayo-sandwich",
+  "c": "lunch",
+  "e": "🥪",
+  "n": "Egg Mayo Sandwich",
+  "p": 21,
+  "k": 431,
+  "serves": 1,
+  "cost": 94,
+  "b": "low",
+  "macros_only": false,
+  "fresh": [
+   [
+    "loaf",
+    2
+   ],
+   [
+    "eggs",
+    2
+   ],
+   [
+    "salad",
+    20
+   ]
+  ],
+  "cup": [
+   "mayo"
+  ],
+  "m": [
+   "Boil the eggs for 9 minutes, cool and peel, then mash with the mayo.",
+   "Sandwich with the salad leaves."
+  ],
+  "allergens": [
+   "eggs",
+   "gluten",
+   "mustard",
+   "soya"
+  ]
+ },
+ {
+  "id": "full-english-breakfast",
+  "c": "breakfast",
+  "e": "🍳",
+  "n": "Full English Breakfast",
+  "p": 70,
+  "k": 899,
+  "serves": 1,
+  "cost": 301,
+  "b": "high",
+  "macros_only": false,
+  "fresh": [
+   [
+    "bacon",
+    3
+   ],
+   [
+    "sausages",
+    2
+   ],
+   [
+    "eggs",
+    2
+   ],
+   [
+    "beans",
+    150
+   ],
+   [
+    "mushrooms",
+    80
+   ],
+   [
+    "plum",
+    80
+   ],
+   [
+    "loaf",
+    1
+   ]
+  ],
+  "cup": [
+   "oil"
+  ],
+  "m": [
+   "Grill the sausages (15–20 minutes) and bacon (4–5 minutes each side) until cooked through.",
+   "Fry the mushrooms and tomatoes in half the oil, then the eggs in the rest. Warm the beans.",
+   "Serve everything with toast."
+  ],
+  "allergens": [
+   "eggs",
+   "gluten",
+   "soya",
+   "sulphites"
+  ]
+ },
+ {
   "id": "greek-chicken-gyros",
   "c": "dinner",
   "e": "🥙",
@@ -409,7 +1799,7 @@
   "k": 578,
   "serves": 2,
   "cost": 253,
-  "b": "high",
+  "b": "medium",
   "macros_only": false,
   "fresh": [
    [
@@ -457,6 +1847,77 @@
   ]
  },
  {
+  "id": "greek-salad-pitta",
+  "c": "lunch",
+  "e": "🥙",
+  "n": "Greek Salad Pitta",
+  "p": 23,
+  "k": 554,
+  "serves": 1,
+  "cost": 132,
+  "b": "medium",
+  "macros_only": false,
+  "fresh": [
+   [
+    "pittas",
+    2
+   ],
+   [
+    "feta",
+    40
+   ],
+   [
+    "cuc",
+    0.25
+   ],
+   [
+    "plum",
+    60
+   ],
+   [
+    "houm",
+    40
+   ]
+  ],
+  "cup": [],
+  "m": [
+   "Toast the pittas and spread the inside with houmous.",
+   "Stuff with chopped cucumber and tomatoes and crumble the feta over."
+  ],
+  "allergens": [
+   "gluten",
+   "milk",
+   "sesame"
+  ]
+ },
+ {
+  "id": "greek-yogurt-and-honey",
+  "c": "snack",
+  "e": "🍯",
+  "n": "Greek Yogurt and Honey",
+  "p": 6,
+  "k": 182,
+  "serves": 1,
+  "cost": 39,
+  "b": "low",
+  "macros_only": false,
+  "fresh": [
+   [
+    "greek",
+    150
+   ]
+  ],
+  "cup": [
+   "honey"
+  ],
+  "m": [
+   "Spoon the yogurt into a bowl and drizzle with honey."
+  ],
+  "allergens": [
+   "milk"
+  ]
+ },
+ {
   "id": "grenade-oreo-bar",
   "c": "snack",
   "e": "🍫",
@@ -465,7 +1926,7 @@
   "k": 233,
   "serves": 1,
   "cost": 250,
-  "b": "medium",
+  "b": "high",
   "macros_only": false,
   "fresh": [
    [
@@ -481,6 +1942,136 @@
    "nuts",
    "peanuts",
    "soya"
+  ]
+ },
+ {
+  "id": "halloumi-and-veg-traybake",
+  "c": "dinner",
+  "e": "🧀",
+  "n": "Halloumi and Veg Traybake",
+  "p": 28,
+  "k": 699,
+  "serves": 2,
+  "cost": 238,
+  "b": "medium",
+  "macros_only": false,
+  "fresh": [
+   [
+    "halloumi",
+    200
+   ],
+   [
+    "courgette",
+    300
+   ],
+   [
+    "mixpep",
+    2
+   ],
+   [
+    "onions",
+    2
+   ]
+  ],
+  "cup": [
+   "rice",
+   "oil",
+   "herbs"
+  ],
+  "m": [
+   "Heat the oven to 200°C. Toss the chunky-chopped courgette, peppers and onions in the oil and herbs and roast for 20 minutes.",
+   "Add the halloumi cubes and roast for 12–15 minutes until golden.",
+   "Serve over the cooked rice."
+  ],
+  "allergens": [
+   "milk"
+  ]
+ },
+ {
+  "id": "halloumi-and-veg-wrap",
+  "c": "lunch",
+  "e": "🌯",
+  "n": "Halloumi and Veg Wrap",
+  "p": 20,
+  "k": 472,
+  "serves": 1,
+  "cost": 135,
+  "b": "medium",
+  "macros_only": false,
+  "fresh": [
+   [
+    "wraps",
+    1
+   ],
+   [
+    "halloumi",
+    60
+   ],
+   [
+    "houm",
+    40
+   ],
+   [
+    "carrots",
+    50
+   ],
+   [
+    "cuc",
+    0.15
+   ],
+   [
+    "spinach",
+    30
+   ]
+  ],
+  "cup": [],
+  "m": [
+   "Fry the halloumi slices in a dry non-stick pan for 1–2 minutes each side until golden.",
+   "Spread the wrap with houmous, add the grated carrot, cucumber, spinach and halloumi, then roll."
+  ],
+  "allergens": [
+   "gluten",
+   "milk",
+   "sesame"
+  ]
+ },
+ {
+  "id": "ham-and-cheese-omelette-wrap",
+  "c": "lunch",
+  "e": "🥚",
+  "n": "Ham and Cheese Omelette Wrap",
+  "p": 32,
+  "k": 482,
+  "serves": 1,
+  "cost": 158,
+  "b": "medium",
+  "macros_only": false,
+  "fresh": [
+   [
+    "eggs",
+    2
+   ],
+   [
+    "wraps",
+    1
+   ],
+   [
+    "ham",
+    40
+   ]
+  ],
+  "cup": [
+   "cheddar",
+   "oil"
+  ],
+  "m": [
+   "Cook the beaten eggs as a thin omelette in the oil.",
+   "Add the ham and cheese, then roll up inside the warm wrap."
+  ],
+  "allergens": [
+   "eggs",
+   "gluten",
+   "milk"
   ]
  },
  {
@@ -522,6 +2113,41 @@
   ]
  },
  {
+  "id": "ham-and-cheese-toastie",
+  "c": "breakfast",
+  "e": "🧀",
+  "n": "Ham and Cheese Toastie",
+  "p": 28,
+  "k": 482,
+  "serves": 1,
+  "cost": 134,
+  "b": "medium",
+  "macros_only": false,
+  "fresh": [
+   [
+    "loaf",
+    2
+   ],
+   [
+    "ham",
+    60
+   ]
+  ],
+  "cup": [
+   "cheddar",
+   "butter"
+  ],
+  "m": [
+   "Butter the outsides of the bread and fill with ham and grated cheese.",
+   "Toast in a pan for 2–3 minutes each side until golden and melted."
+  ],
+  "allergens": [
+   "gluten",
+   "milk",
+   "soya"
+  ]
+ },
+ {
   "id": "honey-and-soy-chicken",
   "c": "dinner",
   "e": "🍯",
@@ -530,7 +2156,7 @@
   "k": 489,
   "serves": 2,
   "cost": 177,
-  "b": "medium",
+  "b": "low",
   "macros_only": false,
   "fresh": [
    [
@@ -557,6 +2183,91 @@
   "allergens": [
    "gluten",
    "soya"
+  ]
+ },
+ {
+  "id": "houmous-and-carrot-sticks",
+  "c": "snack",
+  "e": "🥕",
+  "n": "Houmous and Carrot Sticks",
+  "p": 4,
+  "k": 139,
+  "serves": 1,
+  "cost": 41,
+  "b": "low",
+  "macros_only": false,
+  "fresh": [
+   [
+    "houm",
+    50
+   ],
+   [
+    "carrots",
+    100
+   ]
+  ],
+  "cup": [],
+  "m": [
+   "Cut the carrots into sticks and serve with the houmous."
+  ],
+  "allergens": [
+   "sesame"
+  ]
+ },
+ {
+  "id": "lamb-kofta-pittas",
+  "c": "dinner",
+  "e": "🥙",
+  "n": "Lamb Kofta Pittas",
+  "p": 43,
+  "k": 765,
+  "serves": 2,
+  "cost": 248,
+  "b": "medium",
+  "macros_only": false,
+  "fresh": [
+   [
+    "lambmince",
+    300
+   ],
+   [
+    "onions",
+    0.5
+   ],
+   [
+    "pittas",
+    4
+   ],
+   [
+    "greek",
+    100
+   ],
+   [
+    "cuc",
+    0.5
+   ],
+   [
+    "plum",
+    80
+   ],
+   [
+    "iceberg",
+    0.15
+   ]
+  ],
+  "cup": [
+   "cumin",
+   "garlic",
+   "oil"
+  ],
+  "m": [
+   "Mix the lamb with the grated onion, garlic and cumin and shape into 8 koftas.",
+   "Grill or fry in the oil for 10–12 minutes, turning, until cooked through with no pink.",
+   "Warm the pittas and fill with koftas, shredded lettuce, cucumber, tomato and a spoon of yogurt."
+  ],
+  "allergens": [
+   "gluten",
+   "milk"
   ]
  },
  {
@@ -610,6 +2321,200 @@
   ]
  },
  {
+  "id": "lentil-and-veg-soup",
+  "c": "lunch",
+  "e": "🥣",
+  "n": "Lentil and Veg Soup",
+  "p": 26,
+  "k": 555,
+  "serves": 1,
+  "cost": 81,
+  "b": "low",
+  "macros_only": false,
+  "fresh": [
+   [
+    "lentils",
+    60
+   ],
+   [
+    "carrots",
+    80
+   ],
+   [
+    "onions",
+    0.5
+   ],
+   [
+    "passata",
+    150
+   ],
+   [
+    "loaf",
+    2
+   ]
+  ],
+  "cup": [
+   "stock",
+   "cumin",
+   "oil"
+  ],
+  "m": [
+   "Soften the chopped onion and carrot in the oil for 5 minutes.",
+   "Add the lentils, passata, cumin and 500 ml stock and simmer for 20 minutes until the lentils collapse. Serve with bread."
+  ],
+  "allergens": [
+   "gluten",
+   "soya"
+  ]
+ },
+ {
+  "id": "one-pot-chicken-and-rice",
+  "c": "dinner",
+  "e": "🍗",
+  "n": "One-Pot Chicken and Rice",
+  "p": 51,
+  "k": 650,
+  "serves": 2,
+  "cost": 191,
+  "b": "low",
+  "macros_only": false,
+  "fresh": [
+   [
+    "thigh",
+    400
+   ],
+   [
+    "onions",
+    1
+   ],
+   [
+    "carrots",
+    100
+   ],
+   [
+    "peas",
+    100
+   ]
+  ],
+  "cup": [
+   "rice",
+   "stock",
+   "paprika",
+   "oil"
+  ],
+  "m": [
+   "Brown the chicken thighs in the oil in a lidded pan, then add the chopped onion, grated carrot and paprika.",
+   "Stir in the rice and 450 ml hot stock, cover and cook on a low heat for 20 minutes until the rice is tender and the chicken is cooked through.",
+   "Stir through the peas for the last 3 minutes."
+  ],
+  "allergens": []
+ },
+ {
+  "id": "peanut-butter-banana-toast",
+  "c": "breakfast",
+  "e": "🍌",
+  "n": "Peanut Butter Banana Toast",
+  "p": 17,
+  "k": 506,
+  "serves": 1,
+  "cost": 41,
+  "b": "low",
+  "macros_only": false,
+  "fresh": [
+   [
+    "loaf",
+    2
+   ],
+   [
+    "pbutter",
+    30
+   ],
+   [
+    "banana",
+    1
+   ]
+  ],
+  "cup": [],
+  "m": [
+   "Toast the bread.",
+   "Spread with peanut butter and top with sliced banana."
+  ],
+  "allergens": [
+   "gluten",
+   "peanuts",
+   "soya"
+  ]
+ },
+ {
+  "id": "peanut-butter-porridge",
+  "c": "breakfast",
+  "e": "🥜",
+  "n": "Peanut Butter Porridge",
+  "p": 24,
+  "k": 535,
+  "serves": 1,
+  "cost": 46,
+  "b": "low",
+  "macros_only": false,
+  "fresh": [
+   [
+    "oats",
+    60
+   ],
+   [
+    "milk",
+    300
+   ],
+   [
+    "pbutter",
+    20
+   ],
+   [
+    "banana",
+    0.5
+   ]
+  ],
+  "cup": [],
+  "m": [
+   "Cook the oats in the milk for 4–5 minutes until creamy.",
+   "Swirl through the peanut butter and top with sliced banana."
+  ],
+  "allergens": [
+   "gluten",
+   "milk",
+   "peanuts"
+  ]
+ },
+ {
+  "id": "peanut-butter-rice-cakes",
+  "c": "snack",
+  "e": "🍘",
+  "n": "Peanut Butter Rice Cakes",
+  "p": 9,
+  "k": 270,
+  "serves": 1,
+  "cost": 38,
+  "b": "low",
+  "macros_only": false,
+  "fresh": [
+   [
+    "ricecakes",
+    30
+   ],
+   [
+    "pbutter",
+    25
+   ]
+  ],
+  "cup": [],
+  "m": [
+   "Spread the rice cakes with peanut butter."
+  ],
+  "allergens": [
+   "peanuts"
+  ]
+ },
+ {
   "id": "peri-peri-chicken-thighs",
   "c": "dinner",
   "e": "🍗",
@@ -647,6 +2552,85 @@
    "milk",
    "mustard",
    "sulphites"
+  ]
+ },
+ {
+  "id": "pork-steaks-roast-potatoes-and-veg",
+  "c": "dinner",
+  "e": "🥩",
+  "n": "Pork Steaks, Roast Potatoes and Veg",
+  "p": 40,
+  "k": 673,
+  "serves": 2,
+  "cost": 200,
+  "b": "low",
+  "macros_only": false,
+  "fresh": [
+   [
+    "porkloin",
+    300
+   ],
+   [
+    "potatoes",
+    500
+   ],
+   [
+    "mixveg",
+    300
+   ]
+  ],
+  "cup": [
+   "oil",
+   "herbs"
+  ],
+  "m": [
+   "Heat the oven to 220°C. Toss the chopped potatoes in half the oil and roast for 35–40 minutes.",
+   "Rub the pork steaks with the herbs and the remaining oil, fry for 5–6 minutes each side until cooked through, and rest for 3 minutes.",
+   "Boil the mixed veg for 4 minutes and serve everything together."
+  ],
+  "allergens": []
+ },
+ {
+  "id": "prawn-and-avocado-wrap",
+  "c": "lunch",
+  "e": "🍤",
+  "n": "Prawn and Avocado Wrap",
+  "p": 15,
+  "k": 344,
+  "serves": 1,
+  "cost": 215,
+  "b": "high",
+  "macros_only": false,
+  "fresh": [
+   [
+    "wraps",
+    1
+   ],
+   [
+    "prawns",
+    80
+   ],
+   [
+    "avocado",
+    0.5
+   ],
+   [
+    "salad",
+    30
+   ]
+  ],
+  "cup": [
+   "mayo"
+  ],
+  "m": [
+   "Mash the avocado with the mayo and spread over the wrap.",
+   "Add the prawns and salad leaves and roll up."
+  ],
+  "allergens": [
+   "crustaceans",
+   "eggs",
+   "gluten",
+   "mustard"
   ]
  },
  {
@@ -692,6 +2676,53 @@
   ]
  },
  {
+  "id": "prawn-teriyaki-noodles",
+  "c": "dinner",
+  "e": "🍤",
+  "n": "Prawn Teriyaki Noodles",
+  "p": 37,
+  "k": 608,
+  "serves": 2,
+  "cost": 440,
+  "b": "high",
+  "macros_only": false,
+  "fresh": [
+   [
+    "prawns",
+    300
+   ],
+   [
+    "stirfry",
+    400
+   ],
+   [
+    "eggs",
+    2
+   ]
+  ],
+  "cup": [
+   "noodles",
+   "teriyaki",
+   "soy",
+   "nuts",
+   "oil"
+  ],
+  "m": [
+   "Cook the noodles. Scramble the eggs in the oil, break up and set aside.",
+   "Stir-fry the veg for 4 minutes, add the prawns until hot, then the noodles, teriyaki and soy sauces and eggs.",
+   "Scatter over the chopped nuts."
+  ],
+  "allergens": [
+   "crustaceans",
+   "eggs",
+   "gluten",
+   "nuts",
+   "peanuts",
+   "sesame",
+   "soya"
+  ]
+ },
+ {
   "id": "protein-grab-bag",
   "c": "lunch",
   "e": "🍫",
@@ -729,6 +2760,53 @@
   ]
  },
  {
+  "id": "protein-pancakes",
+  "c": "breakfast",
+  "e": "🥞",
+  "n": "Protein Pancakes",
+  "p": 26,
+  "k": 547,
+  "serves": 1,
+  "cost": 95,
+  "b": "low",
+  "macros_only": false,
+  "fresh": [
+   [
+    "oats",
+    40
+   ],
+   [
+    "banana",
+    1
+   ],
+   [
+    "eggs",
+    2
+   ],
+   [
+    "milk",
+    100
+   ],
+   [
+    "pbutter",
+    15
+   ]
+  ],
+  "cup": [
+   "oil"
+  ],
+  "m": [
+   "Blend the oats, banana, eggs and milk into a thick batter.",
+   "Cook spoonfuls in a lightly oiled pan for 2 minutes each side, then serve with the peanut butter."
+  ],
+  "allergens": [
+   "eggs",
+   "gluten",
+   "milk",
+   "peanuts"
+  ]
+ },
+ {
   "id": "protein-pops",
   "c": "snack",
   "e": "🍿",
@@ -737,7 +2815,7 @@
   "k": 188,
   "serves": 1,
   "cost": 125,
-  "b": "low",
+  "b": "high",
   "macros_only": false,
   "fresh": [
    [
@@ -794,7 +2872,7 @@
   "k": 192,
   "serves": 1,
   "cost": 200,
-  "b": "medium",
+  "b": "high",
   "macros_only": false,
   "fresh": [
    [
@@ -821,7 +2899,7 @@
   "k": 136,
   "serves": 1,
   "cost": 75,
-  "b": "low",
+  "b": "medium",
   "macros_only": false,
   "fresh": [
    [
@@ -833,6 +2911,43 @@
   "m": [],
   "allergens": [
    "milk"
+  ]
+ },
+ {
+  "id": "salmon-rice-and-broccoli",
+  "c": "dinner",
+  "e": "🍣",
+  "n": "Salmon, Rice and Broccoli",
+  "p": 33,
+  "k": 586,
+  "serves": 2,
+  "cost": 321,
+  "b": "high",
+  "macros_only": false,
+  "fresh": [
+   [
+    "salmon",
+    220
+   ],
+   [
+    "brocc",
+    240
+   ]
+  ],
+  "cup": [
+   "rice",
+   "soy",
+   "honey",
+   "oil"
+  ],
+  "m": [
+   "Mix the soy sauce and honey, brush over the salmon and bake at 200°C for 12–15 minutes until it flakes.",
+   "Cook the rice and steam the broccoli, then serve together with the salmon."
+  ],
+  "allergens": [
+   "fish",
+   "gluten",
+   "soya"
   ]
  },
  {
@@ -887,6 +3002,144 @@
   ]
  },
  {
+  "id": "sausage-and-mash",
+  "c": "dinner",
+  "e": "🌭",
+  "n": "Sausage and Mash",
+  "p": 38,
+  "k": 777,
+  "serves": 2,
+  "cost": 135,
+  "b": "low",
+  "macros_only": false,
+  "fresh": [
+   [
+    "sausages",
+    6
+   ],
+   [
+    "potatoes",
+    500
+   ],
+   [
+    "peas",
+    160
+   ],
+   [
+    "onions",
+    1
+   ],
+   [
+    "milk",
+    60
+   ]
+  ],
+  "cup": [
+   "butter",
+   "oil",
+   "stock"
+  ],
+  "m": [
+   "Grill or bake the sausages for 20–25 minutes, turning, until cooked through.",
+   "Boil the peeled potatoes for 15–20 minutes, then mash with the butter and milk.",
+   "Soften the sliced onion in the oil, add a splash of hot stock for a quick gravy, and serve with the peas."
+  ],
+  "allergens": [
+   "gluten",
+   "milk",
+   "sulphites"
+  ]
+ },
+ {
+  "id": "sausage-and-potato-traybake",
+  "c": "dinner",
+  "e": "🌭",
+  "n": "Sausage and Potato Traybake",
+  "p": 35,
+  "k": 789,
+  "serves": 2,
+  "cost": 177,
+  "b": "low",
+  "macros_only": false,
+  "fresh": [
+   [
+    "sausages",
+    6
+   ],
+   [
+    "potatoes",
+    600
+   ],
+   [
+    "carrots",
+    150
+   ],
+   [
+    "onions",
+    2
+   ],
+   [
+    "courgette",
+    200
+   ]
+  ],
+  "cup": [
+   "oil",
+   "herbs"
+  ],
+  "m": [
+   "Heat the oven to 200°C. Toss the chopped potatoes, carrots and onions in the oil and herbs and roast for 15 minutes.",
+   "Add the sausages and courgette and roast for a further 25–30 minutes, turning once, until the sausages are cooked through."
+  ],
+  "allergens": [
+   "gluten",
+   "sulphites"
+  ]
+ },
+ {
+  "id": "sausage-egg-and-beans",
+  "c": "breakfast",
+  "e": "🌭",
+  "n": "Sausage, Egg and Beans",
+  "p": 48,
+  "k": 767,
+  "serves": 1,
+  "cost": 144,
+  "b": "medium",
+  "macros_only": false,
+  "fresh": [
+   [
+    "sausages",
+    3
+   ],
+   [
+    "eggs",
+    2
+   ],
+   [
+    "beans",
+    100
+   ],
+   [
+    "loaf",
+    1
+   ]
+  ],
+  "cup": [
+   "oil"
+  ],
+  "m": [
+   "Grill the sausages for 15–20 minutes, turning, until cooked through with no pink inside.",
+   "Fry the eggs in the oil, warm the beans and serve with the toast."
+  ],
+  "allergens": [
+   "eggs",
+   "gluten",
+   "soya",
+   "sulphites"
+  ]
+ },
+ {
   "id": "scrambled-eggs-on-toast",
   "c": "breakfast",
   "e": "🍳",
@@ -922,6 +3175,136 @@
   ]
  },
  {
+  "id": "shakshuka-with-feta",
+  "c": "dinner",
+  "e": "🍳",
+  "n": "Shakshuka with Feta",
+  "p": 32,
+  "k": 679,
+  "serves": 2,
+  "cost": 230,
+  "b": "medium",
+  "macros_only": false,
+  "fresh": [
+   [
+    "eggs",
+    5
+   ],
+   [
+    "ctoms",
+    800
+   ],
+   [
+    "onions",
+    1
+   ],
+   [
+    "pepper",
+    1
+   ],
+   [
+    "feta",
+    80
+   ],
+   [
+    "loaf",
+    4
+   ]
+  ],
+  "cup": [
+   "oil",
+   "paprika",
+   "cumin"
+  ],
+  "m": [
+   "Soften the chopped onion and pepper in the oil, then stir in the paprika, cumin and tomatoes. Simmer for 12 minutes until thick.",
+   "Make wells in the sauce, crack in the eggs, cover and cook for 5–6 minutes until the whites are set.",
+   "Crumble over the feta and serve with toast."
+  ],
+  "allergens": [
+   "eggs",
+   "gluten",
+   "milk",
+   "soya"
+  ]
+ },
+ {
+  "id": "smoked-salmon-bagel",
+  "c": "breakfast",
+  "e": "🥯",
+  "n": "Smoked Salmon Bagel",
+  "p": 22,
+  "k": 378,
+  "serves": 1,
+  "cost": 233,
+  "b": "high",
+  "macros_only": false,
+  "fresh": [
+   [
+    "bagels",
+    1
+   ],
+   [
+    "softcheese",
+    40
+   ],
+   [
+    "smokedsalmon",
+    50
+   ]
+  ],
+  "cup": [],
+  "m": [
+   "Split and toast the bagel.",
+   "Spread with soft cheese and top with the smoked salmon."
+  ],
+  "allergens": [
+   "fish",
+   "gluten",
+   "milk"
+  ]
+ },
+ {
+  "id": "smoked-salmon-scrambled-eggs",
+  "c": "breakfast",
+  "e": "🐟",
+  "n": "Smoked Salmon Scrambled Eggs",
+  "p": 38,
+  "k": 603,
+  "serves": 1,
+  "cost": 296,
+  "b": "high",
+  "macros_only": false,
+  "fresh": [
+   [
+    "eggs",
+    3
+   ],
+   [
+    "smokedsalmon",
+    50
+   ],
+   [
+    "loaf",
+    2
+   ]
+  ],
+  "cup": [
+   "butter"
+  ],
+  "m": [
+   "Melt the butter over a low heat, add the beaten eggs and stir gently until just set.",
+   "Fold in torn smoked salmon off the heat and serve on toast."
+  ],
+  "allergens": [
+   "eggs",
+   "fish",
+   "gluten",
+   "milk",
+   "soya"
+  ]
+ },
+ {
   "id": "spaghetti-bolognese",
   "c": "dinner",
   "e": "🍝",
@@ -930,7 +3313,7 @@
   "k": 541,
   "serves": 2,
   "cost": 258,
-  "b": "high",
+  "b": "medium",
   "macros_only": false,
   "fresh": [
    [
@@ -968,6 +3351,85 @@
   ],
   "allergens": [
    "gluten",
+   "milk"
+  ]
+ },
+ {
+  "id": "spicy-bean-and-rice-bowl",
+  "c": "lunch",
+  "e": "🍚",
+  "n": "Spicy Bean and Rice Bowl",
+  "p": 20,
+  "k": 522,
+  "serves": 1,
+  "cost": 80,
+  "b": "low",
+  "macros_only": false,
+  "fresh": [
+   [
+    "kidney",
+    120
+   ],
+   [
+    "pepper",
+    0.5
+   ]
+  ],
+  "cup": [
+   "rice",
+   "sweetcorn",
+   "cheddar",
+   "oil",
+   "paprika",
+   "cumin"
+  ],
+  "m": [
+   "Cook the rice. Fry the chopped pepper in the oil with the paprika and cumin.",
+   "Add the beans and sweetcorn and heat through. Spoon over the rice and top with cheese."
+  ],
+  "allergens": [
+   "milk"
+  ]
+ },
+ {
+  "id": "steak-and-chips",
+  "c": "dinner",
+  "e": "🥩",
+  "n": "Steak and Chips",
+  "p": 58,
+  "k": 806,
+  "serves": 2,
+  "cost": 378,
+  "b": "high",
+  "macros_only": false,
+  "fresh": [
+   [
+    "rump",
+    400
+   ],
+   [
+    "chips",
+    500
+   ],
+   [
+    "peas",
+    200
+   ],
+   [
+    "mushrooms",
+    150
+   ]
+  ],
+  "cup": [
+   "oil",
+   "butter"
+  ],
+  "m": [
+   "Bake the chips following the pack instructions.",
+   "Fry the steaks in the oil for 2–3 minutes each side for medium, adding the butter at the end, and rest for 3 minutes.",
+   "Fry the mushrooms in the pan juices, boil the peas and serve together."
+  ],
+  "allergens": [
    "milk"
   ]
  },
@@ -1052,6 +3514,107 @@
   ]
  },
  {
+  "id": "sweet-potato-and-chickpea-curry-with-naan",
+  "c": "dinner",
+  "e": "🍠",
+  "n": "Sweet Potato and Chickpea Curry with Naan",
+  "p": 23,
+  "k": 852,
+  "serves": 2,
+  "cost": 191,
+  "b": "low",
+  "macros_only": false,
+  "fresh": [
+   [
+    "sweetpot",
+    400
+   ],
+   [
+    "chickpeas",
+    240
+   ],
+   [
+    "spinach",
+    100
+   ],
+   [
+    "tikka",
+    60
+   ],
+   [
+    "coconut",
+    200
+   ],
+   [
+    "passata",
+    200
+   ],
+   [
+    "naan",
+    4
+   ]
+  ],
+  "cup": [
+   "oil"
+  ],
+  "m": [
+   "Soften the diced sweet potato in the oil for 5 minutes, stir in the tikka paste, then add the chickpeas, passata and coconut milk.",
+   "Simmer for 20 minutes until the sweet potato is tender, stir through the spinach, and serve with the warmed naans."
+  ],
+  "allergens": [
+   "gluten",
+   "milk"
+  ]
+ },
+ {
+  "id": "sweet-potato-chilli-bake",
+  "c": "dinner",
+  "e": "🍠",
+  "n": "Sweet Potato Chilli Bake",
+  "p": 23,
+  "k": 612,
+  "serves": 2,
+  "cost": 139,
+  "b": "low",
+  "macros_only": false,
+  "fresh": [
+   [
+    "sweetpot",
+    600
+   ],
+   [
+    "kidney",
+    400
+   ],
+   [
+    "ctoms",
+    400
+   ],
+   [
+    "onions",
+    1
+   ],
+   [
+    "mixpep",
+    1
+   ]
+  ],
+  "cup": [
+   "cheddar",
+   "cumin",
+   "paprika",
+   "oil"
+  ],
+  "m": [
+   "Prick the sweet potatoes and bake at 200°C for 45 minutes.",
+   "Meanwhile soften the chopped onion and pepper in the oil, add the spices, tomatoes and beans and simmer for 20 minutes.",
+   "Split the potatoes, spoon over the chilli and top with cheese."
+  ],
+  "allergens": [
+   "milk"
+  ]
+ },
+ {
   "id": "teriyaki-chicken-noodles",
   "c": "dinner",
   "e": "🍜",
@@ -1085,6 +3648,73 @@
    "gluten",
    "sesame",
    "soya"
+  ]
+ },
+ {
+  "id": "tomato-soup-and-cheese-toastie",
+  "c": "lunch",
+  "e": "🍅",
+  "n": "Tomato Soup and Cheese Toastie",
+  "p": 18,
+  "k": 689,
+  "serves": 1,
+  "cost": 105,
+  "b": "low",
+  "macros_only": false,
+  "fresh": [
+   [
+    "tomsoup",
+    400
+   ],
+   [
+    "loaf",
+    2
+   ]
+  ],
+  "cup": [
+   "cheddar",
+   "butter"
+  ],
+  "m": [
+   "Heat the soup until steaming hot.",
+   "Butter the bread, fill with grated cheese and toast in a pan until golden. Dunk away."
+  ],
+  "allergens": [
+   "gluten",
+   "milk",
+   "soya"
+  ]
+ },
+ {
+  "id": "tuna-and-sweetcorn-jacket-potato",
+  "c": "lunch",
+  "e": "🥔",
+  "n": "Tuna and Sweetcorn Jacket Potato",
+  "p": 35,
+  "k": 431,
+  "serves": 1,
+  "cost": 96,
+  "b": "low",
+  "macros_only": false,
+  "fresh": [
+   [
+    "bakepot",
+    1
+   ]
+  ],
+  "cup": [
+   "tuna",
+   "sweetcorn",
+   "mayo"
+  ],
+  "m": [
+   "Prick the potato and bake at 200°C for about an hour (or microwave for 8–10 minutes, then crisp in the oven for 15).",
+   "Mix the tuna, sweetcorn and mayo and spoon over the split potato."
+  ],
+  "allergens": [
+   "eggs",
+   "fish",
+   "mustard"
   ]
  },
  {
@@ -1123,6 +3753,165 @@
   ]
  },
  {
+  "id": "tuna-melt-toastie",
+  "c": "lunch",
+  "e": "🧀",
+  "n": "Tuna Melt Toastie",
+  "p": 36,
+  "k": 551,
+  "serves": 1,
+  "cost": 81,
+  "b": "low",
+  "macros_only": false,
+  "fresh": [
+   [
+    "loaf",
+    2
+   ]
+  ],
+  "cup": [
+   "tuna",
+   "mayo",
+   "cheddar",
+   "butter"
+  ],
+  "m": [
+   "Mix the tuna with the mayo and spread over one slice of bread, then top with grated cheese and the second slice.",
+   "Toast in a buttered pan for 2–3 minutes each side until golden and melted."
+  ],
+  "allergens": [
+   "eggs",
+   "fish",
+   "gluten",
+   "milk",
+   "mustard",
+   "soya"
+  ]
+ },
+ {
+  "id": "tuna-on-crackers",
+  "c": "snack",
+  "e": "🐟",
+  "n": "Tuna on Crackers",
+  "p": 18,
+  "k": 228,
+  "serves": 1,
+  "cost": 40,
+  "b": "low",
+  "macros_only": false,
+  "fresh": [
+   [
+    "crackers",
+    30
+   ]
+  ],
+  "cup": [
+   "tuna",
+   "mayo"
+  ],
+  "m": [
+   "Mix the tuna with the mayo and pile onto the crackers."
+  ],
+  "allergens": [
+   "eggs",
+   "fish",
+   "gluten",
+   "mustard"
+  ]
+ },
+ {
+  "id": "turkey-keema-curry",
+  "c": "dinner",
+  "e": "🍛",
+  "n": "Turkey Keema Curry",
+  "p": 43,
+  "k": 564,
+  "serves": 2,
+  "cost": 210,
+  "b": "medium",
+  "macros_only": false,
+  "fresh": [
+   [
+    "turkeymince",
+    300
+   ],
+   [
+    "onions",
+    1
+   ],
+   [
+    "peas",
+    100
+   ],
+   [
+    "tikka",
+    60
+   ],
+   [
+    "passata",
+    200
+   ]
+  ],
+  "cup": [
+   "rice",
+   "curry",
+   "oil"
+  ],
+  "m": [
+   "Brown the turkey mince in the oil with the chopped onion until no pink remains.",
+   "Stir in the curry powder and tikka paste, then the passata and 100 ml water. Simmer for 15 minutes, adding the peas for the last 3.",
+   "Serve over the cooked rice."
+  ],
+  "allergens": []
+ },
+ {
+  "id": "turkey-meatballs-and-spaghetti",
+  "c": "dinner",
+  "e": "🍝",
+  "n": "Turkey Meatballs and Spaghetti",
+  "p": 53,
+  "k": 651,
+  "serves": 2,
+  "cost": 235,
+  "b": "medium",
+  "macros_only": false,
+  "fresh": [
+   [
+    "turkeymince",
+    300
+   ],
+   [
+    "eggs",
+    1
+   ],
+   [
+    "onions",
+    1
+   ],
+   [
+    "passata",
+    400
+   ]
+  ],
+  "cup": [
+   "spaghetti",
+   "parmesan",
+   "garlic",
+   "herbs",
+   "oil"
+  ],
+  "m": [
+   "Mix the turkey mince with the egg, half the grated onion and the herbs and roll into 12 meatballs.",
+   "Brown in the oil, then add the rest of the onion and the garlic. Pour in the passata and simmer for 15 minutes until the meatballs are cooked through.",
+   "Serve over the cooked spaghetti with parmesan."
+  ],
+  "allergens": [
+   "eggs",
+   "gluten",
+   "milk"
+  ]
+ },
+ {
   "id": "yogurt-and-banana-bowl",
   "c": "breakfast",
   "e": "🍌",
@@ -1131,7 +3920,7 @@
   "k": 333,
   "serves": 1,
   "cost": 119,
-  "b": "low",
+  "b": "medium",
   "macros_only": false,
   "fresh": [
    [
@@ -1164,7 +3953,7 @@
   "k": 320,
   "serves": 1,
   "cost": 216,
-  "b": "medium",
+  "b": "high",
   "macros_only": false,
   "fresh": [
    [

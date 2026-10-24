@@ -1,0 +1,35 @@
+{
+ "slug": "cheese-and-spinach-omelette",
+ "name": "Cheese and Spinach Omelette",
+ "course": "breakfast",
+ "emoji": "🍳",
+ "serves": 1,
+ "status": "live",
+ "ingredients": [
+  {
+   "ingredient": "eggs",
+   "qty": 3
+  },
+  {
+   "ingredient": "spinach",
+   "qty": 40
+  },
+  {
+   "ingredient": "loaf",
+   "qty": 1
+  }
+ ],
+ "cupboard": [
+  "cheddar",
+  "oil"
+ ],
+ "cupboard_qty": {
+  "cheddar": 30,
+  "oil": 5
+ },
+ "method": [
+  "Beat the eggs. Wilt the spinach in a hot, oiled non-stick pan, then pour in the eggs.",
+  "Cook until almost set, scatter over the grated cheese, fold and serve with toast."
+ ],
+ "source": "table-plan"
+}

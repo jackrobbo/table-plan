@@ -1,0 +1,29 @@
+{
+ "slug": "bacon-butty",
+ "name": "Bacon Butty",
+ "course": "breakfast",
+ "emoji": "🥓",
+ "serves": 1,
+ "status": "live",
+ "ingredients": [
+  {
+   "ingredient": "bacon",
+   "qty": 4
+  },
+  {
+   "ingredient": "loaf",
+   "qty": 2
+  }
+ ],
+ "cupboard": [
+  "butter"
+ ],
+ "cupboard_qty": {
+  "butter": 10
+ },
+ "method": [
+  "Grill the bacon for 4–5 minutes each side until cooked through and crisp at the edges.",
+  "Butter the bread and layer in the bacon."
+ ],
+ "source": "table-plan"
+}

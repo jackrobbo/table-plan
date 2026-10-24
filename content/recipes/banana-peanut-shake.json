@@ -1,0 +1,32 @@
+{
+ "slug": "banana-peanut-shake",
+ "name": "Banana Peanut Shake",
+ "course": "snack",
+ "emoji": "🥤",
+ "serves": 1,
+ "status": "live",
+ "ingredients": [
+  {
+   "ingredient": "milk",
+   "qty": 300
+  },
+  {
+   "ingredient": "banana",
+   "qty": 1
+  },
+  {
+   "ingredient": "oats",
+   "qty": 20
+  },
+  {
+   "ingredient": "pbutter",
+   "qty": 15
+  }
+ ],
+ "cupboard": [],
+ "cupboard_qty": {},
+ "method": [
+  "Blend everything until smooth."
+ ],
+ "source": "table-plan"
+}

@@ -1,0 +1,31 @@
+{
+ "slug": "tomato-soup-and-cheese-toastie",
+ "name": "Tomato Soup and Cheese Toastie",
+ "course": "lunch",
+ "emoji": "🍅",
+ "serves": 1,
+ "status": "live",
+ "ingredients": [
+  {
+   "ingredient": "tomsoup",
+   "qty": 400
+  },
+  {
+   "ingredient": "loaf",
+   "qty": 2
+  }
+ ],
+ "cupboard": [
+  "cheddar",
+  "butter"
+ ],
+ "cupboard_qty": {
+  "cheddar": 40,
+  "butter": 10
+ },
+ "method": [
+  "Heat the soup until steaming hot.",
+  "Butter the bread, fill with grated cheese and toast in a pan until golden. Dunk away."
+ ],
+ "source": "table-plan"
+}

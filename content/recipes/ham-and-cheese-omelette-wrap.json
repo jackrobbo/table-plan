@@ -1,0 +1,35 @@
+{
+ "slug": "ham-and-cheese-omelette-wrap",
+ "name": "Ham and Cheese Omelette Wrap",
+ "course": "lunch",
+ "emoji": "🥚",
+ "serves": 1,
+ "status": "live",
+ "ingredients": [
+  {
+   "ingredient": "eggs",
+   "qty": 2
+  },
+  {
+   "ingredient": "wraps",
+   "qty": 1
+  },
+  {
+   "ingredient": "ham",
+   "qty": 40
+  }
+ ],
+ "cupboard": [
+  "cheddar",
+  "oil"
+ ],
+ "cupboard_qty": {
+  "cheddar": 25,
+  "oil": 3
+ },
+ "method": [
+  "Cook the beaten eggs as a thin omelette in the oil.",
+  "Add the ham and cheese, then roll up inside the warm wrap."
+ ],
+ "source": "table-plan"
+}

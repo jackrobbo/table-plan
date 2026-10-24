@@ -1,0 +1,41 @@
+{
+ "slug": "protein-pancakes",
+ "name": "Protein Pancakes",
+ "course": "breakfast",
+ "emoji": "🥞",
+ "serves": 1,
+ "status": "live",
+ "ingredients": [
+  {
+   "ingredient": "oats",
+   "qty": 40
+  },
+  {
+   "ingredient": "banana",
+   "qty": 1
+  },
+  {
+   "ingredient": "eggs",
+   "qty": 2
+  },
+  {
+   "ingredient": "milk",
+   "qty": 100
+  },
+  {
+   "ingredient": "pbutter",
+   "qty": 15
+  }
+ ],
+ "cupboard": [
+  "oil"
+ ],
+ "cupboard_qty": {
+  "oil": 5
+ },
+ "method": [
+  "Blend the oats, banana, eggs and milk into a thick batter.",
+  "Cook spoonfuls in a lightly oiled pan for 2 minutes each side, then serve with the peanut butter."
+ ],
+ "source": "table-plan"
+}

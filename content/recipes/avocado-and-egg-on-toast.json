@@ -1,0 +1,33 @@
+{
+ "slug": "avocado-and-egg-on-toast",
+ "name": "Avocado and Egg on Toast",
+ "course": "breakfast",
+ "emoji": "🥑",
+ "serves": 1,
+ "status": "live",
+ "ingredients": [
+  {
+   "ingredient": "loaf",
+   "qty": 2
+  },
+  {
+   "ingredient": "avocado",
+   "qty": 0.5
+  },
+  {
+   "ingredient": "eggs",
+   "qty": 2
+  }
+ ],
+ "cupboard": [
+  "oil"
+ ],
+ "cupboard_qty": {
+  "oil": 3
+ },
+ "method": [
+  "Fry the eggs in the oil until the whites are set.",
+  "Mash the avocado onto the toast and top with the eggs."
+ ],
+ "source": "table-plan"
+}

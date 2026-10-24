@@ -1,0 +1,52 @@
+{
+ "slug": "bean-and-vegetable-chilli",
+ "name": "Bean and Vegetable Chilli",
+ "course": "dinner",
+ "emoji": "🌶️",
+ "serves": 2,
+ "status": "live",
+ "ingredients": [
+  {
+   "ingredient": "kidney",
+   "qty": 400
+  },
+  {
+   "ingredient": "chickpeas",
+   "qty": 240
+  },
+  {
+   "ingredient": "ctoms",
+   "qty": 400
+  },
+  {
+   "ingredient": "onions",
+   "qty": 1
+  },
+  {
+   "ingredient": "mixpep",
+   "qty": 2
+  }
+ ],
+ "cupboard": [
+  "rice",
+  "cheddar",
+  "puree",
+  "oil",
+  "paprika",
+  "cumin"
+ ],
+ "cupboard_qty": {
+  "rice": 140,
+  "cheddar": 40,
+  "puree": 15,
+  "oil": 10,
+  "paprika": 3,
+  "cumin": 3
+ },
+ "method": [
+  "Soften the chopped onion and peppers in the oil for 6 minutes.",
+  "Add the paprika, cumin, purée, tomatoes, beans and chickpeas and simmer for 25 minutes.",
+  "Serve on the cooked rice topped with grated cheese."
+ ],
+ "source": "table-plan"
+}

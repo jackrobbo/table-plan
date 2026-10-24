@@ -1,0 +1,35 @@
+{
+ "slug": "salmon-rice-and-broccoli",
+ "name": "Salmon, Rice and Broccoli",
+ "course": "dinner",
+ "emoji": "🍣",
+ "serves": 2,
+ "status": "live",
+ "ingredients": [
+  {
+   "ingredient": "salmon",
+   "qty": 220
+  },
+  {
+   "ingredient": "brocc",
+   "qty": 240
+  }
+ ],
+ "cupboard": [
+  "rice",
+  "soy",
+  "honey",
+  "oil"
+ ],
+ "cupboard_qty": {
+  "rice": 140,
+  "soy": 15,
+  "honey": 15,
+  "oil": 8
+ },
+ "method": [
+  "Mix the soy sauce and honey, brush over the salmon and bake at 200°C for 12–15 minutes until it flakes.",
+  "Cook the rice and steam the broccoli, then serve together with the salmon."
+ ],
+ "source": "table-plan"
+}

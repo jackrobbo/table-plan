@@ -1,0 +1,41 @@
+{
+ "slug": "halloumi-and-veg-wrap",
+ "name": "Halloumi and Veg Wrap",
+ "course": "lunch",
+ "emoji": "🌯",
+ "serves": 1,
+ "status": "live",
+ "ingredients": [
+  {
+   "ingredient": "wraps",
+   "qty": 1
+  },
+  {
+   "ingredient": "halloumi",
+   "qty": 60
+  },
+  {
+   "ingredient": "houm",
+   "qty": 40
+  },
+  {
+   "ingredient": "carrots",
+   "qty": 50
+  },
+  {
+   "ingredient": "cuc",
+   "qty": 0.15
+  },
+  {
+   "ingredient": "spinach",
+   "qty": 30
+  }
+ ],
+ "cupboard": [],
+ "cupboard_qty": {},
+ "method": [
+  "Fry the halloumi slices in a dry non-stick pan for 1–2 minutes each side until golden.",
+  "Spread the wrap with houmous, add the grated carrot, cucumber, spinach and halloumi, then roll."
+ ],
+ "source": "table-plan"
+}

@@ -1,0 +1,40 @@
+{
+ "slug": "bacon-and-broccoli-mac-and-cheese",
+ "name": "Bacon and Broccoli Mac and Cheese",
+ "course": "dinner",
+ "emoji": "🧀",
+ "serves": 2,
+ "status": "live",
+ "ingredients": [
+  {
+   "ingredient": "bacon",
+   "qty": 6
+  },
+  {
+   "ingredient": "brocc",
+   "qty": 200
+  },
+  {
+   "ingredient": "milk",
+   "qty": 400
+  }
+ ],
+ "cupboard": [
+  "fusilli",
+  "cheddar",
+  "cornflour",
+  "oil"
+ ],
+ "cupboard_qty": {
+  "fusilli": 180,
+  "cheddar": 120,
+  "cornflour": 20,
+  "oil": 3
+ },
+ "method": [
+  "Boil the pasta, adding the broccoli for the last 3 minutes. Grill or fry the bacon until crisp and chop.",
+  "Whisk the cornflour into the cold milk, heat gently while stirring until thick, then melt in the cheese.",
+  "Combine the sauce, pasta, broccoli and bacon."
+ ],
+ "source": "table-plan"
+}

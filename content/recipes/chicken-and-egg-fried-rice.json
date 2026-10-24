@@ -1,0 +1,41 @@
+{
+ "slug": "chicken-and-egg-fried-rice",
+ "name": "Chicken and Egg Fried Rice",
+ "course": "lunch",
+ "emoji": "🍳",
+ "serves": 1,
+ "status": "live",
+ "ingredients": [
+  {
+   "ingredient": "breast",
+   "qty": 80
+  },
+  {
+   "ingredient": "eggs",
+   "qty": 2
+  },
+  {
+   "ingredient": "peas",
+   "qty": 60
+  },
+  {
+   "ingredient": "spring",
+   "qty": 0.25
+  }
+ ],
+ "cupboard": [
+  "rice",
+  "soy",
+  "oil"
+ ],
+ "cupboard_qty": {
+  "rice": 70,
+  "soy": 10,
+  "oil": 8
+ },
+ "method": [
+  "Cook and cool the rice. Fry the diced chicken in the oil for 6 minutes until cooked through.",
+  "Push to one side, scramble the eggs, then add the rice, peas, soy sauce and spring onion and stir-fry until hot."
+ ],
+ "source": "table-plan"
+}

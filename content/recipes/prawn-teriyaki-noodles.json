@@ -1,0 +1,42 @@
+{
+ "slug": "prawn-teriyaki-noodles",
+ "name": "Prawn Teriyaki Noodles",
+ "course": "dinner",
+ "emoji": "🍤",
+ "serves": 2,
+ "status": "live",
+ "ingredients": [
+  {
+   "ingredient": "prawns",
+   "qty": 300
+  },
+  {
+   "ingredient": "stirfry",
+   "qty": 400
+  },
+  {
+   "ingredient": "eggs",
+   "qty": 2
+  }
+ ],
+ "cupboard": [
+  "noodles",
+  "teriyaki",
+  "soy",
+  "nuts",
+  "oil"
+ ],
+ "cupboard_qty": {
+  "noodles": 150,
+  "teriyaki": 50,
+  "soy": 10,
+  "nuts": 30,
+  "oil": 8
+ },
+ "method": [
+  "Cook the noodles. Scramble the eggs in the oil, break up and set aside.",
+  "Stir-fry the veg for 4 minutes, add the prawns until hot, then the noodles, teriyaki and soy sauces and eggs.",
+  "Scatter over the chopped nuts."
+ ],
+ "source": "table-plan"
+}

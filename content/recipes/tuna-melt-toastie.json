@@ -1,0 +1,31 @@
+{
+ "slug": "tuna-melt-toastie",
+ "name": "Tuna Melt Toastie",
+ "course": "lunch",
+ "emoji": "🧀",
+ "serves": 1,
+ "status": "live",
+ "ingredients": [
+  {
+   "ingredient": "loaf",
+   "qty": 2
+  }
+ ],
+ "cupboard": [
+  "tuna",
+  "mayo",
+  "cheddar",
+  "butter"
+ ],
+ "cupboard_qty": {
+  "tuna": 80,
+  "mayo": 15,
+  "cheddar": 30,
+  "butter": 8
+ },
+ "method": [
+  "Mix the tuna with the mayo and spread over one slice of bread, then top with grated cheese and the second slice.",
+  "Toast in a buttered pan for 2–3 minutes each side until golden and melted."
+ ],
+ "source": "table-plan"
+}

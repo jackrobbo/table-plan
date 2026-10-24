@@ -1,0 +1,45 @@
+{
+ "slug": "lentil-and-veg-soup",
+ "name": "Lentil and Veg Soup",
+ "course": "lunch",
+ "emoji": "🥣",
+ "serves": 1,
+ "status": "live",
+ "ingredients": [
+  {
+   "ingredient": "lentils",
+   "qty": 60
+  },
+  {
+   "ingredient": "carrots",
+   "qty": 80
+  },
+  {
+   "ingredient": "onions",
+   "qty": 0.5
+  },
+  {
+   "ingredient": "passata",
+   "qty": 150
+  },
+  {
+   "ingredient": "loaf",
+   "qty": 2
+  }
+ ],
+ "cupboard": [
+  "stock",
+  "cumin",
+  "oil"
+ ],
+ "cupboard_qty": {
+  "stock": 5,
+  "cumin": 2,
+  "oil": 5
+ },
+ "method": [
+  "Soften the chopped onion and carrot in the oil for 5 minutes.",
+  "Add the lentils, passata, cumin and 500 ml stock and simmer for 20 minutes until the lentils collapse. Serve with bread."
+ ],
+ "source": "table-plan"
+}

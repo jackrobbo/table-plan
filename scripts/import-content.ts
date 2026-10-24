@@ -32,7 +32,7 @@ const ingMap = new Map(ingredients.map((i) => [i.slug, i]));
 const resolved = new Map(recipes.map((r) => {
   const m = resolvePerPortion(r, ingMap);
   const cost = r.macros_only ? null : costPerPortion(r, ingMap);
-  return [r.slug, { m, cost, budget: cost == null ? null : budgetTier(cost) }] as const;
+  return [r.slug, { m, cost, budget: cost == null ? null : budgetTier(cost, r.course) }] as const;
 }));
 const byStatus = (s: string) => recipes.filter((r) => r.status === s).length;
 console.log(`live ${byStatus('live')} · verified ${byStatus('verified')} · draft ${byStatus('draft')}`);
@@ -81,7 +81,7 @@ sql.push('commit;');
 
 // ---- budget spread (live, costed recipes) ----
 const live = recipes.filter((r) => r.status === 'live' && resolved.get(r.slug)!.cost != null);
-console.log('\nCost per portion (pence) by course and tier — limits ' + JSON.stringify(BUDGET_LIMITS));
+console.log('\nCost per portion by course and tier (limits in pence: ' + Object.entries(BUDGET_LIMITS).map(([c, l]) => `${c} ${l.low}/${l.medium}`).join(', ') + ')');
 for (const c of ['breakfast', 'lunch', 'snack', 'dinner']) {
   const rs = live.filter((r) => r.course === c);
   const count = (b: string) => rs.filter((r) => resolved.get(r.slug)!.budget === b).length;

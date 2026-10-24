@@ -1,0 +1,46 @@
+{
+ "slug": "turkey-meatballs-and-spaghetti",
+ "name": "Turkey Meatballs and Spaghetti",
+ "course": "dinner",
+ "emoji": "🍝",
+ "serves": 2,
+ "status": "live",
+ "ingredients": [
+  {
+   "ingredient": "turkeymince",
+   "qty": 300
+  },
+  {
+   "ingredient": "eggs",
+   "qty": 1
+  },
+  {
+   "ingredient": "onions",
+   "qty": 1
+  },
+  {
+   "ingredient": "passata",
+   "qty": 400
+  }
+ ],
+ "cupboard": [
+  "spaghetti",
+  "parmesan",
+  "garlic",
+  "herbs",
+  "oil"
+ ],
+ "cupboard_qty": {
+  "spaghetti": 180,
+  "parmesan": 20,
+  "garlic": 6,
+  "herbs": 2,
+  "oil": 8
+ },
+ "method": [
+  "Mix the turkey mince with the egg, half the grated onion and the herbs and roll into 12 meatballs.",
+  "Brown in the oil, then add the rest of the onion and the garlic. Pour in the passata and simmer for 15 minutes until the meatballs are cooked through.",
+  "Serve over the cooked spaghetti with parmesan."
+ ],
+ "source": "table-plan"
+}

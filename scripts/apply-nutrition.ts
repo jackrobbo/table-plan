@@ -9,7 +9,7 @@ import fs from 'node:fs';
 import type { IngredientDef } from '../src/lib/content/types';
 
 type Food = [code: string, name: string, group: string, kcal: number, protein: number, fat: number, carbs: number];
-interface MapEntry { code?: string; gpu?: number; negligible?: boolean; prefer?: 'label' | 'cofid'; labelOk?: boolean; approx?: string; scale?: number; why?: string }
+interface MapEntry { code?: string; gpu?: number; negligible?: boolean; prefer?: 'label' | 'cofid'; labelOk?: boolean; approx?: string; scale?: number; why?: string; /** allergens we know apply that a label's bold text can't show (e.g. plain fish or cheese with no ingredients list) */ allergens?: string[] }
 interface Label { kcal?: number; protein_g?: number; carbs_g?: number; fat_g?: number; basis?: string; allergens?: string[] }
 
 const read = <T>(f: string, fallback: T): T => (fs.existsSync(f) ? JSON.parse(fs.readFileSync(f, 'utf8')) : fallback);
@@ -63,8 +63,8 @@ for (const i of ingredients) {
   if (i.cofid && m.approx) { i.cofid.approx = m.approx; report.approx.push(`${i.slug}: ${m.approx}`); }
   if (i.cofid && m.why) i.cofid.note = m.why;
 
-  // Allergens: the label's bold allergens are added to anything already set (never removed).
-  const declared = (l?.allergens ?? []) as IngredientDef['allergens'];
+  // Allergens: the label's bold allergens (plus any the map asserts) are added to anything already set (never removed).
+  const declared = [...(l?.allergens ?? []), ...(m.allergens ?? [])] as IngredientDef['allergens'];
   const merged = [...new Set([...i.allergens, ...declared])].sort() as IngredientDef['allergens'];
   const added = merged.filter((a) => !i.allergens.includes(a));
   if (added.length) report.allergen.push(`${i.slug}: + ${added.join(', ')}`);

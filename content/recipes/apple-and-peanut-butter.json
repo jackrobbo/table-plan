@@ -1,0 +1,24 @@
+{
+ "slug": "apple-and-peanut-butter",
+ "name": "Apple and Peanut Butter",
+ "course": "snack",
+ "emoji": "🍎",
+ "serves": 1,
+ "status": "live",
+ "ingredients": [
+  {
+   "ingredient": "apple",
+   "qty": 1
+  },
+  {
+   "ingredient": "pbutter",
+   "qty": 20
+  }
+ ],
+ "cupboard": [],
+ "cupboard_qty": {},
+ "method": [
+  "Slice the apple and dip into the peanut butter."
+ ],
+ "source": "table-plan"
+}

@@ -1,0 +1,41 @@
+{
+ "slug": "beef-and-broccoli-noodles",
+ "name": "Beef and Broccoli Noodles",
+ "course": "dinner",
+ "emoji": "🥩",
+ "serves": 2,
+ "status": "live",
+ "ingredients": [
+  {
+   "ingredient": "sizzle",
+   "qty": 320
+  },
+  {
+   "ingredient": "brocc",
+   "qty": 250
+  },
+  {
+   "ingredient": "carrots",
+   "qty": 100
+  }
+ ],
+ "cupboard": [
+  "noodles",
+  "soy",
+  "teriyaki",
+  "garlic",
+  "oil"
+ ],
+ "cupboard_qty": {
+  "noodles": 150,
+  "soy": 20,
+  "teriyaki": 40,
+  "garlic": 6,
+  "oil": 10
+ },
+ "method": [
+  "Cook the noodles. Stir-fry the beef strips in half the oil on a very high heat for 2 minutes, then set aside.",
+  "Stir-fry the broccoli, carrot and garlic for 4 minutes, return the beef, add the soy and teriyaki sauces and toss through the noodles."
+ ],
+ "source": "table-plan"
+}

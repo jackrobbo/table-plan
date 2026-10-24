@@ -1,0 +1,37 @@
+{
+ "slug": "bean-and-cheese-quesadilla",
+ "name": "Bean and Cheese Quesadilla",
+ "course": "lunch",
+ "emoji": "🫓",
+ "serves": 1,
+ "status": "live",
+ "ingredients": [
+  {
+   "ingredient": "wraps",
+   "qty": 2
+  },
+  {
+   "ingredient": "kidney",
+   "qty": 100
+  },
+  {
+   "ingredient": "pepper",
+   "qty": 0.5
+  }
+ ],
+ "cupboard": [
+  "cheddar",
+  "sweetcorn",
+  "oil"
+ ],
+ "cupboard_qty": {
+  "cheddar": 40,
+  "sweetcorn": 40,
+  "oil": 5
+ },
+ "method": [
+  "Fill one wrap with the beans, chopped pepper, sweetcorn and cheese and top with the second wrap.",
+  "Toast in the oiled pan for 2 minutes each side and cut into wedges."
+ ],
+ "source": "table-plan"
+}

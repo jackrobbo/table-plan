@@ -1,0 +1,29 @@
+{
+ "slug": "peanut-butter-banana-toast",
+ "name": "Peanut Butter Banana Toast",
+ "course": "breakfast",
+ "emoji": "🍌",
+ "serves": 1,
+ "status": "live",
+ "ingredients": [
+  {
+   "ingredient": "loaf",
+   "qty": 2
+  },
+  {
+   "ingredient": "pbutter",
+   "qty": 30
+  },
+  {
+   "ingredient": "banana",
+   "qty": 1
+  }
+ ],
+ "cupboard": [],
+ "cupboard_qty": {},
+ "method": [
+  "Toast the bread.",
+  "Spread with peanut butter and top with sliced banana."
+ ],
+ "source": "table-plan"
+}

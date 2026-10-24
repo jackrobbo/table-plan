@@ -1,0 +1,50 @@
+{
+ "slug": "full-english-breakfast",
+ "name": "Full English Breakfast",
+ "course": "breakfast",
+ "emoji": "🍳",
+ "serves": 1,
+ "status": "live",
+ "ingredients": [
+  {
+   "ingredient": "bacon",
+   "qty": 3
+  },
+  {
+   "ingredient": "sausages",
+   "qty": 2
+  },
+  {
+   "ingredient": "eggs",
+   "qty": 2
+  },
+  {
+   "ingredient": "beans",
+   "qty": 150
+  },
+  {
+   "ingredient": "mushrooms",
+   "qty": 80
+  },
+  {
+   "ingredient": "plum",
+   "qty": 80
+  },
+  {
+   "ingredient": "loaf",
+   "qty": 1
+  }
+ ],
+ "cupboard": [
+  "oil"
+ ],
+ "cupboard_qty": {
+  "oil": 10
+ },
+ "method": [
+  "Grill the sausages (15–20 minutes) and bacon (4–5 minutes each side) until cooked through.",
+  "Fry the mushrooms and tomatoes in half the oil, then the eggs in the rest. Warm the beans.",
+  "Serve everything with toast."
+ ],
+ "source": "table-plan"
+}

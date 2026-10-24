@@ -1,0 +1,37 @@
+{
+ "slug": "sausage-egg-and-beans",
+ "name": "Sausage, Egg and Beans",
+ "course": "breakfast",
+ "emoji": "🌭",
+ "serves": 1,
+ "status": "live",
+ "ingredients": [
+  {
+   "ingredient": "sausages",
+   "qty": 3
+  },
+  {
+   "ingredient": "eggs",
+   "qty": 2
+  },
+  {
+   "ingredient": "beans",
+   "qty": 100
+  },
+  {
+   "ingredient": "loaf",
+   "qty": 1
+  }
+ ],
+ "cupboard": [
+  "oil"
+ ],
+ "cupboard_qty": {
+  "oil": 5
+ },
+ "method": [
+  "Grill the sausages for 15–20 minutes, turning, until cooked through with no pink inside.",
+  "Fry the eggs in the oil, warm the beans and serve with the toast."
+ ],
+ "source": "table-plan"
+}

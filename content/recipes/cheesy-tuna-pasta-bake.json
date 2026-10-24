@@ -1,0 +1,38 @@
+{
+ "slug": "cheesy-tuna-pasta-bake",
+ "name": "Cheesy Tuna Pasta Bake",
+ "course": "dinner",
+ "emoji": "🧀",
+ "serves": 2,
+ "status": "live",
+ "ingredients": [
+  {
+   "ingredient": "onions",
+   "qty": 0.5
+  },
+  {
+   "ingredient": "passata",
+   "qty": 300
+  }
+ ],
+ "cupboard": [
+  "fusilli",
+  "tuna",
+  "sweetcorn",
+  "cheddar",
+  "oil"
+ ],
+ "cupboard_qty": {
+  "fusilli": 160,
+  "tuna": 224,
+  "sweetcorn": 120,
+  "cheddar": 80,
+  "oil": 5
+ },
+ "method": [
+  "Boil the pasta until just tender and heat the oven to 200°C.",
+  "Soften the chopped onion in the oil, then stir in the passata, tuna, sweetcorn and pasta.",
+  "Tip into a dish, cover with grated cheese and bake for 20 minutes until bubbling and golden."
+ ],
+ "source": "table-plan"
+}

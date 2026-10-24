@@ -1,0 +1,41 @@
+{
+ "slug": "bbq-chicken-and-sweetcorn-rice",
+ "name": "BBQ Chicken and Sweetcorn Rice",
+ "course": "dinner",
+ "emoji": "🍗",
+ "serves": 2,
+ "status": "live",
+ "ingredients": [
+  {
+   "ingredient": "breast",
+   "qty": 300
+  },
+  {
+   "ingredient": "bbq",
+   "qty": 60
+  },
+  {
+   "ingredient": "pepper",
+   "qty": 1
+  },
+  {
+   "ingredient": "onions",
+   "qty": 0.5
+  }
+ ],
+ "cupboard": [
+  "rice",
+  "sweetcorn",
+  "oil"
+ ],
+ "cupboard_qty": {
+  "rice": 180,
+  "sweetcorn": 100,
+  "oil": 8
+ },
+ "method": [
+  "Cook the rice. Fry the diced chicken, chopped pepper and onion in the oil for 8 minutes until the chicken is cooked through.",
+  "Stir in the barbecue sauce and sweetcorn, heat until bubbling and serve over the rice."
+ ],
+ "source": "table-plan"
+}

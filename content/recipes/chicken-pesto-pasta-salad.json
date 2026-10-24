@@ -1,0 +1,39 @@
+{
+ "slug": "chicken-pesto-pasta-salad",
+ "name": "Chicken Pesto Pasta Salad",
+ "course": "lunch",
+ "emoji": "🍝",
+ "serves": 1,
+ "status": "live",
+ "ingredients": [
+  {
+   "ingredient": "breast",
+   "qty": 100
+  },
+  {
+   "ingredient": "pesto",
+   "qty": 30
+  },
+  {
+   "ingredient": "plum",
+   "qty": 80
+  },
+  {
+   "ingredient": "spinach",
+   "qty": 30
+  }
+ ],
+ "cupboard": [
+  "fusilli",
+  "oil"
+ ],
+ "cupboard_qty": {
+  "fusilli": 70,
+  "oil": 5
+ },
+ "method": [
+  "Cook the pasta, drain and cool under cold water.",
+  "Fry the chicken in the oil for 6–8 minutes until cooked through, slice, and toss with the pasta, pesto, halved tomatoes and spinach."
+ ],
+ "source": "table-plan"
+}

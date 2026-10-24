@@ -1,0 +1,39 @@
+{
+ "slug": "bbq-chicken-wrap",
+ "name": "BBQ Chicken Wrap",
+ "course": "lunch",
+ "emoji": "🍗",
+ "serves": 1,
+ "status": "live",
+ "ingredients": [
+  {
+   "ingredient": "breast",
+   "qty": 100
+  },
+  {
+   "ingredient": "wraps",
+   "qty": 1
+  },
+  {
+   "ingredient": "iceberg",
+   "qty": 0.15
+  },
+  {
+   "ingredient": "bbq",
+   "qty": 20
+  }
+ ],
+ "cupboard": [
+  "cheddar",
+  "oil"
+ ],
+ "cupboard_qty": {
+  "cheddar": 15,
+  "oil": 5
+ },
+ "method": [
+  "Fry the sliced chicken in the oil for 6–8 minutes until cooked through, then toss in the barbecue sauce.",
+  "Pile into the wrap with shredded lettuce and cheese."
+ ],
+ "source": "table-plan"
+}

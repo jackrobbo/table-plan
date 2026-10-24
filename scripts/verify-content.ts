@@ -35,6 +35,6 @@ if (process.argv.includes('--table')) {
   for (const r of recipes.filter((r) => !r.macros_only).sort((a, b) => a.course.localeCompare(b.course) || a.slug.localeCompare(b.slug))) {
     const m = resolvePerPortion(r, ing), c = computePerPortion(r, ing), cost = costPerPortion(r, ing);
     const src = r.per_portion ? (c.missing.length ? 'declared (not checkable)' : `declared; computes to ${c.kcal} kcal / ${c.protein_g}g`) : 'computed';
-    console.log(`${r.slug.padEnd(33)} ${r.course.padEnd(10)} ${String(r.serves).padStart(4)}  ${String(m.kcal).padStart(4)} ${String(m.protein_g).padStart(3)} ${String(m.carbs_g ?? '').padStart(3)} ${String(m.fat_g ?? '').padStart(3)}  ${cost == null ? '   n/a' : '£' + (cost / 100).toFixed(2).padStart(5)}    ${cost == null ? '-' : budgetTier(cost).padEnd(6)}  ${src}`);
+    console.log(`${r.slug.padEnd(33)} ${r.course.padEnd(10)} ${String(r.serves).padStart(4)}  ${String(m.kcal).padStart(4)} ${String(m.protein_g).padStart(3)} ${String(m.carbs_g ?? '').padStart(3)} ${String(m.fat_g ?? '').padStart(3)}  ${cost == null ? '   n/a' : '£' + (cost / 100).toFixed(2).padStart(5)}    ${cost == null ? '-' : budgetTier(cost, r.course).padEnd(6)}  ${src}`);
   }
 }

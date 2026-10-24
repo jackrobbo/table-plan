@@ -1,0 +1,37 @@
+{
+ "slug": "prawn-and-avocado-wrap",
+ "name": "Prawn and Avocado Wrap",
+ "course": "lunch",
+ "emoji": "🍤",
+ "serves": 1,
+ "status": "live",
+ "ingredients": [
+  {
+   "ingredient": "wraps",
+   "qty": 1
+  },
+  {
+   "ingredient": "prawns",
+   "qty": 80
+  },
+  {
+   "ingredient": "avocado",
+   "qty": 0.5
+  },
+  {
+   "ingredient": "salad",
+   "qty": 30
+  }
+ ],
+ "cupboard": [
+  "mayo"
+ ],
+ "cupboard_qty": {
+  "mayo": 10
+ },
+ "method": [
+  "Mash the avocado with the mayo and spread over the wrap.",
+  "Add the prawns and salad leaves and roll up."
+ ],
+ "source": "table-plan"
+}

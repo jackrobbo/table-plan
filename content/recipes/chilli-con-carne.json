@@ -1,0 +1,52 @@
+{
+ "slug": "chilli-con-carne",
+ "name": "Chilli Con Carne",
+ "course": "dinner",
+ "emoji": "🌶️",
+ "serves": 2,
+ "status": "live",
+ "ingredients": [
+  {
+   "ingredient": "mince",
+   "qty": 300
+  },
+  {
+   "ingredient": "kidney",
+   "qty": 400
+  },
+  {
+   "ingredient": "ctoms",
+   "qty": 400
+  },
+  {
+   "ingredient": "onions",
+   "qty": 1
+  },
+  {
+   "ingredient": "pepper",
+   "qty": 1
+  }
+ ],
+ "cupboard": [
+  "rice",
+  "puree",
+  "oil",
+  "paprika",
+  "cumin",
+  "chilliflakes"
+ ],
+ "cupboard_qty": {
+  "rice": 140,
+  "puree": 20,
+  "oil": 10,
+  "paprika": 3,
+  "cumin": 3,
+  "chilliflakes": 1
+ },
+ "method": [
+  "Brown the mince in the oil with the chopped onion and pepper until no pink remains.",
+  "Stir in the paprika, cumin, chilli flakes and purée, then the tomatoes and beans. Simmer for 20 minutes until thick.",
+  "Serve over the cooked rice."
+ ],
+ "source": "table-plan"
+}

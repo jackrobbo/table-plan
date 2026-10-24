@@ -1,0 +1,50 @@
+{
+ "slug": "shakshuka-with-feta",
+ "name": "Shakshuka with Feta",
+ "course": "dinner",
+ "emoji": "🍳",
+ "serves": 2,
+ "status": "live",
+ "ingredients": [
+  {
+   "ingredient": "eggs",
+   "qty": 5
+  },
+  {
+   "ingredient": "ctoms",
+   "qty": 800
+  },
+  {
+   "ingredient": "onions",
+   "qty": 1
+  },
+  {
+   "ingredient": "pepper",
+   "qty": 1
+  },
+  {
+   "ingredient": "feta",
+   "qty": 80
+  },
+  {
+   "ingredient": "loaf",
+   "qty": 4
+  }
+ ],
+ "cupboard": [
+  "oil",
+  "paprika",
+  "cumin"
+ ],
+ "cupboard_qty": {
+  "oil": 10,
+  "paprika": 3,
+  "cumin": 3
+ },
+ "method": [
+  "Soften the chopped onion and pepper in the oil, then stir in the paprika, cumin and tomatoes. Simmer for 12 minutes until thick.",
+  "Make wells in the sauce, crack in the eggs, cover and cook for 5–6 minutes until the whites are set.",
+  "Crumble over the feta and serve with toast."
+ ],
+ "source": "table-plan"
+}

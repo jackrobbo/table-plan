@@ -1,0 +1,33 @@
+{
+ "slug": "smoked-salmon-scrambled-eggs",
+ "name": "Smoked Salmon Scrambled Eggs",
+ "course": "breakfast",
+ "emoji": "🐟",
+ "serves": 1,
+ "status": "live",
+ "ingredients": [
+  {
+   "ingredient": "eggs",
+   "qty": 3
+  },
+  {
+   "ingredient": "smokedsalmon",
+   "qty": 50
+  },
+  {
+   "ingredient": "loaf",
+   "qty": 2
+  }
+ ],
+ "cupboard": [
+  "butter"
+ ],
+ "cupboard_qty": {
+  "butter": 10
+ },
+ "method": [
+  "Melt the butter over a low heat, add the beaten eggs and stir gently until just set.",
+  "Fold in torn smoked salmon off the heat and serve on toast."
+ ],
+ "source": "table-plan"
+}

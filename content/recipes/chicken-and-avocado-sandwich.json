@@ -1,0 +1,33 @@
+{
+ "slug": "chicken-and-avocado-sandwich",
+ "name": "Chicken and Avocado Sandwich",
+ "course": "lunch",
+ "emoji": "🥑",
+ "serves": 1,
+ "status": "live",
+ "ingredients": [
+  {
+   "ingredient": "loaf",
+   "qty": 2
+  },
+  {
+   "ingredient": "roast",
+   "qty": 70
+  },
+  {
+   "ingredient": "avocado",
+   "qty": 0.5
+  },
+  {
+   "ingredient": "salad",
+   "qty": 20
+  }
+ ],
+ "cupboard": [],
+ "cupboard_qty": {},
+ "method": [
+  "Mash the avocado onto the bread.",
+  "Layer on the chicken and salad and close the sandwich."
+ ],
+ "source": "table-plan"
+}

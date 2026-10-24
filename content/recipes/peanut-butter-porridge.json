@@ -1,0 +1,33 @@
+{
+ "slug": "peanut-butter-porridge",
+ "name": "Peanut Butter Porridge",
+ "course": "breakfast",
+ "emoji": "🥜",
+ "serves": 1,
+ "status": "live",
+ "ingredients": [
+  {
+   "ingredient": "oats",
+   "qty": 60
+  },
+  {
+   "ingredient": "milk",
+   "qty": 300
+  },
+  {
+   "ingredient": "pbutter",
+   "qty": 20
+  },
+  {
+   "ingredient": "banana",
+   "qty": 0.5
+  }
+ ],
+ "cupboard": [],
+ "cupboard_qty": {},
+ "method": [
+  "Cook the oats in the milk for 4–5 minutes until creamy.",
+  "Swirl through the peanut butter and top with sliced banana."
+ ],
+ "source": "table-plan"
+}

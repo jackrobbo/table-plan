@@ -1,0 +1,44 @@
+{
+ "slug": "one-pot-chicken-and-rice",
+ "name": "One-Pot Chicken and Rice",
+ "course": "dinner",
+ "emoji": "🍗",
+ "serves": 2,
+ "status": "live",
+ "ingredients": [
+  {
+   "ingredient": "thigh",
+   "qty": 400
+  },
+  {
+   "ingredient": "onions",
+   "qty": 1
+  },
+  {
+   "ingredient": "carrots",
+   "qty": 100
+  },
+  {
+   "ingredient": "peas",
+   "qty": 100
+  }
+ ],
+ "cupboard": [
+  "rice",
+  "stock",
+  "paprika",
+  "oil"
+ ],
+ "cupboard_qty": {
+  "rice": 180,
+  "stock": 10,
+  "paprika": 4,
+  "oil": 10
+ },
+ "method": [
+  "Brown the chicken thighs in the oil in a lidded pan, then add the chopped onion, grated carrot and paprika.",
+  "Stir in the rice and 450 ml hot stock, cover and cook on a low heat for 20 minutes until the rice is tender and the chicken is cooked through.",
+  "Stir through the peas for the last 3 minutes."
+ ],
+ "source": "table-plan"
+}

@@ -1,0 +1,24 @@
+{
+ "slug": "greek-yogurt-and-honey",
+ "name": "Greek Yogurt and Honey",
+ "course": "snack",
+ "emoji": "🍯",
+ "serves": 1,
+ "status": "live",
+ "ingredients": [
+  {
+   "ingredient": "greek",
+   "qty": 150
+  }
+ ],
+ "cupboard": [
+  "honey"
+ ],
+ "cupboard_qty": {
+  "honey": 10
+ },
+ "method": [
+  "Spoon the yogurt into a bowl and drizzle with honey."
+ ],
+ "source": "table-plan"
+}

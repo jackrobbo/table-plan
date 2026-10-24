@@ -1,0 +1,36 @@
+{
+ "slug": "pork-steaks-roast-potatoes-and-veg",
+ "name": "Pork Steaks, Roast Potatoes and Veg",
+ "course": "dinner",
+ "emoji": "🥩",
+ "serves": 2,
+ "status": "live",
+ "ingredients": [
+  {
+   "ingredient": "porkloin",
+   "qty": 300
+  },
+  {
+   "ingredient": "potatoes",
+   "qty": 500
+  },
+  {
+   "ingredient": "mixveg",
+   "qty": 300
+  }
+ ],
+ "cupboard": [
+  "oil",
+  "herbs"
+ ],
+ "cupboard_qty": {
+  "oil": 15,
+  "herbs": 2
+ },
+ "method": [
+  "Heat the oven to 220°C. Toss the chopped potatoes in half the oil and roast for 35–40 minutes.",
+  "Rub the pork steaks with the herbs and the remaining oil, fry for 5–6 minutes each side until cooked through, and rest for 3 minutes.",
+  "Boil the mixed veg for 4 minutes and serve everything together."
+ ],
+ "source": "table-plan"
+}

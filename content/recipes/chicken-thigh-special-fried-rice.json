@@ -1,0 +1,45 @@
+{
+ "slug": "chicken-thigh-special-fried-rice",
+ "name": "Chicken Thigh Special Fried Rice",
+ "course": "dinner",
+ "emoji": "🍳",
+ "serves": 2,
+ "status": "live",
+ "ingredients": [
+  {
+   "ingredient": "thigh",
+   "qty": 350
+  },
+  {
+   "ingredient": "eggs",
+   "qty": 3
+  },
+  {
+   "ingredient": "peas",
+   "qty": 100
+  },
+  {
+   "ingredient": "spring",
+   "qty": 1
+  },
+  {
+   "ingredient": "carrots",
+   "qty": 100
+  }
+ ],
+ "cupboard": [
+  "rice",
+  "soy",
+  "oil"
+ ],
+ "cupboard_qty": {
+  "rice": 140,
+  "soy": 20,
+  "oil": 15
+ },
+ "method": [
+  "Cook and cool the rice. Fry the diced chicken in half the oil for 8 minutes until cooked through, with the grated carrot.",
+  "Push aside, scramble the eggs in the rest of the oil, then add the rice, peas and soy sauce and stir-fry until piping hot. Top with spring onion."
+ ],
+ "source": "table-plan"
+}

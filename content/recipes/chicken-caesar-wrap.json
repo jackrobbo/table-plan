@@ -1,0 +1,35 @@
+{
+ "slug": "chicken-caesar-wrap",
+ "name": "Chicken Caesar Wrap",
+ "course": "lunch",
+ "emoji": "🌯",
+ "serves": 1,
+ "status": "live",
+ "ingredients": [
+  {
+   "ingredient": "wraps",
+   "qty": 1
+  },
+  {
+   "ingredient": "roast",
+   "qty": 80
+  },
+  {
+   "ingredient": "salad",
+   "qty": 40
+  }
+ ],
+ "cupboard": [
+  "parmesan",
+  "mayo"
+ ],
+ "cupboard_qty": {
+  "parmesan": 10,
+  "mayo": 15
+ },
+ "method": [
+  "Stir the parmesan into the mayo for a quick dressing.",
+  "Fill the wrap with the chicken, salad and dressing and roll up."
+ ],
+ "source": "table-plan"
+}
