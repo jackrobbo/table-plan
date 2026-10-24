@@ -16,13 +16,13 @@ export default function SignIn() {
   const router = useRouter();
   const [email, setEmail] = useState('');
   const [sent, setSent] = useState(false);
-  const [digits, setDigits] = useState<string[]>(Array(OTP_LENGTH).fill(''));
+  const [code, setCode] = useState('');
   const [error, setError] = useState('');
   const [isNew, setIsNew] = useState(false);
   const [invite, setInvite] = useState('');
   const [busy, setBusy] = useState(false);
   const [wait, setWait] = useState(0);
-  const boxes = useRef<(HTMLInputElement | null)[]>([]);
+  const codeInput = useRef<HTMLInputElement | null>(null);
 
   useEffect(() => { setIsNew(new URLSearchParams(window.location.search).get('new') === '1'); }, []);
 
@@ -53,8 +53,8 @@ export default function SignIn() {
     try {
       if (needsInvite) { await checkInvite(); track('signup_invite_redeemed'); }
       await getBackend().auth.sendCode(email);
-      setSent(true); setWait(RESEND_SECONDS); setDigits(Array(OTP_LENGTH).fill(''));
-      setTimeout(() => boxes.current[0]?.focus(), 0);
+      setSent(true); setWait(RESEND_SECONDS); setCode('');
+      setTimeout(() => codeInput.current?.focus(), 0);
     } catch (e) { setError((e as Error).message); }
     setBusy(false);
   }
@@ -65,22 +65,17 @@ export default function SignIn() {
       await getBackend().auth.verifyCode(email, code);
       router.replace('/onboarding');
     } catch (e) {
-      setError((e as Error).message); setDigits(Array(OTP_LENGTH).fill('')); boxes.current[0]?.focus();
+      setError((e as Error).message); setCode('');
       setBusy(false);
+      setTimeout(() => codeInput.current?.focus(), 0);
     }
   }
 
-  function onDigit(i: number, v: string) {
-    const clean = v.replace(/\D/g, '');
-    if (clean.length > 1) { // paste of the whole code
-      const next = clean.slice(0, OTP_LENGTH).split('');
-      setDigits([...next, ...Array(OTP_LENGTH - next.length).fill('')]);
-      if (next.length === OTP_LENGTH) void verify(next.join(''));
-      return;
-    }
-    const next = digits.slice(); next[i] = clean; setDigits(next);
-    if (clean && i < 5) boxes.current[i + 1]?.focus();
-    if (next.every(Boolean)) void verify(next.join(''));
+  /** One real input holds the code (typing, paste, backspace and OS autofill all work); the boxes only display it. */
+  function onCode(raw: string) {
+    const v = raw.replace(/\D/g, '').slice(0, OTP_LENGTH);
+    setCode(v);
+    if (v.length === OTP_LENGTH && !busy) void verify(v);
   }
 
   const back = () => (sent ? (setSent(false), setError('')) : router.push('/'));
@@ -104,12 +99,11 @@ export default function SignIn() {
         <>
           <h2>Check your email</h2>
           <p className="sub">Code sent to {email}</p>
-          <div className="otp">
-            {digits.map((d, i) => (
-              <input key={i} ref={(el) => { boxes.current[i] = el; }} value={d} inputMode="numeric"
-                autoComplete={i === 0 ? 'one-time-code' : 'off'} aria-label={`Digit ${i + 1}`}
-                onChange={(e) => onDigit(i, e.target.value)}
-                onKeyDown={(e) => e.key === 'Backspace' && !d && i > 0 && boxes.current[i - 1]?.focus()} />
+          <div className="otp" onClick={() => codeInput.current?.focus()}>
+            <input ref={codeInput} className="otp-input" value={code} onChange={(e) => onCode(e.target.value)} inputMode="numeric"
+              autoComplete="one-time-code" maxLength={OTP_LENGTH * 2} aria-label={`${OTP_LENGTH}-digit sign-in code`} disabled={busy} />
+            {Array.from({ length: OTP_LENGTH }, (_, i) => (
+              <div key={i} className={'otp-box' + (i === Math.min(code.length, OTP_LENGTH - 1) && !busy ? ' active' : '')} aria-hidden>{code[i] ?? ''}</div>
             ))}
           </div>
           {error && <p className="err">{error}</p>}
