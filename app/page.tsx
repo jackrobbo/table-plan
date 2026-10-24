@@ -7,6 +7,7 @@ import { computeTargets } from "@/lib/targets";
 import { buildPlan } from "@/lib/solver";
 import { buildLedger } from "@/lib/ledger";
 import { money } from "@/lib/money";
+import AuthStatus from "@/app/_components/AuthStatus";
 
 const DAYS = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"];
 const COURSES: Array<[string, string]> = [
@@ -54,6 +55,7 @@ export default function Home() {
 
   return (
     <div className="wrap">
+      <AuthStatus />
       <p className="eyebrow">Table Plan · proof of concept</p>
       <h1>Your week, decided.</h1>
       <p className="muted" style={{ marginTop: 8 }}>
