@@ -67,3 +67,11 @@ Set `NEXT_PUBLIC_SUPABASE_URL` and `NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY` (see `
 uses Supabase Auth (email one-time code) and Postgres (`profiles` incl. weeks, `recipes`). Without them it falls back to the
 localStorage mock, which is what tests and the Artifact preview use. Still mocked: billing (until Stripe), and the server-side
 stores for waitlist/invites/subscriptions, which need `SUPABASE_SERVICE_ROLE_KEY` set in the host's environment (never in the repo).
+
+### Stripe sandbox (set up)
+Test-mode product "Table Plan" with prices `table_plan_yearly` (£9.99/yr) and `table_plan_monthly` (£0.99/mo) exist in the
+"Table Plan sandbox" account; ids are in `.env.example`. Checkout params were validated against the real API. Stripe's
+**Managed Payments** (Stripe as merchant of record) is on by default for new accounts and needs a product tax code; the app opts
+out unless `STRIPE_MANAGED_PAYMENTS=1`. Left to do: deploy, create the webhook endpoint (`/api/billing/webhook`, events
+`customer.subscription.created|updated|deleted`), then set `STRIPE_SECRET_KEY`, `STRIPE_WEBHOOK_SECRET` and
+`SUPABASE_SERVICE_ROLE_KEY` in the host's environment.

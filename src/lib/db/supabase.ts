@@ -1,8 +1,8 @@
 import { createClient, type SupabaseClient } from '@supabase/supabase-js';
 import type { Recipe } from '@/data';
-import { createMockBilling } from '../billing/mock';
+import { createSupabaseBilling } from '../billing/supabase';
 import { profileToRow, rowToProfile } from './profileRow';
-import type { AuthService, Backend, KV, ProfileRepo, RecipeRepo, Session } from './types';
+import type { AuthService, Backend, ProfileRepo, RecipeRepo, Session } from './types';
 
 const toSession = (s: { user: { id: string; email?: string | null } } | null): Session | null =>
   s ? { userId: s.user.id, email: s.user.email ?? '' } : null;
@@ -11,8 +11,8 @@ export function createSupabaseClient(url: string, key: string): SupabaseClient {
   return createClient(url, key, { auth: { persistSession: true, autoRefreshToken: true, detectSessionInUrl: false } });
 }
 
-/** Real backend: Supabase Auth (email OTP) + Postgres with row-level security. Billing stays mocked until Stripe is live. */
-export function createSupabaseBackend(sb: SupabaseClient, kv: KV): Backend {
+/** Real backend: Supabase Auth (email OTP) + Postgres with row-level security. Billing reads the Stripe-fed `subscriptions` table. */
+export function createSupabaseBackend(sb: SupabaseClient): Backend {
   const auth: AuthService = {
     async sendCode(email) {
       const { error } = await sb.auth.signInWithOtp({ email: email.trim().toLowerCase(), options: { shouldCreateUser: true } });
@@ -66,5 +66,5 @@ export function createSupabaseBackend(sb: SupabaseClient, kv: KV): Backend {
     },
   };
 
-  return { auth, profiles, recipes, billing: createMockBilling(kv) };
+  return { auth, profiles, recipes, billing: createSupabaseBilling(sb) };
 }

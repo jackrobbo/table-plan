@@ -25,7 +25,7 @@ export default function Subscribe() {
   const cfg = PLANS[plan];
   const go = async () => {
     setBusy(true); setError('');
-    try { await subscribe(plan); track('subscribed', { plan, trial: PLANS[plan].trialDays > 0 }); router.replace('/plan'); } catch { setError('Something went wrong. You have not been charged. Try again.'); setBusy(false); }
+    try { await subscribe(plan); track('subscribed', { plan, trial: PLANS[plan].trialDays > 0 }); router.replace('/plan'); } catch (e) { setError((e as Error).message || 'Something went wrong.'); setBusy(false); }
   };
   const Card = ({ id, tag, sub }: { id: PlanId; tag?: string; sub: string }) => (
     <button className={'plancard' + (plan === id ? ' on' : '')} role="radio" aria-checked={plan === id} onClick={() => setPlan(id)}>

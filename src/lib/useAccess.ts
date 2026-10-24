@@ -11,7 +11,17 @@ export function useAccess(session: Session | null) {
 
   useEffect(() => {
     if (!session) return;
-    getBackend().billing.get(session.userId).then((s) => { setSub(s); setLoaded(true); });
+    let cancelled = false, tries = 0;
+    // Returning from Stripe Checkout (?subscribed=1): the webhook can lag a few seconds, so poll briefly.
+    const justPaid = typeof window !== 'undefined' && new URLSearchParams(window.location.search).get('subscribed') === '1';
+    const load = async () => {
+      const s = await getBackend().billing.get(session.userId);
+      if (cancelled) return;
+      setSub(s); setLoaded(true);
+      if (justPaid && !hasAccess(s) && ++tries < 10) setTimeout(load, 2000);
+    };
+    void load();
+    return () => { cancelled = true; };
   }, [session]);
 
   const run = useCallback(async (f: () => Promise<Subscription>) => { const s = await f(); setSub(s); return s; }, []);

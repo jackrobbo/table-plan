@@ -27,7 +27,7 @@ export async function createCheckoutSession(a: { plan: unknown; user: ServerUser
   const plan: PlanId = a.plan;
   const priceId = a.env[PLANS[plan].stripePriceEnv];
   if (!priceId) return { status: 501, body: { error: `Missing ${PLANS[plan].stripePriceEnv}.` } };
-  const res = await post(a.fetchImpl ?? fetch, key, '/checkout/sessions', checkoutParams(plan, { userId: a.user.id, email: a.user.email, origin: a.origin, priceId }));
+  const res = await post(a.fetchImpl ?? fetch, key, '/checkout/sessions', checkoutParams(plan, { userId: a.user.id, email: a.user.email, origin: a.origin, priceId, managedPayments: a.env.STRIPE_MANAGED_PAYMENTS === '1' }));
   const json = (await res.json()) as { url?: string; error?: { message?: string } };
   return res.ok && json.url ? { status: 200, body: { url: json.url } } : { status: 502, body: { error: json.error?.message ?? 'Could not start checkout.' } };
 }

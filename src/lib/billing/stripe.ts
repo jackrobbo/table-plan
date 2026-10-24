@@ -45,10 +45,13 @@ export function stripeForm(params: Record<string, unknown>, prefix = ''): string
   }).join('&');
 }
 
-export function checkoutParams(plan: PlanId, opts: { userId: string; email: string; origin: string; priceId: string }) {
+export function checkoutParams(plan: PlanId, opts: { userId: string; email: string; origin: string; priceId: string; managedPayments?: boolean }) {
   const cfg = PLANS[plan];
   return {
     mode: 'subscription',
+    // Stripe's Managed Payments (Stripe as merchant of record) is on by default for new accounts and needs a product tax
+    // code. We opt out unless STRIPE_MANAGED_PAYMENTS=1, so pricing and VAT stay as the business decides.
+    ...(opts.managedPayments ? {} : { managed_payments: { enabled: false } }),
     line_items: [{ price: opts.priceId, quantity: 1 }],
     client_reference_id: opts.userId,
     customer_email: opts.email,

@@ -79,6 +79,8 @@ describe('stripe helpers', () => {
   it('puts the trial on yearly only, and ties the user to the subscription server-side', () => {
     const y = checkoutParams('yearly', { userId: 'u1', email: 'a@b.co', origin: 'https://x.test', priceId: 'p_y' });
     expect(y.subscription_data).toMatchObject({ trial_period_days: 7, metadata: { user_id: 'u1', plan: 'yearly' } });
+    expect(y).toMatchObject({ managed_payments: { enabled: false } });
+    expect(checkoutParams('monthly', { userId: 'u1', email: 'a@b.co', origin: 'https://x.test', priceId: 'p_m', managedPayments: true })).not.toHaveProperty('managed_payments');
     expect(checkoutParams('monthly', { userId: 'u1', email: 'a@b.co', origin: 'https://x.test', priceId: 'p_m' }).subscription_data).not.toHaveProperty('trial_period_days');
   });
   it('maps a Stripe subscription, taking the plan from the price id', () => {
@@ -112,6 +114,7 @@ describe('server flows', () => {
     expect(seen!.auth).toBe('Bearer sk_test');
     expect(decodeURIComponent(seen!.body)).toContain('line_items[0][price]=price_m');
     expect(decodeURIComponent(seen!.body)).toContain('client_reference_id=u1');
+    expect(decodeURIComponent(seen!.body)).toContain('managed_payments[enabled]=false');
   });
 
   it('portal: needs a customer', async () => {

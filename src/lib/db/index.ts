@@ -20,7 +20,7 @@ export function getBackend(): Backend {
   if (!backend) {
     let kv: KV;
     try { kv = typeof window !== 'undefined' ? window.localStorage : memory(); } catch { kv = memory(); }
-    backend = isMocked ? createMockBackend(kv) : createSupabaseBackend(createSupabaseClient(SUPABASE_URL!, SUPABASE_KEY!), kv);
+    backend = isMocked ? createMockBackend(kv) : createSupabaseBackend(createSupabaseClient(SUPABASE_URL!, SUPABASE_KEY!));
   }
   return backend;
 }
