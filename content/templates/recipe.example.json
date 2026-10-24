@@ -1,0 +1,17 @@
+{
+  "slug": "chicken-fajitas",
+  "name": "Chicken Fajitas",
+  "course": "dinner",
+  "emoji": "🫑",
+  "serves": 2,
+  "status": "draft",
+  "per_portion": { "kcal": 535, "protein_g": 43, "carbs_g": 52, "fat_g": 14 },
+  "ingredients": [
+    { "ingredient": "breast", "qty": 300 },
+    { "ingredient": "pepper", "qty": 1 },
+    { "ingredient": "onions", "qty": 0.5 },
+    { "ingredient": "wraps", "qty": 4 }
+  ],
+  "cupboard": ["fajita", "oil", "cheddar"],
+  "method": ["Toss chicken strips in fajita seasoning; sear hot.", "Add pepper and onion for 3–4 min; serve with warm tortillas and cheddar."]
+}

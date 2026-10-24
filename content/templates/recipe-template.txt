@@ -1,0 +1,25 @@
+RECIPE TEMPLATE — copy this block once per meal and fill it in. Paste as many as you like; any tidy format is fine.
+
+Name:            Chicken Fajitas
+Meal type:       breakfast | lunch | dinner | snack
+Serves:          2                       (how many portions the ingredient quantities make)
+Per portion:     535 kcal | 43 g protein | 52 g carbs | 14 g fat     (carbs and fat optional)
+Cook time:       25 min                  (optional)
+Macros only?     no                      (yes = eating out / ready meal, so no ingredients needed)
+
+Ingredients (whole recipe, with units):
+- 300 g chicken breast
+- 1 red pepper
+- 0.5 onion
+- 4 tortilla wraps
+
+Cupboard items (staples, no quantity needed):
+- fajita seasoning
+- oil
+- cheddar
+
+Method:
+1. Toss chicken strips in fajita seasoning; sear hot.
+2. Add pepper and onion for 3–4 min; serve with warm tortillas and cheddar.
+
+Notes (optional): where the recipe came from, allergen quirks, swaps.
