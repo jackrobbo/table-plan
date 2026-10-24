@@ -1,4 +1,4 @@
-import type { Plan } from './planner/types';
+import type { Weeks } from './cycle/week';
 import type { Allergen } from './allergens';
 import type { Goal, Sex, Stats } from './targets';
 import type { HeightUnit, WeightUnit } from './units';
@@ -32,8 +32,10 @@ export interface Profile {
   skippedRecipes: string[];
   step: OnboardingStep;
   completed: boolean;
-  /** The generated week (M4). Null until first generated; replaced on regenerate. */
-  plan: Plan | null;
+  /** Weekly cycle (M5): every week the user can see, keyed by Monday. */
+  weeks: Weeks;
+  /** Reminder opt-in, and which nudges have already been shown (`${week}:${kind}`). */
+  reminders: { on: boolean; shown: string[] };
 }
 
 export const emptyProfile = (): Profile => ({
@@ -54,7 +56,8 @@ export const emptyProfile = (): Profile => ({
   skippedRecipes: [],
   step: 'goal',
   completed: false,
-  plan: null,
+  weeks: {},
+  reminders: { on: false, shown: [] },
 });
 
 export type { Goal, Sex };

@@ -33,3 +33,14 @@ floor ("days never fail"): cooked meals are resized (80–140%), snacks auto-fil
 needed; resized/topped-up days are flagged. Several candidate weeks are built and the cheapest shopping list (least
 pack waste) wins. Macros-only meals reserve calories. Targets above ~2,500 kcal exceed what the current 31-recipe bank
 can reach; those days are flagged honestly rather than faked. Protein is capped at 35% of calories (provisional).
+
+## Weekly cycle (M5)
+`src/lib/cycle`: weeks are keyed by Monday (Europe/London, DST-safe). Stored status is what the user did
+(`open | in_progress | planned | shopped | skipped`); `effectiveStatus` derives `locked | to_plan | missed | active | done` from
+the clock, so no background job is needed. Picking opens Monday 00:00 the week before and closes at midnight Sunday; only
+one week is "to plan" at a time (skipping opens the next early); a missed week is never auto-picked; the first week always
+starts the next Monday. UI: `/plan` (This week | Upcoming, ticks, recipe sheet, ingredients before the week starts) and
+`/plan/next` (Set up → Pick → Review → List, saved as you go). Reminders (Mon 09:00 "open", Sun 16:00 "last chance") are
+computed in `reminders.ts` and shown in-app when due; true push while the app is closed needs a server (VAPID + a
+`push_subscriptions` table + scheduled job), not built yet. Deferred per the cut line: Friday summary, weekend add,
+"New for you", swap sheet, richer profile-edit-with-impact.

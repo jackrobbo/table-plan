@@ -1,72 +1,36 @@
 'use client';
-import { useEffect, useMemo } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 import { useRouter } from 'next/navigation';
-import { RECIPES } from '@/data';
 import PriceNote from '@/components/PriceNote';
 import Screen from '@/components/Screen';
+import { DayCard, RecipeSheet, ShoppingList, listAsText, money, recipeById } from '@/components/week';
+import { addDays, dayLabel, londonDate, weekLabel } from '@/lib/cycle/dates';
+import { dueReminders } from '@/lib/cycle/reminders';
+import { badgeCount, effectiveStatus, ensureWeeks, firstWeek, opensAt, saveList, skipWeek, snapshot, toggleTick, undoSkip, type Week, type WeekStatus } from '@/lib/cycle/week';
 import { getBackend } from '@/lib/db';
 import { planInputFrom } from '@/lib/planner/fromProfile';
 import { buildShopping } from '@/lib/planner/shopping';
 import { planWeek } from '@/lib/planner/solve';
-import type { PlannedDay, PlannedMeal } from '@/lib/planner/types';
+import { PRICES_META } from '@/data';
+import { shortDate } from '@/lib/pricing/refresh';
 import { computeTargets } from '@/lib/targets';
+import { useNow } from '@/lib/useNow';
 import { useProfile } from '@/lib/useProfile';
 
-const recipeById = new Map(RECIPES.map((r) => [r.id, r]));
-const SLOT_LABEL: Record<string, string> = { breakfast: 'Breakfast', lunch: 'Lunch', snack: 'Snack', dinner: 'Dinner' };
-const money = (p: number) => '£' + (p / 100).toFixed(2);
-
-/** First day of the next full Mon–Fri week, e.g. "Mon 2 Nov". */
-function nextMonday(now = new Date()) {
-  const d = new Date(now);
-  d.setDate(d.getDate() + ((8 - d.getDay()) % 7 || 7));
-  return d.toLocaleDateString('en-GB', { weekday: 'short', day: 'numeric', month: 'short' });
-}
-
-function MealRow({ m }: { m: PlannedMeal }) {
-  const r = recipeById.get(m.recipeId)!;
-  return (
-    <div className="meal">
-      <span className="slot">{SLOT_LABEL[m.slot]}</span>
-      <div className="mbody">
-        <div className="mname">{r.e} {r.n}</div>
-        <div className="tags">
-          <span className="p">P {m.protein}g</span><span>{m.kcal} kcal</span>
-          {Math.abs(m.scale - 1) >= 0.02 && <span className="adj">Portion {Math.round(m.scale * 100)}%</span>}
-          {m.extra > 0 && <span>+{m.extra} to share</span>}
-        </div>
-      </div>
-    </div>
-  );
-}
-
-function DayCard({ d }: { d: PlannedDay }) {
-  return (
-    <section className={'daycard' + (d.adjusted ? ' adjusted' : '')} aria-label={d.day}>
-      <header>
-        <h3>{d.day}</h3>
-        <span className="daytot"><i className={'dot' + (d.inBand ? '' : ' amber')} />{d.protein}g protein · {d.kcal.toLocaleString('en-GB')} kcal</span>
-      </header>
-      {d.meals.map((m, i) => <MealRow key={i} m={m} />)}
-      {d.topups.map((t) => (
-        <div className="meal" key={t.n}>
-          <span className="slot">Top-up</span>
-          <div className="mbody">
-            <div className="mname">{t.n}</div>
-            <div className="tags"><span className="p">P {t.p}g</span><span>{t.k} kcal</span><span className="adj">Added to hit your day</span></div>
-          </div>
-        </div>
-      ))}
-      {d.reserved.kcal > 0 && (
-        <p className="muted reserved">{d.reserved.kcal} kcal and {d.reserved.protein}g protein kept for meals you sort yourself.</p>
-      )}
-    </section>
-  );
-}
+const STATE_COPY: Record<WeekStatus, string> = {
+  locked: 'Not open yet', to_plan: 'To plan', in_progress: 'In progress', planned: 'Planned', shopped: 'Planned', active: 'Cooking',
+  done: 'Done', skipped: 'Skipped', missed: 'Missed',
+};
 
 export default function Plan() {
   const router = useRouter();
+  const now = useNow();
   const { session, profile, ready, update } = useProfile();
+  const [tab, setTab] = useState<'this' | 'upcoming'>('this');
+  const [sub, setSub] = useState<'plan' | 'ingredients' | 'recipes'>('plan');
+  const [picked, setPicked] = useState<string | null>(null);
+  const [sheet, setSheet] = useState<string | null>(null);
+  const [copied, setCopied] = useState<string | null>(null);
 
   useEffect(() => {
     if (!ready) return;
@@ -74,54 +38,188 @@ export default function Plan() {
     else if (profile && !profile.completed) router.replace('/onboarding');
   }, [ready, session, profile, router]);
 
-  const needsPlan = ready && !!profile?.completed && !profile.plan;
+  // The first week is always the next Monday (never an empty state); then keep the visible weeks up to date.
+  const weeksKey = profile ? Object.keys(profile.weeks).length : 0;
   useEffect(() => {
-    if (needsPlan) update((p) => ({ ...p, plan: planWeek(planInputFrom(p)) }));
-  }, [needsPlan, update]);
+    if (!ready || !profile?.completed) return;
+    update((p) => {
+      if (!Object.keys(p.weeks).length) {
+        const w = firstWeek(planWeek(planInputFrom(p)), now);
+        return { ...p, weeks: ensureWeeks({ [w.start]: w }, now) };
+      }
+      const next = ensureWeeks(p.weeks, now);
+      return Object.keys(next).length === Object.keys(p.weeks).length ? p : { ...p, weeks: next };
+    });
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [ready, profile?.completed, weeksKey, now.toDateString()]);
 
-  const plan = profile?.plan ?? null;
-  const shopping = useMemo(() => (plan?.days.length ? buildShopping(plan) : null), [plan]);
+  const weeks = profile?.weeks ?? {};
+  const snap = useMemo(() => snapshot(weeks, now), [weeks, now]);
+  const due = useMemo(() => (profile ? dueReminders(weeks, now, profile.reminders.shown)[0] : undefined), [weeks, now, profile]);
 
-  if (!ready || !profile?.completed || !session || !plan) return <Screen><p className="muted">Building your week…</p></Screen>;
+  if (!ready || !profile?.completed || !session || !snap.thisWeek) {
+    return (
+      <Screen><div className="skeleton-stack" aria-busy="true" aria-label="Building your week">
+        <div className="skeleton sk-title" /><div className="skeleton sk-line" /><div className="skeleton sk-card" /><div className="skeleton sk-card" />
+      </div></Screen>
+    );
+  }
+
   const t = computeTargets(profile.goal ?? 'lose', profile.stats);
+  const week = snap.thisWeek;
+  const wst = effectiveStatus(weeks, week, now);
+  const started = wst === 'active' || wst === 'done';
+  const finished = wst === 'done';
+  const plan = week.plan!;
+  const shopping = buildShopping(plan);
+  const badge = badgeCount(snap);
+  const upcomingSel = snap.upcoming.find((x) => x.week.start === (picked ?? snap.toPlan?.start ?? snap.upcoming[0]?.week.start)) ?? snap.upcoming[0];
+
+  const copy = async (text: string, key: string) => {
+    try { await navigator.clipboard.writeText(text); setCopied(key); } catch { setCopied('fail:' + text); }
+  };
+  const dismiss = () => due && update((p) => ({ ...p, reminders: { ...p.reminders, shown: [...p.reminders.shown, `${due.week}:${due.kind}`] } }));
+  const enableReminders = async () => {
+    try { if (typeof Notification !== 'undefined') await Notification.requestPermission(); } catch { /* optional */ }
+    update((p) => ({ ...p, reminders: { ...p.reminders, on: true } }));
+  };
 
   return (
     <Screen footer={<>
-      <button className="btn ghost" onClick={() => update((p) => ({ ...p, plan: planWeek(planInputFrom(p), 24, Math.floor(Math.random() * 1e6)) }))}>
-        Shuffle my week
-      </button>
-      <button className="linkbtn" onClick={() => update((p) => ({ ...p, completed: false, step: 'goal', plan: null }))}>Edit my answers</button>
+      <button className="linkbtn" onClick={() => update((p) => ({ ...p, completed: false, step: 'goal', weeks: {} }))}>Edit my answers</button>
       <button className="linkbtn" onClick={async () => { await getBackend().auth.signOut(); router.replace('/'); }}>Sign out ({session.email})</button>
     </>}>
-      <h1>Here&apos;s your first week</h1>
-      <p className="sub">
-        Starts {nextMonday()}. Built from what you like, kept inside {t.band[0].toLocaleString('en-GB')}–{t.band[1].toLocaleString('en-GB')} kcal
-        and ≥{t.protein}g protein a day.
-      </p>
-      <div className="legend"><span><i className="dot" />in band</span><span><i className="dot amber" />resized, topped up or off target</span></div>
-      {plan.issues.map((i) => <div key={i} className="estimate-flag">{i}</div>)}
-      {plan.days.map((d) => <DayCard key={d.day} d={d} />)}
+      <p className="step">Welcome back</p>
+      <div className="switch" role="tablist">
+        <button role="tab" aria-selected={tab === 'this'} className={tab === 'this' ? 'on' : ''} onClick={() => setTab('this')}>This week</button>
+        <button role="tab" aria-selected={tab === 'upcoming'} className={tab === 'upcoming' ? 'on' : ''} onClick={() => setTab('upcoming')}>
+          Upcoming{badge > 0 && <span className="badge">{badge}</span>}
+        </button>
+      </div>
 
-      {shopping && (
-        <>
-          <h2 style={{ marginTop: 28 }}>Your shopping list</h2>
-          <PriceNote totalPence={shopping.totalPence} />
-          <div className="card list">
-            {shopping.lines.map((l) => (
-              <div className="line" key={l.key}>
-                <div>
-                  <b>{l.name}{l.packs > 1 ? ` ×${l.packs}` : ''}</b>
-                  <div className="muted">{l.usedBy.slice(0, 3).join(', ')}</div>
-                  {l.status && l.status !== 'ok' && <div className="flag">May be unavailable at the moment</div>}
-                </div>
-                <span className="price">{money(l.costPence)}</span>
-              </div>
+      {due && (
+        <div className="reminder" role="status">
+          <div><b>{due.title}</b><div>{due.body}</div></div>
+          <div className="row2">
+            <button className="btn inline small" onClick={() => { dismiss(); setTab('upcoming'); }}>Plan now</button>
+            <button className="linkbtn" onClick={dismiss}>Dismiss</button>
+          </div>
+        </div>
+      )}
+
+      {tab === 'this' && (
+        <div className="fade" key="this">
+          <h1>{finished ? 'Last week' : started ? 'This week' : Object.keys(weeks).length > 3 ? 'Next up' : 'Your first week'} <span className="wk">{weekLabel(week.start)}</span></h1>
+          <p className="sub">
+            {finished ? 'Nothing is planned for this week. Plan the next one from Upcoming.' : started ? `Kept inside ${t.band[0].toLocaleString('en-GB')}–${t.band[1].toLocaleString('en-GB')} kcal and ≥${t.protein}g protein a day.`
+              : `Starts Mon ${dayLabel(week.start)}. Built from what you like, inside ${t.band[0].toLocaleString('en-GB')}–${t.band[1].toLocaleString('en-GB')} kcal and ≥${t.protein}g protein a day.`}
+          </p>
+          <div className="seg2">
+            <button className={sub === 'plan' ? 'on' : ''} onClick={() => setSub('plan')}>Plan</button>
+            {!started && <button className={sub === 'ingredients' ? 'on' : ''} onClick={() => setSub('ingredients')}>Ingredients</button>}
+            <button className={sub === 'recipes' ? 'on' : ''} onClick={() => setSub('recipes')}>Recipes</button>
+          </div>
+
+          {sub === 'plan' && <>
+            {plan.issues.map((i) => <div key={i} className="estimate-flag">{i}</div>)}
+            {plan.days.map((d, i) => (
+              <DayCard key={d.day} d={d} index={i} ticks={started ? week.ticks : undefined} onOpen={setSheet}
+                onTick={started && !finished ? (k) => update((p) => ({ ...p, weeks: toggleTick(p.weeks, week.start, k) })) : undefined} />
+            ))}
+          </>}
+
+          {sub === 'ingredients' && !started && <>
+            <PriceNote totalPence={shopping.totalPence} />
+            <ShoppingList shopping={shopping} have={week.haveAlready}
+              onToggle={(k) => update((p) => { const w = p.weeks[week.start]; const have = w.haveAlready.includes(k) ? w.haveAlready.filter((x) => x !== k) : [...w.haveAlready, k]; return { ...p, weeks: { ...p.weeks, [week.start]: { ...w, haveAlready: have } } }; })} />
+            <div className="note"><b>Store cupboard check.</b> Buy only if you&apos;re out:<br />{shopping.cupboard.join(' · ')}</div>
+            <button className="btn" onClick={() => copy(listAsText(plan, week.haveAlready, `Estimated Morrisons prices, checked ${PRICES_META.checkedAt ? shortDate(PRICES_META.checkedAt) : 'not yet'}`), 'this')}>
+              Save to Notes (copy list)
+            </button>
+            {copied === 'this' && <p className="muted" role="status">Copied. Paste it into Notes.</p>}
+            {copied?.startsWith('fail:') && <textarea className="copybox" readOnly value={copied.slice(5)} onFocus={(e) => e.currentTarget.select()} />}
+          </>}
+
+          {sub === 'recipes' && (
+            <div className="rgrid">
+              {[...new Set(plan.days.flatMap((d) => d.meals.map((m) => m.recipeId)))].map((id) => {
+                const r = recipeById.get(id)!;
+                const days = plan.days.filter((d) => d.meals.some((m) => m.recipeId === id)).map((d) => d.day.slice(0, 3));
+                return (
+                  <button key={id} className="rcard" onClick={() => setSheet(id)}>
+                    <span className="emoji">{r.e}</span><span className="nm">{r.n}</span><span className="muted">{days.join(' · ')}</span>
+                  </button>
+                );
+              })}
+            </div>
+          )}
+
+          {!profile.reminders.on && (
+            <div className="card remind-card">
+              <h3>Never miss a week</h3>
+              <p className="muted">Monday: next week&apos;s meals are open. Sunday 4pm: last chance, pick by midnight.</p>
+              <button className="btn ghost" onClick={enableReminders}>Turn on reminders</button>
+            </div>
+          )}
+          {profile.reminders.on && <p className="muted">Reminders are on. For now they appear when you open Table Plan; alerts while the app is closed need the server side, coming next.</p>}
+        </div>
+      )}
+
+      {tab === 'upcoming' && (
+        <div className="fade" key="up">
+          <h1>Upcoming</h1>
+          <div className="chips weekchips">
+            {snap.upcoming.map(({ week: w, status }) => (
+              <button key={w.start} className={'chip lg' + (upcomingSel?.week.start === w.start ? ' on' : '') + (status === 'to_plan' || status === 'in_progress' ? ' amber-dot' : '')} onClick={() => setPicked(w.start)}>
+                {weekLabel(w.start)}<small>{STATE_COPY[status]}</small>
+              </button>
             ))}
           </div>
-          <p className="muted">≈ {money(Math.round(shopping.totalPence / 5))} a day, before anything you already have.</p>
-          <div className="note"><b>Store cupboard check.</b> Staples this week dips into; buy only if you&apos;re out:<br />{shopping.cupboard.join(' · ')}</div>
-        </>
+          {upcomingSel && <UpcomingCard week={upcomingSel.week} status={upcomingSel.status} weeks={weeks} now={now}
+            onPlan={() => router.push('/plan/next')}
+            onSkip={() => update((p) => ({ ...p, weeks: skipWeek(p.weeks, upcomingSel.week.start, now) }))}
+            onUndo={() => update((p) => ({ ...p, weeks: undoSkip(p.weeks, upcomingSel.week.start, now) }))}
+            onCopy={(text) => copy(text, upcomingSel.week.start)} copied={copied} onOpen={setSheet}
+            onToggleHave={(k) => update((p) => { const w = p.weeks[upcomingSel.week.start]; const have = w.haveAlready.includes(k) ? w.haveAlready.filter((x) => x !== k) : [...w.haveAlready, k]; return { ...p, weeks: saveList({ ...p.weeks, [w.start]: { ...w, haveAlready: have } }, w.start, have, w.checkout ?? 'notes') }; })} />}
+        </div>
       )}
+      <RecipeSheet id={sheet} onClose={() => setSheet(null)} portions={1} />
     </Screen>
+  );
+}
+
+function UpcomingCard({ week, status, weeks, now, onPlan, onSkip, onUndo, onCopy, copied, onOpen, onToggleHave }: {
+  week: Week; status: WeekStatus; weeks: Record<string, Week>; now: Date; onPlan: () => void; onSkip: () => void; onUndo: () => void;
+  onCopy: (t: string) => void; copied: string | null; onOpen: (id: string) => void; onToggleHave: (k: string) => void;
+}) {
+  const deadline = `midnight Sun ${dayLabel(addDays(week.start, -1))}`;
+  if (status === 'locked') return <div className="card"><h3>{weekLabel(week.start)}</h3><p className="muted" style={{ margin: 0 }}>Opens Mon {dayLabel(londonDate(opensAt(weeks, week.start)))}. Only one week is open to plan at a time.</p></div>;
+  if (status === 'missed') return <div className="card"><h3>{weekLabel(week.start)} · Missed</h3><p className="muted" style={{ margin: 0 }}>The deadline passed, so nothing was picked for you. You can plan the next week as normal.</p></div>;
+  if (status === 'skipped') return <div className="card"><h3>{weekLabel(week.start)} · Skipped</h3><p className="muted">You skipped this week.</p><button className="btn ghost" onClick={onUndo}>Undo skip</button></div>;
+  if (status === 'to_plan' || status === 'in_progress') {
+    return (
+      <div className="card">
+        <h3>Plan {weekLabel(week.start)}</h3>
+        <p className="muted">Pick by {deadline}. Cooking starts the next day.</p>
+        {status === 'in_progress' && <p className="note">In progress · {week.picks.length} picked</p>}
+        <button className="btn" onClick={onPlan}>{status === 'in_progress' ? 'Continue' : 'Plan this week'}</button>
+        <button className="linkbtn" style={{ marginTop: 6 }} onClick={onSkip}>Skip this week</button>
+      </div>
+    );
+  }
+  const plan = week.plan!;
+  const shopping = buildShopping(plan);
+  return (
+    <div>
+      <p className="muted">Planned. Starts Mon {dayLabel(week.start)}.</p>
+      {plan.days.map((d, i) => <DayCard key={d.day} d={d} index={i} onOpen={onOpen} />)}
+      <h2 style={{ marginTop: 22 }}>Ingredients</h2>
+      <PriceNote totalPence={shopping.totalPence} />
+      <ShoppingList shopping={shopping} have={week.haveAlready} onToggle={onToggleHave} />
+      <p className="muted">{shopping.lines.length - week.haveAlready.length} items · ≈ {money(shopping.lines.filter((l) => !week.haveAlready.includes(l.key)).reduce((a, l) => a + l.costPence, 0))}</p>
+      <button className="btn" onClick={() => onCopy(listAsText(plan, week.haveAlready, `Estimated Morrisons prices, checked ${PRICES_META.checkedAt ? shortDate(PRICES_META.checkedAt) : 'not yet'}`))}>Save to Notes (copy list)</button>
+      {copied === week.start && <p className="muted" role="status">Copied. Paste it into Notes.</p>}
+      {copied?.startsWith('fail:') && <textarea className="copybox" readOnly value={copied.slice(5)} onFocus={(e) => e.currentTarget.select()} />}
+    </div>
   );
 }

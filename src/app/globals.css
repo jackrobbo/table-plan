@@ -171,3 +171,73 @@ a.linkbtn{text-decoration:none;}
 .list{padding:4px 16px;} .line{display:flex; justify-content:space-between; gap:12px; padding:12px 0; border-bottom:1px solid var(--line);} .line:last-child{border-bottom:0;}
 .line .price{font-variant-numeric:tabular-nums; font-weight:600; white-space:nowrap;} .line b{font-size:15px; font-weight:600;}
 .flag{color:var(--warn-ink); font-size:12px; font-weight:600;}
+
+/* ---- tabs, badge, reminder ---- */
+.switch{display:flex; background:var(--fill); border-radius:10px; padding:2px; margin:0 0 16px;}
+.switch button{flex:1; min-height:36px; border:0; background:none; border-radius:8px; font-size:14px; font-weight:500; cursor:pointer; display:inline-flex; align-items:center; justify-content:center; gap:6px; transition:background .18s, box-shadow .18s;}
+.switch button.on{background:var(--card); font-weight:600; box-shadow:0 1px 3px rgba(0,0,0,.14);}
+.badge{background:var(--warn); color:#1c1300; border-radius:99px; min-width:18px; height:18px; padding:0 5px; font-size:11px; font-weight:700; display:inline-grid; place-items:center;}
+.wk{font-size:15px; font-weight:500; color:var(--ink2); letter-spacing:0;}
+.reminder{background:var(--warn-soft); color:var(--warn-ink); border-radius:var(--radius); padding:12px 14px; margin:0 0 14px; display:flex; justify-content:space-between; align-items:center; gap:10px; font-size:14px;}
+.reminder .row2{display:flex; align-items:center; gap:2px; flex:none;}
+.btn.small{min-height:36px; font-size:14px; padding:0 14px; border-radius:10px;}
+.weekchips{flex-wrap:nowrap; overflow-x:auto; padding-bottom:4px; margin:10px -20px 14px; padding-inline:20px; scrollbar-width:none;}
+.weekchips .chip{flex:none; display:flex; flex-direction:column; align-items:flex-start; gap:0; line-height:1.25; padding:6px 14px;}
+.weekchips .chip small{font-size:11px; font-weight:500; opacity:.7;}
+.weekchips .chip.amber-dot::after{content:''; width:7px; height:7px; border-radius:50%; background:var(--warn); position:absolute; margin:-2px 0 0 -4px;}
+.weekchips .chip{position:relative;}
+.remind-card{margin-top:18px;} .remind-card .btn{margin-top:6px;}
+.copybox{width:100%; min-height:140px; margin-top:10px; border:0; border-radius:var(--radius-sm); padding:12px; font:13px/1.4 var(--mono); background:var(--card); color:var(--ink);}
+
+/* ---- ticks, meal rows, sheet, lists ---- */
+.mbody.linkish{background:none; border:0; padding:0; text-align:left; cursor:pointer; font:inherit; color:inherit; border-radius:8px;}
+.mbody.linkish:disabled{cursor:default;}
+.tick{flex:none; width:28px; height:28px; border-radius:50%; border:1.5px solid var(--ink3); background:none; color:transparent; display:grid; place-items:center; cursor:pointer; padding:0; align-self:center; transition:background .18s, border-color .18s, color .18s, transform .18s;}
+.tick svg{width:16px; height:16px;}
+.tick.on{background:var(--ok); border-color:var(--ok); color:#fff; transform:scale(1.04);}
+.daycard.done{opacity:.7; border-left-color:var(--ink3);}
+.line.got .lbody{opacity:.45; text-decoration:line-through;}
+.line{align-items:center;} .line .lbody{flex:1; min-width:0;}
+.line .tick{margin-right:2px;}
+.rgrid{display:grid; grid-template-columns:repeat(2,1fr); gap:10px; margin:10px 0 18px;}
+.rcard{background:var(--card); border:1.5px solid transparent; border-radius:var(--radius); padding:12px; text-align:left; cursor:pointer; display:flex; flex-direction:column; gap:2px; transition:border-color .18s, transform .18s;}
+.rcard .emoji{font-size:28px;} .rcard .nm{font-weight:600; font-size:14px; line-height:1.25;}
+.rcard.on{border-color:var(--ok); background:var(--ok-soft);}
+.coursehead{display:flex; justify-content:space-between; align-items:baseline; margin:18px 0 0;}
+.coursehead .need{font-size:12px; color:var(--ink2); font-variant-numeric:tabular-nums;} .coursehead .need.ok{color:var(--ok-ink); font-weight:600;}
+.sheet-wrap{position:fixed; inset:0; background:rgba(0,0,0,.4); display:flex; align-items:flex-end; justify-content:center; z-index:50; animation:fadeIn .2s ease;}
+.sheet{background:var(--bg); width:100%; max-width:430px; max-height:88dvh; overflow:auto; border-radius:20px 20px 0 0; padding:10px 20px max(20px,env(safe-area-inset-bottom,0px)); animation:slideUp .26s cubic-bezier(.2,.8,.2,1);}
+.sheet .grab{width:36px; height:5px; border-radius:3px; background:var(--ink3); margin:0 auto 12px;}
+.sheet-hero{height:110px; border-radius:var(--radius); background:var(--fill); display:grid; place-items:center; font-size:56px; margin-bottom:12px;}
+ul.plain,ol.plain{margin:6px 0 10px; padding-left:20px; font-size:15px;} ul.plain li,ol.plain li{margin-bottom:4px;}
+
+/* ---- skeleton loading ---- */
+.skeleton{background:linear-gradient(90deg,var(--fill) 25%,rgba(128,128,128,.08) 37%,var(--fill) 63%); background-size:400% 100%; animation:shimmer 1.4s ease infinite; border-radius:var(--radius-sm);}
+.skeleton-stack{display:grid; gap:12px; padding-top:var(--tap);}
+.sk-title{height:34px; width:70%;} .sk-line{height:16px; width:90%;} .sk-card{height:150px; border-radius:var(--radius);}
+
+/* ---- motion + hover (all gated) ---- */
+@keyframes shimmer{from{background-position:100% 50%} to{background-position:0 50%}}
+@keyframes fadeIn{from{opacity:0} to{opacity:1}}
+@keyframes slideUp{from{transform:translateY(24px); opacity:.6} to{transform:none; opacity:1}}
+@keyframes rise{from{opacity:0; transform:translateY(8px)} to{opacity:1; transform:none}}
+.screen main{animation:rise .28s ease both;}
+.fade{animation:rise .24s ease both;}
+.daycard,.card{transition:transform .18s ease, box-shadow .18s ease;}
+.btn,.opt,.chip,.rcard,.linkbtn,.tick,.swipebtns button,.seg2 button,.tabs button{transition:background .15s ease, transform .12s ease, border-color .15s ease, opacity .15s ease;}
+.btn:active:not(:disabled),.opt:active,.rcard:active,.swipebtns button:active{transform:scale(.98);}
+.progress .seg{transition:background .3s ease;}
+@media (hover:hover){
+  .btn:hover:not(:disabled){opacity:.88;}
+  .btn.ghost:hover:not(:disabled){background:rgba(118,118,128,.24); opacity:1;}
+  .opt:hover{border-color:var(--ink3);} .opt.on:hover{border-color:var(--ink);}
+  .chip:hover:not(.on){background:var(--fill);} .rcard:hover{border-color:var(--ink3);} .rcard.on:hover{border-color:var(--ok);}
+  .linkbtn:hover:not(:disabled){color:var(--ink);} .back:hover{opacity:.6;}
+  .tick:not(.on):hover{border-color:var(--ink);} .mbody.linkish:not(:disabled):hover .mname{text-decoration:underline;}
+  .switch button:not(.on):hover,.seg2 button:not(.on):hover,.tabs button:not(.on):hover{background:rgba(118,118,128,.12);}
+  .swipebtns button:hover{opacity:.85;}
+}
+@media (prefers-reduced-motion: reduce){
+  *,*::before,*::after{animation-duration:.001ms !important; animation-iteration-count:1 !important; transition-duration:.001ms !important; scroll-behavior:auto !important;}
+  .skeleton{animation:none;}
+}
