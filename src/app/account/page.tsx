@@ -16,6 +16,9 @@ export default function Account() {
   const { sub, loaded, access, cancel, resume } = useAccess(session);
   const [confirmDelete, setConfirmDelete] = useState(false);
   const [confirmRestart, setConfirmRestart] = useState(false);
+  const [deleting, setDeleting] = useState(false);
+  const [deleteError, setDeleteError] = useState<string | null>(null);
+  const [exportState, setExportState] = useState<'idle' | 'working' | 'done' | string>('idle');
   const [fb, setFb] = useState('');
   const [fbState, setFbState] = useState<'idle' | 'sent' | string>('idle');
 
@@ -30,7 +33,21 @@ export default function Account() {
       if (r.ok) { setFbState('sent'); setFb(''); } else setFbState(j.error ?? 'Could not send feedback.');
     } catch { setFbState('Could not send feedback. Check your connection.'); }
   };
-  const wipe = async () => { await getBackend().profiles.erase(session.userId); await getBackend().auth.signOut(); router.replace('/'); };
+  const wipe = async () => {
+    setDeleting(true); setDeleteError(null);
+    try { await getBackend().account.deleteAccount(session.userId); router.replace('/'); }
+    catch (e) { setDeleteError(e instanceof Error ? e.message : 'Could not delete your account. Try again.'); setDeleting(false); }
+  };
+  const download = async () => {
+    setExportState('working');
+    try {
+      const json = await getBackend().account.exportData(session.userId);
+      const url = URL.createObjectURL(new Blob([json], { type: 'application/json' }));
+      const a = Object.assign(document.createElement('a'), { href: url, download: 'table-plan-data.json' });
+      document.body.appendChild(a); a.click(); a.remove(); URL.revokeObjectURL(url);
+      setExportState('done');
+    } catch (e) { setExportState(e instanceof Error ? e.message : 'Could not prepare your data. Try again.'); }
+  };
 
   return (
     <Screen onBack={() => router.push('/plan')} backLabel="My week">
@@ -72,12 +89,16 @@ export default function Account() {
 
       <div className="card" style={{ marginTop: 12 }}>
         <h3>Your data</h3>
-        <p className="muted">Your height, weight, age and sex are optional and only used to size your target. You can delete everything at any time.</p>
+        <p className="muted">Your height, weight, age and sex are optional and only used to size your target. You can take a copy of everything we hold, or delete it, at any time.</p>
+        <button className="btn ghost" disabled={exportState === 'working'} onClick={download}>{exportState === 'working' ? 'Preparing…' : 'Download my data'}</button>
+        {exportState === 'done' && <p className="muted" role="status">Saved as table-plan-data.json.</p>}
+        {exportState !== 'idle' && exportState !== 'done' && exportState !== 'working' && <p className="err">{exportState}</p>}
         {!confirmDelete
-          ? <button className="btn ghost" onClick={() => setConfirmDelete(true)}>Delete my data</button>
-          : <><p className="err">This removes your profile, plans and answers from this device. It can&apos;t be undone.</p>
-              <button className="btn" onClick={wipe}>Yes, delete everything</button>
-              <button className="linkbtn" onClick={() => setConfirmDelete(false)}>Keep my data</button></>}
+          ? <button className="linkbtn" onClick={() => setConfirmDelete(true)}>Delete my account</button>
+          : <><p className="err">This cancels your subscription and permanently deletes your account, plans, answers and feedback. Stripe keeps the payment records the law requires. It can&apos;t be undone.</p>
+              {deleteError && <p className="err" role="alert">{deleteError}</p>}
+              <button className="btn" disabled={deleting} onClick={wipe}>{deleting ? 'Deleting…' : 'Yes, delete everything'}</button>
+              <button className="linkbtn" disabled={deleting} onClick={() => { setConfirmDelete(false); setDeleteError(null); }}>Keep my account</button></>}
       </div>
       <div className="card" style={{ marginTop: 12 }}>
         <h3>Your answers</h3>

@@ -29,7 +29,15 @@ export interface ProfileRepo {
 /** Read side of the recipe bank. Real backend queries `recipes where status = 'live'`. */
 export interface RecipeRepo { listLive(): Promise<Recipe[]> }
 
-export interface Backend { auth: AuthService; profiles: ProfileRepo; recipes: RecipeRepo; billing: BillingService }
+/** Taking your data with you, and leaving. */
+export interface AccountService {
+  /** Everything held about the signed-in person, as JSON text ready to save as a file. */
+  exportData(userId: string): Promise<string>;
+  /** Cancels any subscription and erases the account, profile and plans. Rejects with a message fit to show if it couldn't. */
+  deleteAccount(userId: string): Promise<void>;
+}
+
+export interface Backend { auth: AuthService; profiles: ProfileRepo; recipes: RecipeRepo; billing: BillingService; account: AccountService }
 
 export interface KV {
   getItem(k: string): string | null;

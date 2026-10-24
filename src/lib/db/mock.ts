@@ -1,7 +1,7 @@
 import { RECIPES } from '@/data';
 import { createMockBilling } from '../billing/mock';
 import { emptyProfile, type Profile } from '../profile';
-import type { AuthService, Backend, KV, ProfileRepo, RecipeRepo, Session } from './types';
+import type { AccountService, AuthService, Backend, KV, ProfileRepo, RecipeRepo, Session } from './types';
 
 /** The fixed OTP accepted by the mock backend. Shown in the UI while mocked. */
 export const MOCK_CODE = '123456';
@@ -48,5 +48,18 @@ export function createMockBackend(kv: KV): Backend {
 
   const recipes: RecipeRepo = { async listLive() { return RECIPES; } };
 
-  return { auth, profiles, recipes, billing: createMockBilling(kv) };
+  const billing = createMockBilling(kv);
+  const account: AccountService = {
+    async exportData(uid) {
+      const session = JSON.parse(kv.getItem(SESSION_KEY) ?? 'null') as Session | null;
+      return JSON.stringify({ exportedAt: new Date().toISOString(), account: { id: uid, email: session?.email ?? null }, profile: await profiles.load(uid), subscription: await billing.get(uid) }, null, 2);
+    },
+    async deleteAccount(uid) {
+      kv.removeItem(profileKey(uid));
+      kv.removeItem(`tp.sub.${uid}`);
+      kv.removeItem(SESSION_KEY);
+    },
+  };
+
+  return { auth, profiles, recipes, billing, account };
 }

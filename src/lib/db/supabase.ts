@@ -3,7 +3,7 @@ import type { Recipe } from '@/data';
 import { createSupabaseBilling } from '../billing/supabase';
 import { profileToRow, rowToProfile } from './profileRow';
 import { clearStatus, setStatus } from '../status';
-import { AuthUnavailableError, type AuthService, type Backend, type ProfileRepo, type RecipeRepo, type Session } from './types';
+import { AuthUnavailableError, type AccountService, type AuthService, type Backend, type ProfileRepo, type RecipeRepo, type Session } from './types';
 
 const toSession = (s: { user: { id: string; email?: string | null } } | null): Session | null =>
   s ? { userId: s.user.id, email: s.user.email ?? '' } : null;
@@ -83,5 +83,21 @@ export function createSupabaseBackend(sb: SupabaseClient): Backend {
     },
   };
 
-  return { auth, profiles, recipes, billing: createSupabaseBilling(sb) };
+  const token = async () => (await sb.auth.getSession()).data.session?.access_token ?? '';
+  const account: AccountService = {
+    async exportData() {
+      const r = await fetch('/api/account/export', { headers: { authorization: `Bearer ${await token()}` } });
+      if (!r.ok) throw new Error(((await r.json().catch(() => ({}))) as { error?: string }).error ?? 'Could not prepare your data. Try again.');
+      return JSON.stringify(await r.json(), null, 2);
+    },
+    async deleteAccount() {
+      const r = await fetch('/api/account', { method: 'DELETE', headers: { authorization: `Bearer ${await token()}` } });
+      if (!r.ok) throw new Error(((await r.json().catch(() => ({}))) as { error?: string }).error ?? 'Could not delete your account. Try again.');
+      // The login no longer exists on the server; clear this device's copy of the session.
+      signingOut = true;
+      try { await sb.auth.signOut({ scope: 'local' }); } finally { signingOut = false; }
+    },
+  };
+
+  return { auth, profiles, recipes, billing: createSupabaseBilling(sb), account };
 }

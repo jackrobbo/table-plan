@@ -3,6 +3,7 @@ import type { InviteStore } from '../beta/invites';
 import type { WaitlistStore } from '../beta/waitlist';
 import type { ServerUser, SubscriptionStore } from '../billing/server';
 import type { Subscription } from '../billing/types';
+import type { AccountStore } from './account';
 import { fileWaitlistStore } from './waitlistFile';
 
 const URL_ = process.env.NEXT_PUBLIC_SUPABASE_URL;
@@ -35,7 +36,9 @@ export function getSubscriptionStore(): SubscriptionStore | null {
         user_id: userId, stripe_customer_id: s.stripeCustomerId ?? null, status: s.status, plan: s.plan,
         trial_ends_at: s.trialEndsAt, current_period_end: s.currentPeriodEnd, cancel_at_period_end: s.cancelAtPeriodEnd, updated_at: new Date().toISOString(),
       }, { onConflict: 'user_id' });
-      if (error) throw new Error(error.message);
+      // 23503 = the user no longer exists (they deleted their account; Stripe still reports the subscription ending).
+      // Nothing to record, and failing would only make Stripe retry for days.
+      if (error && error.code !== '23503') throw new Error(error.message);
       await sb.from('stripe_events').insert({ id: eventId });
     },
   };
@@ -78,4 +81,45 @@ export async function saveFeedback(user: ServerUser | null, msg: { message: stri
   if (!sb || !user) return false;
   const { error } = await sb.from('feedback').insert({ user_id: user.id, message: msg.message, page: msg.page });
   return !error;
+}
+
+/** Export and erasure for the signed-in person. Server-only: uses the service role. */
+export function getAccountStore(): AccountStore | null {
+  const sb = admin();
+  if (!sb) return null;
+  const must = (what: string, error: { message: string } | null) => { if (error) throw new Error(`${what}: ${error.message}`); };
+  return {
+    async stripeCustomerId(userId) {
+      const { data } = await sb.from('subscriptions').select('stripe_customer_id').eq('user_id', userId).maybeSingle();
+      return data?.stripe_customer_id ?? undefined;
+    },
+    async exportData(user) {
+      const email = user.email.toLowerCase();
+      const [profile, sub, feedback, waitlist, invite] = await Promise.all([
+        sb.from('profiles').select('*').eq('user_id', user.id).maybeSingle(),
+        sb.from('subscriptions').select('status, plan, trial_ends_at, current_period_end, cancel_at_period_end, stripe_customer_id, updated_at').eq('user_id', user.id).maybeSingle(),
+        sb.from('feedback').select('message, page, created_at').eq('user_id', user.id).order('created_at'),
+        sb.from('waitlist').select('email, source, consent_at').eq('email', email).maybeSingle(),
+        sb.from('invites').select('redeemed_at').eq('email', email).maybeSingle(),
+      ]);
+      for (const [what, r] of [['profile', profile], ['subscription', sub], ['feedback', feedback], ['waitlist', waitlist], ['invite', invite]] as const) must(what, r.error);
+      return { profile: profile.data, subscription: sub.data, feedback: feedback.data ?? [], waitlist: waitlist.data, invite: invite.data };
+    },
+    async deleteData(user) {
+      const email = user.email.toLowerCase();
+      must('feedback', (await sb.from('feedback').delete().eq('user_id', user.id)).error);
+      const { data: wl, error: wlErr } = await sb.from('waitlist').select('id').eq('email', email).maybeSingle();
+      must('waitlist', wlErr);
+      if (wl) {
+        must('invites', (await sb.from('invites').update({ waitlist_id: null }).eq('waitlist_id', wl.id)).error);
+        must('waitlist', (await sb.from('waitlist').delete().eq('id', wl.id)).error);
+      }
+      // The code stays used (it can't be redeemed again) but no longer points at a person.
+      must('invites', (await sb.from('invites').update({ email: null }).eq('email', email)).error);
+    },
+    async deleteUser(userId) {
+      const { error } = await sb.auth.admin.deleteUser(userId);
+      if (error && error.status !== 404) throw new Error(error.message);
+    },
+  };
 }
