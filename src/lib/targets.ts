@@ -1,0 +1,38 @@
+export type Goal = 'lose' | 'maintain' | 'gain';
+export type Sex = 'f' | 'm';
+
+export interface Stats {
+  sex?: Sex; age?: number; heightCm?: number; weightKg?: number;
+  /** Activity multiplier: 1.2 sitting, 1.375 light, 1.55 active, 1.725 very active. */
+  activity: number;
+}
+
+export interface Targets {
+  target: number;
+  band: [number, number];
+  protein: number;
+  maintenance: number | null;
+  /** true when no stats were given and defaults were used */
+  estimated: boolean;
+}
+
+const OFFSET: Record<Goal, number> = { lose: -500, maintain: 0, gain: 300 };
+const DEFAULT_KCAL: Record<Goal, number> = { lose: 1500, maintain: 2000, gain: 2400 };
+/** Never plan below this regardless of inputs (1,200-kcal floor is the dietitian-review item). */
+export const KCAL_FLOOR = 1300;
+
+/** Mifflin–St Jeor; ported unchanged from the PoC. */
+export function computeTargets(goal: Goal, s: Stats): Targets {
+  const { sex, age, heightCm: ht, weightKg: wt, activity } = s;
+  let maintenance: number | null = null;
+  if (sex && age && ht && wt) {
+    const bmr = 10 * wt + 6.25 * ht - 5 * age + (sex === 'm' ? 5 : -161);
+    maintenance = Math.round(bmr * activity);
+  }
+  const raw = maintenance !== null ? maintenance + OFFSET[goal] : DEFAULT_KCAL[goal];
+  const target = Math.max(KCAL_FLOOR, Math.round(raw / 10) * 10);
+  const protein = wt
+    ? Math.round(wt * (goal === 'maintain' ? 1.6 : 1.8))
+    : Math.round((target * (goal === 'maintain' ? 0.25 : 0.3)) / 4);
+  return { target, band: [target - 100, target + 60], protein, maintenance, estimated: maintenance === null };
+}

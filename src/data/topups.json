@@ -1,0 +1,23 @@
+[
+ {
+  "n": "Banana",
+  "p": 1,
+  "k": 95,
+  "prod": "banana",
+  "qty": 1
+ },
+ {
+  "n": "Protein yogurt pot",
+  "p": 20,
+  "k": 130,
+  "prod": "yog",
+  "qty": 1
+ },
+ {
+  "n": "Babybel ×2",
+  "p": 9,
+  "k": 118,
+  "prod": "babybel",
+  "qty": 2
+ }
+]
