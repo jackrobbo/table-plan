@@ -22,6 +22,7 @@ export default function Welcome() {
         <MorrisonsLogo />
         <p className="muted" style={{ margin: '8px 0 0' }}>More supermarkets soon.</p>
       </div>
+      <p className="muted" style={{ marginTop: 16 }}><Link href="/privacy">Privacy</Link> · <Link href="/terms">Terms</Link></p>
     </Screen>
   );
 }

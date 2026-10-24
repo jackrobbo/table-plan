@@ -10,6 +10,7 @@ import { DayCard, RecipeSheet, ShoppingList, listAsText, money, recipeById } fro
 import { addDays, dayLabel, londonDate, weekLabel } from '@/lib/cycle/dates';
 import { dueReminders } from '@/lib/cycle/reminders';
 import { badgeCount, effectiveStatus, ensureWeeks, firstWeek, opensAt, saveList, skipWeek, snapshot, toggleTick, undoSkip, type Week, type WeekStatus } from '@/lib/cycle/week';
+import { needsConsent } from '@/lib/consent';
 import { getBackend } from '@/lib/db';
 import { planInputFrom } from '@/lib/planner/fromProfile';
 import { applySwap } from '@/lib/planner/swap';
@@ -44,6 +45,7 @@ export default function Plan() {
   useEffect(() => {
     if (!ready) return;
     if (!session) router.replace('/signin');
+    else if (profile && needsConsent(profile)) router.replace('/consent');
     else if (profile && !profile.completed) router.replace('/onboarding');
   }, [ready, session, profile, router]);
 

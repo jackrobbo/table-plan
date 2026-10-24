@@ -13,6 +13,7 @@ import { planInputFrom } from '@/lib/planner/fromProfile';
 import { planWeek } from '@/lib/planner/solve';
 import type { Profile } from '@/lib/profile';
 import { computeTargets } from '@/lib/targets';
+import { needsConsent, withdrawConsent } from '@/lib/consent';
 import { useNow } from '@/lib/useNow';
 import { useProfile } from '@/lib/useProfile';
 
@@ -27,9 +28,10 @@ export default function Settings() {
   const [saved, setSaved] = useState(false);
   const [busy, setBusy] = useState<string | null>(null);
   const [rebuilt, setRebuilt] = useState<string[]>([]);
+  const [confirmWithdraw, setConfirmWithdraw] = useState(false);
 
   useEffect(() => { if (ready && !session) router.replace('/signin'); }, [ready, session, router]);
-  useEffect(() => { if (ready && profile && !profile.completed) router.replace('/onboarding'); }, [ready, profile, router]);
+  useEffect(() => { if (ready && profile && needsConsent(profile)) router.replace('/consent'); else if (ready && profile && !profile.completed) router.replace('/onboarding'); }, [ready, profile, router]);
   useEffect(() => { if (profile && !draft) setDraft(profile); }, [profile, draft]);
 
   if (!ready || !profile || !draft) return <Screen><div className="skeleton-stack"><div className="skeleton sk-title" /><div className="skeleton sk-card" /></div></Screen>;
@@ -134,6 +136,18 @@ export default function Settings() {
           ))}
           {dirty && <p className="muted">Save your changes first.</p>}
         </>}
+      </Section>
+
+      <Section title="Privacy">
+        <p className="muted" style={{ marginTop: 0 }}>
+          {profile.consent ? `You agreed to our use of your health information on ${new Date(profile.consent.health).toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' })}.` : ''}{' '}
+          <Link href="/privacy">Privacy policy</Link> · <Link href="/terms">Terms</Link>
+        </p>
+        {!confirmWithdraw
+          ? <button className="linkbtn" onClick={() => setConfirmWithdraw(true)}>Withdraw my consent</button>
+          : <><p className="err">This deletes your height, weight, age, sex, allergies and your planned weeks. You&apos;ll be asked to agree again before you can plan more meals.</p>
+              <button className="btn" onClick={() => { update(withdrawConsent); router.push('/consent'); }}>Yes, withdraw and delete them</button>
+              <button className="linkbtn" onClick={() => setConfirmWithdraw(false)}>Keep things as they are</button></>}
       </Section>
 
       <p className="muted" style={{ marginTop: 14 }}>Want to begin again from the first question? <Link href="/account">Account</Link> has that, and it clears your planned weeks.</p>

@@ -98,6 +98,7 @@ export default function SignIn() {
             <p className="muted" style={{ marginTop: 8 }}>Table Plan is invite-only while we test. <Link href="/waitlist">Join the waitlist</Link></p>
           </>}
           {error && <p className="err">{error}</p>}
+          <p className="muted" style={{ marginTop: 12 }}>By continuing you&apos;re agreeing to our <Link href="/terms">terms</Link> and <Link href="/privacy">privacy policy</Link>. We&apos;ll ask you to confirm before we collect anything about your health.</p>
         </>
       ) : (
         <>

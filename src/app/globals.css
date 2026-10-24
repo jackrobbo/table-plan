@@ -137,6 +137,14 @@ input.text:focus{outline:2px solid var(--ok);}
 
 /* ---- welcome ---- */
 .logo{width:46px; height:46px; border-radius:12px; background:var(--btn); color:var(--btn-ink); display:grid; place-items:center; font-weight:800; font-size:20px;}
+.consent{display:flex; gap:10px; align-items:flex-start; margin:12px 0; font-size:14px; line-height:1.4; color:var(--ink);}
+.consent input{flex:none; width:20px; height:20px; margin-top:2px;}
+.legal{max-width:640px}
+.legal main h1{margin-bottom:6px}
+.legal main h2{font-size:17px; margin:24px 0 6px}
+.legal main p,.legal main li{font-size:15px; line-height:1.55}
+.legal main ul{padding-left:20px; margin:6px 0}
+.legal main li{margin:5px 0}
 .status-banner{position:sticky; top:calc(var(--header-h) + env(safe-area-inset-top,0px)); z-index:19; background:var(--warn-soft); color:var(--warn-ink); padding:8px 20px; font-size:13px; text-align:center;}
 .status-banner .linkbtn{display:inline; min-height:0; padding:0; margin-left:4px; font-size:13px; font-weight:600; text-decoration:underline; color:inherit;}
 .site-header{position:sticky; top:0; z-index:20; padding-top:env(safe-area-inset-top,0px);

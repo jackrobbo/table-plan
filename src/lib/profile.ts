@@ -37,6 +37,8 @@ export interface Profile {
   weeks: Weeks;
   /** Spend cap for auto-picked weeks: 'low' = cheapest-tier meals, 'medium' = up to mid-priced, 'high' = no cap. */
   budget: Budget;
+  /** When the person agreed to our use of their health information and to the terms, and which version they agreed to. Null until they do. */
+  consent: { health: string; terms: string; version: string } | null;
   /** Reminder opt-in, and which nudges have already been shown (`${week}:${kind}`). */
   reminders: { on: boolean; shown: string[] };
 }
@@ -61,6 +63,7 @@ export const emptyProfile = (): Profile => ({
   completed: false,
   weeks: {},
   budget: 'medium',
+  consent: null,
   reminders: { on: false, shown: [] },
 });
 

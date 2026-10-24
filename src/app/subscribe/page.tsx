@@ -1,5 +1,6 @@
 'use client';
 import { useEffect, useState } from 'react';
+import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import Screen from '@/components/Screen';
 import { DEFAULT_PLAN, PLANS, gbp, perMonth, type PlanId } from '@/lib/billing/config';
@@ -44,7 +45,7 @@ export default function Subscribe() {
           {cfg.trialDays > 0
             ? `Free for ${cfg.trialDays} days, then ${gbp(cfg.pence)} a ${cfg.interval}. First charge on ${firstCharge(cfg.trialDays)}. Cancel before then and you pay nothing.`
             : `${gbp(cfg.pence)} a ${cfg.interval}, charged today.`}{' '}
-          Renews automatically until you cancel. Manage or cancel any time in your account.
+          Renews automatically until you cancel. Manage or cancel any time in your account. See the <Link href="/terms">terms</Link>.
         </p>
       </>}>
       <h2>Your week is ready</h2>

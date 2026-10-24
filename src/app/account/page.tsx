@@ -111,7 +111,7 @@ export default function Account() {
               <button className="linkbtn" onClick={() => setConfirmRestart(false)}>Keep my plan</button></>}
         <button className="linkbtn" onClick={async () => { await getBackend().auth.signOut(); router.replace('/'); }}>Sign out</button>
       </div>
-      <p className="muted" style={{ marginTop: 14 }}>Table Plan gives general nutrition guidance, not medical advice.</p>
+      <p className="muted" style={{ marginTop: 14 }}>Table Plan gives general nutrition guidance, not medical advice. <Link href="/privacy">Privacy</Link> · <Link href="/terms">Terms</Link></p>
     </Screen>
   );
 }

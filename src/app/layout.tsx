@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from 'next';
 import { connection } from 'next/server';
 import './globals.css';
+import ErrorReporter from '@/components/ErrorReporter';
 import { PwaInit } from '@/components/InstallSheet';
 import SiteHeader from '@/components/SiteHeader';
 
@@ -18,7 +19,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
   await connection();
   return (
     <html lang="en-GB" suppressHydrationWarning>
-      <body><PwaInit /><SiteHeader />{children}</body>
+      <body><PwaInit /><ErrorReporter /><SiteHeader />{children}</body>
     </html>
   );
 }

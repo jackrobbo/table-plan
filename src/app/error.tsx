@@ -1,10 +1,11 @@
 'use client';
 import { useEffect } from 'react';
 import Screen from '@/components/Screen';
+import { reportError } from '@/lib/errorReport';
 
-/** Last-resort screen for unexpected errors. `reportError` is where Sentry (or similar) plugs in. */
+/** Last-resort screen for unexpected errors. They are sent to our own log (lib/errorReport.ts); a vendor such as Sentry would plug in at the same place. */
 export default function ErrorPage({ error, reset }: { error: Error & { digest?: string }; reset: () => void }) {
-  useEffect(() => { console.error(error); }, [error]);
+  useEffect(() => { console.error(error); reportError('boundary', error); }, [error]);
   return (
     <Screen footer={<button className="btn" onClick={reset}>Try again</button>}>
       <h2>Something went wrong</h2>

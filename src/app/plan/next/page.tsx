@@ -23,6 +23,7 @@ import type { MealTime } from '@/lib/profile';
 import { shortDate } from '@/lib/pricing/refresh';
 import { computeTargets } from '@/lib/targets';
 import { track } from '@/lib/analytics';
+import { needsConsent } from '@/lib/consent';
 import { useAccess } from '@/lib/useAccess';
 import { useNow } from '@/lib/useNow';
 import { useProfile } from '@/lib/useProfile';
@@ -55,6 +56,7 @@ export default function PlanNext() {
   useEffect(() => {
     if (!ready) return;
     if (!session) router.replace('/signin');
+    else if (profile && needsConsent(profile)) router.replace('/consent');
     else if (profile && !profile.completed) router.replace('/onboarding');
     else if (accessLoaded && !access && step !== 'saved') router.replace('/subscribe');
     else if (snap && !week) router.replace('/plan');

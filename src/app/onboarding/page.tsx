@@ -13,6 +13,7 @@ import { ActivityStep, AgeStep, AllergiesStep, DislikesStep, GoalStep, HeightSte
 import MealImage from '@/components/MealImage';
 import Screen from '@/components/Screen';
 import { track } from '@/lib/analytics';
+import { needsConsent } from '@/lib/consent';
 import { useProfile } from '@/lib/useProfile';
 
 
@@ -22,6 +23,7 @@ export default function Onboarding() {
 
   useEffect(() => { if (ready && !session) router.replace('/signin'); }, [ready, session, router]);
   useEffect(() => { if (profile?.completed) router.replace('/plan'); }, [profile?.completed, router]);
+  useEffect(() => { if (profile && needsConsent(profile)) router.replace('/consent'); }, [profile, router]);
 
   if (!ready || !profile) return <Screen><p className="muted">Loading…</p></Screen>;
 
