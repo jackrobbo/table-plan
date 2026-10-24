@@ -44,3 +44,14 @@ starts the next Monday. UI: `/plan` (This week | Upcoming, ticks, recipe sheet, 
 computed in `reminders.ts` and shown in-app when due; true push while the app is closed needs a server (VAPID + a
 `push_subscriptions` table + scheduled job), not built yet. Deferred per the cut line: Friday summary, weekend add,
 "New for you", swap sheet, richer profile-edit-with-impact.
+
+## Payments (M6)
+Pricing is config in `src/lib/billing/config.ts` (£9.99/yr with a 7-day trial, £0.99/mo). Paywall `/subscribe` sits after the
+first week and before the shopping list; `/account` shows status, cancel/resume and data deletion. Gating: the first week
+is visible free; ingredients, Save to Notes and planning further weeks need `hasAccess` (trialing/active, cancelled until the
+paid period ends, 3-day grace when past due). **Billing is mocked** (`createMockBilling`, no card taken). The real path is
+built and unit-tested but not run against Stripe: `src/lib/billing/server.ts` + `/api/billing/{checkout,portal,webhook}`
+(signature-verified, idempotent webhooks, plan taken from the price id, user taken from server-set subscription metadata).
+Env: `STRIPE_SECRET_KEY`, `STRIPE_WEBHOOK_SECRET`, `STRIPE_PRICE_YEARLY`, `STRIPE_PRICE_MONTHLY`. It needs
+`src/lib/server/context.ts` wired to Supabase (session JWT check, service-role writes to `subscriptions`/`stripe_events`).
+Until then the routes answer 401/501/503 rather than pretending.

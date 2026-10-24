@@ -14,6 +14,8 @@ import { planWeek } from '@/lib/planner/solve';
 import { PRICES_META } from '@/data';
 import { shortDate } from '@/lib/pricing/refresh';
 import { computeTargets } from '@/lib/targets';
+import Link from 'next/link';
+import { useAccess } from '@/lib/useAccess';
 import { useNow } from '@/lib/useNow';
 import { useProfile } from '@/lib/useProfile';
 
@@ -26,6 +28,7 @@ export default function Plan() {
   const router = useRouter();
   const now = useNow();
   const { session, profile, ready, update } = useProfile();
+  const { access, loaded: accessLoaded } = useAccess(session);
   const [tab, setTab] = useState<'this' | 'upcoming'>('this');
   const [sub, setSub] = useState<'plan' | 'ingredients' | 'recipes'>('plan');
   const [picked, setPicked] = useState<string | null>(null);
@@ -86,8 +89,8 @@ export default function Plan() {
 
   return (
     <Screen footer={<>
-      <button className="linkbtn" onClick={() => update((p) => ({ ...p, completed: false, step: 'goal', weeks: {} }))}>Edit my answers</button>
-      <button className="linkbtn" onClick={async () => { await getBackend().auth.signOut(); router.replace('/'); }}>Sign out ({session.email})</button>
+      {accessLoaded && !access && <Link className="btn" href="/subscribe">Save and checkout</Link>}
+      <Link className="linkbtn" href="/account">Account</Link>
     </>}>
       <p className="step">Welcome back</p>
       <div className="switch" role="tablist">
@@ -128,7 +131,11 @@ export default function Plan() {
             ))}
           </>}
 
-          {sub === 'ingredients' && !started && <>
+          {sub === 'ingredients' && !started && accessLoaded && !access && (
+            <div className="card lock-card"><h3>Unlock your shopping list</h3><p className="muted">Subscribe to see every ingredient with dated Morrisons prices.</p><Link className="btn" href="/subscribe">See plans</Link></div>
+          )}
+
+          {sub === 'ingredients' && !started && access && <>
             <PriceNote totalPence={shopping.totalPence} />
             <ShoppingList shopping={shopping} have={week.haveAlready}
               onToggle={(k) => update((p) => { const w = p.weeks[week.start]; const have = w.haveAlready.includes(k) ? w.haveAlready.filter((x) => x !== k) : [...w.haveAlready, k]; return { ...p, weeks: { ...p.weeks, [week.start]: { ...w, haveAlready: have } } }; })} />
@@ -176,7 +183,7 @@ export default function Plan() {
             ))}
           </div>
           {upcomingSel && <UpcomingCard week={upcomingSel.week} status={upcomingSel.status} weeks={weeks} now={now}
-            onPlan={() => router.push('/plan/next')}
+            onPlan={() => router.push(access ? '/plan/next' : '/subscribe')}
             onSkip={() => update((p) => ({ ...p, weeks: skipWeek(p.weeks, upcomingSel.week.start, now) }))}
             onUndo={() => update((p) => ({ ...p, weeks: undoSkip(p.weeks, upcomingSel.week.start, now) }))}
             onCopy={(text) => copy(text, upcomingSel.week.start)} copied={copied} onOpen={setSheet}

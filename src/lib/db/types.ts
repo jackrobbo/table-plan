@@ -1,4 +1,5 @@
 import type { Recipe } from '@/data';
+import type { BillingService } from '../billing/types';
 import type { Profile } from '../profile';
 
 export interface Session { userId: string; email: string }
@@ -20,7 +21,7 @@ export interface ProfileRepo {
 /** Read side of the recipe bank. Real backend queries `recipes where status = 'live'`. */
 export interface RecipeRepo { listLive(): Promise<Recipe[]> }
 
-export interface Backend { auth: AuthService; profiles: ProfileRepo; recipes: RecipeRepo }
+export interface Backend { auth: AuthService; profiles: ProfileRepo; recipes: RecipeRepo; billing: BillingService }
 
 export interface KV {
   getItem(k: string): string | null;

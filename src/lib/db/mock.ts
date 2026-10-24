@@ -1,4 +1,5 @@
 import { RECIPES } from '@/data';
+import { createMockBilling } from '../billing/mock';
 import { emptyProfile, type Profile } from '../profile';
 import type { AuthService, Backend, KV, ProfileRepo, RecipeRepo, Session } from './types';
 
@@ -46,5 +47,5 @@ export function createMockBackend(kv: KV): Backend {
 
   const recipes: RecipeRepo = { async listLive() { return RECIPES; } };
 
-  return { auth, profiles, recipes };
+  return { auth, profiles, recipes, billing: createMockBilling(kv) };
 }

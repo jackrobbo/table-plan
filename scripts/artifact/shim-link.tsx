@@ -1,5 +1,5 @@
 import { navigate } from './shim-navigation';
-const ROUTES = ['/', '/signin', '/onboarding', '/plan', '/plan/next'];
+const ROUTES = ['/', '/signin', '/onboarding', '/plan', '/plan/next', '/subscribe', '/account'];
 export default function Link({ href, children, ...rest }: React.AnchorHTMLAttributes<HTMLAnchorElement> & { href: string }) {
   const known = ROUTES.includes(href.split('?')[0]);
   return (

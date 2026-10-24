@@ -15,6 +15,7 @@ import type { Plan } from '@/lib/planner/types';
 import type { MealTime } from '@/lib/profile';
 import { shortDate } from '@/lib/pricing/refresh';
 import { computeTargets } from '@/lib/targets';
+import { useAccess } from '@/lib/useAccess';
 import { useNow } from '@/lib/useNow';
 import { useProfile } from '@/lib/useProfile';
 
@@ -30,6 +31,7 @@ export default function PlanNext() {
   const router = useRouter();
   const now = useNow();
   const { session, profile, ready, update } = useProfile();
+  const { access, loaded: accessLoaded } = useAccess(session);
   const [step, setStep] = useState<Step>('setup');
   const [draft, setDraft] = useState<Plan | null>(null);
   const [have, setHave] = useState<string[]>([]);
@@ -44,8 +46,9 @@ export default function PlanNext() {
     if (!ready) return;
     if (!session) router.replace('/signin');
     else if (profile && !profile.completed) router.replace('/onboarding');
+    else if (accessLoaded && !access && step !== 'saved') router.replace('/subscribe');
     else if (snap && !week) router.replace('/plan');
-  }, [ready, session, profile, snap, week, router]);
+  }, [ready, session, profile, snap, week, router, accessLoaded, access, step]);
 
   if (!ready || !profile || !week) return <Screen><div className="skeleton-stack"><div className="skeleton sk-title" /><div className="skeleton sk-card" /></div></Screen>;
 
