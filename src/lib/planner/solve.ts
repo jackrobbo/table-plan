@@ -119,7 +119,6 @@ export function generatePlan(input: PlanInput, seed = 1): Plan {
     if (!best) {
       // Couldn't land in band with the recipes available (e.g. a very high calorie target): keep the closest
       // attempt and say so, rather than pretending.
-      issues.push(`${DAY_NAMES[d]} is outside your band; like a few more meals for more room.`);
       best = { day: closest!.day, score: 0 };
     }
 
@@ -130,6 +129,7 @@ export function generatePlan(input: PlanInput, seed = 1): Plan {
     best.day.topups.forEach((t) => bought.add(t.prod));
     days.push(best.day);
   }
+  issues.push(...explainMisses(days, T.band, T.protein));
   return { seed, days, issues };
 }
 
@@ -147,4 +147,30 @@ export function planWeek(input: PlanInput, candidates = 24, baseSeed = 1): Plan 
     if (!best || cost < best.cost) best = { plan, cost };
   }
   return best!.plan;
+}
+
+const list = (names: string[]) => (names.length <= 2 ? names.join(' and ') : `${names.slice(0, -1).join(', ')} and ${names[names.length - 1]}`);
+
+/**
+ * Plain-language reasons for days that could not be landed in band, grouped by cause so a week of misses is
+ * one message, not five. Says what actually limits the plan instead of blaming the user's choices.
+ */
+export function explainMisses(days: PlannedDay[], band: [number, number], protein: number): string[] {
+  const off = days.filter((d) => !d.inBand);
+  const out: string[] = [];
+  const low = off.filter((d) => d.kcal < band[0]);
+  const high = off.filter((d) => d.kcal > band[1]);
+  const lean = off.filter((d) => d.kcal >= band[0] && d.kcal <= band[1] && d.protein < protein);
+  const range = (ds: PlannedDay[]) => { const k = ds.map((d) => d.kcal); return Math.min(...k) === Math.max(...k) ? `${k[0]}` : `${Math.min(...k)}–${Math.max(...k)}`; };
+  if (low.length) {
+    out.push(`${list(low.map((d) => d.day))} land short of your ${band[0]}–${band[1]} kcal target (about ${range(low)} kcal). `
+      + 'Our recipe bank can\'t reach a target this high on every day yet, so those days will be lighter than your target. Bigger portions and more recipes are on the way.');
+  }
+  if (high.length) {
+    out.push(`${list(high.map((d) => d.day))} run over your ${band[0]}–${band[1]} kcal band (about ${range(high)} kcal). Liking a few lighter meals would give the planner more room.`);
+  }
+  if (lean.length) {
+    out.push(`${list(lean.map((d) => d.day))} are in your calorie band but under your ${protein}g protein floor. Liking more high-protein meals would help.`);
+  }
+  return out;
 }

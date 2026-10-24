@@ -10,7 +10,7 @@ import { badgeCount, effectiveStatus, ensureWeeks, firstWeek, opensAt, saveList,
 import { getBackend } from '@/lib/db';
 import { planInputFrom } from '@/lib/planner/fromProfile';
 import { buildShopping } from '@/lib/planner/shopping';
-import { planWeek } from '@/lib/planner/solve';
+import { explainMisses, planWeek } from '@/lib/planner/solve';
 import { PRICES_META } from '@/data';
 import { shortDate } from '@/lib/pricing/refresh';
 import { computeTargets } from '@/lib/targets';
@@ -124,7 +124,8 @@ export default function Plan() {
           </div>
 
           {sub === 'plan' && <>
-            {plan.issues.map((i) => <div key={i} className="estimate-flag">{i}</div>)}
+            {/* Built from the days, not plan.issues, so plans saved before the wording changed show the current message. */}
+            {(plan.days.length ? explainMisses(plan.days, t.band, t.protein) : plan.issues).map((i) => <div key={i} className="estimate-flag">{i}</div>)}
             {plan.days.map((d, i) => (
               <DayCard key={d.day} d={d} index={i} ticks={started ? week.ticks : undefined} onOpen={setSheet}
                 onTick={started && !finished ? (k) => update((p) => ({ ...p, weeks: toggleTick(p.weeks, week.start, k) })) : undefined} />

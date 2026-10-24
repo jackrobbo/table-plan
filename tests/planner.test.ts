@@ -111,3 +111,32 @@ describe('planner: shopping + waste', () => {
     expect(best).toBeLessThanOrEqual(single);
   });
 });
+
+import { explainMisses } from '@/lib/planner/solve';
+import type { PlannedDay } from '@/lib/planner/types';
+
+describe('planner: honest messages for days that miss', () => {
+  const day = (name: string, kcal: number, protein: number, inBand = false): PlannedDay =>
+    ({ day: name, meals: [], topups: [], kcal, protein, reserved: { kcal: 0, protein: 0 }, inBand, adjusted: false });
+
+  it('groups short days into one message that blames the recipe bank, not the user', () => {
+    const msgs = explainMisses([day('Monday', 2660, 209, true), day('Tuesday', 2390, 150), day('Wednesday', 2410, 150), day('Thursday', 2400, 150)], [2600, 2760], 126);
+    expect(msgs).toHaveLength(1);
+    expect(msgs[0]).toMatch(/Tuesday, Wednesday and Thursday land short of your 2600–2760 kcal target \(about 2390–2410 kcal\)/);
+    expect(msgs[0]).toMatch(/recipe bank/);
+    expect(msgs[0]).not.toMatch(/like a few more meals/i);
+  });
+  it('separates short, over and low-protein days, and says nothing when every day is in band', () => {
+    const msgs = explainMisses([day('Monday', 2000, 100), day('Tuesday', 3000, 100), day('Wednesday', 2700, 90)], [2600, 2760], 126);
+    expect(msgs).toHaveLength(3);
+    expect(msgs[1]).toMatch(/run over/);
+    expect(msgs[2]).toMatch(/Wednesday are in your calorie band but under your 126g protein/);
+    expect(explainMisses([day('Monday', 2700, 130, true)], [2600, 2760], 126)).toEqual([]);
+  });
+  it('a real high-calorie plan produces the grouped message end to end', () => {
+    const plan = generatePlan(base({ goal: 'maintain', stats: { sex: 'm', age: 30, heightCm: 175, weightKg: 79, activity: 1.55 } }), 11);
+    const missed = plan.days.filter((d) => !d.inBand).length;
+    expect(plan.issues.length).toBe(missed ? 1 : 0);
+    if (missed) expect(plan.issues[0]).toMatch(/recipe bank/);
+  });
+});

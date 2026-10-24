@@ -10,7 +10,7 @@ import { addDays, dayLabel, weekLabel } from '@/lib/cycle/dates';
 import { ensureWeeks, saveList, savePlan, saveProgress, snapshot, type Week } from '@/lib/cycle/week';
 import { planInputFrom } from '@/lib/planner/fromProfile';
 import { buildShopping } from '@/lib/planner/shopping';
-import { planWeek } from '@/lib/planner/solve';
+import { explainMisses, planWeek } from '@/lib/planner/solve';
 import type { Plan } from '@/lib/planner/types';
 import type { MealTime } from '@/lib/profile';
 import { shortDate } from '@/lib/pricing/refresh';
@@ -141,7 +141,7 @@ export default function PlanNext() {
             <div className="estimate-flag">{draft?.issues[0] ?? 'Could not build a week.'}</div>
           ) : (<>
             <p className="sub">{draft.days.filter((d) => d.inBand).length} of {draft.days.length} days in band. Resized or topped-up days are highlighted.</p>
-            {draft.issues.map((i) => <div key={i} className="estimate-flag">{i}</div>)}
+            {explainMisses(draft.days, t.band, t.protein).map((i) => <div key={i} className="estimate-flag">{i}</div>)}
             {shopping && <PriceNote totalPence={shopping.totalPence} />}
             {draft.days.map((d, i) => <DayCard key={d.day} d={d} index={i} label={dayLabel(addDays(week.start, i))} />)}
             <button className="btn ghost" onClick={() => build(picks.length ? picks : profile.likedRecipes)}>Shuffle</button>
