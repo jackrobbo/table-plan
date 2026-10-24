@@ -11,6 +11,8 @@ export interface IngredientDef {
   note?: string;
   allergens: Allergen[];
   /** CoFID values per 100 g/ml. null until verified. */
+  /** CoFID food code and whether the per100 values were checked against it. */
+  cofid?: { code?: string; verified: boolean };
   per100: { kcal: number; protein_g: number; carbs_g: number; fat_g: number } | null;
   /** Retailer mapping; null = not yet mapped/priced (M3). */
   product: { retailer: string; name: string; price_pence: number; pack_size: number; slug: string } | null;
@@ -30,7 +32,9 @@ export interface RecipeDef {
   method: string[];
   /** Allergens not derivable from ingredients (e.g. cross-contact). */
   extra_allergens?: Allergen[];
-  /** True for macros-only/placeholder entries that aren't cooked meals. */
+  /** Macros-only meal (e.g. eating out / ready meal): no ingredients, method or pricing needed. */
+  macros_only?: boolean;
+  /** Provenance, e.g. 'poc' (grandfathered, macros not CoFID-verified). */
   source?: string;
 }
 

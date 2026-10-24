@@ -7,6 +7,8 @@ const STATUSES = ['draft', 'verified', 'live'];
 const ALLERGEN_KEYS = new Set<string>(ALLERGENS.map(([k]) => k));
 /** Declared vs computed kcal tolerance when every ingredient has CoFID data. */
 export const KCAL_TOLERANCE = 0.15;
+/** Stricter bar to count as verified (protein gets 1.5x this). */
+export const VERIFY_TOLERANCE = 0.1;
 
 export function validateContent(ingredients: IngredientDef[], recipes: RecipeDef[]): Issue[] {
   const issues: Issue[] = [];
@@ -50,7 +52,7 @@ export function validateContent(ingredients: IngredientDef[], recipes: RecipeDef
       }
     }
 
-    if (!r.ingredients?.length) err(w, 'needs at least one ingredient');
+    if (!r.ingredients?.length && !r.macros_only) err(w, 'needs at least one ingredient (or macros_only: true)');
     const seen = new Set<string>();
     for (const l of r.ingredients ?? []) {
       const d = ing.get(l.ingredient);
@@ -66,7 +68,7 @@ export function validateContent(ingredients: IngredientDef[], recipes: RecipeDef
       else if (!d.cupboard) err(w, `"${c}" is not flagged as a cupboard item`);
     }
     for (const a of r.extra_allergens ?? []) if (!ALLERGEN_KEYS.has(a)) err(w, `unknown allergen "${a}"`);
-    if (r.course !== 'snack' && !r.method?.length) warn(w, 'no method steps');
+    if (r.course !== 'snack' && !r.macros_only && !r.method?.length) warn(w, 'no method steps');
 
     // Declared macros vs ingredient data, only when fully computable (g/ml units, all CoFID present).
     const lines = (r.ingredients ?? []).map((l) => ({ l, d: ing.get(l.ingredient) }));
@@ -76,6 +78,10 @@ export function validateContent(ingredients: IngredientDef[], recipes: RecipeDef
         warn(w, `declared ${m.kcal} kcal but ingredients compute to ~${Math.round(total)} per portion`);
     }
 
+    if (r.status === 'verified' || (r.status === 'live' && r.source !== 'poc')) {
+      const v = verifyRecipe(r, ing);
+      if (!r.macros_only && !v.verified) err(w, `${r.status} recipes need CoFID-verified ingredients: ${v.reason}`);
+    } else if (r.status === 'live' && !r.macros_only) warn(w, 'live but macros not CoFID-verified (grandfathered PoC)');
     if (r.status === 'live') {
       for (const { l, d } of lines) if (d && !d.cupboard && !d.product) err(w, `live recipes need priced ingredients; "${l.ingredient}" has no product`);
     }
@@ -88,4 +94,35 @@ export function deriveAllergens(r: RecipeDef, ingredients: Map<string, Ingredien
   const out = new Set<string>(r.extra_allergens ?? []);
   for (const k of [...r.ingredients.map((l) => l.ingredient), ...r.cupboard]) ingredients.get(k)?.allergens.forEach((a) => out.add(a));
   return [...out].sort();
+}
+
+export interface Verification {
+  verified: boolean;
+  reason: string;
+  /** Share of ingredient lines with verified per-100 data (0–1). */
+  coverage: number;
+  computedKcal: number | null;
+  computedProtein: number | null;
+}
+
+/** Verified = every ingredient line has verified CoFID data in g/ml and computed macros match the declared ones. */
+export function verifyRecipe(r: RecipeDef, ing: Map<string, IngredientDef>): Verification {
+  const lines = (r.ingredients ?? []).map((l) => ({ l, d: ing.get(l.ingredient) }));
+  const ok = lines.filter(({ d }) => d?.per100 && d.cofid?.verified && (d.unit === 'g' || d.unit === 'ml'));
+  const coverage = lines.length ? ok.length / lines.length : 0;
+  if (!lines.length) return { verified: false, reason: 'no ingredients', coverage, computedKcal: null, computedProtein: null };
+  if (ok.length < lines.length) {
+    const missing = lines.filter((x) => !ok.includes(x)).map(({ l }) => l.ingredient).join(', ');
+    return { verified: false, reason: `missing verified CoFID data for ${missing}`, coverage, computedKcal: null, computedProtein: null };
+  }
+  const sum = (f: (p: NonNullable<IngredientDef['per100']>) => number) =>
+    ok.reduce((s, { l, d }) => s + (f(d!.per100!) * l.qty) / 100, 0) / r.serves;
+  const kcal = sum((p) => p.kcal), protein = sum((p) => p.protein_g);
+  const kOff = Math.abs(kcal - r.per_portion.kcal) / r.per_portion.kcal;
+  const pOff = r.per_portion.protein_g ? Math.abs(protein - r.per_portion.protein_g) / r.per_portion.protein_g : 0;
+  const good = kOff <= VERIFY_TOLERANCE && pOff <= VERIFY_TOLERANCE * 1.5;
+  return {
+    verified: good, coverage, computedKcal: Math.round(kcal), computedProtein: Math.round(protein),
+    reason: good ? 'ok' : `computed ${Math.round(kcal)} kcal / ${Math.round(protein)}g vs declared ${r.per_portion.kcal} / ${r.per_portion.protein_g}g`,
+  };
 }

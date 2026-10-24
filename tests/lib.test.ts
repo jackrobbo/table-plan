@@ -166,3 +166,29 @@ describe('content validation', () => {
     expect(e.some((i) => i.level === 'error' && i.message.includes('no product'))).toBe(true);
   });
 });
+
+import { verifyRecipe } from '@/lib/content/validate';
+
+describe('CoFID verification', () => {
+  const mk = (kcal: number): [IngredientDef[], RecipeDef] => [
+    [{ slug: 'oats', name: 'Oats', unit: 'g', cupboard: false, allergens: ['gluten'], cofid: { verified: true },
+      per100: { kcal: 370, protein_g: 11, carbs_g: 60, fat_g: 8 },
+      product: { retailer: 'morrisons', name: 'Oats', price_pence: 100, pack_size: 1000, slug: 'oats' } }],
+    { slug: 'porridge', name: 'Porridge', course: 'breakfast', serves: 1, status: 'verified',
+      per_portion: { kcal, protein_g: 7 }, ingredients: [{ ingredient: 'oats', qty: 60 }], cupboard: [], method: ['Cook.'] },
+  ];
+  it('passes when computed macros match, fails when they do not', () => {
+    const [i, r] = mk(222);
+    expect(verifyRecipe(r, new Map(i.map((x) => [x.slug, x]))).verified).toBe(true);
+    const [i2, r2] = mk(400);
+    expect(verifyRecipe(r2, new Map(i2.map((x) => [x.slug, x]))).verified).toBe(false);
+    expect(validateContent(i2, [r2]).some((x) => x.level === 'error' && x.message.includes('CoFID'))).toBe(true);
+  });
+  it('rejects verified status without CoFID data, but allows macros-only entries', () => {
+    const [i, r] = mk(222);
+    i[0].cofid = { verified: false };
+    expect(validateContent(i, [r]).some((x) => x.level === 'error')).toBe(true);
+    const eatOut: RecipeDef = { ...r, slug: 'pub-roast', name: 'Pub Roast', ingredients: [], method: [], macros_only: true, status: 'live' };
+    expect(validateContent(i, [eatOut]).filter((x) => x.level === 'error')).toEqual([]);
+  });
+});

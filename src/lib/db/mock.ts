@@ -1,5 +1,6 @@
+import { RECIPES } from '@/data';
 import { emptyProfile, type Profile } from '../profile';
-import type { AuthService, Backend, KV, ProfileRepo, Session } from './types';
+import type { AuthService, Backend, KV, ProfileRepo, RecipeRepo, Session } from './types';
 
 /** The fixed OTP accepted by the mock backend. Shown in the UI while mocked. */
 export const MOCK_CODE = '123456';
@@ -43,5 +44,7 @@ export function createMockBackend(kv: KV): Backend {
     async erase(uid) { kv.removeItem(profileKey(uid)); },
   };
 
-  return { auth, profiles };
+  const recipes: RecipeRepo = { async listLive() { return RECIPES; } };
+
+  return { auth, profiles, recipes };
 }

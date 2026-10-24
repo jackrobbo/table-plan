@@ -8,7 +8,8 @@
     "start": "next start",
     "typecheck": "tsc --noEmit",
     "test": "vitest run",
-    "content:import": "tsx scripts/import-content.ts"
+    "content:import": "tsx scripts/import-content.ts",
+    "content:verify": "tsx scripts/verify-content.ts"
   },
   "dependencies": {
     "next": "^15.5.28",

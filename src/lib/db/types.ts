@@ -1,3 +1,4 @@
+import type { Recipe } from '@/data';
 import type { Profile } from '../profile';
 
 export interface Session { userId: string; email: string }
@@ -16,7 +17,10 @@ export interface ProfileRepo {
   erase(userId: string): Promise<void>;
 }
 
-export interface Backend { auth: AuthService; profiles: ProfileRepo }
+/** Read side of the recipe bank. Real backend queries `recipes where status = 'live'`. */
+export interface RecipeRepo { listLive(): Promise<Recipe[]> }
+
+export interface Backend { auth: AuthService; profiles: ProfileRepo; recipes: RecipeRepo }
 
 export interface KV {
   getItem(k: string): string | null;

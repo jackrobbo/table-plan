@@ -8,7 +8,9 @@ create table public.ingredients (
   note        text,
   allergens   text[] not null default '{}',
   -- CoFID per 100 g/ml; null until verified (scraped/imported later)
-  kcal_100    numeric, protein_100 numeric, carbs_100 numeric, fat_100 numeric
+  kcal_100    numeric, protein_100 numeric, carbs_100 numeric, fat_100 numeric,
+  cofid_code  text,
+  cofid_verified boolean not null default false
 );
 
 -- Retailer mapping, one product per ingredient per retailer (Morrisons-only at launch).
@@ -35,6 +37,7 @@ create table public.recipes (
   allergens    text[] not null default '{}',   -- derived from ingredients by the importer
   status       text not null default 'draft' check (status in ('draft','verified','live')),
   source       text,
+  macros_only  boolean not null default false,
   version      integer not null default 1,
   content_hash text,
   updated_at   timestamptz not null default now()
