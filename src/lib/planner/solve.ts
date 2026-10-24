@@ -13,13 +13,13 @@ export const RESERVE_SHARE = { breakfast: 0.25, lunch: 0.3, dinner: 0.35 } as co
 
 const DISLIKE_WEIGHT = 120;   // kcal-equivalents per disliked ingredient/name match
 const REPEAT_WEIGHT = 40;
-const RESIZE_WEIGHT = 220;    // prefer unadjusted portions
+export const RESIZE_WEIGHT = 220;    // prefer unadjusted portions
 const SHARE_BONUS = 25;       // reuse of a product already bought this week
 const TRIALS = 100;
 /** Typical split of a day's calories; snacks take the rest. Only steers sampling, never a constraint. */
 const KCAL_SHARE = { breakfast: 0.27, lunch: 0.3, dinner: 0.33, snack: 0.1 } as const;
 /** Top-up combinations tried per candidate day: none, any one, any two. */
-const TOPUP_SETS: Topup[][] = [[], ...TOPUPS.map((t) => [t]), ...TOPUPS.flatMap((a, i) => TOPUPS.slice(i + 1).map((b) => [a, b]))];
+export const TOPUP_SETS: Topup[][] = [[], ...TOPUPS.map((t) => [t]), ...TOPUPS.flatMap((a, i) => TOPUPS.slice(i + 1).map((b) => [a, b]))];
 
 const round1 = (x: number) => Math.round(x * 100) / 100;
 

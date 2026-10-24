@@ -6,7 +6,7 @@
 export type EventName =
   | 'onboarding_step' | 'onboarding_done' | 'week_generated' | 'week_planned' | 'list_saved'
   | 'paywall_viewed' | 'subscribed' | 'reminder_enabled' | 'signup_invite_redeemed'
-  | 'install_prompt_shown' | 'install_prompt_accepted' | 'install_prompt_dismissed' | 'basket_fill_started';
+  | 'install_prompt_shown' | 'install_prompt_accepted' | 'install_prompt_dismissed' | 'basket_fill_started' | 'meal_swapped';
 
 type Props = Record<string, string | number | boolean>;
 const SAFE_KEYS = new Set(['step', 'plan', 'days_in_band', 'days', 'items', 'mode', 'week_state', 'source', 'trial', 'platform', 'packs']);

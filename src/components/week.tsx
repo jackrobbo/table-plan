@@ -11,7 +11,7 @@ export const recipeById = new Map(RECIPES.map((r) => [r.id, r]));
 const SLOT_LABEL: Record<string, string> = { breakfast: 'Breakfast', lunch: 'Lunch', snack: 'Snack', dinner: 'Dinner' };
 export const money = (p: number) => '£' + (p / 100).toFixed(2);
 
-export function MealRow({ m, tick, onTick, onOpen }: { m: PlannedMeal; tick?: boolean; onTick?: () => void; onOpen?: () => void }) {
+export function MealRow({ m, tick, onTick, onOpen, onSwap }: { m: PlannedMeal; tick?: boolean; onTick?: () => void; onOpen?: () => void; onSwap?: () => void }) {
   const r = recipeById.get(m.recipeId)!;
   return (
     <div className="meal">
@@ -24,6 +24,7 @@ export function MealRow({ m, tick, onTick, onOpen }: { m: PlannedMeal; tick?: bo
           {m.extra > 0 && <span>+{m.extra} to share</span>}
         </div>
       </button>
+      {onSwap && <button className="swapbtn" aria-label={`Swap ${r.n}`} onClick={onSwap}>Swap</button>}
       {onTick && (
         <button className={'tick' + (tick ? ' on' : '')} role="checkbox" aria-checked={!!tick} aria-label={`Ate ${r.n}`} onClick={onTick}>
           <svg viewBox="0 0 16 16" aria-hidden><path d="M3.5 8.5l3 3 6-7" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" /></svg>
@@ -33,8 +34,10 @@ export function MealRow({ m, tick, onTick, onOpen }: { m: PlannedMeal; tick?: bo
   );
 }
 
-export function DayCard({ d, index, ticks, onTick, onOpen, label }: {
+export function DayCard({ d, index, ticks, onTick, onOpen, onSwap, label }: {
   d: PlannedDay; index: number; ticks?: Record<string, boolean>; onTick?: (key: string) => void; onOpen?: (id: string) => void; label?: string;
+  /** Offered on meals not yet eaten. */
+  onSwap?: (dayIndex: number, mealIndex: number) => void;
 }) {
   const keys = d.meals.map((_, i) => `${index}:${i}`);
   const done = !!ticks && keys.length > 0 && keys.every((k) => ticks[k]);
@@ -46,7 +49,8 @@ export function DayCard({ d, index, ticks, onTick, onOpen, label }: {
           : <span className="daytot"><i className={'dot' + (d.inBand ? '' : ' amber')} />{d.protein}g protein · {d.kcal.toLocaleString('en-GB')} kcal</span>}
       </header>
       {!done && d.meals.map((m, i) => (
-        <MealRow key={i} m={m} tick={ticks?.[`${index}:${i}`]} onTick={onTick ? () => onTick(`${index}:${i}`) : undefined} onOpen={onOpen ? () => onOpen(m.recipeId) : undefined} />
+        <MealRow key={i} m={m} tick={ticks?.[`${index}:${i}`]} onTick={onTick ? () => onTick(`${index}:${i}`) : undefined} onOpen={onOpen ? () => onOpen(m.recipeId) : undefined}
+          onSwap={onSwap && !ticks?.[`${index}:${i}`] ? () => onSwap(index, i) : undefined} />
       ))}
       {!done && d.topups.map((t) => (
         <div className="meal" key={t.n}>

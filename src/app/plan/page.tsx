@@ -5,12 +5,15 @@ import PriceNote from '@/components/PriceNote';
 import Screen from '@/components/Screen';
 import MealImage from '@/components/MealImage';
 import BasketButton from '@/components/BasketButton';
+import SwapSheet from '@/components/SwapSheet';
 import { DayCard, RecipeSheet, ShoppingList, listAsText, money, recipeById } from '@/components/week';
 import { addDays, dayLabel, londonDate, weekLabel } from '@/lib/cycle/dates';
 import { dueReminders } from '@/lib/cycle/reminders';
 import { badgeCount, effectiveStatus, ensureWeeks, firstWeek, opensAt, saveList, skipWeek, snapshot, toggleTick, undoSkip, type Week, type WeekStatus } from '@/lib/cycle/week';
 import { getBackend } from '@/lib/db';
 import { planInputFrom } from '@/lib/planner/fromProfile';
+import { applySwap } from '@/lib/planner/swap';
+import { track } from '@/lib/analytics';
 import { buildShopping } from '@/lib/planner/shopping';
 import { explainMisses, planWeek } from '@/lib/planner/solve';
 import { PRICES_META } from '@/data';
@@ -35,6 +38,7 @@ export default function Plan() {
   const [sub, setSub] = useState<'plan' | 'ingredients' | 'recipes'>('plan');
   const [picked, setPicked] = useState<string | null>(null);
   const [sheet, setSheet] = useState<string | null>(null);
+  const [swap, setSwap] = useState<{ week: string; day: number; meal: number } | null>(null);
   const [copied, setCopied] = useState<string | null>(null);
 
   useEffect(() => {
@@ -130,6 +134,7 @@ export default function Plan() {
             {(plan.days.length ? explainMisses(plan.days, t.band, t.protein) : plan.issues).map((i) => <div key={i} className="estimate-flag">{i}</div>)}
             {plan.days.map((d, i) => (
               <DayCard key={d.day} d={d} index={i} ticks={started ? week.ticks : undefined} onOpen={setSheet}
+                onSwap={finished ? undefined : (day, meal) => setSwap({ week: week.start, day, meal })}
                 onTick={started && !finished ? (k) => update((p) => ({ ...p, weeks: toggleTick(p.weeks, week.start, k) })) : undefined} />
             ))}
           </>}
@@ -191,17 +196,28 @@ export default function Plan() {
             onSkip={() => update((p) => ({ ...p, weeks: skipWeek(p.weeks, upcomingSel.week.start, now) }))}
             onUndo={() => update((p) => ({ ...p, weeks: undoSkip(p.weeks, upcomingSel.week.start, now) }))}
             onCopy={(text) => copy(text, upcomingSel.week.start)} copied={copied} onOpen={setSheet}
+            onSwap={(day, meal) => setSwap({ week: upcomingSel.week.start, day, meal })}
             onToggleHave={(k) => update((p) => { const w = p.weeks[upcomingSel.week.start]; const have = w.haveAlready.includes(k) ? w.haveAlready.filter((x) => x !== k) : [...w.haveAlready, k]; return { ...p, weeks: saveList({ ...p.weeks, [w.start]: { ...w, haveAlready: have } }, w.start, have, w.checkout ?? 'notes') }; })} />}
         </div>
       )}
       <RecipeSheet id={sheet} onClose={() => setSheet(null)} portions={1} />
+      <SwapSheet plan={(swap && weeks[swap.week]?.plan) || plan} target={swap && weeks[swap.week]?.plan ? swap : null} input={planInputFrom(profile)} onClose={() => setSwap(null)}
+        onPick={(id) => {
+          if (!swap) return;
+          update((p) => {
+            const w = p.weeks[swap.week];
+            return w?.plan ? { ...p, weeks: { ...p.weeks, [w.start]: { ...w, plan: applySwap(w.plan, swap.day, swap.meal, id, planInputFrom(p)) } } } : p;
+          });
+          track('meal_swapped', { source: 'plan' });
+          setSwap(null);
+        }} />
     </Screen>
   );
 }
 
-function UpcomingCard({ week, status, weeks, now, onPlan, onSkip, onUndo, onCopy, copied, onOpen, onToggleHave }: {
+function UpcomingCard({ week, status, weeks, now, onPlan, onSkip, onUndo, onCopy, copied, onOpen, onSwap, onToggleHave }: {
   week: Week; status: WeekStatus; weeks: Record<string, Week>; now: Date; onPlan: () => void; onSkip: () => void; onUndo: () => void;
-  onCopy: (t: string) => void; copied: string | null; onOpen: (id: string) => void; onToggleHave: (k: string) => void;
+  onCopy: (t: string) => void; copied: string | null; onOpen: (id: string) => void; onSwap: (day: number, meal: number) => void; onToggleHave: (k: string) => void;
 }) {
   const deadline = `midnight Sun ${dayLabel(addDays(week.start, -1))}`;
   if (status === 'locked') return <div className="card"><h3>{weekLabel(week.start)}</h3><p className="muted" style={{ margin: 0 }}>Opens Mon {dayLabel(londonDate(opensAt(weeks, week.start)))}. Only one week is open to plan at a time.</p></div>;
@@ -223,7 +239,7 @@ function UpcomingCard({ week, status, weeks, now, onPlan, onSkip, onUndo, onCopy
   return (
     <div>
       <p className="muted">Planned. Starts Mon {dayLabel(week.start)}.</p>
-      {plan.days.map((d, i) => <DayCard key={d.day} d={d} index={i} onOpen={onOpen} />)}
+      {plan.days.map((d, i) => <DayCard key={d.day} d={d} index={i} onOpen={onOpen} onSwap={onSwap} />)}
       <h2 style={{ marginTop: 22 }}>Ingredients</h2>
       <PriceNote totalPence={shopping.totalPence} />
       <ShoppingList shopping={shopping} have={week.haveAlready} onToggle={onToggleHave} />

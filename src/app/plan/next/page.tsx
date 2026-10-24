@@ -2,6 +2,7 @@
 import { useEffect, useMemo, useState } from 'react';
 import { useRouter } from 'next/navigation';
 import BasketButton from '@/components/BasketButton';
+import SwapSheet from '@/components/SwapSheet';
 import PriceNote from '@/components/PriceNote';
 import InstallSheet from '@/components/InstallSheet';
 import MealImage from '@/components/MealImage';
@@ -13,6 +14,7 @@ import { addDays, dayLabel, weekLabel } from '@/lib/cycle/dates';
 import { ensureWeeks, saveList, savePlan, saveProgress, snapshot, type Week } from '@/lib/cycle/week';
 import { BUDGETS, BUDGET_LABEL, budgetHelp, tierMark } from '@/lib/budget';
 import { planInputFrom } from '@/lib/planner/fromProfile';
+import { applySwap } from '@/lib/planner/swap';
 import { buildShopping } from '@/lib/planner/shopping';
 import { explainMisses, planWeek } from '@/lib/planner/solve';
 import type { Plan } from '@/lib/planner/types';
@@ -42,6 +44,7 @@ export default function PlanNext() {
   const [have, setHave] = useState<string[]>([]);
   const [copied, setCopied] = useState<string | null>(null);
   const [building, setBuilding] = useState(false);
+  const [swap, setSwap] = useState<{ day: number; meal: number } | null>(null);
 
   const snap = useMemo(() => (profile ? snapshot(ensureWeeks(profile.weeks, now), now) : null), [profile, now]);
   // After saving, the week is no longer "to plan"; keep showing it on the confirmation step.
@@ -171,7 +174,7 @@ export default function PlanNext() {
             {explainMisses(draft.days, t.band, t.protein).map((i) => <div key={i} className="estimate-flag">{i}</div>)}
             {draft.notes?.map((n) => <p key={n} className="muted">{n}</p>)}
             {shopping && <PriceNote totalPence={shopping.totalPence} />}
-            {draft.days.map((d, i) => <DayCard key={d.day} d={d} index={i} label={dayLabel(addDays(week.start, i))} />)}
+            {draft.days.map((d, i) => <DayCard key={d.day} d={d} index={i} label={dayLabel(addDays(week.start, i))} onSwap={(day, meal) => setSwap({ day, meal })} />)}
             <button className="btn ghost" onClick={() => build(picks.length ? picks : profile.likedRecipes)}>Shuffle</button>
           </>)}
         </div>
@@ -200,6 +203,8 @@ export default function PlanNext() {
         </div>
       )}
 
+      {draft && <SwapSheet plan={draft} target={step === 'review' ? swap : null} input={planInputFrom(profile)} onClose={() => setSwap(null)}
+        onPick={(id) => { if (swap) { setDraft(applySwap(draft, swap.day, swap.meal, id, planInputFrom(profile))); track('meal_swapped', { source: 'review' }); } setSwap(null); }} />}
       <InstallSheet when={step === 'saved'} />
     </Screen>
   );

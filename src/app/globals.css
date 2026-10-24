@@ -94,6 +94,15 @@ input.text:focus{outline:2px solid var(--ok);}
 .chip.on{background:var(--btn); color:var(--btn-ink);}
 .chip.amber.on{background:var(--warn); color:#1c1300;}
 .chip.lg{min-height:40px; font-size:15px;}
+.swapbtn{flex:none; align-self:center; width:auto; min-height:0; padding:6px 10px; border:1px solid var(--line, #d8d8dc); border-radius:8px; background:transparent; color:var(--ink2); font-size:12px; font-weight:600; line-height:1; cursor:pointer;}
+.swapopt{display:flex; gap:12px; align-items:center; width:100%; text-align:left; padding:12px 0; border:0; border-bottom:1px solid var(--line, #e4e4e8); background:none; color:inherit; cursor:pointer; font:inherit;}
+.swapopt:last-of-type{border-bottom:0}
+.swapopt .mealimg{width:64px; height:48px; flex:none; border-radius:10px; font-size:26px;}
+.swapopt .emoji{width:64px; height:48px; flex:none; display:grid; place-items:center; font-size:28px; background:var(--fill); border-radius:10px;}
+.swapopt .sbody{flex:1; min-width:0}
+.swapopt .sname{font-weight:600}
+.swapopt .sday{font-size:13px; color:var(--ink2); margin-top:2px}
+.swapopt .sday.amber{color:var(--warn-ink)}
 .contains{font-size:13px; margin:0 0 4px; line-height:1.45;}
 .contains .muted{display:inline;}
 .group-title{font-size:12px; font-weight:600; letter-spacing:.06em; text-transform:uppercase; color:var(--ink2); margin:18px 0 0;}
