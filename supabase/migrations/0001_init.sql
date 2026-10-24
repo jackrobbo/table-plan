@@ -21,6 +21,10 @@ create table public.products (
   price_pence     integer not null check (price_pence >= 0),
   pack_size       numeric not null check (pack_size > 0),
   slug            text not null,
+  -- nightly price check (scripts/refresh-prices.ts)
+  price_status    text not null default 'ok' check (price_status in ('ok','changed_big','out_of_stock','delisted','error')),
+  checked_at      timestamptz,
+  last_ok_at      timestamptz,
   updated_at      timestamptz not null default now(),
   primary key (ingredient_slug, retailer)
 );

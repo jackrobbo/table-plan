@@ -19,3 +19,10 @@ Recipes and ingredients live in `content/` (`ingredients.json`, `recipes/*.json`
 `npm run content:import` validates everything (unknown ingredients, macro sanity, duplicates, live recipes must be
 priced), then regenerates `src/data/*.json` (live recipes only) and the idempotent `supabase/seed.sql`.
 Ingredient CoFID data and extra retailer mappings (scraped) will be added later; `per100`/`product` are nullable.
+
+## Pricing pipeline (M3)
+`npm run prices:refresh` checks each mapped Morrisons product page (JSON-LD `offers.price`, 2s apart, identifiable UA,
+robots-compliant) and writes `content/prices.json`. 404s, product-less pages, SKU mismatches and out-of-stock are flagged
+(`delisted` / `out_of_stock`) and keep the last price; moves over 50% are held for review (`changed_big`); outages are `error`.
+`.github/workflows/prices.yml` runs it nightly and Monday 05:00 UTC, re-imports and commits. The app shows prices as
+"≈ £x · estimated Morrisons prices, checked <date>" with a warning after 4 days (`PriceNote`).

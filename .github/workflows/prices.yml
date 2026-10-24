@@ -1,0 +1,24 @@
+name: Refresh Morrisons prices
+on:
+  schedule:
+    - cron: '30 2 * * *'   # nightly, 02:30 UTC
+    - cron: '0 5 * * 1'    # Monday 05:00 UTC, so Monday-open shows fresh prices
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: 22, cache: npm }
+      - run: npm ci
+      - run: npm run prices:refresh
+      - run: npm run content:import
+      - name: Commit if changed
+        run: |
+          git config user.name "table-plan-bot"
+          git config user.email "bot@users.noreply.github.com"
+          git add content/prices.json src/data supabase/seed.sql
+          git diff --cached --quiet || (git commit -m "chore: refresh Morrisons prices" && git push)

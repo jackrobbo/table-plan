@@ -1,0 +1,279 @@
+{
+ "breast": {
+  "price_pence": 699,
+  "checked_at": "2026-10-24T13:06:27.518Z",
+  "last_ok_at": "2026-10-24T13:06:27.518Z",
+  "status": "ok"
+ },
+ "thigh": {
+  "price_pence": 725,
+  "checked_at": "2026-10-24T13:06:27.518Z",
+  "last_ok_at": "2026-10-24T13:06:27.518Z",
+  "status": "ok"
+ },
+ "mince": {
+  "price_pence": 295,
+  "checked_at": "2026-10-24T13:06:27.518Z",
+  "last_ok_at": "2026-10-24T13:06:27.518Z",
+  "status": "ok"
+ },
+ "sizzle": {
+  "price_pence": 525,
+  "checked_at": "2026-10-24T13:06:27.518Z",
+  "last_ok_at": "2026-10-24T13:06:27.518Z",
+  "status": "ok"
+ },
+ "rump": {
+  "price_pence": 293,
+  "checked_at": "2026-10-24T13:06:27.518Z",
+  "last_ok_at": null,
+  "status": "changed_big",
+  "note": "moved 50% (293p → 440p); held for review"
+ },
+ "prawns": {
+  "price_pence": 249,
+  "checked_at": "2026-10-24T13:06:27.518Z",
+  "last_ok_at": "2026-10-24T13:06:27.518Z",
+  "status": "ok"
+ },
+ "roast": {
+  "price_pence": 375,
+  "checked_at": "2026-10-24T13:06:27.518Z",
+  "last_ok_at": "2026-10-24T13:06:27.518Z",
+  "status": "ok"
+ },
+ "ham": {
+  "price_pence": 200,
+  "checked_at": "2026-10-24T13:06:27.518Z",
+  "last_ok_at": "2026-10-24T13:06:27.518Z",
+  "status": "ok"
+ },
+ "bacon": {
+  "price_pence": 325,
+  "checked_at": "2026-10-24T13:06:27.518Z",
+  "last_ok_at": "2026-10-24T13:06:27.518Z",
+  "status": "ok"
+ },
+ "eggs": {
+  "price_pence": 180,
+  "checked_at": "2026-10-24T13:06:27.518Z",
+  "last_ok_at": "2026-10-24T13:06:27.518Z",
+  "status": "ok"
+ },
+ "milk": {
+  "price_pence": 165,
+  "checked_at": "2026-10-24T13:06:27.518Z",
+  "last_ok_at": "2026-10-24T13:06:27.518Z",
+  "status": "ok"
+ },
+ "yog": {
+  "price_pence": 75,
+  "checked_at": "2026-10-24T13:06:27.518Z",
+  "last_ok_at": "2026-10-24T13:06:27.518Z",
+  "status": "ok"
+ },
+ "greek": {
+  "price_pence": 115,
+  "checked_at": "2026-10-24T13:06:27.518Z",
+  "last_ok_at": "2026-10-24T13:06:27.518Z",
+  "status": "ok"
+ },
+ "loaf": {
+  "price_pence": 110,
+  "checked_at": "2026-10-24T13:06:27.518Z",
+  "last_ok_at": "2026-10-24T13:06:27.518Z",
+  "status": "ok"
+ },
+ "wraps": {
+  "price_pence": 140,
+  "checked_at": "2026-10-24T13:06:27.518Z",
+  "last_ok_at": "2026-10-24T13:06:27.518Z",
+  "status": "ok"
+ },
+ "mission": {
+  "price_pence": 160,
+  "checked_at": "2026-10-24T13:06:27.518Z",
+  "last_ok_at": "2026-10-24T13:06:27.518Z",
+  "status": "ok"
+ },
+ "pittas": {
+  "price_pence": 50,
+  "checked_at": "2026-10-24T13:06:27.518Z",
+  "last_ok_at": "2026-10-24T13:06:27.518Z",
+  "status": "ok"
+ },
+ "houm": {
+  "price_pence": 130,
+  "checked_at": "2026-10-24T13:06:27.518Z",
+  "last_ok_at": "2026-10-24T13:06:27.518Z",
+  "status": "ok"
+ },
+ "blueb": {
+  "price_pence": 129,
+  "checked_at": "2026-10-24T13:06:27.518Z",
+  "last_ok_at": "2026-10-24T13:06:27.518Z",
+  "status": "ok"
+ },
+ "banana": {
+  "price_pence": 78,
+  "checked_at": "2026-10-24T13:06:27.518Z",
+  "last_ok_at": "2026-10-24T13:06:27.518Z",
+  "status": "ok"
+ },
+ "apple": {
+  "price_pence": 45,
+  "checked_at": "2026-10-24T13:06:27.518Z",
+  "last_ok_at": "2026-10-24T13:06:27.518Z",
+  "status": "ok"
+ },
+ "lemon": {
+  "price_pence": 37,
+  "checked_at": "2026-10-24T13:06:27.518Z",
+  "last_ok_at": "2026-10-24T13:06:27.518Z",
+  "status": "ok"
+ },
+ "iceberg": {
+  "price_pence": 89,
+  "checked_at": "2026-10-24T13:06:27.518Z",
+  "last_ok_at": "2026-10-24T13:06:27.518Z",
+  "status": "ok"
+ },
+ "cuc": {
+  "price_pence": 99,
+  "checked_at": "2026-10-24T13:06:27.518Z",
+  "last_ok_at": "2026-10-24T13:06:27.518Z",
+  "status": "ok"
+ },
+ "plum": {
+  "price_pence": 83,
+  "checked_at": "2026-10-24T13:06:27.518Z",
+  "last_ok_at": "2026-10-24T13:06:27.518Z",
+  "status": "ok"
+ },
+ "salad": {
+  "price_pence": 100,
+  "checked_at": "2026-10-24T13:06:27.518Z",
+  "last_ok_at": "2026-10-24T13:06:27.518Z",
+  "status": "ok"
+ },
+ "onions": {
+  "price_pence": 95,
+  "checked_at": "2026-10-24T13:06:27.518Z",
+  "last_ok_at": "2026-10-24T13:06:27.518Z",
+  "status": "ok"
+ },
+ "spring": {
+  "price_pence": 65,
+  "checked_at": "2026-10-24T13:06:27.518Z",
+  "last_ok_at": "2026-10-24T13:06:27.518Z",
+  "status": "ok"
+ },
+ "carrots": {
+  "price_pence": 44,
+  "checked_at": "2026-10-24T13:06:27.518Z",
+  "last_ok_at": "2026-10-24T13:06:27.518Z",
+  "status": "ok"
+ },
+ "pepper": {
+  "price_pence": 70,
+  "checked_at": "2026-10-24T13:06:27.518Z",
+  "last_ok_at": "2026-10-24T13:06:27.518Z",
+  "status": "ok"
+ },
+ "mixpep": {
+  "price_pence": 175,
+  "checked_at": "2026-10-24T13:06:27.518Z",
+  "last_ok_at": "2026-10-24T13:06:27.518Z",
+  "status": "ok"
+ },
+ "chilli": {
+  "price_pence": 59,
+  "checked_at": "2026-10-24T13:06:27.518Z",
+  "last_ok_at": "2026-10-24T13:06:27.518Z",
+  "status": "ok"
+ },
+ "brocc": {
+  "price_pence": 140,
+  "checked_at": "2026-10-24T13:06:27.518Z",
+  "last_ok_at": "2026-10-24T13:06:27.518Z",
+  "status": "ok"
+ },
+ "pouch": {
+  "price_pence": 225,
+  "checked_at": "2026-10-24T13:06:27.518Z",
+  "last_ok_at": "2026-10-24T13:06:27.518Z",
+  "status": "ok"
+ },
+ "cobs": {
+  "price_pence": 129,
+  "checked_at": "2026-10-24T13:06:27.518Z",
+  "last_ok_at": "2026-10-24T13:06:27.518Z",
+  "status": "ok"
+ },
+ "stirfry": {
+  "price_pence": 246,
+  "checked_at": "2026-10-24T13:06:27.518Z",
+  "last_ok_at": "2026-10-24T13:06:27.518Z",
+  "status": "ok"
+ },
+ "slices": {
+  "price_pence": 150,
+  "checked_at": "2026-10-24T13:06:27.518Z",
+  "last_ok_at": "2026-10-24T13:06:27.518Z",
+  "status": "ok"
+ },
+ "medley": {
+  "price_pence": 220,
+  "checked_at": "2026-10-24T13:06:27.518Z",
+  "last_ok_at": "2026-10-24T13:06:27.518Z",
+  "status": "ok"
+ },
+ "spinach": {
+  "price_pence": 100,
+  "checked_at": "2026-10-24T13:06:27.518Z",
+  "last_ok_at": "2026-10-24T13:06:27.518Z",
+  "status": "ok"
+ },
+ "creme": {
+  "price_pence": 75,
+  "checked_at": "2026-10-24T13:06:27.518Z",
+  "last_ok_at": "2026-10-24T13:06:27.518Z",
+  "status": "ok"
+ },
+ "ctoms": {
+  "price_pence": 45,
+  "checked_at": "2026-10-24T13:06:27.518Z",
+  "last_ok_at": "2026-10-24T13:06:27.518Z",
+  "status": "ok"
+ },
+ "kidney": {
+  "price_pence": 37,
+  "checked_at": "2026-10-24T13:06:27.518Z",
+  "last_ok_at": "2026-10-24T13:06:27.518Z",
+  "status": "ok"
+ },
+ "grenade": {
+  "price_pence": 1000,
+  "checked_at": "2026-10-24T13:06:27.518Z",
+  "last_ok_at": "2026-10-24T13:06:27.518Z",
+  "status": "ok"
+ },
+ "wafer": {
+  "price_pence": 200,
+  "checked_at": "2026-10-24T13:06:27.518Z",
+  "last_ok_at": "2026-10-24T13:06:27.518Z",
+  "status": "ok"
+ },
+ "pops": {
+  "price_pence": 125,
+  "checked_at": "2026-10-24T13:06:27.518Z",
+  "last_ok_at": "2026-10-24T13:06:27.518Z",
+  "status": "ok"
+ },
+ "babybel": {
+  "price_pence": 245,
+  "checked_at": "2026-10-24T13:06:27.518Z",
+  "last_ok_at": "2026-10-24T13:06:27.518Z",
+  "status": "ok"
+ }
+}

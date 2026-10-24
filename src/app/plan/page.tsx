@@ -3,6 +3,7 @@ import { useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 import { getBackend } from '@/lib/db';
 import { computeTargets } from '@/lib/targets';
+import PriceNote from '@/components/PriceNote';
 import { useProfile } from '@/lib/useProfile';
 
 /** Placeholder "This week" screen: shows the saved profile. The planner lands in M4/M5. */
@@ -28,6 +29,7 @@ export default function Plan() {
         <div className="ticketc"><span className="lbl">Calories</span><span className="big">{t.band[0]}–{t.band[1]}</span></div>
         <div className="ticketc"><span className="lbl">Protein floor</span><span className="big">{t.protein}g</span></div>
       </div>
+      <PriceNote />
       <p>Goal: <b>{profile.goal}</b> · Liked meals: <b>{profile.likedRecipes.length}</b>
         {profile.allergies.length > 0 && <> · Allergies: <b>{profile.allergies.join(', ')}</b></>}</p>
       <button className="btn ghost" onClick={() => update((p) => ({ ...p, completed: false, step: 'goal' }))}>Edit onboarding</button>{' '}
