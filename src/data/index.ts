@@ -15,6 +15,8 @@ export interface Recipe {
   fresh: [string, number][]; cup: string[]; m: string[]; allergens: string[]; macros_only?: boolean;
   /** Marginal cost of one portion in pence, and its low/medium/high tier (see BUDGET_LIMITS). null for macros-only meals. */
   cost?: number | null; b?: Budget | null;
+  /** Header photo: alt text and the placeholder colour. Files are /meals/<id>-<width>.webp (see src/lib/images.ts). */
+  img?: { a: string; c: string };
 }
 export interface Topup { n: string; p: number; k: number; prod: string; qty: number }
 

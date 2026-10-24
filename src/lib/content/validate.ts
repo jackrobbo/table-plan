@@ -21,7 +21,8 @@ export const KCAL_TOLERANCE = 0.15;
 /** Stricter bar to count as verified (protein gets 1.5x this). */
 export const VERIFY_TOLERANCE = 0.1;
 
-export function validateContent(ingredients: IngredientDef[], recipes: RecipeDef[]): Issue[] {
+/** `images` is content/images/manifest.json (slug -> built photo). Leave it out to skip the photo checks. */
+export function validateContent(ingredients: IngredientDef[], recipes: RecipeDef[], images?: Record<string, unknown>): Issue[] {
   const issues: Issue[] = [];
   const err = (where: string, message: string) => issues.push({ where, level: 'error', message });
   const warn = (where: string, message: string) => issues.push({ where, level: 'warning', message });
@@ -122,6 +123,17 @@ export function validateContent(ingredients: IngredientDef[], recipes: RecipeDef
       }
       if (!poc && !res.missing.length && costPerPortion(r, ing) == null) err(w, 'cannot work out a cost per portion');
     }
+  }
+  if (images) {
+    const bySlug = new Map(recipes.map((r) => [r.slug, r]));
+    for (const r of recipes) {
+      const w = `recipe ${r.slug}`;
+      if (r.image) {
+        if ((r.image.alt ?? '').trim().length < 12) err(w, 'image.alt must describe the photo (at least 12 characters), for screen readers');
+        if (!images[r.slug]) err(w, `has image.alt but no photo is built: put ${r.slug}.jpg in content/images/originals/ and run npm run images:build`);
+      } else if (images[r.slug]) err(w, 'a photo is built for this recipe but it has no image.alt: add "image": { "alt": "..." }');
+    }
+    for (const slug of Object.keys(images)) if (!bySlug.has(slug)) warn(`image ${slug}`, 'photo has no recipe with that slug');
   }
   return issues;
 }

@@ -206,3 +206,14 @@ describe('CoFID verification', () => {
     expect(validateContent(i, [eatOut]).filter((x) => x.level === 'error')).toEqual([]);
   });
 });
+
+describe('layout regressions', () => {
+  it('entrance animations must not keep a transform, which would trap position:fixed sheets inside <main>', () => {
+    const css = fs.readFileSync('src/app/globals.css', 'utf8');
+    for (const sel of ['.screen main', '.fade']) {
+      const m = css.match(new RegExp(sel.replace('.', '\\.') + '\\{animation:([^;}]*)'));
+      expect(m, sel).not.toBeNull();
+      expect(m![1], `${sel} animation fill-mode`).not.toMatch(/\b(both|forwards)\b/);
+    }
+  });
+});

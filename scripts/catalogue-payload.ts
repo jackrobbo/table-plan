@@ -15,6 +15,7 @@ for (const i of ingredients) { const e = i.product && prices[i.slug]; if (e && i
 const recipes: RecipeDef[] = [];
 for (const f of fs.readdirSync(root + 'content/recipes').filter((f) => f.endsWith('.json')).sort()) { const v = JSON.parse(fs.readFileSync(path.join(root, 'content/recipes', f), 'utf8')); recipes.push(...(Array.isArray(v) ? v : [v])); }
 const ing = new Map(ingredients.map((i) => [i.slug, i]));
+const images = fs.existsSync(root + 'content/images/manifest.json') ? (JSON.parse(fs.readFileSync(root + 'content/images/manifest.json', 'utf8')) as Record<string, { colour: string }>) : {};
 
 const ingRows = ingredients.map((i) => {
   const p = i.per100; const note = [i.cofid?.approx && `approx: ${i.cofid.approx}`, i.cofid?.note].filter(Boolean).join(' | ') || null;
@@ -27,7 +28,7 @@ const recRows = recipes.map((r) => {
   const m = resolvePerPortion(r, ing); const cost = r.macros_only ? null : costPerPortion(r, ing);
   const allergens = deriveAllergens(r, ing);
   const hash = crypto.createHash('sha256').update(JSON.stringify([r, m, cost, allergens])).digest('hex').slice(0, 16);
-  return { slug: r.slug, name: r.name, course: r.course, emoji: r.emoji ?? null, serves: r.serves, kcal: m.kcal, protein_g: m.protein_g, carbs_g: m.carbs_g ?? null, fat_g: m.fat_g ?? null, method: r.method, allergens, status: r.status, source: r.source ?? null, macros_only: !!r.macros_only, content_hash: hash, cost_pence: cost, budget: cost == null ? null : budgetTier(cost, r.course) };
+  return { slug: r.slug, name: r.name, course: r.course, emoji: r.emoji ?? null, serves: r.serves, kcal: m.kcal, protein_g: m.protein_g, carbs_g: m.carbs_g ?? null, fat_g: m.fat_g ?? null, method: r.method, allergens, status: r.status, source: r.source ?? null, macros_only: !!r.macros_only, content_hash: hash, cost_pence: cost, budget: cost == null ? null : budgetTier(cost, r.course), image_alt: r.image?.alt ?? null, image_colour: r.image && images[r.slug] ? images[r.slug].colour : null };
 });
 const lineRows = recipes.flatMap((r) => [...r.ingredients.map((l) => ({ recipe_slug: r.slug, ingredient_slug: l.ingredient, qty: l.qty, cupboard: false })), ...r.cupboard.map((c) => ({ recipe_slug: r.slug, ingredient_slug: c, qty: r.cupboard_qty?.[c] ?? 0, cupboard: true }))]);
 const SP = root + 'public/catalogue/';
