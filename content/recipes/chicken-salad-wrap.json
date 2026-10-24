@@ -1,0 +1,52 @@
+{
+ "slug": "chicken-salad-wrap",
+ "name": "Chicken Salad Wrap",
+ "course": "lunch",
+ "emoji": "🌯",
+ "serves": 1,
+ "status": "live",
+ "per_portion": {
+  "kcal": 375,
+  "protein_g": 32,
+  "carbs_g": 38,
+  "fat_g": 12
+ },
+ "ingredients": [
+  {
+   "ingredient": "breast",
+   "qty": 100
+  },
+  {
+   "ingredient": "wraps",
+   "qty": 1
+  },
+  {
+   "ingredient": "salad",
+   "qty": 40
+  },
+  {
+   "ingredient": "cuc",
+   "qty": 0.25
+  },
+  {
+   "ingredient": "plum",
+   "qty": 60
+  },
+  {
+   "ingredient": "greek",
+   "qty": 30
+  }
+ ],
+ "cupboard": [
+  "oil"
+ ],
+ "cupboard_g": {
+  "oil": 3
+ },
+ "method": [
+  "Slice the chicken breast and fry in the oil until golden and cooked through; let it cool a little (or cook it ahead).",
+  "Warm the wrap and spread with the Greek yogurt.",
+  "Add the chicken, salad leaves, sliced cucumber and halved tomatoes, season with black pepper and roll up."
+ ],
+ "source": "original"
+}

@@ -1,0 +1,58 @@
+{
+ "slug": "turkey-kofta-pittas",
+ "name": "Turkey Kofta Pittas",
+ "course": "dinner",
+ "emoji": "🥙",
+ "serves": 2,
+ "status": "live",
+ "per_portion": {
+  "kcal": 500,
+  "protein_g": 56,
+  "carbs_g": 43,
+  "fat_g": 13
+ },
+ "ingredients": [
+  {
+   "ingredient": "turkey-mince",
+   "qty": 400
+  },
+  {
+   "ingredient": "pittas",
+   "qty": 2
+  },
+  {
+   "ingredient": "greek",
+   "qty": 100
+  },
+  {
+   "ingredient": "cuc",
+   "qty": 0.5
+  },
+  {
+   "ingredient": "plum",
+   "qty": 200
+  },
+  {
+   "ingredient": "salad",
+   "qty": 80
+  },
+  {
+   "ingredient": "onions",
+   "qty": 0.5
+  }
+ ],
+ "cupboard": [
+  "oil",
+  "cumin",
+  "paprika"
+ ],
+ "cupboard_g": {
+  "oil": 5
+ },
+ "method": [
+  "Mix the turkey mince with the grated onion, cumin, smoked paprika and seasoning and shape into 8 small koftas.",
+  "Fry in the oil for 8–10 minutes, turning, until cooked through.",
+  "Stir the grated cucumber into the Greek yogurt. Warm the pittas and fill with the koftas, salad, chopped tomatoes and yogurt sauce."
+ ],
+ "source": "original"
+}

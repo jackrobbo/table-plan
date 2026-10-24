@@ -1,0 +1,47 @@
+{
+ "slug": "salmon-with-greens-and-crushed-potatoes",
+ "name": "Salmon with Greens & Crushed Potatoes",
+ "course": "dinner",
+ "emoji": "🐟",
+ "serves": 2,
+ "status": "live",
+ "per_portion": {
+  "kcal": 465,
+  "protein_g": 33,
+  "carbs_g": 39,
+  "fat_g": 21
+ },
+ "ingredients": [
+  {
+   "ingredient": "salmon",
+   "qty": 220
+  },
+  {
+   "ingredient": "baby-potatoes",
+   "qty": 400
+  },
+  {
+   "ingredient": "green-beans",
+   "qty": 200
+  },
+  {
+   "ingredient": "brocc",
+   "qty": 200
+  },
+  {
+   "ingredient": "creme",
+   "qty": 40
+  },
+  {
+   "ingredient": "lemon",
+   "qty": 0.5
+  }
+ ],
+ "cupboard": [],
+ "method": [
+  "Boil the baby potatoes for 15 minutes, adding the green beans and broccoli for the last 4.",
+  "Meanwhile bake the salmon at 200°C for 12–14 minutes.",
+  "Lightly crush the potatoes with the crème fraîche, a squeeze of lemon and seasoning, and serve with the salmon and greens."
+ ],
+ "source": "original"
+}

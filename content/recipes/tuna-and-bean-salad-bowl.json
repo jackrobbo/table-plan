@@ -1,0 +1,47 @@
+{
+ "slug": "tuna-and-bean-salad-bowl",
+ "name": "Tuna & Bean Salad Bowl",
+ "course": "lunch",
+ "emoji": "🥗",
+ "serves": 1,
+ "status": "live",
+ "per_portion": {
+  "kcal": 320,
+  "protein_g": 38,
+  "carbs_g": 24,
+  "fat_g": 9
+ },
+ "ingredients": [
+  {
+   "ingredient": "tuna-tin",
+   "qty": 102
+  },
+  {
+   "ingredient": "kidney",
+   "qty": 120
+  },
+  {
+   "ingredient": "plum",
+   "qty": 100
+  },
+  {
+   "ingredient": "cuc",
+   "qty": 0.33
+  },
+  {
+   "ingredient": "salad",
+   "qty": 60
+  }
+ ],
+ "cupboard": [
+  "oil"
+ ],
+ "cupboard_g": {
+  "oil": 5
+ },
+ "method": [
+  "Drain the tuna and kidney beans and tip into a bowl with the halved tomatoes, chopped cucumber and salad leaves.",
+  "Dress with the oil and plenty of black pepper."
+ ],
+ "source": "original"
+}

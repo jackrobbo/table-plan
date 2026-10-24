@@ -1,0 +1,38 @@
+{
+ "slug": "egg-spinach-and-oatcake-pot",
+ "name": "Egg, Spinach & Oatcake Pot",
+ "course": "lunch",
+ "emoji": "🥚",
+ "serves": 1,
+ "status": "live",
+ "per_portion": {
+  "kcal": 365,
+  "protein_g": 24,
+  "carbs_g": 23,
+  "fat_g": 20
+ },
+ "ingredients": [
+  {
+   "ingredient": "eggs",
+   "qty": 3
+  },
+  {
+   "ingredient": "spinach",
+   "qty": 60
+  },
+  {
+   "ingredient": "plum",
+   "qty": 100
+  },
+  {
+   "ingredient": "oatcakes",
+   "qty": 30
+  }
+ ],
+ "cupboard": [],
+ "method": [
+  "Boil the eggs for 8 minutes, cool and peel.",
+  "Pack the spinach and halved tomatoes in a pot, top with the quartered eggs and serve with the oatcakes."
+ ],
+ "source": "original"
+}

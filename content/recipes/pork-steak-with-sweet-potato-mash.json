@@ -1,0 +1,47 @@
+{
+ "slug": "pork-steak-with-sweet-potato-mash",
+ "name": "Pork Steak with Sweet Potato Mash",
+ "course": "dinner",
+ "emoji": "🍖",
+ "serves": 2,
+ "status": "live",
+ "per_portion": {
+  "kcal": 500,
+  "protein_g": 53,
+  "carbs_g": 41,
+  "fat_g": 15
+ },
+ "ingredients": [
+  {
+   "ingredient": "pork-loin",
+   "qty": 400
+  },
+  {
+   "ingredient": "sweet-potatoes",
+   "qty": 300
+  },
+  {
+   "ingredient": "green-beans",
+   "qty": 200
+  },
+  {
+   "ingredient": "brocc",
+   "qty": 200
+  }
+ ],
+ "cupboard": [
+  "oil",
+  "honey",
+  "mustard"
+ ],
+ "cupboard_g": {
+  "oil": 5,
+  "honey": 7
+ },
+ "method": [
+  "Boil the sweet potato chunks for 15 minutes, then drain and mash with black pepper.",
+  "Mix the mustard and honey and brush over the pork steaks; fry in the oil for 4–5 minutes each side until cooked through with no pink.",
+  "Steam the green beans and broccoli and serve everything together."
+ ],
+ "source": "original"
+}

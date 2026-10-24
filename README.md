@@ -33,8 +33,9 @@ floor ("days never fail"): cooked meals are resized (80–140%), snacks auto-fil
 needed; resized/topped-up days are flagged. Several candidate weeks are built and the cheapest shopping list (least
 pack waste) wins. Macros-only meals reserve calories. Dinners are picked for the week first, so they're chosen to suit the
 calorie target and protein floor (`dinnerMisfit`: resizable to the day's dinner budget and dense enough in protein; disliked
-ones rank last among those). The 100-recipe bank (20 breakfasts, 25 lunches, 15 snacks, 40 dinners) lands every day in band up
-to roughly 4,000 kcal; beyond that, days are flagged honestly rather than faked. Protein is capped at 35% of calories (provisional).
+ones rank last among those). The 122-recipe bank (24 breakfasts, 30 lunches, 18 snacks, 50 dinners, including a light tier for weight-loss targets)
+lands every day in band up to roughly 4,200 kcal; beyond that, days are flagged honestly rather than faked. If a day finds
+nothing in band, a deeper search leans toward the big or small end of the pools depending on the day's budget. Protein is capped at 35% of calories (provisional).
 
 ## Weekly cycle (M5)
 `src/lib/cycle`: weeks are keyed by Monday (Europe/London, DST-safe). Stored status is what the user did

@@ -1,0 +1,65 @@
+{
+ "slug": "prawn-and-egg-noodle-stir-fry",
+ "name": "Prawn & Egg Noodle Stir-fry",
+ "course": "dinner",
+ "emoji": "🍜",
+ "serves": 2,
+ "status": "live",
+ "per_portion": {
+  "kcal": 485,
+  "protein_g": 36,
+  "carbs_g": 62,
+  "fat_g": 12
+ },
+ "ingredients": [
+  {
+   "ingredient": "king-prawns",
+   "qty": 200
+  },
+  {
+   "ingredient": "eggs",
+   "qty": 2
+  },
+  {
+   "ingredient": "egg-noodles",
+   "qty": 120
+  },
+  {
+   "ingredient": "carrots",
+   "qty": 100
+  },
+  {
+   "ingredient": "pepper",
+   "qty": 1
+  },
+  {
+   "ingredient": "brocc",
+   "qty": 200
+  },
+  {
+   "ingredient": "mushrooms",
+   "qty": 100
+  },
+  {
+   "ingredient": "onions",
+   "qty": 1
+  }
+ ],
+ "cupboard": [
+  "oil",
+  "soy",
+  "honey",
+  "garlic"
+ ],
+ "cupboard_g": {
+  "oil": 10,
+  "soy": 20,
+  "honey": 5
+ },
+ "method": [
+  "Cook the noodles, then drain.",
+  "Stir-fry the onion, carrot, broccoli, pepper and mushrooms in the oil for 5 minutes, adding the garlic for the last minute. Push to one side, scramble the beaten eggs in the gap, then mix everything together.",
+  "Add the prawns, soy sauce and honey, toss in the noodles and heat everything through."
+ ],
+ "source": "original"
+}

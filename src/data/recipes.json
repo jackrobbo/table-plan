@@ -390,6 +390,43 @@
   ]
  },
  {
+  "id": "banana-quark-porridge",
+  "c": "breakfast",
+  "e": "🍌",
+  "n": "Banana Quark Porridge",
+  "p": 27,
+  "k": 365,
+  "serves": 1,
+  "macros_only": false,
+  "fresh": [
+   [
+    "oats",
+    40
+   ],
+   [
+    "milk",
+    200
+   ],
+   [
+    "quark",
+    100
+   ],
+   [
+    "banana",
+    0.5
+   ]
+  ],
+  "cup": [],
+  "m": [
+   "Simmer the oats in the milk for 4 minutes, stirring, until thick.",
+   "Take off the heat, stir in the quark and top with sliced banana."
+  ],
+  "allergens": [
+   "gluten",
+   "milk"
+  ]
+ },
+ {
   "id": "beef-and-broccoli-stir-fry-with-rice",
   "c": "dinner",
   "e": "🥦",
@@ -1066,6 +1103,54 @@
   "allergens": []
  },
  {
+  "id": "chicken-salad-wrap",
+  "c": "lunch",
+  "e": "🌯",
+  "n": "Chicken Salad Wrap",
+  "p": 32,
+  "k": 375,
+  "serves": 1,
+  "macros_only": false,
+  "fresh": [
+   [
+    "breast",
+    100
+   ],
+   [
+    "wraps",
+    1
+   ],
+   [
+    "salad",
+    40
+   ],
+   [
+    "cuc",
+    0.25
+   ],
+   [
+    "plum",
+    60
+   ],
+   [
+    "greek",
+    30
+   ]
+  ],
+  "cup": [
+   "oil"
+  ],
+  "m": [
+   "Slice the chicken breast and fry in the oil until golden and cooked through; let it cool a little (or cook it ahead).",
+   "Warm the wrap and spread with the Greek yogurt.",
+   "Add the chicken, salad leaves, sliced cucumber and halved tomatoes, season with black pepper and roll up."
+  ],
+  "allergens": [
+   "gluten",
+   "milk"
+  ]
+ },
+ {
   "id": "chicken-tikka-masala-with-rice",
   "c": "dinner",
   "e": "🍛",
@@ -1219,6 +1304,78 @@
   ],
   "allergens": [
    "gluten",
+   "milk"
+  ]
+ },
+ {
+  "id": "cottage-cheese-and-ham-pitta",
+  "c": "lunch",
+  "e": "🥙",
+  "n": "Cottage Cheese & Ham Pitta",
+  "p": 25,
+  "k": 330,
+  "serves": 1,
+  "macros_only": false,
+  "fresh": [
+   [
+    "pittas",
+    1
+   ],
+   [
+    "cottage-cheese",
+    100
+   ],
+   [
+    "ham",
+    50
+   ],
+   [
+    "salad",
+    40
+   ],
+   [
+    "plum",
+    60
+   ]
+  ],
+  "cup": [],
+  "m": [
+   "Warm and split the pitta.",
+   "Fill with the cottage cheese, ham, salad leaves and sliced tomatoes."
+  ],
+  "allergens": [
+   "gluten",
+   "milk"
+  ]
+ },
+ {
+  "id": "cottage-cheese-and-tomato-pot",
+  "c": "snack",
+  "e": "🍅",
+  "n": "Cottage Cheese & Tomato Pot",
+  "p": 13,
+  "k": 155,
+  "serves": 1,
+  "macros_only": false,
+  "fresh": [
+   [
+    "cottage-cheese",
+    120
+   ],
+   [
+    "plum",
+    100
+   ],
+   [
+    "cuc",
+    0.25
+   ]
+  ],
+  "cup": [],
+  "m": [
+   "Spoon the cottage cheese into a pot and top with halved tomatoes and diced cucumber."
+  ],
+  "allergens": [
    "milk"
   ]
  },
@@ -1512,6 +1669,43 @@
    "gluten",
    "mustard",
    "soya"
+  ]
+ },
+ {
+  "id": "egg-spinach-and-oatcake-pot",
+  "c": "lunch",
+  "e": "🥚",
+  "n": "Egg, Spinach & Oatcake Pot",
+  "p": 24,
+  "k": 365,
+  "serves": 1,
+  "macros_only": false,
+  "fresh": [
+   [
+    "eggs",
+    3
+   ],
+   [
+    "spinach",
+    60
+   ],
+   [
+    "plum",
+    100
+   ],
+   [
+    "oatcakes",
+    30
+   ]
+  ],
+  "cup": [],
+  "m": [
+   "Boil the eggs for 8 minutes, cool and peel.",
+   "Pack the spinach and halved tomatoes in a pot, top with the quartered eggs and serve with the oatcakes."
+  ],
+  "allergens": [
+   "eggs",
+   "gluten"
   ]
  },
  {
@@ -1812,6 +2006,128 @@
   ]
  },
  {
+  "id": "ham-and-cucumber-roll-ups",
+  "c": "snack",
+  "e": "🥒",
+  "n": "Ham & Cucumber Roll-ups",
+  "p": 12,
+  "k": 80,
+  "serves": 1,
+  "macros_only": false,
+  "fresh": [
+   [
+    "ham",
+    60
+   ],
+   [
+    "cuc",
+    0.33
+   ],
+   [
+    "salad",
+    20
+   ]
+  ],
+  "cup": [],
+  "m": [
+   "Roll the ham slices around cucumber sticks and salad leaves."
+  ],
+  "allergens": []
+ },
+ {
+  "id": "ham-and-veg-scramble-on-toast",
+  "c": "breakfast",
+  "e": "🍳",
+  "n": "Ham & Veg Scramble on Toast",
+  "p": 24,
+  "k": 340,
+  "serves": 1,
+  "macros_only": false,
+  "fresh": [
+   [
+    "eggs",
+    2
+   ],
+   [
+    "ham",
+    30
+   ],
+   [
+    "loaf",
+    1
+   ],
+   [
+    "spinach",
+    40
+   ],
+   [
+    "plum",
+    80
+   ],
+   [
+    "mushrooms",
+    60
+   ]
+  ],
+  "cup": [
+   "oil"
+  ],
+  "m": [
+   "Fry the sliced mushrooms in the oil for 3 minutes, then add the chopped tomatoes and spinach until just wilted.",
+   "Beat the eggs, add them to the pan with the torn ham and stir gently until softly set.",
+   "Pile onto the toast."
+  ],
+  "allergens": [
+   "eggs",
+   "gluten",
+   "soya"
+  ]
+ },
+ {
+  "id": "ham-egg-and-avocado-salad-bowl",
+  "c": "lunch",
+  "e": "🥑",
+  "n": "Ham, Egg & Avocado Salad Bowl",
+  "p": 23,
+  "k": 305,
+  "serves": 1,
+  "macros_only": false,
+  "fresh": [
+   [
+    "eggs",
+    2
+   ],
+   [
+    "ham",
+    40
+   ],
+   [
+    "avocado",
+    0.5
+   ],
+   [
+    "salad",
+    60
+   ],
+   [
+    "cuc",
+    0.33
+   ],
+   [
+    "plum",
+    80
+   ]
+  ],
+  "cup": [],
+  "m": [
+   "Boil the eggs for 8 minutes, cool and peel.",
+   "Layer the salad leaves, cucumber, halved tomatoes and sliced avocado in a bowl, then top with torn ham and the quartered eggs. Finish with black pepper."
+  ],
+  "allergens": [
+   "eggs"
+  ]
+ },
+ {
   "id": "honey-and-soy-chicken",
   "c": "dinner",
   "e": "🍯",
@@ -1890,6 +2206,41 @@
   "allergens": [
    "gluten",
    "mustard"
+  ]
+ },
+ {
+  "id": "houmous-and-veg-sticks",
+  "c": "snack",
+  "e": "🥕",
+  "n": "Houmous & Veg Sticks",
+  "p": 5,
+  "k": 180,
+  "serves": 1,
+  "macros_only": false,
+  "fresh": [
+   [
+    "houm",
+    40
+   ],
+   [
+    "carrots",
+    80
+   ],
+   [
+    "cuc",
+    0.33
+   ],
+   [
+    "pepper",
+    0.5
+   ]
+  ],
+  "cup": [],
+  "m": [
+   "Cut the carrot, cucumber and pepper into sticks and dip into the houmous."
+  ],
+  "allergens": [
+   "sesame"
   ]
  },
  {
@@ -2116,6 +2467,101 @@
   "allergens": [
    "eggs",
    "gluten",
+   "milk"
+  ]
+ },
+ {
+  "id": "lemon-herb-chicken-traybake",
+  "c": "dinner",
+  "e": "🍋",
+  "n": "Lemon & Herb Chicken Traybake",
+  "p": 55,
+  "k": 470,
+  "serves": 2,
+  "macros_only": false,
+  "fresh": [
+   [
+    "breast",
+    400
+   ],
+   [
+    "baby-potatoes",
+    400
+   ],
+   [
+    "courgettes",
+    300
+   ],
+   [
+    "pepper",
+    2
+   ],
+   [
+    "onions",
+    1
+   ],
+   [
+    "lemon",
+    1
+   ]
+  ],
+  "cup": [
+   "oil",
+   "herbs"
+  ],
+  "m": [
+   "Toss the chicken breasts, halved baby potatoes, chunky courgette, peppers and onion wedges with the oil, mixed herbs, the zest of the lemon and seasoning.",
+   "Roast on a large tray at 200°C for 35–40 minutes, turning once, until the chicken is cooked through and the potatoes are golden.",
+   "Squeeze the lemon over before serving."
+  ],
+  "allergens": []
+ },
+ {
+  "id": "lighter-chicken-and-spinach-curry",
+  "c": "dinner",
+  "e": "🍛",
+  "n": "Lighter Chicken & Spinach Curry",
+  "p": 59,
+  "k": 530,
+  "serves": 2,
+  "macros_only": false,
+  "fresh": [
+   [
+    "breast",
+    400
+   ],
+   [
+    "greek",
+    80
+   ],
+   [
+    "passata",
+    250
+   ],
+   [
+    "onions",
+    1
+   ],
+   [
+    "spinach",
+    150
+   ],
+   [
+    "basmati",
+    100
+   ]
+  ],
+  "cup": [
+   "oil",
+   "curry-powder",
+   "garlic"
+  ],
+  "m": [
+   "Brown the chicken pieces and the sliced onion in the oil, add the curry powder and garlic and cook for a minute.",
+   "Pour in the passata, simmer for 15 minutes until the chicken is cooked through, then stir in the spinach until wilted and the Greek yogurt off the heat.",
+   "Serve with the cooked basmati rice."
+  ],
+  "allergens": [
    "milk"
   ]
  },
@@ -2391,6 +2837,48 @@
   ]
  },
  {
+  "id": "pork-steak-with-sweet-potato-mash",
+  "c": "dinner",
+  "e": "🍖",
+  "n": "Pork Steak with Sweet Potato Mash",
+  "p": 53,
+  "k": 500,
+  "serves": 2,
+  "macros_only": false,
+  "fresh": [
+   [
+    "pork-loin",
+    400
+   ],
+   [
+    "sweet-potatoes",
+    300
+   ],
+   [
+    "green-beans",
+    200
+   ],
+   [
+    "brocc",
+    200
+   ]
+  ],
+  "cup": [
+   "oil",
+   "honey",
+   "mustard"
+  ],
+  "m": [
+   "Boil the sweet potato chunks for 15 minutes, then drain and mash with black pepper.",
+   "Mix the mustard and honey and brush over the pork steaks; fry in the oil for 4–5 minutes each side until cooked through with no pink.",
+   "Steam the green beans and broccoli and serve everything together."
+  ],
+  "allergens": [
+   "gluten",
+   "mustard"
+  ]
+ },
+ {
   "id": "pork-steaks-with-roast-potatoes-and-greens",
   "c": "dinner",
   "e": "🍖",
@@ -2558,6 +3046,67 @@
    "crustaceans",
    "gluten",
    "milk"
+  ]
+ },
+ {
+  "id": "prawn-and-egg-noodle-stir-fry",
+  "c": "dinner",
+  "e": "🍜",
+  "n": "Prawn & Egg Noodle Stir-fry",
+  "p": 36,
+  "k": 485,
+  "serves": 2,
+  "macros_only": false,
+  "fresh": [
+   [
+    "king-prawns",
+    200
+   ],
+   [
+    "eggs",
+    2
+   ],
+   [
+    "egg-noodles",
+    120
+   ],
+   [
+    "carrots",
+    100
+   ],
+   [
+    "pepper",
+    1
+   ],
+   [
+    "brocc",
+    200
+   ],
+   [
+    "mushrooms",
+    100
+   ],
+   [
+    "onions",
+    1
+   ]
+  ],
+  "cup": [
+   "oil",
+   "soy",
+   "honey",
+   "garlic"
+  ],
+  "m": [
+   "Cook the noodles, then drain.",
+   "Stir-fry the onion, carrot, broccoli, pepper and mushrooms in the oil for 5 minutes, adding the garlic for the last minute. Push to one side, scramble the beaten eggs in the gap, then mix everything together.",
+   "Add the prawns, soy sauce and honey, toss in the noodles and heat everything through."
+  ],
+  "allergens": [
+   "crustaceans",
+   "eggs",
+   "gluten",
+   "soya"
   ]
  },
  {
@@ -2787,6 +3336,90 @@
   ]
  },
  {
+  "id": "quark-berry-oat-pot",
+  "c": "breakfast",
+  "e": "🫐",
+  "n": "Quark, Berry & Oat Pot",
+  "p": 26,
+  "k": 270,
+  "serves": 1,
+  "macros_only": false,
+  "fresh": [
+   [
+    "quark",
+    150
+   ],
+   [
+    "oats",
+    30
+   ],
+   [
+    "blueb",
+    80
+   ]
+  ],
+  "cup": [
+   "honey"
+  ],
+  "m": [
+   "Stir the oats and honey into the quark and leave for 10 minutes (or overnight) so the oats soften.",
+   "Top with the blueberries."
+  ],
+  "allergens": [
+   "gluten",
+   "milk"
+  ]
+ },
+ {
+  "id": "red-lentil-and-spinach-dahl",
+  "c": "dinner",
+  "e": "🍲",
+  "n": "Red Lentil & Spinach Dahl",
+  "p": 29,
+  "k": 490,
+  "serves": 2,
+  "macros_only": false,
+  "fresh": [
+   [
+    "red-lentils",
+    160
+   ],
+   [
+    "coconut-milk",
+    200
+   ],
+   [
+    "passata",
+    250
+   ],
+   [
+    "spinach",
+    200
+   ],
+   [
+    "onions",
+    1
+   ],
+   [
+    "greek",
+    100
+   ]
+  ],
+  "cup": [
+   "oil",
+   "curry-powder",
+   "garlic"
+  ],
+  "m": [
+   "Soften the chopped onion in the oil with the garlic and curry powder for 3 minutes.",
+   "Add the lentils, passata, coconut milk and 300 ml water and simmer for 20 minutes, stirring now and then, until the lentils are soft.",
+   "Stir through the spinach until wilted and serve with a spoonful of Greek yogurt."
+  ],
+  "allergens": [
+   "milk"
+  ]
+ },
+ {
   "id": "salmon-rice-bowl",
   "c": "lunch",
   "e": "🍣",
@@ -2822,6 +3455,52 @@
   ],
   "allergens": [
    "fish"
+  ]
+ },
+ {
+  "id": "salmon-with-greens-and-crushed-potatoes",
+  "c": "dinner",
+  "e": "🐟",
+  "n": "Salmon with Greens & Crushed Potatoes",
+  "p": 33,
+  "k": 465,
+  "serves": 2,
+  "macros_only": false,
+  "fresh": [
+   [
+    "salmon",
+    220
+   ],
+   [
+    "baby-potatoes",
+    400
+   ],
+   [
+    "green-beans",
+    200
+   ],
+   [
+    "brocc",
+    200
+   ],
+   [
+    "creme",
+    40
+   ],
+   [
+    "lemon",
+    0.5
+   ]
+  ],
+  "cup": [],
+  "m": [
+   "Boil the baby potatoes for 15 minutes, adding the green beans and broccoli for the last 4.",
+   "Meanwhile bake the salmon at 200°C for 12–14 minutes.",
+   "Lightly crush the potatoes with the crème fraîche, a squeeze of lemon and seasoning, and serve with the salmon and greens."
+  ],
+  "allergens": [
+   "fish",
+   "milk"
   ]
  },
  {
@@ -3050,6 +3729,45 @@
    "eggs",
    "gluten",
    "milk"
+  ]
+ },
+ {
+  "id": "smoked-salmon-and-egg-toast",
+  "c": "breakfast",
+  "e": "🍞",
+  "n": "Smoked Salmon & Egg Toast",
+  "p": 26,
+  "k": 310,
+  "serves": 1,
+  "macros_only": false,
+  "fresh": [
+   [
+    "loaf",
+    1
+   ],
+   [
+    "eggs",
+    2
+   ],
+   [
+    "smoked-salmon",
+    40
+   ],
+   [
+    "spinach",
+    20
+   ]
+  ],
+  "cup": [],
+  "m": [
+   "Poach the eggs for 3 minutes.",
+   "Toast the bread, top with the spinach and smoked salmon, then the eggs."
+  ],
+  "allergens": [
+   "eggs",
+   "fish",
+   "gluten",
+   "soya"
   ]
  },
  {
@@ -3565,6 +4283,48 @@
   ]
  },
  {
+  "id": "tuna-and-bean-salad-bowl",
+  "c": "lunch",
+  "e": "🥗",
+  "n": "Tuna & Bean Salad Bowl",
+  "p": 38,
+  "k": 320,
+  "serves": 1,
+  "macros_only": false,
+  "fresh": [
+   [
+    "tuna-tin",
+    102
+   ],
+   [
+    "kidney",
+    120
+   ],
+   [
+    "plum",
+    100
+   ],
+   [
+    "cuc",
+    0.33
+   ],
+   [
+    "salad",
+    60
+   ]
+  ],
+  "cup": [
+   "oil"
+  ],
+  "m": [
+   "Drain the tuna and kidney beans and tip into a bowl with the halved tomatoes, chopped cucumber and salad leaves.",
+   "Dress with the oil and plenty of black pepper."
+  ],
+  "allergens": [
+   "fish"
+  ]
+ },
+ {
   "id": "tuna-and-cucumber-bites",
   "c": "snack",
   "e": "🐟",
@@ -3589,6 +4349,56 @@
   ],
   "allergens": [
    "fish"
+  ]
+ },
+ {
+  "id": "tuna-and-spinach-tomato-pasta",
+  "c": "dinner",
+  "e": "🍝",
+  "n": "Tuna & Spinach Tomato Pasta",
+  "p": 38,
+  "k": 445,
+  "serves": 2,
+  "macros_only": false,
+  "fresh": [
+   [
+    "penne",
+    140
+   ],
+   [
+    "tuna-tin",
+    204
+   ],
+   [
+    "passata",
+    300
+   ],
+   [
+    "spinach",
+    100
+   ],
+   [
+    "onions",
+    1
+   ],
+   [
+    "plum",
+    150
+   ]
+  ],
+  "cup": [
+   "oil",
+   "garlic",
+   "chilli-flakes"
+  ],
+  "m": [
+   "Cook the penne. Meanwhile soften the chopped onion in the oil with the garlic and a pinch of chilli flakes.",
+   "Add the passata and halved tomatoes and simmer for 10 minutes, then stir in the drained tuna and spinach until the spinach wilts.",
+   "Toss with the pasta."
+  ],
+  "allergens": [
+   "fish",
+   "gluten"
   ]
  },
  {
@@ -3759,6 +4569,64 @@
   ]
  },
  {
+  "id": "turkey-bolognese-with-courgette-and-penne",
+  "c": "dinner",
+  "e": "🍝",
+  "n": "Turkey Bolognese with Courgette & Penne",
+  "p": 57,
+  "k": 515,
+  "serves": 2,
+  "macros_only": false,
+  "fresh": [
+   [
+    "turkey-mince",
+    400
+   ],
+   [
+    "ctoms",
+    400
+   ],
+   [
+    "passata",
+    250
+   ],
+   [
+    "onions",
+    1
+   ],
+   [
+    "carrots",
+    100
+   ],
+   [
+    "courgettes",
+    300
+   ],
+   [
+    "penne",
+    90
+   ],
+   [
+    "mushrooms",
+    100
+   ]
+  ],
+  "cup": [
+   "oil",
+   "puree",
+   "herbs",
+   "garlic"
+  ],
+  "m": [
+   "Brown the turkey mince with the chopped onion, grated carrot and sliced mushrooms in the oil. Stir in the tomato puree, garlic and mixed herbs.",
+   "Add the chopped tomatoes, passata and diced courgette and simmer for 25 minutes until thick and the turkey is cooked through.",
+   "Cook the penne and serve the sauce over it."
+  ],
+  "allergens": [
+   "gluten"
+  ]
+ },
+ {
   "id": "turkey-burger-with-sweet-potato-wedges",
   "c": "dinner",
   "e": "🍔",
@@ -3806,6 +4674,108 @@
    "gluten",
    "milk",
    "soya"
+  ]
+ },
+ {
+  "id": "turkey-chilli-with-sweet-potato",
+  "c": "dinner",
+  "e": "🌶️",
+  "n": "Turkey Chilli with Sweet Potato",
+  "p": 58,
+  "k": 535,
+  "serves": 2,
+  "macros_only": false,
+  "fresh": [
+   [
+    "turkey-mince",
+    400
+   ],
+   [
+    "kidney",
+    160
+   ],
+   [
+    "ctoms",
+    400
+   ],
+   [
+    "onions",
+    1
+   ],
+   [
+    "pepper",
+    2
+   ],
+   [
+    "sweet-potatoes",
+    300
+   ]
+  ],
+  "cup": [
+   "oil",
+   "puree",
+   "cumin",
+   "paprika",
+   "chilli-flakes"
+  ],
+  "m": [
+   "Brown the turkey mince with the chopped onion and peppers in the oil. Stir in the tomato puree, cumin, smoked paprika and a pinch of chilli flakes.",
+   "Add the chopped tomatoes, kidney beans and diced sweet potato with 100 ml water, then simmer for 25 minutes until the potato is soft and the chilli is thick."
+  ],
+  "allergens": []
+ },
+ {
+  "id": "turkey-kofta-pittas",
+  "c": "dinner",
+  "e": "🥙",
+  "n": "Turkey Kofta Pittas",
+  "p": 56,
+  "k": 500,
+  "serves": 2,
+  "macros_only": false,
+  "fresh": [
+   [
+    "turkey-mince",
+    400
+   ],
+   [
+    "pittas",
+    2
+   ],
+   [
+    "greek",
+    100
+   ],
+   [
+    "cuc",
+    0.5
+   ],
+   [
+    "plum",
+    200
+   ],
+   [
+    "salad",
+    80
+   ],
+   [
+    "onions",
+    0.5
+   ]
+  ],
+  "cup": [
+   "oil",
+   "cumin",
+   "paprika"
+  ],
+  "m": [
+   "Mix the turkey mince with the grated onion, cumin, smoked paprika and seasoning and shape into 8 small koftas.",
+   "Fry in the oil for 8–10 minutes, turning, until cooked through.",
+   "Stir the grated cucumber into the Greek yogurt. Warm the pittas and fill with the koftas, salad, chopped tomatoes and yogurt sauce."
+  ],
+  "allergens": [
+   "gluten",
+   "milk"
   ]
  },
  {

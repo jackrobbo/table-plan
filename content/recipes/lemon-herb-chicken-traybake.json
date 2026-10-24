@@ -1,0 +1,53 @@
+{
+ "slug": "lemon-herb-chicken-traybake",
+ "name": "Lemon & Herb Chicken Traybake",
+ "course": "dinner",
+ "emoji": "🍋",
+ "serves": 2,
+ "status": "live",
+ "per_portion": {
+  "kcal": 470,
+  "protein_g": 55,
+  "carbs_g": 47,
+  "fat_g": 8
+ },
+ "ingredients": [
+  {
+   "ingredient": "breast",
+   "qty": 400
+  },
+  {
+   "ingredient": "baby-potatoes",
+   "qty": 400
+  },
+  {
+   "ingredient": "courgettes",
+   "qty": 300
+  },
+  {
+   "ingredient": "pepper",
+   "qty": 2
+  },
+  {
+   "ingredient": "onions",
+   "qty": 1
+  },
+  {
+   "ingredient": "lemon",
+   "qty": 1
+  }
+ ],
+ "cupboard": [
+  "oil",
+  "herbs"
+ ],
+ "cupboard_g": {
+  "oil": 10
+ },
+ "method": [
+  "Toss the chicken breasts, halved baby potatoes, chunky courgette, peppers and onion wedges with the oil, mixed herbs, the zest of the lemon and seasoning.",
+  "Roast on a large tray at 200°C for 35–40 minutes, turning once, until the chicken is cooked through and the potatoes are golden.",
+  "Squeeze the lemon over before serving."
+ ],
+ "source": "original"
+}

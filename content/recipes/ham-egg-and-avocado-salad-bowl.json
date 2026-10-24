@@ -1,0 +1,46 @@
+{
+ "slug": "ham-egg-and-avocado-salad-bowl",
+ "name": "Ham, Egg & Avocado Salad Bowl",
+ "course": "lunch",
+ "emoji": "🥑",
+ "serves": 1,
+ "status": "live",
+ "per_portion": {
+  "kcal": 305,
+  "protein_g": 23,
+  "carbs_g": 6,
+  "fat_g": 21
+ },
+ "ingredients": [
+  {
+   "ingredient": "eggs",
+   "qty": 2
+  },
+  {
+   "ingredient": "ham",
+   "qty": 40
+  },
+  {
+   "ingredient": "avocado",
+   "qty": 0.5
+  },
+  {
+   "ingredient": "salad",
+   "qty": 60
+  },
+  {
+   "ingredient": "cuc",
+   "qty": 0.33
+  },
+  {
+   "ingredient": "plum",
+   "qty": 80
+  }
+ ],
+ "cupboard": [],
+ "method": [
+  "Boil the eggs for 8 minutes, cool and peel.",
+  "Layer the salad leaves, cucumber, halved tomatoes and sliced avocado in a bowl, then top with torn ham and the quartered eggs. Finish with black pepper."
+ ],
+ "source": "original"
+}

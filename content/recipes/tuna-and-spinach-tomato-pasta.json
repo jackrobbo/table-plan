@@ -1,0 +1,54 @@
+{
+ "slug": "tuna-and-spinach-tomato-pasta",
+ "name": "Tuna & Spinach Tomato Pasta",
+ "course": "dinner",
+ "emoji": "🍝",
+ "serves": 2,
+ "status": "live",
+ "per_portion": {
+  "kcal": 445,
+  "protein_g": 38,
+  "carbs_g": 66,
+  "fat_g": 6
+ },
+ "ingredients": [
+  {
+   "ingredient": "penne",
+   "qty": 140
+  },
+  {
+   "ingredient": "tuna-tin",
+   "qty": 204
+  },
+  {
+   "ingredient": "passata",
+   "qty": 300
+  },
+  {
+   "ingredient": "spinach",
+   "qty": 100
+  },
+  {
+   "ingredient": "onions",
+   "qty": 1
+  },
+  {
+   "ingredient": "plum",
+   "qty": 150
+  }
+ ],
+ "cupboard": [
+  "oil",
+  "garlic",
+  "chilli-flakes"
+ ],
+ "cupboard_g": {
+  "oil": 5
+ },
+ "method": [
+  "Cook the penne. Meanwhile soften the chopped onion in the oil with the garlic and a pinch of chilli flakes.",
+  "Add the passata and halved tomatoes and simmer for 10 minutes, then stir in the drained tuna and spinach until the spinach wilts.",
+  "Toss with the pasta."
+ ],
+ "source": "original"
+}

@@ -1,0 +1,42 @@
+{
+ "slug": "cottage-cheese-and-ham-pitta",
+ "name": "Cottage Cheese & Ham Pitta",
+ "course": "lunch",
+ "emoji": "🥙",
+ "serves": 1,
+ "status": "live",
+ "per_portion": {
+  "kcal": 330,
+  "protein_g": 25,
+  "carbs_g": 39,
+  "fat_g": 9
+ },
+ "ingredients": [
+  {
+   "ingredient": "pittas",
+   "qty": 1
+  },
+  {
+   "ingredient": "cottage-cheese",
+   "qty": 100
+  },
+  {
+   "ingredient": "ham",
+   "qty": 50
+  },
+  {
+   "ingredient": "salad",
+   "qty": 40
+  },
+  {
+   "ingredient": "plum",
+   "qty": 60
+  }
+ ],
+ "cupboard": [],
+ "method": [
+  "Warm and split the pitta.",
+  "Fill with the cottage cheese, ham, salad leaves and sliced tomatoes."
+ ],
+ "source": "original"
+}

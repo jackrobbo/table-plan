@@ -23,6 +23,8 @@ const SHARE_BONUS = 25;       // reuse of a product already bought this week
 const TRIALS = 400;
 /** Extra random combinations tried only for a day where the first TRIALS found nothing in band (tight calorie + protein targets). */
 const EXTRA_TRIALS = 2000;
+/** The deeper search leans big/small when the day's budget is this far (as a ratio) from a typical day. */
+const LEAN_BAND = 1.15;
 /** Top-up combinations tried per candidate day: none, any one, any two. */
 const TOPUP_SETS: Topup[][] = [[], ...TOPUPS.map((t) => [t]), ...TOPUPS.flatMap((a, i) => TOPUPS.slice(i + 1).map((b) => [a, b]))];
 
@@ -97,11 +99,22 @@ export function generatePlan(input: PlanInput, seed = 1): Plan {
     let best: { day: PlannedDay; score: number } | null = null;
     let closest: { day: PlannedDay; miss: number } | null = null;
 
+    // The deeper search (only reached when the first TRIALS found nothing) leans toward the big or small end of the pools when
+    // the day's budget is far from a typical day; uniform sampling dilutes the few heavy (or light) combinations such a day needs.
+    const mean = (xs: Recipe[]) => (xs.length ? xs.reduce((a, r) => a + r.k, 0) / xs.length : 0);
+    const typical = mean(P.breakfast) + mean(P.lunch) + (din?.k ?? 0) + 1.5 * mean(P.snack);
+    const lean = mid > typical * LEAN_BAND ? 1 : mid < typical / LEAN_BAND ? -1 : 0;
+    const half = (xs: Recipe[]) => (lean ? [...xs].sort((a, b) => lean * (b.k - a.k)).slice(0, Math.max(1, Math.ceil(xs.length / 2))) : xs);
+    const deep = { breakfast: half(P.breakfast), lunch: half(P.lunch), snack: half(P.snack) };
+
     for (let t = 0; t < TRIALS || (!best && t < TRIALS + EXTRA_TRIALS); t++) {
-      const b = P.breakfast.length ? R.pick(P.breakfast) : null;
-      const l = P.lunch.length ? R.pick(P.lunch) : null;
+      const leaning = t >= TRIALS && t % 2 === 0; // half the deep trials stay uniform so fine-tuning combinations remain reachable
+      const pool = leaning ? deep : P;
+      const b = pool.breakfast.length ? R.pick(pool.breakfast) : null;
+      const l = pool.lunch.length ? R.pick(pool.lunch) : null;
       // Snacks auto-fill: usually one, more when the day needs the calories.
-      const snacks = R.shuffle(P.snack).slice(0, R.pick([1, 1, 2, 3]));
+      const snackCount = leaning && lean > 0 ? R.pick([2, 3, 3]) : leaning && lean < 0 ? 1 : R.pick([1, 1, 2, 3]);
+      const snacks = R.shuffle(pool.snack).slice(0, snackCount);
       const all = [b, l, din, ...snacks];
       const flexible = [l, din].filter((x): x is Recipe => !!x);
       const fixedK = (b?.k ?? 0) + snacks.reduce((a, x) => a + x.k, 0), fixedP = (b?.p ?? 0) + snacks.reduce((a, x) => a + x.p, 0);

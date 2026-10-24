@@ -1,0 +1,39 @@
+{
+ "slug": "quark-berry-oat-pot",
+ "name": "Quark, Berry & Oat Pot",
+ "course": "breakfast",
+ "emoji": "🫐",
+ "serves": 1,
+ "status": "live",
+ "per_portion": {
+  "kcal": 270,
+  "protein_g": 26,
+  "carbs_g": 38,
+  "fat_g": 3
+ },
+ "ingredients": [
+  {
+   "ingredient": "quark",
+   "qty": 150
+  },
+  {
+   "ingredient": "oats",
+   "qty": 30
+  },
+  {
+   "ingredient": "blueb",
+   "qty": 80
+  }
+ ],
+ "cupboard": [
+  "honey"
+ ],
+ "cupboard_g": {
+  "honey": 5
+ },
+ "method": [
+  "Stir the oats and honey into the quark and leave for 10 minutes (or overnight) so the oats soften.",
+  "Top with the blueberries."
+ ],
+ "source": "original"
+}

@@ -17,7 +17,7 @@ const base = (over: Partial<PlanInput> = {}): PlanInput => ({
 });
 
 /** Highest daily target the recipe bank can land in band (measured with thousands of random profiles). */
-const BANK_CEILING = 4000;
+const BANK_CEILING = 4200;
 
 describe('planner: days never fail', () => {
   it('lands every day in band with the protein floor, across 200 random profiles', () => {
@@ -32,7 +32,7 @@ describe('planner: days never fail', () => {
       const T = computeTargets(input.goal, input.stats);
       const plan = generatePlan(input, i + 1);
       expect(plan.days).toHaveLength(5);
-      // The 100-recipe bank reaches about 4,000 kcal a day; beyond that days are flagged, never faked.
+      // The 122-recipe bank reaches about 4,200 kcal a day; beyond that days are flagged, never faked.
       if (T.target > BANK_CEILING) { expect(plan.days.every((d) => d.inBand) || plan.issues.length > 0).toBe(true); days += 5; continue; }
       for (const d of plan.days) {
         days++; if (d.adjusted) adjusted++;
@@ -70,6 +70,26 @@ describe('planner: days never fail', () => {
         for (const d of plan.days) expect(d.inBand, `${allergies} ${d.day}: ${d.kcal}kcal ${d.protein}g`).toBe(true);
         expect(plan.issues).toEqual([]);
       }
+    }
+  });
+
+  it('lands a week for a very large, very active user (~4,000 kcal)', () => {
+    const stats = { sex: 'm', age: 26, heightCm: 190, weightKg: 112, activity: 1.725 } as const;
+    const T = computeTargets('gain', stats);
+    expect(T.target).toBeGreaterThan(3900);
+    for (const seed of [1, 2, 3]) {
+      const plan = generatePlan(base({ goal: 'gain', stats }), seed);
+      for (const d of plan.days) expect(d.inBand, `seed ${seed} ${d.day}: ${d.kcal}kcal ${d.protein}g (target ${T.target})`).toBe(true);
+    }
+  });
+
+  it('keeps plenty of suitable dinners for weight-loss targets, not just for big eaters', () => {
+    for (const stats of [{ sex: 'f', age: 40, heightCm: 160, weightKg: 60, activity: 1.2 }, { sex: 'f', age: 34, heightCm: 168, weightKg: 74, activity: 1.375 }] as const) {
+      const T = computeTargets('lose', stats);
+      const mid = (T.band[0] + T.band[1]) / 2;
+      const meals = base().meals;
+      const suits = RECIPES.filter((r) => r.c === 'dinner' && dinnerMisfit(r, mid, T.protein, meals) === 0);
+      expect(suits.length, `${T.target} kcal`).toBeGreaterThanOrEqual(15);
     }
   });
 

@@ -509,9 +509,19 @@
   "slug": "lemon",
   "name": "Lemon (loose)",
   "unit": "lemons",
+  "unit_g": 60,
   "cupboard": false,
   "allergens": [],
-  "per100": null,
+  "cofid": {
+   "code": "14-278",
+   "verified": true
+  },
+  "per100": {
+   "kcal": 2,
+   "protein_g": 0.1,
+   "carbs_g": 0.6,
+   "fat_g": 0
+  },
   "product": {
    "retailer": "morrisons",
    "name": "Lemon (loose)",

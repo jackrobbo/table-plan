@@ -1,0 +1,38 @@
+{
+ "slug": "smoked-salmon-and-egg-toast",
+ "name": "Smoked Salmon & Egg Toast",
+ "course": "breakfast",
+ "emoji": "🍞",
+ "serves": 1,
+ "status": "live",
+ "per_portion": {
+  "kcal": 310,
+  "protein_g": 26,
+  "carbs_g": 22,
+  "fat_g": 14
+ },
+ "ingredients": [
+  {
+   "ingredient": "loaf",
+   "qty": 1
+  },
+  {
+   "ingredient": "eggs",
+   "qty": 2
+  },
+  {
+   "ingredient": "smoked-salmon",
+   "qty": 40
+  },
+  {
+   "ingredient": "spinach",
+   "qty": 20
+  }
+ ],
+ "cupboard": [],
+ "method": [
+  "Poach the eggs for 3 minutes.",
+  "Toast the bread, top with the spinach and smoked salmon, then the eggs."
+ ],
+ "source": "original"
+}

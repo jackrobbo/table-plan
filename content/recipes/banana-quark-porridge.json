@@ -1,0 +1,38 @@
+{
+ "slug": "banana-quark-porridge",
+ "name": "Banana Quark Porridge",
+ "course": "breakfast",
+ "emoji": "🍌",
+ "serves": 1,
+ "status": "live",
+ "per_portion": {
+  "kcal": 365,
+  "protein_g": 27,
+  "carbs_g": 53,
+  "fat_g": 7
+ },
+ "ingredients": [
+  {
+   "ingredient": "oats",
+   "qty": 40
+  },
+  {
+   "ingredient": "milk",
+   "qty": 200
+  },
+  {
+   "ingredient": "quark",
+   "qty": 100
+  },
+  {
+   "ingredient": "banana",
+   "qty": 0.5
+  }
+ ],
+ "cupboard": [],
+ "method": [
+  "Simmer the oats in the milk for 4 minutes, stirring, until thick.",
+  "Take off the heat, stir in the quark and top with sliced banana."
+ ],
+ "source": "original"
+}

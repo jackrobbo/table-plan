@@ -1,0 +1,37 @@
+{
+ "slug": "houmous-and-veg-sticks",
+ "name": "Houmous & Veg Sticks",
+ "course": "snack",
+ "emoji": "🥕",
+ "serves": 1,
+ "status": "live",
+ "per_portion": {
+  "kcal": 180,
+  "protein_g": 5,
+  "carbs_g": 15,
+  "fat_g": 12
+ },
+ "ingredients": [
+  {
+   "ingredient": "houm",
+   "qty": 40
+  },
+  {
+   "ingredient": "carrots",
+   "qty": 80
+  },
+  {
+   "ingredient": "cuc",
+   "qty": 0.33
+  },
+  {
+   "ingredient": "pepper",
+   "qty": 0.5
+  }
+ ],
+ "cupboard": [],
+ "method": [
+  "Cut the carrot, cucumber and pepper into sticks and dip into the houmous."
+ ],
+ "source": "original"
+}

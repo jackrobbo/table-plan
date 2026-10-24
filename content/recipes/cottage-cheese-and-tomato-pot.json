@@ -1,0 +1,33 @@
+{
+ "slug": "cottage-cheese-and-tomato-pot",
+ "name": "Cottage Cheese & Tomato Pot",
+ "course": "snack",
+ "emoji": "🍅",
+ "serves": 1,
+ "status": "live",
+ "per_portion": {
+  "kcal": 155,
+  "protein_g": 13,
+  "carbs_g": 8,
+  "fat_g": 8
+ },
+ "ingredients": [
+  {
+   "ingredient": "cottage-cheese",
+   "qty": 120
+  },
+  {
+   "ingredient": "plum",
+   "qty": 100
+  },
+  {
+   "ingredient": "cuc",
+   "qty": 0.25
+  }
+ ],
+ "cupboard": [],
+ "method": [
+  "Spoon the cottage cheese into a pot and top with halved tomatoes and diced cucumber."
+ ],
+ "source": "original"
+}

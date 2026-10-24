@@ -1,0 +1,52 @@
+{
+ "slug": "ham-and-veg-scramble-on-toast",
+ "name": "Ham & Veg Scramble on Toast",
+ "course": "breakfast",
+ "emoji": "🍳",
+ "serves": 1,
+ "status": "live",
+ "per_portion": {
+  "kcal": 340,
+  "protein_g": 24,
+  "carbs_g": 25,
+  "fat_g": 17
+ },
+ "ingredients": [
+  {
+   "ingredient": "eggs",
+   "qty": 2
+  },
+  {
+   "ingredient": "ham",
+   "qty": 30
+  },
+  {
+   "ingredient": "loaf",
+   "qty": 1
+  },
+  {
+   "ingredient": "spinach",
+   "qty": 40
+  },
+  {
+   "ingredient": "plum",
+   "qty": 80
+  },
+  {
+   "ingredient": "mushrooms",
+   "qty": 60
+  }
+ ],
+ "cupboard": [
+  "oil"
+ ],
+ "cupboard_g": {
+  "oil": 5
+ },
+ "method": [
+  "Fry the sliced mushrooms in the oil for 3 minutes, then add the chopped tomatoes and spinach until just wilted.",
+  "Beat the eggs, add them to the pan with the torn ham and stir gently until softly set.",
+  "Pile onto the toast."
+ ],
+ "source": "original"
+}

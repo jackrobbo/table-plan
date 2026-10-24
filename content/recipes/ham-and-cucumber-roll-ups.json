@@ -1,0 +1,33 @@
+{
+ "slug": "ham-and-cucumber-roll-ups",
+ "name": "Ham & Cucumber Roll-ups",
+ "course": "snack",
+ "emoji": "🥒",
+ "serves": 1,
+ "status": "live",
+ "per_portion": {
+  "kcal": 80,
+  "protein_g": 12,
+  "carbs_g": 2,
+  "fat_g": 3
+ },
+ "ingredients": [
+  {
+   "ingredient": "ham",
+   "qty": 60
+  },
+  {
+   "ingredient": "cuc",
+   "qty": 0.33
+  },
+  {
+   "ingredient": "salad",
+   "qty": 20
+  }
+ ],
+ "cupboard": [],
+ "method": [
+  "Roll the ham slices around cucumber sticks and salad leaves."
+ ],
+ "source": "original"
+}

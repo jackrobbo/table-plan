@@ -1,0 +1,55 @@
+{
+ "slug": "lighter-chicken-and-spinach-curry",
+ "name": "Lighter Chicken & Spinach Curry",
+ "course": "dinner",
+ "emoji": "🍛",
+ "serves": 2,
+ "status": "live",
+ "per_portion": {
+  "kcal": 530,
+  "protein_g": 59,
+  "carbs_g": 55,
+  "fat_g": 10
+ },
+ "ingredients": [
+  {
+   "ingredient": "breast",
+   "qty": 400
+  },
+  {
+   "ingredient": "greek",
+   "qty": 80
+  },
+  {
+   "ingredient": "passata",
+   "qty": 250
+  },
+  {
+   "ingredient": "onions",
+   "qty": 1
+  },
+  {
+   "ingredient": "spinach",
+   "qty": 150
+  },
+  {
+   "ingredient": "basmati",
+   "qty": 100
+  }
+ ],
+ "cupboard": [
+  "oil",
+  "curry-powder",
+  "garlic"
+ ],
+ "cupboard_g": {
+  "oil": 5,
+  "curry-powder": 12
+ },
+ "method": [
+  "Brown the chicken pieces and the sliced onion in the oil, add the curry powder and garlic and cook for a minute.",
+  "Pour in the passata, simmer for 15 minutes until the chicken is cooked through, then stir in the spinach until wilted and the Greek yogurt off the heat.",
+  "Serve with the cooked basmati rice."
+ ],
+ "source": "original"
+}

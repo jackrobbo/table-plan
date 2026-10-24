@@ -1,0 +1,56 @@
+{
+ "slug": "turkey-chilli-with-sweet-potato",
+ "name": "Turkey Chilli with Sweet Potato",
+ "course": "dinner",
+ "emoji": "🌶️",
+ "serves": 2,
+ "status": "live",
+ "per_portion": {
+  "kcal": 535,
+  "protein_g": 58,
+  "carbs_g": 63,
+  "fat_g": 8
+ },
+ "ingredients": [
+  {
+   "ingredient": "turkey-mince",
+   "qty": 400
+  },
+  {
+   "ingredient": "kidney",
+   "qty": 160
+  },
+  {
+   "ingredient": "ctoms",
+   "qty": 400
+  },
+  {
+   "ingredient": "onions",
+   "qty": 1
+  },
+  {
+   "ingredient": "pepper",
+   "qty": 2
+  },
+  {
+   "ingredient": "sweet-potatoes",
+   "qty": 300
+  }
+ ],
+ "cupboard": [
+  "oil",
+  "puree",
+  "cumin",
+  "paprika",
+  "chilli-flakes"
+ ],
+ "cupboard_g": {
+  "oil": 5,
+  "puree": 10
+ },
+ "method": [
+  "Brown the turkey mince with the chopped onion and peppers in the oil. Stir in the tomato puree, cumin, smoked paprika and a pinch of chilli flakes.",
+  "Add the chopped tomatoes, kidney beans and diced sweet potato with 100 ml water, then simmer for 25 minutes until the potato is soft and the chilli is thick."
+ ],
+ "source": "original"
+}

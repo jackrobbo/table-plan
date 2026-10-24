@@ -1,0 +1,64 @@
+{
+ "slug": "turkey-bolognese-with-courgette-and-penne",
+ "name": "Turkey Bolognese with Courgette & Penne",
+ "course": "dinner",
+ "emoji": "🍝",
+ "serves": 2,
+ "status": "live",
+ "per_portion": {
+  "kcal": 515,
+  "protein_g": 57,
+  "carbs_g": 59,
+  "fat_g": 7
+ },
+ "ingredients": [
+  {
+   "ingredient": "turkey-mince",
+   "qty": 400
+  },
+  {
+   "ingredient": "ctoms",
+   "qty": 400
+  },
+  {
+   "ingredient": "passata",
+   "qty": 250
+  },
+  {
+   "ingredient": "onions",
+   "qty": 1
+  },
+  {
+   "ingredient": "carrots",
+   "qty": 100
+  },
+  {
+   "ingredient": "courgettes",
+   "qty": 300
+  },
+  {
+   "ingredient": "penne",
+   "qty": 90
+  },
+  {
+   "ingredient": "mushrooms",
+   "qty": 100
+  }
+ ],
+ "cupboard": [
+  "oil",
+  "puree",
+  "herbs",
+  "garlic"
+ ],
+ "cupboard_g": {
+  "oil": 5,
+  "puree": 15
+ },
+ "method": [
+  "Brown the turkey mince with the chopped onion, grated carrot and sliced mushrooms in the oil. Stir in the tomato puree, garlic and mixed herbs.",
+  "Add the chopped tomatoes, passata and diced courgette and simmer for 25 minutes until thick and the turkey is cooked through.",
+  "Cook the penne and serve the sauce over it."
+ ],
+ "source": "original"
+}
