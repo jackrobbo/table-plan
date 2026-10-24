@@ -15,6 +15,7 @@ export default function Account() {
   const { session, ready, update } = useProfile();
   const { sub, loaded, access, cancel, resume } = useAccess(session);
   const [confirmDelete, setConfirmDelete] = useState(false);
+  const [confirmRestart, setConfirmRestart] = useState(false);
   const [fb, setFb] = useState('');
   const [fbState, setFbState] = useState<'idle' | 'sent' | string>('idle');
 
@@ -80,8 +81,13 @@ export default function Account() {
       </div>
       <div className="card" style={{ marginTop: 12 }}>
         <h3>Your answers</h3>
-        <p className="muted">Go back through the questions to change your goal, stats, meals or allergies. This rebuilds your plan from scratch (smarter edits that keep planned weeks are coming).</p>
-        <button className="btn ghost" onClick={() => { update((p) => ({ ...p, completed: false, step: 'goal', weeks: {} })); router.push('/onboarding'); }}>Edit my answers</button>
+        <p className="muted">Change your goal, stats, meals, allergies, dislikes or spend. Your planned weeks stay as they are unless you choose to rebuild them.</p>
+        <Link className="btn ghost" href="/settings">Change my answers</Link>
+        {!confirmRestart
+          ? <button className="linkbtn" onClick={() => setConfirmRestart(true)}>Start again from the first question</button>
+          : <><p className="err">This clears your planned weeks and takes you back to the first question.</p>
+              <button className="btn" onClick={() => { update((p) => ({ ...p, completed: false, step: 'goal', weeks: {} })); router.push('/onboarding'); }}>Yes, start again</button>
+              <button className="linkbtn" onClick={() => setConfirmRestart(false)}>Keep my plan</button></>}
         <button className="linkbtn" onClick={async () => { await getBackend().auth.signOut(); router.replace('/'); }}>Sign out</button>
       </div>
       <p className="muted" style={{ marginTop: 14 }}>Table Plan gives general nutrition guidance, not medical advice.</p>

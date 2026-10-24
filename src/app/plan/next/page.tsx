@@ -1,5 +1,6 @@
 'use client';
 import { useEffect, useMemo, useState } from 'react';
+import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import BasketButton from '@/components/BasketButton';
 import SwapSheet from '@/components/SwapSheet';
@@ -139,7 +140,7 @@ export default function PlanNext() {
             ))}
           </div>
           <p className="muted" style={{ marginTop: -4 }}>{budgetHelp(profile.budget)} We only go over this on a day that can&apos;t hit your targets without it.</p>
-          <p className="muted">To change your meals or targets, edit your answers from the home screen. New settings apply from the next week still to plan.</p>
+          <p className="muted">To change your meals or targets, <Link href="/settings">edit your answers</Link>. New settings apply from the next week you plan.</p>
           <button className="btn" onClick={() => build(profile.likedRecipes)}>Pick for me</button>
           <button className="btn ghost" style={{ marginTop: 8 }} onClick={() => setStep('pick')}>Pick my own (optional)</button>
         </div>

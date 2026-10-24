@@ -103,6 +103,11 @@ input.text:focus{outline:2px solid var(--ok);}
 .swapopt .sname{font-weight:600}
 .swapopt .sday{font-size:13px; color:var(--ink2); margin-top:2px}
 .swapopt .sday.amber{color:var(--warn-ink)}
+.compact .value{background:var(--fill); padding:10px 14px; justify-content:flex-start; gap:12px;}
+.compact .value input{font-size:22px; font-weight:600;}
+.compact .value .unit{font-size:15px;}
+.compact .seg2{margin-bottom:8px;}
+.sub-title{font-size:13px; font-weight:600; color:var(--ink2); margin:16px 0 6px;}
 .contains{font-size:13px; margin:0 0 4px; line-height:1.45;}
 .contains .muted{display:inline;}
 .group-title{font-size:12px; font-weight:600; letter-spacing:.06em; text-transform:uppercase; color:var(--ink2); margin:18px 0 0;}
