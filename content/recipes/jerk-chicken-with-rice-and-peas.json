@@ -1,0 +1,50 @@
+{
+ "slug": "jerk-chicken-with-rice-and-peas",
+ "name": "Jerk Chicken with Rice & Peas",
+ "course": "dinner",
+ "emoji": "🍗",
+ "serves": 2,
+ "status": "live",
+ "per_portion": {
+  "kcal": 755,
+  "protein_g": 70,
+  "carbs_g": 93,
+  "fat_g": 14
+ },
+ "ingredients": [
+  {
+   "ingredient": "thigh",
+   "qty": 500
+  },
+  {
+   "ingredient": "basmati",
+   "qty": 160
+  },
+  {
+   "ingredient": "kidney",
+   "qty": 240
+  },
+  {
+   "ingredient": "pepper",
+   "qty": 1
+  },
+  {
+   "ingredient": "onions",
+   "qty": 1
+  }
+ ],
+ "cupboard": [
+  "oil",
+  "jerk",
+  "garlic"
+ ],
+ "cupboard_g": {
+  "oil": 10
+ },
+ "method": [
+  "Rub the chicken with the jerk seasoning and a little oil; grill or roast at 220°C for 20–25 minutes, until cooked through with no pink.",
+  "Cook the rice with the kidney beans, sliced pepper and onion until fluffy.",
+  "Slice the chicken and serve over the rice and beans."
+ ],
+ "source": "original"
+}

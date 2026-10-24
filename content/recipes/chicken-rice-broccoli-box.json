@@ -1,0 +1,47 @@
+{
+ "slug": "chicken-rice-broccoli-box",
+ "name": "Chicken, Rice & Broccoli Box",
+ "course": "lunch",
+ "emoji": "🍱",
+ "serves": 1,
+ "status": "live",
+ "per_portion": {
+  "kcal": 640,
+  "protein_g": 56,
+  "carbs_g": 91,
+  "fat_g": 8
+ },
+ "ingredients": [
+  {
+   "ingredient": "breast",
+   "qty": 180
+  },
+  {
+   "ingredient": "basmati",
+   "qty": 90
+  },
+  {
+   "ingredient": "brocc",
+   "qty": 120
+  },
+  {
+   "ingredient": "carrots",
+   "qty": 60
+  }
+ ],
+ "cupboard": [
+  "honey",
+  "oil",
+  "chilli-flakes"
+ ],
+ "cupboard_g": {
+  "honey": 10,
+  "oil": 5
+ },
+ "method": [
+  "Cook the rice and steam the broccoli and carrot batons until just tender.",
+  "Slice the chicken and fry in a little oil until golden and cooked through; add the honey and a pinch of chilli flakes for the last minute.",
+  "Pack it all into a box. Keeps for 2 days in the fridge; reheat until piping hot."
+ ],
+ "source": "original"
+}

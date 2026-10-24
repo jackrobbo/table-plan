@@ -1,0 +1,29 @@
+{
+ "slug": "apple-and-cheddar-plate",
+ "name": "Apple & Cheddar Plate",
+ "course": "snack",
+ "emoji": "🧀",
+ "serves": 1,
+ "status": "live",
+ "per_portion": {
+  "kcal": 235,
+  "protein_g": 11,
+  "carbs_g": 15,
+  "fat_g": 15
+ },
+ "ingredients": [
+  {
+   "ingredient": "apple",
+   "qty": 1
+  },
+  {
+   "ingredient": "cheddar-block",
+   "qty": 40
+  }
+ ],
+ "cupboard": [],
+ "method": [
+  "Slice the apple and cheddar and serve together."
+ ],
+ "source": "original"
+}

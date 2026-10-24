@@ -1,0 +1,55 @@
+{
+ "slug": "beef-and-broccoli-stir-fry-with-rice",
+ "name": "Beef & Broccoli Stir-fry with Rice",
+ "course": "dinner",
+ "emoji": "🥦",
+ "serves": 2,
+ "status": "live",
+ "per_portion": {
+  "kcal": 715,
+  "protein_g": 53,
+  "carbs_g": 101,
+  "fat_g": 14
+ },
+ "ingredients": [
+  {
+   "ingredient": "sizzle",
+   "qty": 320
+  },
+  {
+   "ingredient": "brocc",
+   "qty": 300
+  },
+  {
+   "ingredient": "basmati",
+   "qty": 180
+  },
+  {
+   "ingredient": "onions",
+   "qty": 1
+  },
+  {
+   "ingredient": "carrots",
+   "qty": 100
+  }
+ ],
+ "cupboard": [
+  "oil",
+  "soy",
+  "honey",
+  "cornflour",
+  "garlic"
+ ],
+ "cupboard_g": {
+  "oil": 10,
+  "soy": 30,
+  "honey": 15,
+  "cornflour": 10
+ },
+ "method": [
+  "Slice the steak thinly and toss with half the cornflour. Cook the rice.",
+  "Stir-fry the beef for 2 minutes in oil and set aside. Stir-fry the broccoli, carrots and onion for 4 minutes.",
+  "Mix the soy, honey and remaining cornflour with 100 ml water, add to the pan with the beef and simmer until glossy. Serve over the rice."
+ ],
+ "source": "original"
+}

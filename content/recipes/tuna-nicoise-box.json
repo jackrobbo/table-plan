@@ -1,0 +1,48 @@
+{
+ "slug": "tuna-nicoise-box",
+ "name": "Tuna Niçoise Box",
+ "course": "lunch",
+ "emoji": "🥗",
+ "serves": 1,
+ "status": "live",
+ "per_portion": {
+  "kcal": 490,
+  "protein_g": 44,
+  "carbs_g": 38,
+  "fat_g": 19
+ },
+ "ingredients": [
+  {
+   "ingredient": "tuna-tin",
+   "qty": 102
+  },
+  {
+   "ingredient": "eggs",
+   "qty": 2
+  },
+  {
+   "ingredient": "baby-potatoes",
+   "qty": 200
+  },
+  {
+   "ingredient": "green-beans",
+   "qty": 80
+  },
+  {
+   "ingredient": "plum",
+   "qty": 100
+  }
+ ],
+ "cupboard": [
+  "oil"
+ ],
+ "cupboard_g": {
+  "oil": 8
+ },
+ "method": [
+  "Boil the baby potatoes for 12 minutes, adding the green beans for the last 3. Drain and cool.",
+  "Boil the eggs for 8 minutes, peel and quarter.",
+  "Arrange everything in a box with the tuna and halved tomatoes and dress with the oil and black pepper."
+ ],
+ "source": "original"
+}

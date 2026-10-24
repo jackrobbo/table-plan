@@ -321,5 +321,292 @@
   "pack": 6,
   "u": "cheeses",
   "s": "mini-babybel-original-cheese-snacks/103090117"
+ },
+ "turkey-mince": {
+  "n": "Morrisons Turkey Mince 4% 500g",
+  "pr": 450,
+  "pack": 500,
+  "u": "g",
+  "s": "morrisons-turkey-mince-4-500g/116227426"
+ },
+ "pork-sausages": {
+  "n": "Morrisons 8 Butchers Style Reduced Fat Pork Sausage",
+  "pr": 179,
+  "pack": 8,
+  "u": "sausages",
+  "s": "morrisons-8-butchers-style-reduced-fat-pork-sausage/110295794"
+ },
+ "chorizo": {
+  "n": "Morrisons Cooking Chorizo",
+  "pr": 375,
+  "pack": 250,
+  "u": "g",
+  "s": "morrisons-cooking-chorizo/115397714"
+ },
+ "pork-loin": {
+  "n": "Morrisons British Pork Loin Steaks 400g",
+  "pr": 300,
+  "pack": 400,
+  "u": "g",
+  "s": "morrisons-british-pork-loin-steaks-400g/102798586"
+ },
+ "salmon": {
+  "n": "Morrisons 2 Salmon Fillets 220g",
+  "pr": 415,
+  "pack": 220,
+  "u": "g",
+  "s": "morrisons-2-salmon-fillets-220g/111595107"
+ },
+ "cod": {
+  "n": "Morrisons 3 Skinless & Boneless Cod Fillets 320g",
+  "pr": 650,
+  "pack": 320,
+  "u": "g",
+  "s": "morrisons-3-skinless-boneless-cod-fillets-320g/115000490"
+ },
+ "smoked-salmon": {
+  "n": "Morrisons Smoked Salmon Slices 120g",
+  "pr": 450,
+  "pack": 120,
+  "u": "g",
+  "s": "morrisons-smoked-salmon-slices-120g/111897113"
+ },
+ "tuna-tin": {
+  "n": "Morrisons Tuna Chunks In Brine 145g",
+  "pr": 80,
+  "pack": 102,
+  "u": "g",
+  "s": "morrisons-tuna-chunks-in-brine-145g/110557133"
+ },
+ "lamb-mince": {
+  "n": "Morrisons Lamb Mince 500g",
+  "pr": 550,
+  "pack": 500,
+  "u": "g",
+  "s": "morrisons-lamb-mince-500g/109408940"
+ },
+ "king-prawns": {
+  "n": "Morrisons Cooked And Peeled King Prawns 200g",
+  "pr": 475,
+  "pack": 200,
+  "u": "g",
+  "s": "morrisons-cooked-and-peeled-king-prawns-200g/112620028"
+ },
+ "halloumi": {
+  "n": "Morrisons Halloumi 200g",
+  "pr": 177,
+  "pack": 200,
+  "u": "g",
+  "s": "morrisons-halloumi-200g/112922894"
+ },
+ "feta": {
+  "n": "Morrisons Greek Feta",
+  "pr": 225,
+  "pack": 200,
+  "u": "g",
+  "s": "morrisons-greek-feta/106145443"
+ },
+ "cheddar-block": {
+  "n": "Morrisons British Mature Cheddar 400g",
+  "pr": 295,
+  "pack": 400,
+  "u": "g",
+  "s": "morrisons-british-mature-cheddar-400g/114285471"
+ },
+ "cottage-cheese": {
+  "n": "Morrisons British Natural Full Fat Cottage Cheese 300g",
+  "pr": 165,
+  "pack": 300,
+  "u": "g",
+  "s": "morrisons-british-natural-full-fat-cottage-cheese-300g/113359482"
+ },
+ "quark": {
+  "n": "Morrisons Fat Free Quark Soft Cheese",
+  "pr": 130,
+  "pack": 250,
+  "u": "g",
+  "s": "morrisons-fat-free-quark-soft-cheese/110147610"
+ },
+ "oats": {
+  "n": "Morrisons Porridge Oats",
+  "pr": 135,
+  "pack": 1000,
+  "u": "g",
+  "s": "morrisons-porridge-oats/105489771"
+ },
+ "basmati": {
+  "n": "Morrisons Basmati Rice 1kg",
+  "pr": 179,
+  "pack": 1000,
+  "u": "g",
+  "s": "morrisons-basmati-rice-1kg/104544029"
+ },
+ "penne": {
+  "n": "Morrisons Penne",
+  "pr": 69,
+  "pack": 500,
+  "u": "g",
+  "s": "morrisons-penne/104555641"
+ },
+ "couscous": {
+  "n": "Morrisons Wholefoods Cous Cous",
+  "pr": 130,
+  "pack": 500,
+  "u": "g",
+  "s": "morrisons-wholefoods-cous-cous/105658837"
+ },
+ "baking-potatoes": {
+  "n": "Morrisons British Baking Potatoes 2kg",
+  "pr": 185,
+  "pack": 2000,
+  "u": "g",
+  "s": "morrisons-british-baking-potatoes-2kg/113406453"
+ },
+ "sweet-potatoes": {
+  "n": "Morrisons Sweet Potatoes 1kg",
+  "pr": 119,
+  "pack": 1000,
+  "u": "g",
+  "s": "morrisons-sweet-potatoes-1kg/108572051"
+ },
+ "bagels": {
+  "n": "Morrisons Plain Bagels",
+  "pr": 99,
+  "pack": 5,
+  "u": "bagels",
+  "s": "morrisons-plain-bagels/111099710"
+ },
+ "rolls": {
+  "n": "Morrisons Soft White Rolls 6 Pack",
+  "pr": 49,
+  "pack": 6,
+  "u": "rolls",
+  "s": "morrisons-soft-white-rolls-6-pack/102371363"
+ },
+ "weetabix": {
+  "n": "Weetabix Cereal 24 Pack",
+  "pr": 350,
+  "pack": 24,
+  "u": "biscuits",
+  "s": "weetabix-cereal/100116182"
+ },
+ "oatcakes": {
+  "n": "Morrisons Scottish Rough Oatcakes",
+  "pr": 125,
+  "pack": 250,
+  "u": "g",
+  "s": "morrisons-scottish-rough-oatcakes/109153721"
+ },
+ "egg-noodles": {
+  "n": "Morrisons Medium Egg Noodles 250g",
+  "pr": 95,
+  "pack": 250,
+  "u": "g",
+  "s": "morrisons-medium-egg-noodles-250g/105762896"
+ },
+ "baby-potatoes": {
+  "n": "Morrisons British Baby Potatoes 1kg",
+  "pr": 99,
+  "pack": 1000,
+  "u": "g",
+  "s": "morrisons-british-baby-potatoes-1kg/108414651"
+ },
+ "mushrooms": {
+  "n": "Morrisons British Button Mushrooms 250g",
+  "pr": 150,
+  "pack": 250,
+  "u": "g",
+  "s": "morrisons-british-button-mushrooms-250g/115269991"
+ },
+ "courgettes": {
+  "n": "Morrisons Courgettes",
+  "pr": 139,
+  "pack": 500,
+  "u": "g",
+  "s": "morrisons-courgettes/115508998"
+ },
+ "avocado": {
+  "n": "Morrisons Ripe & Ready Avocados 2 Pack",
+  "pr": 150,
+  "pack": 2,
+  "u": "avocados",
+  "s": "morrisons-ripe-ready-avocados-2-pack/108409289"
+ },
+ "green-beans": {
+  "n": "Morrisons Savers Green Beans",
+  "pr": 77,
+  "pack": 200,
+  "u": "g",
+  "s": "morrisons-savers-green-beans/112941382"
+ },
+ "peas": {
+  "n": "Morrisons Garden Peas 1kg",
+  "pr": 165,
+  "pack": 1000,
+  "u": "g",
+  "s": "morrisons-garden-peas-1kg/112661655"
+ },
+ "baked-beans": {
+  "n": "Morrisons Baked Beans 410g",
+  "pr": 37,
+  "pack": 410,
+  "u": "g",
+  "s": "morrisons-baked-beans-410g/105859372"
+ },
+ "chickpeas": {
+  "n": "Morrisons Chickpeas In Water (400g)",
+  "pr": 37,
+  "pack": 240,
+  "u": "g",
+  "s": "morrisons-chickpeas-in-water-400g/110434045"
+ },
+ "red-lentils": {
+  "n": "Morrisons Wholefoods Red Split Lentils 500g",
+  "pr": 210,
+  "pack": 500,
+  "u": "g",
+  "s": "morrisons-wholefoods-red-split-lentils-500g/105661948"
+ },
+ "coconut-milk": {
+  "n": "Morrisons Canned Reduced Fat Light Coconut Milk",
+  "pr": 125,
+  "pack": 400,
+  "u": "ml",
+  "s": "morrisons-canned-reduced-fat-light-coconut-milk/106467119"
+ },
+ "passata": {
+  "n": "Morrisons Passata (500g)",
+  "pr": 45,
+  "pack": 500,
+  "u": "g",
+  "s": "morrisons-passata-500g/104954925"
+ },
+ "peanut-butter": {
+  "n": "Morrisons 100% Smooth Peanut Butter",
+  "pr": 180,
+  "pack": 340,
+  "u": "g",
+  "s": "morrisons-100-smooth-peanut-butter/108515663"
+ },
+ "almonds": {
+  "n": "Morrisons Almonds",
+  "pr": 233,
+  "pack": 200,
+  "u": "g",
+  "s": "morrisons-almonds/105410196"
+ },
+ "raisins": {
+  "n": "Morrisons Raisins 500g",
+  "pr": 230,
+  "pack": 500,
+  "u": "g",
+  "s": "morrisons-raisins-500g/109244279"
+ },
+ "pesto": {
+  "n": "Morrisons Green Pesto",
+  "pr": 89,
+  "pack": 190,
+  "u": "g",
+  "s": "morrisons-green-pesto/104557735"
  }
 }

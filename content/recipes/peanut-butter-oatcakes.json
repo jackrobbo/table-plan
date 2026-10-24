@@ -1,0 +1,29 @@
+{
+ "slug": "peanut-butter-oatcakes",
+ "name": "Peanut Butter Oatcakes",
+ "course": "snack",
+ "emoji": "🥜",
+ "serves": 1,
+ "status": "live",
+ "per_portion": {
+  "kcal": 380,
+  "protein_g": 10,
+  "carbs_g": 35,
+  "fat_g": 23
+ },
+ "ingredients": [
+  {
+   "ingredient": "oatcakes",
+   "qty": 50
+  },
+  {
+   "ingredient": "peanut-butter",
+   "qty": 25
+  }
+ ],
+ "cupboard": [],
+ "method": [
+  "Spread the peanut butter over the oatcakes."
+ ],
+ "source": "original"
+}

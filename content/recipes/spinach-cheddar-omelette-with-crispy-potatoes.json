@@ -1,0 +1,44 @@
+{
+ "slug": "spinach-cheddar-omelette-with-crispy-potatoes",
+ "name": "Spinach & Cheddar Omelette with Crispy Potatoes",
+ "course": "breakfast",
+ "emoji": "🍳",
+ "serves": 1,
+ "status": "live",
+ "per_portion": {
+  "kcal": 590,
+  "protein_g": 32,
+  "carbs_g": 40,
+  "fat_g": 34
+ },
+ "ingredients": [
+  {
+   "ingredient": "eggs",
+   "qty": 3
+  },
+  {
+   "ingredient": "spinach",
+   "qty": 40
+  },
+  {
+   "ingredient": "cheddar-block",
+   "qty": 30
+  },
+  {
+   "ingredient": "baby-potatoes",
+   "qty": 250
+  }
+ ],
+ "cupboard": [
+  "oil"
+ ],
+ "cupboard_g": {
+  "oil": 10
+ },
+ "method": [
+  "Boil the baby potatoes for 10 minutes, drain, halve and fry in half the oil for 8 minutes until crisp.",
+  "Beat the eggs with a pinch of pepper. Heat the remaining oil in a non-stick pan and pour in the eggs; as they begin to set, scatter over the spinach and grated cheddar.",
+  "Fold the omelette over, cook for another minute and serve with the potatoes."
+ ],
+ "source": "original"
+}

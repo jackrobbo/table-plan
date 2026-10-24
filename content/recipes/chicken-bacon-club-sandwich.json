@@ -1,0 +1,47 @@
+{
+ "slug": "chicken-bacon-club-sandwich",
+ "name": "Chicken & Bacon Club Sandwich",
+ "course": "lunch",
+ "emoji": "🥪",
+ "serves": 1,
+ "status": "live",
+ "per_portion": {
+  "kcal": 590,
+  "protein_g": 52,
+  "carbs_g": 68,
+  "fat_g": 14
+ },
+ "ingredients": [
+  {
+   "ingredient": "loaf",
+   "qty": 3
+  },
+  {
+   "ingredient": "breast",
+   "qty": 120
+  },
+  {
+   "ingredient": "bacon",
+   "qty": 2
+  },
+  {
+   "ingredient": "plum",
+   "qty": 60
+  },
+  {
+   "ingredient": "salad",
+   "qty": 20
+  }
+ ],
+ "cupboard": [
+  "mayo"
+ ],
+ "cupboard_g": {
+  "mayo": 20
+ },
+ "method": [
+  "Fry or grill the chicken breast until cooked through, then slice. Grill the bacon until crisp.",
+  "Toast the bread, spread with mayonnaise and stack with the chicken, bacon, sliced tomatoes and salad."
+ ],
+ "source": "original"
+}

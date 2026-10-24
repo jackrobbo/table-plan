@@ -1,0 +1,44 @@
+{
+ "slug": "potato-pepper-tortilla",
+ "name": "Potato & Pepper Tortilla",
+ "course": "breakfast",
+ "emoji": "🥘",
+ "serves": 1,
+ "status": "live",
+ "per_portion": {
+  "kcal": 555,
+  "protein_g": 31,
+  "carbs_g": 48,
+  "fat_g": 28
+ },
+ "ingredients": [
+  {
+   "ingredient": "eggs",
+   "qty": 4
+  },
+  {
+   "ingredient": "baby-potatoes",
+   "qty": 250
+  },
+  {
+   "ingredient": "onions",
+   "qty": 0.5
+  },
+  {
+   "ingredient": "pepper",
+   "qty": 0.5
+  }
+ ],
+ "cupboard": [
+  "oil"
+ ],
+ "cupboard_g": {
+  "oil": 10
+ },
+ "method": [
+  "Boil the baby potatoes for 10 minutes, drain and slice thickly.",
+  "Soften the onion and pepper in oil in a small non-stick frying pan, add the potatoes, then pour over the beaten eggs.",
+  "Cook gently for 6–7 minutes until nearly set, then finish under a hot grill for 2 minutes."
+ ],
+ "source": "original"
+}

@@ -10,6 +10,13 @@ export const KCAL_TOLERANCE = 0.15;
 /** Stricter bar to count as verified (protein gets 1.5x this). */
 export const VERIFY_TOLERANCE = 0.1;
 
+/** Quantity in g/ml for macro maths: g/ml units as-is, count units via `unit_g`, otherwise null (not computable). */
+export function baseQty(d: IngredientDef | undefined, qty: number): number | null {
+  if (!d) return null;
+  if (d.unit === 'g' || d.unit === 'ml') return qty;
+  return d.unit_g && d.unit_g > 0 ? qty * d.unit_g : null;
+}
+
 export function validateContent(ingredients: IngredientDef[], recipes: RecipeDef[]): Issue[] {
   const issues: Issue[] = [];
   const err = (where: string, message: string) => issues.push({ where, level: 'error', message });
@@ -24,6 +31,7 @@ export function validateContent(ingredients: IngredientDef[], recipes: RecipeDef
     if (!i.name) err(w, 'missing name');
     for (const a of i.allergens ?? []) if (!ALLERGEN_KEYS.has(a)) err(w, `unknown allergen "${a}"`);
     if (i.product && !(i.product.price_pence >= 0 && i.product.pack_size > 0)) err(w, 'product needs price_pence >= 0 and pack_size > 0');
+    if (i.unit_g != null && !(i.unit_g > 0)) err(w, 'unit_g must be > 0');
     if (!i.cupboard && !i.product) warn(w, 'not mapped to a retailer product yet (will be unpriced)');
   }
 
@@ -67,13 +75,20 @@ export function validateContent(ingredients: IngredientDef[], recipes: RecipeDef
       if (!d) err(w, `unknown cupboard item "${c}"`);
       else if (!d.cupboard) err(w, `"${c}" is not flagged as a cupboard item`);
     }
+    for (const [k, g] of Object.entries(r.cupboard_g ?? {})) {
+      if (!(r.cupboard ?? []).includes(k)) err(w, `cupboard_g "${k}" is not listed under cupboard`);
+      if (!(g > 0)) err(w, `cupboard_g for "${k}" must be > 0`);
+    }
     for (const a of r.extra_allergens ?? []) if (!ALLERGEN_KEYS.has(a)) err(w, `unknown allergen "${a}"`);
     if (r.course !== 'snack' && !r.macros_only && !r.method?.length) warn(w, 'no method steps');
 
-    // Declared macros vs ingredient data, only when fully computable (g/ml units, all CoFID present).
+    // Declared macros vs ingredient data, only when fully computable (g/ml units, all CoFID present). Skipped for grandfathered
+    // PoC recipes: their cupboard staples (rice, pasta, cheese) have no quantities, so the computed figure would be incomplete.
     const lines = (r.ingredients ?? []).map((l) => ({ l, d: ing.get(l.ingredient) }));
-    if (lines.length && lines.every(({ d }) => d?.per100 && (d.unit === 'g' || d.unit === 'ml'))) {
-      const total = lines.reduce((s, { l, d }) => s + (d!.per100!.kcal * l.qty) / 100, 0) / r.serves;
+    const cups = Object.entries(r.cupboard_g ?? {}).map(([k, g]) => ({ g, d: ing.get(k) }));
+    if (r.source !== 'poc' && lines.length && lines.every(({ d }) => d?.per100 && baseQty(d, 1) !== null) && cups.every(({ d }) => d?.per100)) {
+      const total = (lines.reduce((s, { l, d }) => s + (d!.per100!.kcal * baseQty(d, l.qty)!) / 100, 0)
+        + cups.reduce((s, { g, d }) => s + (d!.per100!.kcal * g) / 100, 0)) / r.serves;
       if (m?.kcal && Math.abs(total - m.kcal) / m.kcal > KCAL_TOLERANCE)
         warn(w, `declared ${m.kcal} kcal but ingredients compute to ~${Math.round(total)} per portion`);
     }
@@ -105,18 +120,21 @@ export interface Verification {
   computedProtein: number | null;
 }
 
-/** Verified = every ingredient line has verified CoFID data in g/ml and computed macros match the declared ones. */
+/** Verified = every ingredient line (and any `cupboard_g` item) has verified CoFID data in g/ml (or a `unit_g` weight) and computed macros match the declared ones. */
 export function verifyRecipe(r: RecipeDef, ing: Map<string, IngredientDef>): Verification {
   const lines = (r.ingredients ?? []).map((l) => ({ l, d: ing.get(l.ingredient) }));
-  const ok = lines.filter(({ d }) => d?.per100 && d.cofid?.verified && (d.unit === 'g' || d.unit === 'ml'));
+  const ok = lines.filter(({ d }) => d?.per100 && d.cofid?.verified && baseQty(d, 1) !== null);
   const coverage = lines.length ? ok.length / lines.length : 0;
   if (!lines.length) return { verified: false, reason: 'no ingredients', coverage, computedKcal: null, computedProtein: null };
-  if (ok.length < lines.length) {
-    const missing = lines.filter((x) => !ok.includes(x)).map(({ l }) => l.ingredient).join(', ');
+  const cups = Object.entries(r.cupboard_g ?? {}).map(([k, g]) => ({ k, g, d: ing.get(k) }));
+  const cupOk = cups.filter(({ d }) => d?.per100 && d.cofid?.verified);
+  if (ok.length < lines.length || cupOk.length < cups.length) {
+    const missing = [...lines.filter((x) => !ok.includes(x)).map(({ l }) => l.ingredient), ...cups.filter((x) => !cupOk.includes(x)).map(({ k }) => k)].join(', ');
     return { verified: false, reason: `missing verified CoFID data for ${missing}`, coverage, computedKcal: null, computedProtein: null };
   }
   const sum = (f: (p: NonNullable<IngredientDef['per100']>) => number) =>
-    ok.reduce((s, { l, d }) => s + (f(d!.per100!) * l.qty) / 100, 0) / r.serves;
+    (ok.reduce((s, { l, d }) => s + (f(d!.per100!) * baseQty(d, l.qty)!) / 100, 0)
+      + cupOk.reduce((s, { g, d }) => s + (f(d!.per100!) * g) / 100, 0)) / r.serves;
   const kcal = sum((p) => p.kcal), protein = sum((p) => p.protein_g);
   const kOff = Math.abs(kcal - r.per_portion.kcal) / r.per_portion.kcal;
   const pOff = r.per_portion.protein_g ? Math.abs(protein - r.per_portion.protein_g) / r.per_portion.protein_g : 0;

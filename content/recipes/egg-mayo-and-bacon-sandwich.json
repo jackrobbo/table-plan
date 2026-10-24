@@ -1,0 +1,44 @@
+{
+ "slug": "egg-mayo-and-bacon-sandwich",
+ "name": "Egg Mayo & Bacon Sandwich",
+ "course": "lunch",
+ "emoji": "🥪",
+ "serves": 1,
+ "status": "live",
+ "per_portion": {
+  "kcal": 580,
+  "protein_g": 35,
+  "carbs_g": 66,
+  "fat_g": 21
+ },
+ "ingredients": [
+  {
+   "ingredient": "loaf",
+   "qty": 3
+  },
+  {
+   "ingredient": "eggs",
+   "qty": 2
+  },
+  {
+   "ingredient": "bacon",
+   "qty": 2
+  },
+  {
+   "ingredient": "salad",
+   "qty": 20
+  }
+ ],
+ "cupboard": [
+  "mayo"
+ ],
+ "cupboard_g": {
+  "mayo": 20
+ },
+ "method": [
+  "Boil the eggs for 9 minutes, cool and mash with the mayonnaise and black pepper.",
+  "Grill the bacon until crisp.",
+  "Layer the egg mayo, bacon and salad between the bread."
+ ],
+ "source": "original"
+}

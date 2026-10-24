@@ -1,0 +1,57 @@
+{
+ "slug": "pork-and-veg-noodle-stir-fry",
+ "name": "Pork & Veg Noodle Stir-fry",
+ "course": "dinner",
+ "emoji": "🍜",
+ "serves": 2,
+ "status": "live",
+ "per_portion": {
+  "kcal": 725,
+  "protein_g": 61,
+  "carbs_g": 83,
+  "fat_g": 19
+ },
+ "ingredients": [
+  {
+   "ingredient": "pork-loin",
+   "qty": 400
+  },
+  {
+   "ingredient": "egg-noodles",
+   "qty": 160
+  },
+  {
+   "ingredient": "carrots",
+   "qty": 150
+  },
+  {
+   "ingredient": "pepper",
+   "qty": 1
+  },
+  {
+   "ingredient": "brocc",
+   "qty": 200
+  },
+  {
+   "ingredient": "onions",
+   "qty": 1
+  }
+ ],
+ "cupboard": [
+  "oil",
+  "soy",
+  "honey",
+  "garlic"
+ ],
+ "cupboard_g": {
+  "oil": 10,
+  "soy": 30,
+  "honey": 15
+ },
+ "method": [
+  "Slice the pork into strips and stir-fry in oil for 4 minutes; remove.",
+  "Stir-fry the vegetables for 4 minutes, add the soy, honey and garlic and return the pork.",
+  "Cook the noodles, drain and toss everything together."
+ ],
+ "source": "original"
+}

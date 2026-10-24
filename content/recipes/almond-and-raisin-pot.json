@@ -1,0 +1,29 @@
+{
+ "slug": "almond-and-raisin-pot",
+ "name": "Almond & Raisin Pot",
+ "course": "snack",
+ "emoji": "🌰",
+ "serves": 1,
+ "status": "live",
+ "per_portion": {
+  "kcal": 285,
+  "protein_g": 9,
+  "carbs_g": 18,
+  "fat_g": 20
+ },
+ "ingredients": [
+  {
+   "ingredient": "almonds",
+   "qty": 40
+  },
+  {
+   "ingredient": "raisins",
+   "qty": 25
+  }
+ ],
+ "cupboard": [],
+ "method": [
+  "Mix the almonds and raisins in a small pot."
+ ],
+ "source": "original"
+}

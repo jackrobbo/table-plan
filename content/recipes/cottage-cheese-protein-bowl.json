@@ -1,0 +1,42 @@
+{
+ "slug": "cottage-cheese-protein-bowl",
+ "name": "Cottage Cheese Protein Bowl",
+ "course": "lunch",
+ "emoji": "🥣",
+ "serves": 1,
+ "status": "live",
+ "per_portion": {
+  "kcal": 515,
+  "protein_g": 37,
+  "carbs_g": 38,
+  "fat_g": 25
+ },
+ "ingredients": [
+  {
+   "ingredient": "cottage-cheese",
+   "qty": 250
+  },
+  {
+   "ingredient": "plum",
+   "qty": 100
+  },
+  {
+   "ingredient": "cuc",
+   "qty": 0.33
+  },
+  {
+   "ingredient": "oatcakes",
+   "qty": 40
+  },
+  {
+   "ingredient": "ham",
+   "qty": 40
+  }
+ ],
+ "cupboard": [],
+ "method": [
+  "Spoon the cottage cheese into a bowl.",
+  "Add the chopped tomatoes, cucumber and torn ham, and serve with the oatcakes."
+ ],
+ "source": "original"
+}

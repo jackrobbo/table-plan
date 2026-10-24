@@ -1,0 +1,54 @@
+{
+ "slug": "lamb-koftas-with-couscous",
+ "name": "Lamb Koftas with Herby Couscous",
+ "course": "dinner",
+ "emoji": "🍖",
+ "serves": 2,
+ "status": "live",
+ "per_portion": {
+  "kcal": 870,
+  "protein_g": 61,
+  "carbs_g": 64,
+  "fat_g": 43
+ },
+ "ingredients": [
+  {
+   "ingredient": "lamb-mince",
+   "qty": 500
+  },
+  {
+   "ingredient": "couscous",
+   "qty": 140
+  },
+  {
+   "ingredient": "greek",
+   "qty": 100
+  },
+  {
+   "ingredient": "plum",
+   "qty": 150
+  },
+  {
+   "ingredient": "cuc",
+   "qty": 0.5
+  },
+  {
+   "ingredient": "onions",
+   "qty": 0.5
+  }
+ ],
+ "cupboard": [
+  "oil",
+  "cumin",
+  "paprika"
+ ],
+ "cupboard_g": {
+  "oil": 5
+ },
+ "method": [
+  "Mix the lamb with the grated onion, cumin and smoked paprika and shape into 8 koftas. Fry or grill for 10–12 minutes, turning.",
+  "Pour boiling water over the couscous, cover for 5 minutes and fluff up with the oil.",
+  "Stir the chopped cucumber and tomatoes through the couscous and serve the koftas with the Greek yogurt."
+ ],
+ "source": "original"
+}

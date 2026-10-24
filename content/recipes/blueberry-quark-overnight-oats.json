@@ -1,0 +1,43 @@
+{
+ "slug": "blueberry-quark-overnight-oats",
+ "name": "Blueberry Quark Overnight Oats",
+ "course": "breakfast",
+ "emoji": "🫐",
+ "serves": 1,
+ "status": "live",
+ "per_portion": {
+  "kcal": 475,
+  "protein_g": 35,
+  "carbs_g": 72,
+  "fat_g": 8
+ },
+ "ingredients": [
+  {
+   "ingredient": "oats",
+   "qty": 60
+  },
+  {
+   "ingredient": "quark",
+   "qty": 150
+  },
+  {
+   "ingredient": "milk",
+   "qty": 150
+  },
+  {
+   "ingredient": "blueb",
+   "qty": 100
+  }
+ ],
+ "cupboard": [
+  "honey"
+ ],
+ "cupboard_g": {
+  "honey": 10
+ },
+ "method": [
+  "Mix the oats, quark, milk and honey in a jar or bowl. Cover and chill overnight.",
+  "Loosen with a splash more milk if needed and top with the blueberries."
+ ],
+ "source": "original"
+}

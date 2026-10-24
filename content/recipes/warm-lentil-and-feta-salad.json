@@ -1,0 +1,47 @@
+{
+ "slug": "warm-lentil-and-feta-salad",
+ "name": "Warm Lentil & Feta Salad",
+ "course": "lunch",
+ "emoji": "🥗",
+ "serves": 1,
+ "status": "live",
+ "per_portion": {
+  "kcal": 455,
+  "protein_g": 30,
+  "carbs_g": 42,
+  "fat_g": 20
+ },
+ "ingredients": [
+  {
+   "ingredient": "red-lentils",
+   "qty": 70
+  },
+  {
+   "ingredient": "feta",
+   "qty": 60
+  },
+  {
+   "ingredient": "cuc",
+   "qty": 0.33
+  },
+  {
+   "ingredient": "plum",
+   "qty": 100
+  },
+  {
+   "ingredient": "spinach",
+   "qty": 40
+  }
+ ],
+ "cupboard": [
+  "oil"
+ ],
+ "cupboard_g": {
+  "oil": 5
+ },
+ "method": [
+  "Simmer the lentils for 12–15 minutes until just soft, then drain.",
+  "Toss while warm with the oil, spinach, chopped tomatoes and cucumber, then crumble over the feta."
+ ],
+ "source": "original"
+}

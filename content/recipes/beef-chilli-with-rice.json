@@ -1,0 +1,61 @@
+{
+ "slug": "beef-chilli-with-rice",
+ "name": "Beef Chilli with Rice",
+ "course": "dinner",
+ "emoji": "🌶️",
+ "serves": 2,
+ "status": "live",
+ "per_portion": {
+  "kcal": 895,
+  "protein_g": 79,
+  "carbs_g": 93,
+  "fat_g": 24
+ },
+ "ingredients": [
+  {
+   "ingredient": "mince",
+   "qty": 500
+  },
+  {
+   "ingredient": "kidney",
+   "qty": 240
+  },
+  {
+   "ingredient": "ctoms",
+   "qty": 400
+  },
+  {
+   "ingredient": "onions",
+   "qty": 1
+  },
+  {
+   "ingredient": "pepper",
+   "qty": 1
+  },
+  {
+   "ingredient": "basmati",
+   "qty": 140
+  },
+  {
+   "ingredient": "cheddar-block",
+   "qty": 40
+  }
+ ],
+ "cupboard": [
+  "oil",
+  "puree",
+  "cumin",
+  "paprika",
+  "garlic"
+ ],
+ "cupboard_g": {
+  "oil": 10,
+  "puree": 15
+ },
+ "method": [
+  "Brown the mince with the diced onion and pepper in oil. Stir in the tomato puree, garlic, cumin and smoked paprika.",
+  "Add the chopped tomatoes and kidney beans, then simmer for 25 minutes until thick.",
+  "Serve over the cooked rice topped with grated cheddar."
+ ],
+ "source": "original"
+}

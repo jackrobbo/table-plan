@@ -1,0 +1,25 @@
+{
+ "slug": "two-boiled-eggs",
+ "name": "Two Boiled Eggs",
+ "course": "snack",
+ "emoji": "🥚",
+ "serves": 1,
+ "status": "live",
+ "per_portion": {
+  "kcal": 130,
+  "protein_g": 13,
+  "carbs_g": 0,
+  "fat_g": 9
+ },
+ "ingredients": [
+  {
+   "ingredient": "eggs",
+   "qty": 2
+  }
+ ],
+ "cupboard": [],
+ "method": [
+  "Boil the eggs for 8 minutes, cool and peel; season with salt and pepper."
+ ],
+ "source": "original"
+}

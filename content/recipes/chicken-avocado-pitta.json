@@ -1,0 +1,38 @@
+{
+ "slug": "chicken-avocado-pitta",
+ "name": "Chicken & Avocado Pitta",
+ "course": "lunch",
+ "emoji": "🥙",
+ "serves": 1,
+ "status": "live",
+ "per_portion": {
+  "kcal": 540,
+  "protein_g": 40,
+  "carbs_g": 70,
+  "fat_g": 13
+ },
+ "ingredients": [
+  {
+   "ingredient": "roast",
+   "qty": 120
+  },
+  {
+   "ingredient": "pittas",
+   "qty": 2
+  },
+  {
+   "ingredient": "avocado",
+   "qty": 0.5
+  },
+  {
+   "ingredient": "salad",
+   "qty": 30
+  }
+ ],
+ "cupboard": [],
+ "method": [
+  "Warm and split the pittas.",
+  "Fill with the chicken slices, sliced avocado and salad leaves; season with black pepper."
+ ],
+ "source": "original"
+}

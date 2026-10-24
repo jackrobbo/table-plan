@@ -1,0 +1,44 @@
+{
+ "slug": "baked-salmon-with-new-potatoes-and-green-beans",
+ "name": "Baked Salmon with Crushed New Potatoes",
+ "course": "dinner",
+ "emoji": "🐟",
+ "serves": 2,
+ "status": "live",
+ "per_portion": {
+  "kcal": 755,
+  "protein_g": 52,
+  "carbs_g": 45,
+  "fat_g": 42
+ },
+ "ingredients": [
+  {
+   "ingredient": "salmon",
+   "qty": 440
+  },
+  {
+   "ingredient": "baby-potatoes",
+   "qty": 500
+  },
+  {
+   "ingredient": "green-beans",
+   "qty": 200
+  },
+  {
+   "ingredient": "creme",
+   "qty": 60
+  }
+ ],
+ "cupboard": [
+  "butter"
+ ],
+ "cupboard_g": {
+  "butter": 10
+ },
+ "method": [
+  "Boil the baby potatoes for 15 minutes, adding the green beans for the last 4.",
+  "Meanwhile bake the salmon at 200°C for 12–14 minutes.",
+  "Crush the potatoes lightly with the butter and crème fraîche, season, and serve with the beans and salmon."
+ ],
+ "source": "original"
+}

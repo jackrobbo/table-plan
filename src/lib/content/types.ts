@@ -7,6 +7,8 @@ export interface IngredientDef {
   slug: string;
   name: string;
   unit: string;
+  /** Grams (or ml) in one `unit`, for count-based units (eggs, bananas, slices) so they can take part in CoFID macro checks. */
+  unit_g?: number;
   cupboard: boolean;
   note?: string;
   allergens: Allergen[];
@@ -29,6 +31,11 @@ export interface RecipeDef {
   per_portion: { kcal: number; protein_g: number; carbs_g?: number; fat_g?: number };
   ingredients: { ingredient: string; qty: number }[];
   cupboard: string[];
+  /**
+   * Grams of cupboard items used across the whole recipe (e.g. oil, honey). Cupboard items aren't priced or
+   * listed with quantities, so this only feeds macro verification; leave out spices and other trace amounts.
+   */
+  cupboard_g?: Record<string, number>;
   method: string[];
   /** Allergens not derivable from ingredients (e.g. cross-contact). */
   extra_allergens?: Allergen[];

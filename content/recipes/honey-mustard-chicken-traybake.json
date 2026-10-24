@@ -1,0 +1,50 @@
+{
+ "slug": "honey-mustard-chicken-traybake",
+ "name": "Honey Mustard Chicken Traybake",
+ "course": "dinner",
+ "emoji": "🍗",
+ "serves": 2,
+ "status": "live",
+ "per_portion": {
+  "kcal": 650,
+  "protein_g": 59,
+  "carbs_g": 73,
+  "fat_g": 15
+ },
+ "ingredients": [
+  {
+   "ingredient": "thigh",
+   "qty": 500
+  },
+  {
+   "ingredient": "baby-potatoes",
+   "qty": 600
+  },
+  {
+   "ingredient": "carrots",
+   "qty": 250
+  },
+  {
+   "ingredient": "onions",
+   "qty": 1
+  },
+  {
+   "ingredient": "pepper",
+   "qty": 1
+  }
+ ],
+ "cupboard": [
+  "oil",
+  "honey",
+  "mustard"
+ ],
+ "cupboard_g": {
+  "oil": 15,
+  "honey": 20
+ },
+ "method": [
+  "Toss the chicken, halved baby potatoes, carrots, pepper and onion wedges in the oil, honey and mustard.",
+  "Roast on a large tray at 200°C for 40 minutes, turning halfway, until the chicken is cooked through."
+ ],
+ "source": "original"
+}

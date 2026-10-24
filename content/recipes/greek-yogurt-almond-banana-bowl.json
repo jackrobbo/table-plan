@@ -1,0 +1,43 @@
+{
+ "slug": "greek-yogurt-almond-banana-bowl",
+ "name": "Greek Yogurt, Almond & Banana Bowl",
+ "course": "breakfast",
+ "emoji": "🥣",
+ "serves": 1,
+ "status": "live",
+ "per_portion": {
+  "kcal": 670,
+  "protein_g": 23,
+  "carbs_g": 56,
+  "fat_g": 41
+ },
+ "ingredients": [
+  {
+   "ingredient": "greek",
+   "qty": 250
+  },
+  {
+   "ingredient": "almonds",
+   "qty": 30
+  },
+  {
+   "ingredient": "banana",
+   "qty": 1
+  },
+  {
+   "ingredient": "raisins",
+   "qty": 20
+  }
+ ],
+ "cupboard": [
+  "honey"
+ ],
+ "cupboard_g": {
+  "honey": 10
+ },
+ "method": [
+  "Spoon the Greek yogurt into a bowl.",
+  "Top with sliced banana, roughly chopped almonds and the raisins, and finish with a drizzle of honey."
+ ],
+ "source": "original"
+}

@@ -1,0 +1,43 @@
+{
+ "slug": "prawn-and-avocado-rice-salad",
+ "name": "Prawn & Avocado Rice Salad",
+ "course": "lunch",
+ "emoji": "🍤",
+ "serves": 1,
+ "status": "live",
+ "per_portion": {
+  "kcal": 595,
+  "protein_g": 33,
+  "carbs_g": 62,
+  "fat_g": 26
+ },
+ "ingredients": [
+  {
+   "ingredient": "king-prawns",
+   "qty": 150
+  },
+  {
+   "ingredient": "basmati",
+   "qty": 70
+  },
+  {
+   "ingredient": "avocado",
+   "qty": 1
+  },
+  {
+   "ingredient": "cuc",
+   "qty": 0.33
+  }
+ ],
+ "cupboard": [
+  "oil"
+ ],
+ "cupboard_g": {
+  "oil": 5
+ },
+ "method": [
+  "Cook the rice and let it cool.",
+  "Toss with the prawns, cubed avocado, chopped cucumber, oil and black pepper."
+ ],
+ "source": "original"
+}

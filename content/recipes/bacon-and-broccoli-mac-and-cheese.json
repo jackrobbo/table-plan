@@ -1,0 +1,51 @@
+{
+ "slug": "bacon-and-broccoli-mac-and-cheese",
+ "name": "Bacon & Broccoli Mac and Cheese",
+ "course": "dinner",
+ "emoji": "🧀",
+ "serves": 2,
+ "status": "live",
+ "per_portion": {
+  "kcal": 895,
+  "protein_g": 54,
+  "carbs_g": 95,
+  "fat_g": 36
+ },
+ "ingredients": [
+  {
+   "ingredient": "penne",
+   "qty": 200
+  },
+  {
+   "ingredient": "cheddar-block",
+   "qty": 120
+  },
+  {
+   "ingredient": "milk",
+   "qty": 400
+  },
+  {
+   "ingredient": "bacon",
+   "qty": 6
+  },
+  {
+   "ingredient": "brocc",
+   "qty": 200
+  }
+ ],
+ "cupboard": [
+  "butter",
+  "cornflour",
+  "mustard"
+ ],
+ "cupboard_g": {
+  "butter": 10,
+  "cornflour": 15
+ },
+ "method": [
+  "Cook the penne, adding the broccoli for the last 3 minutes. Meanwhile grill the bacon until crisp and chop.",
+  "Melt the butter, stir in the cornflour and mustard, then whisk in the milk and simmer until thick. Stir in most of the cheddar.",
+  "Toss with the pasta and broccoli, scatter the bacon and remaining cheese over the top and grill for 3 minutes."
+ ],
+ "source": "original"
+}

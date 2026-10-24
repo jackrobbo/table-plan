@@ -1,0 +1,49 @@
+{
+ "slug": "teriyaki-chicken-noodle-box",
+ "name": "Teriyaki Chicken Noodle Box",
+ "course": "lunch",
+ "emoji": "🍜",
+ "serves": 1,
+ "status": "live",
+ "per_portion": {
+  "kcal": 570,
+  "protein_g": 51,
+  "carbs_g": 75,
+  "fat_g": 10
+ },
+ "ingredients": [
+  {
+   "ingredient": "breast",
+   "qty": 150
+  },
+  {
+   "ingredient": "egg-noodles",
+   "qty": 80
+  },
+  {
+   "ingredient": "carrots",
+   "qty": 60
+  },
+  {
+   "ingredient": "brocc",
+   "qty": 100
+  },
+  {
+   "ingredient": "pepper",
+   "qty": 0.5
+  }
+ ],
+ "cupboard": [
+  "teriyaki",
+  "oil"
+ ],
+ "cupboard_g": {
+  "teriyaki": 30,
+  "oil": 5
+ },
+ "method": [
+  "Cook the noodles, adding the broccoli for the last 2 minutes, then drain.",
+  "Stir-fry the chicken with the sliced carrot and pepper in a little oil for 6–7 minutes until the chicken is cooked through, then add the teriyaki sauce and toss with the noodles."
+ ],
+ "source": "original"
+}

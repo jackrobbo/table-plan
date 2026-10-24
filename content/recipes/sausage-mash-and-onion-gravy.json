@@ -1,0 +1,54 @@
+{
+ "slug": "sausage-mash-and-onion-gravy",
+ "name": "Sausage, Mash & Onion Gravy",
+ "course": "dinner",
+ "emoji": "🌭",
+ "serves": 2,
+ "status": "live",
+ "per_portion": {
+  "kcal": 705,
+  "protein_g": 38,
+  "carbs_g": 100,
+  "fat_g": 20
+ },
+ "ingredients": [
+  {
+   "ingredient": "pork-sausages",
+   "qty": 6
+  },
+  {
+   "ingredient": "baking-potatoes",
+   "qty": 600
+  },
+  {
+   "ingredient": "milk",
+   "qty": 100
+  },
+  {
+   "ingredient": "peas",
+   "qty": 200
+  },
+  {
+   "ingredient": "onions",
+   "qty": 1
+  },
+  {
+   "ingredient": "carrots",
+   "qty": 100
+  }
+ ],
+ "cupboard": [
+  "butter",
+  "cornflour"
+ ],
+ "cupboard_g": {
+  "butter": 20,
+  "cornflour": 10
+ },
+ "method": [
+  "Boil the potatoes until soft, then mash with the milk and butter.",
+  "Grill the sausages for 17–20 minutes, turning, until cooked through. Meanwhile soften the sliced onion in a pan, stir in the cornflour and 300 ml hot water and bubble into a gravy.",
+  "Boil the peas and carrots and serve everything together."
+ ],
+ "source": "original"
+}

@@ -1,0 +1,33 @@
+{
+ "slug": "cottage-cheese-and-cucumber-oatcakes",
+ "name": "Cottage Cheese & Cucumber Oatcakes",
+ "course": "snack",
+ "emoji": "🥒",
+ "serves": 1,
+ "status": "live",
+ "per_portion": {
+  "kcal": 250,
+  "protein_g": 13,
+  "carbs_g": 23,
+  "fat_g": 12
+ },
+ "ingredients": [
+  {
+   "ingredient": "cottage-cheese",
+   "qty": 100
+  },
+  {
+   "ingredient": "oatcakes",
+   "qty": 30
+  },
+  {
+   "ingredient": "cuc",
+   "qty": 0.25
+  }
+ ],
+ "cupboard": [],
+ "method": [
+  "Top the oatcakes with the cottage cheese and cucumber slices."
+ ],
+ "source": "original"
+}

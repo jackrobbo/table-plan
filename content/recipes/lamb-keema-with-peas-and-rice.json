@@ -1,0 +1,51 @@
+{
+ "slug": "lamb-keema-with-peas-and-rice",
+ "name": "Lamb Keema with Peas & Rice",
+ "course": "dinner",
+ "emoji": "🍛",
+ "serves": 2,
+ "status": "live",
+ "per_portion": {
+  "kcal": 860,
+  "protein_g": 60,
+  "carbs_g": 76,
+  "fat_g": 37
+ },
+ "ingredients": [
+  {
+   "ingredient": "lamb-mince",
+   "qty": 500
+  },
+  {
+   "ingredient": "peas",
+   "qty": 150
+  },
+  {
+   "ingredient": "onions",
+   "qty": 1
+  },
+  {
+   "ingredient": "ctoms",
+   "qty": 200
+  },
+  {
+   "ingredient": "basmati",
+   "qty": 140
+  }
+ ],
+ "cupboard": [
+  "oil",
+  "curry-powder",
+  "garlic"
+ ],
+ "cupboard_g": {
+  "oil": 5,
+  "curry-powder": 12
+ },
+ "method": [
+  "Brown the lamb mince with the chopped onion in oil. Add garlic, curry powder and the chopped tomatoes.",
+  "Simmer for 20 minutes, stirring the peas in for the last 5.",
+  "Serve with the cooked basmati rice."
+ ],
+ "source": "original"
+}

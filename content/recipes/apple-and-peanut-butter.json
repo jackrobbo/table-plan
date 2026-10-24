@@ -1,0 +1,29 @@
+{
+ "slug": "apple-and-peanut-butter",
+ "name": "Apple & Peanut Butter",
+ "course": "snack",
+ "emoji": "🍎",
+ "serves": 1,
+ "status": "live",
+ "per_portion": {
+  "kcal": 250,
+  "protein_g": 8,
+  "carbs_g": 19,
+  "fat_g": 16
+ },
+ "ingredients": [
+  {
+   "ingredient": "apple",
+   "qty": 1
+  },
+  {
+   "ingredient": "peanut-butter",
+   "qty": 30
+  }
+ ],
+ "cupboard": [],
+ "method": [
+  "Slice the apple and serve with the peanut butter for dipping."
+ ],
+ "source": "original"
+}

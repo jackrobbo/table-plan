@@ -1,0 +1,42 @@
+{
+ "slug": "pesto-chicken-pasta-salad",
+ "name": "Pesto Chicken Pasta Salad",
+ "course": "lunch",
+ "emoji": "🍝",
+ "serves": 1,
+ "status": "live",
+ "per_portion": {
+  "kcal": 600,
+  "protein_g": 45,
+  "carbs_g": 73,
+  "fat_g": 16
+ },
+ "ingredients": [
+  {
+   "ingredient": "penne",
+   "qty": 90
+  },
+  {
+   "ingredient": "breast",
+   "qty": 130
+  },
+  {
+   "ingredient": "pesto",
+   "qty": 30
+  },
+  {
+   "ingredient": "plum",
+   "qty": 100
+  },
+  {
+   "ingredient": "spinach",
+   "qty": 30
+  }
+ ],
+ "cupboard": [],
+ "method": [
+  "Boil the penne until al dente, then drain and cool under cold water.",
+  "Pan-fry the chicken in strips until cooked through, then toss with the pasta, pesto, halved tomatoes and the spinach."
+ ],
+ "source": "original"
+}

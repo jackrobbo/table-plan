@@ -1,0 +1,33 @@
+{
+ "slug": "peanut-butter-banana-shake",
+ "name": "Peanut Butter Banana Shake",
+ "course": "snack",
+ "emoji": "🥤",
+ "serves": 1,
+ "status": "live",
+ "per_portion": {
+  "kcal": 380,
+  "protein_g": 18,
+  "carbs_g": 40,
+  "fat_g": 18
+ },
+ "ingredients": [
+  {
+   "ingredient": "milk",
+   "qty": 300
+  },
+  {
+   "ingredient": "banana",
+   "qty": 1
+  },
+  {
+   "ingredient": "peanut-butter",
+   "qty": 25
+  }
+ ],
+ "cupboard": [],
+ "method": [
+  "Blend the milk, banana and peanut butter until smooth."
+ ],
+ "source": "original"
+}

@@ -1,0 +1,42 @@
+{
+ "slug": "tuna-sweetcorn-jacket-potato",
+ "name": "Tuna & Sweetcorn Jacket Potato",
+ "course": "lunch",
+ "emoji": "🥔",
+ "serves": 1,
+ "status": "live",
+ "per_portion": {
+  "kcal": 575,
+  "protein_g": 40,
+  "carbs_g": 75,
+  "fat_g": 15
+ },
+ "ingredients": [
+  {
+   "ingredient": "baking-potatoes",
+   "qty": 350
+  },
+  {
+   "ingredient": "tuna-tin",
+   "qty": 102
+  },
+  {
+   "ingredient": "cheddar-block",
+   "qty": 25
+  }
+ ],
+ "cupboard": [
+  "mayo",
+  "sweetcorn"
+ ],
+ "cupboard_g": {
+  "mayo": 15,
+  "sweetcorn": 40
+ },
+ "method": [
+  "Prick the potato and bake at 200°C for about 1 hour (or microwave for 8–10 minutes, then crisp in the oven).",
+  "Mix the drained tuna with the sweetcorn and mayonnaise.",
+  "Split the potato, fill with the tuna mix and top with grated cheddar."
+ ],
+ "source": "original"
+}

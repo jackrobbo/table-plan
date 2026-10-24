@@ -1,0 +1,50 @@
+{
+ "slug": "sausage-and-bean-stew",
+ "name": "Sausage & Bean Stew",
+ "course": "lunch",
+ "emoji": "🍲",
+ "serves": 1,
+ "status": "live",
+ "per_portion": {
+  "kcal": 510,
+  "protein_g": 37,
+  "carbs_g": 58,
+  "fat_g": 16
+ },
+ "ingredients": [
+  {
+   "ingredient": "pork-sausages",
+   "qty": 3
+  },
+  {
+   "ingredient": "baked-beans",
+   "qty": 200
+  },
+  {
+   "ingredient": "onions",
+   "qty": 0.5
+  },
+  {
+   "ingredient": "pepper",
+   "qty": 0.5
+  },
+  {
+   "ingredient": "ctoms",
+   "qty": 100
+  }
+ ],
+ "cupboard": [
+  "oil",
+  "puree",
+  "paprika"
+ ],
+ "cupboard_g": {
+  "oil": 5,
+  "puree": 10
+ },
+ "method": [
+  "Brown the sausages in oil, then slice and return to the pan with the chopped onion and pepper.",
+  "Add the tomatoes, baked beans, tomato puree and smoked paprika and simmer for 10 minutes."
+ ],
+ "source": "original"
+}

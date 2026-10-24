@@ -1,0 +1,44 @@
+{
+ "slug": "steak-and-new-potato-salad-box",
+ "name": "Steak & New Potato Salad Box",
+ "course": "lunch",
+ "emoji": "🥩",
+ "serves": 1,
+ "status": "live",
+ "per_portion": {
+  "kcal": 615,
+  "protein_g": 47,
+  "carbs_g": 44,
+  "fat_g": 29
+ },
+ "ingredients": [
+  {
+   "ingredient": "rump",
+   "qty": 200
+  },
+  {
+   "ingredient": "baby-potatoes",
+   "qty": 250
+  },
+  {
+   "ingredient": "salad",
+   "qty": 60
+  },
+  {
+   "ingredient": "plum",
+   "qty": 80
+  }
+ ],
+ "cupboard": [
+  "oil"
+ ],
+ "cupboard_g": {
+  "oil": 8
+ },
+ "method": [
+  "Boil the baby potatoes for 12 minutes, then drain and halve.",
+  "Season the steak and fry in a very hot pan for 3 minutes each side; rest for 5 minutes, then slice.",
+  "Toss the potatoes with the oil and black pepper and pack with the salad leaves, tomatoes and sliced steak."
+ ],
+ "source": "original"
+}

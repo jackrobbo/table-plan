@@ -1,0 +1,48 @@
+{
+ "slug": "beef-burrito-bowl",
+ "name": "Beef Burrito Bowl",
+ "course": "lunch",
+ "emoji": "🌯",
+ "serves": 1,
+ "status": "live",
+ "per_portion": {
+  "kcal": 720,
+  "protein_g": 53,
+  "carbs_g": 86,
+  "fat_g": 20
+ },
+ "ingredients": [
+  {
+   "ingredient": "mince",
+   "qty": 125
+  },
+  {
+   "ingredient": "basmati",
+   "qty": 75
+  },
+  {
+   "ingredient": "kidney",
+   "qty": 120
+  },
+  {
+   "ingredient": "plum",
+   "qty": 80
+  },
+  {
+   "ingredient": "cheddar-block",
+   "qty": 25
+  },
+  {
+   "ingredient": "greek",
+   "qty": 40
+  }
+ ],
+ "cupboard": [
+  "fajita"
+ ],
+ "method": [
+  "Cook the rice. Brown the mince in a dry pan, stir in the fajita seasoning and kidney beans and simmer for 5 minutes.",
+  "Pile the rice into a bowl, spoon over the beef and top with chopped tomatoes, grated cheddar and a dollop of Greek yogurt."
+ ],
+ "source": "original"
+}

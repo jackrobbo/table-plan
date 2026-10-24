@@ -1,0 +1,48 @@
+{
+ "slug": "bacon-egg-cheese-breakfast-burrito",
+ "name": "Bacon, Egg & Cheese Breakfast Burrito",
+ "course": "breakfast",
+ "emoji": "🌯",
+ "serves": 1,
+ "status": "live",
+ "per_portion": {
+  "kcal": 825,
+  "protein_g": 51,
+  "carbs_g": 69,
+  "fat_g": 40
+ },
+ "ingredients": [
+  {
+   "ingredient": "wraps",
+   "qty": 2
+  },
+  {
+   "ingredient": "eggs",
+   "qty": 3
+  },
+  {
+   "ingredient": "bacon",
+   "qty": 3
+  },
+  {
+   "ingredient": "cheddar-block",
+   "qty": 25
+  },
+  {
+   "ingredient": "pepper",
+   "qty": 0.5
+  }
+ ],
+ "cupboard": [
+  "oil"
+ ],
+ "cupboard_g": {
+  "oil": 5
+ },
+ "method": [
+  "Grill or fry the bacon until crisp, then chop it up.",
+  "Scramble the eggs with the diced pepper in a little oil; stir in the bacon and grated cheddar.",
+  "Warm the wraps, fill with the egg mix, fold in the sides and roll up."
+ ],
+ "source": "original"
+}

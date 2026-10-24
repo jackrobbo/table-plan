@@ -1,0 +1,39 @@
+{
+ "slug": "cottage-cheese-berry-almond-bowl",
+ "name": "Cottage Cheese, Berry & Almond Bowl",
+ "course": "breakfast",
+ "emoji": "🫐",
+ "serves": 1,
+ "status": "live",
+ "per_portion": {
+  "kcal": 495,
+  "protein_g": 31,
+  "carbs_g": 26,
+  "fat_g": 30
+ },
+ "ingredients": [
+  {
+   "ingredient": "cottage-cheese",
+   "qty": 250
+  },
+  {
+   "ingredient": "blueb",
+   "qty": 100
+  },
+  {
+   "ingredient": "almonds",
+   "qty": 30
+  }
+ ],
+ "cupboard": [
+  "honey"
+ ],
+ "cupboard_g": {
+  "honey": 10
+ },
+ "method": [
+  "Spoon the cottage cheese into a bowl.",
+  "Top with the blueberries and roughly chopped almonds, and finish with a drizzle of honey."
+ ],
+ "source": "original"
+}

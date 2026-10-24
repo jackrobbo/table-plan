@@ -1,0 +1,33 @@
+{
+ "slug": "chicken-and-houmous-snack-box",
+ "name": "Chicken & Houmous Snack Box",
+ "course": "snack",
+ "emoji": "🍗",
+ "serves": 1,
+ "status": "live",
+ "per_portion": {
+  "kcal": 225,
+  "protein_g": 22,
+  "carbs_g": 7,
+  "fat_g": 12
+ },
+ "ingredients": [
+  {
+   "ingredient": "roast",
+   "qty": 80
+  },
+  {
+   "ingredient": "houm",
+   "qty": 40
+  },
+  {
+   "ingredient": "cuc",
+   "qty": 0.25
+  }
+ ],
+ "cupboard": [],
+ "method": [
+  "Pack the chicken slices with the houmous and cucumber sticks for dipping."
+ ],
+ "source": "original"
+}

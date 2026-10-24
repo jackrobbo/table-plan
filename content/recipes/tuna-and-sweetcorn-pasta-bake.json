@@ -1,0 +1,56 @@
+{
+ "slug": "tuna-and-sweetcorn-pasta-bake",
+ "name": "Tuna & Sweetcorn Pasta Bake",
+ "course": "dinner",
+ "emoji": "🍝",
+ "serves": 2,
+ "status": "live",
+ "per_portion": {
+  "kcal": 880,
+  "protein_g": 59,
+  "carbs_g": 107,
+  "fat_g": 28
+ },
+ "ingredients": [
+  {
+   "ingredient": "penne",
+   "qty": 200
+  },
+  {
+   "ingredient": "tuna-tin",
+   "qty": 204
+  },
+  {
+   "ingredient": "cheddar-block",
+   "qty": 100
+  },
+  {
+   "ingredient": "milk",
+   "qty": 300
+  },
+  {
+   "ingredient": "ctoms",
+   "qty": 400
+  },
+  {
+   "ingredient": "onions",
+   "qty": 1
+  }
+ ],
+ "cupboard": [
+  "butter",
+  "cornflour",
+  "sweetcorn"
+ ],
+ "cupboard_g": {
+  "butter": 10,
+  "cornflour": 15,
+  "sweetcorn": 80
+ },
+ "method": [
+  "Cook the penne. Make a sauce by softening the chopped onion in the butter, stirring in the cornflour, then the milk and chopped tomatoes.",
+  "Stir in the drained tuna, sweetcorn and half the cheddar, then fold in the pasta.",
+  "Top with the rest of the cheddar and bake at 200°C for 20 minutes."
+ ],
+ "source": "original"
+}

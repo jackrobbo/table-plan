@@ -1,0 +1,42 @@
+{
+ "slug": "loaded-sweet-potato-with-beans",
+ "name": "Loaded Sweet Potato with Beans & Cottage Cheese",
+ "course": "lunch",
+ "emoji": "🍠",
+ "serves": 1,
+ "status": "live",
+ "per_portion": {
+  "kcal": 660,
+  "protein_g": 30,
+  "carbs_g": 100,
+  "fat_g": 18
+ },
+ "ingredients": [
+  {
+   "ingredient": "sweet-potatoes",
+   "qty": 350
+  },
+  {
+   "ingredient": "baked-beans",
+   "qty": 150
+  },
+  {
+   "ingredient": "cottage-cheese",
+   "qty": 100
+  },
+  {
+   "ingredient": "cheddar-block",
+   "qty": 30
+  },
+  {
+   "ingredient": "spinach",
+   "qty": 30
+  }
+ ],
+ "cupboard": [],
+ "method": [
+  "Prick the sweet potato and bake at 200°C for 45–50 minutes until soft.",
+  "Warm the beans with the spinach until wilted. Split the potato and load with the beans, cottage cheese and grated cheddar."
+ ],
+ "source": "original"
+}

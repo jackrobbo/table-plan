@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest';
 import { PRODUCTS, RECIPES, CUPBOARD } from '@/data';
-import { isSafeFor, recipeAllergens, safeRecipes } from '@/lib/allergens';
+import { ALLERGENS, isSafeFor, recipeAllergens, safeRecipes } from '@/lib/allergens';
 import { createMockBackend, MOCK_CODE } from '@/lib/db/mock';
 import type { KV } from '@/lib/db/types';
 import {
@@ -60,6 +60,15 @@ describe('allergens', () => {
     expect(recipeAllergens(prawn)).toContain('crustaceans');
     expect(isSafeFor(prawn, ['crustaceans'])).toBe(false);
     expect(safeRecipes(['milk']).every((r) => !recipeAllergens(r).includes('milk'))).toBe(true);
+  });
+
+  it('keeps a usable bank for a household avoiding any one of the 14 allergens', () => {
+    for (const [a] of ALLERGENS) {
+      const safe = safeRecipes([a]);
+      const n = (c: string) => safe.filter((r) => r.c === c).length;
+      for (const c of ['breakfast', 'lunch', 'dinner']) expect(n(c), `${a}: ${c}`).toBeGreaterThanOrEqual(5);
+      expect(n('snack'), `${a}: snack`).toBeGreaterThanOrEqual(3); // the planner needs a snack every day
+    }
   });
 });
 
@@ -186,11 +195,45 @@ describe('CoFID verification', () => {
     expect(verifyRecipe(r2, new Map(i2.map((x) => [x.slug, x]))).verified).toBe(false);
     expect(validateContent(i2, [r2]).some((x) => x.level === 'error' && x.message.includes('CoFID'))).toBe(true);
   });
+  it('warns on declared-vs-computed gaps for new recipes but not for grandfathered PoC ones', () => {
+    const [i, r] = mk(400); // 60 g oats compute to 222 kcal, declared 400
+    const gap = (x: RecipeDef) => validateContent(i, [x]).some((w) => w.level === 'warning' && w.message.includes('ingredients compute to'));
+    expect(gap({ ...r, status: 'draft' })).toBe(true);
+    expect(gap({ ...r, status: 'live', source: 'poc' })).toBe(false);
+  });
   it('rejects verified status without CoFID data, but allows macros-only entries', () => {
     const [i, r] = mk(222);
     i[0].cofid = { verified: false };
     expect(validateContent(i, [r]).some((x) => x.level === 'error')).toBe(true);
     const eatOut: RecipeDef = { ...r, slug: 'pub-roast', name: 'Pub Roast', ingredients: [], method: [], macros_only: true, status: 'live' };
     expect(validateContent(i, [eatOut]).filter((x) => x.level === 'error')).toEqual([]);
+  });
+  it('counts count-based units (eggs, slices) via unit_g, and refuses them without it', () => {
+    const egg = (unit_g?: number): IngredientDef => ({
+      slug: 'eggs', name: 'Eggs', unit: 'eggs', ...(unit_g ? { unit_g } : {}), cupboard: false, allergens: ['eggs'], cofid: { verified: true },
+      per100: { kcal: 131, protein_g: 12.6, carbs_g: 0, fat_g: 9 },
+      product: { retailer: 'morrisons', name: 'Eggs', price_pence: 180, pack_size: 6, slug: 'eggs/1' },
+    });
+    const r: RecipeDef = { slug: 'eggs-on-toast', name: 'Eggs', course: 'breakfast', serves: 1, status: 'verified',
+      per_portion: { kcal: 197, protein_g: 19 }, ingredients: [{ ingredient: 'eggs', qty: 3 }], cupboard: [], method: ['Cook.'] };
+    const withWeight = verifyRecipe(r, new Map([['eggs', egg(50)]]));
+    expect(withWeight.verified).toBe(true);
+    expect(withWeight.computedKcal).toBe(197); // 3 x 50 g x 131 kcal/100 g
+    expect(verifyRecipe(r, new Map([['eggs', egg()]])).verified).toBe(false);
+    expect(validateContent([egg(-1)], []).some((x) => x.level === 'error' && x.message.includes('unit_g'))).toBe(true);
+  });
+  it('counts cupboard grams (oil, honey) in verification, and needs their CoFID data', () => {
+    const oil = (verified: boolean): IngredientDef => ({ slug: 'oil', name: 'Oil', unit: 'g', cupboard: true, allergens: [], cofid: { verified },
+      per100: { kcal: 899, protein_g: 0, carbs_g: 0, fat_g: 99.9 }, product: null });
+    const [i, r] = mk(222);
+    const withOil: RecipeDef = { ...r, cupboard: ['oil'], cupboard_g: { oil: 10 }, per_portion: { kcal: 312, protein_g: 7 } }; // 60 g oats + 10 g oil
+    const ok = verifyRecipe(withOil, new Map([...i, oil(true)].map((x) => [x.slug, x])));
+    expect(ok.verified).toBe(true);
+    expect(ok.computedKcal).toBe(312);
+    expect(verifyRecipe({ ...withOil, per_portion: { kcal: 222, protein_g: 7 } }, new Map([...i, oil(true)].map((x) => [x.slug, x]))).verified).toBe(false);
+    expect(verifyRecipe(withOil, new Map([...i, oil(false)].map((x) => [x.slug, x]))).reason).toMatch(/missing verified CoFID data for oil/);
+    const bad = validateContent([...i, oil(true)], [{ ...withOil, cupboard_g: { butter: 5, oil: 0 } }]).filter((x) => x.level === 'error').map((x) => x.message);
+    expect(bad).toContain('cupboard_g "butter" is not listed under cupboard');
+    expect(bad).toContain('cupboard_g for "oil" must be > 0');
   });
 });

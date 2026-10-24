@@ -1,7 +1,7 @@
 import { describe, expect, it } from 'vitest';
-import { RECIPES } from '@/data';
+import { PRODUCTS, RECIPES } from '@/data';
 import { safeRecipes } from '@/lib/allergens';
-import { generatePlan, planWeek, SCALE_MAX, SCALE_MIN } from '@/lib/planner/solve';
+import { dinnerMisfit, generatePlan, planWeek, RESERVE_SHARE, SCALE_MAX, SCALE_MIN } from '@/lib/planner/solve';
 import { buildShopping } from '@/lib/planner/shopping';
 import type { PlanInput } from '@/lib/planner/types';
 import { rng } from '@/lib/planner/rng';
@@ -16,6 +16,9 @@ const base = (over: Partial<PlanInput> = {}): PlanInput => ({
   allergies: [], dislikes: [], liked: likedAll(), ...over,
 });
 
+/** Highest daily target the recipe bank can land in band (measured with thousands of random profiles). */
+const BANK_CEILING = 4000;
+
 describe('planner: days never fail', () => {
   it('lands every day in band with the protein floor, across 200 random profiles', () => {
     const R = rng(42);
@@ -29,8 +32,8 @@ describe('planner: days never fail', () => {
       const T = computeTargets(input.goal, input.stats);
       const plan = generatePlan(input, i + 1);
       expect(plan.days).toHaveLength(5);
-      // The 31-recipe bank tops out around 2,500 kcal a day; above that days are flagged, never faked.
-      if (T.target > 2500) { expect(plan.days.every((d) => d.inBand) || plan.issues.length > 0).toBe(true); days += 5; continue; }
+      // The 100-recipe bank reaches about 4,000 kcal a day; beyond that days are flagged, never faked.
+      if (T.target > BANK_CEILING) { expect(plan.days.every((d) => d.inBand) || plan.issues.length > 0).toBe(true); days += 5; continue; }
       for (const d of plan.days) {
         days++; if (d.adjusted) adjusted++;
         expect(d.inBand, `${goal} ${JSON.stringify(input.stats)} ${d.day}: ${d.kcal}kcal ${d.protein}g`).toBe(true);
@@ -53,6 +56,34 @@ describe('planner: days never fail', () => {
 
   it('is deterministic for a seed', () => {
     expect(generatePlan(base(), 9)).toEqual(generatePlan(base(), 9));
+  });
+
+  // The profile that prompted the bigger bank: 30-year-old man, 79 kg, active, maintaining (about 2,700 kcal).
+  const MAN = { sex: 'm', age: 30, heightCm: 175, weightKg: 79, activity: 1.55 } as const;
+  it('lands every day of a 2,700 kcal week in band, with and without a common allergy', () => {
+    const T = computeTargets('maintain', MAN);
+    expect(T.target).toBe(2700);
+    for (const allergies of [[], ['gluten'], ['milk'], ['eggs'], ['soya'], ['nuts'], ['peanuts']] as const) {
+      for (const seed of [1, 2]) {
+        const plan = planWeek(base({ goal: 'maintain', stats: MAN, allergies, liked: likedAll(allergies) }), 6, seed);
+        expect(plan.days, `${allergies}`).toHaveLength(5);
+        for (const d of plan.days) expect(d.inBand, `${allergies} ${d.day}: ${d.kcal}kcal ${d.protein}g`).toBe(true);
+        expect(plan.issues).toEqual([]);
+      }
+    }
+  });
+
+  it('picks dinners that suit the calorie target, so a big dinner never lands on a small day (or the reverse)', () => {
+    for (const [goal, stats] of [['lose', { sex: 'f', age: 61, heightCm: 152, weightKg: 85, activity: 1.2 }], ['maintain', MAN], ['gain', { sex: 'm', age: 28, heightCm: 180, weightKg: 85, activity: 1.55 }]] as const) {
+      const input = base({ goal, stats });
+      const T = computeTargets(goal, stats);
+      const mid = (T.band[0] + T.band[1]) / 2;
+      const plan = generatePlan(input, 4);
+      for (const d of plan.days) {
+        const r = RECIPES.find((x) => x.id === d.meals.find((m) => m.slot === 'dinner')!.recipeId)!;
+        expect(dinnerMisfit(r, mid, T.protein, input.meals), `${goal} ${T.target}: ${r.n} (${r.k} kcal)`).toBe(0);
+      }
+    }
   });
 });
 
@@ -81,11 +112,15 @@ describe('planner: preferences', () => {
     }
   });
 
-  it('ranks disliked dinners last when there is a choice', () => {
-    const plan = generatePlan(base({ dislikes: ['Chicken'] }), 6);
+  it('ranks disliked dinners last among the dinners that suit the target', () => {
+    const input = base({ dislikes: ['Chicken'] });
+    const T = computeTargets(input.goal, input.stats);
+    const mid = (T.band[0] + T.band[1]) / 2;
+    const suits = RECIPES.filter((r) => r.c === 'dinner' && dinnerMisfit(r, mid, T.protein, input.meals) === 0);
+    const liked = (r: (typeof RECIPES)[number]) => !/chicken/i.test(r.n + ' ' + r.fresh.map(([k]) => PRODUCTS[k]?.n ?? k).join(' '));
+    const plan = generatePlan(input, 6);
     const dinners = plan.days.map((d) => RECIPES.find((r) => r.id === d.meals.find((m) => m.slot === 'dinner')!.recipeId)!);
-    const chickenless = RECIPES.filter((r) => r.c === 'dinner' && !/chicken/i.test(r.n)).length;
-    expect(dinners.filter((r) => /chicken/i.test(r.n)).length).toBe(Math.max(0, 5 - chickenless));
+    expect(dinners.filter((r) => !liked(r)).length).toBe(Math.max(0, 5 - suits.filter(liked).length));
   });
 
   it('reports a clear issue instead of crashing when nothing is available', () => {

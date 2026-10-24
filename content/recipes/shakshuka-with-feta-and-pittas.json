@@ -1,0 +1,54 @@
+{
+ "slug": "shakshuka-with-feta-and-pittas",
+ "name": "Shakshuka with Feta & Pittas",
+ "course": "dinner",
+ "emoji": "🍳",
+ "serves": 2,
+ "status": "live",
+ "per_portion": {
+  "kcal": 800,
+  "protein_g": 44,
+  "carbs_g": 93,
+  "fat_g": 31
+ },
+ "ingredients": [
+  {
+   "ingredient": "eggs",
+   "qty": 6
+  },
+  {
+   "ingredient": "ctoms",
+   "qty": 800
+  },
+  {
+   "ingredient": "pepper",
+   "qty": 2
+  },
+  {
+   "ingredient": "onions",
+   "qty": 1
+  },
+  {
+   "ingredient": "feta",
+   "qty": 100
+  },
+  {
+   "ingredient": "pittas",
+   "qty": 4
+  }
+ ],
+ "cupboard": [
+  "oil",
+  "cumin",
+  "paprika"
+ ],
+ "cupboard_g": {
+  "oil": 10
+ },
+ "method": [
+  "Soften the chopped onion and peppers in oil; add the cumin and smoked paprika, then the chopped tomatoes. Simmer for 12 minutes.",
+  "Make 6 wells, crack in the eggs, cover and cook for 6–8 minutes.",
+  "Crumble over the feta and serve with warm pittas."
+ ],
+ "source": "original"
+}

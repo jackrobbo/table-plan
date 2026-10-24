@@ -1,0 +1,64 @@
+{
+ "slug": "sweet-potato-and-bean-chilli",
+ "name": "Sweet Potato & Bean Chilli",
+ "course": "dinner",
+ "emoji": "🌶️",
+ "serves": 2,
+ "status": "live",
+ "per_portion": {
+  "kcal": 835,
+  "protein_g": 30,
+  "carbs_g": 143,
+  "fat_g": 20
+ },
+ "ingredients": [
+  {
+   "ingredient": "sweet-potatoes",
+   "qty": 500
+  },
+  {
+   "ingredient": "kidney",
+   "qty": 240
+  },
+  {
+   "ingredient": "ctoms",
+   "qty": 400
+  },
+  {
+   "ingredient": "onions",
+   "qty": 1
+  },
+  {
+   "ingredient": "pepper",
+   "qty": 2
+  },
+  {
+   "ingredient": "cheddar-block",
+   "qty": 40
+  },
+  {
+   "ingredient": "greek",
+   "qty": 100
+  },
+  {
+   "ingredient": "basmati",
+   "qty": 120
+  }
+ ],
+ "cupboard": [
+  "oil",
+  "puree",
+  "cumin",
+  "paprika"
+ ],
+ "cupboard_g": {
+  "oil": 10,
+  "puree": 15
+ },
+ "method": [
+  "Soften the chopped onion and peppers in oil, then add the cumin, smoked paprika and tomato puree.",
+  "Add the diced sweet potato, chopped tomatoes, kidney beans and 150 ml water. Simmer for 25 minutes.",
+  "Serve over the cooked rice with grated cheddar and Greek yogurt."
+ ],
+ "source": "original"
+}

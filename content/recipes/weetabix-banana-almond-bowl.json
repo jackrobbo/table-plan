@@ -1,0 +1,38 @@
+{
+ "slug": "weetabix-banana-almond-bowl",
+ "name": "Weetabix, Banana & Almond Bowl",
+ "course": "breakfast",
+ "emoji": "🍌",
+ "serves": 1,
+ "status": "live",
+ "per_portion": {
+  "kcal": 585,
+  "protein_g": 25,
+  "carbs_g": 95,
+  "fat_g": 15
+ },
+ "ingredients": [
+  {
+   "ingredient": "weetabix",
+   "qty": 4
+  },
+  {
+   "ingredient": "milk",
+   "qty": 350
+  },
+  {
+   "ingredient": "banana",
+   "qty": 1
+  },
+  {
+   "ingredient": "almonds",
+   "qty": 15
+  }
+ ],
+ "cupboard": [],
+ "method": [
+  "Crumble the Weetabix into a bowl and pour over the milk.",
+  "Top with sliced banana and roughly chopped almonds."
+ ],
+ "source": "original"
+}

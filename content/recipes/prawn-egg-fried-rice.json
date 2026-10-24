@@ -1,0 +1,55 @@
+{
+ "slug": "prawn-egg-fried-rice",
+ "name": "Prawn Egg Fried Rice",
+ "course": "dinner",
+ "emoji": "🍤",
+ "serves": 2,
+ "status": "live",
+ "per_portion": {
+  "kcal": 715,
+  "protein_g": 49,
+  "carbs_g": 94,
+  "fat_g": 18
+ },
+ "ingredients": [
+  {
+   "ingredient": "king-prawns",
+   "qty": 300
+  },
+  {
+   "ingredient": "eggs",
+   "qty": 4
+  },
+  {
+   "ingredient": "basmati",
+   "qty": 180
+  },
+  {
+   "ingredient": "peas",
+   "qty": 150
+  },
+  {
+   "ingredient": "carrots",
+   "qty": 100
+  },
+  {
+   "ingredient": "onions",
+   "qty": 1
+  }
+ ],
+ "cupboard": [
+  "oil",
+  "soy",
+  "garlic"
+ ],
+ "cupboard_g": {
+  "oil": 15,
+  "soy": 30
+ },
+ "method": [
+  "Cook the rice, spread it out on a tray and let it cool.",
+  "Scramble the eggs in oil in a wok and set aside. Stir-fry the onion, grated carrot and peas for 3 minutes.",
+  "Add the rice, soy sauce and prawns, toss until hot, then stir the egg back in."
+ ],
+ "source": "original"
+}

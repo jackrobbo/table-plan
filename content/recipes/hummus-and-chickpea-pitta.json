@@ -1,0 +1,42 @@
+{
+ "slug": "hummus-and-chickpea-pitta",
+ "name": "Houmous & Chickpea Pitta",
+ "course": "lunch",
+ "emoji": "🥙",
+ "serves": 1,
+ "status": "live",
+ "per_portion": {
+  "kcal": 635,
+  "protein_g": 25,
+  "carbs_g": 92,
+  "fat_g": 21
+ },
+ "ingredients": [
+  {
+   "ingredient": "pittas",
+   "qty": 2
+  },
+  {
+   "ingredient": "houm",
+   "qty": 60
+  },
+  {
+   "ingredient": "chickpeas",
+   "qty": 100
+  },
+  {
+   "ingredient": "cuc",
+   "qty": 0.25
+  },
+  {
+   "ingredient": "salad",
+   "qty": 40
+  }
+ ],
+ "cupboard": [],
+ "method": [
+  "Warm the pittas and split them open.",
+  "Spread with houmous, then add the chickpeas, sliced cucumber and salad leaves."
+ ],
+ "source": "original"
+}

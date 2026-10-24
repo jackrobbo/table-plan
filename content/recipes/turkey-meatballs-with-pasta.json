@@ -1,0 +1,58 @@
+{
+ "slug": "turkey-meatballs-with-pasta",
+ "name": "Turkey Meatballs with Pasta",
+ "course": "dinner",
+ "emoji": "🍝",
+ "serves": 2,
+ "status": "live",
+ "per_portion": {
+  "kcal": 835,
+  "protein_g": 79,
+  "carbs_g": 93,
+  "fat_g": 19
+ },
+ "ingredients": [
+  {
+   "ingredient": "turkey-mince",
+   "qty": 500
+  },
+  {
+   "ingredient": "eggs",
+   "qty": 1
+  },
+  {
+   "ingredient": "oats",
+   "qty": 30
+  },
+  {
+   "ingredient": "penne",
+   "qty": 180
+  },
+  {
+   "ingredient": "passata",
+   "qty": 500
+  },
+  {
+   "ingredient": "onions",
+   "qty": 1
+  },
+  {
+   "ingredient": "cheddar-block",
+   "qty": 30
+  }
+ ],
+ "cupboard": [
+  "oil",
+  "herbs",
+  "garlic"
+ ],
+ "cupboard_g": {
+  "oil": 10
+ },
+ "method": [
+  "Mix the turkey mince with the egg, oats, herbs and seasoning and roll into 14 small meatballs.",
+  "Brown the meatballs in oil, then add the chopped onion and passata and simmer for 15 minutes until the meatballs are cooked through.",
+  "Cook the penne, toss with the sauce and top with grated cheddar."
+ ],
+ "source": "original"
+}

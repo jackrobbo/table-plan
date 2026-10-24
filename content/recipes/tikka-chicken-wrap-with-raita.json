@@ -1,0 +1,50 @@
+{
+ "slug": "tikka-chicken-wrap-with-raita",
+ "name": "Tikka Chicken Wrap with Raita",
+ "course": "lunch",
+ "emoji": "🌯",
+ "serves": 1,
+ "status": "live",
+ "per_portion": {
+  "kcal": 655,
+  "protein_g": 50,
+  "carbs_g": 71,
+  "fat_g": 21
+ },
+ "ingredients": [
+  {
+   "ingredient": "breast",
+   "qty": 150
+  },
+  {
+   "ingredient": "wraps",
+   "qty": 2
+  },
+  {
+   "ingredient": "greek",
+   "qty": 60
+  },
+  {
+   "ingredient": "cuc",
+   "qty": 0.25
+  },
+  {
+   "ingredient": "salad",
+   "qty": 30
+  }
+ ],
+ "cupboard": [
+  "curry-powder",
+  "oil"
+ ],
+ "cupboard_g": {
+  "curry-powder": 4,
+  "oil": 5
+ },
+ "method": [
+  "Toss the chicken strips in the curry powder and a little oil; fry until cooked and charred in places.",
+  "Stir the grated cucumber into the Greek yogurt for a quick raita.",
+  "Warm the wraps, fill with chicken, raita and salad, and roll up."
+ ],
+ "source": "original"
+}

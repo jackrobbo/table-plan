@@ -1,0 +1,57 @@
+{
+ "slug": "chicken-and-chorizo-rice",
+ "name": "Chicken & Chorizo One-Pot Rice",
+ "course": "dinner",
+ "emoji": "🍚",
+ "serves": 2,
+ "status": "live",
+ "per_portion": {
+  "kcal": 790,
+  "protein_g": 63,
+  "carbs_g": 84,
+  "fat_g": 25
+ },
+ "ingredients": [
+  {
+   "ingredient": "thigh",
+   "qty": 400
+  },
+  {
+   "ingredient": "chorizo",
+   "qty": 80
+  },
+  {
+   "ingredient": "basmati",
+   "qty": 150
+  },
+  {
+   "ingredient": "pepper",
+   "qty": 2
+  },
+  {
+   "ingredient": "onions",
+   "qty": 1
+  },
+  {
+   "ingredient": "ctoms",
+   "qty": 200
+  },
+  {
+   "ingredient": "peas",
+   "qty": 100
+  }
+ ],
+ "cupboard": [
+  "oil",
+  "paprika"
+ ],
+ "cupboard_g": {
+  "oil": 10
+ },
+ "method": [
+  "Brown the chicken pieces and diced chorizo in oil in a wide pan, then add the chopped onion and peppers.",
+  "Stir in the rice and smoked paprika, add the tomatoes and 450 ml water, cover and cook for 15 minutes.",
+  "Stir through the peas and leave to steam for 5 minutes."
+ ],
+ "source": "original"
+}

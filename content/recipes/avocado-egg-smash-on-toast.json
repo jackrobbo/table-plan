@@ -1,0 +1,37 @@
+{
+ "slug": "avocado-egg-smash-on-toast",
+ "name": "Avocado & Egg Smash on Toast",
+ "course": "breakfast",
+ "emoji": "🥑",
+ "serves": 1,
+ "status": "live",
+ "per_portion": {
+  "kcal": 590,
+  "protein_g": 29,
+  "carbs_g": 45,
+  "fat_g": 34
+ },
+ "ingredients": [
+  {
+   "ingredient": "loaf",
+   "qty": 2
+  },
+  {
+   "ingredient": "avocado",
+   "qty": 1
+  },
+  {
+   "ingredient": "eggs",
+   "qty": 3
+  }
+ ],
+ "cupboard": [
+  "chilli-flakes"
+ ],
+ "method": [
+  "Boil the eggs for 7 minutes, cool briefly under cold water and peel.",
+  "Toast the bread. Mash the avocado with black pepper and a pinch of chilli flakes and spread it on top.",
+  "Slice the eggs over the avocado."
+ ],
+ "source": "original"
+}

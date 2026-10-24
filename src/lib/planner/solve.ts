@@ -11,11 +11,18 @@ export const SCALE_MAX = 1.4;
 /** Share of the daily band held for a "macros only" meal. */
 export const RESERVE_SHARE = { breakfast: 0.25, lunch: 0.3, dinner: 0.35 } as const;
 
+/** Share of the day's band left for snacks when sizing a dinner. */
+const SNACK_SHARE = 0.1;
+/** Resizes closer to 1 than this are treated as "as written", so `scale !== 1` always means the day is flagged as adjusted. */
+const SCALE_NOISE = 0.02;
+
 const DISLIKE_WEIGHT = 120;   // kcal-equivalents per disliked ingredient/name match
 const REPEAT_WEIGHT = 40;
 const RESIZE_WEIGHT = 220;    // prefer unadjusted portions
 const SHARE_BONUS = 25;       // reuse of a product already bought this week
 const TRIALS = 400;
+/** Extra random combinations tried only for a day where the first TRIALS found nothing in band (tight calorie + protein targets). */
+const EXTRA_TRIALS = 2000;
 /** Top-up combinations tried per candidate day: none, any one, any two. */
 const TOPUP_SETS: Topup[][] = [[], ...TOPUPS.map((t) => [t]), ...TOPUPS.flatMap((a, i) => TOPUPS.slice(i + 1).map((b) => [a, b]))];
 
@@ -25,6 +32,25 @@ function dislikeHits(r: Recipe, dislikes: readonly string[]): number {
   if (!dislikes.length) return 0;
   const text = (r.n + ' ' + r.fresh.map(([k]) => PRODUCTS[k]?.n ?? k).join(' ')).toLowerCase();
   return dislikes.filter((d) => text.includes(d.toLowerCase().replace(/s$/, ''))).length;
+}
+
+/** A dinner should carry at least this share of the protein-per-calorie density the day needs. */
+const PROTEIN_FIT = 0.75;
+
+/**
+ * Dinners are picked for the whole week before each day is fitted around them, so they have to suit the target. 0 means
+ * the dinner can be resized (SCALE_MIN–SCALE_MAX) to its share of the day's calories and is protein-dense enough to help
+ * reach the floor; larger is a worse fit (log-distance). `mid` and `needP` are the band middle and protein floor after
+ * macros-only meals are set aside.
+ */
+export function dinnerMisfit(r: Pick<Recipe, 'k' | 'p'>, mid: number, needP: number, meals: PlanInput['meals']): number {
+  const planned = (['breakfast', 'lunch', 'dinner'] as const).filter((c) => meals[c].mode === 'plan');
+  const share = planned.reduce((a, c) => a + RESERVE_SHARE[c], 0) + SNACK_SHARE;
+  const ideal = (mid * RESERVE_SHARE.dinner) / share;
+  const lo = ideal / SCALE_MAX, hi = ideal / SCALE_MIN;
+  const kcal = r.k < lo ? Math.log(lo / r.k) : r.k > hi ? Math.log(r.k / hi) : 0;
+  const protein = Math.max(0, Math.log((PROTEIN_FIT * needP) / mid / Math.max(r.p, 1) * r.k));
+  return Math.max(kcal, protein);
 }
 
 interface Pools { breakfast: Recipe[]; lunch: Recipe[]; dinner: Recipe[]; snack: Recipe[] }
@@ -56,7 +82,9 @@ export function generatePlan(input: PlanInput, seed = 1): Plan {
 
   const dinners: Recipe[] = [];
   if (input.meals.dinner.mode === 'plan') {
-    const order = R.shuffle(P.dinner).sort((a, b) => dislikeHits(a, input.dislikes) - dislikeHits(b, input.dislikes));
+    const misfit = (r: Recipe) => dinnerMisfit(r, mid, needP, input.meals);
+    // Dinners that suit the target come first (random order among them), then those closest to it; disliked ones last within a tier.
+    const order = R.shuffle(P.dinner).sort((a, b) => misfit(a) - misfit(b) || dislikeHits(a, input.dislikes) - dislikeHits(b, input.dislikes));
     for (let i = 0; i < DAY_NAMES.length; i++) dinners.push(order[i % order.length]);
   }
 
@@ -69,7 +97,7 @@ export function generatePlan(input: PlanInput, seed = 1): Plan {
     let best: { day: PlannedDay; score: number } | null = null;
     let closest: { day: PlannedDay; miss: number } | null = null;
 
-    for (let t = 0; t < TRIALS; t++) {
+    for (let t = 0; t < TRIALS || (!best && t < TRIALS + EXTRA_TRIALS); t++) {
       const b = P.breakfast.length ? R.pick(P.breakfast) : null;
       const l = P.lunch.length ? R.pick(P.lunch) : null;
       // Snacks auto-fill: usually one, more when the day needs the calories.
@@ -81,9 +109,10 @@ export function generatePlan(input: PlanInput, seed = 1): Plan {
 
       // Resize cooked meals toward the middle of the band, within limits.
       const scale = flexK ? Math.min(SCALE_MAX, Math.max(SCALE_MIN, (mid - fixedK) / flexK)) : 1;
+      const scales = flexK && Math.abs(scale - 1) > SCALE_NOISE ? [1, scale] : [1];
       for (const tu of TOPUP_SETS) {
         const tuK = tu.reduce((a, x) => a + x.k, 0), tuP = tu.reduce((a, x) => a + x.p, 0);
-        for (const sc of flexK ? [1, scale] : [1]) {
+        for (const sc of scales) {
           const K = fixedK + sc * flexK + tuK;
           const Pn = fixedP + sc * flexP + tuP;
           const miss = Math.max(0, lo - K) + Math.max(0, K - hi) + Math.max(0, needP - Pn) * 8;
@@ -109,7 +138,7 @@ export function generatePlan(input: PlanInput, seed = 1): Plan {
           const day: PlannedDay = {
             day: DAY_NAMES[d], meals, topups: tu, kcal: Math.round(K + reserveK), protein: Math.round(Pn + reserveP),
             reserved: { kcal: Math.round(reserveK), protein: Math.round(reserveP) },
-            inBand, adjusted: Math.abs(sc - 1) > 0.02 || tu.length > 0,
+            inBand, adjusted: sc !== 1 || tu.length > 0,
           };
           if (inBand) best = { day, score }; else closest = { day, miss };
         }

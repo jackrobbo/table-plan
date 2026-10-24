@@ -1,0 +1,54 @@
+{
+ "slug": "prawn-and-chorizo-pasta",
+ "name": "Prawn & Chorizo Pasta",
+ "course": "dinner",
+ "emoji": "🍤",
+ "serves": 2,
+ "status": "live",
+ "per_portion": {
+  "kcal": 700,
+  "protein_g": 48,
+  "carbs_g": 87,
+  "fat_g": 21
+ },
+ "ingredients": [
+  {
+   "ingredient": "king-prawns",
+   "qty": 300
+  },
+  {
+   "ingredient": "chorizo",
+   "qty": 80
+  },
+  {
+   "ingredient": "penne",
+   "qty": 200
+  },
+  {
+   "ingredient": "passata",
+   "qty": 300
+  },
+  {
+   "ingredient": "spinach",
+   "qty": 80
+  },
+  {
+   "ingredient": "onions",
+   "qty": 1
+  }
+ ],
+ "cupboard": [
+  "oil",
+  "garlic",
+  "chilli-flakes"
+ ],
+ "cupboard_g": {
+  "oil": 10
+ },
+ "method": [
+  "Cook the penne. Meanwhile fry the diced chorizo with the chopped onion in oil until the oil turns red.",
+  "Add garlic and chilli flakes, pour in the passata and simmer for 10 minutes.",
+  "Stir in the prawns and spinach until heated through and wilted, then toss with the pasta."
+ ],
+ "source": "original"
+}

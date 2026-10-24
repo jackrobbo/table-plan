@@ -1,0 +1,52 @@
+{
+ "slug": "full-english-plate",
+ "name": "Full English Plate",
+ "course": "breakfast",
+ "emoji": "🍳",
+ "serves": 1,
+ "status": "live",
+ "per_portion": {
+  "kcal": 850,
+  "protein_g": 68,
+  "carbs_g": 77,
+  "fat_g": 32
+ },
+ "ingredients": [
+  {
+   "ingredient": "pork-sausages",
+   "qty": 3
+  },
+  {
+   "ingredient": "bacon",
+   "qty": 3
+  },
+  {
+   "ingredient": "eggs",
+   "qty": 2
+  },
+  {
+   "ingredient": "baked-beans",
+   "qty": 130
+  },
+  {
+   "ingredient": "mushrooms",
+   "qty": 60
+  },
+  {
+   "ingredient": "loaf",
+   "qty": 2
+  }
+ ],
+ "cupboard": [
+  "oil"
+ ],
+ "cupboard_g": {
+  "oil": 5
+ },
+ "method": [
+  "Oven-bake the sausages at 190°C for 25 minutes, adding the bacon for the last 10 and turning once, until the sausages are cooked through.",
+  "Fry the mushrooms in a little oil for 4 minutes, then fry the eggs in the same pan.",
+  "Warm the beans, toast the bread and plate everything up."
+ ],
+ "source": "original"
+}

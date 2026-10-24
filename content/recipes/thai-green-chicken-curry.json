@@ -1,0 +1,54 @@
+{
+ "slug": "thai-green-chicken-curry",
+ "name": "Thai Green Chicken Curry",
+ "course": "dinner",
+ "emoji": "🍛",
+ "serves": 2,
+ "status": "live",
+ "per_portion": {
+  "kcal": 790,
+  "protein_g": 60,
+  "carbs_g": 84,
+  "fat_g": 26
+ },
+ "ingredients": [
+  {
+   "ingredient": "breast",
+   "qty": 400
+  },
+  {
+   "ingredient": "coconut-milk",
+   "qty": 400
+  },
+  {
+   "ingredient": "basmati",
+   "qty": 160
+  },
+  {
+   "ingredient": "green-beans",
+   "qty": 150
+  },
+  {
+   "ingredient": "pepper",
+   "qty": 1
+  },
+  {
+   "ingredient": "onions",
+   "qty": 1
+  }
+ ],
+ "cupboard": [
+  "oil",
+  "green-curry-paste"
+ ],
+ "cupboard_g": {
+  "oil": 5,
+  "green-curry-paste": 50
+ },
+ "method": [
+  "Fry the green curry paste and sliced onion in oil for 2 minutes, add the sliced chicken and cook until sealed.",
+  "Pour in the coconut milk with 100 ml water, add the sliced pepper and beans and simmer for 12 minutes.",
+  "Serve over the cooked basmati rice."
+ ],
+ "source": "original"
+}

@@ -1,0 +1,33 @@
+{
+ "slug": "chicken-and-cucumber-roll-ups",
+ "name": "Chicken & Cucumber Roll-ups",
+ "course": "snack",
+ "emoji": "🌯",
+ "serves": 1,
+ "status": "live",
+ "per_portion": {
+  "kcal": 130,
+  "protein_g": 24,
+  "carbs_g": 4,
+  "fat_g": 2
+ },
+ "ingredients": [
+  {
+   "ingredient": "roast",
+   "qty": 100
+  },
+  {
+   "ingredient": "cuc",
+   "qty": 0.33
+  },
+  {
+   "ingredient": "salad",
+   "qty": 20
+  }
+ ],
+ "cupboard": [],
+ "method": [
+  "Roll the chicken slices around cucumber sticks and salad leaves."
+ ],
+ "source": "original"
+}

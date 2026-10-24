@@ -1,0 +1,54 @@
+{
+ "slug": "halloumi-and-veg-traybake-with-couscous",
+ "name": "Halloumi & Veg Traybake with Couscous",
+ "course": "dinner",
+ "emoji": "🍆",
+ "serves": 2,
+ "status": "live",
+ "per_portion": {
+  "kcal": 725,
+  "protein_g": 37,
+  "carbs_g": 79,
+  "fat_g": 31
+ },
+ "ingredients": [
+  {
+   "ingredient": "halloumi",
+   "qty": 200
+  },
+  {
+   "ingredient": "couscous",
+   "qty": 140
+  },
+  {
+   "ingredient": "courgettes",
+   "qty": 300
+  },
+  {
+   "ingredient": "pepper",
+   "qty": 2
+  },
+  {
+   "ingredient": "onions",
+   "qty": 1
+  },
+  {
+   "ingredient": "plum",
+   "qty": 250
+  }
+ ],
+ "cupboard": [
+  "oil",
+  "honey"
+ ],
+ "cupboard_g": {
+  "oil": 10,
+  "honey": 7
+ },
+ "method": [
+  "Tray-roast the chopped courgette, peppers, onion and tomatoes with the oil and honey at 210°C for 20 minutes.",
+  "Add slices of halloumi to the tray and roast for 10 minutes more until golden.",
+  "Soak the couscous in boiling water for 5 minutes, fluff up and serve with the traybake."
+ ],
+ "source": "original"
+}

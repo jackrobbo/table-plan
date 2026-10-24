@@ -1,0 +1,39 @@
+{
+ "slug": "double-bacon-and-egg-rolls",
+ "name": "Double Bacon & Egg Rolls",
+ "course": "breakfast",
+ "emoji": "🥪",
+ "serves": 1,
+ "status": "live",
+ "per_portion": {
+  "kcal": 660,
+  "protein_g": 45,
+  "carbs_g": 62,
+  "fat_g": 28
+ },
+ "ingredients": [
+  {
+   "ingredient": "rolls",
+   "qty": 2
+  },
+  {
+   "ingredient": "bacon",
+   "qty": 4
+  },
+  {
+   "ingredient": "eggs",
+   "qty": 2
+  }
+ ],
+ "cupboard": [
+  "butter"
+ ],
+ "cupboard_g": {
+  "butter": 10
+ },
+ "method": [
+  "Grill the bacon until crisp. Fry the eggs in the butter.",
+  "Split the rolls and fill with the bacon and eggs."
+ ],
+ "source": "original"
+}

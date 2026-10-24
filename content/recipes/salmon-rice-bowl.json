@@ -1,0 +1,43 @@
+{
+ "slug": "salmon-rice-bowl",
+ "name": "Salmon Rice Bowl",
+ "course": "lunch",
+ "emoji": "🍣",
+ "serves": 1,
+ "status": "live",
+ "per_portion": {
+  "kcal": 735,
+  "protein_g": 37,
+  "carbs_g": 69,
+  "fat_g": 36
+ },
+ "ingredients": [
+  {
+   "ingredient": "salmon",
+   "qty": 140
+  },
+  {
+   "ingredient": "basmati",
+   "qty": 80
+  },
+  {
+   "ingredient": "avocado",
+   "qty": 0.5
+  },
+  {
+   "ingredient": "cuc",
+   "qty": 0.25
+  }
+ ],
+ "cupboard": [
+  "oil"
+ ],
+ "cupboard_g": {
+  "oil": 5
+ },
+ "method": [
+  "Cook the rice. Rub the salmon with the oil and black pepper and bake at 200°C for 12 minutes.",
+  "Flake the salmon over the rice and add sliced avocado and cucumber."
+ ],
+ "source": "original"
+}

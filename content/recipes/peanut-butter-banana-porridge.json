@@ -1,0 +1,38 @@
+{
+ "slug": "peanut-butter-banana-porridge",
+ "name": "Peanut Butter Banana Porridge",
+ "course": "breakfast",
+ "emoji": "🥜",
+ "serves": 1,
+ "status": "live",
+ "per_portion": {
+  "kcal": 660,
+  "protein_g": 24,
+  "carbs_g": 94,
+  "fat_g": 24
+ },
+ "ingredients": [
+  {
+   "ingredient": "oats",
+   "qty": 80
+  },
+  {
+   "ingredient": "milk",
+   "qty": 250
+  },
+  {
+   "ingredient": "banana",
+   "qty": 1
+  },
+  {
+   "ingredient": "peanut-butter",
+   "qty": 25
+  }
+ ],
+ "cupboard": [],
+ "method": [
+  "Simmer the oats in the milk for 4–5 minutes, stirring, until thick and creamy.",
+  "Stir in half the peanut butter, then top with sliced banana and the rest of the peanut butter."
+ ],
+ "source": "original"
+}

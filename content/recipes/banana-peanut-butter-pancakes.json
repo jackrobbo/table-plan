@@ -1,0 +1,46 @@
+{
+ "slug": "banana-peanut-butter-pancakes",
+ "name": "Banana Peanut Butter Pancakes",
+ "course": "breakfast",
+ "emoji": "🥞",
+ "serves": 1,
+ "status": "live",
+ "per_portion": {
+  "kcal": 705,
+  "protein_g": 32,
+  "carbs_g": 60,
+  "fat_g": 39
+ },
+ "ingredients": [
+  {
+   "ingredient": "banana",
+   "qty": 2
+  },
+  {
+   "ingredient": "eggs",
+   "qty": 3
+  },
+  {
+   "ingredient": "peanut-butter",
+   "qty": 20
+  },
+  {
+   "ingredient": "greek",
+   "qty": 100
+  }
+ ],
+ "cupboard": [
+  "honey",
+  "oil"
+ ],
+ "cupboard_g": {
+  "honey": 10,
+  "oil": 5
+ },
+ "method": [
+  "Mash the bananas well, then whisk in the eggs and half the peanut butter to make a smooth batter.",
+  "Cook spoonfuls in a lightly oiled non-stick pan, 2 minutes each side.",
+  "Stack with the Greek yogurt, then drizzle over the rest of the peanut butter (warmed to loosen) and the honey."
+ ],
+ "source": "original"
+}

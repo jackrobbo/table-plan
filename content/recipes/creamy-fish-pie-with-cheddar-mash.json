@@ -1,0 +1,54 @@
+{
+ "slug": "creamy-fish-pie-with-cheddar-mash",
+ "name": "Creamy Fish Pie with Cheddar Mash",
+ "course": "dinner",
+ "emoji": "🐟",
+ "serves": 2,
+ "status": "live",
+ "per_portion": {
+  "kcal": 910,
+  "protein_g": 84,
+  "carbs_g": 95,
+  "fat_g": 25
+ },
+ "ingredients": [
+  {
+   "ingredient": "cod",
+   "qty": 480
+  },
+  {
+   "ingredient": "king-prawns",
+   "qty": 200
+  },
+  {
+   "ingredient": "milk",
+   "qty": 400
+  },
+  {
+   "ingredient": "baking-potatoes",
+   "qty": 700
+  },
+  {
+   "ingredient": "cheddar-block",
+   "qty": 60
+  },
+  {
+   "ingredient": "peas",
+   "qty": 150
+  }
+ ],
+ "cupboard": [
+  "butter",
+  "cornflour"
+ ],
+ "cupboard_g": {
+  "butter": 20,
+  "cornflour": 20
+ },
+ "method": [
+  "Boil the potatoes until soft and mash with half the cheddar and a splash of the milk.",
+  "Poach the cod in the rest of the milk for 5 minutes, lift out and flake. Whisk the cornflour and butter into the milk to thicken it into a sauce.",
+  "Stir the prawns, peas and flaked cod into the sauce, spoon into a dish, top with the mash and remaining cheddar and bake at 200°C for 20 minutes."
+ ],
+ "source": "original"
+}

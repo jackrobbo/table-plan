@@ -275,5 +275,251 @@
   "checked_at": "2026-10-24T13:06:27.518Z",
   "last_ok_at": "2026-10-24T13:06:27.518Z",
   "status": "ok"
+ },
+ "turkey-mince": {
+  "price_pence": 450,
+  "checked_at": "2026-10-24T16:04:09.823Z",
+  "last_ok_at": "2026-10-24T16:04:09.823Z",
+  "status": "ok"
+ },
+ "pork-sausages": {
+  "price_pence": 179,
+  "checked_at": "2026-10-24T16:04:09.823Z",
+  "last_ok_at": "2026-10-24T16:04:09.823Z",
+  "status": "ok"
+ },
+ "chorizo": {
+  "price_pence": 375,
+  "checked_at": "2026-10-24T16:04:09.823Z",
+  "last_ok_at": "2026-10-24T16:04:09.823Z",
+  "status": "ok"
+ },
+ "pork-loin": {
+  "price_pence": 300,
+  "checked_at": "2026-10-24T16:04:09.823Z",
+  "last_ok_at": "2026-10-24T16:04:09.823Z",
+  "status": "ok"
+ },
+ "salmon": {
+  "price_pence": 415,
+  "checked_at": "2026-10-24T16:04:09.823Z",
+  "last_ok_at": "2026-10-24T16:04:09.823Z",
+  "status": "ok"
+ },
+ "cod": {
+  "price_pence": 650,
+  "checked_at": "2026-10-24T16:04:09.823Z",
+  "last_ok_at": "2026-10-24T16:04:09.823Z",
+  "status": "ok"
+ },
+ "smoked-salmon": {
+  "price_pence": 450,
+  "checked_at": "2026-10-24T16:04:09.823Z",
+  "last_ok_at": "2026-10-24T16:04:09.823Z",
+  "status": "ok"
+ },
+ "tuna-tin": {
+  "price_pence": 80,
+  "checked_at": "2026-10-24T16:04:09.823Z",
+  "last_ok_at": "2026-10-24T16:04:09.823Z",
+  "status": "ok"
+ },
+ "lamb-mince": {
+  "price_pence": 550,
+  "checked_at": "2026-10-24T16:04:09.823Z",
+  "last_ok_at": "2026-10-24T16:04:09.823Z",
+  "status": "ok"
+ },
+ "king-prawns": {
+  "price_pence": 475,
+  "checked_at": "2026-10-24T16:04:09.823Z",
+  "last_ok_at": "2026-10-24T16:04:09.823Z",
+  "status": "ok"
+ },
+ "halloumi": {
+  "price_pence": 177,
+  "checked_at": "2026-10-24T16:04:09.823Z",
+  "last_ok_at": "2026-10-24T16:04:09.823Z",
+  "status": "ok"
+ },
+ "feta": {
+  "price_pence": 225,
+  "checked_at": "2026-10-24T16:04:09.823Z",
+  "last_ok_at": "2026-10-24T16:04:09.823Z",
+  "status": "ok"
+ },
+ "cheddar-block": {
+  "price_pence": 295,
+  "checked_at": "2026-10-24T16:04:09.823Z",
+  "last_ok_at": "2026-10-24T16:04:09.823Z",
+  "status": "ok"
+ },
+ "cottage-cheese": {
+  "price_pence": 165,
+  "checked_at": "2026-10-24T16:04:09.823Z",
+  "last_ok_at": "2026-10-24T16:04:09.823Z",
+  "status": "ok"
+ },
+ "quark": {
+  "price_pence": 130,
+  "checked_at": "2026-10-24T16:04:09.823Z",
+  "last_ok_at": "2026-10-24T16:04:09.823Z",
+  "status": "ok"
+ },
+ "oats": {
+  "price_pence": 135,
+  "checked_at": "2026-10-24T16:04:09.823Z",
+  "last_ok_at": "2026-10-24T16:04:09.823Z",
+  "status": "ok"
+ },
+ "basmati": {
+  "price_pence": 179,
+  "checked_at": "2026-10-24T16:04:09.823Z",
+  "last_ok_at": "2026-10-24T16:04:09.823Z",
+  "status": "ok"
+ },
+ "penne": {
+  "price_pence": 69,
+  "checked_at": "2026-10-24T16:04:09.823Z",
+  "last_ok_at": "2026-10-24T16:04:09.823Z",
+  "status": "ok"
+ },
+ "couscous": {
+  "price_pence": 130,
+  "checked_at": "2026-10-24T16:04:09.823Z",
+  "last_ok_at": "2026-10-24T16:04:09.823Z",
+  "status": "ok"
+ },
+ "baking-potatoes": {
+  "price_pence": 185,
+  "checked_at": "2026-10-24T16:04:09.823Z",
+  "last_ok_at": "2026-10-24T16:04:09.823Z",
+  "status": "ok"
+ },
+ "sweet-potatoes": {
+  "price_pence": 119,
+  "checked_at": "2026-10-24T16:04:09.823Z",
+  "last_ok_at": "2026-10-24T16:04:09.823Z",
+  "status": "ok"
+ },
+ "bagels": {
+  "price_pence": 99,
+  "checked_at": "2026-10-24T16:04:09.823Z",
+  "last_ok_at": "2026-10-24T16:04:09.823Z",
+  "status": "ok"
+ },
+ "rolls": {
+  "price_pence": 49,
+  "checked_at": "2026-10-24T16:04:09.823Z",
+  "last_ok_at": "2026-10-24T16:04:09.823Z",
+  "status": "ok"
+ },
+ "weetabix": {
+  "price_pence": 350,
+  "checked_at": "2026-10-24T16:04:09.823Z",
+  "last_ok_at": "2026-10-24T16:04:09.823Z",
+  "status": "ok"
+ },
+ "oatcakes": {
+  "price_pence": 125,
+  "checked_at": "2026-10-24T16:04:09.823Z",
+  "last_ok_at": "2026-10-24T16:04:09.823Z",
+  "status": "ok"
+ },
+ "egg-noodles": {
+  "price_pence": 95,
+  "checked_at": "2026-10-24T16:04:09.823Z",
+  "last_ok_at": "2026-10-24T16:04:09.823Z",
+  "status": "ok"
+ },
+ "baby-potatoes": {
+  "price_pence": 99,
+  "checked_at": "2026-10-24T16:04:09.823Z",
+  "last_ok_at": "2026-10-24T16:04:09.823Z",
+  "status": "ok"
+ },
+ "mushrooms": {
+  "price_pence": 150,
+  "checked_at": "2026-10-24T16:04:09.823Z",
+  "last_ok_at": "2026-10-24T16:04:09.823Z",
+  "status": "ok"
+ },
+ "courgettes": {
+  "price_pence": 139,
+  "checked_at": "2026-10-24T16:04:09.823Z",
+  "last_ok_at": "2026-10-24T16:04:09.823Z",
+  "status": "ok"
+ },
+ "avocado": {
+  "price_pence": 150,
+  "checked_at": "2026-10-24T16:04:09.823Z",
+  "last_ok_at": "2026-10-24T16:04:09.823Z",
+  "status": "ok"
+ },
+ "green-beans": {
+  "price_pence": 77,
+  "checked_at": "2026-10-24T16:04:09.823Z",
+  "last_ok_at": "2026-10-24T16:04:09.823Z",
+  "status": "ok"
+ },
+ "peas": {
+  "price_pence": 165,
+  "checked_at": "2026-10-24T16:04:09.823Z",
+  "last_ok_at": "2026-10-24T16:04:09.823Z",
+  "status": "ok"
+ },
+ "baked-beans": {
+  "price_pence": 37,
+  "checked_at": "2026-10-24T16:04:09.823Z",
+  "last_ok_at": "2026-10-24T16:04:09.823Z",
+  "status": "ok"
+ },
+ "chickpeas": {
+  "price_pence": 37,
+  "checked_at": "2026-10-24T16:04:09.823Z",
+  "last_ok_at": "2026-10-24T16:04:09.823Z",
+  "status": "ok"
+ },
+ "red-lentils": {
+  "price_pence": 210,
+  "checked_at": "2026-10-24T16:04:09.823Z",
+  "last_ok_at": "2026-10-24T16:04:09.823Z",
+  "status": "ok"
+ },
+ "coconut-milk": {
+  "price_pence": 125,
+  "checked_at": "2026-10-24T16:04:09.823Z",
+  "last_ok_at": "2026-10-24T16:04:09.823Z",
+  "status": "ok"
+ },
+ "passata": {
+  "price_pence": 45,
+  "checked_at": "2026-10-24T16:04:09.823Z",
+  "last_ok_at": "2026-10-24T16:04:09.823Z",
+  "status": "ok"
+ },
+ "peanut-butter": {
+  "price_pence": 180,
+  "checked_at": "2026-10-24T16:04:09.823Z",
+  "last_ok_at": "2026-10-24T16:04:09.823Z",
+  "status": "ok"
+ },
+ "almonds": {
+  "price_pence": 233,
+  "checked_at": "2026-10-24T16:04:09.823Z",
+  "last_ok_at": "2026-10-24T16:04:09.823Z",
+  "status": "ok"
+ },
+ "raisins": {
+  "price_pence": 230,
+  "checked_at": "2026-10-24T16:04:09.823Z",
+  "last_ok_at": "2026-10-24T16:04:09.823Z",
+  "status": "ok"
+ },
+ "pesto": {
+  "price_pence": 89,
+  "checked_at": "2026-10-24T16:04:09.823Z",
+  "last_ok_at": "2026-10-24T16:04:09.823Z",
+  "status": "ok"
  }
 }

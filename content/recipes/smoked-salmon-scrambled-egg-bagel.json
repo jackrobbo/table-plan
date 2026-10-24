@@ -1,0 +1,43 @@
+{
+ "slug": "smoked-salmon-scrambled-egg-bagel",
+ "name": "Smoked Salmon & Scrambled Egg Bagel",
+ "course": "breakfast",
+ "emoji": "🥯",
+ "serves": 1,
+ "status": "live",
+ "per_portion": {
+  "kcal": 570,
+  "protein_g": 40,
+  "carbs_g": 51,
+  "fat_g": 25
+ },
+ "ingredients": [
+  {
+   "ingredient": "bagels",
+   "qty": 1
+  },
+  {
+   "ingredient": "eggs",
+   "qty": 3
+  },
+  {
+   "ingredient": "smoked-salmon",
+   "qty": 50
+  },
+  {
+   "ingredient": "milk",
+   "qty": 30
+  }
+ ],
+ "cupboard": [
+  "butter"
+ ],
+ "cupboard_g": {
+  "butter": 5
+ },
+ "method": [
+  "Whisk the eggs with the milk. Scramble gently in a small pan with the butter over a low heat until just set.",
+  "Split and toast the bagel, pile on the eggs and drape over the smoked salmon."
+ ],
+ "source": "original"
+}

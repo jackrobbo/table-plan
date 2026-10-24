@@ -1,0 +1,51 @@
+{
+ "slug": "chicken-tikka-masala-with-rice",
+ "name": "Chicken Tikka Masala with Rice",
+ "course": "dinner",
+ "emoji": "🍛",
+ "serves": 2,
+ "status": "live",
+ "per_portion": {
+  "kcal": 715,
+  "protein_g": 61,
+  "carbs_g": 81,
+  "fat_g": 19
+ },
+ "ingredients": [
+  {
+   "ingredient": "breast",
+   "qty": 400
+  },
+  {
+   "ingredient": "greek",
+   "qty": 150
+  },
+  {
+   "ingredient": "passata",
+   "qty": 250
+  },
+  {
+   "ingredient": "onions",
+   "qty": 1
+  },
+  {
+   "ingredient": "basmati",
+   "qty": 160
+  }
+ ],
+ "cupboard": [
+  "oil",
+  "curry-powder",
+  "garlic"
+ ],
+ "cupboard_g": {
+  "oil": 15,
+  "curry-powder": 12
+ },
+ "method": [
+  "Mix the chicken pieces with half the Greek yogurt, the curry powder and crushed garlic; leave for 15 minutes if you have time.",
+  "Fry the sliced onion in oil until soft, add the chicken and brown on all sides, then stir in the passata and simmer for 15 minutes.",
+  "Stir in the remaining yogurt off the heat and serve over the cooked basmati rice."
+ ],
+ "source": "original"
+}

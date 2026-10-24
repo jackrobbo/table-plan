@@ -1,0 +1,47 @@
+{
+ "slug": "halloumi-veg-wrap",
+ "name": "Halloumi & Roasted Veg Wrap",
+ "course": "lunch",
+ "emoji": "🌯",
+ "serves": 1,
+ "status": "live",
+ "per_portion": {
+  "kcal": 785,
+  "protein_g": 33,
+  "carbs_g": 79,
+  "fat_g": 39
+ },
+ "ingredients": [
+  {
+   "ingredient": "halloumi",
+   "qty": 80
+  },
+  {
+   "ingredient": "wraps",
+   "qty": 2
+  },
+  {
+   "ingredient": "pepper",
+   "qty": 1
+  },
+  {
+   "ingredient": "courgettes",
+   "qty": 100
+  },
+  {
+   "ingredient": "houm",
+   "qty": 30
+  }
+ ],
+ "cupboard": [
+  "oil"
+ ],
+ "cupboard_g": {
+  "oil": 5
+ },
+ "method": [
+  "Slice the pepper and courgette and fry in a little oil for 5 minutes, then add the sliced halloumi and cook until golden on both sides.",
+  "Spread the houmous over the wraps, add the halloumi and veg, then roll up tightly."
+ ],
+ "source": "original"
+}

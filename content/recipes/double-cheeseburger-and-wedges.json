@@ -1,0 +1,52 @@
+{
+ "slug": "double-cheeseburger-and-wedges",
+ "name": "Double Cheeseburger & Wedges",
+ "course": "dinner",
+ "emoji": "🍔",
+ "serves": 2,
+ "status": "live",
+ "per_portion": {
+  "kcal": 970,
+  "protein_g": 75,
+  "carbs_g": 102,
+  "fat_g": 31
+ },
+ "ingredients": [
+  {
+   "ingredient": "mince",
+   "qty": 500
+  },
+  {
+   "ingredient": "rolls",
+   "qty": 2
+  },
+  {
+   "ingredient": "cheddar-block",
+   "qty": 60
+  },
+  {
+   "ingredient": "baking-potatoes",
+   "qty": 700
+  },
+  {
+   "ingredient": "salad",
+   "qty": 60
+  },
+  {
+   "ingredient": "plum",
+   "qty": 100
+  }
+ ],
+ "cupboard": [
+  "oil"
+ ],
+ "cupboard_g": {
+  "oil": 15
+ },
+ "method": [
+  "Cut the potatoes into wedges, toss with oil and bake at 220°C for 35 minutes.",
+  "Season the mince and shape into four thin patties. Fry hot for about 3 minutes a side until cooked through, topping each with cheese for the last minute.",
+  "Serve two patties per toasted roll with salad and tomato, and the wedges on the side."
+ ],
+ "source": "original"
+}

@@ -1,0 +1,53 @@
+{
+ "slug": "turkey-burger-with-sweet-potato-wedges",
+ "name": "Turkey Burger with Sweet Potato Wedges",
+ "course": "dinner",
+ "emoji": "🍔",
+ "serves": 2,
+ "status": "live",
+ "per_portion": {
+  "kcal": 790,
+  "protein_g": 68,
+  "carbs_g": 98,
+  "fat_g": 17
+ },
+ "ingredients": [
+  {
+   "ingredient": "turkey-mince",
+   "qty": 500
+  },
+  {
+   "ingredient": "rolls",
+   "qty": 2
+  },
+  {
+   "ingredient": "sweet-potatoes",
+   "qty": 600
+  },
+  {
+   "ingredient": "salad",
+   "qty": 60
+  },
+  {
+   "ingredient": "plum",
+   "qty": 100
+  },
+  {
+   "ingredient": "greek",
+   "qty": 50
+  }
+ ],
+ "cupboard": [
+  "oil",
+  "paprika"
+ ],
+ "cupboard_g": {
+  "oil": 15
+ },
+ "method": [
+  "Cut the sweet potatoes into wedges, toss with the oil and smoked paprika and bake at 220°C for 30 minutes.",
+  "Season the turkey mince and shape into 2 big burgers; fry or grill for 6–7 minutes a side until cooked through.",
+  "Serve in toasted rolls with salad, tomato and a spoonful of Greek yogurt."
+ ],
+ "source": "original"
+}

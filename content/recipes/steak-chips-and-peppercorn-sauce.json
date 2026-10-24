@@ -1,0 +1,44 @@
+{
+ "slug": "steak-chips-and-peppercorn-sauce",
+ "name": "Steak, Chips & Peppercorn Sauce",
+ "course": "dinner",
+ "emoji": "🥩",
+ "serves": 2,
+ "status": "live",
+ "per_portion": {
+  "kcal": 840,
+  "protein_g": 54,
+  "carbs_g": 79,
+  "fat_g": 36
+ },
+ "ingredients": [
+  {
+   "ingredient": "rump",
+   "qty": 400
+  },
+  {
+   "ingredient": "baking-potatoes",
+   "qty": 700
+  },
+  {
+   "ingredient": "peas",
+   "qty": 160
+  },
+  {
+   "ingredient": "creme",
+   "qty": 100
+  }
+ ],
+ "cupboard": [
+  "oil"
+ ],
+ "cupboard_g": {
+  "oil": 15
+ },
+ "method": [
+  "Cut the potatoes into chunky chips, toss with oil and bake at 220°C for 35–40 minutes, turning once.",
+  "Season the steaks and fry in a very hot pan for 3 minutes each side; rest them.",
+  "In the same pan, stir the crème fraîche with crushed black pepper and a splash of water. Serve with the peas."
+ ],
+ "source": "original"
+}
