@@ -12,6 +12,13 @@ basket-integration call. Companion docs in this folder: `README.md` (the v0.1 UX
 - Nothing on the real MVP (DB, auth, persistence, bigger bank, pricing pipeline,
   payments, weekly-cycle engine) has been started yet.
 
+## Scope & platform
+- **UK-only, GBP (£) throughout** — UK supermarkets, CoFID macros, UK units (metric +
+  imperial toggles per the flow), Stripe in GBP, en-GB copy.
+- **Hosts on Vercel** (`vercel --prod --yes` → table-plan-app.vercel.app), as the PoC
+  already does. Public GitHub repo `jackrobbo/table-plan`, origin/main.
+- Stack: Next.js PWA → Supabase/Postgres → Stripe; Expo wrap later.
+
 ## Phase 1 goal
 A stranger can sign up, set a goal, generate a **saved** Mon–Fri plan, get a trustworthy
 Morrisons-priced list, and come back to it — reliably, with honest pricing.
