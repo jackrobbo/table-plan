@@ -1,9 +1,9 @@
 import { createClient, type SupabaseClient } from '@supabase/supabase-js';
-import type { InviteStore } from '../beta/invites';
 import type { WaitlistStore } from '../beta/waitlist';
 import type { ServerUser, SubscriptionStore } from '../billing/server';
 import type { Subscription } from '../billing/types';
 import type { AccountStore } from './account';
+import type { SignupStore } from './signup';
 import { fileWaitlistStore } from './waitlistFile';
 
 const URL_ = process.env.NEXT_PUBLIC_SUPABASE_URL;
@@ -64,14 +64,22 @@ export function getWaitlistStore(): WaitlistStore | null {
   };
 }
 
-/** Atomic single-use redemption via the `redeem_invite` SQL function. */
-export function getInviteStore(): InviteStore | null {
+/** Account creation for the invite gate: atomic single-use redemption via the `redeem_invite` SQL function, then a confirmed login. */
+export function getSignupStore(): SignupStore | null {
   const sb = admin();
   if (!sb) return null;
   return {
     async redeem(code, email) {
       const { data, error } = await sb.rpc('redeem_invite', { p_code: code, p_email: email });
       return !error && data === true;
+    },
+    async release(code, email) {
+      await sb.from('invites').update({ email: null, redeemed_at: null }).eq('code', code).eq('email', email);
+    },
+    async createUser(email) {
+      const { error } = await sb.auth.admin.createUser({ email, email_confirm: true });
+      if (!error) return 'created';
+      return error.code === 'email_exists' || /already (been )?registered/i.test(error.message) ? 'exists' : 'failed';
     },
   };
 }

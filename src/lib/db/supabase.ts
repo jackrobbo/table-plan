@@ -8,6 +8,8 @@ import { AuthUnavailableError, type AccountService, type AuthService, type Backe
 const toSession = (s: { user: { id: string; email?: string | null } } | null): Session | null =>
   s ? { userId: s.user.id, email: s.user.email ?? '' } : null;
 
+export const NO_ACCOUNT = 'We couldn’t find an account for that email. New here? Go back and choose “Create my plan”.';
+
 export function createSupabaseClient(url: string, key: string): SupabaseClient {
   return createClient(url, key, { auth: { persistSession: true, autoRefreshToken: true, detectSessionInUrl: false } });
 }
@@ -17,8 +19,12 @@ export function createSupabaseBackend(sb: SupabaseClient): Backend {
   let signingOut = false;   // our own sign-out is not an "unexpected" one
   const auth: AuthService = {
     async sendCode(email) {
-      const { error } = await sb.auth.signInWithOtp({ email: email.trim().toLowerCase(), options: { shouldCreateUser: true } });
-      if (error) throw new Error(error.status === 429 ? 'Too many codes requested. Wait a minute and try again.' : error.message);
+      // Never creates accounts: new accounts are made by /api/auth/signup (invite check), and Supabase's public sign-up is off.
+      const { error } = await sb.auth.signInWithOtp({ email: email.trim().toLowerCase(), options: { shouldCreateUser: false } });
+      if (!error) return;
+      if (error.status === 429) throw new Error('Too many codes requested. Wait a minute and try again.');
+      if (error.code === 'otp_disabled' || /signups? not allowed/i.test(error.message)) throw new Error(NO_ACCOUNT);
+      throw new Error(error.message);
     },
     async verifyCode(email, code) {
       const { data, error } = await sb.auth.verifyOtp({ email: email.trim().toLowerCase(), token: code, type: 'email' });

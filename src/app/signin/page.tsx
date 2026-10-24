@@ -37,21 +37,25 @@ export default function SignIn() {
   }, [wait]);
 
   const needsInvite = inviteOnly && isNew;
-  async function checkInvite(): Promise<boolean> {
-    // Real path: the server redeems the code atomically. The mock backend accepts the dev codes so the gate can be previewed.
-    try {
-      const r = await fetch('/api/invite', { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ code: invite, email }) });
-      if (r.ok) return true;
-      if (r.status !== 503 || !isMocked) throw new Error(((await r.json()) as { error?: string }).error ?? 'That code is not valid.');
-    } catch (e) { if (!isMocked) throw e; if (e instanceof Error && e.message !== 'Failed to fetch' && !/fetch/i.test(e.message)) throw e; }
-    if (devInviteCodes.map(normaliseCode).includes(normaliseCode(invite))) return true;
-    throw new Error('That code is not valid or has already been used.');
+  /** Where the account already made for this email (new sign-ups only), so "Resend code" never spends the invite twice. */
+  const [madeFor, setMadeFor] = useState('');
+
+  /** New sign-ups: the server checks the invite and creates the account. The mock backend accepts the dev codes so the gate can be previewed. */
+  async function createAccount(): Promise<void> {
+    if (madeFor === email.trim().toLowerCase()) return;
+    if (isMocked) {
+      if (needsInvite && !devInviteCodes.map(normaliseCode).includes(normaliseCode(invite))) throw new Error('That code is not valid or has already been used.');
+      return;
+    }
+    const r = await fetch('/api/auth/signup', { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ email, invite }) });
+    if (!r.ok) throw new Error(((await r.json().catch(() => ({}))) as { error?: string }).error ?? 'We couldn’t set up your account. Please try again.');
+    setMadeFor(email.trim().toLowerCase());
   }
 
   async function send() {
     setError(''); setBusy(true);
     try {
-      if (needsInvite) { await checkInvite(); track('signup_invite_redeemed'); }
+      if (isNew) { await createAccount(); if (needsInvite) track('signup_invite_redeemed'); }
       await getBackend().auth.sendCode(email);
       setSent(true); setWait(RESEND_SECONDS); setCode('');
       setTimeout(() => codeInput.current?.focus(), 0);
