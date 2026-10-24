@@ -16,11 +16,8 @@ const js = r.outputFiles[0].text.replace(/<\/script/g, '<\\/script');
 const css = fs.readFileSync('src/app/globals.css', 'utf8');
 const html = `<title>Table Plan</title>
 <meta name="claude:viewport-fit-sides" content="cover">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Karla:wght@400;500;600;700&family=Spline+Sans+Mono:wght@400;500;600&display=swap">
 <style>
 ${css}
-.wrap{padding-left:max(16px,env(safe-area-inset-left,0px)); padding-right:max(16px,env(safe-area-inset-right,0px));}
-body{font-size:16px; line-height:1.55; min-height:100%;}
 </style>
 <div id="root"></div>
 <script>${js}</script>

@@ -34,6 +34,8 @@ describe('targets', () => {
     expect(t.band).toEqual([1410, 1570]);
     expect(t.protein).toBe(133);
     expect(t.estimated).toBe(false);
+    expect(t.fat * 9 + t.carbs * 4 + t.protein * 4).toBeGreaterThan(t.target - 60);
+    expect(t.fat * 9 + t.carbs * 4 + t.protein * 4).toBeLessThan(t.target + 60);
   });
   it('falls back to defaults without stats and never goes below the floor', () => {
     const d = computeTargets('lose', { activity: 1.2 });

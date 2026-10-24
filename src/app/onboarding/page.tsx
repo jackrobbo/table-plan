@@ -10,6 +10,7 @@ import {
 import type { Goal, Profile, MealTime } from '@/lib/profile';
 import { computeTargets, type Sex } from '@/lib/targets';
 import { cmToFtIn, ftInToCm, kgToLb, kgToStLb, lbToKg, stLbToKg } from '@/lib/units';
+import Screen from '@/components/Screen';
 import { useProfile } from '@/lib/useProfile';
 
 type Upd = (fn: (p: Profile) => Profile) => void;
@@ -22,17 +23,30 @@ export default function Onboarding() {
   useEffect(() => { if (ready && !session) router.replace('/signin'); }, [ready, session, router]);
   useEffect(() => { if (profile?.completed) router.replace('/plan'); }, [profile?.completed, router]);
 
-  if (!ready || !profile) return <p className="muted">Loading…</p>;
+  if (!ready || !profile) return <Screen><p className="muted">Loading…</p></Screen>;
 
   const step = profile.step;
   const ok = canContinue(profile, step);
   const skippable = (SKIPPABLE as readonly string[]).includes(step);
 
+
+  const hasBar = stepIndex(step) < BAR_STEPS;
+  const onBack = stepIndex(step) > 0 ? () => update(back) : () => router.push('/');
+  const cta = step === 'taste' ? 'Finish' : step === 'target' ? 'Pick meals you like' : 'Continue';
+
   return (
-    <>
-      <div className="progress" aria-label={`Step ${stepIndex(step) + 1} of ${STEPS.length}`}>
-        {STEPS.map((s, i) => <div key={s} className={'seg' + (i <= stepIndex(step) ? ' on' : '')} />)}
-      </div>
+    <Screen onBack={onBack} progress={hasBar ? { step: stepIndex(step) + 1, total: BAR_STEPS } : undefined}
+      footer={<>
+        <button className="btn" disabled={!ok} onClick={() => update(advance)}>{cta}</button>
+        {step === 'allergies' && (
+          <button className="linkbtn accent" onClick={() => update((p) => advance({ ...setAllergies(p, []), noAllergies: true }))}>No one has allergies</button>
+        )}
+        {step === 'dislikes' && <button className="linkbtn" onClick={() => update((p) => advance({ ...p, dislikes: [] }))}>Skip, I eat anything</button>}
+        {skippable && (
+          <button className="linkbtn" onClick={() => update((p) => advance(skipStat(p, step as SkippableStep)))}>Prefer not to say</button>
+        )}
+      </>}>
+      {hasBar && <p className="step">Step {stepIndex(step) + 1} of {BAR_STEPS}</p>}
 
       {step === 'goal' && <GoalStep p={profile} update={update} />}
       {step === 'height' && <HeightStep p={profile} update={update} />}
@@ -45,40 +59,38 @@ export default function Onboarding() {
       {step === 'target' && <TargetStep p={profile} />}
       {step === 'dislikes' && <DislikesStep p={profile} update={update} />}
       {step === 'taste' && <TasteStep p={profile} update={update} />}
-
-      <div className="sticky">
-        <button className="btn" disabled={!ok} onClick={() => update(advance)}>
-          {step === 'taste' ? 'Finish' : 'Continue'}
-        </button>
-        {stepIndex(step) > 0 && <button className="btn ghost" onClick={() => update(back)}>Back</button>}
-        {skippable && (
-          <button className="linkbtn" onClick={() => update((p) => advance(skipStat(p, step as SkippableStep)))}>
-            Prefer not to say
-          </button>
-        )}
-      </div>
-      {skippable && <p className="muted">Optional. Your stats make your numbers more personal; skip and we&apos;ll use sensible defaults.</p>}
-    </>
+    </Screen>
   );
 }
 
+/** The wireframe's segmented bar covers the eight question steps (goal → allergies). */
+const BAR_STEPS = 8;
+
 interface SP { p: Profile; update: Upd }
+
+const Title = ({ children, sub }: { children: React.ReactNode; sub?: string }) => (
+  <><h2>{children}</h2>{sub && <p className="sub">{sub}</p>}</>
+);
+
+function Radio({ on, title, desc, onClick }: { on: boolean; title: string; desc?: string; onClick: () => void }) {
+  return (
+    <button className={'opt' + (on ? ' on' : '')} role="radio" aria-checked={on} onClick={onClick}>
+      <span><b>{title}</b>{desc && <span className="d">{desc}</span>}</span><span className="radio" />
+    </button>
+  );
+}
 
 function GoalStep({ p, update }: SP) {
   const goals: [Goal, string, string][] = [
     ['lose', 'Lose weight', 'Steady loss, about 1 lb a week'],
-    ['maintain', 'Maintain', 'Keep your weight where it is'],
-    ['gain', 'Build', 'A small surplus with plenty of protein'],
+    ['maintain', 'Maintain', 'Steady energy'],
+    ['gain', 'Gain weight', 'Surplus for muscle'],
   ];
   return (
     <>
-      <h2>What&apos;s your goal?</h2>
-      <div className="opts">
-        {goals.map(([g, t, d]) => (
-          <button key={g} className={'opt' + (p.goal === g ? ' on' : '')} onClick={() => update((x) => ({ ...x, goal: g }))}>
-            <b>{t}</b><span>{d}</span>
-          </button>
-        ))}
+      <Title sub="Sets your calorie band and protein floor.">What&apos;s your goal?</Title>
+      <div className="opts" role="radiogroup">
+        {goals.map(([g, t, d]) => <Radio key={g} on={p.goal === g} title={t} desc={d} onClick={() => update((x) => ({ ...x, goal: g }))} />)}
       </div>
     </>
   );
@@ -90,23 +102,18 @@ function HeightStep({ p, update }: SP) {
   const set = (heightCm: number | undefined) => update((x) => ({ ...x, stats: { ...x.stats, heightCm }, skipped: { ...x.skipped, height: undefined } }));
   return (
     <>
-      <h2>How tall are you?</h2>
+      <Title sub="Private. Only used to size your portions.">How tall are you?</Title>
       <div className="seg2">
         {(['cm', 'ftin'] as const).map((u) => (
-          <button key={u} className={p.heightUnit === u ? 'on' : ''} onClick={() => update((x) => ({ ...x, heightUnit: u }))}>
-            {u === 'cm' ? 'cm' : 'ft / in'}
-          </button>
+          <button key={u} className={p.heightUnit === u ? 'on' : ''} onClick={() => update((x) => ({ ...x, heightUnit: u }))}>{u === 'cm' ? 'cm' : 'ft / in'}</button>
         ))}
       </div>
       {p.heightUnit === 'cm' ? (
-        <div className="grid2"><div><label className="f">Height (cm)</label>
-          <input type="number" inputMode="numeric" value={cm ?? ''} onChange={(e) => set(num(e.target.value))} /></div></div>
+        <div className="value"><label><input aria-label="Height in centimetres" type="number" inputMode="numeric" placeholder="170" value={cm ?? ''} onChange={(e) => set(num(e.target.value))} /><span className="unit">cm</span></label></div>
       ) : (
-        <div className="grid2">
-          <div><label className="f">Feet</label>
-            <input type="number" inputMode="numeric" value={ft.ft ?? ''} onChange={(e) => set(e.target.value === '' ? undefined : ftInToCm(+e.target.value, ft.inch ?? 0))} /></div>
-          <div><label className="f">Inches</label>
-            <input type="number" inputMode="numeric" value={ft.inch ?? ''} onChange={(e) => set(ftInToCm(ft.ft ?? 0, +e.target.value))} /></div>
+        <div className="value">
+          <label><input aria-label="Feet" type="number" inputMode="numeric" placeholder="5" value={ft.ft ?? ''} onChange={(e) => set(e.target.value === '' ? undefined : ftInToCm(+e.target.value, ft.inch ?? 0))} /><span className="unit">ft</span></label>
+          <label><input aria-label="Inches" type="number" inputMode="numeric" placeholder="7" value={ft.inch ?? ''} onChange={(e) => set(ftInToCm(ft.ft ?? 0, +e.target.value))} /><span className="unit">in</span></label>
         </div>
       )}
     </>
@@ -119,26 +126,22 @@ function WeightStep({ p, update }: SP) {
   const set = (weightKg: number | undefined) => update((x) => ({ ...x, stats: { ...x.stats, weightKg }, skipped: { ...x.skipped, weight: undefined } }));
   return (
     <>
-      <h2>How much do you weigh?</h2>
+      <Title sub="Private. You can update it any time.">What do you weigh?</Title>
       <div className="seg2">
         {([['kg', 'kg'], ['stlb', 'st / lb'], ['lb', 'lb']] as const).map(([u, l]) => (
           <button key={u} className={p.weightUnit === u ? 'on' : ''} onClick={() => update((x) => ({ ...x, weightUnit: u }))}>{l}</button>
         ))}
       </div>
       {p.weightUnit === 'kg' && (
-        <div className="grid2"><div><label className="f">Weight (kg)</label>
-          <input type="number" inputMode="decimal" value={kg ?? ''} onChange={(e) => set(num(e.target.value))} /></div></div>
+        <div className="value"><label><input className="wide" aria-label="Weight in kilograms" type="number" inputMode="decimal" placeholder="70" value={kg ?? ''} onChange={(e) => set(num(e.target.value))} /><span className="unit">kg</span></label></div>
       )}
       {p.weightUnit === 'lb' && (
-        <div className="grid2"><div><label className="f">Weight (lb)</label>
-          <input type="number" inputMode="numeric" value={kg ? kgToLb(kg) : ''} onChange={(e) => set(e.target.value === '' ? undefined : lbToKg(+e.target.value))} /></div></div>
+        <div className="value"><label><input className="wide" aria-label="Weight in pounds" type="number" inputMode="numeric" placeholder="154" value={kg ? kgToLb(kg) : ''} onChange={(e) => set(e.target.value === '' ? undefined : lbToKg(+e.target.value))} /><span className="unit">lb</span></label></div>
       )}
       {p.weightUnit === 'stlb' && (
-        <div className="grid2">
-          <div><label className="f">Stone</label>
-            <input type="number" inputMode="numeric" value={stlb.st ?? ''} onChange={(e) => set(e.target.value === '' ? undefined : stLbToKg(+e.target.value, stlb.lb ?? 0))} /></div>
-          <div><label className="f">Pounds</label>
-            <input type="number" inputMode="numeric" value={stlb.lb ?? ''} onChange={(e) => set(stLbToKg(stlb.st ?? 0, +e.target.value))} /></div>
+        <div className="value">
+          <label><input aria-label="Stone" type="number" inputMode="numeric" placeholder="11" value={stlb.st ?? ''} onChange={(e) => set(e.target.value === '' ? undefined : stLbToKg(+e.target.value, stlb.lb ?? 0))} /><span className="unit">st</span></label>
+          <label><input aria-label="Pounds" type="number" inputMode="numeric" placeholder="0" value={stlb.lb ?? ''} onChange={(e) => set(stLbToKg(stlb.st ?? 0, +e.target.value))} /><span className="unit">lb</span></label>
         </div>
       )}
     </>
@@ -148,11 +151,9 @@ function WeightStep({ p, update }: SP) {
 function AgeStep({ p, update }: SP) {
   return (
     <>
-      <h2>How old are you?</h2>
-      <div className="grid2"><div><label className="f">Age</label>
-        <input type="number" inputMode="numeric" value={p.stats.age ?? ''}
-          onChange={(e) => update((x) => ({ ...x, stats: { ...x.stats, age: num(e.target.value) }, skipped: { ...x.skipped, age: undefined } }))} /></div></div>
-      <p className="muted">Table Plan is for adults (18+).</p>
+      <Title sub="Calorie needs change with age. Table Plan is for adults (18+).">How old are you?</Title>
+      <div className="value"><label><input aria-label="Age in years" type="number" inputMode="numeric" placeholder="34" value={p.stats.age ?? ''}
+        onChange={(e) => update((x) => ({ ...x, stats: { ...x.stats, age: num(e.target.value) }, skipped: { ...x.skipped, age: undefined } }))} /><span className="unit">years</span></label></div>
     </>
   );
 }
@@ -160,14 +161,11 @@ function AgeStep({ p, update }: SP) {
 function SexStep({ p, update }: SP) {
   return (
     <>
-      <h2>Are you male or female?</h2>
-      <p className="muted">Used only for the calorie formula.</p>
-      <div className="opts">
+      <Title sub="Men and women need slightly different calories.">Are you male or female?</Title>
+      <div className="opts" role="radiogroup">
         {([['f', 'Female'], ['m', 'Male']] as [Sex, string][]).map(([v, l]) => (
-          <button key={v} className={'opt' + (p.stats.sex === v ? ' on' : '')}
-            onClick={() => update((x) => ({ ...x, stats: { ...x.stats, sex: v }, skipped: { ...x.skipped, sex: undefined } }))}>
-            <b>{l}</b>
-          </button>
+          <Radio key={v} on={p.stats.sex === v} title={l}
+            onClick={() => update((x) => advance({ ...x, stats: { ...x.stats, sex: v }, skipped: { ...x.skipped, sex: undefined } }))} />
         ))}
       </div>
     </>
@@ -177,20 +175,15 @@ function SexStep({ p, update }: SP) {
 function ActivityStep({ p, update }: SP) {
   const opts: [number, string, string][] = [
     [1.2, 'Mostly sitting', 'Desk job, little exercise'],
-    [1.375, 'Lightly active', 'On your feet some of the day, or a few walks'],
-    [1.55, 'Active', 'Regular training or a physical job'],
-    [1.725, 'Very active', 'Hard training most days'],
+    [1.375, 'Lightly active', 'On your feet, walks'],
+    [1.55, 'Active', 'Exercise 3–5 days'],
+    [1.725, 'Very active', 'Physical job or daily training'],
   ];
   return (
     <>
-      <h2>How active are you?</h2>
-      <div className="opts">
-        {opts.map(([v, t, d]) => (
-          <button key={v} className={'opt' + (p.stats.activity === v ? ' on' : '')}
-            onClick={() => update((x) => ({ ...x, stats: { ...x.stats, activity: v } }))}>
-            <b>{t}</b><span>{d}</span>
-          </button>
-        ))}
+      <Title sub="Most days, including work.">How active are you?</Title>
+      <div className="opts" role="radiogroup">
+        {opts.map(([v, t, d]) => <Radio key={v} on={p.stats.activity === v} title={t} desc={d} onClick={() => update((x) => ({ ...x, stats: { ...x.stats, activity: v } }))} />)}
       </div>
     </>
   );
@@ -202,32 +195,32 @@ function MealsStep({ p, update }: SP) {
     update((x) => ({ ...x, meals: { ...x.meals, [m]: { ...x.meals[m], ...patch } } }));
   return (
     <>
-      <h2>Which meals should we plan?</h2>
-      <p className="muted">&quot;Macros only&quot; reserves the calories and protein for a meal you sort yourself.</p>
+      <Title sub="Planned meals come with recipes and go on your list. For the rest, you just get a macro target.">Which meals should we plan?</Title>
       {(Object.keys(labels) as MealTime[]).map((m) => {
         const s = p.meals[m];
         return (
           <div className="mealrow" key={m}>
-            <div className="row" style={{ justifyContent: 'space-between' }}>
+            <div className="top">
               <h3>{labels[m]}</h3>
-              <div className="seg2" style={{ margin: 0 }}>
+              <div className="seg2 small">
                 <button className={s.mode === 'plan' ? 'on' : ''} onClick={() => set(m, { mode: 'plan' })}>Plan it</button>
                 <button className={s.mode === 'macros' ? 'on' : ''} onClick={() => set(m, { mode: 'macros', extraServings: 0 })}>Macros only</button>
               </div>
             </div>
-            {s.mode === 'plan' && (
-              <div className="row" style={{ justifyContent: 'space-between', marginTop: 8 }}>
-                <span className="muted">Extra servings for others</span>
+            {s.mode === 'plan' ? (
+              <div className="extra">
+                <span>Extra servings for others</span>
                 <span className="stepper">
                   <button aria-label="Fewer" onClick={() => set(m, { extraServings: Math.max(0, s.extraServings - 1) })}>−</button>
                   <b>{s.extraServings}</b>
                   <button aria-label="More" onClick={() => set(m, { extraServings: Math.min(8, s.extraServings + 1) })}>+</button>
                 </span>
               </div>
-            )}
+            ) : <div className="extra"><span>Calories and protein reserved; you sort this meal</span></div>}
           </div>
         );
       })}
+      <p className="muted">Your portion always stays on your macros. Extra servings only add ingredients.</p>
       {swipeCourses(p).length === 0 && <p className="err">Plan at least one meal.</p>}
     </>
   );
@@ -238,36 +231,34 @@ function AllergiesStep({ p, update }: SP) {
     update((x) => setAllergies(x, x.allergies.includes(a) ? x.allergies.filter((y) => y !== a) : [...x.allergies, a]));
   return (
     <>
-      <h2>Any allergies in your household?</h2>
-      <p className="muted">Anyone you cook for. Meals containing these are never suggested.</p>
+      <Title sub="Everyone eats the same meals, so include anyone you're cooking for. Recipes with these are fully excluded.">Any allergies in your household?</Title>
       <div className="chips">
         {ALLERGENS.map(([k, l]) => (
-          <button key={k} className={'chip' + (p.allergies.includes(k) ? ' on' : '')} onClick={() => toggle(k)}>{l}</button>
+          <button key={k} className={'chip amber' + (p.allergies.includes(k) ? ' on' : '')} aria-pressed={p.allergies.includes(k)} onClick={() => toggle(k)}>{l}</button>
         ))}
       </div>
-      <div className="chips">
-        <button className={'chip' + (p.noAllergies ? ' on' : '')}
-          onClick={() => update((x) => ({ ...setAllergies(x, []), noAllergies: true }))}>No one has allergies</button>
+      <p className="muted">The UK&apos;s 14 major allergens. Always check product labels for &quot;may contain&quot; traces.</p>
+      <div className="card" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', gap: 10 }}>
+        <span className="muted" style={{ margin: 0 }}>Vegetarian or vegan? Coming soon.</span>
+        <span className="pill">Notify me</span>
       </div>
-      <p className="muted">Vegetarian and vegan plans: coming soon.</p>
     </>
   );
 }
 
 function TargetStep({ p }: { p: Profile }) {
   const t = computeTargets(p.goal ?? 'lose', p.stats);
+  const hh = 1 + p.meals.dinner.extraServings;
   return (
     <>
-      <h2>Your daily target</h2>
-      <div className="targets">
-        <div className="ticketc"><span className="lbl">Calories</span><span className="big">{t.band[0]}–{t.band[1]}</span></div>
-        <div className="ticketc"><span className="lbl">Protein floor</span><span className="big">{t.protein}g</span></div>
+      <Title sub={`Based on your goal and stats. Dinners cook for ${hh}.`}>Your daily target</Title>
+      <div className="bignum">
+        <div><div className="n">~{t.target.toLocaleString('en-GB')}<small>kcal a day</small></div><div className="muted" style={{ margin: '4px 0 0' }}>band {t.band[0].toLocaleString('en-GB')}–{t.band[1].toLocaleString('en-GB')}</div></div>
+        <div><div className="n">≥{t.protein}g<small>protein a day</small></div></div>
+        <div className="pair"><div className="n">~{t.carbs}g<small>carbs</small></div><div className="n">~{t.fat}g<small>fat</small></div></div>
       </div>
-      <p className="muted">
-        {t.maintenance ? `Based on your stats (estimated maintenance ${t.maintenance} kcal). ` : 'Using a sensible default; add your stats for a personal number. '}
-        Steady, not extreme.
-      </p>
-      <div className="note">General nutrition guidance, not medical advice. If you have a medical condition or take medication, talk to your GP before changing your diet.</div>
+      <div className="note"><b>Steady, not extreme.</b> {t.maintenance ? `Estimated maintenance is ${t.maintenance} kcal. ` : 'Using a sensible default; add your stats for a personal number. '}We never plan below 1,300 kcal.</div>
+      <p className="muted">Every day is kept inside this band. Change anything later. Not medical or dietetic advice: talk to your GP before changing your diet if you have a medical condition.</p>
     </>
   );
 }
@@ -278,19 +269,16 @@ function DislikesStep({ p, update }: SP) {
     update((x) => ({ ...x, dislikes: x.dislikes.includes(d) ? x.dislikes.filter((y) => y !== d) : [...x.dislikes, d] }));
   return (
     <>
-      <h2>Anything you don&apos;t like?</h2>
-      <p className="muted">We&apos;ll rank these lower. Optional — skip if you eat anything.</p>
-      <input placeholder="Search" value={q} onChange={(e) => setQ(e.target.value)} />
+      <Title sub="We'll show these less often. Skip if you eat anything.">Anything you don&apos;t like?</Title>
+      <input className="text" placeholder="Search ingredients" aria-label="Search ingredients" value={q} onChange={(e) => setQ(e.target.value)} />
       {DISLIKE_GROUPS.map((g) => {
         const items = g.items.filter((i) => i.toLowerCase().includes(q.toLowerCase()));
         if (!items.length) return null;
         return (
           <div key={g.group}>
-            <h3 style={{ marginTop: 16 }}>{g.group}</h3>
+            <p className="group-title">{g.group}</p>
             <div className="chips">
-              {items.map((i) => (
-                <button key={i} className={'chip' + (p.dislikes.includes(i) ? ' on' : '')} onClick={() => toggle(i)}>{i}</button>
-              ))}
+              {items.map((i) => <button key={i} className={'chip' + (p.dislikes.includes(i) ? ' on' : '')} aria-pressed={p.dislikes.includes(i)} onClick={() => toggle(i)}>{i}</button>)}
             </div>
           </div>
         );
@@ -309,33 +297,35 @@ function TasteStep({ p, update }: SP) {
   const label: Record<MealTime, string> = { breakfast: 'Breakfast', lunch: 'Lunch', dinner: 'Dinner' };
   return (
     <>
-      <h2>What would you happily eat?</h2>
-      <p className="muted">Keep at least {MIN_LIKES} for each meal type. There&apos;s no upper limit.</p>
+      <Title sub={`Like at least ${MIN_LIKES} of each. Keep going as long as you like; more likes, more variety.`}>What do you like to eat?</Title>
       <div className="tabs">
         {courses.map((c) => (
-          <button key={c} className={'chip' + (tab === c ? ' on' : '')} onClick={() => setTab(c)}>
-            {label[c]} {prog[c].liked}/{prog[c].needed}
-          </button>
+          <button key={c} className={tab === c ? 'on' : ''} onClick={() => setTab(c)}>{label[c]} {prog[c].liked}/{prog[c].needed}</button>
         ))}
       </div>
       {next ? (
-        <div className="swipecard">
-          <span className="emoji">{next.e}</span>
-          <h3>{next.n}</h3>
-          <p className="muted" style={{ margin: '0 auto' }}>{next.p}g protein · {next.k} kcal{next.serves > 1 ? ` · serves ${next.serves}` : ''}</p>
-          <div className="row" style={{ justifyContent: 'center', marginTop: 14 }}>
-            <button className="btn ghost" onClick={() => update((x) => swipe(x, next.id, false))}>Skip</button>
-            <button className="btn" onClick={() => update((x) => swipe(x, next.id, true))}>Keep</button>
+        <>
+          <div className="swipecard">
+            <div className="photo" aria-hidden>{next.e}</div>
+            <div className="body">
+              <span className="kind">{label[tab]}</span>
+              <h3>{next.n}</h3>
+              <div className="tags">
+                <span className="p">P {next.p}g</span><span>{next.k} kcal</span>{next.serves > 1 && <span>serves {next.serves}</span>}
+              </div>
+            </div>
           </div>
-        </div>
+          <div className="swipebtns">
+            <button onClick={() => update((x) => swipe(x, next.id, false))}>Skip</button>
+            <button className="keep" onClick={() => update((x) => swipe(x, next.id, true))}>Keep</button>
+          </div>
+        </>
       ) : (
         <div className="note">
           That&apos;s all the {label[tab].toLowerCase()} options for now.
           {prog[tab].liked < prog[tab].needed && (
-            <> You need {prog[tab].needed - prog[tab].liked} more —{' '}
-              <button className="linkbtn" onClick={() => update((x) => ({ ...x, skippedRecipes: x.skippedRecipes.filter((id) => !pool.some((r) => r.id === id)) }))}>
-                revisit skipped
-              </button>.</>
+            <> You need {prog[tab].needed - prog[tab].liked} more.{' '}
+              <button className="linkbtn accent" onClick={() => update((x) => ({ ...x, skippedRecipes: x.skippedRecipes.filter((id) => !pool.some((r) => r.id === id)) }))}>Revisit skipped</button></>
           )}
         </div>
       )}

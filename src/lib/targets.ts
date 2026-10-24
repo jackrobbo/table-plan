@@ -11,6 +11,9 @@ export interface Targets {
   target: number;
   band: [number, number];
   protein: number;
+  /** Provisional split (27% fat, rest carbs) pending dietitian review. */
+  carbs: number;
+  fat: number;
   maintenance: number | null;
   /** true when no stats were given and defaults were used */
   estimated: boolean;
@@ -34,5 +37,7 @@ export function computeTargets(goal: Goal, s: Stats): Targets {
   const protein = wt
     ? Math.round(wt * (goal === 'maintain' ? 1.6 : 1.8))
     : Math.round((target * (goal === 'maintain' ? 0.25 : 0.3)) / 4);
-  return { target, band: [target - 100, target + 60], protein, maintenance, estimated: maintenance === null };
+  const fat = Math.round((target * 0.27) / 9 / 5) * 5;
+  const carbs = Math.max(0, Math.round((target - protein * 4 - fat * 9) / 4 / 5) * 5);
+  return { target, carbs, fat, band: [target - 100, target + 60], protein, maintenance, estimated: maintenance === null };
 }
