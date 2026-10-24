@@ -5,10 +5,6 @@
  "emoji": "🍚",
  "serves": 2,
  "status": "live",
- "per_portion": {
-  "kcal": 565,
-  "protein_g": 50
- },
  "ingredients": [
   {
    "ingredient": "breast",
@@ -37,6 +33,12 @@
   "teriyaki",
   "garlic"
  ],
+ "cupboard_qty": {
+  "rice": 140,
+  "soy": 20,
+  "teriyaki": 30,
+  "garlic": 6
+ },
  "method": [
   "Cook the diced chicken; scramble the eggs; set both aside.",
   "Fry onion and pepper, then the cold rice and garlic; add soy.",

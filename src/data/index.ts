@@ -5,12 +5,15 @@ import topups from './topups.json';
 import pricesMeta from './prices-meta.json';
 
 export type Course = 'breakfast' | 'lunch' | 'snack' | 'dinner';
+export type Budget = 'low' | 'medium' | 'high';
 
 /** st: set only when the latest price check was not clean (delisted, out_of_stock, changed_big, error). */
 export interface Product { n: string; pr: number; pack: number; u: string; s: string; st?: string }
 export interface Recipe {
   id: string; c: Course; e: string; n: string; p: number; k: number; serves: number;
   fresh: [string, number][]; cup: string[]; m: string[]; allergens: string[]; macros_only?: boolean;
+  /** Marginal cost of one portion in pence, and its low/medium/high tier (see BUDGET_LIMITS). null for macros-only meals. */
+  cost?: number | null; b?: Budget | null;
 }
 export interface Topup { n: string; p: number; k: number; prod: string; qty: number }
 

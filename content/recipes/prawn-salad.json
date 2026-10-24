@@ -30,6 +30,9 @@
  "cupboard": [
   "seafood"
  ],
+ "cupboard_qty": {
+  "seafood": 30
+ },
  "method": [
   "Prawns into a bowl with shredded iceberg, cucumber and halved baby plums.",
   "Dress with Marie Rose sauce."

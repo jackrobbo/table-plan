@@ -5,10 +5,6 @@
  "emoji": "🍳",
  "serves": 1,
  "status": "live",
- "per_portion": {
-  "kcal": 500,
-  "protein_g": 29
- },
  "ingredients": [
   {
    "ingredient": "eggs",
@@ -22,6 +18,9 @@
  "cupboard": [
   "butter"
  ],
+ "cupboard_qty": {
+  "butter": 15
+ },
  "method": [
   "Whisk 3 eggs with a splash of milk; scramble gently.",
   "Toast 2 slices, butter, pile the eggs on."

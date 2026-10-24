@@ -5,13 +5,24 @@
   "unit": "g",
   "cupboard": false,
   "allergens": [],
-  "per100": null,
+  "per100": {
+   "kcal": 106,
+   "protein_g": 24,
+   "carbs_g": 0,
+   "fat_g": 1.1
+  },
   "product": {
    "retailer": "morrisons",
    "name": "Morrisons British Chicken Breast Fillets 1kg",
    "price_pence": 699,
    "pack_size": 1000,
    "slug": "morrisons-british-chicken-breast-fillets-1kg/108444711"
+  },
+  "cofid": {
+   "code": "18-290",
+   "name": "Chicken, light meat, raw",
+   "verified": true,
+   "basis": "cofid"
   }
  },
  {
@@ -20,13 +31,24 @@
   "unit": "g",
   "cupboard": false,
   "allergens": [],
-  "per100": null,
+  "per100": {
+   "kcal": 109,
+   "protein_g": 20.9,
+   "carbs_g": 0,
+   "fat_g": 2.8
+  },
   "product": {
    "retailer": "morrisons",
    "name": "Morrisons British Boneless Chicken Thigh Fillets 1kg",
    "price_pence": 725,
    "pack_size": 1000,
    "slug": "morrisons-british-boneless-chicken-thigh-fillets-1kg/108854278"
+  },
+  "cofid": {
+   "code": "18-289",
+   "name": "Chicken, dark meat, raw",
+   "verified": true,
+   "basis": "cofid"
   }
  },
  {
@@ -35,13 +57,24 @@
   "unit": "g",
   "cupboard": false,
   "allergens": [],
-  "per100": null,
+  "per100": {
+   "kcal": 121,
+   "protein_g": 20.4,
+   "carbs_g": 0,
+   "fat_g": 4.3
+  },
   "product": {
    "retailer": "morrisons",
    "name": "Morrisons British Beef Steak Mince 5% Fat 250g",
    "price_pence": 295,
    "pack_size": 250,
    "slug": "morrisons-british-beef-steak-mince-5-fat-250g/109897499"
+  },
+  "cofid": {
+   "code": "18-508",
+   "name": "Beef, mince, raw, extra lean",
+   "verified": true,
+   "basis": "label"
   }
  },
  {
@@ -50,13 +83,25 @@
   "unit": "g",
   "cupboard": false,
   "allergens": [],
-  "per100": null,
+  "per100": {
+   "kcal": 134,
+   "protein_g": 23.8,
+   "carbs_g": 0,
+   "fat_g": 4.3
+  },
   "product": {
    "retailer": "morrisons",
    "name": "Morrisons British Beef Sizzle Steak 320g",
    "price_pence": 525,
    "pack_size": 320,
    "slug": "morrisons-british-beef-sizzle-steak-320g/112613434"
+  },
+  "cofid": {
+   "code": "18-064",
+   "name": "Beef, sirloin steak, raw, lean",
+   "verified": true,
+   "basis": "label",
+   "approx": "sirloin steak (lean) for thin-cut sizzle steak"
   }
  },
  {
@@ -65,13 +110,24 @@
   "unit": "g",
   "cupboard": false,
   "allergens": [],
-  "per100": null,
+  "per100": {
+   "kcal": 125,
+   "protein_g": 22,
+   "carbs_g": 0,
+   "fat_g": 4.1
+  },
   "product": {
    "retailer": "morrisons",
    "name": "Morrisons British Beef Rump Steak 200g",
    "price_pence": 293,
    "pack_size": 200,
    "slug": "morrisons-british-beef-rump-steak-200g/115888652"
+  },
+  "cofid": {
+   "code": "18-043",
+   "name": "Beef, rump steak, raw, lean",
+   "verified": true,
+   "basis": "cofid"
   }
  },
  {
@@ -82,13 +138,25 @@
   "allergens": [
    "crustaceans"
   ],
-  "per100": null,
+  "per100": {
+   "kcal": 46,
+   "protein_g": 10.2,
+   "carbs_g": 0,
+   "fat_g": 0
+  },
   "product": {
    "retailer": "morrisons",
    "name": "Morrisons Savers King Prawns 150g",
    "price_pence": 249,
    "pack_size": 150,
    "slug": "morrisons-savers-king-prawns/112570964"
+  },
+  "cofid": {
+   "code": "16-389",
+   "name": "Prawns, king, purchased cooked",
+   "verified": true,
+   "basis": "label",
+   "note": "Label used: 'Savers King Prawns' are brined/glazed, so per 100 g of pack weight is lower than CoFID cooked king prawns."
   }
  },
  {
@@ -97,13 +165,25 @@
   "unit": "g",
   "cupboard": false,
   "allergens": [],
-  "per100": null,
+  "per100": {
+   "kcal": 131,
+   "protein_g": 27,
+   "carbs_g": 0,
+   "fat_g": 2.2
+  },
   "product": {
    "retailer": "morrisons",
    "name": "Morrisons Roast Chicken Breast Slices 180g",
    "price_pence": 375,
    "pack_size": 180,
    "slug": "morrisons-roast-chicken-slices-180g/112780136"
+  },
+  "cofid": {
+   "code": "19-543",
+   "name": "Turkey slices",
+   "verified": true,
+   "basis": "label",
+   "approx": "deli turkey slices for deli chicken slices"
   }
  },
  {
@@ -112,13 +192,24 @@
   "unit": "g",
   "cupboard": false,
   "allergens": [],
-  "per100": null,
+  "per100": {
+   "kcal": 101,
+   "protein_g": 20.3,
+   "carbs_g": 0,
+   "fat_g": 1.8
+  },
   "product": {
    "retailer": "morrisons",
    "name": "Morrisons British Cooked Ham 120g",
    "price_pence": 200,
    "pack_size": 120,
    "slug": "morrisons-british-cooked-ham-120g/112634551"
+  },
+  "cofid": {
+   "code": "19-496",
+   "name": "Ham",
+   "verified": true,
+   "basis": "label"
   }
  },
  {
@@ -127,13 +218,26 @@
   "unit": "medallions",
   "cupboard": false,
   "allergens": [],
-  "per100": null,
+  "per100": {
+   "kcal": 184,
+   "protein_g": 33.4,
+   "carbs_g": 2.7,
+   "fat_g": 4.3
+  },
   "product": {
    "retailer": "morrisons",
    "name": "Morrisons Lean Smoked Bacon Medallions 8pk",
    "price_pence": 325,
    "pack_size": 8,
    "slug": "morrisons-8-lean-smoked-bacon-medallions/111008110"
+  },
+  "gramsPerUnit": 28,
+  "cofid": {
+   "code": "19-644",
+   "name": "Bacon loin steaks, lean, grilled",
+   "verified": true,
+   "basis": "label",
+   "approx": "lean bacon loin steaks (grilled) for raw lean medallions; ~28 g per medallion is an estimate"
   }
  },
  {
@@ -144,13 +248,25 @@
   "allergens": [
    "eggs"
   ],
-  "per100": null,
+  "per100": {
+   "kcal": 131,
+   "protein_g": 12.6,
+   "carbs_g": 0,
+   "fat_g": 9
+  },
   "product": {
    "retailer": "morrisons",
    "name": "Morrisons Medium Free Range Eggs 6 Pack",
    "price_pence": 180,
    "pack_size": 6,
    "slug": "morrisons-medium-free-range-eggs-6-pack/105828736"
+  },
+  "gramsPerUnit": 50,
+  "cofid": {
+   "code": "12-937",
+   "name": "Eggs, chicken, whole, raw",
+   "verified": true,
+   "basis": "label"
   }
  },
  {
@@ -161,13 +277,24 @@
   "allergens": [
    "milk"
   ],
-  "per100": null,
+  "per100": {
+   "kcal": 50,
+   "protein_g": 3.6,
+   "carbs_g": 4.8,
+   "fat_g": 1.8
+  },
   "product": {
    "retailer": "morrisons",
    "name": "Morrisons British Semi Skimmed Milk 4 Pint",
    "price_pence": 165,
    "pack_size": 2272,
    "slug": "morrisons-british-semi-skimmed-milk-4-pint/113240422"
+  },
+  "cofid": {
+   "code": "12-313",
+   "name": "Milk, semi-skimmed, pasteurised, average",
+   "verified": true,
+   "basis": "label"
   }
  },
  {
@@ -178,13 +305,24 @@
   "allergens": [
    "milk"
   ],
-  "per100": null,
+  "per100": {
+   "kcal": 68,
+   "protein_g": 10.5,
+   "carbs_g": 5.1,
+   "fat_g": 0
+  },
   "product": {
    "retailer": "morrisons",
    "name": "Morrisons Protein Yogurt 200g pot",
    "price_pence": 75,
    "pack_size": 1,
    "slug": "morrisons-strawberry-protein-yogurt/113699428"
+  },
+  "gramsPerUnit": 200,
+  "cofid": {
+   "name": "Pack label (no CoFID cross-check)",
+   "verified": true,
+   "basis": "label"
   }
  },
  {
@@ -195,13 +333,24 @@
   "allergens": [
    "milk"
   ],
-  "per100": null,
+  "per100": {
+   "kcal": 102,
+   "protein_g": 4,
+   "carbs_g": 4.2,
+   "fat_g": 7.6
+  },
   "product": {
    "retailer": "morrisons",
    "name": "Morrisons Greek Style Yogurt 500g",
    "price_pence": 115,
    "pack_size": 500,
    "slug": "morrisons-greek-style-yogurt-500g/103078919"
+  },
+  "cofid": {
+   "code": "12-555",
+   "name": "Yogurt, Greek style, plain",
+   "verified": true,
+   "basis": "label"
   }
  },
  {
@@ -210,15 +359,28 @@
   "unit": "slices",
   "cupboard": false,
   "allergens": [
-   "gluten"
+   "gluten",
+   "soya"
   ],
-  "per100": null,
+  "per100": {
+   "kcal": 239,
+   "protein_g": 8.2,
+   "carbs_g": 46.1,
+   "fat_g": 1.8
+  },
   "product": {
    "retailer": "morrisons",
    "name": "Morrisons White Farmhouse Loaf 800g",
    "price_pence": 110,
    "pack_size": 16,
    "slug": "morrisons-white-farmhouse-loaf-800g/113876869"
+  },
+  "gramsPerUnit": 50,
+  "cofid": {
+   "code": "11-980",
+   "name": "Bread, white, sliced",
+   "verified": true,
+   "basis": "label"
   }
  },
  {
@@ -229,13 +391,25 @@
   "allergens": [
    "gluten"
   ],
-  "per100": null,
+  "per100": {
+   "kcal": 289,
+   "protein_g": 7.7,
+   "carbs_g": 54.5,
+   "fat_g": 3.8
+  },
   "product": {
    "retailer": "morrisons",
    "name": "Morrisons Plain Tortilla Wraps 8pk",
    "price_pence": 140,
    "pack_size": 8,
    "slug": "morrisons-plain-tortilla-wraps-8-pack/112909657"
+  },
+  "gramsPerUnit": 62,
+  "cofid": {
+   "code": "11-925",
+   "name": "Tortilla, wheat, soft",
+   "verified": true,
+   "basis": "label"
   }
  },
  {
@@ -247,13 +421,24 @@
    "gluten",
    "soya"
   ],
-  "per100": null,
+  "per100": {
+   "kcal": 277,
+   "protein_g": 16.9,
+   "carbs_g": 40.5,
+   "fat_g": 4.9
+  },
   "product": {
    "retailer": "morrisons",
    "name": "Mission Protein Tortilla Wraps 6pk",
    "price_pence": 180,
    "pack_size": 6,
    "slug": "mission-protein-tortilla-wraps-367g/114821317"
+  },
+  "gramsPerUnit": 60,
+  "cofid": {
+   "name": "Pack label (no CoFID cross-check)",
+   "verified": true,
+   "basis": "label"
   }
  },
  {
@@ -264,13 +449,25 @@
   "allergens": [
    "gluten"
   ],
-  "per100": null,
+  "per100": {
+   "kcal": 277,
+   "protein_g": 10.9,
+   "carbs_g": 48.3,
+   "fat_g": 2.7
+  },
   "product": {
    "retailer": "morrisons",
    "name": "Morrisons Stonebaked Wholemeal Pittas 6pk",
    "price_pence": 50,
    "pack_size": 6,
    "slug": "morrisons-stonebaked-wholemeal-pittas/109515921"
+  },
+  "gramsPerUnit": 60,
+  "cofid": {
+   "code": "11-974",
+   "name": "Bread, pitta, white",
+   "verified": true,
+   "basis": "label"
   }
  },
  {
@@ -281,13 +478,25 @@
   "allergens": [
    "sesame"
   ],
-  "per100": null,
+  "per100": {
+   "kcal": 194,
+   "protein_g": 7,
+   "carbs_g": 6.8,
+   "fat_g": 13.3
+  },
   "product": {
    "retailer": "morrisons",
    "name": "Morrisons Red Pepper Houmous 200g",
    "price_pence": 130,
    "pack_size": 200,
    "slug": "morrisons-red-pepper-houmous-200g/109734809"
+  },
+  "cofid": {
+   "code": "13-556",
+   "name": "Houmous",
+   "verified": true,
+   "basis": "label",
+   "note": "Label used: this Morrisons houmous is a lighter recipe than CoFID's generic houmous (194 vs 307 kcal)."
   }
  },
  {
@@ -296,13 +505,24 @@
   "unit": "g",
   "cupboard": false,
   "allergens": [],
-  "per100": null,
+  "per100": {
+   "kcal": 40,
+   "protein_g": 0.9,
+   "carbs_g": 9.1,
+   "fat_g": 0.2
+  },
   "product": {
    "retailer": "morrisons",
    "name": "Morrisons Savers Blueberries 125g",
    "price_pence": 129,
    "pack_size": 125,
    "slug": "morrisons-savers-blueberries-125g/113455600"
+  },
+  "cofid": {
+   "code": "14-325",
+   "name": "Blueberries",
+   "verified": true,
+   "basis": "cofid"
   }
  },
  {
@@ -311,13 +531,25 @@
   "unit": "bananas",
   "cupboard": false,
   "allergens": [],
-  "per100": null,
+  "per100": {
+   "kcal": 81,
+   "protein_g": 1.2,
+   "carbs_g": 20.3,
+   "fat_g": 0.1
+  },
   "product": {
    "retailer": "morrisons",
    "name": "Fyffes Bananas 5 Pack",
    "price_pence": 78,
    "pack_size": 5,
    "slug": "fyffes-bananas-5-pack/115455355"
+  },
+  "gramsPerUnit": 100,
+  "cofid": {
+   "code": "14-318",
+   "name": "Bananas, flesh only",
+   "verified": true,
+   "basis": "cofid"
   }
  },
  {
@@ -326,13 +558,25 @@
   "unit": "apples",
   "cupboard": false,
   "allergens": [],
-  "per100": null,
+  "per100": {
+   "kcal": 51,
+   "protein_g": 0.6,
+   "carbs_g": 11.6,
+   "fat_g": 0.5
+  },
   "product": {
    "retailer": "morrisons",
    "name": "Gala Apple (loose)",
    "price_pence": 45,
    "pack_size": 1,
    "slug": "morrisons-loose-royal-gala-apples/109861752"
+  },
+  "gramsPerUnit": 140,
+  "cofid": {
+   "code": "14-319",
+   "name": "Apples, eating, raw, flesh and skin",
+   "verified": true,
+   "basis": "cofid"
   }
  },
  {
@@ -348,7 +592,8 @@
    "price_pence": 37,
    "pack_size": 1,
    "slug": "morrisons-loose-lemon/108379999"
-  }
+  },
+  "negligible": true
  },
  {
   "slug": "iceberg",
@@ -356,13 +601,25 @@
   "unit": "heads",
   "cupboard": false,
   "allergens": [],
-  "per100": null,
+  "per100": {
+   "kcal": 14,
+   "protein_g": 0,
+   "carbs_g": 1.9,
+   "fat_g": 0
+  },
   "product": {
    "retailer": "morrisons",
    "name": "Morrisons British Iceberg Lettuce",
    "price_pence": 89,
    "pack_size": 1,
    "slug": "morrisons-british-iceberg-lettuce/108370943"
+  },
+  "gramsPerUnit": 400,
+  "cofid": {
+   "code": "13-520",
+   "name": "Lettuce, average, raw",
+   "verified": true,
+   "basis": "label"
   }
  },
  {
@@ -371,13 +628,25 @@
   "unit": "cucumbers",
   "cupboard": false,
   "allergens": [],
-  "per100": null,
+  "per100": {
+   "kcal": 14,
+   "protein_g": 1,
+   "carbs_g": 1.2,
+   "fat_g": 0.6
+  },
   "product": {
    "retailer": "morrisons",
    "name": "Whole Cucumber",
    "price_pence": 99,
    "pack_size": 1,
    "slug": "morrisons-whole-cucumber/108413093"
+  },
+  "gramsPerUnit": 300,
+  "cofid": {
+   "code": "13-523",
+   "name": "Cucumber, raw, flesh and skin",
+   "verified": true,
+   "basis": "cofid"
   }
  },
  {
@@ -386,13 +655,24 @@
   "unit": "g",
   "cupboard": false,
   "allergens": [],
-  "per100": null,
+  "per100": {
+   "kcal": 20,
+   "protein_g": 0,
+   "carbs_g": 3.1,
+   "fat_g": 0
+  },
   "product": {
    "retailer": "morrisons",
    "name": "Morrisons Baby Plum Tomatoes 250g",
    "price_pence": 77,
    "pack_size": 250,
    "slug": "morrisons-baby-plum-tomatoes-250g/108388174"
+  },
+  "cofid": {
+   "code": "13-519",
+   "name": "Tomatoes, cherry, raw",
+   "verified": true,
+   "basis": "label"
   }
  },
  {
@@ -401,13 +681,24 @@
   "unit": "g",
   "cupboard": false,
   "allergens": [],
-  "per100": null,
+  "per100": {
+   "kcal": 17,
+   "protein_g": 1.6,
+   "carbs_g": 1.2,
+   "fat_g": 0
+  },
   "product": {
    "retailer": "morrisons",
    "name": "Morrisons Crispy Salad 120g",
    "price_pence": 100,
    "pack_size": 120,
    "slug": "morrisons-crispy-salad-120g/115831779"
+  },
+  "cofid": {
+   "code": "13-520",
+   "name": "Lettuce, average, raw",
+   "verified": true,
+   "basis": "label"
   }
  },
  {
@@ -416,13 +707,25 @@
   "unit": "onions",
   "cupboard": false,
   "allergens": [],
-  "per100": null,
+  "per100": {
+   "kcal": 35,
+   "protein_g": 1,
+   "carbs_g": 8,
+   "fat_g": 0.1
+  },
   "product": {
    "retailer": "morrisons",
    "name": "Morrisons Brown Onions 3 Pack",
    "price_pence": 95,
    "pack_size": 3,
    "slug": "morrisons-brown-onions-3-pack/113301635"
+  },
+  "gramsPerUnit": 110,
+  "cofid": {
+   "code": "13-499",
+   "name": "Onions, raw",
+   "verified": true,
+   "basis": "cofid"
   }
  },
  {
@@ -431,13 +734,25 @@
   "unit": "bunches",
   "cupboard": false,
   "allergens": [],
-  "per100": null,
+  "per100": {
+   "kcal": 23,
+   "protein_g": 2,
+   "carbs_g": 3,
+   "fat_g": 0.5
+  },
   "product": {
    "retailer": "morrisons",
    "name": "Morrisons Salad Onions (bunch)",
    "price_pence": 69,
    "pack_size": 1,
    "slug": "morrisons-salad-onions-minimum-100g/108336382"
+  },
+  "gramsPerUnit": 90,
+  "cofid": {
+   "code": "13-352",
+   "name": "Spring onions, bulbs and tops, raw",
+   "verified": true,
+   "basis": "cofid"
   }
  },
  {
@@ -446,13 +761,24 @@
   "unit": "g",
   "cupboard": false,
   "allergens": [],
-  "per100": null,
+  "per100": {
+   "kcal": 42,
+   "protein_g": 0,
+   "carbs_g": 7.9,
+   "fat_g": 0
+  },
   "product": {
    "retailer": "morrisons",
    "name": "Morrisons British Carrots 500g",
    "price_pence": 44,
    "pack_size": 500,
    "slug": "morrisons-british-carrots-500g/108305383"
+  },
+  "cofid": {
+   "code": "13-496",
+   "name": "Carrots, old, raw",
+   "verified": true,
+   "basis": "label"
   }
  },
  {
@@ -461,13 +787,26 @@
   "unit": "peppers",
   "cupboard": false,
   "allergens": [],
-  "per100": null,
+  "per100": {
+   "kcal": 15,
+   "protein_g": 0.8,
+   "carbs_g": 2.6,
+   "fat_g": 0.3
+  },
   "product": {
    "retailer": "morrisons",
    "name": "Red Pepper (loose)",
    "price_pence": 70,
    "pack_size": 1,
    "slug": "morrisons-loose-red-pepper/108407187"
+  },
+  "gramsPerUnit": 150,
+  "cofid": {
+   "code": "13-318",
+   "name": "Peppers, capsicum, green, raw",
+   "verified": true,
+   "basis": "cofid",
+   "approx": "green capsicum for red (CoFID has no red sweet pepper)"
   }
  },
  {
@@ -476,13 +815,26 @@
   "unit": "peppers",
   "cupboard": false,
   "allergens": [],
-  "per100": null,
+  "per100": {
+   "kcal": 15,
+   "protein_g": 0.8,
+   "carbs_g": 2.6,
+   "fat_g": 0.3
+  },
   "product": {
    "retailer": "morrisons",
    "name": "Morrisons Savers Mixed Peppers 3 Pack",
    "price_pence": 169,
    "pack_size": 3,
    "slug": "morrisons-savers-mixed-peppers-3-pack-colours-may-vary/112916566"
+  },
+  "gramsPerUnit": 150,
+  "cofid": {
+   "code": "13-318",
+   "name": "Peppers, capsicum, green, raw",
+   "verified": true,
+   "basis": "cofid",
+   "approx": "green capsicum for mixed colours"
   }
  },
  {
@@ -491,13 +843,24 @@
   "unit": "g",
   "cupboard": false,
   "allergens": [],
-  "per100": null,
+  "per100": {
+   "kcal": 25,
+   "protein_g": 1.8,
+   "carbs_g": 4,
+   "fat_g": 0
+  },
   "product": {
    "retailer": "morrisons",
    "name": "Morrisons Fresh Red Chillies 50g",
    "price_pence": 59,
    "pack_size": 50,
    "slug": "morrisons-fresh-red-chillies-50g/108384886"
+  },
+  "cofid": {
+   "code": "13-317",
+   "name": "Peppers, capsicum, chilli, red, raw",
+   "verified": true,
+   "basis": "label"
   }
  },
  {
@@ -506,13 +869,24 @@
   "unit": "g",
   "cupboard": false,
   "allergens": [],
-  "per100": null,
+  "per100": {
+   "kcal": 34,
+   "protein_g": 4.3,
+   "carbs_g": 3.2,
+   "fat_g": 0.6
+  },
   "product": {
    "retailer": "morrisons",
    "name": "Morrisons British Organic Broccoli 300g",
    "price_pence": 140,
    "pack_size": 300,
    "slug": "morrisons-british-organic-broccoli-300g/112683256"
+  },
+  "cofid": {
+   "code": "13-502",
+   "name": "Broccoli, green, raw",
+   "verified": true,
+   "basis": "cofid"
   }
  },
  {
@@ -523,13 +897,26 @@
   "allergens": [
    "milk"
   ],
-  "per100": null,
+  "per100": {
+   "kcal": 92,
+   "protein_g": 1.8,
+   "carbs_g": 15.4,
+   "fat_g": 2.1
+  },
   "product": {
    "retailer": "morrisons",
    "name": "Morrisons Baby Potatoes with Chives & Butter 350g",
    "price_pence": 225,
    "pack_size": 350,
    "slug": "morrisons-baby-potatoes-with-chives-salted-butter-350g/114805886"
+  },
+  "cofid": {
+   "code": "13-495",
+   "name": "Potatoes, new and salad, boiled in unsalted water, flesh and skin",
+   "verified": true,
+   "basis": "label",
+   "approx": "boiled new potatoes for buttered baby potato pouch",
+   "note": "Label used: a ready-cooked pouch with butter and chives (92 kcal), so as-consumed is as-sold and richer than plain boiled new potatoes."
   }
  },
  {
@@ -538,13 +925,25 @@
   "unit": "cobs",
   "cupboard": false,
   "allergens": [],
-  "per100": null,
+  "per100": {
+   "kcal": 39,
+   "protein_g": 2.1,
+   "carbs_g": 5.6,
+   "fat_g": 1.1
+  },
   "product": {
    "retailer": "morrisons",
    "name": "Morrisons 2 Sweetcorn Cobs",
    "price_pence": 139,
    "pack_size": 2,
    "slug": "morrisons-2-sweetcorn-cobs/108460586"
+  },
+  "gramsPerUnit": 230,
+  "cofid": {
+   "code": "13-606",
+   "name": "Sweetcorn, kernels, boiled 'on the cob' in unsalted water, weighed with core",
+   "verified": true,
+   "basis": "cofid"
   }
  },
  {
@@ -553,13 +952,26 @@
   "unit": "g",
   "cupboard": false,
   "allergens": [],
-  "per100": null,
+  "per100": {
+   "kcal": 35,
+   "protein_g": 1.4,
+   "carbs_g": 3.4,
+   "fat_g": 1.5
+  },
   "product": {
    "retailer": "morrisons",
    "name": "Morrisons Vegetable Stir Fry Mix 500g",
    "price_pence": 247,
    "pack_size": 500,
    "slug": "morrisons-stir-fry-vegetables/104896753"
+  },
+  "cofid": {
+   "code": "13-604",
+   "name": "Vegetables, mixed, stir-fry type, frozen, fried in rapeseed oil",
+   "verified": true,
+   "basis": "label",
+   "approx": "frozen stir-fry veg for a fresh stir-fry mix",
+   "note": "Label used: sold raw; CoFID's entry is stir-fried in oil."
   }
  },
  {
@@ -567,14 +979,28 @@
   "name": "Morrisons Crispy Potato Slices 300g",
   "unit": "g",
   "cupboard": false,
-  "allergens": [],
-  "per100": null,
+  "allergens": [
+   "gluten"
+  ],
+  "per100": {
+   "kcal": 189,
+   "protein_g": 3.2,
+   "carbs_g": 35.3,
+   "fat_g": 4.9
+  },
   "product": {
    "retailer": "morrisons",
    "name": "Morrisons Crispy Potato Slices 300g",
    "price_pence": 150,
    "pack_size": 300,
    "slug": "morrisons-crispy-potato-slices/112818018"
+  },
+  "cofid": {
+   "code": "13-487",
+   "name": "Potato chips, oven ready, no batter, baked",
+   "verified": true,
+   "basis": "cofid",
+   "approx": "oven chips for crispy potato slices"
   }
  },
  {
@@ -582,14 +1008,29 @@
   "name": "Morrisons Green Vegetable Medley 250g",
   "unit": "g",
   "cupboard": false,
-  "allergens": [],
-  "per100": null,
+  "allergens": [
+   "milk"
+  ],
+  "per100": {
+   "kcal": 82,
+   "protein_g": 4.3,
+   "carbs_g": 5.3,
+   "fat_g": 3.8
+  },
   "product": {
    "retailer": "morrisons",
    "name": "Morrisons Green Vegetable Medley 250g",
    "price_pence": 210,
    "pack_size": 250,
    "slug": "morrisons-green-vegetable-medley-250g/115851497"
+  },
+  "cofid": {
+   "code": "13-502",
+   "name": "Broccoli, green, raw",
+   "verified": true,
+   "basis": "label",
+   "approx": "broccoli for green vegetable medley",
+   "note": "Label used: the medley comes with a buttery sauce (contains milk), so it is not plain broccoli."
   }
  },
  {
@@ -598,13 +1039,24 @@
   "unit": "g",
   "cupboard": false,
   "allergens": [],
-  "per100": null,
+  "per100": {
+   "kcal": 19,
+   "protein_g": 2.6,
+   "carbs_g": 0,
+   "fat_g": 0
+  },
   "product": {
    "retailer": "morrisons",
    "name": "Morrisons Baby Spinach 160g",
    "price_pence": 100,
    "pack_size": 160,
    "slug": "morrisons-baby-spinach-160g/108320372"
+  },
+  "cofid": {
+   "code": "13-521",
+   "name": "Spinach, baby, raw",
+   "verified": true,
+   "basis": "label"
   }
  },
  {
@@ -615,13 +1067,24 @@
   "allergens": [
    "milk"
   ],
-  "per100": null,
+  "per100": {
+   "kcal": 178,
+   "protein_g": 2.7,
+   "carbs_g": 6.6,
+   "fat_g": 15.5
+  },
   "product": {
    "retailer": "morrisons",
    "name": "Morrisons Reduced Fat Crème Fraîche 300ml",
    "price_pence": 75,
    "pack_size": 300,
    "slug": "morrisons-british-reduced-fat-creme-fraiche/113016990"
+  },
+  "cofid": {
+   "code": "12-336",
+   "name": "Creme fraiche, half fat",
+   "verified": true,
+   "basis": "label"
   }
  },
  {
@@ -630,13 +1093,24 @@
   "unit": "g",
   "cupboard": false,
   "allergens": [],
-  "per100": null,
+  "per100": {
+   "kcal": 20,
+   "protein_g": 0,
+   "carbs_g": 2.7,
+   "fat_g": 0
+  },
   "product": {
    "retailer": "morrisons",
    "name": "Morrisons Chopped Tomatoes 400g",
    "price_pence": 45,
    "pack_size": 400,
    "slug": "morrisons-chopped-tomatoes-400g/105415501"
+  },
+  "cofid": {
+   "code": "13-530",
+   "name": "Tomatoes, canned, whole contents",
+   "verified": true,
+   "basis": "label"
   }
  },
  {
@@ -645,13 +1119,25 @@
   "unit": "g",
   "cupboard": false,
   "allergens": [],
-  "per100": null,
+  "per100": {
+   "kcal": 60,
+   "protein_g": 5.2,
+   "carbs_g": 9.1,
+   "fat_g": 0.6
+  },
   "product": {
    "retailer": "morrisons",
    "name": "Morrisons Red Kidney Beans 400g",
    "price_pence": 37,
    "pack_size": 400,
    "slug": "morrisons-red-kidney-beans-400g/105408168"
+  },
+  "cofid": {
+   "code": "13-660",
+   "name": "Beans, red kidney, canned in water, re-heated, drained",
+   "verified": true,
+   "basis": "cofid",
+   "note": "Tin weight includes liquid: CoFID/label values are per 100 g drained, a 400 g tin drains to about 240 g, so values are scaled by 0.6."
   }
  },
  {
@@ -660,11 +1146,11 @@
   "unit": "bars",
   "cupboard": false,
   "allergens": [
-   "milk",
-   "soya",
    "gluten",
+   "milk",
    "nuts",
-   "peanuts"
+   "peanuts",
+   "soya"
   ],
   "per100": null,
   "product": {
@@ -673,7 +1159,8 @@
    "price_pence": 1000,
    "pack_size": 4,
    "slug": "grenade-protein-bars-oreo-4x60g/113338551"
-  }
+  },
+  "gramsPerUnit": 60
  },
  {
   "slug": "wafer",
@@ -681,19 +1168,30 @@
   "unit": "wafers",
   "cupboard": false,
   "allergens": [
-   "milk",
-   "soya",
    "gluten",
+   "milk",
    "nuts",
-   "peanuts"
+   "peanuts",
+   "soya"
   ],
-  "per100": null,
+  "per100": {
+   "kcal": 481,
+   "protein_g": 37,
+   "carbs_g": 32,
+   "fat_g": 22
+  },
   "product": {
    "retailer": "morrisons",
    "name": "Myprotein Protein Wafer Vanilla 40g",
    "price_pence": 200,
    "pack_size": 1,
    "slug": "myprotein-protein-wafer-vanilla/114041821"
+  },
+  "gramsPerUnit": 40,
+  "cofid": {
+   "name": "Pack label (no CoFID cross-check)",
+   "verified": true,
+   "basis": "label"
   }
  },
  {
@@ -705,13 +1203,24 @@
    "milk",
    "soya"
   ],
-  "per100": null,
+  "per100": {
+   "kcal": 417,
+   "protein_g": 23,
+   "carbs_g": 51,
+   "fat_g": 11
+  },
   "product": {
    "retailer": "morrisons",
    "name": "Novo Protein Pops Sour Cream & Onion 45g",
    "price_pence": 125,
    "pack_size": 1,
    "slug": "novo-protein-pops-sour-cream-and-onion/114016545"
+  },
+  "gramsPerUnit": 45,
+  "cofid": {
+   "name": "Pack label (no CoFID cross-check)",
+   "verified": true,
+   "basis": "label"
   }
  },
  {
@@ -722,13 +1231,26 @@
   "allergens": [
    "milk"
   ],
-  "per100": null,
+  "per100": {
+   "kcal": 295,
+   "protein_g": 22,
+   "carbs_g": 0,
+   "fat_g": 23
+  },
   "product": {
    "retailer": "morrisons",
    "name": "Mini Babybel Original 6×20g",
    "price_pence": 245,
    "pack_size": 6,
    "slug": "mini-babybel-original-cheese-snacks/103090117"
+  },
+  "gramsPerUnit": 20,
+  "cofid": {
+   "code": "12-355",
+   "name": "Cheese, Edam",
+   "verified": true,
+   "basis": "label",
+   "approx": "Edam for Babybel"
   }
  },
  {
@@ -738,8 +1260,23 @@
   "cupboard": true,
   "note": "Easy Cook Long Grain Rice 1kg · £1.25",
   "allergens": [],
-  "per100": null,
-  "product": null
+  "per100": {
+   "kcal": 347,
+   "protein_g": 7,
+   "carbs_g": 82.3,
+   "fat_g": 1.1
+  },
+  "product": null,
+  "cupboardPrice": {
+   "pence": 125,
+   "grams": 1000
+  },
+  "cofid": {
+   "code": "11-863",
+   "name": "Rice, white, long grain, easy cook, raw",
+   "verified": true,
+   "basis": "cofid"
+  }
  },
  {
   "slug": "spaghetti",
@@ -750,8 +1287,23 @@
   "allergens": [
    "gluten"
   ],
-  "per100": null,
-  "product": null
+  "per100": {
+   "kcal": 343,
+   "protein_g": 11.3,
+   "carbs_g": 75.6,
+   "fat_g": 1.6
+  },
+  "product": null,
+  "cupboardPrice": {
+   "pence": 75,
+   "grams": 500
+  },
+  "cofid": {
+   "code": "11-716",
+   "name": "Pasta, white, dried, raw",
+   "verified": true,
+   "basis": "cofid"
+  }
  },
  {
   "slug": "fusilli",
@@ -762,8 +1314,23 @@
   "allergens": [
    "gluten"
   ],
-  "per100": null,
-  "product": null
+  "per100": {
+   "kcal": 343,
+   "protein_g": 11.3,
+   "carbs_g": 75.6,
+   "fat_g": 1.6
+  },
+  "product": null,
+  "cupboardPrice": {
+   "pence": 75,
+   "grams": 500
+  },
+  "cofid": {
+   "code": "11-716",
+   "name": "Pasta, white, dried, raw",
+   "verified": true,
+   "basis": "cofid"
+  }
  },
  {
   "slug": "noodles",
@@ -772,11 +1339,26 @@
   "cupboard": true,
   "note": "Fine Egg Noodles 250g · £0.95",
   "allergens": [
-   "gluten",
-   "eggs"
+   "eggs",
+   "gluten"
   ],
-  "per100": null,
-  "product": null
+  "per100": {
+   "kcal": 338,
+   "protein_g": 12,
+   "carbs_g": 72.6,
+   "fat_g": 2
+  },
+  "product": null,
+  "cupboardPrice": {
+   "pence": 95,
+   "grams": 250
+  },
+  "cofid": {
+   "code": "11-719",
+   "name": "Noodles, egg, dried, raw",
+   "verified": true,
+   "basis": "cofid"
+  }
  },
  {
   "slug": "lasagne",
@@ -785,11 +1367,26 @@
   "cupboard": true,
   "note": "Lasagne Sheets 300g · £0.75",
   "allergens": [
-   "gluten",
-   "eggs"
+   "eggs",
+   "gluten"
   ],
-  "per100": null,
-  "product": null
+  "per100": {
+   "kcal": 343,
+   "protein_g": 11.3,
+   "carbs_g": 75.6,
+   "fat_g": 1.6
+  },
+  "product": null,
+  "cupboardPrice": {
+   "pence": 75,
+   "grams": 300
+  },
+  "cofid": {
+   "code": "11-716",
+   "name": "Pasta, white, dried, raw",
+   "verified": true,
+   "basis": "cofid"
+  }
  },
  {
   "slug": "granola",
@@ -799,11 +1396,15 @@
   "note": "FUEL10K Protein Granola 400g · £3.75",
   "allergens": [
    "gluten",
-   "nuts",
-   "milk"
+   "milk",
+   "nuts"
   ],
   "per100": null,
-  "product": null
+  "product": null,
+  "cupboardPrice": {
+   "pence": 375,
+   "grams": 400
+  }
  },
  {
   "slug": "butter",
@@ -814,8 +1415,23 @@
   "allergens": [
    "milk"
   ],
-  "per100": null,
-  "product": null
+  "per100": {
+   "kcal": 715,
+   "protein_g": 0.4,
+   "carbs_g": 0.5,
+   "fat_g": 79.1
+  },
+  "product": null,
+  "cupboardPrice": {
+   "pence": 218,
+   "grams": 500
+  },
+  "cofid": {
+   "code": "17-655",
+   "name": "Butter, spreadable (75-80% fat)",
+   "verified": true,
+   "basis": "cofid"
+  }
  },
  {
   "slug": "puree",
@@ -824,8 +1440,23 @@
   "cupboard": true,
   "note": "Tomato Puree 200g · £0.59",
   "allergens": [],
-  "per100": null,
-  "product": null
+  "per100": {
+   "kcal": 67,
+   "protein_g": 4.4,
+   "carbs_g": 12.9,
+   "fat_g": 0.2
+  },
+  "product": null,
+  "cupboardPrice": {
+   "pence": 59,
+   "grams": 200
+  },
+  "cofid": {
+   "code": "13-531",
+   "name": "Tomato puree",
+   "verified": true,
+   "basis": "cofid"
+  }
  },
  {
   "slug": "tuna",
@@ -836,8 +1467,23 @@
   "allergens": [
    "fish"
   ],
-  "per100": null,
-  "product": null
+  "per100": {
+   "kcal": 109,
+   "protein_g": 24.9,
+   "carbs_g": 0,
+   "fat_g": 1
+  },
+  "product": null,
+  "cupboardPrice": {
+   "pence": 249,
+   "grams": 448
+  },
+  "cofid": {
+   "code": "16-416",
+   "name": "Tuna, canned in brine, drained",
+   "verified": true,
+   "basis": "cofid"
+  }
  },
  {
   "slug": "peri",
@@ -851,7 +1497,12 @@
    "sulphites"
   ],
   "per100": null,
-  "product": null
+  "product": null,
+  "cupboardPrice": {
+   "pence": 125,
+   "grams": 25
+  },
+  "negligible": true
  },
  {
   "slug": "fajita",
@@ -863,7 +1514,12 @@
    "sulphites"
   ],
   "per100": null,
-  "product": null
+  "product": null,
+  "cupboardPrice": {
+   "pence": 109,
+   "grams": 40
+  },
+  "negligible": true
  },
  {
   "slug": "fivespice",
@@ -873,7 +1529,12 @@
   "note": "Chinese 5 Spice 33g · £1.09",
   "allergens": [],
   "per100": null,
-  "product": null
+  "product": null,
+  "cupboardPrice": {
+   "pence": 109,
+   "grams": 33
+  },
+  "negligible": true
  },
  {
   "slug": "soy",
@@ -882,11 +1543,26 @@
   "cupboard": true,
   "note": "Light Soy Sauce 150ml · £0.90",
   "allergens": [
-   "soya",
-   "gluten"
+   "gluten",
+   "soya"
   ],
-  "per100": null,
-  "product": null
+  "per100": {
+   "kcal": 79,
+   "protein_g": 3,
+   "carbs_g": 17.9,
+   "fat_g": 0
+  },
+  "product": null,
+  "cupboardPrice": {
+   "pence": 90,
+   "grams": 150
+  },
+  "cofid": {
+   "code": "17-721",
+   "name": "Soy sauce, light and dark varieties",
+   "verified": true,
+   "basis": "cofid"
+  }
  },
  {
   "slug": "honey",
@@ -895,8 +1571,23 @@
   "cupboard": true,
   "note": "Clear Honey 454g · £1.95",
   "allergens": [],
-  "per100": null,
-  "product": null
+  "per100": {
+   "kcal": 288,
+   "protein_g": 0.4,
+   "carbs_g": 76.4,
+   "fat_g": 0
+  },
+  "product": null,
+  "cupboardPrice": {
+   "pence": 195,
+   "grams": 454
+  },
+  "cofid": {
+   "code": "17-050",
+   "name": "Honey",
+   "verified": true,
+   "basis": "cofid"
+  }
  },
  {
   "slug": "teriyaki",
@@ -905,12 +1596,28 @@
   "cupboard": true,
   "note": "Teriyaki Stir Fry Sauce 152g · £0.55",
   "allergens": [
-   "soya",
    "gluten",
-   "sesame"
+   "sesame",
+   "soya"
   ],
-  "per100": null,
-  "product": null
+  "per100": {
+   "kcal": 92,
+   "protein_g": 1.4,
+   "carbs_g": 19.9,
+   "fat_g": 1.3
+  },
+  "product": null,
+  "cupboardPrice": {
+   "pence": 55,
+   "grams": 152
+  },
+  "cofid": {
+   "code": "17-629",
+   "name": "Sauce, Chinese stir fry",
+   "verified": true,
+   "basis": "cofid",
+   "approx": "Chinese stir-fry sauce for teriyaki sauce"
+  }
  },
  {
   "slug": "mayo",
@@ -922,8 +1629,23 @@
    "eggs",
    "mustard"
   ],
-  "per100": null,
-  "product": null
+  "per100": {
+   "kcal": 288,
+   "protein_g": 1,
+   "carbs_g": 8.2,
+   "fat_g": 28.1
+  },
+  "product": null,
+  "cupboardPrice": {
+   "pence": 99,
+   "grams": 500
+  },
+  "cofid": {
+   "code": "17-679",
+   "name": "Mayonnaise, reduced fat",
+   "verified": true,
+   "basis": "cofid"
+  }
  },
  {
   "slug": "seafood",
@@ -936,7 +1658,11 @@
    "mustard"
   ],
   "per100": null,
-  "product": null
+  "product": null,
+  "cupboardPrice": {
+   "pence": 63,
+   "grams": 250
+  }
  },
  {
   "slug": "cheddar",
@@ -947,8 +1673,23 @@
   "allergens": [
    "milk"
   ],
-  "per100": null,
-  "product": null
+  "per100": {
+   "kcal": 416,
+   "protein_g": 25.4,
+   "carbs_g": 0.1,
+   "fat_g": 34.9
+  },
+  "product": null,
+  "cupboardPrice": {
+   "pence": 339,
+   "grams": 625
+  },
+  "cofid": {
+   "code": "12-346",
+   "name": "Cheese, Cheddar, English",
+   "verified": true,
+   "basis": "cofid"
+  }
  },
  {
   "slug": "frozenfruit",
@@ -957,8 +1698,24 @@
   "cupboard": true,
   "note": "Frozen Summer Fruits 430g · £3.35",
   "allergens": [],
-  "per100": null,
-  "product": null
+  "per100": {
+   "kcal": 30,
+   "protein_g": 0.6,
+   "carbs_g": 6.1,
+   "fat_g": 0.5
+  },
+  "product": null,
+  "cupboardPrice": {
+   "pence": 335,
+   "grams": 430
+  },
+  "cofid": {
+   "code": "14-324",
+   "name": "Strawberries, raw",
+   "verified": true,
+   "basis": "cofid",
+   "approx": "strawberries for frozen summer fruits"
+  }
  },
  {
   "slug": "sweetcorn",
@@ -967,8 +1724,23 @@
   "cupboard": true,
   "note": "Savers Sweetcorn tin 326g · £0.50",
   "allergens": [],
-  "per100": null,
-  "product": null
+  "per100": {
+   "kcal": 78,
+   "protein_g": 2.6,
+   "carbs_g": 13.9,
+   "fat_g": 1.7
+  },
+  "product": null,
+  "cupboardPrice": {
+   "pence": 50,
+   "grams": 285
+  },
+  "cofid": {
+   "code": "13-529",
+   "name": "Sweetcorn kernels, canned in water, drained",
+   "verified": true,
+   "basis": "cofid"
+  }
  },
  {
   "slug": "nuts",
@@ -980,8 +1752,23 @@
    "nuts",
    "peanuts"
   ],
-  "per100": null,
-  "product": null
+  "per100": {
+   "kcal": 581,
+   "protein_g": 23.8,
+   "carbs_g": 11.6,
+   "fat_g": 49.1
+  },
+  "product": null,
+  "cupboardPrice": {
+   "pence": 255,
+   "grams": 180
+  },
+  "cofid": {
+   "code": "14-880",
+   "name": "Nuts, mixed",
+   "verified": true,
+   "basis": "cofid"
+  }
  },
  {
   "slug": "garlic",
@@ -990,8 +1777,23 @@
   "cupboard": true,
   "note": "Garlic 400g net · £2.00",
   "allergens": [],
-  "per100": null,
-  "product": null
+  "per100": {
+   "kcal": 98,
+   "protein_g": 7.9,
+   "carbs_g": 16.3,
+   "fat_g": 0.6
+  },
+  "product": null,
+  "cupboardPrice": {
+   "pence": 200,
+   "grams": 400
+  },
+  "cofid": {
+   "code": "13-244",
+   "name": "Garlic, raw",
+   "verified": true,
+   "basis": "cofid"
+  }
  },
  {
   "slug": "parmesan",
@@ -1002,8 +1804,23 @@
   "allergens": [
    "milk"
   ],
-  "per100": null,
-  "product": null
+  "per100": {
+   "kcal": 415,
+   "protein_g": 36.2,
+   "carbs_g": 0.9,
+   "fat_g": 29.7
+  },
+  "product": null,
+  "cupboardPrice": {
+   "pence": 280,
+   "grams": 100
+  },
+  "cofid": {
+   "code": "12-526",
+   "name": "Cheese, Parmesan, fresh",
+   "verified": true,
+   "basis": "cofid"
+  }
  },
  {
   "slug": "cornflour",
@@ -1012,8 +1829,23 @@
   "cupboard": true,
   "note": "Cornflour 500g · £2.50",
   "allergens": [],
-  "per100": null,
-  "product": null
+  "per100": {
+   "kcal": 354,
+   "protein_g": 0.6,
+   "carbs_g": 92,
+   "fat_g": 0.7
+  },
+  "product": null,
+  "cupboardPrice": {
+   "pence": 250,
+   "grams": 500
+  },
+  "cofid": {
+   "code": "11-1045",
+   "name": "Flour, corn",
+   "verified": true,
+   "basis": "cofid"
+  }
  },
  {
   "slug": "oil",
@@ -1022,8 +1854,23 @@
   "cupboard": true,
   "note": "Vegetable Oil 1L · £1.45",
   "allergens": [],
-  "per100": null,
-  "product": null
+  "per100": {
+   "kcal": 899,
+   "protein_g": 0,
+   "carbs_g": 0,
+   "fat_g": 99.9
+  },
+  "product": null,
+  "cupboardPrice": {
+   "pence": 145,
+   "grams": 1000
+  },
+  "cofid": {
+   "code": "17-686",
+   "name": "Oil, vegetable, average",
+   "verified": true,
+   "basis": "cofid"
+  }
  },
  {
   "slug": "herbs",
@@ -1033,7 +1880,12 @@
   "note": "Mixed Herbs 14g · £1.09",
   "allergens": [],
   "per100": null,
-  "product": null
+  "product": null,
+  "cupboardPrice": {
+   "pence": 109,
+   "grams": 14
+  },
+  "negligible": true
  },
  {
   "slug": "oregano",
@@ -1043,7 +1895,12 @@
   "note": "Oregano 28g · £1.90",
   "allergens": [],
   "per100": null,
-  "product": null
+  "product": null,
+  "cupboardPrice": {
+   "pence": 190,
+   "grams": 28
+  },
+  "negligible": true
  },
  {
   "slug": "isolate",
@@ -1056,6 +1913,1072 @@
    "soya"
   ],
   "per100": null,
-  "product": null
+  "product": null,
+  "cupboardPrice": {
+   "pence": 2600,
+   "grams": 1000
+  }
+ },
+ {
+  "slug": "oats",
+  "name": "Morrisons Porridge Oats 1kg",
+  "unit": "g",
+  "cupboard": false,
+  "allergens": [
+   "gluten"
+  ],
+  "per100": {
+   "kcal": 367,
+   "protein_g": 12.1,
+   "carbs_g": 56.1,
+   "fat_g": 8.4
+  },
+  "product": {
+   "retailer": "morrisons",
+   "name": "Morrisons Porridge Oats 1kg",
+   "price_pence": 135,
+   "pack_size": 1000,
+   "slug": "morrisons-porridge-oats/105489771"
+  },
+  "cofid": {
+   "code": "11-788",
+   "name": "Porridge oats, unfortified",
+   "verified": true,
+   "basis": "label"
+  }
+ },
+ {
+  "slug": "porkmince",
+  "name": "Morrisons British Pork Mince 5% Fat 500g",
+  "unit": "g",
+  "cupboard": false,
+  "allergens": [],
+  "per100": {
+   "kcal": 164,
+   "protein_g": 19.2,
+   "carbs_g": 0,
+   "fat_g": 9.7
+  },
+  "product": {
+   "retailer": "morrisons",
+   "name": "Morrisons British Pork Mince 5% Fat 500g",
+   "price_pence": 249,
+   "pack_size": 500,
+   "slug": "morrisons-british-pork-mince-5-fat-500g/107781821"
+  },
+  "cofid": {
+   "code": "18-606",
+   "name": "Pork, mince, raw",
+   "verified": false,
+   "basis": "cofid"
+  }
+ },
+ {
+  "slug": "porkloin",
+  "name": "Morrisons British Pork Loin Steaks 600g",
+  "unit": "g",
+  "cupboard": false,
+  "allergens": [],
+  "per100": {
+   "kcal": 225,
+   "protein_g": 19.9,
+   "carbs_g": 0,
+   "fat_g": 16.1
+  },
+  "product": {
+   "retailer": "morrisons",
+   "name": "Morrisons British Pork Loin Steaks 600g",
+   "price_pence": 590,
+   "pack_size": 600,
+   "slug": "morrisons-british-pork-loin-steaks-600g/112062396"
+  },
+  "cofid": {
+   "code": "18-522",
+   "name": "Pork, loin steaks, raw, lean and fat",
+   "verified": true,
+   "basis": "label"
+  }
+ },
+ {
+  "slug": "sausages",
+  "name": "Morrisons Butcher's Style 8 Pork Sausages 454g",
+  "unit": "sausages",
+  "cupboard": false,
+  "allergens": [
+   "gluten",
+   "sulphites"
+  ],
+  "per100": {
+   "kcal": 229,
+   "protein_g": 15.8,
+   "carbs_g": 8.1,
+   "fat_g": 14.7
+  },
+  "product": {
+   "retailer": "morrisons",
+   "name": "Morrisons Butcher's Style 8 Pork Sausages 454g",
+   "price_pence": 179,
+   "pack_size": 8,
+   "slug": "morrisons-butcher-s-style-8-pork-sausages-454g/104421547"
+  },
+  "gramsPerUnit": 56.75,
+  "cofid": {
+   "code": "19-510",
+   "name": "Sausages, pork, raw",
+   "verified": true,
+   "basis": "label",
+   "note": "Label used: 72% pork sausage; CoFID's generic raw pork sausage is much fattier."
+  }
+ },
+ {
+  "slug": "turkeymince",
+  "name": "Morrisons Turkey Mince 4% 500g",
+  "unit": "g",
+  "cupboard": false,
+  "allergens": [],
+  "per100": {
+   "kcal": 112,
+   "protein_g": 21.8,
+   "carbs_g": 0,
+   "fat_g": 2.6
+  },
+  "product": {
+   "retailer": "morrisons",
+   "name": "Morrisons Turkey Mince 4% 500g",
+   "price_pence": 450,
+   "pack_size": 500,
+   "slug": "morrisons-turkey-mince-4-500g/116227426"
+  },
+  "cofid": {
+   "code": "18-352",
+   "name": "Turkey, whole, raw",
+   "verified": true,
+   "basis": "label",
+   "approx": "whole turkey, raw (CoFID has no raw mince)"
+  }
+ },
+ {
+  "slug": "salmon",
+  "name": "Morrisons Boneless 2 Atlantic Salmon Fillets",
+  "unit": "g",
+  "cupboard": false,
+  "allergens": [],
+  "per100": {
+   "kcal": 217,
+   "protein_g": 20.4,
+   "carbs_g": 0,
+   "fat_g": 15
+  },
+  "product": {
+   "retailer": "morrisons",
+   "name": "Morrisons Boneless 2 Atlantic Salmon Fillets",
+   "price_pence": 495,
+   "pack_size": 220,
+   "slug": "morrisons-boneless-2-atlantic-salmon-fillets/113496647"
+  },
+  "cofid": {
+   "code": "16-356",
+   "name": "Salmon, farmed, flesh only, raw",
+   "verified": true,
+   "basis": "cofid"
+  }
+ },
+ {
+  "slug": "cod",
+  "name": "Morrisons 2 Cod Fillets 220g",
+  "unit": "g",
+  "cupboard": false,
+  "allergens": [],
+  "per100": {
+   "kcal": 75,
+   "protein_g": 17.5,
+   "carbs_g": 0,
+   "fat_g": 0.6
+  },
+  "product": {
+   "retailer": "morrisons",
+   "name": "Morrisons 2 Cod Fillets 220g",
+   "price_pence": 650,
+   "pack_size": 220,
+   "slug": "morrisons-2-cod-fillets-220g/110739421"
+  },
+  "cofid": {
+   "code": "16-372",
+   "name": "Cod, flesh only, raw",
+   "verified": true,
+   "basis": "cofid"
+  }
+ },
+ {
+  "slug": "smokedsalmon",
+  "name": "Morrisons Smoked Salmon Slices 120g",
+  "unit": "g",
+  "cupboard": false,
+  "allergens": [
+   "fish"
+  ],
+  "per100": {
+   "kcal": 192,
+   "protein_g": 21.8,
+   "carbs_g": 0,
+   "fat_g": 11.3
+  },
+  "product": {
+   "retailer": "morrisons",
+   "name": "Morrisons Smoked Salmon Slices 120g",
+   "price_pence": 450,
+   "pack_size": 120,
+   "slug": "morrisons-smoked-salmon-slices-120g/111897113"
+  },
+  "cofid": {
+   "code": "16-412",
+   "name": "Salmon, smoked (cold-smoked)",
+   "verified": true,
+   "basis": "label"
+  }
+ },
+ {
+  "slug": "lambmince",
+  "name": "Morrisons Lamb Mince 500g",
+  "unit": "g",
+  "cupboard": false,
+  "allergens": [],
+  "per100": {
+   "kcal": 216,
+   "protein_g": 17.8,
+   "carbs_g": 0,
+   "fat_g": 15.8
+  },
+  "product": {
+   "retailer": "morrisons",
+   "name": "Morrisons Lamb Mince 500g",
+   "price_pence": 550,
+   "pack_size": 500,
+   "slug": "morrisons-lamb-mince-500g/109408940"
+  },
+  "cofid": {
+   "code": "18-481",
+   "name": "Lamb, mince, raw",
+   "verified": true,
+   "basis": "label"
+  }
+ },
+ {
+  "slug": "halloumi",
+  "name": "Morrisons Halloumi 200g",
+  "unit": "g",
+  "cupboard": false,
+  "allergens": [
+   "milk"
+  ],
+  "per100": {
+   "kcal": 304,
+   "protein_g": 18.9,
+   "carbs_g": 2.7,
+   "fat_g": 24.1
+  },
+  "product": {
+   "retailer": "morrisons",
+   "name": "Morrisons Halloumi 200g",
+   "price_pence": 177,
+   "pack_size": 200,
+   "slug": "morrisons-halloumi-200g/112922894"
+  },
+  "cofid": {
+   "code": "12-496",
+   "name": "Cheese, Halloumi",
+   "verified": true,
+   "basis": "label"
+  }
+ },
+ {
+  "slug": "feta",
+  "name": "Morrisons Greek Feta 200g",
+  "unit": "g",
+  "cupboard": false,
+  "allergens": [],
+  "per100": {
+   "kcal": 303,
+   "protein_g": 16.2,
+   "carbs_g": 0,
+   "fat_g": 26.1
+  },
+  "product": {
+   "retailer": "morrisons",
+   "name": "Morrisons Greek Feta 200g",
+   "price_pence": 225,
+   "pack_size": 200,
+   "slug": "morrisons-greek-feta/106145443"
+  },
+  "cofid": {
+   "code": "12-525",
+   "name": "Cheese, Feta",
+   "verified": true,
+   "basis": "label"
+  }
+ },
+ {
+  "slug": "cottage",
+  "name": "Morrisons Low Fat Cottage Cheese 300g",
+  "unit": "g",
+  "cupboard": false,
+  "allergens": [
+   "milk"
+  ],
+  "per100": {
+   "kcal": 89,
+   "protein_g": 12.1,
+   "carbs_g": 6.4,
+   "fat_g": 1.6
+  },
+  "product": {
+   "retailer": "morrisons",
+   "name": "Morrisons Low Fat Cottage Cheese 300g",
+   "price_pence": 165,
+   "pack_size": 300,
+   "slug": "morrisons-low-fat-cottage-cheese/107374141"
+  },
+  "cofid": {
+   "code": "12-550",
+   "name": "Cheese, cottage, plain, reduced fat",
+   "verified": true,
+   "basis": "label",
+   "note": "Label used: product-specific 'low fat' recipe (89 kcal) vs CoFID reduced-fat (68 kcal)."
+  }
+ },
+ {
+  "slug": "softcheese",
+  "name": "Morrisons 50% Reduced Fat Soft Cheese 200g",
+  "unit": "g",
+  "cupboard": false,
+  "allergens": [],
+  "per100": {
+   "kcal": 143,
+   "protein_g": 9.2,
+   "carbs_g": 4.3,
+   "fat_g": 9.8
+  },
+  "product": {
+   "retailer": "morrisons",
+   "name": "Morrisons 50% Reduced Fat Soft Cheese 200g",
+   "price_pence": 130,
+   "pack_size": 200,
+   "slug": "morrisons-50-reduced-fat-soft-cheese-200g/112460669"
+  },
+  "cofid": {
+   "code": "12-538",
+   "name": "Cheese, spreadable, medium fat, soft, white",
+   "verified": true,
+   "basis": "label"
+  }
+ },
+ {
+  "slug": "bagels",
+  "name": "Morrisons Plain Bagels 5 Pack",
+  "unit": "bagels",
+  "cupboard": false,
+  "allergens": [
+   "gluten"
+  ],
+  "per100": {
+   "kcal": 264,
+   "protein_g": 9.2,
+   "carbs_g": 50.9,
+   "fat_g": 1.8
+  },
+  "product": {
+   "retailer": "morrisons",
+   "name": "Morrisons Plain Bagels 5 Pack",
+   "price_pence": 99,
+   "pack_size": 5,
+   "slug": "morrisons-plain-bagels/111099710"
+  },
+  "gramsPerUnit": 85,
+  "cofid": {
+   "code": "11-970",
+   "name": "Bagels, plain",
+   "verified": true,
+   "basis": "label"
+  }
+ },
+ {
+  "slug": "avocado",
+  "name": "Morrisons Ripe & Ready Avocados 2 Pack",
+  "unit": "avocados",
+  "cupboard": false,
+  "allergens": [],
+  "per100": {
+   "kcal": 171,
+   "protein_g": 1.8,
+   "carbs_g": 1.8,
+   "fat_g": 17.4
+  },
+  "product": {
+   "retailer": "morrisons",
+   "name": "Morrisons Ripe & Ready Avocados 2 Pack",
+   "price_pence": 150,
+   "pack_size": 2,
+   "slug": "morrisons-ripe-ready-avocados-2-pack/108409289"
+  },
+  "gramsPerUnit": 110,
+  "cofid": {
+   "code": "14-386",
+   "name": "Avocado, Hass, flesh only",
+   "verified": true,
+   "basis": "label"
+  }
+ },
+ {
+  "slug": "mushrooms",
+  "name": "Morrisons British Closed Cup Mushrooms 465g",
+  "unit": "g",
+  "cupboard": false,
+  "allergens": [],
+  "per100": {
+   "kcal": 7,
+   "protein_g": 1,
+   "carbs_g": 0.3,
+   "fat_g": 0.2
+  },
+  "product": {
+   "retailer": "morrisons",
+   "name": "Morrisons British Closed Cup Mushrooms 465g",
+   "price_pence": 150,
+   "pack_size": 465,
+   "slug": "morrisons-british-closed-cup-mushrooms-465g/115267952"
+  },
+  "cofid": {
+   "code": "13-505",
+   "name": "Mushrooms, white, raw",
+   "verified": true,
+   "basis": "cofid"
+  }
+ },
+ {
+  "slug": "courgette",
+  "name": "Morrisons Courgettes 500g",
+  "unit": "g",
+  "cupboard": false,
+  "allergens": [],
+  "per100": {
+   "kcal": 16,
+   "protein_g": 1.3,
+   "carbs_g": 2.3,
+   "fat_g": 0.2
+  },
+  "product": {
+   "retailer": "morrisons",
+   "name": "Morrisons Courgettes 500g",
+   "price_pence": 139,
+   "pack_size": 500,
+   "slug": "morrisons-courgettes/115508998"
+  },
+  "cofid": {
+   "code": "13-627",
+   "name": "Courgette, raw",
+   "verified": true,
+   "basis": "cofid"
+  }
+ },
+ {
+  "slug": "bakepot",
+  "name": "Morrisons British Baking Potatoes 4 Pack",
+  "unit": "potatoes",
+  "cupboard": false,
+  "allergens": [],
+  "per100": {
+   "kcal": 82,
+   "protein_g": 2.1,
+   "carbs_g": 17.2,
+   "fat_g": 0
+  },
+  "product": {
+   "retailer": "morrisons",
+   "name": "Morrisons British Baking Potatoes 4 Pack",
+   "price_pence": 79,
+   "pack_size": 4,
+   "slug": "morrisons-british-baking-potatoes-4-pack/108414272"
+  },
+  "gramsPerUnit": 250,
+  "cofid": {
+   "code": "13-489",
+   "name": "Potatoes, old, raw, flesh only",
+   "verified": true,
+   "basis": "label"
+  }
+ },
+ {
+  "slug": "potatoes",
+  "name": "Morrisons British Maris Piper Potatoes 1.25kg",
+  "unit": "g",
+  "cupboard": false,
+  "allergens": [],
+  "per100": {
+   "kcal": 82,
+   "protein_g": 1.9,
+   "carbs_g": 19.6,
+   "fat_g": 0.1
+  },
+  "product": {
+   "retailer": "morrisons",
+   "name": "Morrisons British Maris Piper Potatoes 1.25kg",
+   "price_pence": 145,
+   "pack_size": 1250,
+   "slug": "morrisons-british-maris-piper-potatoes-1-25kg/113830019"
+  },
+  "cofid": {
+   "code": "13-489",
+   "name": "Potatoes, old, raw, flesh only",
+   "verified": true,
+   "basis": "cofid"
+  }
+ },
+ {
+  "slug": "sweetpot",
+  "name": "Morrisons Sweet Potatoes 1kg",
+  "unit": "g",
+  "cupboard": false,
+  "allergens": [],
+  "per100": {
+   "kcal": 87,
+   "protein_g": 1.2,
+   "carbs_g": 21.3,
+   "fat_g": 0.3
+  },
+  "product": {
+   "retailer": "morrisons",
+   "name": "Morrisons Sweet Potatoes 1kg",
+   "price_pence": 119,
+   "pack_size": 1000,
+   "slug": "morrisons-sweet-potatoes-1kg/108572051"
+  },
+  "cofid": {
+   "code": "13-463",
+   "name": "Sweet potato, raw, flesh only",
+   "verified": true,
+   "basis": "cofid"
+  }
+ },
+ {
+  "slug": "peas",
+  "name": "Morrisons Garden Peas 1kg (frozen)",
+  "unit": "g",
+  "cupboard": false,
+  "allergens": [],
+  "per100": {
+   "kcal": 68,
+   "protein_g": 5.3,
+   "carbs_g": 10.7,
+   "fat_g": 0.7
+  },
+  "product": {
+   "retailer": "morrisons",
+   "name": "Morrisons Garden Peas 1kg (frozen)",
+   "price_pence": 165,
+   "pack_size": 1000,
+   "slug": "morrisons-garden-peas-1kg/112661655"
+  },
+  "cofid": {
+   "code": "13-527",
+   "name": "Peas, frozen, raw",
+   "verified": true,
+   "basis": "cofid"
+  }
+ },
+ {
+  "slug": "chips",
+  "name": "Morrisons Straight Cut Chips 1.2kg (frozen)",
+  "unit": "g",
+  "cupboard": false,
+  "allergens": [],
+  "per100": {
+   "kcal": 161,
+   "protein_g": 3.2,
+   "carbs_g": 27.5,
+   "fat_g": 3.6
+  },
+  "product": {
+   "retailer": "morrisons",
+   "name": "Morrisons Straight Cut Chips 1.2kg (frozen)",
+   "price_pence": 200,
+   "pack_size": 1200,
+   "slug": "morrisons-straight-cut-chips/108043934"
+  },
+  "cofid": {
+   "code": "13-487",
+   "name": "Potato chips, oven ready, no batter, baked",
+   "verified": true,
+   "basis": "label"
+  }
+ },
+ {
+  "slug": "passata",
+  "name": "Morrisons Passata 500g",
+  "unit": "g",
+  "cupboard": false,
+  "allergens": [],
+  "per100": {
+   "kcal": 21,
+   "protein_g": 1.2,
+   "carbs_g": 3.1,
+   "fat_g": 0
+  },
+  "product": {
+   "retailer": "morrisons",
+   "name": "Morrisons Passata 500g",
+   "price_pence": 45,
+   "pack_size": 500,
+   "slug": "morrisons-passata-500g/104954925"
+  },
+  "cofid": {
+   "code": "13-530",
+   "name": "Tomatoes, canned, whole contents",
+   "verified": true,
+   "basis": "label",
+   "approx": "canned tomatoes for passata"
+  }
+ },
+ {
+  "slug": "tikka",
+  "name": "Morrisons Tikka Masala Curry Paste 180g",
+  "unit": "g",
+  "cupboard": false,
+  "allergens": [],
+  "per100": {
+   "kcal": 114,
+   "protein_g": 3.1,
+   "carbs_g": 12.9,
+   "fat_g": 4.4
+  },
+  "product": {
+   "retailer": "morrisons",
+   "name": "Morrisons Tikka Masala Curry Paste 180g",
+   "price_pence": 195,
+   "pack_size": 180,
+   "slug": "morrisons-tikka-masala-curry-paste/112526787"
+  },
+  "cofid": {
+   "code": "17-720",
+   "name": "Curry paste",
+   "verified": true,
+   "basis": "label",
+   "approx": "generic curry paste for tikka masala paste",
+   "note": "Label used: this paste is mostly water and tomato (114 kcal); CoFID's generic curry paste is oil-based."
+  }
+ },
+ {
+  "slug": "coconut",
+  "name": "Morrisons Canned Coconut Milk 400ml",
+  "unit": "ml",
+  "cupboard": false,
+  "allergens": [],
+  "per100": {
+   "kcal": 169,
+   "protein_g": 1.1,
+   "carbs_g": 3.3,
+   "fat_g": 16.9
+  },
+  "product": {
+   "retailer": "morrisons",
+   "name": "Morrisons Canned Coconut Milk 400ml",
+   "price_pence": 100,
+   "pack_size": 400,
+   "slug": "morrisons-canned-coconut-milk-400-ml/106467080"
+  },
+  "cofid": {
+   "code": "14-889",
+   "name": "Coconut milk, retail",
+   "verified": true,
+   "basis": "cofid"
+  }
+ },
+ {
+  "slug": "pesto",
+  "name": "Morrisons Red Pesto 190g",
+  "unit": "g",
+  "cupboard": false,
+  "allergens": [
+   "eggs",
+   "milk",
+   "nuts"
+  ],
+  "per100": {
+   "kcal": 312,
+   "protein_g": 4.8,
+   "carbs_g": 10.6,
+   "fat_g": 27.3
+  },
+  "product": {
+   "retailer": "morrisons",
+   "name": "Morrisons Red Pesto 190g",
+   "price_pence": 89,
+   "pack_size": 190,
+   "slug": "morrisons-red-pesto-190g/104557698"
+  },
+  "cofid": {
+   "code": "17-623",
+   "name": "Pesto, red",
+   "verified": true,
+   "basis": "label"
+  }
+ },
+ {
+  "slug": "chickpeas",
+  "name": "Morrisons Chickpeas in Water 400g (240g drained)",
+  "unit": "g",
+  "cupboard": false,
+  "allergens": [],
+  "per100": {
+   "kcal": 128,
+   "protein_g": 7.4,
+   "carbs_g": 16.1,
+   "fat_g": 2.9
+  },
+  "product": {
+   "retailer": "morrisons",
+   "name": "Morrisons Chickpeas in Water 400g (240g drained)",
+   "price_pence": 37,
+   "pack_size": 240,
+   "slug": "morrisons-chickpeas-in-water-400g/110434045"
+  },
+  "cofid": {
+   "code": "13-670",
+   "name": "Beans, chick peas, canned, re-heated, drained",
+   "verified": true,
+   "basis": "label"
+  }
+ },
+ {
+  "slug": "lentils",
+  "name": "Morrisons Wholefoods Red Split Lentils 500g",
+  "unit": "g",
+  "cupboard": false,
+  "allergens": [],
+  "per100": {
+   "kcal": 311,
+   "protein_g": 25.6,
+   "carbs_g": 51.2,
+   "fat_g": 1.8
+  },
+  "product": {
+   "retailer": "morrisons",
+   "name": "Morrisons Wholefoods Red Split Lentils 500g",
+   "price_pence": 210,
+   "pack_size": 500,
+   "slug": "morrisons-wholefoods-red-split-lentils-500g/105661948"
+  },
+  "cofid": {
+   "code": "13-657",
+   "name": "Lentils, red, split, dried, raw",
+   "verified": true,
+   "basis": "cofid"
+  }
+ },
+ {
+  "slug": "beans",
+  "name": "Morrisons Baked Beans 410g",
+  "unit": "g",
+  "cupboard": false,
+  "allergens": [],
+  "per100": {
+   "kcal": 82,
+   "protein_g": 4.3,
+   "carbs_g": 13.1,
+   "fat_g": 0
+  },
+  "product": {
+   "retailer": "morrisons",
+   "name": "Morrisons Baked Beans 410g",
+   "price_pence": 37,
+   "pack_size": 410,
+   "slug": "morrisons-baked-beans-410g/105859372"
+  },
+  "cofid": {
+   "code": "13-532",
+   "name": "Baked beans, canned in tomato sauce",
+   "verified": true,
+   "basis": "label"
+  }
+ },
+ {
+  "slug": "bbq",
+  "name": "Morrisons Smoky Kansas Style BBQ Sauce 300g",
+  "unit": "g",
+  "cupboard": false,
+  "allergens": [
+   "gluten"
+  ],
+  "per100": {
+   "kcal": 124,
+   "protein_g": 0,
+   "carbs_g": 29,
+   "fat_g": 0
+  },
+  "product": {
+   "retailer": "morrisons",
+   "name": "Morrisons Smoky Kansas Style BBQ Sauce 300g",
+   "price_pence": 165,
+   "pack_size": 300,
+   "slug": "morrisons-smoky-kansas-style-bbq-sauce-300g/114794355"
+  },
+  "cofid": {
+   "code": "17-705",
+   "name": "Barbecue sauce",
+   "verified": true,
+   "basis": "label"
+  }
+ },
+ {
+  "slug": "pbutter",
+  "name": "Morrisons Smooth Peanut Butter 1kg",
+  "unit": "g",
+  "cupboard": false,
+  "allergens": [
+   "peanuts"
+  ],
+  "per100": {
+   "kcal": 619,
+   "protein_g": 26.1,
+   "carbs_g": 15.2,
+   "fat_g": 48.7
+  },
+  "product": {
+   "retailer": "morrisons",
+   "name": "Morrisons Smooth Peanut Butter 1kg",
+   "price_pence": 399,
+   "pack_size": 1000,
+   "slug": "morrisons-smooth-peanut-butter-1000g/114258034"
+  },
+  "cofid": {
+   "code": "14-892",
+   "name": "Peanut butter, smooth",
+   "verified": true,
+   "basis": "label"
+  }
+ },
+ {
+  "slug": "ricecakes",
+  "name": "Morrisons Lightly Salted Rice Cakes 100g",
+  "unit": "g",
+  "cupboard": false,
+  "allergens": [],
+  "per100": {
+   "kcal": 385,
+   "protein_g": 8.4,
+   "carbs_g": 78.8,
+   "fat_g": 3
+  },
+  "product": {
+   "retailer": "morrisons",
+   "name": "Morrisons Lightly Salted Rice Cakes 100g",
+   "price_pence": 95,
+   "pack_size": 100,
+   "slug": "morrisons-lightly-salted-rice-cakes/105404968"
+  },
+  "cofid": {
+   "name": "Pack label (no CoFID cross-check)",
+   "verified": true,
+   "basis": "label"
+  }
+ },
+ {
+  "slug": "crackers",
+  "name": "Morrisons Cream Crackers 300g",
+  "unit": "g",
+  "cupboard": false,
+  "allergens": [
+   "gluten"
+  ],
+  "per100": {
+   "kcal": 445,
+   "protein_g": 10.2,
+   "carbs_g": 68.4,
+   "fat_g": 13.9
+  },
+  "product": {
+   "retailer": "morrisons",
+   "name": "Morrisons Cream Crackers 300g",
+   "price_pence": 49,
+   "pack_size": 300,
+   "slug": "morrisons-cream-crackers/105401695"
+  },
+  "cofid": {
+   "code": "11-820",
+   "name": "Cream crackers",
+   "verified": true,
+   "basis": "label"
+  }
+ },
+ {
+  "slug": "tomsoup",
+  "name": "Morrisons Cream of Tomato Soup 400g",
+  "unit": "g",
+  "cupboard": false,
+  "allergens": [
+   "milk"
+  ],
+  "per100": {
+   "kcal": 53,
+   "protein_g": 0,
+   "carbs_g": 6.2,
+   "fat_g": 2.6
+  },
+  "product": {
+   "retailer": "morrisons",
+   "name": "Morrisons Cream of Tomato Soup 400g",
+   "price_pence": 65,
+   "pack_size": 400,
+   "slug": "morrisons-cream-of-tomato-soup/104788779"
+  },
+  "cofid": {
+   "code": "17-652",
+   "name": "Soup, cream of tomato, canned",
+   "verified": true,
+   "basis": "label"
+  }
+ },
+ {
+  "slug": "mixveg",
+  "name": "Morrisons Savers Mixed Vegetables 1kg (frozen)",
+  "unit": "g",
+  "cupboard": false,
+  "allergens": [],
+  "per100": {
+   "kcal": 42,
+   "protein_g": 3.3,
+   "carbs_g": 6.6,
+   "fat_g": 0.5
+  },
+  "product": {
+   "retailer": "morrisons",
+   "name": "Morrisons Savers Mixed Vegetables 1kg (frozen)",
+   "price_pence": 98,
+   "pack_size": 1000,
+   "slug": "morrisons-savers-mixed-vegetables-1kg/104898468"
+  },
+  "cofid": {
+   "code": "13-543",
+   "name": "Vegetables, mixed, frozen, boiled in unsalted water",
+   "verified": true,
+   "basis": "cofid"
+  }
+ },
+ {
+  "slug": "naan",
+  "name": "Morrisons Mini Naans 4 x 50g",
+  "unit": "naans",
+  "cupboard": false,
+  "allergens": [
+   "gluten",
+   "milk"
+  ],
+  "per100": {
+   "kcal": 255,
+   "protein_g": 7.1,
+   "carbs_g": 46.7,
+   "fat_g": 3.7
+  },
+  "product": {
+   "retailer": "morrisons",
+   "name": "Morrisons Mini Naans 4 x 50g",
+   "price_pence": 100,
+   "pack_size": 4,
+   "slug": "morrisons-mini-naans-4-x-50g/105765923"
+  },
+  "gramsPerUnit": 50,
+  "cofid": {
+   "code": "11-973",
+   "name": "Bread, naan, retail",
+   "verified": true,
+   "basis": "label"
+  }
+ },
+ {
+  "slug": "wholeloaf",
+  "name": "Morrisons Wholemeal Medium Sliced Bread 800g",
+  "unit": "g",
+  "cupboard": false,
+  "allergens": [
+   "gluten",
+   "soya"
+  ],
+  "per100": {
+   "kcal": 216,
+   "protein_g": 10.1,
+   "carbs_g": 36.4,
+   "fat_g": 1.8
+  },
+  "product": {
+   "retailer": "morrisons",
+   "name": "Morrisons Wholemeal Medium Sliced Bread 800g",
+   "price_pence": 75,
+   "pack_size": 800,
+   "slug": "morrisons-wholemeal-medium-sliced-bread-800g/102370256"
+  },
+  "cofid": {
+   "code": "11-981",
+   "name": "Bread, wholemeal, average",
+   "verified": true,
+   "basis": "label"
+  }
+ },
+ {
+  "slug": "stock",
+  "name": "Chicken Stock Cubes 12",
+  "unit": "g",
+  "cupboard": true,
+  "note": "Chicken Stock Cubes 12 · £1.30",
+  "allergens": [],
+  "per100": null,
+  "product": null,
+  "cupboardPrice": {
+   "pence": 130,
+   "grams": 120
+  },
+  "negligible": true
+ },
+ {
+  "slug": "cumin",
+  "name": "Ground Cumin 33g",
+  "unit": "g",
+  "cupboard": true,
+  "note": "Ground Cumin 33g",
+  "allergens": [],
+  "per100": null,
+  "product": null,
+  "negligible": true
+ },
+ {
+  "slug": "paprika",
+  "name": "Smoked Paprika",
+  "unit": "g",
+  "cupboard": true,
+  "note": "Smoked Paprika",
+  "allergens": [],
+  "per100": null,
+  "product": null,
+  "negligible": true
+ },
+ {
+  "slug": "curry",
+  "name": "Mild Curry Powder",
+  "unit": "g",
+  "cupboard": true,
+  "note": "Mild Curry Powder",
+  "allergens": [],
+  "per100": null,
+  "product": null,
+  "negligible": true
+ },
+ {
+  "slug": "chilliflakes",
+  "name": "Chilli Flakes",
+  "unit": "g",
+  "cupboard": true,
+  "note": "Chilli Flakes",
+  "allergens": [],
+  "per100": null,
+  "product": null,
+  "negligible": true
  }
 ]

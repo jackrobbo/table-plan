@@ -321,5 +321,264 @@
   "pack": 6,
   "u": "cheeses",
   "s": "mini-babybel-original-cheese-snacks/103090117"
+ },
+ "oats": {
+  "n": "Morrisons Porridge Oats 1kg",
+  "pr": 135,
+  "pack": 1000,
+  "u": "g",
+  "s": "morrisons-porridge-oats/105489771"
+ },
+ "porkmince": {
+  "n": "Morrisons British Pork Mince 5% Fat 500g",
+  "pr": 249,
+  "pack": 500,
+  "u": "g",
+  "s": "morrisons-british-pork-mince-5-fat-500g/107781821"
+ },
+ "porkloin": {
+  "n": "Morrisons British Pork Loin Steaks 600g",
+  "pr": 590,
+  "pack": 600,
+  "u": "g",
+  "s": "morrisons-british-pork-loin-steaks-600g/112062396"
+ },
+ "sausages": {
+  "n": "Morrisons Butcher's Style 8 Pork Sausages 454g",
+  "pr": 179,
+  "pack": 8,
+  "u": "sausages",
+  "s": "morrisons-butcher-s-style-8-pork-sausages-454g/104421547"
+ },
+ "turkeymince": {
+  "n": "Morrisons Turkey Mince 4% 500g",
+  "pr": 450,
+  "pack": 500,
+  "u": "g",
+  "s": "morrisons-turkey-mince-4-500g/116227426"
+ },
+ "salmon": {
+  "n": "Morrisons Boneless 2 Atlantic Salmon Fillets",
+  "pr": 495,
+  "pack": 220,
+  "u": "g",
+  "s": "morrisons-boneless-2-atlantic-salmon-fillets/113496647"
+ },
+ "cod": {
+  "n": "Morrisons 2 Cod Fillets 220g",
+  "pr": 650,
+  "pack": 220,
+  "u": "g",
+  "s": "morrisons-2-cod-fillets-220g/110739421"
+ },
+ "smokedsalmon": {
+  "n": "Morrisons Smoked Salmon Slices 120g",
+  "pr": 450,
+  "pack": 120,
+  "u": "g",
+  "s": "morrisons-smoked-salmon-slices-120g/111897113"
+ },
+ "lambmince": {
+  "n": "Morrisons Lamb Mince 500g",
+  "pr": 550,
+  "pack": 500,
+  "u": "g",
+  "s": "morrisons-lamb-mince-500g/109408940"
+ },
+ "halloumi": {
+  "n": "Morrisons Halloumi 200g",
+  "pr": 177,
+  "pack": 200,
+  "u": "g",
+  "s": "morrisons-halloumi-200g/112922894"
+ },
+ "feta": {
+  "n": "Morrisons Greek Feta 200g",
+  "pr": 225,
+  "pack": 200,
+  "u": "g",
+  "s": "morrisons-greek-feta/106145443"
+ },
+ "cottage": {
+  "n": "Morrisons Low Fat Cottage Cheese 300g",
+  "pr": 165,
+  "pack": 300,
+  "u": "g",
+  "s": "morrisons-low-fat-cottage-cheese/107374141"
+ },
+ "softcheese": {
+  "n": "Morrisons 50% Reduced Fat Soft Cheese 200g",
+  "pr": 130,
+  "pack": 200,
+  "u": "g",
+  "s": "morrisons-50-reduced-fat-soft-cheese-200g/112460669"
+ },
+ "bagels": {
+  "n": "Morrisons Plain Bagels 5 Pack",
+  "pr": 99,
+  "pack": 5,
+  "u": "bagels",
+  "s": "morrisons-plain-bagels/111099710"
+ },
+ "avocado": {
+  "n": "Morrisons Ripe & Ready Avocados 2 Pack",
+  "pr": 150,
+  "pack": 2,
+  "u": "avocados",
+  "s": "morrisons-ripe-ready-avocados-2-pack/108409289"
+ },
+ "mushrooms": {
+  "n": "Morrisons British Closed Cup Mushrooms 465g",
+  "pr": 150,
+  "pack": 465,
+  "u": "g",
+  "s": "morrisons-british-closed-cup-mushrooms-465g/115267952"
+ },
+ "courgette": {
+  "n": "Morrisons Courgettes 500g",
+  "pr": 139,
+  "pack": 500,
+  "u": "g",
+  "s": "morrisons-courgettes/115508998"
+ },
+ "bakepot": {
+  "n": "Morrisons British Baking Potatoes 4 Pack",
+  "pr": 79,
+  "pack": 4,
+  "u": "potatoes",
+  "s": "morrisons-british-baking-potatoes-4-pack/108414272"
+ },
+ "potatoes": {
+  "n": "Morrisons British Maris Piper Potatoes 1.25kg",
+  "pr": 145,
+  "pack": 1250,
+  "u": "g",
+  "s": "morrisons-british-maris-piper-potatoes-1-25kg/113830019"
+ },
+ "sweetpot": {
+  "n": "Morrisons Sweet Potatoes 1kg",
+  "pr": 119,
+  "pack": 1000,
+  "u": "g",
+  "s": "morrisons-sweet-potatoes-1kg/108572051"
+ },
+ "peas": {
+  "n": "Morrisons Garden Peas 1kg (frozen)",
+  "pr": 165,
+  "pack": 1000,
+  "u": "g",
+  "s": "morrisons-garden-peas-1kg/112661655"
+ },
+ "chips": {
+  "n": "Morrisons Straight Cut Chips 1.2kg (frozen)",
+  "pr": 200,
+  "pack": 1200,
+  "u": "g",
+  "s": "morrisons-straight-cut-chips/108043934"
+ },
+ "passata": {
+  "n": "Morrisons Passata 500g",
+  "pr": 45,
+  "pack": 500,
+  "u": "g",
+  "s": "morrisons-passata-500g/104954925"
+ },
+ "tikka": {
+  "n": "Morrisons Tikka Masala Curry Paste 180g",
+  "pr": 195,
+  "pack": 180,
+  "u": "g",
+  "s": "morrisons-tikka-masala-curry-paste/112526787"
+ },
+ "coconut": {
+  "n": "Morrisons Canned Coconut Milk 400ml",
+  "pr": 100,
+  "pack": 400,
+  "u": "ml",
+  "s": "morrisons-canned-coconut-milk-400-ml/106467080"
+ },
+ "pesto": {
+  "n": "Morrisons Red Pesto 190g",
+  "pr": 89,
+  "pack": 190,
+  "u": "g",
+  "s": "morrisons-red-pesto-190g/104557698"
+ },
+ "chickpeas": {
+  "n": "Morrisons Chickpeas in Water 400g (240g drained)",
+  "pr": 37,
+  "pack": 240,
+  "u": "g",
+  "s": "morrisons-chickpeas-in-water-400g/110434045"
+ },
+ "lentils": {
+  "n": "Morrisons Wholefoods Red Split Lentils 500g",
+  "pr": 210,
+  "pack": 500,
+  "u": "g",
+  "s": "morrisons-wholefoods-red-split-lentils-500g/105661948"
+ },
+ "beans": {
+  "n": "Morrisons Baked Beans 410g",
+  "pr": 37,
+  "pack": 410,
+  "u": "g",
+  "s": "morrisons-baked-beans-410g/105859372"
+ },
+ "bbq": {
+  "n": "Morrisons Smoky Kansas Style BBQ Sauce 300g",
+  "pr": 165,
+  "pack": 300,
+  "u": "g",
+  "s": "morrisons-smoky-kansas-style-bbq-sauce-300g/114794355"
+ },
+ "pbutter": {
+  "n": "Morrisons Smooth Peanut Butter 1kg",
+  "pr": 399,
+  "pack": 1000,
+  "u": "g",
+  "s": "morrisons-smooth-peanut-butter-1000g/114258034"
+ },
+ "ricecakes": {
+  "n": "Morrisons Lightly Salted Rice Cakes 100g",
+  "pr": 95,
+  "pack": 100,
+  "u": "g",
+  "s": "morrisons-lightly-salted-rice-cakes/105404968"
+ },
+ "crackers": {
+  "n": "Morrisons Cream Crackers 300g",
+  "pr": 49,
+  "pack": 300,
+  "u": "g",
+  "s": "morrisons-cream-crackers/105401695"
+ },
+ "tomsoup": {
+  "n": "Morrisons Cream of Tomato Soup 400g",
+  "pr": 65,
+  "pack": 400,
+  "u": "g",
+  "s": "morrisons-cream-of-tomato-soup/104788779"
+ },
+ "mixveg": {
+  "n": "Morrisons Savers Mixed Vegetables 1kg (frozen)",
+  "pr": 98,
+  "pack": 1000,
+  "u": "g",
+  "s": "morrisons-savers-mixed-vegetables-1kg/104898468"
+ },
+ "naan": {
+  "n": "Morrisons Mini Naans 4 x 50g",
+  "pr": 100,
+  "pack": 4,
+  "u": "naans",
+  "s": "morrisons-mini-naans-4-x-50g/105765923"
+ },
+ "wholeloaf": {
+  "n": "Morrisons Wholemeal Medium Sliced Bread 800g",
+  "pr": 75,
+  "pack": 800,
+  "u": "g",
+  "s": "morrisons-wholemeal-medium-sliced-bread-800g/102370256"
  }
 }

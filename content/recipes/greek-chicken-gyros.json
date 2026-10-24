@@ -5,10 +5,6 @@
  "emoji": "🥙",
  "serves": 2,
  "status": "live",
- "per_portion": {
-  "kcal": 515,
-  "protein_g": 52
- },
  "ingredients": [
   {
    "ingredient": "thigh",
@@ -44,6 +40,11 @@
   "garlic",
   "oil"
  ],
+ "cupboard_qty": {
+  "oregano": 2,
+  "garlic": 6,
+  "oil": 10
+ },
  "method": [
   "Marinate sliced thighs in oil, oregano, garlic, lemon; grill till charred.",
   "Mix tzatziki: Greek yogurt, grated cucumber, garlic, lemon.",

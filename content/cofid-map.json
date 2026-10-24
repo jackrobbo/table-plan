@@ -1,0 +1,402 @@
+{
+ "breast": {
+  "code": "18-290"
+ },
+ "thigh": {
+  "code": "18-289"
+ },
+ "mince": {
+  "code": "18-508"
+ },
+ "sizzle": {
+  "code": "18-064",
+  "approx": "sirloin steak (lean) for thin-cut sizzle steak"
+ },
+ "rump": {
+  "code": "18-043"
+ },
+ "prawns": {
+  "code": "16-389",
+  "prefer": "label",
+  "why": "Label used: 'Savers King Prawns' are brined/glazed, so per 100 g of pack weight is lower than CoFID cooked king prawns."
+ },
+ "roast": {
+  "code": "19-543",
+  "approx": "deli turkey slices for deli chicken slices"
+ },
+ "ham": {
+  "code": "19-496"
+ },
+ "bacon": {
+  "code": "19-644",
+  "gpu": 28,
+  "approx": "lean bacon loin steaks (grilled) for raw lean medallions; ~28 g per medallion is an estimate"
+ },
+ "eggs": {
+  "code": "12-937",
+  "gpu": 50
+ },
+ "milk": {
+  "code": "12-313"
+ },
+ "yog": {
+  "gpu": 200
+ },
+ "greek": {
+  "code": "12-555"
+ },
+ "loaf": {
+  "code": "11-980",
+  "gpu": 50
+ },
+ "wraps": {
+  "code": "11-925",
+  "gpu": 62
+ },
+ "mission": {
+  "gpu": 60
+ },
+ "pittas": {
+  "code": "11-974",
+  "gpu": 60
+ },
+ "houm": {
+  "code": "13-556",
+  "prefer": "label",
+  "why": "Label used: this Morrisons houmous is a lighter recipe than CoFID's generic houmous (194 vs 307 kcal)."
+ },
+ "blueb": {
+  "code": "14-325"
+ },
+ "banana": {
+  "code": "14-318",
+  "gpu": 100
+ },
+ "apple": {
+  "code": "14-319",
+  "gpu": 140
+ },
+ "lemon": {
+  "negligible": true
+ },
+ "iceberg": {
+  "code": "13-520",
+  "gpu": 400
+ },
+ "cuc": {
+  "code": "13-523",
+  "gpu": 300
+ },
+ "plum": {
+  "code": "13-519"
+ },
+ "salad": {
+  "code": "13-520"
+ },
+ "onions": {
+  "code": "13-499",
+  "gpu": 110
+ },
+ "spring": {
+  "code": "13-352",
+  "gpu": 90
+ },
+ "carrots": {
+  "code": "13-496"
+ },
+ "pepper": {
+  "code": "13-318",
+  "gpu": 150,
+  "approx": "green capsicum for red (CoFID has no red sweet pepper)"
+ },
+ "mixpep": {
+  "code": "13-318",
+  "gpu": 150,
+  "approx": "green capsicum for mixed colours"
+ },
+ "chilli": {
+  "code": "13-317"
+ },
+ "brocc": {
+  "code": "13-502"
+ },
+ "pouch": {
+  "code": "13-495",
+  "approx": "boiled new potatoes for buttered baby potato pouch",
+  "labelOk": true,
+  "why": "Label used: a ready-cooked pouch with butter and chives (92 kcal), so as-consumed is as-sold and richer than plain boiled new potatoes.",
+  "prefer": "label"
+ },
+ "cobs": {
+  "code": "13-606",
+  "gpu": 230
+ },
+ "stirfry": {
+  "code": "13-604",
+  "approx": "frozen stir-fry veg for a fresh stir-fry mix",
+  "prefer": "label",
+  "why": "Label used: sold raw; CoFID's entry is stir-fried in oil."
+ },
+ "slices": {
+  "code": "13-487",
+  "approx": "oven chips for crispy potato slices"
+ },
+ "medley": {
+  "code": "13-502",
+  "approx": "broccoli for green vegetable medley",
+  "prefer": "label",
+  "why": "Label used: the medley comes with a buttery sauce (contains milk), so it is not plain broccoli."
+ },
+ "spinach": {
+  "code": "13-521"
+ },
+ "creme": {
+  "code": "12-336"
+ },
+ "ctoms": {
+  "code": "13-530"
+ },
+ "kidney": {
+  "code": "13-660",
+  "scale": 0.6,
+  "why": "Tin weight includes liquid: CoFID/label values are per 100 g drained, a 400 g tin drains to about 240 g, so values are scaled by 0.6."
+ },
+ "grenade": {
+  "gpu": 60
+ },
+ "wafer": {
+  "gpu": 40
+ },
+ "pops": {
+  "gpu": 45
+ },
+ "babybel": {
+  "code": "12-355",
+  "gpu": 20,
+  "approx": "Edam for Babybel"
+ },
+ "rice": {
+  "code": "11-863"
+ },
+ "spaghetti": {
+  "code": "11-716"
+ },
+ "fusilli": {
+  "code": "11-716"
+ },
+ "lasagne": {
+  "code": "11-716"
+ },
+ "noodles": {
+  "code": "11-719"
+ },
+ "butter": {
+  "code": "17-655"
+ },
+ "puree": {
+  "code": "13-531"
+ },
+ "tuna": {
+  "code": "16-416"
+ },
+ "peri": {
+  "negligible": true
+ },
+ "fajita": {
+  "negligible": true
+ },
+ "fivespice": {
+  "negligible": true
+ },
+ "herbs": {
+  "negligible": true
+ },
+ "oregano": {
+  "negligible": true
+ },
+ "soy": {
+  "code": "17-721"
+ },
+ "honey": {
+  "code": "17-050"
+ },
+ "teriyaki": {
+  "code": "17-629",
+  "approx": "Chinese stir-fry sauce for teriyaki sauce"
+ },
+ "mayo": {
+  "code": "17-679"
+ },
+ "frozenfruit": {
+  "code": "14-324",
+  "approx": "strawberries for frozen summer fruits"
+ },
+ "sweetcorn": {
+  "code": "13-529"
+ },
+ "nuts": {
+  "code": "14-880"
+ },
+ "garlic": {
+  "code": "13-244"
+ },
+ "parmesan": {
+  "code": "12-526"
+ },
+ "cornflour": {
+  "code": "11-1045"
+ },
+ "oil": {
+  "code": "17-686"
+ },
+ "cheddar": {
+  "code": "12-346"
+ },
+ "oats": {
+  "code": "11-788"
+ },
+ "porkmince": {
+  "code": "18-606"
+ },
+ "porkloin": {
+  "code": "18-522"
+ },
+ "sausages": {
+  "code": "19-510",
+  "gpu": 56.75,
+  "prefer": "label",
+  "why": "Label used: 72% pork sausage; CoFID's generic raw pork sausage is much fattier."
+ },
+ "turkeymince": {
+  "code": "18-352",
+  "approx": "whole turkey, raw (CoFID has no raw mince)"
+ },
+ "salmon": {
+  "code": "16-356"
+ },
+ "cod": {
+  "code": "16-372"
+ },
+ "smokedsalmon": {
+  "code": "16-412"
+ },
+ "lambmince": {
+  "code": "18-481"
+ },
+ "halloumi": {
+  "code": "12-496"
+ },
+ "feta": {
+  "code": "12-525"
+ },
+ "cottage": {
+  "code": "12-550",
+  "prefer": "label",
+  "why": "Label used: product-specific 'low fat' recipe (89 kcal) vs CoFID reduced-fat (68 kcal)."
+ },
+ "softcheese": {
+  "code": "12-538"
+ },
+ "bagels": {
+  "code": "11-970",
+  "gpu": 85
+ },
+ "avocado": {
+  "code": "14-386",
+  "gpu": 110
+ },
+ "mushrooms": {
+  "code": "13-505"
+ },
+ "courgette": {
+  "code": "13-627"
+ },
+ "bakepot": {
+  "code": "13-489",
+  "gpu": 250
+ },
+ "potatoes": {
+  "code": "13-489"
+ },
+ "sweetpot": {
+  "code": "13-463"
+ },
+ "peas": {
+  "code": "13-527",
+  "prefer": "cofid"
+ },
+ "chips": {
+  "code": "13-487",
+  "labelOk": true
+ },
+ "passata": {
+  "code": "13-530",
+  "labelOk": true,
+  "approx": "canned tomatoes for passata"
+ },
+ "tikka": {
+  "code": "17-720",
+  "approx": "generic curry paste for tikka masala paste",
+  "prefer": "label",
+  "why": "Label used: this paste is mostly water and tomato (114 kcal); CoFID's generic curry paste is oil-based."
+ },
+ "coconut": {
+  "code": "14-889"
+ },
+ "pesto": {
+  "code": "17-623"
+ },
+ "chickpeas": {
+  "code": "13-670",
+  "labelOk": true
+ },
+ "lentils": {
+  "code": "13-657",
+  "prefer": "cofid"
+ },
+ "beans": {
+  "code": "13-532",
+  "labelOk": true
+ },
+ "bbq": {
+  "code": "17-705",
+  "labelOk": true
+ },
+ "pbutter": {
+  "code": "14-892"
+ },
+ "ricecakes": {},
+ "crackers": {
+  "code": "11-820"
+ },
+ "tomsoup": {
+  "code": "17-652",
+  "labelOk": true
+ },
+ "mixveg": {
+  "code": "13-543",
+  "prefer": "cofid"
+ },
+ "naan": {
+  "code": "11-973",
+  "gpu": 50
+ },
+ "wholeloaf": {
+  "code": "11-981"
+ },
+ "stock": {
+  "negligible": true
+ },
+ "cumin": {
+  "negligible": true
+ },
+ "paprika": {
+  "negligible": true
+ },
+ "curry": {
+  "negligible": true
+ },
+ "chilliflakes": {
+  "negligible": true
+ }
+}

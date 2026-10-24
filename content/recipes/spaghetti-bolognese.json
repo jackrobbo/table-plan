@@ -5,10 +5,6 @@
  "emoji": "🍝",
  "serves": 2,
  "status": "live",
- "per_portion": {
-  "kcal": 520,
-  "protein_g": 40
- },
  "ingredients": [
   {
    "ingredient": "mince",
@@ -38,6 +34,13 @@
   "parmesan",
   "garlic"
  ],
+ "cupboard_qty": {
+  "spaghetti": 150,
+  "puree": 20,
+  "herbs": 2,
+  "parmesan": 20,
+  "garlic": 6
+ },
  "method": [
   "Brown the mince; soften the chopped veg.",
   "Add tomatoes, purée and herbs; simmer 20 min.",

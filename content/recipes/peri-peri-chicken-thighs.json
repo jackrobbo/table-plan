@@ -5,10 +5,6 @@
  "emoji": "🍗",
  "serves": 2,
  "status": "live",
- "per_portion": {
-  "kcal": 590,
-  "protein_g": 55
- },
  "ingredients": [
   {
    "ingredient": "thigh",
@@ -27,6 +23,10 @@
   "peri",
   "oil"
  ],
+ "cupboard_qty": {
+  "peri": 10,
+  "oil": 10
+ },
  "method": [
   "Coat the thighs in peri-peri and oil; roast or air-fry ~22 min.",
   "Microwave the buttered potato pouch; boil the corn cobs."

@@ -12,7 +12,10 @@
     "content:verify": "tsx scripts/verify-content.ts",
     "prices:refresh": "NODE_USE_ENV_PROXY=1 tsx scripts/refresh-prices.ts",
     "beta:invites": "tsx scripts/make-invites.ts",
-    "supabase:bundle": "node scripts/bundle-sql.mjs"
+    "supabase:bundle": "node scripts/bundle-sql.mjs",
+    "probe": "NODE_USE_ENV_PROXY=1 NODE_NO_WARNINGS=1 tsx scripts/probe-products.ts",
+    "labels:fetch": "NODE_USE_ENV_PROXY=1 NODE_NO_WARNINGS=1 tsx scripts/fetch-labels.ts",
+    "nutrition:apply": "tsx scripts/apply-nutrition.ts"
   },
   "dependencies": {
     "@supabase/supabase-js": "^2.118.0",

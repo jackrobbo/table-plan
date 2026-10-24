@@ -10,9 +10,19 @@ export interface IngredientDef {
   cupboard: boolean;
   note?: string;
   allergens: Allergen[];
-  /** CoFID values per 100 g/ml. null until verified. */
-  /** CoFID food code and whether the per100 values were checked against it. */
-  cofid?: { code?: string; verified: boolean };
+  /** Grams (or ml) in ONE of this ingredient's units when unit is not g/ml, e.g. an egg, a slice, a wrap. */
+  gramsPerUnit?: number;
+  /** Spices, herbs and seasoning: allowed in a recipe without a quantity because their calories are negligible. */
+  negligible?: boolean;
+  /** Price of a cupboard staple that has no mapped product yet: `pence` buys `grams` (ml counted as g). */
+  cupboardPrice?: { pence: number; grams: number };
+  /**
+   * Where per100 came from (set by scripts/apply-nutrition.ts, never by hand). basis 'label' = the mapped Morrisons product's
+   * pack label, cross-checked against the CoFID food in `code`; 'cofid' = that CoFID food. verified = sources agree (or one
+   * authoritative source exists). approx = the closest CoFID food is not the identical food (listed for dietitian review).
+   */
+  cofid?: { code?: string; name?: string; verified: boolean; basis?: 'label' | 'cofid'; approx?: string; /** why a source was chosen when it was a judgement call */ note?: string };
+  /** Per 100 g (ml counted as g), as sold/raw unless the ingredient is a ready-to-use product. null until sourced. */
   per100: { kcal: number; protein_g: number; carbs_g: number; fat_g: number } | null;
   /** Retailer mapping; null = not yet mapped/priced (M3). */
   product: { retailer: string; name: string; price_pence: number; pack_size: number; slug: string } | null;
@@ -25,10 +35,15 @@ export interface RecipeDef {
   emoji?: string;
   serves: number;
   status: RecipeStatus;
-  /** Macros for ONE portion. */
-  per_portion: { kcal: number; protein_g: number; carbs_g?: number; fat_g?: number };
+  /**
+   * Macros for ONE portion. Leave it out to have the importer compute it from ingredient CoFID data
+   * (preferred: it is then correct by construction).
+   */
+  per_portion?: { kcal: number; protein_g: number; carbs_g?: number; fat_g?: number };
   ingredients: { ingredient: string; qty: number }[];
   cupboard: string[];
+  /** Amount of each cupboard item in the WHOLE recipe, in g/ml. Needed to compute macros and cost. */
+  cupboard_qty?: Record<string, number>;
   method: string[];
   /** Allergens not derivable from ingredients (e.g. cross-contact). */
   extra_allergens?: Allergen[];

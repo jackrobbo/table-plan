@@ -5,10 +5,6 @@
  "emoji": "🌯",
  "serves": 2,
  "status": "live",
- "per_portion": {
-  "kcal": 475,
-  "protein_g": 31
- },
  "ingredients": [
   {
    "ingredient": "sizzle",
@@ -30,6 +26,9 @@
  "cupboard": [
   "fajita"
  ],
+ "cupboard_qty": {
+  "fajita": 8
+ },
  "method": [
   "Sear the sliced sizzle steak fast; set aside.",
   "Fry peppers and onion; return steak with seasoning.",

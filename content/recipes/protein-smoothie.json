@@ -23,6 +23,10 @@
   "isolate",
   "frozenfruit"
  ],
+ "cupboard_qty": {
+  "isolate": 30,
+  "frozenfruit": 60
+ },
  "method": [
   "Blend a scoop of isolate, 1 banana, 200ml milk and a handful of frozen berries."
  ],

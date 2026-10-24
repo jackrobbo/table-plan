@@ -7,6 +7,8 @@
   "p": 9,
   "k": 118,
   "serves": 1,
+  "cost": 82,
+  "b": "low",
   "macros_only": false,
   "fresh": [
    [
@@ -25,9 +27,11 @@
   "c": "breakfast",
   "e": "🌯",
   "n": "Bacon & Egg Breakfast Wrap",
-  "p": 36,
-  "k": 450,
+  "p": 51,
+  "k": 452,
   "serves": 1,
+  "cost": 209,
+  "b": "medium",
   "macros_only": false,
   "fresh": [
    [
@@ -59,9 +63,11 @@
   "c": "dinner",
   "e": "🌮",
   "n": "Beef Tacos",
-  "p": 44,
-  "k": 615,
+  "p": 52,
+  "k": 754,
   "serves": 2,
+  "cost": 246,
+  "b": "medium",
   "macros_only": false,
   "fresh": [
    [
@@ -110,9 +116,11 @@
   "c": "breakfast",
   "e": "🥚",
   "n": "Boiled Eggs & Soldiers",
-  "p": 29,
-  "k": 500,
+  "p": 27,
+  "k": 507,
   "serves": 1,
+  "cost": 108,
+  "b": "low",
   "macros_only": false,
   "fresh": [
    [
@@ -134,7 +142,8 @@
   "allergens": [
    "eggs",
    "gluten",
-   "milk"
+   "milk",
+   "soya"
   ]
  },
  {
@@ -142,9 +151,11 @@
   "c": "lunch",
   "e": "🌯",
   "n": "Chicken & Hummus Wrap",
-  "p": 25,
-  "k": 380,
+  "p": 28,
+  "k": 359,
   "serves": 1,
+  "cost": 230,
+  "b": "medium",
   "macros_only": false,
   "fresh": [
    [
@@ -183,9 +194,11 @@
   "c": "dinner",
   "e": "🫑",
   "n": "Chicken Fajitas",
-  "p": 43,
-  "k": 535,
+  "p": 52,
+  "k": 689,
   "serves": 2,
+  "cost": 206,
+  "b": "medium",
   "macros_only": false,
   "fresh": [
    [
@@ -225,9 +238,11 @@
   "c": "dinner",
   "e": "🍚",
   "n": "Chicken Fried Rice",
-  "p": 50,
-  "k": 565,
+  "p": 49,
+  "k": 512,
   "serves": 2,
+  "cost": 198,
+  "b": "medium",
   "macros_only": false,
   "fresh": [
    [
@@ -274,9 +289,11 @@
   "c": "lunch",
   "e": "🥪",
   "n": "Chicken-Mayo Sandwich",
-  "p": 33,
-  "k": 410,
+  "p": 30,
+  "k": 462,
   "serves": 1,
+  "cost": 204,
+  "b": "medium",
   "macros_only": false,
   "fresh": [
    [
@@ -304,7 +321,8 @@
    "eggs",
    "gluten",
    "milk",
-   "mustard"
+   "mustard",
+   "soya"
   ]
  },
  {
@@ -312,9 +330,11 @@
   "c": "dinner",
   "e": "🥡",
   "n": "Chinese 5-Spice Stir Fry",
-  "p": 46,
-  "k": 560,
+  "p": 60,
+  "k": 593,
   "serves": 2,
+  "cost": 301,
+  "b": "high",
   "macros_only": false,
   "fresh": [
    [
@@ -345,9 +365,11 @@
   "c": "dinner",
   "e": "🍝",
   "n": "Creamy Chicken Pasta",
-  "p": 50,
-  "k": 560,
+  "p": 49,
+  "k": 564,
   "serves": 2,
+  "cost": 177,
+  "b": "medium",
   "macros_only": false,
   "fresh": [
    [
@@ -383,9 +405,11 @@
   "c": "dinner",
   "e": "🥙",
   "n": "Greek Chicken Gyros",
-  "p": 52,
-  "k": 515,
+  "p": 62,
+  "k": 578,
   "serves": 2,
+  "cost": 253,
+  "b": "high",
   "macros_only": false,
   "fresh": [
    [
@@ -440,6 +464,8 @@
   "p": 21,
   "k": 233,
   "serves": 1,
+  "cost": 250,
+  "b": "medium",
   "macros_only": false,
   "fresh": [
    [
@@ -462,9 +488,11 @@
   "c": "lunch",
   "e": "🥪",
   "n": "Ham & Cheese Sandwich",
-  "p": 27,
-  "k": 425,
+  "p": 28,
+  "k": 499,
   "serves": 1,
+  "cost": 151,
+  "b": "medium",
   "macros_only": false,
   "fresh": [
    [
@@ -489,7 +517,8 @@
   ],
   "allergens": [
    "gluten",
-   "milk"
+   "milk",
+   "soya"
   ]
  },
  {
@@ -497,9 +526,11 @@
   "c": "dinner",
   "e": "🍯",
   "n": "Honey & Soy Chicken",
-  "p": 42,
-  "k": 475,
+  "p": 44,
+  "k": 489,
   "serves": 2,
+  "cost": 177,
+  "b": "medium",
   "macros_only": false,
   "fresh": [
    [
@@ -533,9 +564,11 @@
   "c": "dinner",
   "e": "🍜",
   "n": "Lasagne",
-  "p": 42,
-  "k": 575,
+  "p": 53,
+  "k": 755,
   "serves": 2,
+  "cost": 272,
+  "b": "high",
   "macros_only": false,
   "fresh": [
    [
@@ -581,9 +614,11 @@
   "c": "dinner",
   "e": "🍗",
   "n": "Peri Peri Chicken Thighs",
-  "p": 55,
-  "k": 590,
+  "p": 71,
+  "k": 623,
   "serves": 2,
+  "cost": 420,
+  "b": "high",
   "macros_only": false,
   "fresh": [
    [
@@ -622,6 +657,8 @@
   "p": 23,
   "k": 180,
   "serves": 1,
+  "cost": 323,
+  "b": "high",
   "macros_only": false,
   "fresh": [
    [
@@ -662,6 +699,8 @@
   "p": 41,
   "k": 443,
   "serves": 1,
+  "cost": 370,
+  "b": "high",
   "macros_only": false,
   "fresh": [
    [
@@ -695,8 +734,10 @@
   "e": "🍿",
   "n": "Protein Pops",
   "p": 10,
-  "k": 187,
+  "k": 188,
   "serves": 1,
+  "cost": 125,
+  "b": "low",
   "macros_only": false,
   "fresh": [
    [
@@ -719,6 +760,8 @@
   "p": 31,
   "k": 315,
   "serves": 1,
+  "cost": 155,
+  "b": "medium",
   "macros_only": false,
   "fresh": [
    [
@@ -748,8 +791,10 @@
   "e": "🧇",
   "n": "Protein Wafer",
   "p": 15,
-  "k": 194,
+  "k": 192,
   "serves": 1,
+  "cost": 200,
+  "b": "medium",
   "macros_only": false,
   "fresh": [
    [
@@ -772,9 +817,11 @@
   "c": "snack",
   "e": "🥛",
   "n": "Protein Yogurt Pot",
-  "p": 20,
-  "k": 130,
+  "p": 21,
+  "k": 136,
   "serves": 1,
+  "cost": 75,
+  "b": "low",
   "macros_only": false,
   "fresh": [
    [
@@ -793,9 +840,11 @@
   "c": "dinner",
   "e": "🍗",
   "n": "Salt & Pepper Chicken",
-  "p": 46,
-  "k": 570,
+  "p": 47,
+  "k": 529,
   "serves": 2,
+  "cost": 221,
+  "b": "medium",
   "macros_only": false,
   "fresh": [
    [
@@ -842,9 +891,11 @@
   "c": "breakfast",
   "e": "🍳",
   "n": "Scrambled Eggs on Toast",
-  "p": 29,
-  "k": 500,
+  "p": 27,
+  "k": 543,
   "serves": 1,
+  "cost": 110,
+  "b": "low",
   "macros_only": false,
   "fresh": [
    [
@@ -866,7 +917,8 @@
   "allergens": [
    "eggs",
    "gluten",
-   "milk"
+   "milk",
+   "soya"
   ]
  },
  {
@@ -874,9 +926,11 @@
   "c": "dinner",
   "e": "🍝",
   "n": "Spaghetti Bolognese",
-  "p": 40,
-  "k": 520,
+  "p": 39,
+  "k": 541,
   "serves": 2,
+  "cost": 258,
+  "b": "high",
   "macros_only": false,
   "fresh": [
    [
@@ -922,9 +976,11 @@
   "c": "dinner",
   "e": "🌯",
   "n": "Steak Fajitas",
-  "p": 31,
-  "k": 475,
+  "p": 48,
+  "k": 536,
   "serves": 2,
+  "cost": 403,
+  "b": "high",
   "macros_only": false,
   "fresh": [
    [
@@ -962,9 +1018,11 @@
   "c": "dinner",
   "e": "🥩",
   "n": "Steak Night",
-  "p": 43,
-  "k": 655,
+  "p": 54,
+  "k": 681,
   "serves": 2,
+  "cost": 479,
+  "b": "high",
   "macros_only": false,
   "fresh": [
    [
@@ -988,16 +1046,21 @@
    "Sear the steaks 3–4 min a side; rest.",
    "Steam the green veg medley."
   ],
-  "allergens": []
+  "allergens": [
+   "gluten",
+   "milk"
+  ]
  },
  {
   "id": "teriyaki-chicken-noodles",
   "c": "dinner",
   "e": "🍜",
   "n": "Teriyaki Chicken Noodles",
-  "p": 46,
-  "k": 540,
+  "p": 44,
+  "k": 449,
   "serves": 2,
+  "cost": 230,
+  "b": "medium",
   "macros_only": false,
   "fresh": [
    [
@@ -1029,9 +1092,11 @@
   "c": "lunch",
   "e": "🐟",
   "n": "Tuna Mayo Pasta Salad",
-  "p": 36,
-  "k": 440,
+  "p": 37,
+  "k": 430,
   "serves": 1,
+  "cost": 109,
+  "b": "low",
   "macros_only": false,
   "fresh": [
    [
@@ -1062,9 +1127,11 @@
   "c": "breakfast",
   "e": "🍌",
   "n": "Yogurt & Banana Bowl",
-  "p": 24,
-  "k": 320,
+  "p": 27,
+  "k": 333,
   "serves": 1,
+  "cost": 119,
+  "b": "low",
   "macros_only": false,
   "fresh": [
    [
@@ -1096,6 +1163,8 @@
   "p": 26,
   "k": 320,
   "serves": 1,
+  "cost": 216,
+  "b": "medium",
   "macros_only": false,
   "fresh": [
    [

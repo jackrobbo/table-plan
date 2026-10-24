@@ -22,6 +22,9 @@
  "cupboard": [
   "granola"
  ],
+ "cupboard_qty": {
+  "granola": 40
+ },
  "method": [
   "Empty a protein yogurt pot into a bowl.",
   "Top with 100g blueberries and 30g protein granola."

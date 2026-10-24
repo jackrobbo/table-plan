@@ -5,10 +5,6 @@
  "emoji": "🥪",
  "serves": 1,
  "status": "live",
- "per_portion": {
-  "kcal": 410,
-  "protein_g": 33
- },
  "ingredients": [
   {
    "ingredient": "roast",
@@ -27,6 +23,10 @@
   "mayo",
   "butter"
  ],
+ "cupboard_qty": {
+  "mayo": 15,
+  "butter": 10
+ },
  "method": [
   "Mix 80g roast chicken slices with light mayo.",
   "Build the sandwich with salad."

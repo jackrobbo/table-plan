@@ -5,10 +5,6 @@
  "emoji": "🥡",
  "serves": 2,
  "status": "live",
- "per_portion": {
-  "kcal": 560,
-  "protein_g": 46
- },
  "ingredients": [
   {
    "ingredient": "thigh",
@@ -24,6 +20,11 @@
   "soy",
   "fivespice"
  ],
+ "cupboard_qty": {
+  "rice": 140,
+  "soy": 20,
+  "fivespice": 4
+ },
  "method": [
   "Fry the thighs with 5-spice till cooked.",
   "Add stir-fry veg 3–4 min with a splash of soy; serve on rice."

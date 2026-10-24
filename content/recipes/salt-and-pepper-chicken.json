@@ -5,10 +5,6 @@
  "emoji": "🍗",
  "serves": 2,
  "status": "live",
- "per_portion": {
-  "kcal": 570,
-  "protein_g": 46
- },
  "ingredients": [
   {
    "ingredient": "breast",
@@ -40,6 +36,11 @@
   "cornflour",
   "fivespice"
  ],
+ "cupboard_qty": {
+  "rice": 140,
+  "cornflour": 20,
+  "fivespice": 4
+ },
  "method": [
   "Toss diced chicken in seasoned cornflour; fry till crisp.",
   "Stir-fry pepper, onion, chilli.",

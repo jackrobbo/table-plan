@@ -5,10 +5,6 @@
  "emoji": "🍿",
  "serves": 1,
  "status": "live",
- "per_portion": {
-  "kcal": 187,
-  "protein_g": 10
- },
  "ingredients": [
   {
    "ingredient": "pops",

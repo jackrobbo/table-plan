@@ -5,10 +5,6 @@
  "emoji": "🌯",
  "serves": 1,
  "status": "live",
- "per_portion": {
-  "kcal": 380,
-  "protein_g": 25
- },
  "ingredients": [
   {
    "ingredient": "roast",

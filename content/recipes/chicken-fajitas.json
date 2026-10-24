@@ -5,10 +5,6 @@
  "emoji": "🫑",
  "serves": 2,
  "status": "live",
- "per_portion": {
-  "kcal": 535,
-  "protein_g": 43
- },
  "ingredients": [
   {
    "ingredient": "breast",
@@ -32,6 +28,11 @@
   "oil",
   "cheddar"
  ],
+ "cupboard_qty": {
+  "fajita": 8,
+  "oil": 15,
+  "cheddar": 40
+ },
  "method": [
   "Toss chicken strips in fajita seasoning; sear hot.",
   "Add pepper and onion for 3–4 min; serve sizzling with warm tortillas and cheddar."

@@ -5,10 +5,6 @@
  "emoji": "🥩",
  "serves": 2,
  "status": "live",
- "per_portion": {
-  "kcal": 655,
-  "protein_g": 43
- },
  "ingredients": [
   {
    "ingredient": "rump",
@@ -26,6 +22,9 @@
  "cupboard": [
   "oil"
  ],
+ "cupboard_qty": {
+  "oil": 10
+ },
  "method": [
   "Oven the crispy potato slices.",
   "Sear the steaks 3–4 min a side; rest.",

@@ -5,10 +5,6 @@
  "emoji": "🍜",
  "serves": 2,
  "status": "live",
- "per_portion": {
-  "kcal": 540,
-  "protein_g": 46
- },
  "ingredients": [
   {
    "ingredient": "breast",
@@ -23,6 +19,10 @@
   "noodles",
   "teriyaki"
  ],
+ "cupboard_qty": {
+  "noodles": 120,
+  "teriyaki": 60
+ },
  "method": [
   "Fry the sliced chicken.",
   "Add stir-fry veg, then teriyaki sauce and cooked noodles; toss."

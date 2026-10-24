@@ -5,10 +5,6 @@
  "emoji": "🍜",
  "serves": 2,
  "status": "live",
- "per_portion": {
-  "kcal": 575,
-  "protein_g": 42
- },
  "ingredients": [
   {
    "ingredient": "mince",
@@ -37,6 +33,12 @@
   "cheddar",
   "puree"
  ],
+ "cupboard_qty": {
+  "lasagne": 150,
+  "cornflour": 20,
+  "cheddar": 60,
+  "puree": 15
+ },
  "method": [
   "Make the ragu: mince, veg, tomatoes, purée; simmer.",
   "Cheese sauce from scratch: whisk cornflour into cold milk, heat till thick, melt in cheddar.",

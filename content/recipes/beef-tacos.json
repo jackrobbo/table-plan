@@ -5,10 +5,6 @@
  "emoji": "🌮",
  "serves": 2,
  "status": "live",
- "per_portion": {
-  "kcal": 615,
-  "protein_g": 44
- },
  "ingredients": [
   {
    "ingredient": "mince",
@@ -41,6 +37,12 @@
   "garlic",
   "cheddar"
  ],
+ "cupboard_qty": {
+  "puree": 15,
+  "fajita": 8,
+  "garlic": 6,
+  "cheddar": 40
+ },
  "method": [
   "Brown the mince; add seasoning, garlic, purée, beans and a splash of water; simmer till saucy.",
   "Load warm tortillas with iceberg, tomatoes, cheddar and a spoon of Greek yogurt."

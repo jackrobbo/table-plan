@@ -5,10 +5,6 @@
  "emoji": "🌯",
  "serves": 1,
  "status": "live",
- "per_portion": {
-  "kcal": 450,
-  "protein_g": 36
- },
  "ingredients": [
   {
    "ingredient": "bacon",

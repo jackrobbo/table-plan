@@ -5,10 +5,6 @@
  "emoji": "🥪",
  "serves": 1,
  "status": "live",
- "per_portion": {
-  "kcal": 425,
-  "protein_g": 27
- },
  "ingredients": [
   {
    "ingredient": "ham",
@@ -27,6 +23,10 @@
   "cheddar",
   "butter"
  ],
+ "cupboard_qty": {
+  "cheddar": 30,
+  "butter": 10
+ },
  "method": [
   "Butter 2 slices; layer 60g ham, 30g cheddar and salad."
  ],

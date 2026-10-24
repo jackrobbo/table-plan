@@ -5,10 +5,6 @@
  "emoji": "🐟",
  "serves": 1,
  "status": "live",
- "per_portion": {
-  "kcal": 440,
-  "protein_g": 36
- },
  "ingredients": [
   {
    "ingredient": "salad",
@@ -21,6 +17,12 @@
   "mayo",
   "sweetcorn"
  ],
+ "cupboard_qty": {
+  "tuna": 112,
+  "fusilli": 60,
+  "mayo": 20,
+  "sweetcorn": 50
+ },
  "method": [
   "Cook 60g fusilli; cool.",
   "Mix a drained tin of tuna with 1 tbsp light mayo.",

@@ -5,10 +5,6 @@
  "emoji": "🥚",
  "serves": 1,
  "status": "live",
- "per_portion": {
-  "kcal": 500,
-  "protein_g": 29
- },
  "ingredients": [
   {
    "ingredient": "eggs",
@@ -22,6 +18,9 @@
  "cupboard": [
   "butter"
  ],
+ "cupboard_qty": {
+  "butter": 10
+ },
  "method": [
   "Soft-boil 3 eggs (~6 min).",
   "Butter 2 slices of toast, cut into soldiers, dip away."
