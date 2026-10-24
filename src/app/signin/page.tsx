@@ -9,12 +9,14 @@ import { normaliseCode } from '@/lib/beta/invites';
 import { track } from '@/lib/analytics';
 
 const RESEND_SECONDS = 30;
+/** Must match Supabase's "Email OTP Length" setting (currently 8). The mock backend uses 6. */
+const OTP_LENGTH = isMocked ? 6 : Number(process.env.NEXT_PUBLIC_OTP_LENGTH) || 8;
 
 export default function SignIn() {
   const router = useRouter();
   const [email, setEmail] = useState('');
   const [sent, setSent] = useState(false);
-  const [digits, setDigits] = useState<string[]>(Array(6).fill(''));
+  const [digits, setDigits] = useState<string[]>(Array(OTP_LENGTH).fill(''));
   const [error, setError] = useState('');
   const [isNew, setIsNew] = useState(false);
   const [invite, setInvite] = useState('');
@@ -51,7 +53,7 @@ export default function SignIn() {
     try {
       if (needsInvite) { await checkInvite(); track('signup_invite_redeemed'); }
       await getBackend().auth.sendCode(email);
-      setSent(true); setWait(RESEND_SECONDS); setDigits(Array(6).fill(''));
+      setSent(true); setWait(RESEND_SECONDS); setDigits(Array(OTP_LENGTH).fill(''));
       setTimeout(() => boxes.current[0]?.focus(), 0);
     } catch (e) { setError((e as Error).message); }
     setBusy(false);
@@ -63,7 +65,7 @@ export default function SignIn() {
       await getBackend().auth.verifyCode(email, code);
       router.replace('/onboarding');
     } catch (e) {
-      setError((e as Error).message); setDigits(Array(6).fill('')); boxes.current[0]?.focus();
+      setError((e as Error).message); setDigits(Array(OTP_LENGTH).fill('')); boxes.current[0]?.focus();
       setBusy(false);
     }
   }
@@ -71,9 +73,9 @@ export default function SignIn() {
   function onDigit(i: number, v: string) {
     const clean = v.replace(/\D/g, '');
     if (clean.length > 1) { // paste of the whole code
-      const next = clean.slice(0, 6).split('');
-      setDigits([...next, ...Array(6 - next.length).fill('')]);
-      if (next.length === 6) void verify(next.join(''));
+      const next = clean.slice(0, OTP_LENGTH).split('');
+      setDigits([...next, ...Array(OTP_LENGTH - next.length).fill('')]);
+      if (next.length === OTP_LENGTH) void verify(next.join(''));
       return;
     }
     const next = digits.slice(); next[i] = clean; setDigits(next);
@@ -89,7 +91,7 @@ export default function SignIn() {
       {!sent ? (
         <>
           <h2>What&apos;s your email?</h2>
-          <p className="sub">We&apos;ll send a 6-digit code. No password. We only use your email for Table Plan, never for anything else.</p>
+          <p className="sub">We&apos;ll send a {OTP_LENGTH}-digit code. No password. We only use your email for Table Plan, never for anything else.</p>
           <input id="email" className="text" type="email" inputMode="email" autoComplete="email" placeholder="you@example.co.uk" value={email}
             aria-label="Email" onChange={(e) => setEmail(e.target.value)} onKeyDown={(e) => e.key === 'Enter' && send()} />
           {needsInvite && <>

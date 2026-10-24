@@ -114,8 +114,8 @@ input.text:focus{outline:2px solid var(--ok);}
 .err{color:var(--danger); font-weight:600; font-size:14px; margin:8px 0;}
 
 /* ---- sign-in ---- */
-.otp{display:flex; gap:8px; margin:18px 0 8px;}
-.otp input{flex:1; min-width:0; height:56px; text-align:center; font:600 26px var(--font); border:0; border-radius:var(--radius-sm); background:var(--card); color:var(--ink);}
+.otp{display:flex; gap:6px; margin:18px 0 8px;}
+.otp input{flex:1; min-width:0; height:56px; text-align:center; font:600 24px var(--font); padding:0; border:0; border-radius:var(--radius-sm); background:var(--card); color:var(--ink);}
 .otp input:focus{outline:2px solid var(--ok);}
 
 /* ---- welcome ---- */
