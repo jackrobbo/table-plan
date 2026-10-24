@@ -7,6 +7,8 @@ const r = await build({
   entryPoints: ['scripts/artifact/entry.tsx'], bundle: true, write: false, minify: true, format: 'iife', jsx: 'automatic',
   define: {
     'process.env.NODE_ENV': '"production"',
+    'process.env.NEXT_PUBLIC_INVITE_ONLY': '""',
+    'process.env.NEXT_PUBLIC_DEV_INVITE_CODES': 'undefined',
     __LOGO_MORRISONS_LIGHT__: JSON.stringify('data:image/svg+xml;base64,' + fs.readFileSync('public/logos/morrisons-light.svg').toString('base64')),
     __LOGO_MORRISONS_DARK__: JSON.stringify('data:image/svg+xml;base64,' + fs.readFileSync('public/logos/morrisons-dark.svg').toString('base64')),
   },

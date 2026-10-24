@@ -4,6 +4,7 @@ import { useRouter } from 'next/navigation';
 import Screen from '@/components/Screen';
 import { DEFAULT_PLAN, PLANS, gbp, perMonth, type PlanId } from '@/lib/billing/config';
 import { isMocked } from '@/lib/db';
+import { track } from '@/lib/analytics';
 import { useAccess } from '@/lib/useAccess';
 import { useProfile } from '@/lib/useProfile';
 
@@ -18,12 +19,13 @@ export default function Subscribe() {
   const [error, setError] = useState('');
 
   useEffect(() => { if (ready && !session) router.replace('/signin'); }, [ready, session, router]);
+  useEffect(() => { track('paywall_viewed'); }, []);
   useEffect(() => { if (loaded && access) router.replace('/plan'); }, [loaded, access, router]);
 
   const cfg = PLANS[plan];
   const go = async () => {
     setBusy(true); setError('');
-    try { await subscribe(plan); router.replace('/plan'); } catch { setError('Something went wrong. You have not been charged. Try again.'); setBusy(false); }
+    try { await subscribe(plan); track('subscribed', { plan, trial: PLANS[plan].trialDays > 0 }); router.replace('/plan'); } catch { setError('Something went wrong. You have not been charged. Try again.'); setBusy(false); }
   };
   const Card = ({ id, tag, sub }: { id: PlanId; tag?: string; sub: string }) => (
     <button className={'plancard' + (plan === id ? ' on' : '')} role="radio" aria-checked={plan === id} onClick={() => setPlan(id)}>

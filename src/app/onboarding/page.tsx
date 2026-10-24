@@ -11,6 +11,7 @@ import type { Goal, Profile, MealTime } from '@/lib/profile';
 import { computeTargets, type Sex } from '@/lib/targets';
 import { cmToFtIn, ftInToCm, kgToLb, kgToStLb, lbToKg, stLbToKg } from '@/lib/units';
 import Screen from '@/components/Screen';
+import { track } from '@/lib/analytics';
 import { useProfile } from '@/lib/useProfile';
 
 type Upd = (fn: (p: Profile) => Profile) => void;
@@ -37,7 +38,7 @@ export default function Onboarding() {
   return (
     <Screen onBack={onBack} progress={hasBar ? { step: stepIndex(step) + 1, total: BAR_STEPS } : undefined}
       footer={<>
-        <button className="btn" disabled={!ok} onClick={() => update(advance)}>{cta}</button>
+        <button className="btn" disabled={!ok} onClick={() => { track(step === 'taste' ? 'onboarding_done' : 'onboarding_step', { step }); update(advance); }}>{cta}</button>
         {step === 'allergies' && (
           <button className="linkbtn accent" onClick={() => update((p) => advance({ ...setAllergies(p, []), noAllergies: true }))}>No one has allergies</button>
         )}

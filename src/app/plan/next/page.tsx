@@ -15,6 +15,7 @@ import type { Plan } from '@/lib/planner/types';
 import type { MealTime } from '@/lib/profile';
 import { shortDate } from '@/lib/pricing/refresh';
 import { computeTargets } from '@/lib/targets';
+import { track } from '@/lib/analytics';
 import { useAccess } from '@/lib/useAccess';
 import { useNow } from '@/lib/useNow';
 import { useProfile } from '@/lib/useProfile';
@@ -62,7 +63,9 @@ export default function PlanNext() {
 
   const build = (liked: string[]) => {
     const input = { ...planInputFrom(profile), liked };
-    setDraft(planWeek(input, 24, Math.floor(Math.random() * 1e6)));
+    const built = planWeek(input, 24, Math.floor(Math.random() * 1e6));
+    track('week_generated', { days_in_band: built.days.filter((d) => d.inBand).length, mode: liked === profile.likedRecipes ? 'auto' : 'own' });
+    setDraft(built);
     setStep('review');
   };
   const togglePick = (id: string) =>
@@ -74,6 +77,8 @@ export default function PlanNext() {
   const save = () => {
     if (!draft) return;
     update((p) => ({ ...p, weeks: saveList(savePlan(ensureWeeks(p.weeks, now), week.start, draft), week.start, have, 'notes') }));
+    track('week_planned', { days: draft.days.length });
+    track('list_saved', { items: shopping?.lines.length ?? 0 });
     setSaved(week);
     setStep('saved');
   };

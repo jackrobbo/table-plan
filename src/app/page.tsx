@@ -8,6 +8,7 @@ export default function Welcome() {
     <Screen footer={<>
       <Link className="btn" href="/signin?new=1">Create my plan</Link>
       <Link className="linkbtn accent" href="/signin">I have an account</Link>
+      {process.env.NEXT_PUBLIC_INVITE_ONLY === '1' && <Link className="linkbtn" href="/waitlist">No invite yet? Join the waitlist</Link>}
     </>}>
       <div className="brand"><div className="logo">T</div>Table Plan</div>
       <h1>Cook real food based on your needs and goals.</h1>

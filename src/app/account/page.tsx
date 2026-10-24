@@ -15,11 +15,20 @@ export default function Account() {
   const { session, ready, update } = useProfile();
   const { sub, loaded, access, cancel, resume } = useAccess(session);
   const [confirmDelete, setConfirmDelete] = useState(false);
+  const [fb, setFb] = useState('');
+  const [fbState, setFbState] = useState<'idle' | 'sent' | string>('idle');
 
   useEffect(() => { if (ready && !session) router.replace('/signin'); }, [ready, session, router]);
   if (!ready || !session || !loaded) return <Screen><div className="skeleton-stack"><div className="skeleton sk-title" /><div className="skeleton sk-card" /></div></Screen>;
 
   const plan = sub.plan ? PLANS[sub.plan] : null;
+  const sendFeedback = async () => {
+    try {
+      const r = await fetch('/api/feedback', { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ message: fb, page: 'account' }) });
+      const j = (await r.json()) as { error?: string };
+      if (r.ok) { setFbState('sent'); setFb(''); } else setFbState(j.error ?? 'Could not send feedback.');
+    } catch { setFbState('Could not send feedback. Check your connection.'); }
+  };
   const wipe = async () => { await getBackend().profiles.erase(session.userId); await getBackend().auth.signOut(); router.replace('/'); };
 
   return (
@@ -49,6 +58,15 @@ export default function Account() {
             ? <button className="btn ghost" onClick={resume}>Keep my subscription</button>
             : access && <button className="btn ghost" onClick={cancel}>Cancel subscription</button>}
         </>}
+      </div>
+
+      <div className="card" style={{ marginTop: 12 }}>
+        <h3>Feedback</h3>
+        <p className="muted">Something confusing, wrong or missing? Tell us. We read every message.</p>
+        <textarea className="copybox" style={{ minHeight: 90, fontFamily: 'inherit', fontSize: 15 }} aria-label="Your feedback" value={fb} onChange={(e) => { setFb(e.target.value); setFbState('idle'); }} />
+        <button className="btn ghost" style={{ marginTop: 8 }} disabled={fb.trim().length < 3} onClick={sendFeedback}>Send feedback</button>
+        {fbState === 'sent' && <p className="muted" role="status">Thanks, that&apos;s sent.</p>}
+        {fbState !== 'idle' && fbState !== 'sent' && <p className="err">{fbState}</p>}
       </div>
 
       <div className="card" style={{ marginTop: 12 }}>

@@ -55,3 +55,9 @@ built and unit-tested but not run against Stripe: `src/lib/billing/server.ts` + 
 Env: `STRIPE_SECRET_KEY`, `STRIPE_WEBHOOK_SECRET`, `STRIPE_PRICE_YEARLY`, `STRIPE_PRICE_MONTHLY`. It needs
 `src/lib/server/context.ts` wired to Supabase (session JWT check, service-role writes to `subscriptions`/`stripe_events`).
 Until then the routes answer 401/501/503 rather than pretending.
+
+## Private beta (M7)
+Waitlist (`/waitlist`), invite gate (`NEXT_PUBLIC_INVITE_ONLY=1`; preview with the dev code `TABLE-DEMO`), single-use invite codes
+(`npm run beta:invites -- 50`, written to gitignored `.private/`), in-app feedback, consent-gated cookieless analytics,
+error and 404 pages. Local waitlist testing: set `WAITLIST_FILE=.private/waitlist.jsonl`. **See `design/beta-checklist.md` for the
+blockers before real users.** One-paste database setup: `npm run supabase:bundle` → `supabase/setup.sql`.
