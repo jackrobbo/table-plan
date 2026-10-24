@@ -1,0 +1,35 @@
+{
+ "slug": "honey-and-soy-chicken",
+ "name": "Honey & Soy Chicken",
+ "course": "dinner",
+ "emoji": "🍯",
+ "serves": 2,
+ "status": "live",
+ "per_portion": {
+  "kcal": 475,
+  "protein_g": 42
+ },
+ "ingredients": [
+  {
+   "ingredient": "breast",
+   "qty": 280
+  },
+  {
+   "ingredient": "brocc",
+   "qty": 240
+  }
+ ],
+ "cupboard": [
+  "rice",
+  "soy",
+  "honey",
+  "cornflour",
+  "garlic"
+ ],
+ "method": [
+  "Fry the sliced chicken.",
+  "Add soy, honey, garlic and water; thicken with a cornflour slurry to a glossy glaze.",
+  "Steam broccoli, cook rice, pour every drop of sauce over."
+ ],
+ "source": "poc"
+}

@@ -1,0 +1,21 @@
+{
+ "slug": "protein-pops",
+ "name": "Protein Pops",
+ "course": "snack",
+ "emoji": "🍿",
+ "serves": 1,
+ "status": "live",
+ "per_portion": {
+  "kcal": 187,
+  "protein_g": 10
+ },
+ "ingredients": [
+  {
+   "ingredient": "pops",
+   "qty": 1
+  }
+ ],
+ "cupboard": [],
+ "method": [],
+ "source": "poc"
+}

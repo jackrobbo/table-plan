@@ -1,0 +1,53 @@
+{
+ "slug": "greek-chicken-gyros",
+ "name": "Greek Chicken Gyros",
+ "course": "dinner",
+ "emoji": "🥙",
+ "serves": 2,
+ "status": "live",
+ "per_portion": {
+  "kcal": 515,
+  "protein_g": 52
+ },
+ "ingredients": [
+  {
+   "ingredient": "thigh",
+   "qty": 500
+  },
+  {
+   "ingredient": "pittas",
+   "qty": 2
+  },
+  {
+   "ingredient": "iceberg",
+   "qty": 0.2
+  },
+  {
+   "ingredient": "plum",
+   "qty": 40
+  },
+  {
+   "ingredient": "cuc",
+   "qty": 0.25
+  },
+  {
+   "ingredient": "greek",
+   "qty": 150
+  },
+  {
+   "ingredient": "lemon",
+   "qty": 0.5
+  }
+ ],
+ "cupboard": [
+  "oregano",
+  "garlic",
+  "oil"
+ ],
+ "method": [
+  "Marinate sliced thighs in oil, oregano, garlic, lemon; grill till charred.",
+  "Mix tzatziki: Greek yogurt, grated cucumber, garlic, lemon.",
+  "Build on warm pittas with iceberg and tomatoes."
+ ],
+ "source": "poc"
+}

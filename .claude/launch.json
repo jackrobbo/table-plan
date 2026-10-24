@@ -3,8 +3,8 @@
   "configurations": [
     {
       "name": "table-plan",
-      "runtimeExecutable": "npx",
-      "runtimeArgs": ["serve", ".", "-l", "3001"],
+      "runtimeExecutable": "npm",
+      "runtimeArgs": ["run", "dev", "--", "-p", "3001"],
       "port": 3001
     }
   ]

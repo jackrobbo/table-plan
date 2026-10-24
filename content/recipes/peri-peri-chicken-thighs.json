@@ -1,0 +1,35 @@
+{
+ "slug": "peri-peri-chicken-thighs",
+ "name": "Peri Peri Chicken Thighs",
+ "course": "dinner",
+ "emoji": "🍗",
+ "serves": 2,
+ "status": "live",
+ "per_portion": {
+  "kcal": 590,
+  "protein_g": 55
+ },
+ "ingredients": [
+  {
+   "ingredient": "thigh",
+   "qty": 600
+  },
+  {
+   "ingredient": "pouch",
+   "qty": 350
+  },
+  {
+   "ingredient": "cobs",
+   "qty": 2
+  }
+ ],
+ "cupboard": [
+  "peri",
+  "oil"
+ ],
+ "method": [
+  "Coat the thighs in peri-peri and oil; roast or air-fry ~22 min.",
+  "Microwave the buttered potato pouch; boil the corn cobs."
+ ],
+ "source": "poc"
+}

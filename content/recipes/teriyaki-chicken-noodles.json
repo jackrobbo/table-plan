@@ -1,0 +1,31 @@
+{
+ "slug": "teriyaki-chicken-noodles",
+ "name": "Teriyaki Chicken Noodles",
+ "course": "dinner",
+ "emoji": "🍜",
+ "serves": 2,
+ "status": "live",
+ "per_portion": {
+  "kcal": 540,
+  "protein_g": 46
+ },
+ "ingredients": [
+  {
+   "ingredient": "breast",
+   "qty": 280
+  },
+  {
+   "ingredient": "stirfry",
+   "qty": 400
+  }
+ ],
+ "cupboard": [
+  "noodles",
+  "teriyaki"
+ ],
+ "method": [
+  "Fry the sliced chicken.",
+  "Add stir-fry veg, then teriyaki sauce and cooked noodles; toss."
+ ],
+ "source": "poc"
+}

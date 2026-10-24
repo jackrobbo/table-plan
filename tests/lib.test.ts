@@ -54,7 +54,7 @@ describe('units', () => {
 
 describe('allergens', () => {
   it('hard-excludes household allergens', () => {
-    const prawn = RECIPES.find((r) => r.id === 'LR')!;
+    const prawn = RECIPES.find((r) => r.id === 'prawn-salad')!;
     expect(recipeAllergens(prawn)).toContain('crustaceans');
     expect(isSafeFor(prawn, ['crustaceans'])).toBe(false);
     expect(safeRecipes(['milk']).every((r) => !recipeAllergens(r).includes('milk'))).toBe(true);
@@ -86,8 +86,8 @@ describe('onboarding', () => {
   });
 
   it('allergy changes drop likes that are no longer safe', () => {
-    let p = swipe(emptyProfile(), 'LR', true);
-    expect(p.likedRecipes).toEqual(['LR']);
+    let p = swipe(emptyProfile(), 'prawn-salad', true);
+    expect(p.likedRecipes).toEqual(['prawn-salad']);
     p = setAllergies(p, ['crustaceans']);
     expect(p.likedRecipes).toEqual([]);
   });
@@ -132,5 +132,37 @@ describe('mock backend', () => {
     expect(await b.profiles.load(s.userId)).toBeNull();
     await b.auth.signOut();
     expect(await b.auth.getSession()).toBeNull();
+  });
+});
+
+import fs from 'node:fs';
+import type { IngredientDef, RecipeDef } from '@/lib/content/types';
+import { validateContent } from '@/lib/content/validate';
+
+describe('content validation', () => {
+  const ingredients = JSON.parse(fs.readFileSync('content/ingredients.json', 'utf8')) as IngredientDef[];
+  const recipe = (over: Partial<RecipeDef> = {}): RecipeDef => ({
+    slug: 'test-bowl', name: 'Test Bowl', course: 'lunch', serves: 1, status: 'draft',
+    per_portion: { kcal: 400, protein_g: 30 }, ingredients: [{ ingredient: 'eggs', qty: 2 }], cupboard: [], method: ['Cook.'],
+    ...over,
+  });
+  const errs = (r: RecipeDef[]) => validateContent(ingredients, r).filter((i) => i.level === 'error').map((i) => i.message);
+
+  it('accepts the shipped content', () => {
+    const dir = 'content/recipes';
+    const all = fs.readdirSync(dir).map((f) => JSON.parse(fs.readFileSync(`${dir}/${f}`, 'utf8')) as RecipeDef);
+    expect(errs(all)).toEqual([]);
+  });
+  it('flags bad recipes', () => {
+    expect(errs([recipe({ ingredients: [{ ingredient: 'nope', qty: 1 }] })])).toContain('unknown ingredient "nope"');
+    expect(errs([recipe({ cupboard: ['eggs'] })])).toContain('"eggs" is not flagged as a cupboard item');
+    expect(errs([recipe({ per_portion: { kcal: 100, protein_g: 40 } })])).toContain('protein calories exceed total kcal');
+    expect(errs([recipe(), recipe({ slug: 'other' })])).toContain('duplicate name "Test Bowl"');
+    expect(errs([recipe({ ingredients: [{ ingredient: 'eggs', qty: 0 }] })])).toContain('quantity for "eggs" must be > 0');
+  });
+  it('blocks live recipes with unpriced ingredients', () => {
+    const unpriced: IngredientDef[] = [...ingredients, { slug: 'mystery', name: 'Mystery', unit: 'g', cupboard: false, allergens: [], per100: null, product: null }];
+    const e = validateContent(unpriced, [recipe({ status: 'live', ingredients: [{ ingredient: 'mystery', qty: 5 }] })]);
+    expect(e.some((i) => i.level === 'error' && i.message.includes('no product'))).toBe(true);
   });
 });

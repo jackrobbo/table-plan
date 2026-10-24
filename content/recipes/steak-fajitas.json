@@ -1,0 +1,39 @@
+{
+ "slug": "steak-fajitas",
+ "name": "Steak Fajitas",
+ "course": "dinner",
+ "emoji": "🌯",
+ "serves": 2,
+ "status": "live",
+ "per_portion": {
+  "kcal": 475,
+  "protein_g": 31
+ },
+ "ingredients": [
+  {
+   "ingredient": "sizzle",
+   "qty": 320
+  },
+  {
+   "ingredient": "mixpep",
+   "qty": 3
+  },
+  {
+   "ingredient": "onions",
+   "qty": 1
+  },
+  {
+   "ingredient": "wraps",
+   "qty": 3
+  }
+ ],
+ "cupboard": [
+  "fajita"
+ ],
+ "method": [
+  "Sear the sliced sizzle steak fast; set aside.",
+  "Fry peppers and onion; return steak with seasoning.",
+  "Serve with warm tortillas."
+ ],
+ "source": "poc"
+}

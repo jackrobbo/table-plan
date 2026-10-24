@@ -1,0 +1,32 @@
+{
+ "slug": "bacon-and-egg-breakfast-wrap",
+ "name": "Bacon & Egg Breakfast Wrap",
+ "course": "breakfast",
+ "emoji": "🌯",
+ "serves": 1,
+ "status": "live",
+ "per_portion": {
+  "kcal": 450,
+  "protein_g": 36
+ },
+ "ingredients": [
+  {
+   "ingredient": "bacon",
+   "qty": 3
+  },
+  {
+   "ingredient": "eggs",
+   "qty": 2
+  },
+  {
+   "ingredient": "mission",
+   "qty": 1
+  }
+ ],
+ "cupboard": [],
+ "method": [
+  "Grill 3 bacon medallions; scramble 2 eggs.",
+  "Warm a protein wrap, fill and roll."
+ ],
+ "source": "poc"
+}

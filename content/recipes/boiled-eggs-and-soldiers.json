@@ -1,0 +1,30 @@
+{
+ "slug": "boiled-eggs-and-soldiers",
+ "name": "Boiled Eggs & Soldiers",
+ "course": "breakfast",
+ "emoji": "🥚",
+ "serves": 1,
+ "status": "live",
+ "per_portion": {
+  "kcal": 500,
+  "protein_g": 29
+ },
+ "ingredients": [
+  {
+   "ingredient": "eggs",
+   "qty": 3
+  },
+  {
+   "ingredient": "loaf",
+   "qty": 2
+  }
+ ],
+ "cupboard": [
+  "butter"
+ ],
+ "method": [
+  "Soft-boil 3 eggs (~6 min).",
+  "Butter 2 slices of toast, cut into soldiers, dip away."
+ ],
+ "source": "poc"
+}

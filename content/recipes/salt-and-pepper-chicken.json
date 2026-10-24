@@ -1,0 +1,49 @@
+{
+ "slug": "salt-and-pepper-chicken",
+ "name": "Salt & Pepper Chicken",
+ "course": "dinner",
+ "emoji": "🍗",
+ "serves": 2,
+ "status": "live",
+ "per_portion": {
+  "kcal": 570,
+  "protein_g": 46
+ },
+ "ingredients": [
+  {
+   "ingredient": "breast",
+   "qty": 280
+  },
+  {
+   "ingredient": "pepper",
+   "qty": 1
+  },
+  {
+   "ingredient": "onions",
+   "qty": 1
+  },
+  {
+   "ingredient": "chilli",
+   "qty": 10
+  },
+  {
+   "ingredient": "spring",
+   "qty": 0.5
+  },
+  {
+   "ingredient": "eggs",
+   "qty": 2
+  }
+ ],
+ "cupboard": [
+  "rice",
+  "cornflour",
+  "fivespice"
+ ],
+ "method": [
+  "Toss diced chicken in seasoned cornflour; fry till crisp.",
+  "Stir-fry pepper, onion, chilli.",
+  "Egg-fried rice; combine everything."
+ ],
+ "source": "poc"
+}

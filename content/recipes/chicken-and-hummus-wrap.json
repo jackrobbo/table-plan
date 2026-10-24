@@ -1,0 +1,40 @@
+{
+ "slug": "chicken-and-hummus-wrap",
+ "name": "Chicken & Hummus Wrap",
+ "course": "lunch",
+ "emoji": "🌯",
+ "serves": 1,
+ "status": "live",
+ "per_portion": {
+  "kcal": 380,
+  "protein_g": 25
+ },
+ "ingredients": [
+  {
+   "ingredient": "roast",
+   "qty": 80
+  },
+  {
+   "ingredient": "houm",
+   "qty": 30
+  },
+  {
+   "ingredient": "iceberg",
+   "qty": 0.15
+  },
+  {
+   "ingredient": "plum",
+   "qty": 40
+  },
+  {
+   "ingredient": "wraps",
+   "qty": 1
+  }
+ ],
+ "cupboard": [],
+ "method": [
+  "Spread red pepper houmous over a wrap.",
+  "Add chicken slices, iceberg and tomatoes; roll."
+ ],
+ "source": "poc"
+}

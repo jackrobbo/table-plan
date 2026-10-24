@@ -1,0 +1,29 @@
+{
+ "slug": "yogurt-and-banana-bowl",
+ "name": "Yogurt & Banana Bowl",
+ "course": "breakfast",
+ "emoji": "🍌",
+ "serves": 1,
+ "status": "live",
+ "per_portion": {
+  "kcal": 320,
+  "protein_g": 24
+ },
+ "ingredients": [
+  {
+   "ingredient": "yog",
+   "qty": 1
+  },
+  {
+   "ingredient": "banana",
+   "qty": 1
+  }
+ ],
+ "cupboard": [
+  "nuts"
+ ],
+ "method": [
+  "Yogurt pot in a bowl, sliced banana on top, 15g chopped nuts to finish."
+ ],
+ "source": "poc"
+}

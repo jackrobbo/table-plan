@@ -1,0 +1,46 @@
+{
+ "slug": "lasagne",
+ "name": "Lasagne",
+ "course": "dinner",
+ "emoji": "🍜",
+ "serves": 2,
+ "status": "live",
+ "per_portion": {
+  "kcal": 575,
+  "protein_g": 42
+ },
+ "ingredients": [
+  {
+   "ingredient": "mince",
+   "qty": 300
+  },
+  {
+   "ingredient": "onions",
+   "qty": 1
+  },
+  {
+   "ingredient": "carrots",
+   "qty": 80
+  },
+  {
+   "ingredient": "ctoms",
+   "qty": 400
+  },
+  {
+   "ingredient": "milk",
+   "qty": 300
+  }
+ ],
+ "cupboard": [
+  "lasagne",
+  "cornflour",
+  "cheddar",
+  "puree"
+ ],
+ "method": [
+  "Make the ragu: mince, veg, tomatoes, purée; simmer.",
+  "Cheese sauce from scratch: whisk cornflour into cold milk, heat till thick, melt in cheddar.",
+  "Layer, top with cheddar, bake 35–40 min at 200°C."
+ ],
+ "source": "poc"
+}

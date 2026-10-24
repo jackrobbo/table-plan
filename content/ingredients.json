@@ -1,0 +1,1061 @@
+[
+ {
+  "slug": "breast",
+  "name": "Morrisons British Chicken Breast Fillets 1kg",
+  "unit": "g",
+  "cupboard": false,
+  "allergens": [],
+  "per100": null,
+  "product": {
+   "retailer": "morrisons",
+   "name": "Morrisons British Chicken Breast Fillets 1kg",
+   "price_pence": 699,
+   "pack_size": 1000,
+   "slug": "morrisons-british-chicken-breast-fillets-1kg/108444711"
+  }
+ },
+ {
+  "slug": "thigh",
+  "name": "Morrisons British Boneless Chicken Thigh Fillets 1kg",
+  "unit": "g",
+  "cupboard": false,
+  "allergens": [],
+  "per100": null,
+  "product": {
+   "retailer": "morrisons",
+   "name": "Morrisons British Boneless Chicken Thigh Fillets 1kg",
+   "price_pence": 725,
+   "pack_size": 1000,
+   "slug": "morrisons-british-boneless-chicken-thigh-fillets-1kg/108854278"
+  }
+ },
+ {
+  "slug": "mince",
+  "name": "Morrisons British Beef Steak Mince 5% Fat 250g",
+  "unit": "g",
+  "cupboard": false,
+  "allergens": [],
+  "per100": null,
+  "product": {
+   "retailer": "morrisons",
+   "name": "Morrisons British Beef Steak Mince 5% Fat 250g",
+   "price_pence": 295,
+   "pack_size": 250,
+   "slug": "morrisons-british-beef-steak-mince-5-fat-250g/109897499"
+  }
+ },
+ {
+  "slug": "sizzle",
+  "name": "Morrisons British Beef Sizzle Steak 320g",
+  "unit": "g",
+  "cupboard": false,
+  "allergens": [],
+  "per100": null,
+  "product": {
+   "retailer": "morrisons",
+   "name": "Morrisons British Beef Sizzle Steak 320g",
+   "price_pence": 525,
+   "pack_size": 320,
+   "slug": "morrisons-british-beef-sizzle-steak-320g/112613434"
+  }
+ },
+ {
+  "slug": "rump",
+  "name": "Morrisons British Beef Rump Steak 200g",
+  "unit": "g",
+  "cupboard": false,
+  "allergens": [],
+  "per100": null,
+  "product": {
+   "retailer": "morrisons",
+   "name": "Morrisons British Beef Rump Steak 200g",
+   "price_pence": 293,
+   "pack_size": 200,
+   "slug": "morrisons-british-beef-rump-steak-200g/115888652"
+  }
+ },
+ {
+  "slug": "prawns",
+  "name": "Morrisons Savers King Prawns 150g",
+  "unit": "g",
+  "cupboard": false,
+  "allergens": [
+   "crustaceans"
+  ],
+  "per100": null,
+  "product": {
+   "retailer": "morrisons",
+   "name": "Morrisons Savers King Prawns 150g",
+   "price_pence": 249,
+   "pack_size": 150,
+   "slug": "morrisons-savers-king-prawns/112570964"
+  }
+ },
+ {
+  "slug": "roast",
+  "name": "Morrisons Roast Chicken Breast Slices 180g",
+  "unit": "g",
+  "cupboard": false,
+  "allergens": [],
+  "per100": null,
+  "product": {
+   "retailer": "morrisons",
+   "name": "Morrisons Roast Chicken Breast Slices 180g",
+   "price_pence": 375,
+   "pack_size": 180,
+   "slug": "morrisons-roast-chicken-slices-180g/112780136"
+  }
+ },
+ {
+  "slug": "ham",
+  "name": "Morrisons British Cooked Ham 120g",
+  "unit": "g",
+  "cupboard": false,
+  "allergens": [],
+  "per100": null,
+  "product": {
+   "retailer": "morrisons",
+   "name": "Morrisons British Cooked Ham 120g",
+   "price_pence": 200,
+   "pack_size": 120,
+   "slug": "morrisons-british-cooked-ham-120g/112634551"
+  }
+ },
+ {
+  "slug": "bacon",
+  "name": "Morrisons Lean Smoked Bacon Medallions 8pk",
+  "unit": "medallions",
+  "cupboard": false,
+  "allergens": [],
+  "per100": null,
+  "product": {
+   "retailer": "morrisons",
+   "name": "Morrisons Lean Smoked Bacon Medallions 8pk",
+   "price_pence": 325,
+   "pack_size": 8,
+   "slug": "morrisons-8-lean-smoked-bacon-medallions/111008110"
+  }
+ },
+ {
+  "slug": "eggs",
+  "name": "Morrisons Medium Free Range Eggs 6 Pack",
+  "unit": "eggs",
+  "cupboard": false,
+  "allergens": [
+   "eggs"
+  ],
+  "per100": null,
+  "product": {
+   "retailer": "morrisons",
+   "name": "Morrisons Medium Free Range Eggs 6 Pack",
+   "price_pence": 180,
+   "pack_size": 6,
+   "slug": "morrisons-medium-free-range-eggs-6-pack/105828736"
+  }
+ },
+ {
+  "slug": "milk",
+  "name": "Morrisons British Semi Skimmed Milk 4 Pint",
+  "unit": "ml",
+  "cupboard": false,
+  "allergens": [
+   "milk"
+  ],
+  "per100": null,
+  "product": {
+   "retailer": "morrisons",
+   "name": "Morrisons British Semi Skimmed Milk 4 Pint",
+   "price_pence": 165,
+   "pack_size": 2272,
+   "slug": "morrisons-british-semi-skimmed-milk-4-pint/113240422"
+  }
+ },
+ {
+  "slug": "yog",
+  "name": "Morrisons Protein Yogurt 200g pot",
+  "unit": "pots",
+  "cupboard": false,
+  "allergens": [
+   "milk"
+  ],
+  "per100": null,
+  "product": {
+   "retailer": "morrisons",
+   "name": "Morrisons Protein Yogurt 200g pot",
+   "price_pence": 75,
+   "pack_size": 1,
+   "slug": "morrisons-strawberry-protein-yogurt/113699428"
+  }
+ },
+ {
+  "slug": "greek",
+  "name": "Morrisons Greek Style Yogurt 500g",
+  "unit": "g",
+  "cupboard": false,
+  "allergens": [
+   "milk"
+  ],
+  "per100": null,
+  "product": {
+   "retailer": "morrisons",
+   "name": "Morrisons Greek Style Yogurt 500g",
+   "price_pence": 115,
+   "pack_size": 500,
+   "slug": "morrisons-greek-style-yogurt-500g/103078919"
+  }
+ },
+ {
+  "slug": "loaf",
+  "name": "Morrisons White Farmhouse Loaf 800g",
+  "unit": "slices",
+  "cupboard": false,
+  "allergens": [
+   "gluten"
+  ],
+  "per100": null,
+  "product": {
+   "retailer": "morrisons",
+   "name": "Morrisons White Farmhouse Loaf 800g",
+   "price_pence": 110,
+   "pack_size": 16,
+   "slug": "morrisons-white-farmhouse-loaf-800g/113876869"
+  }
+ },
+ {
+  "slug": "wraps",
+  "name": "Morrisons Plain Tortilla Wraps 8pk",
+  "unit": "wraps",
+  "cupboard": false,
+  "allergens": [
+   "gluten"
+  ],
+  "per100": null,
+  "product": {
+   "retailer": "morrisons",
+   "name": "Morrisons Plain Tortilla Wraps 8pk",
+   "price_pence": 140,
+   "pack_size": 8,
+   "slug": "morrisons-plain-tortilla-wraps-8-pack/112909657"
+  }
+ },
+ {
+  "slug": "mission",
+  "name": "Mission Protein Tortilla Wraps 6pk",
+  "unit": "wraps",
+  "cupboard": false,
+  "allergens": [
+   "gluten",
+   "soya"
+  ],
+  "per100": null,
+  "product": {
+   "retailer": "morrisons",
+   "name": "Mission Protein Tortilla Wraps 6pk",
+   "price_pence": 180,
+   "pack_size": 6,
+   "slug": "mission-protein-tortilla-wraps-367g/114821317"
+  }
+ },
+ {
+  "slug": "pittas",
+  "name": "Morrisons Stonebaked Wholemeal Pittas 6pk",
+  "unit": "pittas",
+  "cupboard": false,
+  "allergens": [
+   "gluten"
+  ],
+  "per100": null,
+  "product": {
+   "retailer": "morrisons",
+   "name": "Morrisons Stonebaked Wholemeal Pittas 6pk",
+   "price_pence": 50,
+   "pack_size": 6,
+   "slug": "morrisons-stonebaked-wholemeal-pittas/109515921"
+  }
+ },
+ {
+  "slug": "houm",
+  "name": "Morrisons Red Pepper Houmous 200g",
+  "unit": "g",
+  "cupboard": false,
+  "allergens": [
+   "sesame"
+  ],
+  "per100": null,
+  "product": {
+   "retailer": "morrisons",
+   "name": "Morrisons Red Pepper Houmous 200g",
+   "price_pence": 130,
+   "pack_size": 200,
+   "slug": "morrisons-red-pepper-houmous-200g/109734809"
+  }
+ },
+ {
+  "slug": "blueb",
+  "name": "Morrisons Savers Blueberries 125g",
+  "unit": "g",
+  "cupboard": false,
+  "allergens": [],
+  "per100": null,
+  "product": {
+   "retailer": "morrisons",
+   "name": "Morrisons Savers Blueberries 125g",
+   "price_pence": 129,
+   "pack_size": 125,
+   "slug": "morrisons-savers-blueberries-125g/113455600"
+  }
+ },
+ {
+  "slug": "banana",
+  "name": "Fyffes Bananas 5 Pack",
+  "unit": "bananas",
+  "cupboard": false,
+  "allergens": [],
+  "per100": null,
+  "product": {
+   "retailer": "morrisons",
+   "name": "Fyffes Bananas 5 Pack",
+   "price_pence": 78,
+   "pack_size": 5,
+   "slug": "fyffes-bananas-5-pack/115455355"
+  }
+ },
+ {
+  "slug": "apple",
+  "name": "Gala Apple (loose)",
+  "unit": "apples",
+  "cupboard": false,
+  "allergens": [],
+  "per100": null,
+  "product": {
+   "retailer": "morrisons",
+   "name": "Gala Apple (loose)",
+   "price_pence": 45,
+   "pack_size": 1,
+   "slug": "morrisons-loose-royal-gala-apples/109861752"
+  }
+ },
+ {
+  "slug": "lemon",
+  "name": "Lemon (loose)",
+  "unit": "lemons",
+  "cupboard": false,
+  "allergens": [],
+  "per100": null,
+  "product": {
+   "retailer": "morrisons",
+   "name": "Lemon (loose)",
+   "price_pence": 37,
+   "pack_size": 1,
+   "slug": "morrisons-loose-lemon/108379999"
+  }
+ },
+ {
+  "slug": "iceberg",
+  "name": "Morrisons British Iceberg Lettuce",
+  "unit": "heads",
+  "cupboard": false,
+  "allergens": [],
+  "per100": null,
+  "product": {
+   "retailer": "morrisons",
+   "name": "Morrisons British Iceberg Lettuce",
+   "price_pence": 89,
+   "pack_size": 1,
+   "slug": "morrisons-british-iceberg-lettuce/108370943"
+  }
+ },
+ {
+  "slug": "cuc",
+  "name": "Whole Cucumber",
+  "unit": "cucumbers",
+  "cupboard": false,
+  "allergens": [],
+  "per100": null,
+  "product": {
+   "retailer": "morrisons",
+   "name": "Whole Cucumber",
+   "price_pence": 99,
+   "pack_size": 1,
+   "slug": "morrisons-whole-cucumber/108413093"
+  }
+ },
+ {
+  "slug": "plum",
+  "name": "Morrisons Baby Plum Tomatoes 250g",
+  "unit": "g",
+  "cupboard": false,
+  "allergens": [],
+  "per100": null,
+  "product": {
+   "retailer": "morrisons",
+   "name": "Morrisons Baby Plum Tomatoes 250g",
+   "price_pence": 77,
+   "pack_size": 250,
+   "slug": "morrisons-baby-plum-tomatoes-250g/108388174"
+  }
+ },
+ {
+  "slug": "salad",
+  "name": "Morrisons Crispy Salad 120g",
+  "unit": "g",
+  "cupboard": false,
+  "allergens": [],
+  "per100": null,
+  "product": {
+   "retailer": "morrisons",
+   "name": "Morrisons Crispy Salad 120g",
+   "price_pence": 100,
+   "pack_size": 120,
+   "slug": "morrisons-crispy-salad-120g/115831779"
+  }
+ },
+ {
+  "slug": "onions",
+  "name": "Morrisons Brown Onions 3 Pack",
+  "unit": "onions",
+  "cupboard": false,
+  "allergens": [],
+  "per100": null,
+  "product": {
+   "retailer": "morrisons",
+   "name": "Morrisons Brown Onions 3 Pack",
+   "price_pence": 95,
+   "pack_size": 3,
+   "slug": "morrisons-brown-onions-3-pack/113301635"
+  }
+ },
+ {
+  "slug": "spring",
+  "name": "Morrisons Salad Onions (bunch)",
+  "unit": "bunches",
+  "cupboard": false,
+  "allergens": [],
+  "per100": null,
+  "product": {
+   "retailer": "morrisons",
+   "name": "Morrisons Salad Onions (bunch)",
+   "price_pence": 69,
+   "pack_size": 1,
+   "slug": "morrisons-salad-onions-minimum-100g/108336382"
+  }
+ },
+ {
+  "slug": "carrots",
+  "name": "Morrisons British Carrots 500g",
+  "unit": "g",
+  "cupboard": false,
+  "allergens": [],
+  "per100": null,
+  "product": {
+   "retailer": "morrisons",
+   "name": "Morrisons British Carrots 500g",
+   "price_pence": 44,
+   "pack_size": 500,
+   "slug": "morrisons-british-carrots-500g/108305383"
+  }
+ },
+ {
+  "slug": "pepper",
+  "name": "Red Pepper (loose)",
+  "unit": "peppers",
+  "cupboard": false,
+  "allergens": [],
+  "per100": null,
+  "product": {
+   "retailer": "morrisons",
+   "name": "Red Pepper (loose)",
+   "price_pence": 70,
+   "pack_size": 1,
+   "slug": "morrisons-loose-red-pepper/108407187"
+  }
+ },
+ {
+  "slug": "mixpep",
+  "name": "Morrisons Savers Mixed Peppers 3 Pack",
+  "unit": "peppers",
+  "cupboard": false,
+  "allergens": [],
+  "per100": null,
+  "product": {
+   "retailer": "morrisons",
+   "name": "Morrisons Savers Mixed Peppers 3 Pack",
+   "price_pence": 169,
+   "pack_size": 3,
+   "slug": "morrisons-savers-mixed-peppers-3-pack-colours-may-vary/112916566"
+  }
+ },
+ {
+  "slug": "chilli",
+  "name": "Morrisons Fresh Red Chillies 50g",
+  "unit": "g",
+  "cupboard": false,
+  "allergens": [],
+  "per100": null,
+  "product": {
+   "retailer": "morrisons",
+   "name": "Morrisons Fresh Red Chillies 50g",
+   "price_pence": 59,
+   "pack_size": 50,
+   "slug": "morrisons-fresh-red-chillies-50g/108384886"
+  }
+ },
+ {
+  "slug": "brocc",
+  "name": "Morrisons British Organic Broccoli 300g",
+  "unit": "g",
+  "cupboard": false,
+  "allergens": [],
+  "per100": null,
+  "product": {
+   "retailer": "morrisons",
+   "name": "Morrisons British Organic Broccoli 300g",
+   "price_pence": 140,
+   "pack_size": 300,
+   "slug": "morrisons-british-organic-broccoli-300g/112683256"
+  }
+ },
+ {
+  "slug": "pouch",
+  "name": "Morrisons Baby Potatoes with Chives & Butter 350g",
+  "unit": "g",
+  "cupboard": false,
+  "allergens": [
+   "milk"
+  ],
+  "per100": null,
+  "product": {
+   "retailer": "morrisons",
+   "name": "Morrisons Baby Potatoes with Chives & Butter 350g",
+   "price_pence": 225,
+   "pack_size": 350,
+   "slug": "morrisons-baby-potatoes-with-chives-salted-butter-350g/114805886"
+  }
+ },
+ {
+  "slug": "cobs",
+  "name": "Morrisons 2 Sweetcorn Cobs",
+  "unit": "cobs",
+  "cupboard": false,
+  "allergens": [],
+  "per100": null,
+  "product": {
+   "retailer": "morrisons",
+   "name": "Morrisons 2 Sweetcorn Cobs",
+   "price_pence": 139,
+   "pack_size": 2,
+   "slug": "morrisons-2-sweetcorn-cobs/108460586"
+  }
+ },
+ {
+  "slug": "stirfry",
+  "name": "Morrisons Vegetable Stir Fry Mix 500g",
+  "unit": "g",
+  "cupboard": false,
+  "allergens": [],
+  "per100": null,
+  "product": {
+   "retailer": "morrisons",
+   "name": "Morrisons Vegetable Stir Fry Mix 500g",
+   "price_pence": 247,
+   "pack_size": 500,
+   "slug": "morrisons-stir-fry-vegetables/104896753"
+  }
+ },
+ {
+  "slug": "slices",
+  "name": "Morrisons Crispy Potato Slices 300g",
+  "unit": "g",
+  "cupboard": false,
+  "allergens": [],
+  "per100": null,
+  "product": {
+   "retailer": "morrisons",
+   "name": "Morrisons Crispy Potato Slices 300g",
+   "price_pence": 150,
+   "pack_size": 300,
+   "slug": "morrisons-crispy-potato-slices/112818018"
+  }
+ },
+ {
+  "slug": "medley",
+  "name": "Morrisons Green Vegetable Medley 250g",
+  "unit": "g",
+  "cupboard": false,
+  "allergens": [],
+  "per100": null,
+  "product": {
+   "retailer": "morrisons",
+   "name": "Morrisons Green Vegetable Medley 250g",
+   "price_pence": 210,
+   "pack_size": 250,
+   "slug": "morrisons-green-vegetable-medley-250g/115851497"
+  }
+ },
+ {
+  "slug": "spinach",
+  "name": "Morrisons Baby Spinach 160g",
+  "unit": "g",
+  "cupboard": false,
+  "allergens": [],
+  "per100": null,
+  "product": {
+   "retailer": "morrisons",
+   "name": "Morrisons Baby Spinach 160g",
+   "price_pence": 100,
+   "pack_size": 160,
+   "slug": "morrisons-baby-spinach-160g/108320372"
+  }
+ },
+ {
+  "slug": "creme",
+  "name": "Morrisons Reduced Fat Crème Fraîche 300ml",
+  "unit": "ml",
+  "cupboard": false,
+  "allergens": [
+   "milk"
+  ],
+  "per100": null,
+  "product": {
+   "retailer": "morrisons",
+   "name": "Morrisons Reduced Fat Crème Fraîche 300ml",
+   "price_pence": 75,
+   "pack_size": 300,
+   "slug": "morrisons-british-reduced-fat-creme-fraiche/113016990"
+  }
+ },
+ {
+  "slug": "ctoms",
+  "name": "Morrisons Chopped Tomatoes 400g",
+  "unit": "g",
+  "cupboard": false,
+  "allergens": [],
+  "per100": null,
+  "product": {
+   "retailer": "morrisons",
+   "name": "Morrisons Chopped Tomatoes 400g",
+   "price_pence": 45,
+   "pack_size": 400,
+   "slug": "morrisons-chopped-tomatoes-400g/105415501"
+  }
+ },
+ {
+  "slug": "kidney",
+  "name": "Morrisons Red Kidney Beans 400g",
+  "unit": "g",
+  "cupboard": false,
+  "allergens": [],
+  "per100": null,
+  "product": {
+   "retailer": "morrisons",
+   "name": "Morrisons Red Kidney Beans 400g",
+   "price_pence": 37,
+   "pack_size": 400,
+   "slug": "morrisons-red-kidney-beans-400g/105408168"
+  }
+ },
+ {
+  "slug": "grenade",
+  "name": "Grenade Oreo Protein Bars 4×60g",
+  "unit": "bars",
+  "cupboard": false,
+  "allergens": [
+   "milk",
+   "soya",
+   "gluten",
+   "nuts",
+   "peanuts"
+  ],
+  "per100": null,
+  "product": {
+   "retailer": "morrisons",
+   "name": "Grenade Oreo Protein Bars 4×60g",
+   "price_pence": 1000,
+   "pack_size": 4,
+   "slug": "grenade-protein-bars-oreo-4x60g/113338551"
+  }
+ },
+ {
+  "slug": "wafer",
+  "name": "Myprotein Protein Wafer Vanilla 40g",
+  "unit": "wafers",
+  "cupboard": false,
+  "allergens": [
+   "milk",
+   "soya",
+   "gluten",
+   "nuts",
+   "peanuts"
+  ],
+  "per100": null,
+  "product": {
+   "retailer": "morrisons",
+   "name": "Myprotein Protein Wafer Vanilla 40g",
+   "price_pence": 200,
+   "pack_size": 1,
+   "slug": "myprotein-protein-wafer-vanilla/114041821"
+  }
+ },
+ {
+  "slug": "pops",
+  "name": "Novo Protein Pops Sour Cream & Onion 45g",
+  "unit": "bags",
+  "cupboard": false,
+  "allergens": [
+   "milk",
+   "soya"
+  ],
+  "per100": null,
+  "product": {
+   "retailer": "morrisons",
+   "name": "Novo Protein Pops Sour Cream & Onion 45g",
+   "price_pence": 125,
+   "pack_size": 1,
+   "slug": "novo-protein-pops-sour-cream-and-onion/114016545"
+  }
+ },
+ {
+  "slug": "babybel",
+  "name": "Mini Babybel Original 6×20g",
+  "unit": "cheeses",
+  "cupboard": false,
+  "allergens": [
+   "milk"
+  ],
+  "per100": null,
+  "product": {
+   "retailer": "morrisons",
+   "name": "Mini Babybel Original 6×20g",
+   "price_pence": 245,
+   "pack_size": 6,
+   "slug": "mini-babybel-original-cheese-snacks/103090117"
+  }
+ },
+ {
+  "slug": "rice",
+  "name": "Easy Cook Long Grain Rice 1kg",
+  "unit": "g",
+  "cupboard": true,
+  "note": "Easy Cook Long Grain Rice 1kg · £1.25",
+  "allergens": [],
+  "per100": null,
+  "product": null
+ },
+ {
+  "slug": "spaghetti",
+  "name": "Spaghetti 500g",
+  "unit": "g",
+  "cupboard": true,
+  "note": "Spaghetti 500g · £0.75",
+  "allergens": [
+   "gluten"
+  ],
+  "per100": null,
+  "product": null
+ },
+ {
+  "slug": "fusilli",
+  "name": "Fusilli 500g",
+  "unit": "g",
+  "cupboard": true,
+  "note": "Fusilli 500g · £0.75",
+  "allergens": [
+   "gluten"
+  ],
+  "per100": null,
+  "product": null
+ },
+ {
+  "slug": "noodles",
+  "name": "Fine Egg Noodles 250g",
+  "unit": "g",
+  "cupboard": true,
+  "note": "Fine Egg Noodles 250g · £0.95",
+  "allergens": [
+   "gluten",
+   "eggs"
+  ],
+  "per100": null,
+  "product": null
+ },
+ {
+  "slug": "lasagne",
+  "name": "Lasagne Sheets 300g",
+  "unit": "g",
+  "cupboard": true,
+  "note": "Lasagne Sheets 300g · £0.75",
+  "allergens": [
+   "gluten",
+   "eggs"
+  ],
+  "per100": null,
+  "product": null
+ },
+ {
+  "slug": "granola",
+  "name": "FUEL10K Protein Granola 400g",
+  "unit": "g",
+  "cupboard": true,
+  "note": "FUEL10K Protein Granola 400g · £3.75",
+  "allergens": [
+   "gluten",
+   "nuts",
+   "milk"
+  ],
+  "per100": null,
+  "product": null
+ },
+ {
+  "slug": "butter",
+  "name": "Spreadable Butter 500g",
+  "unit": "g",
+  "cupboard": true,
+  "note": "Spreadable Butter 500g · £2.18",
+  "allergens": [
+   "milk"
+  ],
+  "per100": null,
+  "product": null
+ },
+ {
+  "slug": "puree",
+  "name": "Tomato Puree 200g",
+  "unit": "g",
+  "cupboard": true,
+  "note": "Tomato Puree 200g · £0.59",
+  "allergens": [],
+  "per100": null,
+  "product": null
+ },
+ {
+  "slug": "tuna",
+  "name": "Tuna Chunks in Brine 4×145g",
+  "unit": "g",
+  "cupboard": true,
+  "note": "Tuna Chunks in Brine 4×145g · £2.49",
+  "allergens": [
+   "fish"
+  ],
+  "per100": null,
+  "product": null
+ },
+ {
+  "slug": "peri",
+  "name": "Nando's Peri-Peri Rub 25g",
+  "unit": "g",
+  "cupboard": true,
+  "note": "Nando's Peri-Peri Rub 25g · £1.25",
+  "allergens": [
+   "celery",
+   "mustard",
+   "sulphites"
+  ],
+  "per100": null,
+  "product": null
+ },
+ {
+  "slug": "fajita",
+  "name": "Fajita Seasoning 40g",
+  "unit": "g",
+  "cupboard": true,
+  "note": "Fajita Seasoning 40g · £1.09",
+  "allergens": [
+   "sulphites"
+  ],
+  "per100": null,
+  "product": null
+ },
+ {
+  "slug": "fivespice",
+  "name": "Chinese 5 Spice 33g",
+  "unit": "g",
+  "cupboard": true,
+  "note": "Chinese 5 Spice 33g · £1.09",
+  "allergens": [],
+  "per100": null,
+  "product": null
+ },
+ {
+  "slug": "soy",
+  "name": "Light Soy Sauce 150ml",
+  "unit": "g",
+  "cupboard": true,
+  "note": "Light Soy Sauce 150ml · £0.90",
+  "allergens": [
+   "soya",
+   "gluten"
+  ],
+  "per100": null,
+  "product": null
+ },
+ {
+  "slug": "honey",
+  "name": "Clear Honey 454g",
+  "unit": "g",
+  "cupboard": true,
+  "note": "Clear Honey 454g · £1.95",
+  "allergens": [],
+  "per100": null,
+  "product": null
+ },
+ {
+  "slug": "teriyaki",
+  "name": "Teriyaki Stir Fry Sauce 152g",
+  "unit": "g",
+  "cupboard": true,
+  "note": "Teriyaki Stir Fry Sauce 152g · £0.55",
+  "allergens": [
+   "soya",
+   "gluten",
+   "sesame"
+  ],
+  "per100": null,
+  "product": null
+ },
+ {
+  "slug": "mayo",
+  "name": "Light Mayonnaise 500ml",
+  "unit": "g",
+  "cupboard": true,
+  "note": "Light Mayonnaise 500ml · £0.99",
+  "allergens": [
+   "eggs",
+   "mustard"
+  ],
+  "per100": null,
+  "product": null
+ },
+ {
+  "slug": "seafood",
+  "name": "Seafood Sauce 250ml",
+  "unit": "g",
+  "cupboard": true,
+  "note": "Seafood Sauce 250ml · £0.63",
+  "allergens": [
+   "eggs",
+   "mustard"
+  ],
+  "per100": null,
+  "product": null
+ },
+ {
+  "slug": "cheddar",
+  "name": "Savers Mature Cheddar 625g",
+  "unit": "g",
+  "cupboard": true,
+  "note": "Savers Mature Cheddar 625g · £3.39",
+  "allergens": [
+   "milk"
+  ],
+  "per100": null,
+  "product": null
+ },
+ {
+  "slug": "frozenfruit",
+  "name": "Frozen Summer Fruits 430g",
+  "unit": "g",
+  "cupboard": true,
+  "note": "Frozen Summer Fruits 430g · £3.35",
+  "allergens": [],
+  "per100": null,
+  "product": null
+ },
+ {
+  "slug": "sweetcorn",
+  "name": "Savers Sweetcorn tin 326g",
+  "unit": "g",
+  "cupboard": true,
+  "note": "Savers Sweetcorn tin 326g · £0.50",
+  "allergens": [],
+  "per100": null,
+  "product": null
+ },
+ {
+  "slug": "nuts",
+  "name": "Mixed Nuts 180g",
+  "unit": "g",
+  "cupboard": true,
+  "note": "Mixed Nuts 180g · £2.55",
+  "allergens": [
+   "nuts",
+   "peanuts"
+  ],
+  "per100": null,
+  "product": null
+ },
+ {
+  "slug": "garlic",
+  "name": "Garlic 400g net",
+  "unit": "g",
+  "cupboard": true,
+  "note": "Garlic 400g net · £2.00",
+  "allergens": [],
+  "per100": null,
+  "product": null
+ },
+ {
+  "slug": "parmesan",
+  "name": "Grated Parmigiano Reggiano 100g",
+  "unit": "g",
+  "cupboard": true,
+  "note": "Grated Parmigiano Reggiano 100g · £2.80",
+  "allergens": [
+   "milk"
+  ],
+  "per100": null,
+  "product": null
+ },
+ {
+  "slug": "cornflour",
+  "name": "Cornflour 500g",
+  "unit": "g",
+  "cupboard": true,
+  "note": "Cornflour 500g · £2.50",
+  "allergens": [],
+  "per100": null,
+  "product": null
+ },
+ {
+  "slug": "oil",
+  "name": "Vegetable Oil 1L",
+  "unit": "g",
+  "cupboard": true,
+  "note": "Vegetable Oil 1L · £1.45",
+  "allergens": [],
+  "per100": null,
+  "product": null
+ },
+ {
+  "slug": "herbs",
+  "name": "Mixed Herbs 14g",
+  "unit": "g",
+  "cupboard": true,
+  "note": "Mixed Herbs 14g · £1.09",
+  "allergens": [],
+  "per100": null,
+  "product": null
+ },
+ {
+  "slug": "oregano",
+  "name": "Oregano 28g",
+  "unit": "g",
+  "cupboard": true,
+  "note": "Oregano 28g · £1.90",
+  "allergens": [],
+  "per100": null,
+  "product": null
+ },
+ {
+  "slug": "isolate",
+  "name": "Whey Isolate 1kg (MyProtein)",
+  "unit": "g",
+  "cupboard": true,
+  "note": "Whey Isolate 1kg (MyProtein) · ~£26",
+  "allergens": [
+   "milk",
+   "soya"
+  ],
+  "per100": null,
+  "product": null
+ }
+]

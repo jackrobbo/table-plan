@@ -1,0 +1,49 @@
+{
+ "slug": "beef-tacos",
+ "name": "Beef Tacos",
+ "course": "dinner",
+ "emoji": "🌮",
+ "serves": 2,
+ "status": "live",
+ "per_portion": {
+  "kcal": 615,
+  "protein_g": 44
+ },
+ "ingredients": [
+  {
+   "ingredient": "mince",
+   "qty": 250
+  },
+  {
+   "ingredient": "kidney",
+   "qty": 400
+  },
+  {
+   "ingredient": "wraps",
+   "qty": 4
+  },
+  {
+   "ingredient": "iceberg",
+   "qty": 0.15
+  },
+  {
+   "ingredient": "plum",
+   "qty": 40
+  },
+  {
+   "ingredient": "greek",
+   "qty": 50
+  }
+ ],
+ "cupboard": [
+  "puree",
+  "fajita",
+  "garlic",
+  "cheddar"
+ ],
+ "method": [
+  "Brown the mince; add seasoning, garlic, purée, beans and a splash of water; simmer till saucy.",
+  "Load warm tortillas with iceberg, tomatoes, cheddar and a spoon of Greek yogurt."
+ ],
+ "source": "poc"
+}

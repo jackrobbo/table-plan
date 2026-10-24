@@ -1,0 +1,21 @@
+{
+ "slug": "protein-wafer",
+ "name": "Protein Wafer",
+ "course": "snack",
+ "emoji": "🧇",
+ "serves": 1,
+ "status": "live",
+ "per_portion": {
+  "kcal": 194,
+  "protein_g": 15
+ },
+ "ingredients": [
+  {
+   "ingredient": "wafer",
+   "qty": 1
+  }
+ ],
+ "cupboard": [],
+ "method": [],
+ "source": "poc"
+}

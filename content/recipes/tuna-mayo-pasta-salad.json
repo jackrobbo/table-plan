@@ -1,0 +1,30 @@
+{
+ "slug": "tuna-mayo-pasta-salad",
+ "name": "Tuna Mayo Pasta Salad",
+ "course": "lunch",
+ "emoji": "🐟",
+ "serves": 1,
+ "status": "live",
+ "per_portion": {
+  "kcal": 440,
+  "protein_g": 36
+ },
+ "ingredients": [
+  {
+   "ingredient": "salad",
+   "qty": 30
+  }
+ ],
+ "cupboard": [
+  "tuna",
+  "fusilli",
+  "mayo",
+  "sweetcorn"
+ ],
+ "method": [
+  "Cook 60g fusilli; cool.",
+  "Mix a drained tin of tuna with 1 tbsp light mayo.",
+  "Toss with pasta, 40g sweetcorn and salad."
+ ],
+ "source": "poc"
+}

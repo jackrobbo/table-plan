@@ -1,0 +1,31 @@
+{
+ "slug": "protein-grab-bag",
+ "name": "Protein Grab-Bag",
+ "course": "lunch",
+ "emoji": "🍫",
+ "serves": 1,
+ "status": "live",
+ "per_portion": {
+  "kcal": 443,
+  "protein_g": 41
+ },
+ "ingredients": [
+  {
+   "ingredient": "grenade",
+   "qty": 1
+  },
+  {
+   "ingredient": "yog",
+   "qty": 1
+  },
+  {
+   "ingredient": "apple",
+   "qty": 1
+  }
+ ],
+ "cupboard": [],
+ "method": [
+  "Zero prep: a Grenade bar, a protein yogurt pot and an apple."
+ ],
+ "source": "poc"
+}

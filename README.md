@@ -13,3 +13,9 @@ UK meal-planning PWA (Next.js). See `design/phase-1-plan.md` for the roadmap.
   allergies, target, dislikes, taste swipe ≥5/type), persistence with resume. Persistence goes through
   `src/lib/db` (`Backend`), currently **mocked on localStorage**; swap in Supabase in `getBackend()`.
 - Allergen tags in `src/lib/allergens.ts` are provisional until M2 verification.
+
+## Content pipeline
+Recipes and ingredients live in `content/` (`ingredients.json`, `recipes/*.json` — one recipe or an array per file).
+`npm run content:import` validates everything (unknown ingredients, macro sanity, duplicates, live recipes must be
+priced), then regenerates `src/data/*.json` (live recipes only) and the idempotent `supabase/seed.sql`.
+Ingredient CoFID data and extra retailer mappings (scraped) will be added later; `per100`/`product` are nullable.

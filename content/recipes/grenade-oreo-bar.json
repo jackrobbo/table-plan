@@ -1,0 +1,21 @@
+{
+ "slug": "grenade-oreo-bar",
+ "name": "Grenade Oreo Bar",
+ "course": "snack",
+ "emoji": "🍫",
+ "serves": 1,
+ "status": "live",
+ "per_portion": {
+  "kcal": 233,
+  "protein_g": 21
+ },
+ "ingredients": [
+  {
+   "ingredient": "grenade",
+   "qty": 1
+  }
+ ],
+ "cupboard": [],
+ "method": [],
+ "source": "poc"
+}

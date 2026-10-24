@@ -8,7 +8,7 @@ export type Course = 'breakfast' | 'lunch' | 'snack' | 'dinner';
 export interface Product { n: string; pr: number; pack: number; u: string; s: string }
 export interface Recipe {
   id: string; c: Course; e: string; n: string; p: number; k: number; serves: number;
-  fresh: [string, number][]; cup: string[]; m: string[];
+  fresh: [string, number][]; cup: string[]; m: string[]; allergens: string[];
 }
 export interface Topup { n: string; p: number; k: number; prod: string; qty: number }
 

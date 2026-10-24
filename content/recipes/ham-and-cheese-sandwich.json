@@ -1,0 +1,34 @@
+{
+ "slug": "ham-and-cheese-sandwich",
+ "name": "Ham & Cheese Sandwich",
+ "course": "lunch",
+ "emoji": "🥪",
+ "serves": 1,
+ "status": "live",
+ "per_portion": {
+  "kcal": 425,
+  "protein_g": 27
+ },
+ "ingredients": [
+  {
+   "ingredient": "ham",
+   "qty": 60
+  },
+  {
+   "ingredient": "loaf",
+   "qty": 2
+  },
+  {
+   "ingredient": "salad",
+   "qty": 20
+  }
+ ],
+ "cupboard": [
+  "cheddar",
+  "butter"
+ ],
+ "method": [
+  "Butter 2 slices; layer 60g ham, 30g cheddar and salad."
+ ],
+ "source": "poc"
+}

@@ -1,0 +1,35 @@
+{
+ "slug": "chicken-mayo-sandwich",
+ "name": "Chicken-Mayo Sandwich",
+ "course": "lunch",
+ "emoji": "🥪",
+ "serves": 1,
+ "status": "live",
+ "per_portion": {
+  "kcal": 410,
+  "protein_g": 33
+ },
+ "ingredients": [
+  {
+   "ingredient": "roast",
+   "qty": 80
+  },
+  {
+   "ingredient": "loaf",
+   "qty": 2
+  },
+  {
+   "ingredient": "salad",
+   "qty": 20
+  }
+ ],
+ "cupboard": [
+  "mayo",
+  "butter"
+ ],
+ "method": [
+  "Mix 80g roast chicken slices with light mayo.",
+  "Build the sandwich with salad."
+ ],
+ "source": "poc"
+}

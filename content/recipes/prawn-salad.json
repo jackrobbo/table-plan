@@ -1,0 +1,38 @@
+{
+ "slug": "prawn-salad",
+ "name": "Prawn Salad",
+ "course": "lunch",
+ "emoji": "🍤",
+ "serves": 1,
+ "status": "live",
+ "per_portion": {
+  "kcal": 180,
+  "protein_g": 23
+ },
+ "ingredients": [
+  {
+   "ingredient": "prawns",
+   "qty": 150
+  },
+  {
+   "ingredient": "iceberg",
+   "qty": 0.25
+  },
+  {
+   "ingredient": "cuc",
+   "qty": 0.25
+  },
+  {
+   "ingredient": "plum",
+   "qty": 60
+  }
+ ],
+ "cupboard": [
+  "seafood"
+ ],
+ "method": [
+  "Prawns into a bowl with shredded iceberg, cucumber and halved baby plums.",
+  "Dress with Marie Rose sauce."
+ ],
+ "source": "poc"
+}

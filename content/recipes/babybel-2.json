@@ -1,0 +1,21 @@
+{
+ "slug": "babybel-2",
+ "name": "Babybel ×2",
+ "course": "snack",
+ "emoji": "🧀",
+ "serves": 1,
+ "status": "live",
+ "per_portion": {
+  "kcal": 118,
+  "protein_g": 9
+ },
+ "ingredients": [
+  {
+   "ingredient": "babybel",
+   "qty": 2
+  }
+ ],
+ "cupboard": [],
+ "method": [],
+ "source": "poc"
+}

@@ -1,0 +1,46 @@
+{
+ "slug": "chicken-fried-rice",
+ "name": "Chicken Fried Rice",
+ "course": "dinner",
+ "emoji": "🍚",
+ "serves": 2,
+ "status": "live",
+ "per_portion": {
+  "kcal": 565,
+  "protein_g": 50
+ },
+ "ingredients": [
+  {
+   "ingredient": "breast",
+   "qty": 300
+  },
+  {
+   "ingredient": "eggs",
+   "qty": 2
+  },
+  {
+   "ingredient": "onions",
+   "qty": 0.5
+  },
+  {
+   "ingredient": "pepper",
+   "qty": 0.5
+  },
+  {
+   "ingredient": "spring",
+   "qty": 0.5
+  }
+ ],
+ "cupboard": [
+  "rice",
+  "soy",
+  "teriyaki",
+  "garlic"
+ ],
+ "method": [
+  "Cook the diced chicken; scramble the eggs; set both aside.",
+  "Fry onion and pepper, then the cold rice and garlic; add soy.",
+  "Everything back in, stir through teriyaki, top with spring onion."
+ ],
+ "source": "poc"
+}

@@ -1,0 +1,37 @@
+{
+ "slug": "creamy-chicken-pasta",
+ "name": "Creamy Chicken Pasta",
+ "course": "dinner",
+ "emoji": "🍝",
+ "serves": 2,
+ "status": "live",
+ "per_portion": {
+  "kcal": 560,
+  "protein_g": 50
+ },
+ "ingredients": [
+  {
+   "ingredient": "breast",
+   "qty": 280
+  },
+  {
+   "ingredient": "creme",
+   "qty": 100
+  },
+  {
+   "ingredient": "spinach",
+   "qty": 80
+  }
+ ],
+ "cupboard": [
+  "fusilli",
+  "parmesan",
+  "garlic"
+ ],
+ "method": [
+  "Cook the chicken with garlic.",
+  "Stir in crème fraîche and a splash of pasta water; wilt the spinach in.",
+  "Toss with pasta, finish with parmesan."
+ ],
+ "source": "poc"
+}

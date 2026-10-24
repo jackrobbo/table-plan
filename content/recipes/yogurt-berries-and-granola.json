@@ -1,0 +1,30 @@
+{
+ "slug": "yogurt-berries-and-granola",
+ "name": "Yogurt, Berries & Granola",
+ "course": "breakfast",
+ "emoji": "🫐",
+ "serves": 1,
+ "status": "live",
+ "per_portion": {
+  "kcal": 320,
+  "protein_g": 26
+ },
+ "ingredients": [
+  {
+   "ingredient": "yog",
+   "qty": 1
+  },
+  {
+   "ingredient": "blueb",
+   "qty": 100
+  }
+ ],
+ "cupboard": [
+  "granola"
+ ],
+ "method": [
+  "Empty a protein yogurt pot into a bowl.",
+  "Top with 100g blueberries and 30g protein granola."
+ ],
+ "source": "poc"
+}

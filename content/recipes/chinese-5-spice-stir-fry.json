@@ -1,0 +1,32 @@
+{
+ "slug": "chinese-5-spice-stir-fry",
+ "name": "Chinese 5-Spice Stir Fry",
+ "course": "dinner",
+ "emoji": "🥡",
+ "serves": 2,
+ "status": "live",
+ "per_portion": {
+  "kcal": 560,
+  "protein_g": 46
+ },
+ "ingredients": [
+  {
+   "ingredient": "thigh",
+   "qty": 500
+  },
+  {
+   "ingredient": "stirfry",
+   "qty": 400
+  }
+ ],
+ "cupboard": [
+  "rice",
+  "soy",
+  "fivespice"
+ ],
+ "method": [
+  "Fry the thighs with 5-spice till cooked.",
+  "Add stir-fry veg 3–4 min with a splash of soy; serve on rice."
+ ],
+ "source": "poc"
+}

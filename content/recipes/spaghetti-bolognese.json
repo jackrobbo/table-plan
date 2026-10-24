@@ -1,0 +1,47 @@
+{
+ "slug": "spaghetti-bolognese",
+ "name": "Spaghetti Bolognese",
+ "course": "dinner",
+ "emoji": "🍝",
+ "serves": 2,
+ "status": "live",
+ "per_portion": {
+  "kcal": 520,
+  "protein_g": 40
+ },
+ "ingredients": [
+  {
+   "ingredient": "mince",
+   "qty": 250
+  },
+  {
+   "ingredient": "onions",
+   "qty": 1
+  },
+  {
+   "ingredient": "carrots",
+   "qty": 80
+  },
+  {
+   "ingredient": "pepper",
+   "qty": 0.5
+  },
+  {
+   "ingredient": "ctoms",
+   "qty": 400
+  }
+ ],
+ "cupboard": [
+  "spaghetti",
+  "puree",
+  "herbs",
+  "parmesan",
+  "garlic"
+ ],
+ "method": [
+  "Brown the mince; soften the chopped veg.",
+  "Add tomatoes, purée and herbs; simmer 20 min.",
+  "Serve over spaghetti with parmesan."
+ ],
+ "source": "poc"
+}

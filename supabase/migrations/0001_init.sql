@@ -1,41 +1,71 @@
 -- Table Plan M0/M1 schema. Prices in pence. RLS on everything user-owned.
 
-create table public.products (
-  key         text primary key,
+create table public.ingredients (
+  slug        text primary key,
   name        text not null,
-  price_pence integer not null check (price_pence >= 0),
-  pack_size   numeric not null check (pack_size > 0),
   unit        text not null,
-  retailer    text not null default 'morrisons',
-  slug        text not null,
-  updated_at  timestamptz not null default now()
+  cupboard    boolean not null default false,
+  note        text,
+  allergens   text[] not null default '{}',
+  -- CoFID per 100 g/ml; null until verified (scraped/imported later)
+  kcal_100    numeric, protein_100 numeric, carbs_100 numeric, fat_100 numeric
 );
 
-create table public.cupboard_items (
-  key  text primary key,
-  info text not null
+-- Retailer mapping, one product per ingredient per retailer (Morrisons-only at launch).
+create table public.products (
+  ingredient_slug text not null references public.ingredients(slug) on delete cascade,
+  retailer        text not null default 'morrisons',
+  name            text not null,
+  price_pence     integer not null check (price_pence >= 0),
+  pack_size       numeric not null check (pack_size > 0),
+  slug            text not null,
+  updated_at      timestamptz not null default now(),
+  primary key (ingredient_slug, retailer)
 );
 
 create table public.recipes (
-  id          text primary key,
-  course      text not null check (course in ('breakfast','lunch','snack','dinner')),
-  emoji       text,
-  name        text not null,
-  protein_g   integer not null,
-  kcal        integer not null,
-  serves      integer not null default 1,
-  method      text[] not null default '{}',
-  cupboard    text[] not null default '{}',
-  allergens   text[] not null default '{}',   -- provisional until M2 verification
-  macros_only boolean not null default false
+  slug         text primary key,
+  name         text not null,
+  course       text not null check (course in ('breakfast','lunch','snack','dinner')),
+  emoji        text,
+  serves       integer not null default 1 check (serves >= 1),
+  -- per portion
+  kcal         integer not null, protein_g numeric not null, carbs_g numeric, fat_g numeric,
+  method       text[] not null default '{}',
+  allergens    text[] not null default '{}',   -- derived from ingredients by the importer
+  status       text not null default 'draft' check (status in ('draft','verified','live')),
+  source       text,
+  version      integer not null default 1,
+  content_hash text,
+  updated_at   timestamptz not null default now()
 );
 
 create table public.recipe_ingredients (
-  recipe_id   text not null references public.recipes(id) on delete cascade,
-  product_key text not null references public.products(key),
-  qty         numeric not null,
-  primary key (recipe_id, product_key)
+  recipe_slug     text not null references public.recipes(slug) on delete cascade,
+  ingredient_slug text not null references public.ingredients(slug),
+  qty             numeric not null,
+  cupboard        boolean not null default false,
+  primary key (recipe_slug, ingredient_slug)
 );
+
+-- Edits snapshot the previous row, so saved plans can pin the version they used.
+create table public.recipe_versions (
+  recipe_slug text not null,
+  version     integer not null,
+  snapshot    jsonb not null,
+  primary key (recipe_slug, version)
+);
+
+create or replace function public.snapshot_recipe() returns trigger language plpgsql as $$
+begin
+  insert into public.recipe_versions (recipe_slug, version, snapshot) values (old.slug, old.version, to_jsonb(old))
+    on conflict do nothing;
+  new.version = old.version + 1;
+  new.updated_at = now();
+  return new;
+end $$;
+create trigger recipes_snapshot before update on public.recipes
+  for each row execute function public.snapshot_recipe();
 
 -- One row per user; stats are optional (special-category health data).
 create table public.profiles (
@@ -67,15 +97,17 @@ create policy "own profile insert" on public.profiles for insert with check (aut
 create policy "own profile update" on public.profiles for update using (auth.uid() = user_id);
 create policy "own profile delete" on public.profiles for delete using (auth.uid() = user_id);
 
--- Catalogue tables: world-readable, writable only by the service role.
+-- Catalogue tables: world-readable (live recipes only), writable only by the service role.
+alter table public.ingredients enable row level security;
 alter table public.products enable row level security;
-alter table public.cupboard_items enable row level security;
 alter table public.recipes enable row level security;
 alter table public.recipe_ingredients enable row level security;
+alter table public.recipe_versions enable row level security;
+create policy "catalogue read" on public.ingredients for select using (true);
 create policy "catalogue read" on public.products for select using (true);
-create policy "catalogue read" on public.cupboard_items for select using (true);
-create policy "catalogue read" on public.recipes for select using (true);
-create policy "catalogue read" on public.recipe_ingredients for select using (true);
+create policy "live recipes read" on public.recipes for select using (status = 'live');
+create policy "live recipe lines read" on public.recipe_ingredients for select
+  using (exists (select 1 from public.recipes r where r.slug = recipe_slug and r.status = 'live'));
 
 create or replace function public.touch_updated_at() returns trigger language plpgsql as $$
 begin new.updated_at = now(); return new; end $$;

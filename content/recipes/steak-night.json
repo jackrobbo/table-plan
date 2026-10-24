@@ -1,0 +1,35 @@
+{
+ "slug": "steak-night",
+ "name": "Steak Night",
+ "course": "dinner",
+ "emoji": "🥩",
+ "serves": 2,
+ "status": "live",
+ "per_portion": {
+  "kcal": 655,
+  "protein_g": 43
+ },
+ "ingredients": [
+  {
+   "ingredient": "rump",
+   "qty": 400
+  },
+  {
+   "ingredient": "slices",
+   "qty": 300
+  },
+  {
+   "ingredient": "medley",
+   "qty": 250
+  }
+ ],
+ "cupboard": [
+  "oil"
+ ],
+ "method": [
+  "Oven the crispy potato slices.",
+  "Sear the steaks 3–4 min a side; rest.",
+  "Steam the green veg medley."
+ ],
+ "source": "poc"
+}

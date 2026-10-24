@@ -1,0 +1,30 @@
+{
+ "slug": "scrambled-eggs-on-toast",
+ "name": "Scrambled Eggs on Toast",
+ "course": "breakfast",
+ "emoji": "🍳",
+ "serves": 1,
+ "status": "live",
+ "per_portion": {
+  "kcal": 500,
+  "protein_g": 29
+ },
+ "ingredients": [
+  {
+   "ingredient": "eggs",
+   "qty": 3
+  },
+  {
+   "ingredient": "loaf",
+   "qty": 2
+  }
+ ],
+ "cupboard": [
+  "butter"
+ ],
+ "method": [
+  "Whisk 3 eggs with a splash of milk; scramble gently.",
+  "Toast 2 slices, butter, pile the eggs on."
+ ],
+ "source": "poc"
+}

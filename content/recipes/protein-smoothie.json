@@ -1,0 +1,30 @@
+{
+ "slug": "protein-smoothie",
+ "name": "Protein Smoothie",
+ "course": "breakfast",
+ "emoji": "🥤",
+ "serves": 1,
+ "status": "live",
+ "per_portion": {
+  "kcal": 315,
+  "protein_g": 31
+ },
+ "ingredients": [
+  {
+   "ingredient": "banana",
+   "qty": 1
+  },
+  {
+   "ingredient": "milk",
+   "qty": 200
+  }
+ ],
+ "cupboard": [
+  "isolate",
+  "frozenfruit"
+ ],
+ "method": [
+  "Blend a scoop of isolate, 1 banana, 200ml milk and a handful of frozen berries."
+ ],
+ "source": "poc"
+}
