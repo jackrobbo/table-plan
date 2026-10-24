@@ -1,4 +1,5 @@
 import type { Metadata, Viewport } from 'next';
+import { connection } from 'next/server';
 import './globals.css';
 import { PwaInit } from '@/components/InstallSheet';
 import SiteHeader from '@/components/SiteHeader';
@@ -12,7 +13,9 @@ export const metadata: Metadata = {
 };
 export const viewport: Viewport = { width: 'device-width', initialScale: 1, viewportFit: 'cover', themeColor: '#f2f2f6' };
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default async function RootLayout({ children }: { children: React.ReactNode }) {
+  // Pages are rendered per request so each can carry its own script nonce (see src/middleware.ts).
+  await connection();
   return (
     <html lang="en-GB" suppressHydrationWarning>
       <body><PwaInit /><SiteHeader />{children}</body>
