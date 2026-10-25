@@ -45,7 +45,7 @@ State at the end of 24 Oct 2026: production is `1352219` (branch `claude/eager-f
 1. Fix whatever the signed-in basket test turns up.
 2. Run the price crawl from GitHub and fix anything the first real run shows.
 3. CAPTCHA (Cloudflare Turnstile) on sign-up and the waitlist, ahead of any public launch (needs a free Turnstile key from you).
-4. Dietitian-style review pass of `content/cofid-map.json` and the allergen assertions (list of uncertain rows for a human to confirm).
+4. ~~Dietitian-style review list~~ done: `design/content-review.md` (34 rows: stand-in matches, label-only products, hand-asserted allergens). Needs a human with a pack in hand, or a dietitian.
 5. Meal photos: shot list or style brief, plus a batch-build once images exist.
 6. Optional: Sentry (alerts) in place of the log-only error reporting.
 7. Read the recipe catalogue from the database rather than the compiled bundle, so content fixes don't need a deploy.
