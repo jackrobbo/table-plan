@@ -1,4 +1,5 @@
 'use client';
+import { useState } from 'react';
 import { createPortal } from 'react-dom';
 import { PRODUCTS, RECIPES } from '@/data';
 import MealImage from '@/components/MealImage';
@@ -100,15 +101,21 @@ export function listAsText(plan: Plan, have: string[], dated: string): string {
   return `Table Plan shopping list\n${dated}\n\n${lines.join('\n')}\n\nStore cupboard (only if you're out):\n${s.cupboard.join('\n')}`;
 }
 
-export function RecipeSheet({ id, onClose, portions }: { id: string | null; onClose: () => void; portions?: number }) {
-  if (!id) return null;
-  const r = recipeById.get(id);
-  if (!r) return null;
+export function RecipeSheet({ id, onClose, portions, onNever }: { id: string | null; onClose: () => void; portions?: number; onNever?: (id: string) => void }) {
+  const r = id ? recipeById.get(id) : undefined;
+  return r ? createPortal(<RecipeSheetBody key={r.id} r={r} onClose={onClose} portions={portions} onNever={onNever} />, document.body) : null;
+}
+
+function RecipeSheetBody({ r, onClose, portions, onNever }: { r: NonNullable<ReturnType<typeof recipeById.get>>; onClose: () => void; portions?: number; onNever?: (id: string) => void }) {
+  const [tab, setTab] = useState<'ingredients' | 'cook'>('ingredients');
+  const [struck, setStruck] = useState<string[]>([]);
+  const [asked, setAsked] = useState(false);
   const allergens = allergenNames(r);
   const cupboard = cupboardLines(r);
-  // Portalled to <body>: <main> keeps a transform from its entrance animation, which would otherwise become the containing
-  // block for this fixed overlay and push the sheet off the bottom of the screen.
-  return createPortal(
+  const strike = (k: string) => setStruck((s) => (s.includes(k) ? s.filter((x) => x !== k) : [...s, k]));
+  // Portalled to <body> (by RecipeSheet): <main> keeps a transform from its entrance animation, which would otherwise become the
+  // containing block for this fixed overlay and push the sheet off the bottom of the screen.
+  return (
     <div className="sheet-wrap" onClick={onClose}>
       <div className="sheet" role="dialog" aria-label={r.n} onClick={(e) => e.stopPropagation()}>
         <div className="grab" />
@@ -125,13 +132,25 @@ export function RecipeSheet({ id, onClose, portions }: { id: string | null; onCl
           {allergens.length ? <><b>Contains:</b> {allergens.join(', ')}.</> : <b>No major allergens declared on the products used.</b>}{' '}
           <span className="muted">From the pack labels. &ldquo;May contain&rdquo; traces aren&apos;t included, so check the packs if you have a serious allergy.</span>
         </p>
-        <p className="group-title">Ingredients (whole dish)</p>
-        <ul className="plain">{r.fresh.map(([k, q]) => <li key={k}>{PRODUCTS[k]?.n ?? k}: {Math.round(q * 10) / 10} {PRODUCTS[k]?.u}</li>)}{cupboard.length > 0 && <li className="muted">From your cupboard: {cupboard.join(' · ')}</li>}</ul>
-        {portions && <div className="note">Your portion for your macros is one serving; the plan scales the rest for the household.</div>}
-        {r.m.length > 0 && (<><p className="group-title">How to make it</p><ol className="plain">{r.m.map((x, i) => <li key={i}>{x}</li>)}</ol></>)}
+        <div className="seg2" role="tablist" style={{ margin: '12px 0 4px' }}>
+          <button role="tab" aria-selected={tab === 'ingredients'} className={tab === 'ingredients' ? 'on' : ''} onClick={() => setTab('ingredients')}>Ingredients</button>
+          <button role="tab" aria-selected={tab === 'cook'} className={tab === 'cook' ? 'on' : ''} onClick={() => setTab('cook')}>How to cook</button>
+        </div>
+        {tab === 'ingredients' ? (<>
+          <p className="muted" style={{ margin: '8px 0 4px' }}>Whole dish. Tap an ingredient to cross it off as you go.</p>
+          <ul className="plain strike">
+            {r.fresh.map(([k, q]) => (
+              <li key={k}><button className={'strikebtn' + (struck.includes(k) ? ' on' : '')} aria-pressed={struck.includes(k)} onClick={() => strike(k)}>{PRODUCTS[k]?.n ?? k}: {Math.round(q * 10) / 10} {PRODUCTS[k]?.u}</button></li>
+            ))}
+            {cupboard.length > 0 && <li className="muted">From your cupboard: {cupboard.join(' · ')}</li>}
+          </ul>
+          {portions && <div className="note">Your portion for your macros is one serving; the plan scales the rest for the household.</div>}
+        </>) : r.m.length > 0 ? <ol className="plain" style={{ marginTop: 10 }}>{r.m.map((x, i) => <li key={i}>{x}</li>)}</ol> : <p className="muted">No method for this one: it&apos;s a grab-and-go item.</p>}
+        {onNever && (!asked
+          ? <button className="linkbtn" style={{ marginTop: 10 }} onClick={() => setAsked(true)}>Never suggest this again</button>
+          : <p className="note warn-note">We won&apos;t plan or offer this meal in future weeks (weeks already planned stay as they are). <button className="linkbtn" onClick={() => { onNever(r.id); onClose(); }}>Yes, never suggest it</button> <button className="linkbtn" onClick={() => setAsked(false)}>Keep it</button></p>)}
         <button className="btn ghost" style={{ marginTop: 14 }} onClick={onClose}>Close</button>
       </div>
-    </div>,
-    document.body,
+    </div>
   );
 }

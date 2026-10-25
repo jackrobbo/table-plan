@@ -6,6 +6,7 @@ import Screen from '@/components/Screen';
 import MealImage from '@/components/MealImage';
 import BasketButton from '@/components/BasketButton';
 import SwapSheet from '@/components/SwapSheet';
+import { neverAgain } from '@/lib/taste';
 import { DailyAverage, WeekDone } from '@/components/WeekProgress';
 import { allEaten, summariseWeek, weekAverages } from '@/lib/cycle/summary';
 import { DayCard, RecipeSheet, ShoppingList, listAsText, money, recipeById } from '@/components/week';
@@ -207,7 +208,7 @@ export default function Plan() {
             onToggleHave={(k) => update((p) => { const w = p.weeks[upcomingSel.week.start]; const have = w.haveAlready.includes(k) ? w.haveAlready.filter((x) => x !== k) : [...w.haveAlready, k]; return { ...p, weeks: saveList({ ...p.weeks, [w.start]: { ...w, haveAlready: have } }, w.start, have, w.checkout ?? 'notes') }; })} />}
         </div>
       )}
-      <RecipeSheet id={sheet} onClose={() => setSheet(null)} portions={1} />
+      <RecipeSheet id={sheet} onClose={() => setSheet(null)} portions={1} onNever={(rid) => update((p) => neverAgain(p, rid))} />
       <SwapSheet plan={(swap && weeks[swap.week]?.plan) || plan} target={swap && weeks[swap.week]?.plan ? swap : null} input={planInputFrom(profile)} onClose={() => setSwap(null)}
         onPick={(id) => {
           if (!swap) return;

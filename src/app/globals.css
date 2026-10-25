@@ -137,6 +137,10 @@ input.text:focus{outline:2px solid var(--ok);}
 
 /* ---- welcome ---- */
 .logo{width:46px; height:46px; border-radius:12px; background:var(--btn); color:var(--btn-ink); display:grid; place-items:center; font-weight:800; font-size:20px;}
+.strike{list-style:none; padding-left:0}
+.strikebtn{all:unset; display:block; width:100%; box-sizing:border-box; padding:7px 0; cursor:pointer; font-size:15px; line-height:1.4}
+.strikebtn.on{text-decoration:line-through; color:var(--ink3)}
+.strikebtn:focus-visible{outline:2px solid var(--ok); outline-offset:2px}
 .avgrow{margin:10px 0 0}
 .avghead{display:flex; justify-content:space-between; font-size:13px; color:var(--ink2); margin-bottom:4px; font-variant-numeric:tabular-nums}
 .avghead b{color:var(--ink)}
