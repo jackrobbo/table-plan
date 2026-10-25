@@ -6,6 +6,8 @@ import Screen from '@/components/Screen';
 import MealImage from '@/components/MealImage';
 import BasketButton from '@/components/BasketButton';
 import SwapSheet from '@/components/SwapSheet';
+import { DailyAverage, WeekDone } from '@/components/WeekProgress';
+import { allEaten, summariseWeek, weekAverages } from '@/lib/cycle/summary';
 import { DayCard, RecipeSheet, ShoppingList, listAsText, money, recipeById } from '@/components/week';
 import { addDays, dayLabel, londonDate, weekLabel } from '@/lib/cycle/dates';
 import { dueReminders } from '@/lib/cycle/reminders';
@@ -134,8 +136,11 @@ export default function Plan() {
           {sub === 'plan' && <>
             {/* Built from the days, not plan.issues, so plans saved before the wording changed show the current message. */}
             {(plan.days.length ? explainMisses(plan.days, t.band, t.protein) : plan.issues).map((i) => <div key={i} className="estimate-flag">{i}</div>)}
+            {plan.days.length > 0 && (finished || (started && allEaten(plan, week.ticks)))
+              ? <WeekDone s={summariseWeek(plan, week.ticks, shopping)} t={t} />
+              : plan.days.length > 0 && <DailyAverage averages={weekAverages(plan)} t={t} />}
             {plan.days.map((d, i) => (
-              <DayCard key={d.day} d={d} index={i} ticks={started ? week.ticks : undefined} onOpen={setSheet}
+              <DayCard key={d.day} d={d} index={i} ticks={started ? week.ticks : undefined} onOpen={setSheet} today={started && !finished && addDays(week.start, i) === londonDate(now)}
                 onSwap={finished ? undefined : (day, meal) => setSwap({ week: week.start, day, meal })}
                 onTick={started && !finished ? (k) => update((p) => ({ ...p, weeks: toggleTick(p.weeks, week.start, k) })) : undefined} />
             ))}

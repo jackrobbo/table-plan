@@ -34,8 +34,9 @@ export function MealRow({ m, tick, onTick, onOpen, onSwap }: { m: PlannedMeal; t
   );
 }
 
-export function DayCard({ d, index, ticks, onTick, onOpen, onSwap, label }: {
+export function DayCard({ d, index, ticks, onTick, onOpen, onSwap, label, today }: {
   d: PlannedDay; index: number; ticks?: Record<string, boolean>; onTick?: (key: string) => void; onOpen?: (id: string) => void; label?: string;
+  today?: boolean;
   /** Offered on meals not yet eaten. */
   onSwap?: (dayIndex: number, mealIndex: number) => void;
 }) {
@@ -44,7 +45,7 @@ export function DayCard({ d, index, ticks, onTick, onOpen, onSwap, label }: {
   return (
     <section className={'daycard' + (d.adjusted ? ' adjusted' : '') + (done ? ' done' : '')} aria-label={d.day}>
       <header>
-        <h3>{d.day}{label && <span className="muted"> · {label}</span>}</h3>
+        <h3>{d.day}{label && <span className="muted"> · {label}</span>}{today && <span className="todaybadge">Today</span>}</h3>
         {done ? <span className="daytot">Done ✓</span>
           : <span className="daytot"><i className={'dot' + (d.inBand ? '' : ' amber')} />{d.protein}g protein · {d.kcal.toLocaleString('en-GB')} kcal</span>}
       </header>

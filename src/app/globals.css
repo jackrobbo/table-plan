@@ -137,6 +137,15 @@ input.text:focus{outline:2px solid var(--ok);}
 
 /* ---- welcome ---- */
 .logo{width:46px; height:46px; border-radius:12px; background:var(--btn); color:var(--btn-ink); display:grid; place-items:center; font-weight:800; font-size:20px;}
+.avgrow{margin:10px 0 0}
+.avghead{display:flex; justify-content:space-between; font-size:13px; color:var(--ink2); margin-bottom:4px; font-variant-numeric:tabular-nums}
+.avghead b{color:var(--ink)}
+.avgtrack{position:relative; height:8px; border-radius:4px; background:var(--fill)}
+.avgtrack i{position:absolute; inset:0 auto 0 0; border-radius:4px; background:var(--ink3)}
+.avgtrack i.ok{background:var(--ok)}
+.avgtrack em{position:absolute; top:-3px; bottom:-3px; width:2px; background:var(--ink); border-radius:1px}
+.todaybadge{margin-left:8px; font-size:11px; font-weight:600; padding:2px 7px; border-radius:6px; background:var(--ok-soft); color:var(--ok-ink); vertical-align:middle}
+.weekdone .avgbars{margin-top:12px; padding:0; box-shadow:none; background:none}
 .consent{display:flex; gap:10px; align-items:flex-start; margin:12px 0; font-size:14px; line-height:1.4; color:var(--ink);}
 .consent input{flex:none; width:20px; height:20px; margin-top:2px;}
 .legal{max-width:640px}
