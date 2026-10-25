@@ -6,7 +6,9 @@ import com.getcapacitor.JSObject;
 import com.getcapacitor.Plugin;
 import com.getcapacitor.PluginCall;
 import com.getcapacitor.PluginMethod;
+import com.getcapacitor.annotation.ActivityCallback;
 import com.getcapacitor.annotation.CapacitorPlugin;
+import androidx.activity.result.ActivityResult;
 import org.json.JSONArray;
 import org.json.JSONObject;
 
@@ -38,7 +40,23 @@ public class MorrisonsPlugin extends Plugin {
         if (clean.length() == 0) { call.reject("No valid items"); return; }
         Intent intent = new Intent(getActivity(), MorrisonsActivity.class);
         intent.putExtra(MorrisonsActivity.EXTRA_ITEMS, clean.toString());
-        getActivity().startActivity(intent);
-        call.resolve(new JSObject().put("count", clean.length()));
+        // Resolves when the person leaves the Morrisons screen, with how the run went.
+        startActivityForResult(call, intent, "finished");
+    }
+
+    @ActivityCallback
+    private void finished(PluginCall call, ActivityResult result) {
+        JSObject out = new JSObject();
+        try {
+            Intent data = result.getData();
+            String job = data == null ? null : data.getStringExtra(MorrisonsActivity.EXTRA_JOB);
+            if (job != null) {
+                JSONObject j = new JSONObject(job);
+                out.put("state", j.optString("state", ""));
+                out.put("total", j.optJSONArray("items") == null ? 0 : j.getJSONArray("items").length());
+                out.put("results", new JSArray(j.optJSONArray("results") == null ? "[]" : j.getJSONArray("results").toString()));
+            }
+        } catch (Exception ignored) { }
+        call.resolve(out);
     }
 }

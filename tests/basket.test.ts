@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { basketItems, basketUrl, MAX_PACKS } from '@/lib/basket';
+import { basketItems, basketUrl, fillOutcome, loadFill, MAX_PACKS } from '@/lib/basket';
 import type { Shopping } from '@/lib/planner/shopping';
 
 const line = (key: string, slug: string, packs: number, name = key) => ({ key, name, slug, packs, costPence: 100, needed: 1, bought: 1, unit: 'g', usedBy: [], category: 'Other' });
@@ -42,4 +42,23 @@ describe('shopping list by aisle', () => {
     const { PRODUCTS } = await import('@/data');
     for (const [k, p] of Object.entries(PRODUCTS)) expect(AISLES, k).toContain(p.c);
   });
+});
+
+describe('what the app reports back', () => {
+  const s = shopping([line('oats', 'oats/1', 1, 'Oats'), line('milk', 'milk/2', 2, 'Milk'), line('egg', 'egg/3', 1, 'Eggs'), line('rice', 'rice/4', 1, 'Rice')]);
+  it('splits the list into in-trolley and still-to-add, with a reason', () => {
+    const o = fillOutcome(s, ['rice'], { results: [
+      { s: 'oats/1', status: 'added', got: 1 },
+      { s: 'milk/2', status: 'partial', got: 1 },
+      { s: 'egg/3', status: 'unavailable', note: 'No Add button on the page' },
+    ] });
+    expect(o.added.map((l) => l.key)).toEqual(['oats']);
+    expect(o.todo.map((t) => [t.line.key, t.note])).toEqual([['milk', 'Only 1 of 2 added'], ['egg', 'No Add button on the page']]);
+  });
+  it('treats lines the run never reached as still to add, and counts already-in-trolley as in', () => {
+    const o = fillOutcome(s, [], { results: [{ s: 'oats/1', status: 'already' }] });
+    expect(o.added.map((l) => l.key)).toEqual(['oats']);
+    expect(o.todo.map((t) => t.note)).toEqual(['Not tried', 'Not tried', 'Not tried']);
+  });
+  it('has nothing saved without localStorage', () => { expect(loadFill()).toBeNull(); });
 });

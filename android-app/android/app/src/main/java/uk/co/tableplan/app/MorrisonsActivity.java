@@ -32,12 +32,15 @@ import org.json.JSONObject;
  */
 public class MorrisonsActivity extends Activity {
     static final String EXTRA_ITEMS = "items";
+    static final String EXTRA_JOB = "job";
     private static final String BASE = "https://groceries.morrisons.com/products/";
     private static final int MAX_JOB_CHARS = 200_000;
 
     private WebView web;
     private String script = "";
     private SharedPreferences prefs;
+    /** The latest state of the run, kept after the script clears it so we can hand the result back to Table Plan. */
+    private String lastJob = null;
 
     @SuppressLint({"SetJavaScriptEnabled", "AddJavascriptInterface"})
     @Override
@@ -114,7 +117,8 @@ public class MorrisonsActivity extends Activity {
             job.put("state", "ready");
             job.put("tries", 0);
             job.put("at", System.currentTimeMillis());
-            prefs.edit().putString("job", job.toString()).apply();
+            lastJob = job.toString();
+            prefs.edit().putString("job", lastJob).apply();
             web.loadUrl(BASE + items.getJSONObject(0).getString("s"));
         } catch (Exception e) {
             finish();
@@ -131,6 +135,14 @@ public class MorrisonsActivity extends Activity {
         } catch (Exception e) {
             return "";
         }
+    }
+
+    @Override public void finish() {
+        Intent out = new Intent();
+        String job = lastJob != null ? lastJob : prefs.getString("job", null);
+        if (job != null) out.putExtra(EXTRA_JOB, job);
+        setResult(RESULT_OK, out);
+        super.finish();
     }
 
     @Override protected void onPause() {
@@ -157,7 +169,7 @@ public class MorrisonsActivity extends Activity {
     private class Bridge {
         @JavascriptInterface public String getJob() { return prefs.getString("job", ""); }
         @JavascriptInterface public void setJob(String json) {
-            if (json != null && json.length() < MAX_JOB_CHARS) prefs.edit().putString("job", json).apply();
+            if (json != null && json.length() < MAX_JOB_CHARS) { lastJob = json; prefs.edit().putString("job", json).apply(); }
         }
         @JavascriptInterface public void clearJob() { prefs.edit().remove("job").apply(); }
         @JavascriptInterface public void close() { runOnUiThread(MorrisonsActivity.this::finish); }
