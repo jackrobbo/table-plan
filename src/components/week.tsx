@@ -5,7 +5,7 @@ import { PRODUCTS, RECIPES } from '@/data';
 import MealImage from '@/components/MealImage';
 import { tierMark } from '@/lib/budget';
 import { allergenNames, cupboardLines } from '@/lib/recipeFacts';
-import { buildShopping, type Shopping } from '@/lib/planner/shopping';
+import { buildShopping, byAisle, type Shopping } from '@/lib/planner/shopping';
 import type { Plan, PlannedDay, PlannedMeal } from '@/lib/planner/types';
 
 export const recipeById = new Map(RECIPES.map((r) => [r.id, r]));
@@ -20,7 +20,8 @@ export function MealRow({ m, tick, onTick, onOpen, onSwap, isNew }: { m: Planned
       <button className="mbody linkish" onClick={onOpen} disabled={!onOpen}>
         <div className="mname">{r.e} {r.n}</div>
         <div className="tags">
-          <span className="p">P {m.protein}g</span><span>{m.kcal} kcal</span>
+          <span className="p">P {m.protein}g</span>{r.cb != null && <span>C {Math.round(r.cb * m.scale)}g</span>}{r.f != null && <span>F {Math.round(r.f * m.scale)}g</span>}<span>{m.kcal} kcal</span>
+          {r.cost != null && <span title="Estimated cost of this portion">≈ {money(Math.round(r.cost * m.scale))}</span>}
           {Math.abs(m.scale - 1) >= 0.02 && <span className="adj">Portion {Math.round(m.scale * 100)}%</span>}
           {m.extra > 0 && <span>+{m.extra} to share</span>}
           {isNew && <span className="newtag">New for you</span>}
@@ -71,37 +72,45 @@ export function DayCard({ d, index, ticks, onTick, onOpen, onSwap, label, today,
 
 export function ShoppingList({ shopping, have, onToggle }: { shopping: Shopping; have?: string[]; onToggle?: (key: string) => void }) {
   return (
-    <div className="card list">
-      {shopping.lines.map((l) => {
-        const got = have?.includes(l.key);
-        return (
-          <div className={'line' + (got ? ' got' : '')} key={l.key}>
-            {onToggle && (
-              <button className={'tick' + (got ? '' : ' on')} role="checkbox" aria-checked={!got} aria-label={`Buy ${l.name}`} onClick={() => onToggle(l.key)}>
-                <svg viewBox="0 0 16 16" aria-hidden><path d="M3.5 8.5l3 3 6-7" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" /></svg>
-              </button>
-            )}
-            <div className="lbody">
-              <b>{l.name}{l.packs > 1 ? ` ×${l.packs}` : ''}</b>
-              {l.slug && (
-                <a className="shoplink" href={`https://groceries.morrisons.com/products/${l.slug}`} target="_blank" rel="noopener noreferrer" aria-label={`Open ${l.name} at Morrisons (opens in a new tab)`}>Morrisons ↗</a>
-              )}
-              <div className="muted">{l.usedBy.slice(0, 3).join(', ')}</div>
-              {l.status && l.status !== 'ok' && <div className="flag">May be unavailable at the moment</div>}
-            </div>
-            <span className="price">{money(l.costPence)}</span>
+    <>
+      {byAisle(shopping.lines).map(({ aisle, lines }) => (
+        <div key={aisle}>
+          <p className="group-title">{aisle}</p>
+          <div className="card list">
+            {lines.map((l) => {
+              const got = have?.includes(l.key);
+              return (
+                <div className={'line' + (got ? ' got' : '')} key={l.key}>
+                  {onToggle && (
+                    <button className={'tick' + (got ? '' : ' on')} role="checkbox" aria-checked={!got} aria-label={`Buy ${l.name}`} onClick={() => onToggle(l.key)}>
+                      <svg viewBox="0 0 16 16" aria-hidden><path d="M3.5 8.5l3 3 6-7" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" /></svg>
+                    </button>
+                  )}
+                  <div className="lbody">
+                    <b>{l.name}{l.packs > 1 ? ` ×${l.packs}` : ''}</b>
+                    {l.slug && (
+                      <a className="shoplink" href={`https://groceries.morrisons.com/products/${l.slug}`} target="_blank" rel="noopener noreferrer" aria-label={`Open ${l.name} at Morrisons (opens in a new tab)`}>Morrisons ↗</a>
+                    )}
+                    <div className="muted">{l.usedBy.slice(0, 3).join(', ')}</div>
+                    {l.status && l.status !== 'ok' && <div className="flag">May be unavailable at the moment</div>}
+                  </div>
+                  <span className="price">{money(l.costPence)}</span>
+                </div>
+              );
+            })}
           </div>
-        );
-      })}
-    </div>
+        </div>
+      ))}
+    </>
   );
 }
 
 /** Plain-text list for Save to Notes / share. Honest about prices being dated estimates. */
 export function listAsText(plan: Plan, have: string[], dated: string): string {
   const s = buildShopping(plan);
-  const lines = s.lines.filter((l) => !have.includes(l.key)).map((l) => `☐ ${l.name}${l.packs > 1 ? ` ×${l.packs}` : ''} (≈ ${money(l.costPence)})`);
-  return `Table Plan shopping list\n${dated}\n\n${lines.join('\n')}\n\nStore cupboard (only if you're out):\n${s.cupboard.join('\n')}`;
+  const groups = byAisle(s.lines.filter((l) => !have.includes(l.key)))
+    .map((g) => `${g.aisle.toUpperCase()}\n${g.lines.map((l) => `☐ ${l.name}${l.packs > 1 ? ` ×${l.packs}` : ''} (≈ ${money(l.costPence)})`).join('\n')}`);
+  return `Table Plan shopping list\n${dated}\n\n${groups.join('\n\n')}\n\nStore cupboard (only if you're out):\n${s.cupboard.join('\n')}`;
 }
 
 export function RecipeSheet({ id, onClose, portions, onNever }: { id: string | null; onClose: () => void; portions?: number; onNever?: (id: string) => void }) {

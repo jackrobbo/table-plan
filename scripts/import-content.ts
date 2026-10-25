@@ -42,7 +42,7 @@ console.log(`photos: ${recipes.filter((r) => r.image && images[r.slug]).length}/
 // ---- compiled app data (live recipes only; shape consumed by src/data/index.ts) ----
 const out = (f: string, v: unknown) => fs.writeFileSync(`src/data/${f}.json`, JSON.stringify(v, null, 1) + '\n');
 out('products', Object.fromEntries(ingredients.filter((i) => i.product).map((i) => [i.slug,
-  { n: i.product!.name, pr: i.product!.price_pence, pack: i.product!.pack_size, u: i.unit, s: i.product!.slug,
+  { n: i.product!.name, pr: i.product!.price_pence, pack: i.product!.pack_size, u: i.unit, s: i.product!.slug, c: i.category ?? 'Other',
     ...(prices[i.slug] && prices[i.slug].status !== 'ok' ? { st: prices[i.slug].status } : {}) }])));
 const checked = Object.values(prices).map((e) => e.checked_at).sort();
 const unavailable = Object.entries(prices).filter(([, e]) => e.status === 'delisted' || e.status === 'out_of_stock').map(([k]) => k);

@@ -10,7 +10,7 @@ export type { Budget } from '@/lib/content/macros';
 import type { Budget } from '@/lib/content/macros';
 
 /** st: set only when the latest price check was not clean (delisted, out_of_stock, changed_big, error). */
-export interface Product { n: string; pr: number; pack: number; u: string; s: string; st?: string }
+export interface Product { n: string; pr: number; pack: number; u: string; s: string; st?: string; c?: string }
 export interface Recipe {
   id: string; c: Course; e: string; n: string; p: number; k: number; serves: number;
   fresh: [string, number][]; cup: string[]; m: string[]; allergens: string[]; macros_only?: boolean;

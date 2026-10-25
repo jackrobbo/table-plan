@@ -139,6 +139,7 @@ export default function Plan() {
           {sub === 'plan' && <>
             {/* Built from the days, not plan.issues, so plans saved before the wording changed show the current message. */}
             {(plan.days.length ? explainMisses(plan.days, t.band, t.protein) : plan.issues).map((i) => <div key={i} className="estimate-flag">{i}</div>)}
+            {plan.days.length > 0 && <PriceNote totalPence={shopping.totalPence} />}
             {rate && recipeById.get(rate) && (
               <div className="note rate" role="status">
                 <b>New this week: {recipeById.get(rate)!.n}. How was it?</b>

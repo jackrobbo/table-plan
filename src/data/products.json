@@ -4,580 +4,663 @@
   "pr": 699,
   "pack": 1000,
   "u": "g",
-  "s": "morrisons-british-chicken-breast-fillets-1kg/108444711"
+  "s": "morrisons-british-chicken-breast-fillets-1kg/108444711",
+  "c": "Meat & fish"
  },
  "thigh": {
   "n": "Morrisons British Boneless Chicken Thigh Fillets 1kg",
   "pr": 725,
   "pack": 1000,
   "u": "g",
-  "s": "morrisons-british-boneless-chicken-thigh-fillets-1kg/108854278"
+  "s": "morrisons-british-boneless-chicken-thigh-fillets-1kg/108854278",
+  "c": "Meat & fish"
  },
  "mince": {
   "n": "Morrisons British Beef Steak Mince 5% Fat 250g",
   "pr": 295,
   "pack": 250,
   "u": "g",
-  "s": "morrisons-british-beef-steak-mince-5-fat-250g/109897499"
+  "s": "morrisons-british-beef-steak-mince-5-fat-250g/109897499",
+  "c": "Meat & fish"
  },
  "sizzle": {
   "n": "Morrisons British Beef Sizzle Steak 320g",
   "pr": 525,
   "pack": 320,
   "u": "g",
-  "s": "morrisons-british-beef-sizzle-steak-320g/112613434"
+  "s": "morrisons-british-beef-sizzle-steak-320g/112613434",
+  "c": "Meat & fish"
  },
  "rump": {
   "n": "Morrisons British Beef Rump Steak 200g",
   "pr": 440,
   "pack": 200,
   "u": "g",
-  "s": "morrisons-british-beef-rump-steak-200g/115888652"
+  "s": "morrisons-british-beef-rump-steak-200g/115888652",
+  "c": "Meat & fish"
  },
  "prawns": {
   "n": "Morrisons Savers King Prawns 150g",
   "pr": 249,
   "pack": 150,
   "u": "g",
-  "s": "morrisons-savers-king-prawns/112570964"
+  "s": "morrisons-savers-king-prawns/112570964",
+  "c": "Meat & fish"
  },
  "roast": {
   "n": "Morrisons Roast Chicken Breast Slices 180g",
   "pr": 375,
   "pack": 180,
   "u": "g",
-  "s": "morrisons-roast-chicken-slices-180g/112780136"
+  "s": "morrisons-roast-chicken-slices-180g/112780136",
+  "c": "Meat & fish"
  },
  "ham": {
   "n": "Morrisons British Cooked Ham 120g",
   "pr": 200,
   "pack": 120,
   "u": "g",
-  "s": "morrisons-british-cooked-ham-120g/112634551"
+  "s": "morrisons-british-cooked-ham-120g/112634551",
+  "c": "Meat & fish"
  },
  "bacon": {
   "n": "Morrisons Lean Smoked Bacon Medallions 8pk",
   "pr": 325,
   "pack": 8,
   "u": "medallions",
-  "s": "morrisons-8-lean-smoked-bacon-medallions/111008110"
+  "s": "morrisons-8-lean-smoked-bacon-medallions/111008110",
+  "c": "Meat & fish"
  },
  "eggs": {
   "n": "Morrisons Medium Free Range Eggs 6 Pack",
   "pr": 180,
   "pack": 6,
   "u": "eggs",
-  "s": "morrisons-medium-free-range-eggs-6-pack/105828736"
+  "s": "morrisons-medium-free-range-eggs-6-pack/105828736",
+  "c": "Dairy & eggs"
  },
  "milk": {
   "n": "Morrisons British Semi Skimmed Milk 4 Pint",
   "pr": 165,
   "pack": 2272,
   "u": "ml",
-  "s": "morrisons-british-semi-skimmed-milk-4-pint/113240422"
+  "s": "morrisons-british-semi-skimmed-milk-4-pint/113240422",
+  "c": "Dairy & eggs"
  },
  "yog": {
   "n": "Morrisons Protein Yogurt 200g pot",
   "pr": 75,
   "pack": 1,
   "u": "pots",
-  "s": "morrisons-strawberry-protein-yogurt/113699428"
+  "s": "morrisons-strawberry-protein-yogurt/113699428",
+  "c": "Dairy & eggs"
  },
  "greek": {
   "n": "Morrisons Greek Style Yogurt 500g",
   "pr": 115,
   "pack": 500,
   "u": "g",
-  "s": "morrisons-greek-style-yogurt-500g/103078919"
+  "s": "morrisons-greek-style-yogurt-500g/103078919",
+  "c": "Dairy & eggs"
  },
  "loaf": {
   "n": "Morrisons White Farmhouse Loaf 800g",
   "pr": 110,
   "pack": 16,
   "u": "slices",
-  "s": "morrisons-white-farmhouse-loaf-800g/113876869"
+  "s": "morrisons-white-farmhouse-loaf-800g/113876869",
+  "c": "Bakery"
  },
  "wraps": {
   "n": "Morrisons Plain Tortilla Wraps 8pk",
   "pr": 140,
   "pack": 8,
   "u": "wraps",
-  "s": "morrisons-plain-tortilla-wraps-8-pack/112909657"
+  "s": "morrisons-plain-tortilla-wraps-8-pack/112909657",
+  "c": "Bakery"
  },
  "mission": {
   "n": "Mission Protein Tortilla Wraps 6pk",
   "pr": 160,
   "pack": 6,
   "u": "wraps",
-  "s": "mission-protein-tortilla-wraps-367g/114821317"
+  "s": "mission-protein-tortilla-wraps-367g/114821317",
+  "c": "Bakery"
  },
  "pittas": {
   "n": "Morrisons Stonebaked Wholemeal Pittas 6pk",
   "pr": 50,
   "pack": 6,
   "u": "pittas",
-  "s": "morrisons-stonebaked-wholemeal-pittas/109515921"
+  "s": "morrisons-stonebaked-wholemeal-pittas/109515921",
+  "c": "Bakery"
  },
  "houm": {
   "n": "Morrisons Red Pepper Houmous 200g",
   "pr": 130,
   "pack": 200,
   "u": "g",
-  "s": "morrisons-red-pepper-houmous-200g/109734809"
+  "s": "morrisons-red-pepper-houmous-200g/109734809",
+  "c": "Tins, jars & sauces"
  },
  "blueb": {
   "n": "Morrisons Savers Blueberries 125g",
   "pr": 129,
   "pack": 125,
   "u": "g",
-  "s": "morrisons-savers-blueberries-125g/113455600"
+  "s": "morrisons-savers-blueberries-125g/113455600",
+  "c": "Fruit & veg"
  },
  "banana": {
   "n": "Fyffes Bananas 5 Pack",
   "pr": 78,
   "pack": 5,
   "u": "bananas",
-  "s": "fyffes-bananas-5-pack/115455355"
+  "s": "fyffes-bananas-5-pack/115455355",
+  "c": "Fruit & veg"
  },
  "apple": {
   "n": "Gala Apple (loose)",
   "pr": 45,
   "pack": 1,
   "u": "apples",
-  "s": "morrisons-loose-royal-gala-apples/109861752"
+  "s": "morrisons-loose-royal-gala-apples/109861752",
+  "c": "Fruit & veg"
  },
  "lemon": {
   "n": "Lemon (loose)",
   "pr": 37,
   "pack": 1,
   "u": "lemons",
-  "s": "morrisons-loose-lemon/108379999"
+  "s": "morrisons-loose-lemon/108379999",
+  "c": "Fruit & veg"
  },
  "iceberg": {
   "n": "Morrisons British Iceberg Lettuce",
   "pr": 89,
   "pack": 1,
   "u": "heads",
-  "s": "morrisons-british-iceberg-lettuce/108370943"
+  "s": "morrisons-british-iceberg-lettuce/108370943",
+  "c": "Fruit & veg"
  },
  "cuc": {
   "n": "Whole Cucumber",
   "pr": 99,
   "pack": 1,
   "u": "cucumbers",
-  "s": "morrisons-whole-cucumber/108413093"
+  "s": "morrisons-whole-cucumber/108413093",
+  "c": "Fruit & veg"
  },
  "plum": {
   "n": "Morrisons Baby Plum Tomatoes 250g",
   "pr": 83,
   "pack": 250,
   "u": "g",
-  "s": "morrisons-baby-plum-tomatoes-250g/108388174"
+  "s": "morrisons-baby-plum-tomatoes-250g/108388174",
+  "c": "Fruit & veg"
  },
  "salad": {
   "n": "Morrisons Crispy Salad 120g",
   "pr": 100,
   "pack": 120,
   "u": "g",
-  "s": "morrisons-crispy-salad-120g/115831779"
+  "s": "morrisons-crispy-salad-120g/115831779",
+  "c": "Fruit & veg"
  },
  "onions": {
   "n": "Morrisons Brown Onions 3 Pack",
   "pr": 95,
   "pack": 3,
   "u": "onions",
-  "s": "morrisons-brown-onions-3-pack/113301635"
+  "s": "morrisons-brown-onions-3-pack/113301635",
+  "c": "Fruit & veg"
  },
  "spring": {
   "n": "Morrisons Salad Onions (bunch)",
   "pr": 65,
   "pack": 1,
   "u": "bunches",
-  "s": "morrisons-salad-onions-minimum-100g/108336382"
+  "s": "morrisons-salad-onions-minimum-100g/108336382",
+  "c": "Fruit & veg"
  },
  "carrots": {
   "n": "Morrisons British Carrots 500g",
   "pr": 44,
   "pack": 500,
   "u": "g",
-  "s": "morrisons-british-carrots-500g/108305383"
+  "s": "morrisons-british-carrots-500g/108305383",
+  "c": "Fruit & veg"
  },
  "pepper": {
   "n": "Red Pepper (loose)",
   "pr": 70,
   "pack": 1,
   "u": "peppers",
-  "s": "morrisons-loose-red-pepper/108407187"
+  "s": "morrisons-loose-red-pepper/108407187",
+  "c": "Fruit & veg"
  },
  "mixpep": {
   "n": "Morrisons Savers Mixed Peppers 3 Pack",
   "pr": 175,
   "pack": 3,
   "u": "peppers",
-  "s": "morrisons-savers-mixed-peppers-3-pack-colours-may-vary/112916566"
+  "s": "morrisons-savers-mixed-peppers-3-pack-colours-may-vary/112916566",
+  "c": "Fruit & veg"
  },
  "chilli": {
   "n": "Morrisons Fresh Red Chillies 50g",
   "pr": 59,
   "pack": 50,
   "u": "g",
-  "s": "morrisons-fresh-red-chillies-50g/108384886"
+  "s": "morrisons-fresh-red-chillies-50g/108384886",
+  "c": "Fruit & veg"
  },
  "brocc": {
   "n": "Morrisons British Organic Broccoli 300g",
   "pr": 140,
   "pack": 300,
   "u": "g",
-  "s": "morrisons-british-organic-broccoli-300g/112683256"
+  "s": "morrisons-british-organic-broccoli-300g/112683256",
+  "c": "Fruit & veg"
  },
  "pouch": {
   "n": "Morrisons Baby Potatoes with Chives & Butter 350g",
   "pr": 225,
   "pack": 350,
   "u": "g",
-  "s": "morrisons-baby-potatoes-with-chives-salted-butter-350g/114805886"
+  "s": "morrisons-baby-potatoes-with-chives-salted-butter-350g/114805886",
+  "c": "Frozen & ready to cook"
  },
  "cobs": {
   "n": "Morrisons 2 Sweetcorn Cobs",
   "pr": 129,
   "pack": 2,
   "u": "cobs",
-  "s": "morrisons-2-sweetcorn-cobs/108460586"
+  "s": "morrisons-2-sweetcorn-cobs/108460586",
+  "c": "Fruit & veg"
  },
  "stirfry": {
   "n": "Morrisons Vegetable Stir Fry Mix 500g",
   "pr": 246,
   "pack": 500,
   "u": "g",
-  "s": "morrisons-stir-fry-vegetables/104896753"
+  "s": "morrisons-stir-fry-vegetables/104896753",
+  "c": "Fruit & veg"
  },
  "slices": {
   "n": "Morrisons Crispy Potato Slices 300g",
   "pr": 150,
   "pack": 300,
   "u": "g",
-  "s": "morrisons-crispy-potato-slices/112818018"
+  "s": "morrisons-crispy-potato-slices/112818018",
+  "c": "Frozen & ready to cook"
  },
  "medley": {
   "n": "Morrisons Green Vegetable Medley 250g",
   "pr": 220,
   "pack": 250,
   "u": "g",
-  "s": "morrisons-green-vegetable-medley-250g/115851497"
+  "s": "morrisons-green-vegetable-medley-250g/115851497",
+  "c": "Fruit & veg"
  },
  "spinach": {
   "n": "Morrisons Baby Spinach 160g",
   "pr": 100,
   "pack": 160,
   "u": "g",
-  "s": "morrisons-baby-spinach-160g/108320372"
+  "s": "morrisons-baby-spinach-160g/108320372",
+  "c": "Fruit & veg"
  },
  "creme": {
   "n": "Morrisons Reduced Fat Crème Fraîche 300ml",
   "pr": 75,
   "pack": 300,
   "u": "ml",
-  "s": "morrisons-british-reduced-fat-creme-fraiche/113016990"
+  "s": "morrisons-british-reduced-fat-creme-fraiche/113016990",
+  "c": "Dairy & eggs"
  },
  "ctoms": {
   "n": "Morrisons Chopped Tomatoes 400g",
   "pr": 45,
   "pack": 400,
   "u": "g",
-  "s": "morrisons-chopped-tomatoes-400g/105415501"
+  "s": "morrisons-chopped-tomatoes-400g/105415501",
+  "c": "Tins, jars & sauces"
  },
  "kidney": {
   "n": "Morrisons Red Kidney Beans 400g",
   "pr": 37,
   "pack": 400,
   "u": "g",
-  "s": "morrisons-red-kidney-beans-400g/105408168"
+  "s": "morrisons-red-kidney-beans-400g/105408168",
+  "c": "Tins, jars & sauces"
  },
  "grenade": {
   "n": "Grenade Oreo Protein Bars 4×60g",
   "pr": 1000,
   "pack": 4,
   "u": "bars",
-  "s": "grenade-protein-bars-oreo-4x60g/113338551"
+  "s": "grenade-protein-bars-oreo-4x60g/113338551",
+  "c": "Cereals, snacks & protein"
  },
  "wafer": {
   "n": "Myprotein Protein Wafer Vanilla 40g",
   "pr": 200,
   "pack": 1,
   "u": "wafers",
-  "s": "myprotein-protein-wafer-vanilla/114041821"
+  "s": "myprotein-protein-wafer-vanilla/114041821",
+  "c": "Cereals, snacks & protein"
  },
  "pops": {
   "n": "Novo Protein Pops Sour Cream & Onion 45g",
   "pr": 125,
   "pack": 1,
   "u": "bags",
-  "s": "novo-protein-pops-sour-cream-and-onion/114016545"
+  "s": "novo-protein-pops-sour-cream-and-onion/114016545",
+  "c": "Cereals, snacks & protein"
  },
  "babybel": {
   "n": "Mini Babybel Original 6×20g",
   "pr": 245,
   "pack": 6,
   "u": "cheeses",
-  "s": "mini-babybel-original-cheese-snacks/103090117"
+  "s": "mini-babybel-original-cheese-snacks/103090117",
+  "c": "Dairy & eggs"
  },
  "oats": {
   "n": "Morrisons Porridge Oats 1kg",
   "pr": 135,
   "pack": 1000,
   "u": "g",
-  "s": "morrisons-porridge-oats/105489771"
+  "s": "morrisons-porridge-oats/105489771",
+  "c": "Cereals, snacks & protein"
  },
  "porkmince": {
   "n": "Morrisons British Pork Mince 5% Fat 500g",
   "pr": 249,
   "pack": 500,
   "u": "g",
-  "s": "morrisons-british-pork-mince-5-fat-500g/107781821"
+  "s": "morrisons-british-pork-mince-5-fat-500g/107781821",
+  "c": "Meat & fish"
  },
  "porkloin": {
   "n": "Morrisons British Pork Loin Steaks 600g",
   "pr": 590,
   "pack": 600,
   "u": "g",
-  "s": "morrisons-british-pork-loin-steaks-600g/112062396"
+  "s": "morrisons-british-pork-loin-steaks-600g/112062396",
+  "c": "Meat & fish"
  },
  "sausages": {
   "n": "Morrisons Butcher's Style 8 Pork Sausages 454g",
   "pr": 179,
   "pack": 8,
   "u": "sausages",
-  "s": "morrisons-butcher-s-style-8-pork-sausages-454g/104421547"
+  "s": "morrisons-butcher-s-style-8-pork-sausages-454g/104421547",
+  "c": "Meat & fish"
  },
  "turkeymince": {
   "n": "Morrisons Turkey Mince 4% 500g",
   "pr": 450,
   "pack": 500,
   "u": "g",
-  "s": "morrisons-turkey-mince-4-500g/116227426"
+  "s": "morrisons-turkey-mince-4-500g/116227426",
+  "c": "Meat & fish"
  },
  "salmon": {
   "n": "Morrisons Boneless 2 Atlantic Salmon Fillets",
   "pr": 495,
   "pack": 220,
   "u": "g",
-  "s": "morrisons-boneless-2-atlantic-salmon-fillets/113496647"
+  "s": "morrisons-boneless-2-atlantic-salmon-fillets/113496647",
+  "c": "Meat & fish"
  },
  "cod": {
   "n": "Morrisons 2 Cod Fillets 220g",
   "pr": 650,
   "pack": 220,
   "u": "g",
-  "s": "morrisons-2-cod-fillets-220g/110739421"
+  "s": "morrisons-2-cod-fillets-220g/110739421",
+  "c": "Meat & fish"
  },
  "smokedsalmon": {
   "n": "Morrisons Smoked Salmon Slices 120g",
   "pr": 450,
   "pack": 120,
   "u": "g",
-  "s": "morrisons-smoked-salmon-slices-120g/111897113"
+  "s": "morrisons-smoked-salmon-slices-120g/111897113",
+  "c": "Meat & fish"
  },
  "lambmince": {
   "n": "Morrisons Lamb Mince 500g",
   "pr": 550,
   "pack": 500,
   "u": "g",
-  "s": "morrisons-lamb-mince-500g/109408940"
+  "s": "morrisons-lamb-mince-500g/109408940",
+  "c": "Meat & fish"
  },
  "halloumi": {
   "n": "Morrisons Halloumi 200g",
   "pr": 177,
   "pack": 200,
   "u": "g",
-  "s": "morrisons-halloumi-200g/112922894"
+  "s": "morrisons-halloumi-200g/112922894",
+  "c": "Dairy & eggs"
  },
  "feta": {
   "n": "Morrisons Greek Feta 200g",
   "pr": 225,
   "pack": 200,
   "u": "g",
-  "s": "morrisons-greek-feta/106145443"
+  "s": "morrisons-greek-feta/106145443",
+  "c": "Dairy & eggs"
  },
  "cottage": {
   "n": "Morrisons Low Fat Cottage Cheese 300g",
   "pr": 165,
   "pack": 300,
   "u": "g",
-  "s": "morrisons-low-fat-cottage-cheese/107374141"
+  "s": "morrisons-low-fat-cottage-cheese/107374141",
+  "c": "Dairy & eggs"
  },
  "softcheese": {
   "n": "Morrisons 50% Reduced Fat Soft Cheese 200g",
   "pr": 130,
   "pack": 200,
   "u": "g",
-  "s": "morrisons-50-reduced-fat-soft-cheese-200g/112460669"
+  "s": "morrisons-50-reduced-fat-soft-cheese-200g/112460669",
+  "c": "Dairy & eggs"
  },
  "bagels": {
   "n": "Morrisons Plain Bagels 5 Pack",
   "pr": 99,
   "pack": 5,
   "u": "bagels",
-  "s": "morrisons-plain-bagels/111099710"
+  "s": "morrisons-plain-bagels/111099710",
+  "c": "Bakery"
  },
  "avocado": {
   "n": "Morrisons Ripe & Ready Avocados 2 Pack",
   "pr": 150,
   "pack": 2,
   "u": "avocados",
-  "s": "morrisons-ripe-ready-avocados-2-pack/108409289"
+  "s": "morrisons-ripe-ready-avocados-2-pack/108409289",
+  "c": "Fruit & veg"
  },
  "mushrooms": {
   "n": "Morrisons British Closed Cup Mushrooms 465g",
   "pr": 150,
   "pack": 465,
   "u": "g",
-  "s": "morrisons-british-closed-cup-mushrooms-465g/115267952"
+  "s": "morrisons-british-closed-cup-mushrooms-465g/115267952",
+  "c": "Fruit & veg"
  },
  "courgette": {
   "n": "Morrisons Courgettes 500g",
   "pr": 139,
   "pack": 500,
   "u": "g",
-  "s": "morrisons-courgettes/115508998"
+  "s": "morrisons-courgettes/115508998",
+  "c": "Fruit & veg"
  },
  "bakepot": {
   "n": "Morrisons British Baking Potatoes 4 Pack",
   "pr": 79,
   "pack": 4,
   "u": "potatoes",
-  "s": "morrisons-british-baking-potatoes-4-pack/108414272"
+  "s": "morrisons-british-baking-potatoes-4-pack/108414272",
+  "c": "Fruit & veg"
  },
  "potatoes": {
   "n": "Morrisons British Maris Piper Potatoes 1.25kg",
   "pr": 145,
   "pack": 1250,
   "u": "g",
-  "s": "morrisons-british-maris-piper-potatoes-1-25kg/113830019"
+  "s": "morrisons-british-maris-piper-potatoes-1-25kg/113830019",
+  "c": "Fruit & veg"
  },
  "sweetpot": {
   "n": "Morrisons Sweet Potatoes 1kg",
   "pr": 119,
   "pack": 1000,
   "u": "g",
-  "s": "morrisons-sweet-potatoes-1kg/108572051"
+  "s": "morrisons-sweet-potatoes-1kg/108572051",
+  "c": "Fruit & veg"
  },
  "peas": {
   "n": "Morrisons Garden Peas 1kg (frozen)",
   "pr": 165,
   "pack": 1000,
   "u": "g",
-  "s": "morrisons-garden-peas-1kg/112661655"
+  "s": "morrisons-garden-peas-1kg/112661655",
+  "c": "Fruit & veg"
  },
  "chips": {
   "n": "Morrisons Straight Cut Chips 1.2kg (frozen)",
   "pr": 200,
   "pack": 1200,
   "u": "g",
-  "s": "morrisons-straight-cut-chips/108043934"
+  "s": "morrisons-straight-cut-chips/108043934",
+  "c": "Frozen & ready to cook"
  },
  "passata": {
   "n": "Morrisons Passata 500g",
   "pr": 45,
   "pack": 500,
   "u": "g",
-  "s": "morrisons-passata-500g/104954925"
+  "s": "morrisons-passata-500g/104954925",
+  "c": "Tins, jars & sauces"
  },
  "tikka": {
   "n": "Morrisons Tikka Masala Curry Paste 180g",
   "pr": 195,
   "pack": 180,
   "u": "g",
-  "s": "morrisons-tikka-masala-curry-paste/112526787"
+  "s": "morrisons-tikka-masala-curry-paste/112526787",
+  "c": "Tins, jars & sauces"
  },
  "coconut": {
   "n": "Morrisons Canned Coconut Milk 400ml",
   "pr": 100,
   "pack": 400,
   "u": "ml",
-  "s": "morrisons-canned-coconut-milk-400-ml/106467080"
+  "s": "morrisons-canned-coconut-milk-400-ml/106467080",
+  "c": "Tins, jars & sauces"
  },
  "pesto": {
   "n": "Morrisons Red Pesto 190g",
   "pr": 89,
   "pack": 190,
   "u": "g",
-  "s": "morrisons-red-pesto-190g/104557698"
+  "s": "morrisons-red-pesto-190g/104557698",
+  "c": "Tins, jars & sauces"
  },
  "chickpeas": {
   "n": "Morrisons Chickpeas in Water 400g (240g drained)",
   "pr": 37,
   "pack": 240,
   "u": "g",
-  "s": "morrisons-chickpeas-in-water-400g/110434045"
+  "s": "morrisons-chickpeas-in-water-400g/110434045",
+  "c": "Tins, jars & sauces"
  },
  "lentils": {
   "n": "Morrisons Wholefoods Red Split Lentils 500g",
   "pr": 210,
   "pack": 500,
   "u": "g",
-  "s": "morrisons-wholefoods-red-split-lentils-500g/105661948"
+  "s": "morrisons-wholefoods-red-split-lentils-500g/105661948",
+  "c": "Tins, jars & sauces"
  },
  "beans": {
   "n": "Morrisons Baked Beans 410g",
   "pr": 37,
   "pack": 410,
   "u": "g",
-  "s": "morrisons-baked-beans-410g/105859372"
+  "s": "morrisons-baked-beans-410g/105859372",
+  "c": "Tins, jars & sauces"
  },
  "bbq": {
   "n": "Morrisons Smoky Kansas Style BBQ Sauce 300g",
   "pr": 165,
   "pack": 300,
   "u": "g",
-  "s": "morrisons-smoky-kansas-style-bbq-sauce-300g/114794355"
+  "s": "morrisons-smoky-kansas-style-bbq-sauce-300g/114794355",
+  "c": "Tins, jars & sauces"
  },
  "pbutter": {
   "n": "Morrisons Smooth Peanut Butter 1kg",
   "pr": 399,
   "pack": 1000,
   "u": "g",
-  "s": "morrisons-smooth-peanut-butter-1000g/114258034"
+  "s": "morrisons-smooth-peanut-butter-1000g/114258034",
+  "c": "Tins, jars & sauces"
  },
  "ricecakes": {
   "n": "Morrisons Lightly Salted Rice Cakes 100g",
   "pr": 95,
   "pack": 100,
   "u": "g",
-  "s": "morrisons-lightly-salted-rice-cakes/105404968"
+  "s": "morrisons-lightly-salted-rice-cakes/105404968",
+  "c": "Cereals, snacks & protein"
  },
  "crackers": {
   "n": "Morrisons Cream Crackers 300g",
   "pr": 49,
   "pack": 300,
   "u": "g",
-  "s": "morrisons-cream-crackers/105401695"
+  "s": "morrisons-cream-crackers/105401695",
+  "c": "Cereals, snacks & protein"
  },
  "tomsoup": {
   "n": "Morrisons Cream of Tomato Soup 400g",
   "pr": 65,
   "pack": 400,
   "u": "g",
-  "s": "morrisons-cream-of-tomato-soup/104788779"
+  "s": "morrisons-cream-of-tomato-soup/104788779",
+  "c": "Tins, jars & sauces"
  },
  "mixveg": {
   "n": "Morrisons Savers Mixed Vegetables 1kg (frozen)",
   "pr": 98,
   "pack": 1000,
   "u": "g",
-  "s": "morrisons-savers-mixed-vegetables-1kg/104898468"
+  "s": "morrisons-savers-mixed-vegetables-1kg/104898468",
+  "c": "Fruit & veg"
  },
  "naan": {
   "n": "Morrisons Mini Naans 4 x 50g",
   "pr": 100,
   "pack": 4,
   "u": "naans",
-  "s": "morrisons-mini-naans-4-x-50g/105765923"
+  "s": "morrisons-mini-naans-4-x-50g/105765923",
+  "c": "Bakery"
  },
  "wholeloaf": {
   "n": "Morrisons Wholemeal Medium Sliced Bread 800g",
   "pr": 75,
   "pack": 800,
   "u": "g",
-  "s": "morrisons-wholemeal-medium-sliced-bread-800g/102370256"
+  "s": "morrisons-wholemeal-medium-sliced-bread-800g/102370256",
+  "c": "Bakery"
  }
 }

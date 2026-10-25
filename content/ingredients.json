@@ -23,7 +23,8 @@
    "name": "Chicken, light meat, raw",
    "verified": true,
    "basis": "cofid"
-  }
+  },
+  "category": "Meat & fish"
  },
  {
   "slug": "thigh",
@@ -49,7 +50,8 @@
    "name": "Chicken, dark meat, raw",
    "verified": true,
    "basis": "cofid"
-  }
+  },
+  "category": "Meat & fish"
  },
  {
   "slug": "mince",
@@ -75,7 +77,8 @@
    "name": "Beef, mince, raw, extra lean",
    "verified": true,
    "basis": "label"
-  }
+  },
+  "category": "Meat & fish"
  },
  {
   "slug": "sizzle",
@@ -102,7 +105,8 @@
    "verified": true,
    "basis": "label",
    "approx": "sirloin steak (lean) for thin-cut sizzle steak"
-  }
+  },
+  "category": "Meat & fish"
  },
  {
   "slug": "rump",
@@ -128,7 +132,8 @@
    "name": "Beef, rump steak, raw, lean",
    "verified": true,
    "basis": "cofid"
-  }
+  },
+  "category": "Meat & fish"
  },
  {
   "slug": "prawns",
@@ -157,7 +162,8 @@
    "verified": true,
    "basis": "label",
    "note": "Label used: 'Savers King Prawns' are brined/glazed, so per 100 g of pack weight is lower than CoFID cooked king prawns."
-  }
+  },
+  "category": "Meat & fish"
  },
  {
   "slug": "roast",
@@ -184,7 +190,8 @@
    "verified": true,
    "basis": "label",
    "approx": "deli turkey slices for deli chicken slices"
-  }
+  },
+  "category": "Meat & fish"
  },
  {
   "slug": "ham",
@@ -210,7 +217,8 @@
    "name": "Ham",
    "verified": true,
    "basis": "label"
-  }
+  },
+  "category": "Meat & fish"
  },
  {
   "slug": "bacon",
@@ -238,7 +246,8 @@
    "verified": true,
    "basis": "label",
    "approx": "lean bacon loin steaks (grilled) for raw lean medallions; ~28 g per medallion is an estimate"
-  }
+  },
+  "category": "Meat & fish"
  },
  {
   "slug": "eggs",
@@ -267,7 +276,8 @@
    "name": "Eggs, chicken, whole, raw",
    "verified": true,
    "basis": "label"
-  }
+  },
+  "category": "Dairy & eggs"
  },
  {
   "slug": "milk",
@@ -295,7 +305,8 @@
    "name": "Milk, semi-skimmed, pasteurised, average",
    "verified": true,
    "basis": "label"
-  }
+  },
+  "category": "Dairy & eggs"
  },
  {
   "slug": "yog",
@@ -323,7 +334,8 @@
    "name": "Pack label (no CoFID cross-check)",
    "verified": true,
    "basis": "label"
-  }
+  },
+  "category": "Dairy & eggs"
  },
  {
   "slug": "greek",
@@ -351,7 +363,8 @@
    "name": "Yogurt, Greek style, plain",
    "verified": true,
    "basis": "label"
-  }
+  },
+  "category": "Dairy & eggs"
  },
  {
   "slug": "loaf",
@@ -381,7 +394,8 @@
    "name": "Bread, white, sliced",
    "verified": true,
    "basis": "label"
-  }
+  },
+  "category": "Bakery"
  },
  {
   "slug": "wraps",
@@ -410,7 +424,8 @@
    "name": "Tortilla, wheat, soft",
    "verified": true,
    "basis": "label"
-  }
+  },
+  "category": "Bakery"
  },
  {
   "slug": "mission",
@@ -439,7 +454,8 @@
    "name": "Pack label (no CoFID cross-check)",
    "verified": true,
    "basis": "label"
-  }
+  },
+  "category": "Bakery"
  },
  {
   "slug": "pittas",
@@ -468,7 +484,8 @@
    "name": "Bread, pitta, white",
    "verified": true,
    "basis": "label"
-  }
+  },
+  "category": "Bakery"
  },
  {
   "slug": "houm",
@@ -497,7 +514,8 @@
    "verified": true,
    "basis": "label",
    "note": "Label used: this Morrisons houmous is a lighter recipe than CoFID's generic houmous (194 vs 307 kcal)."
-  }
+  },
+  "category": "Tins, jars & sauces"
  },
  {
   "slug": "blueb",
@@ -523,7 +541,8 @@
    "name": "Blueberries",
    "verified": true,
    "basis": "cofid"
-  }
+  },
+  "category": "Fruit & veg"
  },
  {
   "slug": "banana",
@@ -550,7 +569,8 @@
    "name": "Bananas, flesh only",
    "verified": true,
    "basis": "cofid"
-  }
+  },
+  "category": "Fruit & veg"
  },
  {
   "slug": "apple",
@@ -577,7 +597,8 @@
    "name": "Apples, eating, raw, flesh and skin",
    "verified": true,
    "basis": "cofid"
-  }
+  },
+  "category": "Fruit & veg"
  },
  {
   "slug": "lemon",
@@ -593,7 +614,8 @@
    "pack_size": 1,
    "slug": "morrisons-loose-lemon/108379999"
   },
-  "negligible": true
+  "negligible": true,
+  "category": "Fruit & veg"
  },
  {
   "slug": "iceberg",
@@ -620,7 +642,8 @@
    "name": "Lettuce, average, raw",
    "verified": true,
    "basis": "label"
-  }
+  },
+  "category": "Fruit & veg"
  },
  {
   "slug": "cuc",
@@ -647,7 +670,8 @@
    "name": "Cucumber, raw, flesh and skin",
    "verified": true,
    "basis": "cofid"
-  }
+  },
+  "category": "Fruit & veg"
  },
  {
   "slug": "plum",
@@ -673,7 +697,8 @@
    "name": "Tomatoes, cherry, raw",
    "verified": true,
    "basis": "label"
-  }
+  },
+  "category": "Fruit & veg"
  },
  {
   "slug": "salad",
@@ -699,7 +724,8 @@
    "name": "Lettuce, average, raw",
    "verified": true,
    "basis": "label"
-  }
+  },
+  "category": "Fruit & veg"
  },
  {
   "slug": "onions",
@@ -726,7 +752,8 @@
    "name": "Onions, raw",
    "verified": true,
    "basis": "cofid"
-  }
+  },
+  "category": "Fruit & veg"
  },
  {
   "slug": "spring",
@@ -753,7 +780,8 @@
    "name": "Spring onions, bulbs and tops, raw",
    "verified": true,
    "basis": "cofid"
-  }
+  },
+  "category": "Fruit & veg"
  },
  {
   "slug": "carrots",
@@ -779,7 +807,8 @@
    "name": "Carrots, old, raw",
    "verified": true,
    "basis": "label"
-  }
+  },
+  "category": "Fruit & veg"
  },
  {
   "slug": "pepper",
@@ -807,7 +836,8 @@
    "verified": true,
    "basis": "cofid",
    "approx": "green capsicum for red (CoFID has no red sweet pepper)"
-  }
+  },
+  "category": "Fruit & veg"
  },
  {
   "slug": "mixpep",
@@ -835,7 +865,8 @@
    "verified": true,
    "basis": "cofid",
    "approx": "green capsicum for mixed colours"
-  }
+  },
+  "category": "Fruit & veg"
  },
  {
   "slug": "chilli",
@@ -861,7 +892,8 @@
    "name": "Peppers, capsicum, chilli, red, raw",
    "verified": true,
    "basis": "label"
-  }
+  },
+  "category": "Fruit & veg"
  },
  {
   "slug": "brocc",
@@ -887,7 +919,8 @@
    "name": "Broccoli, green, raw",
    "verified": true,
    "basis": "cofid"
-  }
+  },
+  "category": "Fruit & veg"
  },
  {
   "slug": "pouch",
@@ -917,7 +950,8 @@
    "basis": "label",
    "approx": "boiled new potatoes for buttered baby potato pouch",
    "note": "Label used: a ready-cooked pouch with butter and chives (92 kcal), so as-consumed is as-sold and richer than plain boiled new potatoes."
-  }
+  },
+  "category": "Frozen & ready to cook"
  },
  {
   "slug": "cobs",
@@ -944,7 +978,8 @@
    "name": "Sweetcorn, kernels, boiled 'on the cob' in unsalted water, weighed with core",
    "verified": true,
    "basis": "cofid"
-  }
+  },
+  "category": "Fruit & veg"
  },
  {
   "slug": "stirfry",
@@ -972,7 +1007,8 @@
    "basis": "label",
    "approx": "frozen stir-fry veg for a fresh stir-fry mix",
    "note": "Label used: sold raw; CoFID's entry is stir-fried in oil."
-  }
+  },
+  "category": "Fruit & veg"
  },
  {
   "slug": "slices",
@@ -1001,7 +1037,8 @@
    "verified": true,
    "basis": "cofid",
    "approx": "oven chips for crispy potato slices"
-  }
+  },
+  "category": "Frozen & ready to cook"
  },
  {
   "slug": "medley",
@@ -1031,7 +1068,8 @@
    "basis": "label",
    "approx": "broccoli for green vegetable medley",
    "note": "Label used: the medley comes with a buttery sauce (contains milk), so it is not plain broccoli."
-  }
+  },
+  "category": "Fruit & veg"
  },
  {
   "slug": "spinach",
@@ -1057,7 +1095,8 @@
    "name": "Spinach, baby, raw",
    "verified": true,
    "basis": "label"
-  }
+  },
+  "category": "Fruit & veg"
  },
  {
   "slug": "creme",
@@ -1085,7 +1124,8 @@
    "name": "Creme fraiche, half fat",
    "verified": true,
    "basis": "label"
-  }
+  },
+  "category": "Dairy & eggs"
  },
  {
   "slug": "ctoms",
@@ -1111,7 +1151,8 @@
    "name": "Tomatoes, canned, whole contents",
    "verified": true,
    "basis": "label"
-  }
+  },
+  "category": "Tins, jars & sauces"
  },
  {
   "slug": "kidney",
@@ -1138,7 +1179,8 @@
    "verified": true,
    "basis": "cofid",
    "note": "Tin weight includes liquid: CoFID/label values are per 100 g drained, a 400 g tin drains to about 240 g, so values are scaled by 0.6."
-  }
+  },
+  "category": "Tins, jars & sauces"
  },
  {
   "slug": "grenade",
@@ -1160,7 +1202,8 @@
    "pack_size": 4,
    "slug": "grenade-protein-bars-oreo-4x60g/113338551"
   },
-  "gramsPerUnit": 60
+  "gramsPerUnit": 60,
+  "category": "Cereals, snacks & protein"
  },
  {
   "slug": "wafer",
@@ -1192,7 +1235,8 @@
    "name": "Pack label (no CoFID cross-check)",
    "verified": true,
    "basis": "label"
-  }
+  },
+  "category": "Cereals, snacks & protein"
  },
  {
   "slug": "pops",
@@ -1221,7 +1265,8 @@
    "name": "Pack label (no CoFID cross-check)",
    "verified": true,
    "basis": "label"
-  }
+  },
+  "category": "Cereals, snacks & protein"
  },
  {
   "slug": "babybel",
@@ -1251,7 +1296,8 @@
    "verified": true,
    "basis": "label",
    "approx": "Edam for Babybel"
-  }
+  },
+  "category": "Dairy & eggs"
  },
  {
   "slug": "rice",
@@ -1945,7 +1991,8 @@
    "name": "Porridge oats, unfortified",
    "verified": true,
    "basis": "label"
-  }
+  },
+  "category": "Cereals, snacks & protein"
  },
  {
   "slug": "porkmince",
@@ -1971,7 +2018,8 @@
    "name": "Pork, mince, raw",
    "verified": false,
    "basis": "cofid"
-  }
+  },
+  "category": "Meat & fish"
  },
  {
   "slug": "porkloin",
@@ -1997,7 +2045,8 @@
    "name": "Pork, loin steaks, raw, lean and fat",
    "verified": true,
    "basis": "label"
-  }
+  },
+  "category": "Meat & fish"
  },
  {
   "slug": "sausages",
@@ -2028,7 +2077,8 @@
    "verified": true,
    "basis": "label",
    "note": "Label used: 72% pork sausage; CoFID's generic raw pork sausage is much fattier."
-  }
+  },
+  "category": "Meat & fish"
  },
  {
   "slug": "turkeymince",
@@ -2055,7 +2105,8 @@
    "verified": true,
    "basis": "label",
    "approx": "whole turkey, raw (CoFID has no raw mince)"
-  }
+  },
+  "category": "Meat & fish"
  },
  {
   "slug": "salmon",
@@ -2083,7 +2134,8 @@
    "name": "Salmon, farmed, flesh only, raw",
    "verified": true,
    "basis": "cofid"
-  }
+  },
+  "category": "Meat & fish"
  },
  {
   "slug": "cod",
@@ -2111,7 +2163,8 @@
    "name": "Cod, flesh only, raw",
    "verified": true,
    "basis": "cofid"
-  }
+  },
+  "category": "Meat & fish"
  },
  {
   "slug": "smokedsalmon",
@@ -2139,7 +2192,8 @@
    "name": "Salmon, smoked (cold-smoked)",
    "verified": true,
    "basis": "label"
-  }
+  },
+  "category": "Meat & fish"
  },
  {
   "slug": "lambmince",
@@ -2165,7 +2219,8 @@
    "name": "Lamb, mince, raw",
    "verified": true,
    "basis": "label"
-  }
+  },
+  "category": "Meat & fish"
  },
  {
   "slug": "halloumi",
@@ -2193,7 +2248,8 @@
    "name": "Cheese, Halloumi",
    "verified": true,
    "basis": "label"
-  }
+  },
+  "category": "Dairy & eggs"
  },
  {
   "slug": "feta",
@@ -2221,7 +2277,8 @@
    "name": "Cheese, Feta",
    "verified": true,
    "basis": "label"
-  }
+  },
+  "category": "Dairy & eggs"
  },
  {
   "slug": "cottage",
@@ -2250,7 +2307,8 @@
    "verified": true,
    "basis": "label",
    "note": "Label used: product-specific 'low fat' recipe (89 kcal) vs CoFID reduced-fat (68 kcal)."
-  }
+  },
+  "category": "Dairy & eggs"
  },
  {
   "slug": "softcheese",
@@ -2278,7 +2336,8 @@
    "name": "Cheese, spreadable, medium fat, soft, white",
    "verified": true,
    "basis": "label"
-  }
+  },
+  "category": "Dairy & eggs"
  },
  {
   "slug": "bagels",
@@ -2307,7 +2366,8 @@
    "name": "Bagels, plain",
    "verified": true,
    "basis": "label"
-  }
+  },
+  "category": "Bakery"
  },
  {
   "slug": "avocado",
@@ -2334,7 +2394,8 @@
    "name": "Avocado, Hass, flesh only",
    "verified": true,
    "basis": "label"
-  }
+  },
+  "category": "Fruit & veg"
  },
  {
   "slug": "mushrooms",
@@ -2360,7 +2421,8 @@
    "name": "Mushrooms, white, raw",
    "verified": true,
    "basis": "cofid"
-  }
+  },
+  "category": "Fruit & veg"
  },
  {
   "slug": "courgette",
@@ -2386,7 +2448,8 @@
    "name": "Courgette, raw",
    "verified": true,
    "basis": "cofid"
-  }
+  },
+  "category": "Fruit & veg"
  },
  {
   "slug": "bakepot",
@@ -2413,7 +2476,8 @@
    "name": "Potatoes, old, raw, flesh only",
    "verified": true,
    "basis": "label"
-  }
+  },
+  "category": "Fruit & veg"
  },
  {
   "slug": "potatoes",
@@ -2439,7 +2503,8 @@
    "name": "Potatoes, old, raw, flesh only",
    "verified": true,
    "basis": "cofid"
-  }
+  },
+  "category": "Fruit & veg"
  },
  {
   "slug": "sweetpot",
@@ -2465,7 +2530,8 @@
    "name": "Sweet potato, raw, flesh only",
    "verified": true,
    "basis": "cofid"
-  }
+  },
+  "category": "Fruit & veg"
  },
  {
   "slug": "peas",
@@ -2491,7 +2557,8 @@
    "name": "Peas, frozen, raw",
    "verified": true,
    "basis": "cofid"
-  }
+  },
+  "category": "Fruit & veg"
  },
  {
   "slug": "chips",
@@ -2517,7 +2584,8 @@
    "name": "Potato chips, oven ready, no batter, baked",
    "verified": true,
    "basis": "label"
-  }
+  },
+  "category": "Frozen & ready to cook"
  },
  {
   "slug": "passata",
@@ -2544,7 +2612,8 @@
    "verified": true,
    "basis": "label",
    "approx": "canned tomatoes for passata"
-  }
+  },
+  "category": "Tins, jars & sauces"
  },
  {
   "slug": "tikka",
@@ -2572,7 +2641,8 @@
    "basis": "label",
    "approx": "generic curry paste for tikka masala paste",
    "note": "Label used: this paste is mostly water and tomato (114 kcal); CoFID's generic curry paste is oil-based."
-  }
+  },
+  "category": "Tins, jars & sauces"
  },
  {
   "slug": "coconut",
@@ -2598,7 +2668,8 @@
    "name": "Coconut milk, retail",
    "verified": true,
    "basis": "cofid"
-  }
+  },
+  "category": "Tins, jars & sauces"
  },
  {
   "slug": "pesto",
@@ -2628,7 +2699,8 @@
    "name": "Pesto, red",
    "verified": true,
    "basis": "label"
-  }
+  },
+  "category": "Tins, jars & sauces"
  },
  {
   "slug": "chickpeas",
@@ -2654,7 +2726,8 @@
    "name": "Beans, chick peas, canned, re-heated, drained",
    "verified": true,
    "basis": "label"
-  }
+  },
+  "category": "Tins, jars & sauces"
  },
  {
   "slug": "lentils",
@@ -2680,7 +2753,8 @@
    "name": "Lentils, red, split, dried, raw",
    "verified": true,
    "basis": "cofid"
-  }
+  },
+  "category": "Tins, jars & sauces"
  },
  {
   "slug": "beans",
@@ -2706,7 +2780,8 @@
    "name": "Baked beans, canned in tomato sauce",
    "verified": true,
    "basis": "label"
-  }
+  },
+  "category": "Tins, jars & sauces"
  },
  {
   "slug": "bbq",
@@ -2734,7 +2809,8 @@
    "name": "Barbecue sauce",
    "verified": true,
    "basis": "label"
-  }
+  },
+  "category": "Tins, jars & sauces"
  },
  {
   "slug": "pbutter",
@@ -2762,7 +2838,8 @@
    "name": "Peanut butter, smooth",
    "verified": true,
    "basis": "label"
-  }
+  },
+  "category": "Tins, jars & sauces"
  },
  {
   "slug": "ricecakes",
@@ -2787,7 +2864,8 @@
    "name": "Pack label (no CoFID cross-check)",
    "verified": true,
    "basis": "label"
-  }
+  },
+  "category": "Cereals, snacks & protein"
  },
  {
   "slug": "crackers",
@@ -2815,7 +2893,8 @@
    "name": "Cream crackers",
    "verified": true,
    "basis": "label"
-  }
+  },
+  "category": "Cereals, snacks & protein"
  },
  {
   "slug": "tomsoup",
@@ -2843,7 +2922,8 @@
    "name": "Soup, cream of tomato, canned",
    "verified": true,
    "basis": "label"
-  }
+  },
+  "category": "Tins, jars & sauces"
  },
  {
   "slug": "mixveg",
@@ -2869,7 +2949,8 @@
    "name": "Vegetables, mixed, frozen, boiled in unsalted water",
    "verified": true,
    "basis": "cofid"
-  }
+  },
+  "category": "Fruit & veg"
  },
  {
   "slug": "naan",
@@ -2899,7 +2980,8 @@
    "name": "Bread, naan, retail",
    "verified": true,
    "basis": "label"
-  }
+  },
+  "category": "Bakery"
  },
  {
   "slug": "wholeloaf",
@@ -2928,7 +3010,8 @@
    "name": "Bread, wholemeal, average",
    "verified": true,
    "basis": "label"
-  }
+  },
+  "category": "Bakery"
  },
  {
   "slug": "stock",

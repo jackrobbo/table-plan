@@ -4,9 +4,22 @@ import type { Plan } from './types';
 export interface ShopLine {
   key: string; name: string; slug: string; packs: number; costPence: number;
   needed: number; bought: number; unit: string; usedBy: string[];
+  /** Aisle heading, e.g. "Meat & fish". */
+  category: string;
   /** Set when the latest price check found the product delisted / out of stock. */
   status?: string;
 }
+/** Aisle order on the list, roughly the order you walk a shop. */
+export const AISLES = ['Fruit & veg', 'Meat & fish', 'Dairy & eggs', 'Bakery', 'Frozen & ready to cook', 'Tins, jars & sauces', 'Cereals, snacks & protein', 'Other'];
+
+/** The list's lines grouped by aisle, in shop order; dearest first inside each. */
+export function byAisle(lines: ShopLine[]): { aisle: string; lines: ShopLine[] }[] {
+  const rank = (a: string) => { const i = AISLES.indexOf(a); return i < 0 ? AISLES.length : i; };
+  const groups = new Map<string, ShopLine[]>();
+  for (const l of lines) groups.set(l.category, [...(groups.get(l.category) ?? []), l]);
+  return [...groups].sort((a, b) => rank(a[0]) - rank(b[0])).map(([aisle, ls]) => ({ aisle, lines: [...ls].sort((a, b) => b.costPence - a.costPence) }));
+}
+
 export interface Shopping { lines: ShopLine[]; totalPence: number; wastePence: number; cupboard: string[] }
 
 const byId = new Map(RECIPES.map((r) => [r.id, r]));
@@ -37,7 +50,7 @@ export function buildShopping(plan: Plan, recipes: Map<string, Recipe> = byId, p
     const cost = packs * p.pr;
     total += cost;
     waste += Math.round(((packs * p.pack - q) / p.pack) * p.pr);
-    return [{ key, name: p.n, slug: p.s, packs, costPence: cost, needed: q, bought: packs * p.pack, unit: p.u, usedBy: [...usedBy[key]], status: p.st }];
+    return [{ key, name: p.n, slug: p.s, packs, costPence: cost, needed: q, bought: packs * p.pack, unit: p.u, usedBy: [...usedBy[key]], status: p.st, category: p.c ?? 'Other' }];
   }).sort((a, b) => b.costPence - a.costPence);
 
   return { lines, totalPence: total, wastePence: waste, cupboard: [...cupboard].map((c) => cupboardInfo[c] ?? c) };

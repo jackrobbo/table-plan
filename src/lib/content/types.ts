@@ -14,6 +14,8 @@ export interface IngredientDef {
   gramsPerUnit?: number;
   /** Spices, herbs and seasoning: allowed in a recipe without a quantity because their calories are negligible. */
   negligible?: boolean;
+  /** Aisle heading on the shopping list (products only). */
+  category?: string;
   /** Price of a cupboard staple that has no mapped product yet: `pence` buys `grams` (ml counted as g). */
   cupboardPrice?: { pence: number; grams: number };
   /**
