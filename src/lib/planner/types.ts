@@ -20,6 +20,8 @@ export interface PlanInput {
   budget?: Budget;
   /** Slip one meal the person hasn't rated into the week ("New for you"). Off for weeks they picked by hand. Default on. */
   explore?: boolean;
+  /** Weekdays (0 = Monday … 4 = Friday) the person isn't cooking this week. They stay in the plan as empty "day off" cards. */
+  daysOff?: readonly number[];
 }
 
 export interface PlannedMeal {
@@ -45,6 +47,8 @@ export interface PlannedDay {
   inBand: boolean;
   /** True when a portion was resized or a top-up added to land in band. */
   adjusted: boolean;
+  /** A day the person isn't cooking: no meals, nothing to buy, ignored in averages and "days on target". */
+  off?: boolean;
 }
 
 export interface Plan {

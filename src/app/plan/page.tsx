@@ -7,6 +7,7 @@ import MealImage from '@/components/MealImage';
 import BasketButton from '@/components/BasketButton';
 import SwapSheet from '@/components/SwapSheet';
 import { isNewForYou, likeMeal, neverAgain } from '@/lib/taste';
+import WeekendGuide from '@/components/WeekendGuide';
 import { DailyAverage, WeekDone } from '@/components/WeekProgress';
 import { allEaten, summariseWeek, weekAverages } from '@/lib/cycle/summary';
 import { DayCard, RecipeSheet, ShoppingList, listAsText, money, recipeById } from '@/components/week';
@@ -156,6 +157,7 @@ export default function Plan() {
                 onSwap={finished ? undefined : (day, meal) => setSwap({ week: week.start, day, meal })}
                 onTick={started && !finished ? (k) => { const [di, mi] = k.split(':').map(Number); const rid = plan.days[di]?.meals[mi]?.recipeId; if (rid && !week.ticks[k] && newIds.has(rid)) setRate(rid); update((p) => ({ ...p, weeks: toggleTick(p.weeks, week.start, k) })); } : undefined} newIds={newIds} />
             ))}
+            <WeekendGuide profile={profile} onOpen={setSheet} />
           </>}
 
           {sub === 'ingredients' && !started && accessLoaded && !access && (

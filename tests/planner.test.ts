@@ -220,3 +220,17 @@ describe('planner: one new meal a week', () => {
     }
   });
 });
+
+describe('planner: days off', () => {
+  it('leaves chosen weekdays empty, buys nothing for them, and keeps the other days in band', () => {
+    const input = base({ daysOff: [1, 3] });
+    for (let seed = 1; seed <= 4; seed++) {
+      const plan = generatePlan(input, seed);
+      expect(plan.days).toHaveLength(5);
+      expect(plan.days.map((d) => !!d.off)).toEqual([false, true, false, true, false]);
+      for (const d of plan.days) { if (d.off) { expect(d.meals).toEqual([]); expect(d.topups).toEqual([]); } else expect(d.inBand).toBe(true); }
+    }
+    const all = generatePlan(base(), 3), some = generatePlan(input, 3);
+    expect(buildShopping(some).totalPence).toBeLessThan(buildShopping(all).totalPence);
+  });
+});

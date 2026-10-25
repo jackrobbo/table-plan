@@ -133,6 +133,10 @@ export function generatePlan(input: PlanInput, seed = 1): Plan {
   const days: PlannedDay[] = [];
 
   for (let d = 0; d < DAY_NAMES.length; d++) {
+    if (input.daysOff?.includes(d)) {
+      days.push({ day: DAY_NAMES[d], meals: [], topups: [], kcal: 0, protein: 0, reserved: { kcal: 0, protein: 0 }, inBand: true, adjusted: false, off: true });
+      continue;
+    }
     let din = dinners[d] ?? null;
     let S = capped;
     let best: { day: PlannedDay; score: number } | null = null;

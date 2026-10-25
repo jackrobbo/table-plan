@@ -14,7 +14,7 @@ export function dayCarbsFat(d: PlannedDay): { carbs: number; fat: number } {
 
 /** The "Daily average" across the planned days: what the week delivers per day, to set against the target. */
 export function weekAverages(plan: Plan) {
-  const days = plan.days;
+  const days = plan.days.filter((d) => !d.off);
   return {
     kcal: avg(days.map((d) => d.kcal)), protein: avg(days.map((d) => d.protein)),
     carbs: avg(days.map((d) => dayCarbsFat(d).carbs)), fat: avg(days.map((d) => dayCarbsFat(d).fat)),
@@ -39,7 +39,7 @@ export function summariseWeek(plan: Plan, ticks: Record<string, boolean>, shoppi
   const portions = plan.days.reduce((a, d) => a + d.meals.filter((m) => m.slot !== 'snack').reduce((b, m) => b + m.scale + m.extra, 0), 0);
   const perMealPence = portions ? Math.round(shopping.totalPence / portions) : 0;
   return {
-    eaten, planned, daysInBand: plan.days.filter((d) => d.inBand).length, days: plan.days.length, averages: weekAverages(plan),
+    eaten, planned, daysInBand: plan.days.filter((d) => !d.off && d.inBand).length, days: plan.days.filter((d) => !d.off).length, averages: weekAverages(plan),
     perMealPence, savedPence: Math.max(0, Math.round((MEAL_PREP_PENCE - perMealPence) * portions)),
   };
 }

@@ -45,6 +45,12 @@ export function DayCard({ d, index, ticks, onTick, onOpen, onSwap, label, today,
   /** Offered on meals not yet eaten. */
   onSwap?: (dayIndex: number, mealIndex: number) => void;
 }) {
+  if (d.off) return (
+    <section className="daycard dayoff" aria-label={`${d.day}, day off`}>
+      <header><h3>{d.day}{label && <span className="muted"> · {label}</span>}</h3><span className="daytot">Day off</span></header>
+      <p className="muted reserved">Not cooking. Nothing to buy for this day.</p>
+    </section>
+  );
   const keys = d.meals.map((_, i) => `${index}:${i}`);
   const done = !!ticks && keys.length > 0 && keys.every((k) => ticks[k]);
   return (

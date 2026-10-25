@@ -48,6 +48,7 @@ export default function PlanNext() {
   const [copied, setCopied] = useState<string | null>(null);
   const [building, setBuilding] = useState(false);
   const [swap, setSwap] = useState<{ day: number; meal: number } | null>(null);
+  const [daysOff, setDaysOff] = useState<number[]>([]);
 
   const snap = useMemo(() => (profile ? snapshot(ensureWeeks(profile.weeks, now), now) : null), [profile, now]);
   // After saving, the week is no longer "to plan"; keep showing it on the confirmation step.
@@ -79,7 +80,7 @@ export default function PlanNext() {
     // Let the "building" state paint first: the planner blocks the main thread for a moment.
     setTimeout(() => {
       // Meals the person picked by hand are never capped by the spend setting; auto-picked ones are.
-      const input = { ...planInputFrom(profile), liked, ...(liked === profile.likedRecipes ? {} : { budget: 'high' as const, explore: false }) };
+      const input = { ...planInputFrom(profile), liked, daysOff, ...(liked === profile.likedRecipes ? {} : { budget: 'high' as const, explore: false }) };
       const built = planWeek(input, 24, Math.floor(Math.random() * 1e6));
       track('week_generated', { days_in_band: built.days.filter((d) => d.inBand).length, mode: liked === profile.likedRecipes ? 'auto' : 'own' });
       setDraft(built);
@@ -134,7 +135,14 @@ export default function PlanNext() {
                 <div className="muted">{profile.meals[c].mode === 'plan' ? (profile.meals[c].extraServings ? `You + ${profile.meals[c].extraServings}` : 'Just you') : 'Macros only'}</div></div></div>
             ))}
             <div className="line"><div className="lbody"><b>Daily target</b><div className="muted">{t.band[0].toLocaleString('en-GB')}–{t.band[1].toLocaleString('en-GB')} kcal · ≥{t.protein}g protein</div></div></div>
-            <div className="line"><div className="lbody"><b>Cooking days</b><div className="muted">Mon–Fri</div></div></div>
+            <div className="line"><div className="lbody"><b>Cooking days</b>
+              <div className="chips" role="group" aria-label="Cooking days" style={{ marginTop: 6 }}>
+                {['Mon', 'Tue', 'Wed', 'Thu', 'Fri'].map((n, i) => {
+                  const on = !daysOff.includes(i);
+                  return <button key={n} className={'chip' + (on ? ' on' : '')} aria-pressed={on} onClick={() => setDaysOff((x) => (x.includes(i) ? x.filter((y) => y !== i) : x.length >= 4 ? x : [...x, i]))}>{n}</button>;
+                })}
+              </div>
+              <div className="muted">Tap a day to take it off. Weekends aren&apos;t planned yet.</div></div></div>
           </div>
           <h3 style={{ marginTop: 18 }}>Weekly spend</h3>
           <div className="chips" role="group" aria-label="Weekly spend">
@@ -174,7 +182,7 @@ export default function PlanNext() {
           {!draft || !draft.days.length ? (
             <div className="estimate-flag">{draft?.issues[0] ?? 'Could not build a week.'}</div>
           ) : (<>
-            <p className="sub">{draft.days.filter((d) => d.inBand).length} of {draft.days.length} days in band. Resized or topped-up days are highlighted.</p>
+            <p className="sub">{draft.days.filter((d) => !d.off && d.inBand).length} of {draft.days.filter((d) => !d.off).length} days in band. Resized or topped-up days are highlighted.</p>
             {explainMisses(draft.days, t.band, t.protein).map((i) => <div key={i} className="estimate-flag">{i}</div>)}
             {draft.notes?.map((n) => <p key={n} className="muted">{n}</p>)}
             {shopping && <PriceNote totalPence={shopping.totalPence} />}
