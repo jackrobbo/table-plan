@@ -1,5 +1,6 @@
 'use client';
 import { useEffect, useState } from 'react';
+import Link from 'next/link';
 import type { Shopping } from '@/lib/planner/shopping';
 import { track } from '@/lib/analytics';
 import { basketItems, basketUrl, extensionInstalled } from '@/lib/basket';
@@ -27,8 +28,10 @@ export default function BasketButton({ shopping, have }: { shopping: Shopping; h
     );
   }
   return (
-    <p className="muted" style={{ marginTop: 12 }}>
-      On a computer? The Table Plan browser extension (beta) can fill your Morrisons trolley for you. It isn&apos;t available on phones yet, so tap an item&apos;s &ldquo;Morrisons&rdquo; link there.
-    </p>
+    <div className="card" style={{ marginTop: 12 }}>
+      <h3>Fill your Morrisons trolley</h3>
+      <p className="muted" style={{ margin: '4px 0 10px' }}>On a computer, our browser add-on (beta) adds this whole list to your Morrisons trolley for you. It isn&apos;t available on phones: there, tap an item&apos;s &ldquo;Morrisons&rdquo; link.</p>
+      <Link className="btn ghost" href="/extension">Get the add-on</Link>
+    </div>
   );
 }
