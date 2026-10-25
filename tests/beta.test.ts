@@ -1,4 +1,4 @@
-import { describe, expect, it } from 'vitest';
+import { describe, expect, it, vi } from 'vitest';
 import { sanitise, track, registerAnalytics, setAnalyticsConsent } from '@/lib/analytics';
 import { generateCode, generateCodes, looksLikeCode, normaliseCode, redeemInvite, type InviteStore } from '@/lib/beta/invites';
 import { joinWaitlist, type WaitlistStore } from '@/lib/beta/waitlist';
@@ -62,5 +62,17 @@ describe('analytics privacy', () => {
     registerAnalytics(() => { throw new Error('boom'); });
     expect(() => track('subscribed')).not.toThrow();
     registerAnalytics(null); setAnalyticsConsent(false);
+  });
+});
+
+describe('free beta flag', () => {
+  it('is off unless NEXT_PUBLIC_FREE_BETA=1', async () => {
+    vi.resetModules();
+    delete process.env.NEXT_PUBLIC_FREE_BETA;
+    expect((await import('../src/lib/beta/config')).freeBeta).toBe(false);
+    vi.resetModules();
+    process.env.NEXT_PUBLIC_FREE_BETA = '1';
+    expect((await import('../src/lib/beta/config')).freeBeta).toBe(true);
+    delete process.env.NEXT_PUBLIC_FREE_BETA;
   });
 });

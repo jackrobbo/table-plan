@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import LegalPage from '@/components/LegalPage';
 import { PLANS, gbp } from '@/lib/billing/config';
+import { freeBeta } from '@/lib/beta/config';
 import { CONTACT_EMAIL } from '@/lib/legal/config';
 
 export const metadata: Metadata = { title: 'Terms of use' };
@@ -31,6 +32,7 @@ export default function Terms() {
       <p>You must be 18 or over and give us a real email address that you control. Keep your sign-in codes to yourself, and tell us if you think someone else has got into your account. One account is for one person.</p>
 
       <h2>Subscription and payment</h2>
+      {freeBeta && <p><b>Free beta.</b> While Table Plan is in beta it is free to use and we take no payment. We&apos;ll tell you well before that changes, and you will only be charged if you choose a plan. The paid terms below apply once plans are offered.</p>}
       <ul>
         <li><b>Yearly:</b> {gbp(y.pence)} a year, with a {y.trialDays}-day free trial. You are not charged until the trial ends, then once a year until you cancel.</li>
         <li><b>Monthly:</b> {gbp(m.pence)} a month, until you cancel.</li>

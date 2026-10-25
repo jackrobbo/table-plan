@@ -6,6 +6,7 @@ import Screen from '@/components/Screen';
 import { PLANS, gbp } from '@/lib/billing/config';
 import { getBackend } from '@/lib/db';
 import { useAccess } from '@/lib/useAccess';
+import { freeBeta } from '@/lib/beta/config';
 import { useProfile } from '@/lib/useProfile';
 
 const date = (iso: string | null) => (iso ? new Date(iso).toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' }) : '');
@@ -56,7 +57,8 @@ export default function Account() {
 
       <div className="card">
         <h3>Subscription</h3>
-        {sub.status === 'none' && <>
+        {freeBeta && sub.status === 'none' && <p className="muted">Table Plan is free while it&apos;s in beta. We&apos;ll tell you well before that changes, and you won&apos;t be charged without choosing a plan.</p>}
+        {!freeBeta && sub.status === 'none' && <>
           <p className="muted">You don&apos;t have a subscription yet.</p>
           <Link className="btn" href="/subscribe">See plans</Link>
         </>}

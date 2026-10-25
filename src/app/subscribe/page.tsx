@@ -7,6 +7,7 @@ import { DEFAULT_PLAN, PLANS, gbp, perMonth, type PlanId } from '@/lib/billing/c
 import { isMocked } from '@/lib/db';
 import { track } from '@/lib/analytics';
 import { useAccess } from '@/lib/useAccess';
+import { freeBeta } from '@/lib/beta/config';
 import { useProfile } from '@/lib/useProfile';
 
 const firstCharge = (days: number) => new Date(Date.now() + days * 864e5).toLocaleDateString('en-GB', { day: 'numeric', month: 'long' });
@@ -20,8 +21,8 @@ export default function Subscribe() {
   const [error, setError] = useState('');
 
   useEffect(() => { if (ready && !session) router.replace('/signin'); }, [ready, session, router]);
-  useEffect(() => { track('paywall_viewed'); }, []);
-  useEffect(() => { if (loaded && access) router.replace('/plan'); }, [loaded, access, router]);
+  useEffect(() => { if (!freeBeta) track('paywall_viewed'); }, []);
+  useEffect(() => { if ((loaded && access) || freeBeta) router.replace('/plan'); }, [loaded, access, router]);
 
   const cfg = PLANS[plan];
   const go = async () => {
