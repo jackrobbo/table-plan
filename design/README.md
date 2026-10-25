@@ -18,7 +18,7 @@ Colour roles used in the wireframes (replace with a real design system):
 - Neutrals: ink `#141414`, secondary `#6b6b70`, card `#fff`, background `#f2f2f6`; dark: bg `#000`, card `#1c1c1e`
 
 ## Core rules (business logic decided in design review)
-1. **Weekly cycle.** Plans are Mon–Fri. Picking for next week opens **Monday** and closes **midnight Sunday**; cooking starts the next day. Only one upcoming week is "to plan" at a time.
+1. **Weekly cycle.** Plans are Mon–Fri. Picking for a week opens **Sunday 06:00 a week ahead** and closes **midnight Sunday**; cooking starts the next day. Only one upcoming week is "to plan" at a time.
 2. **Missed deadline = missed week.** Nothing is auto-picked. "Pick for me" is a user action that builds from their likes. A missed or skipped week shows as Skipped/Missed.
 3. **First week always starts the next Monday**, whatever day the user signs up. There is always a current plan after onboarding (no empty state).
 4. **Days never fail.** The planner keeps every day inside the calorie band and above the protein floor by resizing portions and adding a top-up; adjusted items are highlighted (no error states for macros).

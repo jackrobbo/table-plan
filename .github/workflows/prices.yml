@@ -2,7 +2,7 @@ name: Refresh Morrisons prices
 on:
   schedule:
     - cron: '30 2 * * *'   # nightly, 02:30 UTC
-    - cron: '0 5 * * 1'    # Monday 05:00 UTC, so Monday-open shows fresh prices
+    - cron: '30 4 * * 0'   # Sunday 04:30 UTC (05:30 in summer): prices are fresh before picking opens at 06:00 London
   workflow_dispatch:
 permissions:
   contents: write

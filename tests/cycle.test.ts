@@ -2,7 +2,7 @@ import { describe, expect, it } from 'vitest';
 import { addDays, londonDate, londonInstant, mondayOf, nextMondayAfter, weekLabel } from '@/lib/cycle/dates';
 import { dueReminders, remindersFor } from '@/lib/cycle/reminders';
 import {
-  badgeCount, blankWeek, effectiveStatus, ensureWeeks, firstWeek, savePlan, saveList, saveProgress, skipWeek, snapshot, toggleTick, undoSkip, type Weeks,
+  badgeCount, blankWeek, effectiveStatus, opensAt, ensureWeeks, firstWeek, savePlan, saveList, saveProgress, skipWeek, snapshot, toggleTick, undoSkip, type Weeks,
 } from '@/lib/cycle/week';
 import type { Plan } from '@/lib/planner/types';
 
@@ -139,24 +139,34 @@ describe('week states', () => {
   });
 });
 
+describe('picking opens Sunday 06:00 a week ahead', () => {
+  it('opens at 06:00 London on the Sunday eight days before the week starts', () => {
+    const w = ensureWeeks({ '2026-10-26': firstWeek(plan, at('2026-10-24T10:00:00Z')) }, at('2026-10-24T10:00:00Z'));
+    expect(opensAt(w, '2026-11-02').toISOString()).toBe('2026-10-25T06:00:00.000Z');   // GMT from 25 Oct
+    expect(opensAt(w, '2026-10-26').toISOString()).toBe('2026-10-18T05:00:00.000Z');   // still BST on 18 Oct: 06:00 London = 05:00 UTC
+    expect(effectiveStatus(w, w['2026-11-02'], at('2026-10-25T05:59:00Z'))).toBe('locked');
+    expect(effectiveStatus(w, w['2026-11-02'], at('2026-10-25T06:00:00Z'))).toBe('to_plan');
+  });
+});
+
 describe('reminders', () => {
   const now0 = at('2026-10-24T10:00:00Z');
   const base = () => ensureWeeks({ '2026-10-26': firstWeek(plan, now0) }, now0);
 
-  it('schedules Monday 09:00 and Sunday 16:00 London time', () => {
+  it('schedules Sunday 09:00 a week ahead and Sunday 16:00 on the day, London time', () => {
     const [open, last] = remindersFor('2026-11-02');
-    expect(open.at.toISOString()).toBe('2026-10-26T09:00:00.000Z');
+    expect(open.at.toISOString()).toBe('2026-10-25T09:00:00.000Z');
     expect(last.at.toISOString()).toBe('2026-11-01T16:00:00.000Z');
   });
   it('is due only while the week still needs planning, and never stacks', () => {
     const w = ensureWeeks(base(), at('2026-10-26T10:00:00Z'));
-    expect(dueReminders(w, at('2026-10-26T08:00:00Z'), [])).toHaveLength(0);
+    expect(dueReminders(w, at('2026-10-25T08:00:00Z'), [])).toHaveLength(0);
     const mon = dueReminders(w, at('2026-10-26T10:00:00Z'), []);
     expect(mon.map((r) => r.kind)).toEqual(['opens']);
     expect(dueReminders(w, at('2026-10-26T10:00:00Z'), ['2026-11-02:opens'])).toHaveLength(0);
     const sun = dueReminders(w, at('2026-11-01T17:00:00Z'), []);
     expect(sun.map((r) => r.kind)).toEqual(['last_chance']);
-    expect(dueReminders(savePlan(w, '2026-11-02', plan), at('2026-11-01T17:00:00Z'), [])).toHaveLength(0);
-    expect(dueReminders(w, at('2026-11-02T00:30:00Z'), [])).toHaveLength(0); // missed: no more nudges for it
+    expect(dueReminders(savePlan(w, '2026-11-02', plan), at('2026-11-01T17:00:00Z'), []).filter((r) => r.week === '2026-11-02')).toHaveLength(0);   // planned: nothing more for it (the next week has opened)
+    expect(dueReminders(w, at('2026-11-02T00:30:00Z'), []).filter((r) => r.week === '2026-11-02')).toHaveLength(0); // missed: no more nudges for it (the next week's has opened)
   });
 });

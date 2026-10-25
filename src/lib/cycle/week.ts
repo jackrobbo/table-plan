@@ -25,12 +25,12 @@ export type Weeks = Record<string, Week>;
 
 export const blankWeek = (start: string): Week => ({ start, status: 'open', plan: null, picks: [], haveAlready: [], ticks: {} });
 
-/** Picking opens at 00:00 Monday of the previous week, or earlier if the previous week was skipped. */
+/** Picking opens at 06:00 on the Sunday a week ahead (the price check has run by then), or earlier if the previous week was skipped. */
+export const OPENS_HOUR = 6;
 export function opensAt(weeks: Weeks, start: string): Date {
   const prev = addDays(start, -7);
-  const base = addDays(start, -7);
   if (weeks[prev]?.status === 'skipped') return opensAt(weeks, prev);
-  return londonInstant(base);
+  return londonInstant(addDays(start, -8), OPENS_HOUR);
 }
 /** Picking closes at midnight Sunday: the instant the week itself starts. */
 export const closesAt = (start: string) => londonInstant(start);

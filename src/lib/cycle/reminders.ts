@@ -4,10 +4,10 @@ import { effectiveStatus, type Weeks } from './week';
 export type ReminderKind = 'opens' | 'last_chance';
 export interface Reminder { week: string; kind: ReminderKind; at: Date; title: string; body: string }
 
-/** Monday 09:00 "open" nudge and Sunday 16:00 "last chance" for a week that still needs planning. */
+/** Sunday 09:00 "open" nudge (picking opens 06:00 that Sunday, a week ahead) and Sunday 16:00 "last chance" for a week that still needs planning. */
 export function remindersFor(start: string): Reminder[] {
   return [
-    { week: start, kind: 'opens', at: londonInstant(addDays(start, -7), 9), title: 'Next week is open', body: "Next week's meals are open to pick." },
+    { week: start, kind: 'opens', at: londonInstant(addDays(start, -8), 9), title: 'Next week is open', body: "Next week's meals are open to pick." },
     { week: start, kind: 'last_chance', at: londonInstant(addDays(start, -1), 16), title: 'Last chance', body: 'Pick next week by midnight tonight.' },
   ];
 }

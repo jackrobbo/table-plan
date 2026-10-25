@@ -175,7 +175,7 @@ export default function Plan() {
           {!profile.reminders.on && (
             <div className="card remind-card">
               <h3>Never miss a week</h3>
-              <p className="muted">Monday: next week&apos;s meals are open. Sunday 4pm: last chance, pick by midnight.</p>
+              <p className="muted">Sunday morning: next week&apos;s meals are open. The Sunday after, 4pm: last chance, pick by midnight.</p>
               <button className="btn ghost" onClick={enableReminders}>Turn on reminders</button>
             </div>
           )}
@@ -222,7 +222,7 @@ function UpcomingCard({ week, status, weeks, now, onPlan, onSkip, onUndo, onCopy
   onCopy: (t: string) => void; copied: string | null; onOpen: (id: string) => void; onSwap: (day: number, meal: number) => void; onToggleHave: (k: string) => void;
 }) {
   const deadline = `midnight Sun ${dayLabel(addDays(week.start, -1))}`;
-  if (status === 'locked') return <div className="card"><h3>{weekLabel(week.start)}</h3><p className="muted" style={{ margin: 0 }}>Opens Mon {dayLabel(londonDate(opensAt(weeks, week.start)))}. Only one week is open to plan at a time.</p></div>;
+  if (status === 'locked') return <div className="card"><h3>{weekLabel(week.start)}</h3><p className="muted" style={{ margin: 0 }}>Opens Sun {dayLabel(londonDate(opensAt(weeks, week.start)))} at 6am. Only one week is open to plan at a time.</p></div>;
   if (status === 'missed') return <div className="card"><h3>{weekLabel(week.start)} · Missed</h3><p className="muted" style={{ margin: 0 }}>The deadline passed, so nothing was picked for you. You can plan the next week as normal.</p></div>;
   if (status === 'skipped') return <div className="card"><h3>{weekLabel(week.start)} · Skipped</h3><p className="muted">You skipped this week.</p><button className="btn ghost" onClick={onUndo}>Undo skip</button></div>;
   if (status === 'to_plan' || status === 'in_progress') {
