@@ -25,7 +25,7 @@ Last reviewed 24 Oct 2026. Code references are to this repo.
 Order matters for the first two.
 
 1. **Supabase → Authentication → Sign In / Providers → turn OFF "Allow new users to sign up".** Until you do, anyone can still create an account by calling Supabase directly. After you do, only `/api/auth/signup` can. Check: sign in as an existing user works; "Create my plan" with a valid invite works.
-2. **Vercel → Settings → Environment Variables → add `NEXT_PUBLIC_INVITE_ONLY=1`** (Production), then redeploy. Without it, anyone can create an account through `/api/auth/signup` with no code.
+2. **Invite-only is optional.** `NEXT_PUBLIC_INVITE_ONLY=1` (Production, then redeploy) requires a code for new accounts; it is currently `0`, so sign-up is open to anyone. Open sign-up makes CAPTCHA (step 8) the priority.
 3. **Vercel → Project → Firewall → Add rule (rate limit).** Our connector can't create these. (a) paths starting `/api/auth/` or equal to `/api/waitlist`: 10 requests / 60 s per IP, then deny 5 min. (b) paths starting `/api/` except `/api/billing/webhook`: 60 / 60 s per IP. The in-app limiter is the first line; this one stops floods before they reach the app.
 4. **Supabase → Authentication:** shorten email OTP expiry (default 1 hour; 10 minutes is plenty), and replace the Gmail test SMTP with a real sender (Resend, Postmark, SES) with SPF/DKIM before real users.
 5. **Supabase plan:** Pro before real users: daily backups, no pausing when idle, optional session time-box / inactivity timeout (Auth → Sessions), higher email limits.

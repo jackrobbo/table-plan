@@ -9,10 +9,11 @@ State at the end of 24 Oct 2026: production is `1352219` (branch `claude/eager-f
 - [ ] Then signed out → run it → log in: does Morrisons merge the guest trolley into your account?
 - [ ] Send me what happened (screenshot of the panel is perfect) and I fix what broke. Checklist and the page hooks it relies on: `extension/README.md`.
 
-## 2. Close the sign-up door (do these two together, in this order)
-- [ ] Supabase → Authentication → Sign In / Providers → turn **off** "Allow new users to sign up".
-- [ ] Vercel → Settings → Environment Variables → add `NEXT_PUBLIC_INVITE_ONLY` = `1` (Production) → redeploy (tell me and I'll do it).
-- [ ] Check with a spare email: "Create my plan" without a code is refused; with a code from `npm run beta:invites` it works; an existing account still signs in.
+## 2. Sign-up is open (decision, 25 Oct)
+Anyone can create an account; no invite code. `NEXT_PUBLIC_INVITE_ONLY` is `0` in Production (set it to `1` and redeploy to go back to invite-only). Because sign-up is open:
+- [ ] Leave Supabase's "Allow new users to sign up" **on or off, it no longer matters**: accounts are made by our server (`/api/auth/signup`), so turning it off is still a good idea (it stops bots calling Supabase directly, which skips our rate limit).
+- [ ] CAPTCHA (Turnstile) moves up my queue: it is now the main defence against junk accounts. Needs a free Cloudflare Turnstile key from you.
+- [ ] Waitlist page and invite codes are no longer needed for access; leave them, or tell me to hide the waitlist link.
 
 ## 3. Make the price crawl run
 - [ ] GitHub → Settings → Branches → set the default branch to `claude/eager-fermat-bnmhki`.
@@ -44,7 +45,7 @@ State at the end of 24 Oct 2026: production is `1352219` (branch `claude/eager-f
 ## 8. My queue (say "go" and I'll pick up in this order)
 1. Fix whatever the signed-in basket test turns up.
 2. Run the price crawl from GitHub and fix anything the first real run shows.
-3. CAPTCHA (Cloudflare Turnstile) on sign-up and the waitlist, ahead of any public launch (needs a free Turnstile key from you).
+3. CAPTCHA (Cloudflare Turnstile) on sign-up: needed now that sign-up is open (needs a free Turnstile key from you).
 4. ~~Dietitian-style review list~~ done: `design/content-review.md` (34 rows: stand-in matches, label-only products, hand-asserted allergens). Needs a human with a pack in hand, or a dietitian.
 5. Meal photos: shot list or style brief, plus a batch-build once images exist.
 6. Optional: Sentry (alerts) in place of the log-only error reporting.
