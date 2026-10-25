@@ -1,6 +1,7 @@
 'use client';
 import { useEffect, useMemo, useState } from 'react';
 import Link from 'next/link';
+import { createPortal } from 'react-dom';
 import { useRouter } from 'next/navigation';
 import BasketButton from '@/components/BasketButton';
 import SwapSheet from '@/components/SwapSheet';
@@ -49,6 +50,7 @@ export default function PlanNext() {
   const [building, setBuilding] = useState(false);
   const [swap, setSwap] = useState<{ day: number; meal: number } | null>(null);
   const [daysOff, setDaysOff] = useState<number[]>([]);
+  const [leaving, setLeaving] = useState(false);
 
   const snap = useMemo(() => (profile ? snapshot(ensureWeeks(profile.weeks, now), now) : null), [profile, now]);
   // After saving, the week is no longer "to plan"; keep showing it on the confirmation step.
@@ -104,7 +106,9 @@ export default function PlanNext() {
   };
   const barIndex = Math.min(STEPS.indexOf(step), 3);
   const shopping = draft?.days.length ? buildShopping(draft) : null;
-  const back = () => (step === 'setup' ? router.push('/plan') : step === 'pick' ? setStep('setup') : step === 'review' ? setStep(picks.length ? 'pick' : 'setup') : step === 'list' ? setStep('review') : router.push('/plan'));
+  // Leaving with picks or a built-but-unsaved week asks first (picks are kept either way; an unsaved week is not).
+  const exit = () => ((picks.length > 0 || draft) && step !== 'saved' ? setLeaving(true) : router.push('/plan'));
+  const back = () => (step === 'setup' ? exit() : step === 'pick' ? setStep('setup') : step === 'review' ? setStep(picks.length ? 'pick' : 'setup') : step === 'list' ? setStep('review') : exit());
 
   return (
     <Screen onBack={step === 'saved' || building ? undefined : back}
@@ -217,6 +221,17 @@ export default function PlanNext() {
 
       {draft && <SwapSheet plan={draft} target={step === 'review' ? swap : null} input={planInputFrom(profile)} onClose={() => setSwap(null)}
         onPick={(id) => { if (swap) { setDraft(applySwap(draft, swap.day, swap.meal, id, planInputFrom(profile))); track('meal_swapped', { source: 'review' }); } setSwap(null); }} />}
+      {leaving && createPortal(
+        <div className="sheet-wrap" onClick={() => setLeaving(false)}>
+          <div className="sheet" role="dialog" aria-label="Leave planning?" onClick={(e) => e.stopPropagation()}>
+            <div className="grab" />
+            <h2>Leave planning?</h2>
+            <p className="muted">{picks.length > 0 ? `Your ${picks.length} pick${picks.length === 1 ? '' : 's'} are saved, so you can finish later.` : ''}{draft?.days.length ? ' A week you\u2019ve built but not saved will be lost.' : ''}</p>
+            <button className="btn" onClick={() => router.push('/plan')}>Save and finish later</button>
+            {picks.length > 0 && <button className="btn ghost" style={{ marginTop: 8 }} onClick={() => { update((p) => ({ ...p, weeks: saveProgress(ensureWeeks(p.weeks, now), week.start, []) })); router.push('/plan'); }}>Discard picks</button>}
+            <button className="linkbtn" onClick={() => setLeaving(false)}>Keep planning</button>
+          </div>
+        </div>, document.body)}
       <InstallSheet when={step === 'saved'} />
     </Screen>
   );

@@ -1,6 +1,7 @@
 'use client';
 import { useEffect, useState } from 'react';
 import Link from 'next/link';
+import ShopMode from '@/components/ShopMode';
 import type { Shopping } from '@/lib/planner/shopping';
 import { track } from '@/lib/analytics';
 import { basketItems, basketUrl, extensionInstalled } from '@/lib/basket';
@@ -11,6 +12,7 @@ import { basketItems, basketUrl, extensionInstalled } from '@/lib/basket';
  */
 export default function BasketButton({ shopping, have }: { shopping: Shopping; have: string[] }) {
   const [installed, setInstalled] = useState(false);
+  const [shopping_, setShop] = useState(false);
   useEffect(() => { setInstalled(extensionInstalled()); }, []);
   const items = basketItems(shopping, have);
   const url = basketUrl(items);
@@ -23,6 +25,8 @@ export default function BasketButton({ shopping, have }: { shopping: Shopping; h
         <button className="btn" onClick={() => { track('basket_fill_started', { items: items.length, packs }); window.open(url, '_blank', 'noopener'); }}>
           Fill my Morrisons trolley
         </button>
+        <button className="linkbtn" onClick={() => setShop(true)}>Or shop item by item</button>
+        {shopping_ && <ShopMode shopping={shopping} have={have} onClose={() => setShop(false)} />}
         <p className="muted" style={{ margin: '8px 0 0' }}>Opens Morrisons and adds {items.length} item{items.length === 1 ? '' : 's'} ({packs} pack{packs === 1 ? '' : 's'}) for you. You pick the slot and check out.</p>
       </div>
     );
@@ -30,8 +34,10 @@ export default function BasketButton({ shopping, have }: { shopping: Shopping; h
   return (
     <div className="card" style={{ marginTop: 12 }}>
       <h3>Fill your Morrisons trolley</h3>
-      <p className="muted" style={{ margin: '4px 0 10px' }}>On a computer, our browser add-on (beta) adds this whole list to your Morrisons trolley for you. It isn&apos;t available on phones: there, tap an item&apos;s &ldquo;Morrisons&rdquo; link.</p>
-      <Link className="btn ghost" href="/extension">Get the add-on</Link>
+      <p className="muted" style={{ margin: '4px 0 10px' }}>On a phone: shop item by item, in aisle order, one tap to open each at Morrisons. On a computer, our browser add-on (beta) can add the whole list for you.</p>
+      <button className="btn" onClick={() => setShop(true)}>Shop item by item</button>
+      <Link className="btn ghost" style={{ marginTop: 8 }} href="/extension">Get the add-on (computer)</Link>
+      {shopping_ && <ShopMode shopping={shopping} have={have} onClose={() => setShop(false)} />}
     </div>
   );
 }

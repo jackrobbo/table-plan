@@ -15,7 +15,14 @@ Anyone can create an account; no invite code. `NEXT_PUBLIC_INVITE_ONLY` is `0` i
 - [ ] CAPTCHA (Turnstile) moves up my queue: it is now the main defence against junk accounts. Needs a free Cloudflare Turnstile key from you.
 - [ ] Waitlist page and invite codes are no longer needed for access; leave them, or tell me to hide the waitlist link.
 
-## 3. Make the price crawl run
+## 3. Make the price crawl run (update 25 Oct: GitHub's servers are blocked)
+Done: `main` is now the default branch. The first run showed **Morrisons answers GitHub's servers with HTTP 403**, so the scheduled run is switched off (it would only fail and email you). Prices need refreshing from somewhere Morrisons allows. Options, cheapest first:
+- **A computer you own as a GitHub "self-hosted runner"** (Settings → Actions → Runners → New self-hosted runner; a spare Mac or a Raspberry Pi that is on early Sunday). Your home connection is not blocked. I then turn the Sunday schedule back on with `runs-on: self-hosted`.
+- **A scheduled task in this assistant's environment** (it can reach Morrisons today). I'd set it to run Sunday 04:30, refresh, test, and push to `main`. Say yes and I'll create it.
+- A paid proxy or scraping service, if neither suits.
+
+(Old steps, for reference)
+
 - [ ] GitHub → Settings → Branches → set the default branch to `claude/eager-fermat-bnmhki`.
 - [ ] Vercel → Settings → Git → Production Branch → `claude/eager-fermat-bnmhki` (so a price commit deploys itself).
 - [ ] GitHub → Actions → "Refresh Morrisons prices" → **Run workflow** once. Tell me the result; I'll check Morrisons isn't blocking GitHub's servers. Then it runs nightly (02:30 UTC) and Mondays (05:00 UTC), and only commits if typecheck and tests pass.
@@ -36,6 +43,11 @@ Anyone can create an account; no invite code. `NEXT_PUBLIC_INVITE_ONLY` is `0` i
 - [ ] Proper email sender (Resend / Postmark / SES) with SPF and DKIM, replacing the Gmail test SMTP.
 - [ ] ICO registration and fee; business name and address into `/privacy` and `/terms`; confirm or change the contact email (`NEXT_PUBLIC_CONTACT_EMAIL`, currently `jack@betmate.app`); solicitor reads both pages.
 - [ ] Switch Stripe from test to live (new keys, new price ids, new webhook) only at go-live.
+
+## 6b. Business setup you asked to add (domain, email)
+- [ ] **Domain.** Buy the cheapest sensible one (a `.co.uk` is usually about £5–10 a year; at-cost registrars such as Cloudflare Registrar, Porkbun or Namecheap beat buying through Vercel; check current prices, and watch renewal prices as well as the first-year offer). Then: Vercel → project → Settings → Domains → Add, point DNS where it tells you; tell me the domain and I'll update the extension's site match, Supabase Site URL/redirects and the legal pages.
+- [ ] **Email plan.** Two separate jobs: (1) *a mailbox on your domain* for hello@ / support@ (Google Workspace and Microsoft 365 cost a few pounds per user per month; cheaper or free options include Zoho Mail's free tier, Fastmail, Proton, or forwarding to your existing inbox for nothing at first); (2) *a sending service for sign-in codes and receipts*, which Supabase needs in place of the Gmail test (Resend, Postmark or Amazon SES; Resend's free tier is enough to start). Both need DNS records (SPF, DKIM) on the new domain.
+- [ ] Then set `NEXT_PUBLIC_CONTACT_EMAIL` to the new address (privacy, terms and feedback replies use it).
 
 ## 7. Decisions I need from you
 - [ ] Meal photos: your own photography, or one consistent illustration style? (The image plumbing is built; I'll write a shot list or style brief for whichever you pick.)

@@ -1,5 +1,5 @@
 'use client';
-import { useMemo } from 'react';
+import { useMemo, useState } from 'react';
 import { createPortal } from 'react-dom';
 import MealImage from '@/components/MealImage';
 import { money, recipeById } from '@/components/week';
@@ -14,7 +14,14 @@ const signed = (n: number, unit: string) => `${n > 0 ? '+' : n < 0 ? '−' : '±
 export default function SwapSheet({ plan, target, input, onPick, onClose }: {
   plan: Plan; target: { day: number; meal: number } | null; input: PlanInput; onPick: (recipeId: string) => void; onClose: () => void;
 }) {
-  const options = useMemo(() => (target ? swapOptions(plan, target.day, target.meal, input) : []), [plan, target, input]);
+  const all = useMemo(() => (target ? swapOptions(plan, target.day, target.meal, input, 14) : []), [plan, target, input]);
+  const [filter, setFilter] = useState<'fit' | 'cheaper' | 'new'>('fit');
+  const options = useMemo(() => {
+    const pool = filter === 'new' ? all.filter((o) => !o.liked) : all;
+    const inBand = (o: (typeof all)[number]) => Number(!o.day.inBand);
+    const sorted = filter === 'cheaper' ? [...pool].sort((a, b) => inBand(a) - inBand(b) || a.dWeekPence - b.dWeekPence) : pool;
+    return sorted.slice(0, 6);
+  }, [all, filter]);
   if (!target) return null;
   const day = plan.days[target.day];
   const cur = day?.meals[target.meal];
@@ -27,7 +34,12 @@ export default function SwapSheet({ plan, target, input, onPick, onClose }: {
         <div className="grab" />
         <h2>Swap {day.day} {SLOT[cur.slot]}</h2>
         <p className="muted" style={{ margin: '2px 0 8px' }}>Now: {now.e} {now.n}. Your day is {day.protein}g protein · {day.kcal.toLocaleString('en-GB')} kcal.</p>
-        {options.length === 0 && <p className="estimate-flag">There&apos;s nothing else to swap in that fits your allergies and taste choices.</p>}
+        <div className="chips" role="group" aria-label="Sort options" style={{ margin: '4px 0 8px' }}>
+          {([['fit', 'Similar macros'], ['cheaper', 'Cheaper'], ['new', 'New for you']] as const).map(([k, l]) => (
+            <button key={k} className={'chip' + (filter === k ? ' on' : '')} aria-pressed={filter === k} onClick={() => setFilter(k)}>{l}</button>
+          ))}
+        </div>
+        {options.length === 0 && <p className="estimate-flag">{filter === 'new' ? 'No unrated meals fit this slot.' : 'There\u2019s nothing else to swap in that fits your allergies and taste choices.'}</p>}
         {options.map((o) => {
           const wk = Math.abs(o.dWeekPence) >= 5 ? ` · week ${o.dWeekPence > 0 ? '+' : '−'}${money(Math.abs(o.dWeekPence))}` : '';
           return (

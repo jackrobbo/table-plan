@@ -96,9 +96,10 @@ export default function Plan() {
     try { await navigator.clipboard.writeText(text); setCopied(key); } catch { setCopied('fail:' + text); }
   };
   const dismiss = () => due && update((p) => ({ ...p, reminders: { ...p.reminders, shown: [...p.reminders.shown, `${due.week}:${due.kind}`] } }));
-  const enableReminders = async () => {
-    try { if (typeof Notification !== 'undefined') await Notification.requestPermission(); } catch { /* optional */ }
+  const enableReminders = () => {
+    // Switch on straight away; the browser's permission prompt is a bonus and must never hold the button up.
     update((p) => ({ ...p, reminders: { ...p.reminders, on: true } }));
+    try { if (typeof Notification !== 'undefined') void Notification.requestPermission(); } catch { /* optional */ }
   };
 
   return (

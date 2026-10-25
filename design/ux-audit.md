@@ -2,6 +2,9 @@
 
 25 Oct 2026. ✅ built and tested · 🟡 partly · ❌ not built. "Rule" numbers are the Core rules in design/README.md.
 
+## Update, 25 Oct (later)
+Built since the table below was written: Daily-average bars, Today badge, Week done summary (20, 24); recipe sheet tabs, tap-to-strike, Never suggest again (22); New for you meal each week and Liked it / Not for me (23, rule 9); carbs, fat, price on rows and the estimated shop total (16, 20); ingredients grouped by aisle (35); cooking days and day-off cards (31, 34); weekend guide (25, 10); swap filters (17); leave-planning prompt (38); reminders in settings (29); and a phone "shop item by item" mode (36). Still open: cook times (no data), a first-week "Generating" screen with guardrail steps (15), choosing a supermarket / per-store comparison (36), the Pick for me / Pick my own choice on the Upcoming card (26), and a name greeting (29).
+
 ## Summary
 The spine is complete and working end to end: sign-in, onboarding, personal target, taste swipe, first week, paywall, shopping list priced at Morrisons, weekly cycle (to-plan / skip / missed), swap, settings, deletion. What's missing is mostly the **"living with the plan"** layer (weekly progress, feedback and learning) and some **polish on the plan screens** the original design leaned on.
 

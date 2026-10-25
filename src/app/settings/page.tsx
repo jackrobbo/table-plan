@@ -138,6 +138,14 @@ export default function Settings() {
         </>}
       </Section>
 
+      <Section title="Reminders">
+        <p className="muted" style={{ marginTop: 0 }}>A nudge when next week opens to pick (Sunday 9am) and a last call at 4pm on the deadline day. For now they appear when you open Table Plan.</p>
+        <button className={'chip lg' + (profile.reminders.on ? ' on' : '')} aria-pressed={profile.reminders.on} onClick={() => {
+          if (!profile.reminders.on) { try { if (typeof Notification !== 'undefined') void Notification.requestPermission(); } catch { /* optional */ } }
+          update((p) => ({ ...p, reminders: { ...p.reminders, on: !p.reminders.on } }));
+        }}>{profile.reminders.on ? 'Reminders on' : 'Reminders off'}</button>
+      </Section>
+
       <Section title="Privacy">
         <p className="muted" style={{ marginTop: 0 }}>
           {profile.consent ? `You agreed to our use of your health information on ${new Date(profile.consent.health).toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' })}.` : ''}{' '}

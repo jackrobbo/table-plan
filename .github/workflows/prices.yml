@@ -1,8 +1,7 @@
 name: Refresh Morrisons prices
 on:
-  schedule:
-    - cron: '30 2 * * *'   # nightly, 02:30 UTC
-    - cron: '30 4 * * 0'   # Sunday 04:30 UTC (05:30 in summer): prices are fresh before picking opens at 06:00 London
+  # Scheduled runs are off: Morrisons answers GitHub's servers with HTTP 403 (checked 25 Oct 2026), so a schedule would only fail
+  # and email. Prices are refreshed from somewhere Morrisons allows (see design/tomorrow.md). Run by hand to re-test.
   workflow_dispatch:
 permissions:
   contents: write
