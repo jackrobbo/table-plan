@@ -89,7 +89,7 @@
     if (host) return root;
     host = document.createElement('div');
     host.id = 'table-plan-ext';
-    host.style.cssText = 'position:fixed;right:16px;bottom:16px;max-width:calc(100vw - 32px);z-index:2147483647;';
+    host.style.cssText = native ? 'position:fixed;inset:0;z-index:2147483647;' : 'position:fixed;right:16px;bottom:16px;max-width:calc(100vw - 32px);z-index:2147483647;';
     root = host.attachShadow({ mode: 'open' });
     root.innerHTML = `<style>
       .p{all:initial;display:block;box-sizing:border-box;width:min(320px,calc(100vw - 32px));max-height:70vh;overflow:auto;font:14px/1.4 system-ui,-apple-system,Segoe UI,sans-serif;color:#1d1d1f;background:#fff;border:1px solid #d8d8dc;border-radius:14px;box-shadow:0 8px 30px rgba(0,0,0,.22);padding:14px 16px}
@@ -101,15 +101,23 @@
       button{all:initial;box-sizing:border-box;font:600 14px system-ui,sans-serif;padding:9px 14px;border-radius:9px;cursor:pointer;text-align:center;flex:1}
       .go{background:#1c6b4a;color:#fff}.no{background:#ececef;color:#1d1d1f}
       ul{list-style:none;margin:8px 0 0;padding:0;font-size:13px}li{padding:3px 0;display:flex;gap:6px}li b{flex:0 0 14px}
+      .p.full{width:100%;max-width:none;height:100%;max-height:none;border:0;border-radius:0;box-shadow:none;padding:24px 20px;display:flex;flex-direction:column;overflow:auto;font-size:16px}
+      .full .row{margin-top:auto;padding-top:16px}.full button{padding:14px 16px;font-size:16px}
+      .c{margin:auto 0;text-align:center}.c h2{justify-content:center;font-size:21px}
+      .spin{width:48px;height:48px;border:5px solid #ececef;border-top-color:#1c6b4a;border-radius:50%;animation:s 1s linear infinite;margin:0 auto 20px}@keyframes s{to{transform:rotate(1turn)}}
+      h3{font-size:14px;margin:16px 0 4px}li{align-items:flex-start}li .go{flex:0 0 auto;padding:6px 12px;font-size:13px}
+      .pill{all:initial;position:fixed;left:16px;bottom:16px;background:#1c6b4a;color:#fff;font:600 14px system-ui,sans-serif;padding:10px 16px;border-radius:99px;box-shadow:0 4px 16px rgba(0,0,0,.3);cursor:pointer}
       .ok b{color:#1c6b4a}.warn b{color:#a15c00}.bad b{color:#b3261e}
     </style><div class="p" role="status" aria-live="polite"></div>`;
     document.documentElement.appendChild(host);
     return root;
   }
   const esc = (s) => String(s).replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' })[c]);
-  function show(html, actions = []) {
+  function show(html, actions = [], centre = false) {
     const p = ui().querySelector('.p');
-    p.innerHTML = `<h2><span class="logo">T</span>Table Plan</h2>${html}${actions.length ? '<div class="row"></div>' : ''}`;
+    p.className = native ? 'p full' : 'p';
+    const body = native && centre ? `<div class="c"><h2><span class="logo">T</span>Table Plan</h2>${html}</div>` : `<h2><span class="logo">T</span>Table Plan</h2>${html}`;
+    p.innerHTML = `${body}${actions.length ? '<div class="row"></div>' : ''}`;
     const row = p.querySelector('.row');
     for (const [label, cls, fn] of actions) {
       const b = document.createElement('button');
@@ -125,8 +133,8 @@
   function showConfirm(job) {
     const n = job.items.length, units = job.items.reduce((a, x) => a + x.q, 0);
     show(`<p>Add <b>${n}</b> item${n === 1 ? '' : 's'} (${units} pack${units === 1 ? '' : 's'}) from your plan to your Morrisons trolley?</p>
-      <p class="m">I'll open each product and press Add for you. You choose the delivery slot and check out yourself.</p>`,
-    [['Add them', 'go', () => start(job)], ['Cancel', 'no', async () => { await store.clear(); hide(); }]]);
+      <p class="m">I'll open each product and press Add for you. You choose the delivery slot and check out yourself.</p>${native ? '<p class="m">You don\'t need to be signed in to Morrisons for this.</p>' : ''}`,
+    [['Add them', 'go', () => start(job)], ['Cancel', 'no', async () => { await store.clear(); hide(); native?.close(); }]], true);
   }
 
   async function start(job) {
@@ -138,9 +146,12 @@
   function showProgress(job, note) {
     const n = job.items.length;
     const item = job.items[job.i];
+    const stop = [['Stop', 'no', async () => { stopped = true; job.state = 'stopped'; await store.set(job); showSummary(job); }]];
+    const bar = `<div class="bar"><i style="width:${Math.round((job.i / n) * 100)}%"></i></div>`;
+    if (native) return show(`<div class="spin"></div><p style="font-size:19px"><b>Just filling your trolley</b></p><p class="m">Please wait. It takes a minute or two, and the page behind will keep changing.</p>${bar}
+      <p class="m">${job.i + 1} of ${n}: ${esc(item ? item.n || item.s : '')}</p>`, stop, true);
     show(`<p><b>Adding ${job.i + 1} of ${n}</b></p><p class="m">${esc(item ? item.n || item.s : '')}</p>
-      <div class="bar"><i style="width:${Math.round((job.i / n) * 100)}%"></i></div>${note ? `<p class="m">${esc(note)}</p>` : ''}`,
-    [['Stop', 'no', async () => { stopped = true; job.state = 'stopped'; await store.set(job); showSummary(job); }]]);
+      ${bar}${note ? `<p class="m">${esc(note)}</p>` : ''}`, stop);
   }
 
   async function step(job) {
@@ -203,20 +214,39 @@
     showSummary(job);
   }
 
+  const isOk = (x) => x.status === 'added' || x.status === 'already';
   function showSummary(job) {
     const r = job.results || [];
-    const good = r.filter((x) => x.status === 'added' || x.status === 'already');
-    const left = job.items.length - r.length;
-    const lines = r.map((x) => {
-      const ok = x.status === 'added' || x.status === 'already';
-      const cls = ok ? 'ok' : x.status === 'partial' ? 'warn' : 'bad';
-      return `<li class="${cls}"><b>${ok ? '✓' : x.status === 'partial' ? '!' : '✕'}</b><span>${esc(x.n || x.s)}${x.q > 1 ? ` ×${x.q}` : ''}${x.note && !(ok && x.status === 'added' && !x.note) ? `<br><span class="m">${esc(x.note)}</span>` : ''}</span></li>`;
-    });
-    show(`<p><b>${good.length} of ${job.items.length}</b> in your trolley${left > 0 ? ` (${left} not tried: stopped)` : ''}.</p>
-      <ul>${lines.join('')}</ul>
-      <p class="m" style="margin-top:10px">Next: check the trolley, choose a delivery slot (log in to see slots; Morrisons has a £25 minimum) and check out.</p>`,
-    [['Open trolley', 'go', () => document.querySelector('button[aria-label^="Trolley"]')?.click()],
+    const good = r.filter(isOk);
+    const todo = r.filter((x) => !isOk(x));
+    const left = job.items.slice(r.length); // stopped before these
+    const line = (x, cls, mark, open) => `<li class="${cls}"><b>${mark}</b><span>${esc(x.n || x.s)}${x.q > 1 ? ` ×${x.q}` : ''}${x.note ? `<br><span class="m">${esc(x.note)}</span>` : ''}</span>${open ? `<button class="go" data-open="${esc(x.s)}">Open</button>` : ''}</li>`;
+    const need = [
+      ...todo.map((x) => line(x, x.status === 'partial' ? 'warn' : 'bad', x.status === 'partial' ? '!' : '✕', native)),
+      ...left.map((x) => line({ ...x, note: 'Not tried (stopped)' }, 'warn', '–', native)),
+    ];
+    const head = `<p><b>${good.length} of ${job.items.length}</b> are in your trolley.</p>`;
+    const needHtml = need.length
+      ? `<h3>You'll need to add these yourself (${need.length})</h3><ul>${need.join('')}</ul>`
+      : '<p class="m">Everything on your list went in.</p>';
+    const goodHtml = good.length ? `<h3>Added (${good.length})</h3><ul>${good.map((x) => line(x, 'ok', '✓', false)).join('')}</ul>` : '';
+    show(`${head}${needHtml}${goodHtml}
+      <p class="m" style="margin-top:12px">Next: check the trolley, choose a delivery slot and check out. Morrisons may flag more items as unavailable once you sign in and it knows your address.</p>`,
+    [['Open trolley', 'go', () => { if (native) { job.state = 'browsing'; store.set(job); hide(); } document.querySelector('button[aria-label^="Trolley"]')?.click(); }],
       ['Done', 'no', async () => { await store.clear(); hide(); native?.close(); }]]);
+    if (native) ui().querySelectorAll('[data-open]').forEach((b) => b.addEventListener('click', async () => {
+      job.state = 'browsing'; await store.set(job); location.assign(BASE + b.getAttribute('data-open'));
+    }));
+  }
+
+  /** After "Open" on an item the summary steps aside; this pill brings it back. */
+  function showPill(job) {
+    ui().querySelector('.p').remove();
+    host.style.cssText = 'position:fixed;left:0;bottom:0;z-index:2147483647;';
+    const b = document.createElement('button');
+    b.className = 'pill'; b.textContent = 'Back to Table Plan summary';
+    b.addEventListener('click', async () => { host.style.cssText = 'position:fixed;inset:0;z-index:2147483647;'; job.state = 'done'; await store.set(job); hide(); showSummary(job); });
+    root.appendChild(b);
   }
 
   // ---- entry --------------------------------------------------------------------------------------------------------
@@ -234,6 +264,7 @@
     if (job.state === 'ready') return showConfirm(job);
     if (job.state === 'running') return step(job);
     if (job.state === 'done' || job.state === 'stopped') return showSummary(job);
+    if (job.state === 'browsing' && native) return showPill(job);
   }
   init().catch((e) => { console.error('Table Plan extension', e); });
 })();

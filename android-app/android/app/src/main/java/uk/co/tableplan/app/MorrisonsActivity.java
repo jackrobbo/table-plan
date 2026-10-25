@@ -8,16 +8,18 @@ import android.graphics.Color;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.Gravity;
-import android.view.View;
 import android.webkit.CookieManager;
 import android.webkit.JavascriptInterface;
 import android.webkit.WebResourceRequest;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
-import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import androidx.core.graphics.Insets;
+import androidx.core.view.ViewCompat;
+import androidx.core.view.WindowCompat;
+import androidx.core.view.WindowInsetsCompat;
 import java.io.ByteArrayOutputStream;
 import java.io.InputStream;
 import org.json.JSONArray;
@@ -46,26 +48,31 @@ public class MorrisonsActivity extends Activity {
 
         LinearLayout root = new LinearLayout(this);
         root.setOrientation(LinearLayout.VERTICAL);
-        LinearLayout bar = new LinearLayout(this);
-        bar.setOrientation(LinearLayout.HORIZONTAL);
+        root.setBackgroundColor(Color.WHITE);
+        float d = getResources().getDisplayMetrics().density;
+        // The back header: the whole green bar is one big tap target.
+        TextView bar = new TextView(this);
+        bar.setText("\u2039  Back to Table Plan");
+        bar.setTextColor(Color.WHITE);
+        bar.setTextSize(18);
+        bar.setTypeface(null, android.graphics.Typeface.BOLD);
         bar.setGravity(Gravity.CENTER_VERTICAL);
         bar.setBackgroundColor(Color.parseColor("#1c6b4a"));
-        int pad = (int) (12 * getResources().getDisplayMetrics().density);
-        bar.setPadding(pad, pad, pad, pad);
-        Button back = new Button(this);
-        back.setText("← Table Plan");
-        back.setAllCaps(false);
-        back.setOnClickListener(v -> finish());
-        TextView title = new TextView(this);
-        title.setText("  Morrisons trolley");
-        title.setTextColor(Color.WHITE);
-        title.setTextSize(16);
-        bar.addView(back);
-        bar.addView(title);
+        final int barPad = (int) (16 * d);
+        bar.setPadding(barPad, barPad, barPad, barPad);
+        bar.setOnClickListener(v -> finish());
         web = new WebView(this);
         root.addView(bar, new LinearLayout.LayoutParams(-1, -2));
         root.addView(web, new LinearLayout.LayoutParams(-1, 0, 1f));
         setContentView(root);
+        // Android 15 draws apps edge to edge: keep the header clear of the status bar and the page clear of the navigation bar.
+        ViewCompat.setOnApplyWindowInsetsListener(root, (v, insets) -> {
+            Insets sb = insets.getInsets(WindowInsetsCompat.Type.systemBars() | WindowInsetsCompat.Type.displayCutout());
+            bar.setPadding(barPad + sb.left, barPad + sb.top, barPad + sb.right, barPad);
+            v.setPadding(0, 0, 0, sb.bottom);
+            return insets;
+        });
+        WindowCompat.getInsetsController(getWindow(), root).setAppearanceLightStatusBars(false);
 
         WebSettings s = web.getSettings();
         s.setJavaScriptEnabled(true);
