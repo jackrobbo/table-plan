@@ -121,6 +121,13 @@ export function generatePlan(input: PlanInput, seed = 1): Plan {
     for (let i = 0; i < DAY_NAMES.length; i++) dinners.push(order[i % order.length]);
   }
 
+  // One "New for you" dinner a week: a meal they haven't rated, within their spend limit, sized to suit the day.
+  if (input.meals.dinner.mode === 'plan' && input.explore !== false) {
+    const capIdx = input.budget && input.budget !== 'high' ? TIERS.indexOf(input.budget) : TIERS.length;
+    const fresh = unseen.dinner.filter((r) => !r.b || TIERS.indexOf(r.b) <= capIdx);
+    if (fresh.length) dinners[2] = R.pickWeighted(fresh, (r) => fit(r, slotTarget.dinner));
+  }
+
   const useCount: Record<string, number> = {};
   const bought = new Set<string>();
   const days: PlannedDay[] = [];

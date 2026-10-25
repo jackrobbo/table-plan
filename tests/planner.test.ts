@@ -197,3 +197,26 @@ describe('planner: honest messages for days that miss', () => {
     if (missed) expect(plan.issues[0]).toMatch(/recipe bank/);
   });
 });
+
+describe('planner: one new meal a week', () => {
+  const liked = safeRecipes([]).filter((r) => r.c !== 'snack' && r.c !== 'dinner').map((r) => r.id).concat(
+    safeRecipes([]).filter((r) => r.c === 'dinner').slice(0, 8).map((r) => r.id));
+  it('slips in exactly one dinner the person has not rated, and none when told not to', () => {
+    for (let seed = 1; seed <= 12; seed++) {
+      const plan = generatePlan(base({ liked }), seed);
+      const dinners = plan.days.map((d) => d.meals.find((m) => m.slot === 'dinner')!.recipeId);
+      expect(dinners.filter((id) => !liked.includes(id)).length, `seed ${seed}`).toBeLessThanOrEqual(1);
+      const off = generatePlan(base({ liked, explore: false }), seed);
+      expect(off.days.every((d) => liked.includes(d.meals.find((m) => m.slot === 'dinner')!.recipeId))).toBe(true);
+    }
+    const some = Array.from({ length: 12 }, (_, s) => generatePlan(base({ liked }), s + 1)).filter((p) => p.days.some((d) => !liked.includes(d.meals.find((m) => m.slot === 'dinner')!.recipeId)));
+    expect(some.length).toBeGreaterThanOrEqual(8);
+  });
+  it('never skips something they said no to, and still lands the days in band', () => {
+    const skipped = safeRecipes([]).filter((r) => r.c === 'dinner').slice(8, 30).map((r) => r.id);
+    for (let seed = 1; seed <= 6; seed++) {
+      const plan = generatePlan(base({ liked, skipped }), seed);
+      for (const d of plan.days) { expect(skipped).not.toContain(d.meals.find((m) => m.slot === 'dinner')!.recipeId); expect(d.inBand).toBe(true); }
+    }
+  });
+});

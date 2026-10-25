@@ -6,7 +6,7 @@ import Screen from '@/components/Screen';
 import MealImage from '@/components/MealImage';
 import BasketButton from '@/components/BasketButton';
 import SwapSheet from '@/components/SwapSheet';
-import { neverAgain } from '@/lib/taste';
+import { isNewForYou, likeMeal, neverAgain } from '@/lib/taste';
 import { DailyAverage, WeekDone } from '@/components/WeekProgress';
 import { allEaten, summariseWeek, weekAverages } from '@/lib/cycle/summary';
 import { DayCard, RecipeSheet, ShoppingList, listAsText, money, recipeById } from '@/components/week';
@@ -42,6 +42,7 @@ export default function Plan() {
   const [sub, setSub] = useState<'plan' | 'ingredients' | 'recipes'>('plan');
   const [picked, setPicked] = useState<string | null>(null);
   const [sheet, setSheet] = useState<string | null>(null);
+  const [rate, setRate] = useState<string | null>(null);
   const [swap, setSwap] = useState<{ week: string; day: number; meal: number } | null>(null);
   const [copied, setCopied] = useState<string | null>(null);
 
@@ -87,6 +88,7 @@ export default function Plan() {
   const plan = week.plan!;
   const shopping = buildShopping(plan);
   const badge = badgeCount(snap);
+  const newIds = new Set(plan.days.flatMap((d) => d.meals).filter((m) => m.slot !== 'snack' && recipeById.get(m.recipeId) && isNewForYou(profile, m.recipeId, m.slot)).map((m) => m.recipeId));
   const upcomingSel = snap.upcoming.find((x) => x.week.start === (picked ?? snap.toPlan?.start ?? snap.upcoming[0]?.week.start)) ?? snap.upcoming[0];
 
   const copy = async (text: string, key: string) => {
@@ -137,13 +139,21 @@ export default function Plan() {
           {sub === 'plan' && <>
             {/* Built from the days, not plan.issues, so plans saved before the wording changed show the current message. */}
             {(plan.days.length ? explainMisses(plan.days, t.band, t.protein) : plan.issues).map((i) => <div key={i} className="estimate-flag">{i}</div>)}
+            {rate && recipeById.get(rate) && (
+              <div className="note rate" role="status">
+                <b>New this week: {recipeById.get(rate)!.n}. How was it?</b>
+                <button className="btn inline small" onClick={() => { update((p) => likeMeal(p, rate)); setRate(null); }}>Liked it</button>
+                <button className="btn ghost inline small" onClick={() => { update((p) => neverAgain(p, rate)); setRate(null); }}>Not for me</button>
+                <button className="linkbtn" onClick={() => setRate(null)}>Not now</button>
+              </div>
+            )}
             {plan.days.length > 0 && (finished || (started && allEaten(plan, week.ticks)))
               ? <WeekDone s={summariseWeek(plan, week.ticks, shopping)} t={t} />
               : plan.days.length > 0 && <DailyAverage averages={weekAverages(plan)} t={t} />}
             {plan.days.map((d, i) => (
               <DayCard key={d.day} d={d} index={i} ticks={started ? week.ticks : undefined} onOpen={setSheet} today={started && !finished && addDays(week.start, i) === londonDate(now)}
                 onSwap={finished ? undefined : (day, meal) => setSwap({ week: week.start, day, meal })}
-                onTick={started && !finished ? (k) => update((p) => ({ ...p, weeks: toggleTick(p.weeks, week.start, k) })) : undefined} />
+                onTick={started && !finished ? (k) => { const [di, mi] = k.split(':').map(Number); const rid = plan.days[di]?.meals[mi]?.recipeId; if (rid && !week.ticks[k] && newIds.has(rid)) setRate(rid); update((p) => ({ ...p, weeks: toggleTick(p.weeks, week.start, k) })); } : undefined} newIds={newIds} />
             ))}
           </>}
 

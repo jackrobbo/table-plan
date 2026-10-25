@@ -137,6 +137,9 @@ input.text:focus{outline:2px solid var(--ok);}
 
 /* ---- welcome ---- */
 .logo{width:46px; height:46px; border-radius:12px; background:var(--btn); color:var(--btn-ink); display:grid; place-items:center; font-weight:800; font-size:20px;}
+.tags span.newtag{background:oklch(0.94 0.04 250); color:oklch(0.42 0.14 250); font-weight:600}
+.rate{display:flex; align-items:center; gap:8px; flex-wrap:wrap}
+.rate b{flex:1 1 100%}
 .strike{list-style:none; padding-left:0}
 .strikebtn{all:unset; display:block; width:100%; box-sizing:border-box; padding:7px 0; cursor:pointer; font-size:15px; line-height:1.4}
 .strikebtn.on{text-decoration:line-through; color:var(--ink3)}

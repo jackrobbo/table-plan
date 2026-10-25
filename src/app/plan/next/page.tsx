@@ -16,6 +16,7 @@ import { ensureWeeks, saveList, savePlan, saveProgress, snapshot, type Week } fr
 import { BUDGETS, BUDGET_LABEL, budgetHelp, tierMark } from '@/lib/budget';
 import { planInputFrom } from '@/lib/planner/fromProfile';
 import { applySwap } from '@/lib/planner/swap';
+import { isNewForYou } from '@/lib/taste';
 import { buildShopping } from '@/lib/planner/shopping';
 import { explainMisses, planWeek } from '@/lib/planner/solve';
 import type { Plan } from '@/lib/planner/types';
@@ -78,7 +79,7 @@ export default function PlanNext() {
     // Let the "building" state paint first: the planner blocks the main thread for a moment.
     setTimeout(() => {
       // Meals the person picked by hand are never capped by the spend setting; auto-picked ones are.
-      const input = { ...planInputFrom(profile), liked, ...(liked === profile.likedRecipes ? {} : { budget: 'high' as const }) };
+      const input = { ...planInputFrom(profile), liked, ...(liked === profile.likedRecipes ? {} : { budget: 'high' as const, explore: false }) };
       const built = planWeek(input, 24, Math.floor(Math.random() * 1e6));
       track('week_generated', { days_in_band: built.days.filter((d) => d.inBand).length, mode: liked === profile.likedRecipes ? 'auto' : 'own' });
       setDraft(built);
@@ -177,7 +178,7 @@ export default function PlanNext() {
             {explainMisses(draft.days, t.band, t.protein).map((i) => <div key={i} className="estimate-flag">{i}</div>)}
             {draft.notes?.map((n) => <p key={n} className="muted">{n}</p>)}
             {shopping && <PriceNote totalPence={shopping.totalPence} />}
-            {draft.days.map((d, i) => <DayCard key={d.day} d={d} index={i} label={dayLabel(addDays(week.start, i))} onSwap={(day, meal) => setSwap({ day, meal })} />)}
+            {draft.days.map((d, i) => <DayCard key={d.day} d={d} index={i} label={dayLabel(addDays(week.start, i))} onSwap={(day, meal) => setSwap({ day, meal })} newIds={new Set(draft.days.flatMap((d) => d.meals).filter((m) => isNewForYou(profile, m.recipeId, m.slot)).map((m) => m.recipeId))} />)}
             <button className="btn ghost" onClick={() => build(picks.length ? picks : profile.likedRecipes)}>Shuffle</button>
           </>)}
         </div>

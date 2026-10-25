@@ -12,7 +12,7 @@ export const recipeById = new Map(RECIPES.map((r) => [r.id, r]));
 const SLOT_LABEL: Record<string, string> = { breakfast: 'Breakfast', lunch: 'Lunch', snack: 'Snack', dinner: 'Dinner' };
 export const money = (p: number) => '£' + (p / 100).toFixed(2);
 
-export function MealRow({ m, tick, onTick, onOpen, onSwap }: { m: PlannedMeal; tick?: boolean; onTick?: () => void; onOpen?: () => void; onSwap?: () => void }) {
+export function MealRow({ m, tick, onTick, onOpen, onSwap, isNew }: { m: PlannedMeal; tick?: boolean; onTick?: () => void; onOpen?: () => void; onSwap?: () => void; isNew?: boolean }) {
   const r = recipeById.get(m.recipeId)!;
   return (
     <div className="meal">
@@ -23,6 +23,7 @@ export function MealRow({ m, tick, onTick, onOpen, onSwap }: { m: PlannedMeal; t
           <span className="p">P {m.protein}g</span><span>{m.kcal} kcal</span>
           {Math.abs(m.scale - 1) >= 0.02 && <span className="adj">Portion {Math.round(m.scale * 100)}%</span>}
           {m.extra > 0 && <span>+{m.extra} to share</span>}
+          {isNew && <span className="newtag">New for you</span>}
         </div>
       </button>
       {onSwap && <button className="swapbtn" aria-label={`Swap ${r.n}`} onClick={onSwap}>Swap</button>}
@@ -35,9 +36,11 @@ export function MealRow({ m, tick, onTick, onOpen, onSwap }: { m: PlannedMeal; t
   );
 }
 
-export function DayCard({ d, index, ticks, onTick, onOpen, onSwap, label, today }: {
+export function DayCard({ d, index, ticks, onTick, onOpen, onSwap, label, today, newIds }: {
   d: PlannedDay; index: number; ticks?: Record<string, boolean>; onTick?: (key: string) => void; onOpen?: (id: string) => void; label?: string;
   today?: boolean;
+  /** Recipe ids to tag "New for you". */
+  newIds?: ReadonlySet<string>;
   /** Offered on meals not yet eaten. */
   onSwap?: (dayIndex: number, mealIndex: number) => void;
 }) {
@@ -52,7 +55,7 @@ export function DayCard({ d, index, ticks, onTick, onOpen, onSwap, label, today 
       </header>
       {!done && d.meals.map((m, i) => (
         <MealRow key={i} m={m} tick={ticks?.[`${index}:${i}`]} onTick={onTick ? () => onTick(`${index}:${i}`) : undefined} onOpen={onOpen ? () => onOpen(m.recipeId) : undefined}
-          onSwap={onSwap && !ticks?.[`${index}:${i}`] ? () => onSwap(index, i) : undefined} />
+          onSwap={onSwap && !ticks?.[`${index}:${i}`] ? () => onSwap(index, i) : undefined} isNew={newIds?.has(m.recipeId)} />
       ))}
       {!done && d.topups.map((t) => (
         <div className="meal" key={t.n}>

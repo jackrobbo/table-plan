@@ -18,6 +18,8 @@ export interface PlanInput {
   skipped?: readonly string[];
   /** Spend cap on auto-picked meals. Undefined = no cap (e.g. the user hand-picked their meals). */
   budget?: Budget;
+  /** Slip one meal the person hasn't rated into the week ("New for you"). Off for weeks they picked by hand. Default on. */
+  explore?: boolean;
 }
 
 export interface PlannedMeal {
