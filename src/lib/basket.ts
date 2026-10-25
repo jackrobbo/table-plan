@@ -24,3 +24,11 @@ export function basketUrl(items: BasketItem[]): string | null {
 
 /** The extension leaves this marker on our pages (extension/tableplan.js). */
 export const extensionInstalled = (): boolean => typeof document !== 'undefined' && !!document.documentElement.dataset.tableplanExt;
+
+interface MorrisonsPlugin { open(opts: { items: BasketItem[] }): Promise<{ count: number }> }
+/** Inside the Android app, a native Morrisons screen does the adding (android-app/). Absent in a normal browser. */
+export function nativeMorrisons(): MorrisonsPlugin | null {
+  if (typeof window === 'undefined') return null;
+  const cap = (window as unknown as { Capacitor?: { isNativePlatform?: () => boolean; Plugins?: { Morrisons?: MorrisonsPlugin } } }).Capacitor;
+  return cap?.isNativePlatform?.() && cap.Plugins?.Morrisons ? cap.Plugins.Morrisons : null;
+}

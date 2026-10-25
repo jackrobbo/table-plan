@@ -18,7 +18,8 @@
     "nutrition:apply": "tsx scripts/apply-nutrition.ts",
     "catalogue:payload": "tsx scripts/catalogue-payload.ts",
     "images:build": "tsx scripts/build-images.ts",
-    "extension:zip": "node scripts/build-extension.mjs"
+    "extension:zip": "node scripts/build-extension.mjs",
+    "android:build": "node scripts/build-android.mjs"
   },
   "dependencies": {
     "@supabase/supabase-js": "^2.118.0",

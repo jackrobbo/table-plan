@@ -16,7 +16,16 @@
   const PACE_MS = 600;
 
   const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
-  const store = {
+  // Same script runs in the browser extension (chrome.storage) and in the Android app's Morrisons screen, where the app injects it
+  // and provides window.TPNative (job kept in the app, handoff given by the app instead of the URL fragment).
+  const native = window.TPNative || null;
+  if (native && window.__tpInjected) return;
+  if (native) window.__tpInjected = true;
+  const store = native ? {
+    get: async () => { try { return JSON.parse(native.getJob() || 'null'); } catch { return null; } },
+    set: async (job) => { native.setJob(JSON.stringify(job)); },
+    clear: async () => { native.clearJob(); },
+  } : {
     get: async () => (await chrome.storage.local.get(JOB_KEY))[JOB_KEY] || null,
     set: (job) => chrome.storage.local.set({ [JOB_KEY]: job }),
     clear: () => chrome.storage.local.remove(JOB_KEY),
@@ -80,10 +89,10 @@
     if (host) return root;
     host = document.createElement('div');
     host.id = 'table-plan-ext';
-    host.style.cssText = 'position:fixed;right:16px;bottom:16px;z-index:2147483647;';
+    host.style.cssText = 'position:fixed;right:16px;bottom:16px;max-width:calc(100vw - 32px);z-index:2147483647;';
     root = host.attachShadow({ mode: 'open' });
     root.innerHTML = `<style>
-      .p{all:initial;display:block;box-sizing:border-box;width:320px;max-height:70vh;overflow:auto;font:14px/1.4 system-ui,-apple-system,Segoe UI,sans-serif;color:#1d1d1f;background:#fff;border:1px solid #d8d8dc;border-radius:14px;box-shadow:0 8px 30px rgba(0,0,0,.22);padding:14px 16px}
+      .p{all:initial;display:block;box-sizing:border-box;width:min(320px,calc(100vw - 32px));max-height:70vh;overflow:auto;font:14px/1.4 system-ui,-apple-system,Segoe UI,sans-serif;color:#1d1d1f;background:#fff;border:1px solid #d8d8dc;border-radius:14px;box-shadow:0 8px 30px rgba(0,0,0,.22);padding:14px 16px}
       h2{font-size:15px;margin:0 0 4px;display:flex;align-items:center;gap:8px}
       .logo{display:inline-grid;place-items:center;width:20px;height:20px;border-radius:6px;background:#1c6b4a;color:#fff;font-size:12px;font-weight:700}
       p{margin:4px 0}.m{color:#6b6b72;font-size:13px}
@@ -207,7 +216,7 @@
       <ul>${lines.join('')}</ul>
       <p class="m" style="margin-top:10px">Next: check the trolley, choose a delivery slot (log in to see slots; Morrisons has a £25 minimum) and check out.</p>`,
     [['Open trolley', 'go', () => document.querySelector('button[aria-label^="Trolley"]')?.click()],
-      ['Done', 'no', async () => { await store.clear(); hide(); }]]);
+      ['Done', 'no', async () => { await store.clear(); hide(); native?.close(); }]]);
   }
 
   // ---- entry --------------------------------------------------------------------------------------------------------

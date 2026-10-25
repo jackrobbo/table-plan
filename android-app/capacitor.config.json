@@ -1,0 +1,11 @@
+{
+  "appId": "uk.co.tableplan.app",
+  "appName": "Table Plan",
+  "webDir": "www",
+  "server": {
+    "url": "https://table-plan.co.uk",
+    "allowNavigation": ["table-plan.co.uk"],
+    "androidScheme": "https"
+  },
+  "android": { "allowMixedContent": false }
+}

@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">Table Plan</string>
+    <string name="title_activity_main">Table Plan</string>
+    <string name="package_name">uk.co.tableplan.app</string>
+    <string name="custom_url_scheme">uk.co.tableplan.app</string>
+</resources>
