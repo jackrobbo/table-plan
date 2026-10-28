@@ -6,6 +6,7 @@ import { useRouter, useSearchParams } from 'next/navigation';
 import PriceNote from '@/components/PriceNote';
 import Screen from '@/components/Screen';
 import BuildingWeek from '@/components/BuildingWeek';
+import WeekRange from '@/components/WeekRange';
 import MealImage from '@/components/MealImage';
 import BasketButton from '@/components/BasketButton';
 import SwapSheet from '@/components/SwapSheet';
@@ -139,12 +140,9 @@ export default function Plan() {
 
       {tab === 'this' && (
         <div className="fade" key="this">
-          <h1>{sub === 'recipes' ? (started ? 'This Week’s Menu' : 'Next Week’s Menu') : finished ? 'Last Week' : started ? 'This Week' : Object.keys(weeks).length > 3 ? 'Next Up' : 'Your First Week'} <span className="wk">{weekLabel(week.start)}</span></h1>
+          <h1>{sub === 'recipes' ? (started ? 'This Week’s Menu' : 'Next Week’s Menu') : finished ? 'Last Week' : started ? 'This Week' : Object.keys(weeks).length > 3 ? 'Next Up' : 'Your First Week'} <WeekRange start={week.start} /></h1>
           {sub === 'recipes' && <p className="sub">Everything you&apos;re cooking {started ? 'this week' : `from Mon ${dayLabel(week.start)}`}, one card per meal. Tap one for the recipe.</p>}
-          {sub !== 'recipes' && <p className="sub">
-            {finished ? 'Nothing is planned for this week. Plan the next one from Upcoming.' : started ? `Kept inside ${t.band[0].toLocaleString('en-GB')}–${t.band[1].toLocaleString('en-GB')} kcal and ≥${t.protein}g protein a day.`
-              : `Starts Mon ${dayLabel(week.start)}. Built from what you like, inside ${t.band[0].toLocaleString('en-GB')}–${t.band[1].toLocaleString('en-GB')} kcal and ≥${t.protein}g protein a day.`}
-          </p>}
+          {sub !== 'recipes' && finished && <p className="sub">Nothing is planned for this week. Plan the next one from Upcoming.</p>}
           {sub !== 'recipes' && !started && (
             <div className="seg2">
               <button className={sub === 'plan' ? 'on' : ''} onClick={() => setSub('plan')}>Plan</button>
@@ -156,13 +154,6 @@ export default function Plan() {
             {/* Built from the days, not plan.issues, so plans saved before the wording changed show the current message. */}
             {(plan.days.length ? explainMisses(plan.days, t.band, t.protein) : plan.issues).map((i) => <div key={i} className="estimate-flag">{i}</div>)}
             {plan.days.length > 0 && <PriceNote totalPence={shopping.totalPence} />}
-            {access && !started && plan.days.length > 0 && (
-              <div className="nextstep">
-                <span className="ns-num" aria-hidden>2</span>
-                <div><b>Next: Check Your Shopping List</b><p>Untick anything you already have at home, then check out at Morrisons.</p></div>
-                <button className="btn inline small" onClick={goList}>Check List</button>
-              </div>
-            )}
             {rate && recipeById.get(rate) && (
               <div className="note rate" role="status">
                 <b>New this week: {recipeById.get(rate)!.n}. How was it?</b>

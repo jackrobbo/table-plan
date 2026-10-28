@@ -1,7 +1,7 @@
 'use client';
 import { useState } from 'react';
 import { createPortal } from 'react-dom';
-import { Apple, ArrowLeftRight, Clock, Coffee, Plus, Sandwich, Utensils, type LucideIcon } from 'lucide-react';
+import { Apple, ArrowLeftRight, Clock, Coffee, Plus, Sandwich, User, Users, Utensils, type LucideIcon } from 'lucide-react';
 import { timeLabel } from '@/lib/cookTime';
 import { PRODUCTS, RECIPES } from '@/data';
 import MealImage from '@/components/MealImage';
@@ -33,7 +33,11 @@ export function MealRow({ m, tick, onTick, onOpen, onSwap, isNew }: { m: Planned
           {time && <span className="time" title="Estimated prep and cooking time"><Clock size={11} aria-hidden />{time.replace('≈ ', '≈\u00a0')}</span>}
           {r.cost != null && <span title="Estimated cost of this portion">≈ {money(Math.round(r.cost * m.scale))}</span>}
           {adj && <span className="adj" title="Portion resized to fit your day">{Math.round(m.scale * 100)}% portion</span>}
-          {m.extra > 0 && <span>+{m.extra} to share</span>}
+          {m.extra > 0 && (
+            <span className="feeds" role="img" aria-label={`Feeds ${1 + m.extra} (you plus ${m.extra} to share)`} title={`Feeds ${1 + m.extra}: you plus ${m.extra} to share`}>
+              {1 + m.extra <= 4 ? Array.from({ length: 1 + m.extra }, (_, i) => <User key={i} size={13} aria-hidden />) : <><Users size={14} aria-hidden />{1 + m.extra}</>}
+            </span>
+          )}
         </div>
       </button>
       {onSwap && <button className="swapbtn" aria-label={`Swap ${r.n}`} onClick={onSwap}><ArrowLeftRight size={16} aria-hidden /></button>}

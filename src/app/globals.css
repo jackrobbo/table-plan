@@ -234,7 +234,7 @@ a.linkbtn{text-decoration:none;}
 .switch button{flex:1; min-height:36px; border:0; background:none; border-radius:8px; font-size:14px; font-weight:500; cursor:pointer; display:inline-flex; align-items:center; justify-content:center; gap:6px; transition:background .18s, box-shadow .18s;}
 .switch button.on{background:var(--card); font-weight:600; box-shadow:0 1px 3px rgba(0,0,0,.14);}
 .badge{background:var(--warn); color:#1c1300; border-radius:99px; min-width:18px; height:18px; padding:0 5px; font-size:11px; font-weight:700; display:inline-grid; place-items:center;}
-.wk{font-size:15px; font-weight:500; color:var(--ink2); letter-spacing:0;}
+.wk{display:inline-flex; align-items:center; gap:5px; margin-left:6px; padding:3px 10px; border-radius:99px; background:var(--fill); font-size:13px; font-weight:600; color:var(--ink2); letter-spacing:0; vertical-align:middle; white-space:nowrap;}
 .reminder{background:var(--warn-soft); color:var(--warn-ink); border-radius:var(--radius); padding:12px 14px; margin:0 0 14px; display:flex; justify-content:space-between; align-items:center; gap:10px; font-size:14px;}
 .reminder .row2{display:flex; align-items:center; gap:2px; flex:none;}
 .btn.small{min-height:36px; font-size:14px; padding:0 14px; border-radius:10px;}
@@ -481,12 +481,6 @@ a.opt{text-decoration:none; color:inherit;} a.opt .d{text-decoration:none;}
 .value input:focus::placeholder,input.text:focus::placeholder,.otp-input:focus::placeholder{color:transparent;}
 .value input::placeholder{transition:color .12s ease;}
 
-/* "what to do next" prompt on the Plan tab */
-.nextstep{display:flex; align-items:center; gap:12px; margin:12px 0; padding:12px 14px; border-radius:var(--radius); background:var(--ok-soft); box-shadow:inset 0 0 0 1.5px var(--ok);}
-.nextstep p{margin:2px 0 0; font-size:13px; color:var(--ink2);} .nextstep b{font-size:15px;}
-.nextstep>div{flex:1; min-width:0;}
-.nextstep .btn{flex:none;}
-.ns-num{flex:none; width:28px; height:28px; border-radius:50%; display:grid; place-items:center; background:var(--ok); color:#fff; font-weight:700; font-size:14px;}
 
 /* ---- upcoming: a timeline of weeks ---- */
 .pricefresh{display:flex; align-items:center; gap:10px; margin:0 0 14px; padding:10px 12px; border-radius:var(--radius-sm); background:var(--fill); font-size:13px; color:var(--ink2);}
@@ -508,3 +502,5 @@ a.opt{text-decoration:none; color:inherit;} a.opt .d{text-decoration:none;}
 .wkbody{padding:0 14px 14px;}
 .wkbody>.card{margin:0; background:var(--fill); box-shadow:none;}
 .wkrow.later{opacity:.75; background:transparent; border-style:dashed;}
+.meal .mmeta .feeds{display:inline-flex; align-items:center; gap:1px; color:var(--ink2);}
+.meal .mmeta .feeds svg{stroke-width:2;}
