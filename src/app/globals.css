@@ -332,9 +332,10 @@ ul.plain,ol.plain{margin:6px 0 10px; padding-left:20px; font-size:15px;} ul.plai
 /* ---- bottom tab bar (signed-in main screens) ---- */
 :root{--tabbar-h:68px;}
 .tabbar{position:fixed; left:0; right:0; bottom:0; z-index:30; padding:0 12px max(8px,env(safe-area-inset-bottom,0px)); pointer-events:none;}
-.tabbar-in{pointer-events:auto; max-width:406px; margin:0 auto; height:60px; display:flex; gap:2px; padding:5px; border-radius:var(--radius); background:var(--card); border:1px solid var(--line);}
-.tab{flex:1; position:relative; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:2px; border-radius:calc(var(--radius) - 4px); color:var(--ink2); font-size:11px; font-weight:500; text-decoration:none;}
-.tab[aria-current="page"]{color:var(--ink); font-weight:600; background:var(--fill);}
+.tabbar-in{position:relative; pointer-events:auto; max-width:406px; margin:0 auto; height:60px; display:flex; padding:5px; border-radius:var(--radius); background:var(--card); border:1px solid var(--line);}
+.tab{flex:1; position:relative; z-index:1; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:2px; border-radius:calc(var(--radius) - 4px); color:var(--ink2); font-size:11px; font-weight:500; text-decoration:none;}
+.tab-pill{position:absolute; top:5px; bottom:5px; left:5px; width:calc((100% - 10px) / 4); border-radius:calc(var(--radius) - 4px); background:var(--fill);}
+.tab[aria-current="page"]{color:var(--ink); font-weight:600;}
 .tab:focus-visible{outline:3px solid var(--ok); outline-offset:-2px;}
 .tab .badge{position:absolute; top:3px; left:calc(50% + 6px); min-width:16px; height:16px; font-size:10px;}
 body[data-tabbar] .screen main{padding-bottom:calc(var(--tabbar-h) + 28px + env(safe-area-inset-bottom,0px));}
@@ -347,3 +348,30 @@ svg.lucide{stroke-width:1.75; flex:none;}
 .opt-txt{flex:1; min-width:0;}
 .ico-h{display:flex; align-items:center; gap:8px;}
 .meal .slot{display:flex; flex-direction:column; align-items:flex-start; gap:3px;}
+
+/* ---- motion language: one set of timings and curves; everything below uses them ---- */
+:root{--ease-out:cubic-bezier(.2,.8,.2,1); --ease-spring:cubic-bezier(.34,1.5,.5,1); --dur-press:.12s; --dur-fast:.18s; --dur-base:.26s;}
+@keyframes slideInFwd{from{opacity:0; transform:translateX(28px)} to{opacity:1; transform:none}}
+@keyframes slideInBack{from{opacity:0; transform:translateX(-28px)} to{opacity:1; transform:none}}
+@keyframes pop{0%{transform:scale(.6)} 60%{transform:scale(1.18)} 100%{transform:scale(1)}}
+@keyframes tickPop{0%{transform:scale(.8)} 55%{transform:scale(1.14)} 100%{transform:scale(1)}}
+.screen main{animation-duration:var(--dur-base); animation-timing-function:var(--ease-out);}
+.fade{animation-duration:var(--dur-base); animation-timing-function:var(--ease-out);}
+/* the tab bar sets the direction on tap, so views slide the way you moved */
+html[data-navdir="fwd"] .fade{animation-name:slideInFwd;}
+html[data-navdir="back"] .fade{animation-name:slideInBack;}
+/* the active pill glides between tabs */
+.tab-pill{transition:transform var(--dur-base) var(--ease-spring);}
+.tab{transition:color var(--dur-fast) ease, transform var(--dur-press) var(--ease-out);}
+.tab svg{transition:transform var(--dur-base) var(--ease-spring);}
+.tab[aria-current="page"] svg{transform:translateY(-1px) scale(1.08);}
+/* one press feeling for everything tappable */
+.btn,.opt,.chip,.rcard,.plancard,.swapbtn,.tick,.tab,.swipebtns button,.seg2 button,.switch button,.tabs button{transition-timing-function:var(--ease-out); -webkit-tap-highlight-color:transparent;}
+.opt:active,.rcard:active,.plancard:active,.chip:active,.swapbtn:active,.seg2 button:active,.switch button:active{transform:scale(.97);}
+.btn:active:not(:disabled){transform:scale(.97);}
+.tab:active{transform:scale(.92);}
+.tick:active{transform:scale(.88);}
+.tick.on{animation:tickPop var(--dur-base) var(--ease-spring);}
+.badge.pop{animation:pop var(--dur-base) var(--ease-spring);}
+.sheet{animation-duration:var(--dur-base); animation-timing-function:var(--ease-spring);}
+.swapbtn{transition:transform var(--dur-press) var(--ease-out), background var(--dur-fast) ease;}

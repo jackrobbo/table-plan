@@ -1,7 +1,7 @@
 'use client';
 import Link from 'next/link';
 import { usePathname, useSearchParams } from 'next/navigation';
-import { useEffect } from 'react';
+import { useEffect, useRef } from 'react';
 import { CalendarDays, Clock, CookingPot, UserRound, type LucideIcon } from 'lucide-react';
 import { useSignedIn } from '@/lib/useSignedIn';
 import { useTabBadge } from '@/lib/tabBadge';
@@ -25,6 +25,8 @@ export default function TabBar() {
     return () => { delete document.body.dataset.tabbar; };
   }, [show]);
 
+  // Which way the next screen should slide in: set on tap, before the new content mounts.
+  const prev = useRef(0);
   if (!show) return null;
   const onPlan = path === '/plan';
   const tabs = [
@@ -34,14 +36,19 @@ export default function TabBar() {
     { id: 'account', label: 'Account', href: '/account', on: !onPlan },
   ];
 
+  const idx = Math.max(0, tabs.findIndex((t) => t.on));
+  prev.current = idx;
+  const go = (i: number) => { document.documentElement.dataset.navdir = i >= prev.current ? 'fwd' : 'back'; };
+
   return (
     <nav className="tabbar" aria-label="Main">
       <div className="tabbar-in">
-        {tabs.map((t) => (
-          <Link key={t.id} href={t.href} replace={onPlan && t.href.startsWith('/plan')} className="tab" aria-current={t.on ? 'page' : undefined}>
+        <span className="tab-pill" aria-hidden style={{ transform: `translateX(${idx * 100}%)` }} />
+        {tabs.map((t, i) => (
+          <Link key={t.id} href={t.href} replace={onPlan && t.href.startsWith('/plan')} className="tab" aria-current={t.on ? 'page' : undefined} onClick={() => go(i)}>
             {(() => { const Icon = ICONS[t.id]; return <Icon size={22} aria-hidden />; })()}
             <span>{t.label}</span>
-            {t.id === 'upcoming' && badge > 0 && <span className="badge" aria-label={`${badge} to plan`}>{badge}</span>}
+            {t.id === 'upcoming' && badge > 0 && <span key={badge} className="badge pop" aria-label={`${badge} to plan`}>{badge}</span>}
           </Link>
         ))}
       </div>
