@@ -216,6 +216,10 @@
   }
 
   async function addToTrolley(job, item) {
+    // The app starts this script as the page begins to load. The Add button is drawn by the server before the page can respond to
+    // clicks, so wait for the page to finish loading, then give it a beat to wire its buttons up, before pressing anything.
+    await waitFor(() => document.readyState === 'complete', 25000);
+    await sleep(500);
     if (!(await waitFor(hasControl, 12000))) return { status: 'unavailable', note: 'No Add button on the page: out of stock, or not available where you deliver.' };
 
     const cap = Math.min(item.q, Number(qtyInput()?.max) || MAX_QTY);
@@ -225,11 +229,14 @@
 
     for (let guard = 0; cur < cap && guard < cap + 3 && !stopped; guard++) {
       closeDialogs();
-      const btn = cur === 0 ? addButton() : incButton();
-      if (!btn) break;
-      btn.click();
-      let moved = await waitFor(() => quantity() > cur, 6000);
-      if (!moved) { closeDialogs(); moved = await waitFor(() => quantity() > cur, 3000); }
+      let moved = null;
+      for (let attempt = 0; attempt < 3 && !moved && !stopped; attempt++) {
+        const btn = cur === 0 ? addButton() : incButton();
+        if (!btn) break;
+        btn.click();
+        moved = await waitFor(() => quantity() > cur, attempt === 2 ? 5000 : 2500);
+        if (!moved) { closeDialogs(); await sleep(400); }
+      }
       if (!moved) break;
       cur = quantity();
       await sleep(150);

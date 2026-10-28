@@ -38,6 +38,8 @@ public class MorrisonsActivity extends Activity {
     static final String EXTRA_JOB = "job";
     private static final String BASE = "https://groceries.morrisons.com/products/";
     private static final int MAX_JOB_CHARS = 200_000;
+    /** The latest trolley script, published by the site on every deploy. The copy bundled in the app is the fallback. */
+    private static final String SCRIPT_URL = "https://table-plan.co.uk/app/morrisons.js";
 
     private WebView web;
     private String script = "";
@@ -92,11 +94,6 @@ public class MorrisonsActivity extends Activity {
         CookieManager.getInstance().setAcceptCookie(true);
         CookieManager.getInstance().setAcceptThirdPartyCookies(web, true);
         web.addJavascriptInterface(new Bridge(), "TPNative");
-        // Run our script as each Morrisons page starts to load, so the trolley screen is up before the product page can show through.
-        // (Where that isn't supported, onPageFinished below still injects it, just later.)
-        if (!script.isEmpty() && WebViewFeature.isFeatureSupported(WebViewFeature.DOCUMENT_START_SCRIPT)) {
-            WebViewCompat.addDocumentStartJavaScript(web, script, new java.util.HashSet<>(java.util.Collections.singletonList("https://groceries.morrisons.com")));
-        }
         web.setWebViewClient(new WebViewClient() {
             @Override public boolean shouldOverrideUrlLoading(WebView v, WebResourceRequest r) {
                 Uri u = r.getUrl();
@@ -113,10 +110,55 @@ public class MorrisonsActivity extends Activity {
             }
         });
 
-        String items = getIntent().getStringExtra(EXTRA_ITEMS);
+        // Fetch the newest script first (a couple of seconds at most), so fixes reach people without a new APK; then begin.
+        final String items = getIntent().getStringExtra(EXTRA_ITEMS);
+        final Bundle saved = b;
+        new Thread(() -> {
+            final String fresh = fetchScript();
+            runOnUiThread(() -> {
+                if (isFinishing() || isDestroyed()) return;
+                if (fresh != null) script = fresh;
+                begin(items, saved);
+            });
+        }).start();
+    }
+
+    /** The script from the site, or null if it can't be reached in time or doesn't look right. */
+    private String fetchScript() {
+        java.net.HttpURLConnection c = null;
+        try {
+            c = (java.net.HttpURLConnection) new java.net.URL(SCRIPT_URL).openConnection();
+            c.setConnectTimeout(2500);
+            c.setReadTimeout(2500);
+            if (c.getResponseCode() != 200) return null;
+            try (InputStream in = c.getInputStream()) {
+                ByteArrayOutputStream out = new ByteArrayOutputStream();
+                byte[] buf = new byte[8192];
+                int n;
+                while ((n = in.read(buf)) > 0) {
+                    out.write(buf, 0, n);
+                    if (out.size() > 400_000) return null;
+                }
+                String s = out.toString("UTF-8");
+                return s.length() > 2000 && s.contains("Table Plan") ? s : null;
+            }
+        } catch (Exception e) {
+            return null;
+        } finally {
+            if (c != null) c.disconnect();
+        }
+    }
+
+    /** Starts the run (or opens Morrisons) once the script to inject has been settled. */
+    private void begin(String items, Bundle saved) {
+        // Run our script as each Morrisons page starts to load, so the trolley screen is up before the product page can show through.
+        // (Where that isn't supported, onPageFinished below still injects it, just later.)
+        if (!script.isEmpty() && WebViewFeature.isFeatureSupported(WebViewFeature.DOCUMENT_START_SCRIPT)) {
+            WebViewCompat.addDocumentStartJavaScript(web, script, new java.util.HashSet<>(java.util.Collections.singletonList("https://groceries.morrisons.com")));
+        }
         if (items != null) startJob(items);
-        else if (b == null) web.loadUrl("https://groceries.morrisons.com/");
-        else web.restoreState(b);
+        else if (saved == null) web.loadUrl("https://groceries.morrisons.com/");
+        else web.restoreState(saved);
     }
 
     private void startJob(String itemsJson) {
