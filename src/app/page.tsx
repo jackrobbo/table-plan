@@ -1,5 +1,6 @@
 'use client';
 import Link from 'next/link';
+import FeatureCarousel from '@/components/FeatureCarousel';
 import MorrisonsLogo from '@/components/RetailerLogo';
 import Screen from '@/components/Screen';
 import { useSignedIn } from '@/lib/useSignedIn';
@@ -12,17 +13,23 @@ export default function Welcome() {
       <Link className="linkbtn accent" href="/signin">I have an account</Link>
       {process.env.NEXT_PUBLIC_INVITE_ONLY === '1' && <Link className="linkbtn" href="/waitlist">No invite yet? Join the waitlist</Link>}
     </>}>
-      <h1>Your goals.<br />Your meals.<br />Your budget.</h1>
-      <p className="sub" style={{ maxWidth: '38ch' }}>
-        Table Plan turns your nutritional goals and favourite meals into a realistic weekly meal plan and shopping list. Eat towards your goals, buy only what you need, and shop at your usual supermarket &mdash; without the cost of a meal-kit subscription.
-      </p>
-      <div className="card">
-        <h3>Priced at Morrisons</h3>
-        <p className="muted" style={{ margin: '4px 0 0' }}>Your list shows estimated Morrisons prices, dated, so you know what the week will cost before you shop.</p>
-        <MorrisonsLogo />
-        <p className="muted" style={{ margin: '8px 0 0' }}>More supermarkets soon.</p>
+      <div className="welcome">
+        <div className="brandblock">
+          <span className="logo lg" aria-hidden>T</span>
+          <span className="bname">Table Plan</span><span className="beta" aria-hidden>BETA</span>
+        </div>
+        <h1>Your Goals.<br />Your Meals.<br />Your Budget.</h1>
+        <p className="sub" style={{ maxWidth: '38ch' }}>
+          A weekly meal plan and shopping list built around your nutritional goals, so you buy only what you need, without the cost of a meal-kit subscription.
+        </p>
+        <FeatureCarousel />
+        <div className="pricedby">
+          <span className="muted">Priced at</span>
+          <MorrisonsLogo height={24} />
+          <span className="muted">More supermarkets soon</span>
+        </div>
+        <p className="muted" style={{ marginTop: 8 }}><Link href="/privacy">Privacy</Link> · <Link href="/terms">Terms</Link></p>
       </div>
-      <p className="muted" style={{ marginTop: 16 }}><Link href="/privacy">Privacy</Link> · <Link href="/terms">Terms</Link></p>
     </Screen>
   );
 }

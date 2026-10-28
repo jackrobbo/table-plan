@@ -375,3 +375,20 @@ html[data-navdir="back"] .fade{animation-name:slideInBack;}
 .badge.pop{animation:pop var(--dur-base) var(--ease-spring);}
 .sheet{animation-duration:var(--dur-base); animation-timing-function:var(--ease-spring);}
 .swapbtn{transition:transform var(--dur-press) var(--ease-out), background var(--dur-fast) ease;}
+
+/* ---- welcome page ---- */
+body:has(.welcome) .site-header{display:none;}   /* the page carries its own logo, and the buttons below cover sign-in */
+.brandblock{display:flex; align-items:center; gap:10px; margin:6px 0 22px;}
+.logo.lg{width:52px; height:52px; border-radius:15px; font-size:24px;}
+.bname{font-size:22px; font-weight:700; letter-spacing:-0.02em;}
+.carousel-wrap{margin:22px -20px 0;}
+.carousel{list-style:none; margin:0; padding:2px 20px 6px; display:flex; gap:12px; overflow-x:auto; scroll-snap-type:x mandatory; scroll-padding:0 20px; scrollbar-width:none; -webkit-overflow-scrolling:touch;}
+.carousel::-webkit-scrollbar{display:none;}
+.slide{flex:0 0 82%; scroll-snap-align:start; margin:0; display:flex; flex-direction:column; gap:4px; min-height:176px;}
+.slide h3{margin:6px 0 0;} .slide p{margin:0;}
+.slide-ico{width:44px; height:44px; border-radius:13px; display:grid; place-items:center; background:var(--fill); color:var(--ok);}
+.dots{display:flex; justify-content:center; gap:6px; margin-top:6px;}
+.dots button{width:8px; height:8px; padding:0; border:0; border-radius:99px; background:var(--ink3); opacity:.5; cursor:pointer; transition:width var(--dur-base,.26s) var(--ease-spring,ease), opacity var(--dur-fast,.18s) ease;}
+.dots button.on{width:22px; opacity:1; background:var(--ink);}
+.pricedby{display:flex; align-items:center; justify-content:center; flex-wrap:wrap; gap:6px 12px; margin-top:22px; padding:12px 16px; border-radius:var(--radius); background:var(--fill);}
+.pricedby .retailer-logo{margin-top:0;}
