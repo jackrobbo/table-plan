@@ -142,7 +142,7 @@ export default function TasteSwipe({ p, update, onFinish }: SP & { onFinish: () 
           That&apos;s all the {LABEL[tab].toLowerCase()} options for now.
           {prog[tab].liked < prog[tab].needed && (
             <> You need {prog[tab].needed - prog[tab].liked} more.{' '}
-              <button className="linkbtn accent" onClick={() => update((x) => ({ ...x, skippedRecipes: x.skippedRecipes.filter((id) => !pool.some((r) => r.id === id)) }))}>Revisit skipped</button></>
+              <button className="linkbtn accent" onClick={() => update((x) => ({ ...x, skippedRecipes: x.skippedRecipes.filter((id) => !pool.some((r) => r.id === id)) }))}>Revisit Skipped</button></>
           )}
         </div>
       )}

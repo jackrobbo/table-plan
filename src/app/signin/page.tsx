@@ -95,7 +95,7 @@ export default function SignIn() {
             aria-label="Email" onChange={(e) => setEmail(e.target.value)} onKeyDown={(e) => e.key === 'Enter' && send()} />
           {needsInvite && <>
             <input id="invite" className="text" style={{ marginTop: 10 }} placeholder="Invite code (XXXX-XXXX-XXXX)" aria-label="Invite code" autoCapitalize="characters" value={invite} onChange={(e) => setInvite(e.target.value)} />
-            <p className="muted" style={{ marginTop: 8 }}>Table Plan is invite-only while we test. <Link href="/waitlist">Join the waitlist</Link></p>
+            <p className="muted" style={{ marginTop: 8 }}>Table Plan is invite-only while we test. <Link href="/waitlist">Join the Waitlist</Link></p>
           </>}
           {error && <p className="err">{error}</p>}
           <p className="muted" style={{ marginTop: 12 }}>By continuing you&apos;re agreeing to our <Link href="/terms">terms</Link> and <Link href="/privacy">privacy policy</Link>. We&apos;ll ask you to confirm before we collect anything about your health.</p>

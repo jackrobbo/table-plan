@@ -30,16 +30,16 @@ export default function Onboarding() {
 
   const hasBar = stepIndex(step) < BAR_STEPS;
   const onBack = stepIndex(step) > 0 ? () => update(back) : () => router.push('/');
-  const cta = step === 'taste' ? 'Finish' : step === 'target' ? 'Pick meals you like' : 'Continue';
+  const cta = step === 'taste' ? 'Finish' : step === 'target' ? 'Pick Meals You Like' : 'Continue';
 
   return (
     <Screen onBack={onBack} progress={hasBar ? { step: stepIndex(step) + 1, total: BAR_STEPS } : undefined}
       footer={<>
         <button className="btn" disabled={!ok} onClick={() => { track(step === 'taste' ? 'onboarding_done' : 'onboarding_step', { step }); update(advance); }}>{cta}</button>
         {step === 'allergies' && (
-          <button className="linkbtn accent" onClick={() => update((p) => advance({ ...setAllergies(p, []), noAllergies: true }))}>No one has allergies</button>
+          <button className="linkbtn accent" onClick={() => update((p) => advance({ ...setAllergies(p, []), noAllergies: true }))}>No One Has Allergies</button>
         )}
-        {step === 'dislikes' && <button className="linkbtn" onClick={() => update((p) => advance({ ...p, dislikes: [] }))}>Skip, I eat anything</button>}
+        {step === 'dislikes' && <button className="linkbtn" onClick={() => update((p) => advance({ ...p, dislikes: [] }))}>Skip, I Eat Anything</button>}
         {skippable && (
           <button className="linkbtn" onClick={() => update((p) => advance(skipStat(p, step as SkippableStep)))}>Prefer Not to Say</button>
         )}
@@ -77,7 +77,7 @@ function TargetStep({ p, update }: SP) {
       </div>
       {t.estimated && (
         <div className="estimate-flag"><b>This is a general estimate.</b> Without your height, weight, age and sex we can only use a typical number for your goal, so it may be too high or too low for you.
-          <button onClick={() => update((x) => ({ ...x, step: 'height' }))}>Add my stats for a personal target</button></div>
+          <button onClick={() => update((x) => ({ ...x, step: 'height' }))}>Add My Stats for a Personal Target</button></div>
       )}
       <div className="note"><b>Steady, not extreme.</b> {t.maintenance ? `Estimated maintenance is ${t.maintenance} kcal. ` : 'Using a sensible default; add your stats for a personal number. '}We never plan below 1,300 kcal.</div>
       <p className="muted">Every day is kept inside this band. Change anything later. Not medical or dietetic advice: talk to your GP before changing your diet if you have a medical condition.</p>

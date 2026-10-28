@@ -162,7 +162,7 @@ function RecipeSheetBody({ r, onClose, portions, onNever }: { r: NonNullable<Ret
         </p>
         <div className="seg2" role="tablist" style={{ margin: '12px 0 4px' }}>
           <button role="tab" aria-selected={tab === 'ingredients'} className={tab === 'ingredients' ? 'on' : ''} onClick={() => setTab('ingredients')}>Ingredients</button>
-          <button role="tab" aria-selected={tab === 'cook'} className={tab === 'cook' ? 'on' : ''} onClick={() => setTab('cook')}>How to cook</button>
+          <button role="tab" aria-selected={tab === 'cook'} className={tab === 'cook' ? 'on' : ''} onClick={() => setTab('cook')}>How to Cook</button>
         </div>
         {tab === 'ingredients' ? (<>
           <p className="muted" style={{ margin: '8px 0 4px' }}>Whole dish. Tap an ingredient to cross it off as you go.</p>
@@ -176,7 +176,7 @@ function RecipeSheetBody({ r, onClose, portions, onNever }: { r: NonNullable<Ret
         </>) : r.m.length > 0 ? <ol className="plain" style={{ marginTop: 10 }}>{r.m.map((x, i) => <li key={i}>{x}</li>)}</ol> : <p className="muted">No method for this one: it&apos;s a grab-and-go item.</p>}
         {onNever && (!asked
           ? <button className="linkbtn" style={{ marginTop: 10 }} onClick={() => setAsked(true)}>Never Suggest This Again</button>
-          : <p className="note warn-note">We won&apos;t plan or offer this meal in future weeks (weeks already planned stay as they are). <button className="linkbtn" onClick={() => { onNever(r.id); onClose(); }}>Yes, never suggest it</button> <button className="linkbtn" onClick={() => setAsked(false)}>Keep It</button></p>)}
+          : <p className="note warn-note">We won&apos;t plan or offer this meal in future weeks (weeks already planned stay as they are). <button className="linkbtn" onClick={() => { onNever(r.id); onClose(); }}>Yes, Never Suggest It</button> <button className="linkbtn" onClick={() => setAsked(false)}>Keep It</button></p>)}
         <button className="btn ghost" style={{ marginTop: 14 }} onClick={onClose}>Close</button>
       </div>
     </div>

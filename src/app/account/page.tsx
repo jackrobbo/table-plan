@@ -100,7 +100,7 @@ export default function Account() {
           : <><p className="err">This cancels your subscription and permanently deletes your account, plans, answers and feedback. Stripe keeps the payment records the law requires. It can&apos;t be undone.</p>
               {deleteError && <p className="err" role="alert">{deleteError}</p>}
               <button className="btn" disabled={deleting} onClick={wipe}>{deleting ? 'Deleting…' : 'Yes, delete everything'}</button>
-              <button className="linkbtn" disabled={deleting} onClick={() => { setConfirmDelete(false); setDeleteError(null); }}>Keep my account</button></>}
+              <button className="linkbtn" disabled={deleting} onClick={() => { setConfirmDelete(false); setDeleteError(null); }}>Keep My Account</button></>}
       </div>
       <div className="card" style={{ marginTop: 12 }}>
         <h3>Your Answers</h3>
@@ -109,9 +109,9 @@ export default function Account() {
         {!confirmRestart
           ? <button className="linkbtn" onClick={() => setConfirmRestart(true)}>Start Again From the First Question</button>
           : <><p className="err">This clears your planned weeks and takes you back to the first question.</p>
-              <button className="btn" onClick={() => { update((p) => ({ ...p, completed: false, step: 'goal', weeks: {} })); router.push('/onboarding'); }}>Yes, start again</button>
+              <button className="btn" onClick={() => { update((p) => ({ ...p, completed: false, step: 'goal', weeks: {} })); router.push('/onboarding'); }}>Yes, Start Again</button>
               <button className="linkbtn" onClick={() => setConfirmRestart(false)}>Keep My Plan</button></>}
-        <button className="linkbtn" onClick={async () => { await getBackend().auth.signOut(); router.replace('/'); }}>Sign out</button>
+        <button className="linkbtn" onClick={async () => { await getBackend().auth.signOut(); router.replace('/'); }}>Sign Out</button>
       </div>
       <p className="muted" style={{ marginTop: 14 }}>Table Plan gives general nutrition guidance, not medical advice. <Link href="/privacy">Privacy</Link> · <Link href="/terms">Terms</Link></p>
     </Screen>

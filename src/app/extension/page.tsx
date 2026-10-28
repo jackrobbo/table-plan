@@ -20,7 +20,7 @@ export default function ExtensionPage() {
         {' '}<button className="linkbtn" onClick={check}>Check Again</button>
       </div>
       <ol className="plain" style={{ lineHeight: 1.6 }}>
-        <li><a href="/extension/table-plan-morrisons-extension.zip" download>Download the add-on (zip)</a> and unzip it. You get a folder.</li>
+        <li><a href="/extension/table-plan-morrisons-extension.zip" download>Download the Add-on (Zip)</a> and unzip it. You get a folder.</li>
         <li>In Chrome open <b>chrome://extensions</b> (Edge: edge://extensions) and switch on <b>Developer mode</b>.</li>
         <li>Click <b>Load unpacked</b> and choose the unzipped folder (the one containing <b>manifest.json</b>).</li>
         <li>Come back to this site and <b>reload the page</b>, then press <b>Check again</b>.</li>

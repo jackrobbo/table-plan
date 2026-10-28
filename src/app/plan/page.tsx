@@ -125,7 +125,7 @@ export default function Plan() {
         <div className="reminder" role="status">
           <div><b>{due.title}</b><div>{due.body}</div></div>
           <div className="row2">
-            <button className="btn inline small" onClick={() => { dismiss(); router.push('/plan?v=upcoming'); }}>Plan now</button>
+            <button className="btn inline small" onClick={() => { dismiss(); router.push('/plan?v=upcoming'); }}>Plan Now</button>
             <button className="linkbtn" onClick={dismiss}>Dismiss</button>
           </div>
         </div>
@@ -152,8 +152,8 @@ export default function Plan() {
             {rate && recipeById.get(rate) && (
               <div className="note rate" role="status">
                 <b>New this week: {recipeById.get(rate)!.n}. How was it?</b>
-                <button className="btn inline small" onClick={() => { update((p) => likeMeal(p, rate)); setRate(null); }}>Liked it</button>
-                <button className="btn ghost inline small" onClick={() => { update((p) => neverAgain(p, rate)); setRate(null); }}>Not for me</button>
+                <button className="btn inline small" onClick={() => { update((p) => likeMeal(p, rate)); setRate(null); }}>Liked It</button>
+                <button className="btn ghost inline small" onClick={() => { update((p) => neverAgain(p, rate)); setRate(null); }}>Not for Me</button>
                 <button className="linkbtn" onClick={() => setRate(null)}>Not Now</button>
               </div>
             )}

@@ -69,9 +69,9 @@ export default function Settings() {
     <Screen onBack={() => router.push('/account')} backLabel="Account"
       footer={<>
         {short.length > 0
-          ? <button className="btn" disabled={problems.length > 0} onClick={saveAndPick}>Save, then pick a few more meals you like</button>
+          ? <button className="btn" disabled={problems.length > 0} onClick={saveAndPick}>Save, Then Pick a Few More Meals You Like</button>
           : <button className="btn" disabled={!dirty || problems.length > 0} onClick={save}>{saved && !dirty ? 'Saved' : 'Save changes'}</button>}
-        {dirty && <button className="linkbtn" onClick={() => { setDraft(profile); setSaved(false); }}>Discard changes</button>}
+        {dirty && <button className="linkbtn" onClick={() => { setDraft(profile); setSaved(false); }}>Discard Changes</button>}
       </>}>
       <h2>Your Answers</h2>
       <p className="sub">Change anything here. Your planned weeks stay as they are unless you rebuild them below.</p>
@@ -98,7 +98,7 @@ export default function Settings() {
         <Section title="Meals"><MealsStep p={d} update={edit} /></Section>
         <Section title="Allergies">
           <AllergiesStep p={d} update={edit} />
-          <button className={'chip lg' + (d.noAllergies ? ' on' : '')} aria-pressed={d.noAllergies} onClick={() => edit((x) => ({ ...setAllergies(x, []), noAllergies: true }))}>No one has allergies</button>
+          <button className={'chip lg' + (d.noAllergies ? ' on' : '')} aria-pressed={d.noAllergies} onClick={() => edit((x) => ({ ...setAllergies(x, []), noAllergies: true }))}>No One Has Allergies</button>
         </Section>
         <Section title="Dislikes"><DislikesStep p={d} update={edit} /></Section>
         </div>
@@ -119,7 +119,7 @@ export default function Settings() {
         </p>
         {short.length > 0 && <div className="estimate-flag">You need to keep a few more {short.join(' and ')} before we can plan them. Save, and we&apos;ll take you to pick.</div>}
         {short.length === 0 && !dirty && (
-          <button className="btn ghost" onClick={() => { update((p) => ({ ...p, completed: false, step: 'taste' })); router.push('/onboarding'); }}>Review my meal choices</button>
+          <button className="btn ghost" onClick={() => { update((p) => ({ ...p, completed: false, step: 'taste' })); router.push('/onboarding'); }}>Review My Meal Choices</button>
         )}
       </Section>
 
@@ -149,12 +149,12 @@ export default function Settings() {
       <Section title="Privacy">
         <p className="muted" style={{ marginTop: 0 }}>
           {profile.consent ? `You agreed to our use of your health information on ${new Date(profile.consent.health).toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' })}.` : ''}{' '}
-          <Link href="/privacy">Privacy policy</Link> · <Link href="/terms">Terms</Link>
+          <Link href="/privacy">Privacy Policy</Link> · <Link href="/terms">Terms</Link>
         </p>
         {!confirmWithdraw
           ? <button className="linkbtn" onClick={() => setConfirmWithdraw(true)}>Withdraw My Consent</button>
           : <><p className="err">This deletes your height, weight, age, sex, allergies and your planned weeks. You&apos;ll be asked to agree again before you can plan more meals.</p>
-              <button className="btn" onClick={() => { update(withdrawConsent); router.push('/consent'); }}>Yes, withdraw and delete them</button>
+              <button className="btn" onClick={() => { update(withdrawConsent); router.push('/consent'); }}>Yes, Withdraw and Delete Them</button>
               <button className="linkbtn" onClick={() => setConfirmWithdraw(false)}>Keep Things as They Are</button></>}
       </Section>
 
