@@ -12,7 +12,7 @@ jobs:
       - uses: actions/setup-node@v4
         with: { node-version: 22, cache: npm }
       - uses: actions/setup-java@v4
-        with: { distribution: temurin, java-version: '17' }
+        with: { distribution: temurin, java-version: '21' }
       # GitHub's Ubuntu runners already carry the Android SDK (ANDROID_HOME); just make sure the platform we compile against is there.
       - name: Android platform and licences
         run: |
