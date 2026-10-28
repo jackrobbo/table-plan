@@ -26,10 +26,9 @@ export default function SiteHeader() {
           <span className="hname">Table Plan</span>
           <span className="beta" aria-hidden>BETA</span>
         </Link>
-        {!focused && signedIn !== null && (
-          <nav className="hnav" aria-label="Main">
-            {signedIn ? <>{link('/plan', 'Plan')}{link('/account', 'Account')}</> : link('/signin', 'Sign in')}
-          </nav>
+        {/* Signed in: the bottom tab bar carries the navigation. */}
+        {!focused && signedIn === false && (
+          <nav className="hnav" aria-label="Main">{link('/signin', 'Sign in')}</nav>
         )}
       </div>
     </header>

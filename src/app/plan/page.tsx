@@ -1,6 +1,6 @@
 'use client';
 import { useEffect, useMemo, useState } from 'react';
-import { useRouter } from 'next/navigation';
+import { useRouter, useSearchParams } from 'next/navigation';
 import PriceNote from '@/components/PriceNote';
 import Screen from '@/components/Screen';
 import MealImage from '@/components/MealImage';
@@ -26,6 +26,7 @@ import { shortDate } from '@/lib/pricing/refresh';
 import { computeTargets } from '@/lib/targets';
 import Link from 'next/link';
 import { useAccess } from '@/lib/useAccess';
+import { setTabBadge } from '@/lib/tabBadge';
 import { useNow } from '@/lib/useNow';
 import { useProfile } from '@/lib/useProfile';
 
@@ -39,8 +40,11 @@ export default function Plan() {
   const now = useNow();
   const { session, profile, ready, update } = useProfile();
   const { access, loaded: accessLoaded } = useAccess(session);
-  const [tab, setTab] = useState<'this' | 'upcoming'>('this');
-  const [sub, setSub] = useState<'plan' | 'ingredients' | 'recipes'>('plan');
+  // Which view is open comes from the bottom tab bar (?v=upcoming | recipes); the Plan / Ingredients switch stays local.
+  const view = useSearchParams().get('v');
+  const tab: 'this' | 'upcoming' = view === 'upcoming' ? 'upcoming' : 'this';
+  const [planSub, setSub] = useState<'plan' | 'ingredients'>('plan');
+  const sub: 'plan' | 'ingredients' | 'recipes' = view === 'recipes' ? 'recipes' : planSub;
   const [picked, setPicked] = useState<string | null>(null);
   const [sheet, setSheet] = useState<string | null>(null);
   const [rate, setRate] = useState<string | null>(null);
@@ -72,6 +76,8 @@ export default function Plan() {
   const weeks = profile?.weeks ?? {};
   const snap = useMemo(() => snapshot(weeks, now), [weeks, now]);
   const due = useMemo(() => (profile ? dueReminders(weeks, now, profile.reminders.shown)[0] : undefined), [weeks, now, profile]);
+  const badge = badgeCount(snap);
+  useEffect(() => { if (snap.thisWeek) setTabBadge(badge); }, [badge, snap.thisWeek]);
 
   if (!ready || !profile?.completed || !session || !snap.thisWeek) {
     return (
@@ -88,7 +94,6 @@ export default function Plan() {
   const finished = wst === 'done';
   const plan = week.plan!;
   const shopping = buildShopping(plan);
-  const badge = badgeCount(snap);
   const newIds = new Set(plan.days.flatMap((d) => d.meals).filter((m) => m.slot !== 'snack' && recipeById.get(m.recipeId) && isNewForYou(profile, m.recipeId, m.slot)).map((m) => m.recipeId));
   const upcomingSel = snap.upcoming.find((x) => x.week.start === (picked ?? snap.toPlan?.start ?? snap.upcoming[0]?.week.start)) ?? snap.upcoming[0];
 
@@ -103,23 +108,14 @@ export default function Plan() {
   };
 
   return (
-    <Screen footer={<>
-      {accessLoaded && !access && <Link className="btn" href="/subscribe">Save and checkout</Link>}
-      <Link className="linkbtn" href="/account">Account</Link>
-    </>}>
+    <Screen footer={accessLoaded && !access ? <Link className="btn" href="/subscribe">Save and checkout</Link> : undefined}>
       <p className="step">Welcome back</p>
-      <div className="switch" role="tablist">
-        <button role="tab" aria-selected={tab === 'this'} className={tab === 'this' ? 'on' : ''} onClick={() => setTab('this')}>This week</button>
-        <button role="tab" aria-selected={tab === 'upcoming'} className={tab === 'upcoming' ? 'on' : ''} onClick={() => setTab('upcoming')}>
-          Upcoming{badge > 0 && <span className="badge">{badge}</span>}
-        </button>
-      </div>
 
       {due && (
         <div className="reminder" role="status">
           <div><b>{due.title}</b><div>{due.body}</div></div>
           <div className="row2">
-            <button className="btn inline small" onClick={() => { dismiss(); setTab('upcoming'); }}>Plan now</button>
+            <button className="btn inline small" onClick={() => { dismiss(); router.push('/plan?v=upcoming'); }}>Plan now</button>
             <button className="linkbtn" onClick={dismiss}>Dismiss</button>
           </div>
         </div>
@@ -127,16 +123,17 @@ export default function Plan() {
 
       {tab === 'this' && (
         <div className="fade" key="this">
-          <h1>{finished ? 'Last week' : started ? 'This week' : Object.keys(weeks).length > 3 ? 'Next up' : 'Your first week'} <span className="wk">{weekLabel(week.start)}</span></h1>
-          <p className="sub">
+          <h1>{sub === 'recipes' ? 'Recipes' : finished ? 'Last week' : started ? 'This week' : Object.keys(weeks).length > 3 ? 'Next up' : 'Your first week'} <span className="wk">{weekLabel(week.start)}</span></h1>
+          {sub !== 'recipes' && <p className="sub">
             {finished ? 'Nothing is planned for this week. Plan the next one from Upcoming.' : started ? `Kept inside ${t.band[0].toLocaleString('en-GB')}–${t.band[1].toLocaleString('en-GB')} kcal and ≥${t.protein}g protein a day.`
               : `Starts Mon ${dayLabel(week.start)}. Built from what you like, inside ${t.band[0].toLocaleString('en-GB')}–${t.band[1].toLocaleString('en-GB')} kcal and ≥${t.protein}g protein a day.`}
-          </p>
-          <div className="seg2">
-            <button className={sub === 'plan' ? 'on' : ''} onClick={() => setSub('plan')}>Plan</button>
-            {!started && <button className={sub === 'ingredients' ? 'on' : ''} onClick={() => setSub('ingredients')}>Ingredients</button>}
-            <button className={sub === 'recipes' ? 'on' : ''} onClick={() => setSub('recipes')}>Recipes</button>
-          </div>
+          </p>}
+          {sub !== 'recipes' && !started && (
+            <div className="seg2">
+              <button className={sub === 'plan' ? 'on' : ''} onClick={() => setSub('plan')}>Plan</button>
+              <button className={sub === 'ingredients' ? 'on' : ''} onClick={() => setSub('ingredients')}>Ingredients</button>
+            </div>
+          )}
 
           {sub === 'plan' && <>
             {/* Built from the days, not plan.issues, so plans saved before the wording changed show the current message. */}

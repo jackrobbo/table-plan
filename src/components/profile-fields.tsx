@@ -1,5 +1,6 @@
 'use client';
 import { createContext, useContext, useState } from 'react';
+import { Armchair, Bike, Coffee, Dumbbell, Footprints, Sandwich, Scale, TrendingDown, TrendingUp, Utensils, type LucideIcon } from 'lucide-react';
 import { ALLERGENS, type Allergen } from '@/lib/allergens';
 import { DISLIKE_GROUPS } from '@/lib/dislikes';
 import { advance, setAllergies, swipeCourses } from '@/lib/onboarding';
@@ -21,25 +22,26 @@ export const Title = ({ children, sub }: { children: React.ReactNode; sub?: stri
   return plain ? (sub ? <p className="muted" style={{ marginTop: 0 }}>{sub}</p> : null) : <><h2>{children}</h2>{sub && <p className="sub">{sub}</p>}</>;
 };
 
-function Radio({ on, title, desc, onClick }: { on: boolean; title: string; desc?: string; onClick: () => void }) {
+function Radio({ on, title, desc, icon: Icon, onClick }: { on: boolean; title: string; desc?: string; icon?: LucideIcon; onClick: () => void }) {
   return (
     <button className={'opt' + (on ? ' on' : '')} role="radio" aria-checked={on} onClick={onClick}>
-      <span><b>{title}</b>{desc && <span className="d">{desc}</span>}</span><span className="radio" />
+      {Icon && <span className="opt-ico"><Icon size={20} aria-hidden /></span>}
+      <span className="opt-txt"><b>{title}</b>{desc && <span className="d">{desc}</span>}</span><span className="radio" />
     </button>
   );
 }
 
 export function GoalStep({ p, update }: SP) {
-  const goals: [Goal, string, string][] = [
-    ['lose', 'Lose weight', 'Steady loss, about 1 lb a week'],
-    ['maintain', 'Maintain', 'Steady energy'],
-    ['gain', 'Gain weight', 'Surplus for muscle'],
+  const goals: [Goal, string, string, LucideIcon][] = [
+    ['lose', 'Lose weight', 'Steady loss, about 1 lb a week', TrendingDown],
+    ['maintain', 'Maintain', 'Steady energy', Scale],
+    ['gain', 'Gain weight', 'Surplus for muscle', TrendingUp],
   ];
   return (
     <>
       <Title sub="Sets your calorie band and protein floor.">What&apos;s your goal?</Title>
       <div className="opts" role="radiogroup">
-        {goals.map(([g, t, d]) => <Radio key={g} on={p.goal === g} title={t} desc={d} onClick={() => update((x) => ({ ...x, goal: g }))} />)}
+        {goals.map(([g, t, d, ic]) => <Radio key={g} on={p.goal === g} title={t} desc={d} icon={ic} onClick={() => update((x) => ({ ...x, goal: g }))} />)}
       </div>
     </>
   );
@@ -123,17 +125,17 @@ export function SexStep({ p, update }: SP) {
 }
 
 export function ActivityStep({ p, update }: SP) {
-  const opts: [number, string, string][] = [
-    [1.2, 'Mostly sitting', 'Desk job, little exercise'],
-    [1.375, 'Lightly active', 'On your feet, walks'],
-    [1.55, 'Active', 'Exercise 3–5 days'],
-    [1.725, 'Very active', 'Physical job or daily training'],
+  const opts: [number, string, string, LucideIcon][] = [
+    [1.2, 'Mostly sitting', 'Desk job, little exercise', Armchair],
+    [1.375, 'Lightly active', 'On your feet, walks', Footprints],
+    [1.55, 'Active', 'Exercise 3–5 days', Bike],
+    [1.725, 'Very active', 'Physical job or daily training', Dumbbell],
   ];
   return (
     <>
       <Title sub="Most days, including work.">How active are you?</Title>
       <div className="opts" role="radiogroup">
-        {opts.map(([v, t, d]) => <Radio key={v} on={p.stats.activity === v} title={t} desc={d} onClick={() => update((x) => ({ ...x, stats: { ...x.stats, activity: v } }))} />)}
+        {opts.map(([v, t, d, ic]) => <Radio key={v} on={p.stats.activity === v} title={t} desc={d} icon={ic} onClick={() => update((x) => ({ ...x, stats: { ...x.stats, activity: v } }))} />)}
       </div>
     </>
   );
@@ -141,6 +143,7 @@ export function ActivityStep({ p, update }: SP) {
 
 export function MealsStep({ p, update }: SP) {
   const labels: Record<MealTime, string> = { breakfast: 'Breakfast', lunch: 'Lunch', dinner: 'Dinner' };
+  const mealIcon: Record<MealTime, LucideIcon> = { breakfast: Coffee, lunch: Sandwich, dinner: Utensils };
   const set = (m: MealTime, patch: Partial<Profile['meals'][MealTime]>) =>
     update((x) => ({ ...x, meals: { ...x.meals, [m]: { ...x.meals[m], ...patch } } }));
   return (
@@ -151,7 +154,7 @@ export function MealsStep({ p, update }: SP) {
         return (
           <div className="mealrow" key={m}>
             <div className="top">
-              <h3>{labels[m]}</h3>
+              <h3 className="ico-h">{(() => { const Icon = mealIcon[m]; return <Icon size={18} aria-hidden />; })()}{labels[m]}</h3>
               <div className="seg2 small">
                 <button className={s.mode === 'plan' ? 'on' : ''} onClick={() => set(m, { mode: 'plan' })}>Plan it</button>
                 <button className={s.mode === 'macros' ? 'on' : ''} onClick={() => set(m, { mode: 'macros', extraServings: 0 })}>Macros only</button>

@@ -1,6 +1,7 @@
 'use client';
 import { useState } from 'react';
 import { createPortal } from 'react-dom';
+import { Apple, Coffee, Plus, Sandwich, Utensils, type LucideIcon } from 'lucide-react';
 import { PRODUCTS, RECIPES } from '@/data';
 import MealImage from '@/components/MealImage';
 import { tierMark } from '@/lib/budget';
@@ -10,13 +11,14 @@ import type { Plan, PlannedDay, PlannedMeal } from '@/lib/planner/types';
 
 export const recipeById = new Map(RECIPES.map((r) => [r.id, r]));
 const SLOT_LABEL: Record<string, string> = { breakfast: 'Breakfast', lunch: 'Lunch', snack: 'Snack', dinner: 'Dinner' };
+const SLOT_ICON: Record<string, LucideIcon> = { breakfast: Coffee, lunch: Sandwich, snack: Apple, dinner: Utensils };
 export const money = (p: number) => '£' + (p / 100).toFixed(2);
 
 export function MealRow({ m, tick, onTick, onOpen, onSwap, isNew }: { m: PlannedMeal; tick?: boolean; onTick?: () => void; onOpen?: () => void; onSwap?: () => void; isNew?: boolean }) {
   const r = recipeById.get(m.recipeId)!;
   return (
     <div className="meal">
-      <span className="slot">{SLOT_LABEL[m.slot]}</span>
+      <span className="slot">{(() => { const Icon = SLOT_ICON[m.slot]; return Icon && <Icon size={14} aria-hidden />; })()}{SLOT_LABEL[m.slot]}</span>
       <button className="mbody linkish" onClick={onOpen} disabled={!onOpen}>
         <div className="mname">{r.e} {r.n}</div>
         <div className="tags">
@@ -66,7 +68,7 @@ export function DayCard({ d, index, ticks, onTick, onOpen, onSwap, label, today,
       ))}
       {!done && d.topups.map((t) => (
         <div className="meal" key={t.n}>
-          <span className="slot">Top-up</span>
+          <span className="slot"><Plus size={14} aria-hidden />Top-up</span>
           <div className="mbody"><div className="mname">{t.n}</div>
             <div className="tags"><span className="p">P {t.p}g</span><span>{t.k} kcal</span><span className="adj">Added to hit your day</span></div></div>
         </div>

@@ -28,6 +28,8 @@ Where we are: free beta live at https://table-plan.co.uk (open sign-up, no paywa
 - [ ] **[CLAUDE] Check Sunday 1 Nov price-refresh run** (04:17 UTC) pushed to `main`.
 - [ ] **[CLAUDE] After Zoho is live**: check DNS records, set `NEXT_PUBLIC_CONTACT_EMAIL`, update legal pages and the extension's site match for `table-plan.co.uk`.
 - [ ] **[CLAUDE] UI/UX review pass**: screenshot every key screen at phone size, collect Jack's feedback, batch the changes.
+- [x] **[CLAUDE] Sticky bottom navigation** (Jack, welcome-screen comment): glass tab bar (Plan, Upcoming, Recipes, Account) on /plan, /account, /settings; setup flows keep their pinned button. Built in the preview, not committed or pushed. Replaces the header links and the overlapping Account link. Still to check on a real phone and in light mode.
+- [x] **[CLAUDE] Icon library** (Jack): Lucide (`lucide-react`) in the tab bar, goal and activity cards, meal-time headings and meal slots. Not yet: Account/Settings rows, welcome screen, allergen chips, swap/tick buttons. Uncommitted.
 - [ ] **[CLAUDE] Remaining UX gaps** (`design/ux-audit.md`): first-week "Generating" screen, supermarket choice, Pick for me / Pick my own on the Upcoming card, name greeting.
 - [ ] **[CLAUDE] Android polish**: item-by-item step-through inside the in-app Morrisons screen, better filling screen.
 - [ ] **[CLAUDE] Multi-store groundwork**: product catalogue keyed by (store, ingredient), store adapter interface; Ocado first (same platform as Morrisons). See the multi-store note below.

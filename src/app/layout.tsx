@@ -5,6 +5,8 @@ import './glass.css';
 import ErrorReporter from '@/components/ErrorReporter';
 import { PwaInit } from '@/components/InstallSheet';
 import SiteHeader from '@/components/SiteHeader';
+import TabBar from '@/components/TabBar';
+import { Suspense } from 'react';
 
 export const metadata: Metadata = {
   title: { default: 'Table Plan: your goals, your meals, your budget', template: '%s · Table Plan' },
@@ -20,7 +22,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
   await connection();
   return (
     <html lang="en-GB" suppressHydrationWarning>
-      <body><PwaInit /><ErrorReporter /><SiteHeader />{children}</body>
+      <body><PwaInit /><ErrorReporter /><SiteHeader />{children}<Suspense fallback={null}><TabBar /></Suspense></body>
     </html>
   );
 }
