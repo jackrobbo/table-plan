@@ -59,6 +59,7 @@ out('recipes', recipes.filter((r) => r.status === 'live').map((r) => ({
   cb: resolved.get(r.slug)!.m.carbs_g ?? null, f: resolved.get(r.slug)!.m.fat_g ?? null,
   cost: resolved.get(r.slug)!.cost, b: resolved.get(r.slug)!.budget,
   ...(r.image && images[r.slug] ? { img: { a: r.image.alt, c: images[r.slug].colour } } : {}),
+  ...(r.time ? { t: r.time.prep + r.time.cook } : {}),
   macros_only: r.macros_only ?? false,
   fresh: r.ingredients.map((l) => [l.ingredient, l.qty]), cup: r.cupboard, ...(r.cupboard_qty ? { cq: r.cupboard_qty } : {}), m: r.method,
   allergens: deriveAllergens(r, ingMap),

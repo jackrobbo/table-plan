@@ -5,6 +5,10 @@
  "emoji": "🍅",
  "serves": 1,
  "status": "live",
+ "time": {
+  "prep": 6,
+  "cook": 25
+ },
  "ingredients": [
   {
    "ingredient": "lentils",

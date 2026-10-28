@@ -412,3 +412,4 @@ body:has(.welcome) .site-header{display:none;}   /* the page carries its own log
 .bw-steps li.now .bw-mark{border-color:var(--ink); border-top-color:transparent; animation:bwSpin .8s linear infinite;}
 .bw-steps li.done .bw-mark{background:var(--ok); border-color:var(--ok); color:#fff; animation:tickPop var(--dur-base,.26s) var(--ease-spring,ease);}
 @keyframes bwSpin{to{transform:rotate(360deg)}}
+.tags span.time{display:inline-flex; align-items:center; gap:4px;}

@@ -1,6 +1,8 @@
 'use client';
 import { useMemo, useState } from 'react';
 import { createPortal } from 'react-dom';
+import { Clock } from 'lucide-react';
+import { timeLabel } from '@/lib/cookTime';
 import MealImage from '@/components/MealImage';
 import { money, recipeById } from '@/components/week';
 import { tierMark } from '@/lib/budget';
@@ -49,6 +51,7 @@ export default function SwapSheet({ plan, target, input, onPick, onClose }: {
                 <span className="sname">{o.recipe.n}</span>
                 <span className="tags" style={{ margin: '4px 0 2px' }}>
                   <span className="p">P {o.recipe.p}g</span><span>{o.recipe.k} kcal</span>
+                  {timeLabel(o.recipe.t) && <span className="time"><Clock size={11} aria-hidden />{timeLabel(o.recipe.t)}</span>}
                   {o.recipe.cost != null && <span>≈ {money(o.recipe.cost)} · {tierMark(o.recipe.b)}</span>}
                   {!o.liked && <span>New for you</span>}
                   {!o.withinSpend && <span className="adj">Over your spend</span>}

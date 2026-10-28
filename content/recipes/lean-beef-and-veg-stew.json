@@ -5,6 +5,10 @@
  "emoji": "🍲",
  "serves": 2,
  "status": "live",
+ "time": {
+  "prep": 10,
+  "cook": 40
+ },
  "ingredients": [
   {
    "ingredient": "mince",

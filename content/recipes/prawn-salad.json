@@ -5,6 +5,10 @@
  "emoji": "🍤",
  "serves": 1,
  "status": "live",
+ "time": {
+  "prep": 5,
+  "cook": 0
+ },
  "per_portion": {
   "kcal": 180,
   "protein_g": 23

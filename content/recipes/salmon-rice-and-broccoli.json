@@ -5,6 +5,10 @@
  "emoji": "🍣",
  "serves": 2,
  "status": "live",
+ "time": {
+  "prep": 5,
+  "cook": 20
+ },
  "ingredients": [
   {
    "ingredient": "salmon",

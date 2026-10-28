@@ -5,6 +5,10 @@
  "emoji": "🥙",
  "serves": 1,
  "status": "live",
+ "time": {
+  "prep": 6,
+  "cook": 3
+ },
  "ingredients": [
   {
    "ingredient": "pittas",

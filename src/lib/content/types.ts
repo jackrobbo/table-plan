@@ -47,6 +47,8 @@ export interface RecipeDef {
   /** Amount of each cupboard item in the WHOLE recipe, in g/ml. Needed to compute macros and cost. */
   cupboard_qty?: Record<string, number>;
   method: string[];
+  /** Estimated minutes of hands-on prep and of cooking (an estimate, shown as "≈"). Required for live meals that are cooked or assembled. */
+  time?: { prep: number; cook: number };
   /** Allergens not derivable from ingredients (e.g. cross-contact). */
   extra_allergens?: Allergen[];
   /** Macros-only meal (e.g. eating out / ready meal): no ingredients, method or pricing needed. */

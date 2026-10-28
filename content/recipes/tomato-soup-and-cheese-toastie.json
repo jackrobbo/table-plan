@@ -5,6 +5,10 @@
  "emoji": "🍅",
  "serves": 1,
  "status": "live",
+ "time": {
+  "prep": 3,
+  "cook": 8
+ },
  "ingredients": [
   {
    "ingredient": "tomsoup",

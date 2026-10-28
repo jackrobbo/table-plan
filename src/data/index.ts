@@ -20,6 +20,8 @@ export interface Recipe {
   cq?: Record<string, number>;
   /** Marginal cost of one portion in pence, and its low/medium/high tier (see BUDGET_LIMITS). null for macros-only meals. */
   cost?: number | null; b?: Budget | null;
+  /** Estimated minutes, prep plus cooking (0 = ready to eat). */
+  t?: number;
   /** Header photo: alt text and the placeholder colour. Files are /meals/<id>-<width>.webp (see src/lib/images.ts). */
   img?: { a: string; c: string };
 }

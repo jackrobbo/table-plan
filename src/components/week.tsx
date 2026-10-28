@@ -1,7 +1,8 @@
 'use client';
 import { useState } from 'react';
 import { createPortal } from 'react-dom';
-import { Apple, Coffee, Plus, Sandwich, Utensils, type LucideIcon } from 'lucide-react';
+import { Apple, Clock, Coffee, Plus, Sandwich, Utensils, type LucideIcon } from 'lucide-react';
+import { timeLabel } from '@/lib/cookTime';
 import { PRODUCTS, RECIPES } from '@/data';
 import MealImage from '@/components/MealImage';
 import { tierMark } from '@/lib/budget';
@@ -23,6 +24,7 @@ export function MealRow({ m, tick, onTick, onOpen, onSwap, isNew }: { m: Planned
         <div className="mname">{r.e} {r.n}</div>
         <div className="tags">
           <span className="p">P {m.protein}g</span>{r.cb != null && <span>C {Math.round(r.cb * m.scale)}g</span>}{r.f != null && <span>F {Math.round(r.f * m.scale)}g</span>}<span>{m.kcal} kcal</span>
+          {timeLabel(r.t) && <span className="time" title="Estimated prep and cooking time"><Clock size={11} aria-hidden />{timeLabel(r.t)}</span>}
           {r.cost != null && <span title="Estimated cost of this portion">≈ {money(Math.round(r.cost * m.scale))}</span>}
           {Math.abs(m.scale - 1) >= 0.02 && <span className="adj">Portion {Math.round(m.scale * 100)}%</span>}
           {m.extra > 0 && <span>+{m.extra} to share</span>}
@@ -146,6 +148,7 @@ function RecipeSheetBody({ r, onClose, portions, onNever }: { r: NonNullable<Ret
           {r.cb != null && <span>C {r.cb}g</span>}
           {r.f != null && <span>F {r.f}g</span>}
           <span>{r.k} kcal</span><span>serves {r.serves}</span>
+          {timeLabel(r.t) && <span className="time" title="Estimated prep and cooking time"><Clock size={11} aria-hidden />{timeLabel(r.t)}</span>}
           {r.cost != null && <span title="Cost of the ingredients used, per portion">≈ {money(r.cost)} a portion · {tierMark(r.b)}</span>}
         </div>
         <p className="contains">

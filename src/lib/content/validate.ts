@@ -55,6 +55,12 @@ export function validateContent(ingredients: IngredientDef[], recipes: RecipeDef
     if (!COURSES.includes(r.course)) err(w, `course must be one of ${COURSES.join(', ')}`);
     if (!STATUSES.includes(r.status)) err(w, `status must be one of ${STATUSES.join(', ')}`);
     if (!Number.isInteger(r.serves) || r.serves < 1) err(w, 'serves must be a whole number >= 1');
+    if (r.time) {
+      const { prep, cook } = r.time;
+      if (!Number.isInteger(prep) || !Number.isInteger(cook) || prep < 0 || cook < 0) err(w, 'time.prep and time.cook must be whole minutes >= 0');
+      else if (prep + cook > 240) warn(w, `${prep + cook} minutes looks long for a weeknight meal`);
+      else if (prep + cook === 0 && r.course !== 'snack') err(w, 'only snacks can take no time');
+    } else if (r.status === 'live' && !r.macros_only) err(w, 'live recipes need an estimated time ({ prep, cook } minutes)');
 
     // Grandfathered = a PoC recipe still carrying its hand-declared macros; once they are computed it is held to the full bar.
     const poc = r.source === 'poc' && !!r.per_portion;

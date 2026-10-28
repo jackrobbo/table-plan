@@ -5,6 +5,10 @@
  "emoji": "🍗",
  "serves": 2,
  "status": "live",
+ "time": {
+  "prep": 12,
+  "cook": 18
+ },
  "ingredients": [
   {
    "ingredient": "breast",

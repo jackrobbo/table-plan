@@ -62,7 +62,7 @@ describe('buildVariants', () => {
 
 describe('image rules in content validation', () => {
   const ing: IngredientDef = { slug: 'egg', name: 'Egg', unit: 'g', cupboard: false, allergens: ['eggs'], per100: { kcal: 130, protein_g: 12, carbs_g: 0, fat_g: 9 }, cofid: { verified: true }, product: { retailer: 'morrisons', name: 'Eggs', price_pence: 100, pack_size: 100, slug: 'x/1' } };
-  const rec = (over: Partial<RecipeDef> = {}): RecipeDef => ({ slug: 'omelette', name: 'Omelette', course: 'breakfast', serves: 1, status: 'live', ingredients: [{ ingredient: 'egg', qty: 150 }], cupboard: [], method: ['Cook.'], ...over });
+  const rec = (over: Partial<RecipeDef> = {}): RecipeDef => ({ slug: 'omelette', name: 'Omelette', course: 'breakfast', serves: 1, status: 'live', ingredients: [{ ingredient: 'egg', qty: 150 }], cupboard: [], method: ['Cook.'], time: { prep: 3, cook: 5 }, ...over });
   const errs = (r: RecipeDef, images?: Record<string, unknown>) => validateContent([ing], [r], images).filter((i) => i.level === 'error').map((i) => i.message);
 
   it('does not check photos when no manifest is given', () => { expect(errs(rec({ image: { alt: 'x' } }))).toEqual([]); });

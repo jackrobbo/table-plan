@@ -5,6 +5,10 @@
  "emoji": "🍠",
  "serves": 1,
  "status": "live",
+ "time": {
+  "prep": 10,
+  "cook": 18
+ },
  "ingredients": [
   {
    "ingredient": "sweetpot",
