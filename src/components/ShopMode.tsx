@@ -22,19 +22,22 @@ export default function ShopMode({ shopping, have, onClose }: { shopping: Shoppi
           <p className="muted" style={{ margin: '10px 0 0' }}>{i + 1} of {lines.length} · {l.category}</p>
           <h2 style={{ margin: '4px 0' }}>{l.name}{l.packs > 1 ? ` ×${l.packs}` : ''}</h2>
           <p className="muted" style={{ margin: 0 }}>≈ {money(l.costPence)} · for {l.usedBy.slice(0, 3).join(', ')}</p>
-          <a className="btn" style={{ marginTop: 14 }} href={`https://groceries.morrisons.com/products/${l.slug}`} target="_blank" rel="noopener noreferrer">Open at Morrisons ↗</a>
-          <p className="muted" style={{ margin: '8px 0' }}>Add {l.packs > 1 ? `${l.packs} of these` : 'it'} to your trolley there, then come back here.</p>
-          <button className="btn ghost" onClick={() => setI(i + 1)}>Added It, Next</button>
-          <div style={{ display: 'flex', justifyContent: 'space-between' }}>
-            <button className="linkbtn" disabled={i === 0} onClick={() => setI(i - 1)}>Back</button>
-            <button className="linkbtn" onClick={() => setI(i + 1)}>Skip This One</button>
-          </div>
+          <p className="muted" style={{ margin: '14px 0 8px' }}>Add {l.packs > 1 ? `${l.packs} of these` : 'it'} to your trolley at Morrisons, then come back here.</p>
         </>) : (<>
           <h2>That&apos;s the List</h2>
           <p className="muted">Open your Morrisons trolley to check it, choose a delivery slot and pay. Anything you skipped is still on your list.</p>
-          <a className="btn" href="https://groceries.morrisons.com/" target="_blank" rel="noopener noreferrer">Open Morrisons ↗</a>
         </>)}
-        <button className="linkbtn" onClick={onClose}>Close</button>
+        <div className="sheet-foot">
+          {l ? (<>
+            <a className="btn" href={`https://groceries.morrisons.com/products/${l.slug}`} target="_blank" rel="noopener noreferrer">Open at Morrisons ↗</a>
+            <button className="btn ghost" onClick={() => setI(i + 1)}>Added It, Next</button>
+            <div style={{ display: 'flex', justifyContent: 'space-between' }}>
+              <button className="linkbtn" disabled={i === 0} onClick={() => setI(i - 1)}>Back</button>
+              <button className="linkbtn" onClick={() => setI(i + 1)}>Skip This One</button>
+            </div>
+          </>) : <a className="btn" href="https://groceries.morrisons.com/" target="_blank" rel="noopener noreferrer">Open Morrisons ↗</a>}
+          <button className="linkbtn" onClick={onClose}>Close</button>
+        </div>
       </div>
     </div>,
     document.body,

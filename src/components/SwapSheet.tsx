@@ -63,7 +63,7 @@ export default function SwapSheet({ plan, target, input, onPick, onClose }: {
             </button>
           );
         })}
-        <button className="btn ghost" style={{ marginTop: 14 }} onClick={onClose}>Cancel</button>
+        <div className="sheet-foot"><button className="btn ghost" onClick={onClose}>Cancel</button></div>
       </div>
     </div>,
     document.body,

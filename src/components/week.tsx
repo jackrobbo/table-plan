@@ -1,7 +1,7 @@
 'use client';
 import { useState } from 'react';
 import { createPortal } from 'react-dom';
-import { Apple, ArrowLeftRight, Clock, Coffee, Plus, Sandwich, User, Users, Utensils, type LucideIcon } from 'lucide-react';
+import { Apple, ArrowLeftRight, Clock, Coffee, Plus, PoundSterling, Sandwich, ShieldCheck, TriangleAlert, User, Users, Utensils, type LucideIcon } from 'lucide-react';
 import { timeLabel } from '@/lib/cookTime';
 import { PRODUCTS, RECIPES } from '@/data';
 import MealImage from '@/components/MealImage';
@@ -152,18 +152,26 @@ function RecipeSheetBody({ r, onClose, portions, onNever }: { r: NonNullable<Ret
         <div className="grab" />
         {r.img ? <MealImage r={r} size="sheet" sizes="(max-width: 430px) 100vw, 430px" /> : <div className="sheet-hero" aria-hidden>{r.e}</div>}
         <h2>{r.n}</h2>
-        <div className="tags" style={{ margin: '8px 0 10px' }}>
-          <span className="p">P {r.p}g</span>
-          {r.cb != null && <span>C {r.cb}g</span>}
-          {r.f != null && <span>F {r.f}g</span>}
-          <span>{r.k} kcal</span><span>serves {r.serves}</span>
-          {timeLabel(r.t) && <span className="time" title="Estimated prep and cooking time"><Clock size={11} aria-hidden />{timeLabel(r.t)}</span>}
-          {r.cost != null && <span title="Cost of the ingredients used, per portion">≈ {money(r.cost)} a portion · {tierMark(r.b)}</span>}
+        <div className="rstats">
+          {timeLabel(r.t) && <div className="rs" title="Estimated prep and cooking time"><Clock size={16} aria-hidden /><b>{timeLabel(r.t)!.replace('≈ ', '')}</b><small>Time</small></div>}
+          {r.cost != null && <div className="rs" title="Cost of the ingredients used, per portion"><PoundSterling size={16} aria-hidden /><b>{money(r.cost)}</b><small>A portion</small></div>}
+          <div className="rs"><Users size={16} aria-hidden /><b>{r.serves}</b><small>{r.serves === 1 ? 'Serving' : 'Servings'}</small></div>
         </div>
-        <p className="contains">
-          {allergens.length ? <><b>Contains:</b> {allergens.join(', ')}.</> : <b>No major allergens declared on the products used.</b>}{' '}
-          <span className="muted">From the pack labels. &ldquo;May contain&rdquo; traces aren&apos;t included, so check the packs if you have a serious allergy.</span>
-        </p>
+        <div className="rmacros" aria-label="Nutrition per portion">
+          <div className="p"><b>{r.p}g</b><small>Protein</small></div>
+          {r.cb != null && <div><b>{r.cb}g</b><small>Carbs</small></div>}
+          {r.f != null && <div><b>{r.f}g</b><small>Fat</small></div>}
+          <div><b>{r.k}</b><small>kcal</small></div>
+        </div>
+        <div className={'rallergens' + (allergens.length ? ' has' : '')}>
+          {allergens.length ? <TriangleAlert size={16} aria-hidden /> : <ShieldCheck size={16} aria-hidden />}
+          <div>
+            {allergens.length
+              ? <><b>Contains</b><div className="rchips">{allergens.map((a) => <span key={a}>{a}</span>)}</div></>
+              : <b>No major allergens declared on the products used</b>}
+            <small>From the pack labels. &ldquo;May contain&rdquo; traces aren&apos;t included, so check the packs if you have a serious allergy.</small>
+          </div>
+        </div>
         <div className="seg2" role="tablist" style={{ margin: '12px 0 4px' }}>
           <button role="tab" aria-selected={tab === 'ingredients'} className={tab === 'ingredients' ? 'on' : ''} onClick={() => setTab('ingredients')}>Ingredients</button>
           <button role="tab" aria-selected={tab === 'cook'} className={tab === 'cook' ? 'on' : ''} onClick={() => setTab('cook')}>How to Cook</button>
@@ -181,7 +189,7 @@ function RecipeSheetBody({ r, onClose, portions, onNever }: { r: NonNullable<Ret
         {onNever && (!asked
           ? <button className="linkbtn" style={{ marginTop: 10 }} onClick={() => setAsked(true)}>Never Suggest This Again</button>
           : <p className="note warn-note">We won&apos;t plan or offer this meal in future weeks (weeks already planned stay as they are). <button className="linkbtn" onClick={() => { onNever(r.id); onClose(); }}>Yes, Never Suggest It</button> <button className="linkbtn" onClick={() => setAsked(false)}>Keep It</button></p>)}
-        <button className="btn ghost" style={{ marginTop: 14 }} onClick={onClose}>Close</button>
+        <div className="sheet-foot"><button className="btn ghost" onClick={onClose}>Close</button></div>
       </div>
     </div>
   );

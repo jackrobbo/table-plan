@@ -81,7 +81,7 @@ body::before{content:''; position:fixed; inset:0; z-index:-1; pointer-events:non
 
 /* bottom action bar: a soft glass fade instead of a hard band */
 .cta-bar{background:none; isolation:isolate;}
-.cta-bar::before{content:''; position:absolute; inset:0; z-index:-1; pointer-events:none;
+.cta-bar::before{content:''; position:absolute; top:0; bottom:0; left:calc(50% - 50vw); right:calc(50% - 50vw); z-index:-1; pointer-events:none;   /* full viewport width, so the fade has no visible side edges */
   -webkit-backdrop-filter:blur(16px) saturate(160%); backdrop-filter:blur(16px) saturate(160%);
   background:linear-gradient(to bottom,transparent,color-mix(in srgb,var(--bg) 88%,transparent) 55%);
   -webkit-mask-image:linear-gradient(to bottom,transparent,#000 30%); mask-image:linear-gradient(to bottom,transparent,#000 30%);}

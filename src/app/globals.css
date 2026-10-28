@@ -504,3 +504,27 @@ a.opt{text-decoration:none; color:inherit;} a.opt .d{text-decoration:none;}
 .wkrow.later{opacity:.75; background:transparent; border-style:dashed;}
 .meal .mmeta .feeds{display:inline-flex; align-items:center; gap:1px; color:var(--ink2);}
 .meal .mmeta .feeds svg{stroke-width:2;}
+
+/* ---- recipe sheet: stats, nutrition, allergens ---- */
+.rstats{display:grid; grid-auto-flow:column; grid-auto-columns:1fr; gap:8px; margin:10px 0 8px;}
+.rs{display:flex; flex-direction:column; align-items:center; gap:1px; padding:10px 6px; border-radius:var(--radius-sm); background:var(--fill); text-align:center;}
+.rs svg{color:var(--ink2); margin-bottom:2px;} .rs b{font-size:16px; font-variant-numeric:tabular-nums; line-height:1.2;} .rs small{font-size:11px; color:var(--ink2); text-transform:uppercase; letter-spacing:.05em;}
+.rmacros{display:grid; grid-auto-flow:column; grid-auto-columns:1fr; margin:0 0 10px; padding:10px 4px; border-radius:var(--radius-sm); background:var(--fill);}
+.rmacros>div{display:flex; flex-direction:column; align-items:center; gap:1px; border-left:1px solid var(--line);} .rmacros>div:first-child{border-left:0;}
+.rmacros b{font-size:18px; font-variant-numeric:tabular-nums;} .rmacros small{font-size:11px; color:var(--ink2); text-transform:uppercase; letter-spacing:.05em;}
+.rmacros .p b{color:var(--ok-ink,var(--ok));}
+.rallergens{display:flex; gap:10px; align-items:flex-start; padding:10px 12px; border-radius:var(--radius-sm); border:1px solid var(--line); margin-bottom:6px;}
+.rallergens svg{flex:none; margin-top:2px; color:var(--ok);} .rallergens.has svg{color:var(--warn);}
+.rallergens b{font-size:14px;} .rallergens small{display:block; margin-top:6px; font-size:12px; color:var(--ink2); line-height:1.4;}
+.rchips{display:flex; flex-wrap:wrap; gap:6px; margin-top:6px;}
+.rchips span{padding:2px 9px; border-radius:99px; font-size:13px; font-weight:600; background:var(--warn-soft); color:var(--warn-ink);}
+
+/* ---- modal sheets: the buttons stay pinned to the bottom while the content scrolls ---- */
+.sheet:has(.sheet-foot){padding-bottom:0;}
+.sheet-foot{position:sticky; bottom:0; z-index:2; display:flex; flex-direction:column; gap:8px; margin:14px -20px 0; padding:18px 20px max(20px,env(safe-area-inset-bottom,0px));
+  background:linear-gradient(to bottom,transparent,var(--glass-strong,var(--bg)) 34%);}
+.sheet-foot .linkbtn{align-self:center;}
+
+/* breathing room under a heading that has no sentence below it (before the tabs or cards) */
+main .fade>h1{margin-bottom:16px;}
+html,body{overflow-x:clip;}

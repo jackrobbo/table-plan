@@ -227,9 +227,11 @@ export default function PlanNext() {
             <div className="grab" />
             <h2>Leave Planning?</h2>
             <p className="muted">{picks.length > 0 ? `Your ${picks.length} pick${picks.length === 1 ? '' : 's'} are saved, so you can finish later.` : ''}{draft?.days.length ? ' A week you\u2019ve built but not saved will be lost.' : ''}</p>
+            <div className="sheet-foot">
             <button className="btn" onClick={() => router.push('/plan')}>Save and Finish Later</button>
             {picks.length > 0 && <button className="btn ghost" style={{ marginTop: 8 }} onClick={() => { update((p) => ({ ...p, weeks: saveProgress(ensureWeeks(p.weeks, now), week.start, []) })); router.push('/plan'); }}>Discard Picks</button>}
             <button className="linkbtn" onClick={() => setLeaving(false)}>Keep Planning</button>
+            </div>
           </div>
         </div>, document.body)}
       <InstallSheet when={step === 'saved'} />

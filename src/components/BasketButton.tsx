@@ -78,7 +78,7 @@ export default function BasketButton({ shopping, have }: { shopping: Shopping; h
               <Link className="opt" href="/extension"><span className="opt-ico"><Monitor size={20} aria-hidden /></span><span className="opt-txt"><b>Chrome Add-on</b><span className="d">Fills your trolley from a computer.</span></span></Link>
               <button className="opt" onClick={() => { setChoose(false); setShop(true); }}><span className="opt-ico"><ListChecks size={20} aria-hidden /></span><span className="opt-txt"><b>Shop Item by Item</b><span className="d">Works anywhere. One tap per product.</span></span></button>
             </div>
-            <button className="btn ghost" style={{ marginTop: 14 }} onClick={() => setChoose(false)}>Cancel</button>
+            <div className="sheet-foot"><button className="btn ghost" onClick={() => setChoose(false)}>Cancel</button></div>
           </div>
         </div>, document.body)}
       {shopping_ && <ShopMode shopping={shopping} have={have} onClose={() => setShop(false)} />}
