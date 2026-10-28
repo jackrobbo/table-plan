@@ -1,0 +1,39 @@
+# To-do (28 Oct 2026)
+
+Replaces `design/tomorrow.md` (kept for the detailed security steps). **[JACK]** = only you can do it (dashboards, accounts, decisions). **[CLAUDE]** = I do it.
+
+Where we are: free beta live at https://table-plan.co.uk (open sign-up, no paywall). Android app 1.2 at `/app` fills a Morrisons trolley and reports back what went in and what is still to add. Prices refreshed 25 Oct.
+
+## Jack: launch blockers
+- [ ] **[JACK] Zoho Mail on table-plan.co.uk**: verify domain (TXT), MX (`mx.zoho.eu` 10, `mx2.zoho.eu` 20, `mx3.zoho.eu` 50), SPF `v=spf1 include:zoho.eu ~all`, DKIM (`zoho._domainkey`), DMARC (`_dmarc`, start `p=none`). Tell Claude when done; Claude checks the records and mail-tester score.
+- [ ] **[JACK] Resend (or similar) sender for sign-in codes**: free account, add domain, add its DNS records at Porkbun, give Supabase the SMTP details (Claude walks through). Supabase's built-in sender allows only a few emails an hour.
+- [ ] **[JACK] Supabase**: Authentication → URL Configuration (Site URL `https://table-plan.co.uk`, redirect `https://table-plan.co.uk/**`); turn off "Allow new users to sign up"; shorten email code expiry to 10 minutes.
+- [ ] **[JACK] Rotate secrets** pasted in chat: Supabase service-role key, Stripe test key, Gmail app password. Type new values straight into Vercel (`SUPABASE_SERVICE_ROLE_KEY`, `STRIPE_SECRET_KEY`), redeploy.
+- [ ] **[JACK] Cloudflare Turnstile key** (free) so Claude can add the sign-up CAPTCHA.
+- [ ] **[JACK] Vercel firewall**: two rate-limit rules (values in `design/security.md`, step 3).
+- [ ] **[JACK] Clean-up**: remove test accounts (`supabase/oneoff/remove-user.sql`), `drop extension if exists http;`, delete GitHub branch `tmp/catalogue-sync`.
+
+## Jack: before real users / money
+- [ ] **[JACK] Supabase Pro** (backups, no idle pause).
+- [ ] **[JACK] ICO registration**, business name and address for `/privacy` and `/terms`, solicitor read.
+- [ ] **[JACK] Outreach**: Samsung Food (Whisk) business team and Morrisons partnerships / Awin affiliate. (Claude drafts; Jack sends.)
+- [ ] **[JACK] Decide**: meal photos (own photography vs one illustration style).
+- [ ] **[JACK] Stripe live mode** only at go-live; the free-beta flag (`NEXT_PUBLIC_FREE_BETA`) comes off then.
+
+## Jack: testing
+- [ ] **[JACK] Use the Android app for a real week's shop**; send screenshots of anything that breaks (and of the "open app in the header" thing).
+- [ ] **[JACK] Screen-by-screen UI/UX feedback** (Claude sends screenshots in order; reply per screen).
+
+## Claude
+- [ ] **[CLAUDE] Check Sunday 1 Nov price-refresh run** (04:17 UTC) pushed to `main`.
+- [ ] **[CLAUDE] After Zoho is live**: check DNS records, set `NEXT_PUBLIC_CONTACT_EMAIL`, update legal pages and the extension's site match for `table-plan.co.uk`.
+- [ ] **[CLAUDE] UI/UX review pass**: screenshot every key screen at phone size, collect Jack's feedback, batch the changes.
+- [ ] **[CLAUDE] Remaining UX gaps** (`design/ux-audit.md`): first-week "Generating" screen, supermarket choice, Pick for me / Pick my own on the Upcoming card, name greeting.
+- [ ] **[CLAUDE] Android polish**: item-by-item step-through inside the in-app Morrisons screen, better filling screen.
+- [ ] **[CLAUDE] Multi-store groundwork**: product catalogue keyed by (store, ingredient), store adapter interface; Ocado first (same platform as Morrisons). See the multi-store note below.
+- [ ] **[CLAUDE] Sign-up CAPTCHA** once the Turnstile key is in.
+- [ ] **[CLAUDE] Draft outreach emails** to Samsung Food and Morrisons.
+- [ ] **[CLAUDE] Later**: meal-photo brief, Sentry alerts, recipe catalogue from the database, iPhone app (needs a Mac and a $99/yr Apple account).
+
+## Multi-store note
+Morrisons and Ocado run the same shop software, so the trolley script should carry over with small changes. Tesco, Sainsbury's and Asda block automated requests from our servers (HTTP 403 on 28 Oct), so price crawling there is hard; the in-browser trolley filling still works because it runs in the person's own browser. Lidl and Aldi have no online grocery shop to fill. Design: `ingredient_products(store, ingredient_id, sku, slug, pack_size, unit, price_pence, status, checked_at)`; the planner stays store-neutral and the shopping list is built per store, which also gives a "this week costs £X at Morrisons, £Y at Ocado" comparison.

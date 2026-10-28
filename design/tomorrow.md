@@ -1,5 +1,7 @@
 # Tomorrow
 
+> **Superseded on 28 Oct by `design/todo.md`** (items labelled Jack / Claude). Kept for the detailed security steps.
+
 State at the end of 24 Oct 2026: production is `1352219` (branch `claude/eager-fermat-bnmhki`). Everything below is either a dashboard step only the owner can do, a decision, or the next piece of work. Tick off as you go. Detail for the security items is in `design/security.md`.
 
 ## 1. Test the Morrisons basket signed in (the one you said matters most)
