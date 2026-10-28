@@ -10,10 +10,10 @@ export default function Welcome() {
   return (
     <Screen footer={<>
       <div className="pricedby"><span>Priced at</span><MorrisonsLogo height={20} /><span>· more supermarkets soon</span></div>
-      {signedIn ? <Link className="btn" href="/plan">Go to my plan</Link> : <>
-        <Link className="btn" href="/signin?new=1">Create my plan</Link>
-        <Link className="linkbtn accent" href="/signin">I have an account</Link>
-        {process.env.NEXT_PUBLIC_INVITE_ONLY === '1' && <Link className="linkbtn" href="/waitlist">No invite yet? Join the waitlist</Link>}
+      {signedIn ? <Link className="btn" href="/plan">Go to My Plan</Link> : <>
+        <Link className="btn" href="/signin?new=1">Create My Plan</Link>
+        <Link className="linkbtn accent" href="/signin">I Have an Account</Link>
+        {process.env.NEXT_PUBLIC_INVITE_ONLY === '1' && <Link className="linkbtn" href="/waitlist">No Invite Yet? Join the Waitlist</Link>}
       </>}
     </>}>
       <div className="welcome">

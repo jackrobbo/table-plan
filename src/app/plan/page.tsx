@@ -32,7 +32,7 @@ import { useNow } from '@/lib/useNow';
 import { useProfile } from '@/lib/useProfile';
 
 const STATE_COPY: Record<WeekStatus, string> = {
-  locked: 'Not open yet', to_plan: 'To plan', in_progress: 'In progress', planned: 'Planned', shopped: 'Planned', active: 'Cooking',
+  locked: 'Not Open Yet', to_plan: 'To Plan', in_progress: 'In Progress', planned: 'Planned', shopped: 'Planned', active: 'Cooking',
   done: 'Done', skipped: 'Skipped', missed: 'Missed',
 };
 
@@ -115,8 +115,11 @@ export default function Plan() {
   };
 
   return (
-    <Screen footer={accessLoaded && !access ? <Link className="btn" href="/subscribe">Save and checkout</Link> : undefined}>
-      <p className="step">Welcome back</p>
+    <Screen footer={accessLoaded && !access ? <Link className="btn" href="/subscribe">Save and Checkout</Link>
+      : access && tab === 'this' && !started && sub === 'plan' && plan.days.length > 0
+        ? <button className="btn" onClick={() => { setSub('ingredients'); window.scrollTo({ top: 0 }); }}>Shop This Week · ≈ {money(shopping.totalPence)}</button>
+        : undefined}>
+      <p className="step">Welcome Back</p>
 
       {due && (
         <div className="reminder" role="status">
@@ -130,7 +133,7 @@ export default function Plan() {
 
       {tab === 'this' && (
         <div className="fade" key="this">
-          <h1>{sub === 'recipes' ? 'Recipes' : finished ? 'Last week' : started ? 'This week' : Object.keys(weeks).length > 3 ? 'Next up' : 'Your first week'} <span className="wk">{weekLabel(week.start)}</span></h1>
+          <h1>{sub === 'recipes' ? 'Recipes' : finished ? 'Last Week' : started ? 'This Week' : Object.keys(weeks).length > 3 ? 'Next Up' : 'Your First Week'} <span className="wk">{weekLabel(week.start)}</span></h1>
           {sub !== 'recipes' && <p className="sub">
             {finished ? 'Nothing is planned for this week. Plan the next one from Upcoming.' : started ? `Kept inside ${t.band[0].toLocaleString('en-GB')}–${t.band[1].toLocaleString('en-GB')} kcal and ≥${t.protein}g protein a day.`
               : `Starts Mon ${dayLabel(week.start)}. Built from what you like, inside ${t.band[0].toLocaleString('en-GB')}–${t.band[1].toLocaleString('en-GB')} kcal and ≥${t.protein}g protein a day.`}
@@ -151,7 +154,7 @@ export default function Plan() {
                 <b>New this week: {recipeById.get(rate)!.n}. How was it?</b>
                 <button className="btn inline small" onClick={() => { update((p) => likeMeal(p, rate)); setRate(null); }}>Liked it</button>
                 <button className="btn ghost inline small" onClick={() => { update((p) => neverAgain(p, rate)); setRate(null); }}>Not for me</button>
-                <button className="linkbtn" onClick={() => setRate(null)}>Not now</button>
+                <button className="linkbtn" onClick={() => setRate(null)}>Not Now</button>
               </div>
             )}
             {plan.days.length > 0 && (finished || (started && allEaten(plan, week.ticks)))
@@ -166,7 +169,7 @@ export default function Plan() {
           </>}
 
           {sub === 'ingredients' && !started && accessLoaded && !access && (
-            <div className="card lock-card"><h3>Unlock your shopping list</h3><p className="muted">Subscribe to see every ingredient with dated Morrisons prices.</p><Link className="btn" href="/subscribe">See plans</Link></div>
+            <div className="card lock-card"><h3>Unlock Your Shopping List</h3><p className="muted">Subscribe to see every ingredient with dated Morrisons prices.</p><Link className="btn" href="/subscribe">See Plans</Link></div>
           )}
 
           {sub === 'ingredients' && !started && access && <>
@@ -174,12 +177,12 @@ export default function Plan() {
             <ShoppingList shopping={shopping} have={week.haveAlready}
               onToggle={(k) => update((p) => { const w = p.weeks[week.start]; const have = w.haveAlready.includes(k) ? w.haveAlready.filter((x) => x !== k) : [...w.haveAlready, k]; return { ...p, weeks: { ...p.weeks, [week.start]: { ...w, haveAlready: have } } }; })} />
             <BasketButton shopping={shopping} have={week.haveAlready} />
-            <div className="note"><b>Store cupboard check.</b> Buy only if you&apos;re out:<br />{shopping.cupboard.join(' · ')}</div>
-            <button className="btn" onClick={() => copy(listAsText(plan, week.haveAlready, `Estimated Morrisons prices, checked ${PRICES_META.checkedAt ? shortDate(PRICES_META.checkedAt) : 'not yet'}`), 'this')}>
-              Save to Notes (copy list)
+            <button className="btn ghost" style={{ marginTop: 8 }} onClick={() => copy(listAsText(plan, week.haveAlready, `Estimated Morrisons prices, checked ${PRICES_META.checkedAt ? shortDate(PRICES_META.checkedAt) : 'not yet'}`), 'this')}>
+              Copy List to Notes
             </button>
             {copied === 'this' && <p className="muted" role="status">Copied. Paste it into Notes.</p>}
             {copied?.startsWith('fail:') && <textarea className="copybox" readOnly value={copied.slice(5)} onFocus={(e) => e.currentTarget.select()} />}
+            <div className="note"><b>Store cupboard check.</b> Buy only if you&apos;re out:<br />{shopping.cupboard.join(' · ')}</div>
           </>}
 
           {sub === 'recipes' && (
@@ -198,9 +201,9 @@ export default function Plan() {
 
           {!profile.reminders.on && (
             <div className="card remind-card">
-              <h3>Never miss a week</h3>
+              <h3>Never Miss a Week</h3>
               <p className="muted">Sunday morning: next week&apos;s meals are open. The Sunday after, 4pm: last chance, pick by midnight.</p>
-              <button className="btn ghost" onClick={enableReminders}>Turn on reminders</button>
+              <button className="btn ghost" onClick={enableReminders}>Turn On Reminders</button>
             </div>
           )}
           {profile.reminders.on && <p className="muted">Reminders are on. For now they appear when you open Table Plan; alerts while the app is closed need the server side, coming next.</p>}
@@ -248,7 +251,7 @@ function UpcomingCard({ week, status, weeks, now, onPlan, onSkip, onUndo, onCopy
   const deadline = `midnight Sun ${dayLabel(addDays(week.start, -1))}`;
   if (status === 'locked') return <div className="card"><h3>{weekLabel(week.start)}</h3><p className="muted" style={{ margin: 0 }}>Opens Sun {dayLabel(londonDate(opensAt(weeks, week.start)))} at 6am. Only one week is open to plan at a time.</p></div>;
   if (status === 'missed') return <div className="card"><h3>{weekLabel(week.start)} · Missed</h3><p className="muted" style={{ margin: 0 }}>The deadline passed, so nothing was picked for you. You can plan the next week as normal.</p></div>;
-  if (status === 'skipped') return <div className="card"><h3>{weekLabel(week.start)} · Skipped</h3><p className="muted">You skipped this week.</p><button className="btn ghost" onClick={onUndo}>Undo skip</button></div>;
+  if (status === 'skipped') return <div className="card"><h3>{weekLabel(week.start)} · Skipped</h3><p className="muted">You skipped this week.</p><button className="btn ghost" onClick={onUndo}>Undo Skip</button></div>;
   if (status === 'to_plan' || status === 'in_progress') {
     return (
       <div className="card">
@@ -256,7 +259,7 @@ function UpcomingCard({ week, status, weeks, now, onPlan, onSkip, onUndo, onCopy
         <p className="muted">Pick by {deadline}. Cooking starts the next day.</p>
         {status === 'in_progress' && <p className="note">In progress · {week.picks.length} picked</p>}
         <button className="btn" onClick={onPlan}>{status === 'in_progress' ? 'Continue' : 'Plan this week'}</button>
-        <button className="linkbtn" style={{ marginTop: 6 }} onClick={onSkip}>Skip this week</button>
+        <button className="linkbtn" style={{ marginTop: 6 }} onClick={onSkip}>Skip This Week</button>
       </div>
     );
   }
@@ -271,7 +274,7 @@ function UpcomingCard({ week, status, weeks, now, onPlan, onSkip, onUndo, onCopy
       <ShoppingList shopping={shopping} have={week.haveAlready} onToggle={onToggleHave} />
       <BasketButton shopping={shopping} have={week.haveAlready} />
       <p className="muted">{shopping.lines.length - week.haveAlready.length} items · ≈ {money(shopping.lines.filter((l) => !week.haveAlready.includes(l.key)).reduce((a, l) => a + l.costPence, 0))}</p>
-      <button className="btn" onClick={() => onCopy(listAsText(plan, week.haveAlready, `Estimated Morrisons prices, checked ${PRICES_META.checkedAt ? shortDate(PRICES_META.checkedAt) : 'not yet'}`))}>Save to Notes (copy list)</button>
+      <button className="btn ghost" style={{ marginTop: 8 }} onClick={() => onCopy(listAsText(plan, week.haveAlready, `Estimated Morrisons prices, checked ${PRICES_META.checkedAt ? shortDate(PRICES_META.checkedAt) : 'not yet'}`))}>Copy List to Notes</button>
       {copied === week.start && <p className="muted" role="status">Copied. Paste it into Notes.</p>}
       {copied?.startsWith('fail:') && <textarea className="copybox" readOnly value={copied.slice(5)} onFocus={(e) => e.currentTarget.select()} />}
     </div>

@@ -37,7 +37,7 @@ export default function SwapSheet({ plan, target, input, onPick, onClose }: {
         <h2>Swap {day.day} {SLOT[cur.slot]}</h2>
         <p className="muted" style={{ margin: '2px 0 8px' }}>Now: {now.e} {now.n}. Your day is {day.protein}g protein · {day.kcal.toLocaleString('en-GB')} kcal.</p>
         <div className="chips" role="group" aria-label="Sort options" style={{ margin: '4px 0 8px' }}>
-          {([['fit', 'Similar macros'], ['cheaper', 'Cheaper'], ['new', 'New for you']] as const).map(([k, l]) => (
+          {([['fit', 'Similar Macros'], ['cheaper', 'Cheaper'], ['new', 'New for You']] as const).map(([k, l]) => (
             <button key={k} className={'chip' + (filter === k ? ' on' : '')} aria-pressed={filter === k} onClick={() => setFilter(k)}>{l}</button>
           ))}
         </div>
@@ -53,7 +53,7 @@ export default function SwapSheet({ plan, target, input, onPick, onClose }: {
                   <span className="p">P {o.recipe.p}g</span><span>{o.recipe.k} kcal</span>
                   {timeLabel(o.recipe.t) && <span className="time"><Clock size={11} aria-hidden />{timeLabel(o.recipe.t)}</span>}
                   {o.recipe.cost != null && <span>≈ {money(o.recipe.cost)} · {tierMark(o.recipe.b)}</span>}
-                  {!o.liked && <span>New for you</span>}
+                  {!o.liked && <span>New for You</span>}
                   {!o.withinSpend && <span className="adj">Over your spend</span>}
                 </span>
                 <span className={'sday' + (o.day.inBand ? '' : ' amber')} style={{ display: 'block' }}>

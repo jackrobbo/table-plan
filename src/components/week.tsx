@@ -26,7 +26,7 @@ export function MealRow({ m, tick, onTick, onOpen, onSwap, isNew }: { m: Planned
         {r.img ? <MealImage r={r} size="sq" sizes="64px" /> : <div className="mealimg sq"><span className="emoji">{r.e}</span></div>}
       </button>
       <button className="mbody linkish" onClick={onOpen} disabled={!onOpen}>
-        <div className="mslot">{Icon && <Icon size={12} aria-hidden />}{SLOT_LABEL[m.slot]}{isNew && <span className="newtag">New for you</span>}</div>
+        <div className="mslot">{Icon && <Icon size={12} aria-hidden />}{SLOT_LABEL[m.slot]}{isNew && <span className="newtag">New for You</span>}</div>
         <div className="mname">{r.n}</div>
         <div className="mmeta"><b>{m.protein}g protein</b> · {m.kcal} kcal</div>
         <div className="mmeta">
@@ -175,8 +175,8 @@ function RecipeSheetBody({ r, onClose, portions, onNever }: { r: NonNullable<Ret
           {portions && <div className="note">Your portion for your macros is one serving; the plan scales the rest for the household.</div>}
         </>) : r.m.length > 0 ? <ol className="plain" style={{ marginTop: 10 }}>{r.m.map((x, i) => <li key={i}>{x}</li>)}</ol> : <p className="muted">No method for this one: it&apos;s a grab-and-go item.</p>}
         {onNever && (!asked
-          ? <button className="linkbtn" style={{ marginTop: 10 }} onClick={() => setAsked(true)}>Never suggest this again</button>
-          : <p className="note warn-note">We won&apos;t plan or offer this meal in future weeks (weeks already planned stay as they are). <button className="linkbtn" onClick={() => { onNever(r.id); onClose(); }}>Yes, never suggest it</button> <button className="linkbtn" onClick={() => setAsked(false)}>Keep it</button></p>)}
+          ? <button className="linkbtn" style={{ marginTop: 10 }} onClick={() => setAsked(true)}>Never Suggest This Again</button>
+          : <p className="note warn-note">We won&apos;t plan or offer this meal in future weeks (weeks already planned stay as they are). <button className="linkbtn" onClick={() => { onNever(r.id); onClose(); }}>Yes, never suggest it</button> <button className="linkbtn" onClick={() => setAsked(false)}>Keep It</button></p>)}
         <button className="btn ghost" style={{ marginTop: 14 }} onClick={onClose}>Close</button>
       </div>
     </div>

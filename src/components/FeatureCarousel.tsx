@@ -9,28 +9,28 @@ const bar = (label: string, value: string, pct: number) => (
 
 const FEATURES: { title: string; body: string; photo: string; preview: ReactNode }[] = [
   {
-    title: 'Hits your targets',
+    title: 'Hits Your Targets',
     photo: 'slide-targets',
     body: 'Calories and protein set from your stats, every day kept in range.',
     preview: bar('Protein', '159 / ≥153g', 92),
   },
   {
-    title: 'Meals you’ll actually eat',
+    title: 'Meals You’ll Actually Eat',
     photo: 'slide-meals',
     body: 'Tell us what you like. Allergies are always left out, and you can swap any meal.',
     preview: <div className="mini-tags"><span className="p">P 43g</span><span>616 kcal</span><span>≈ 20 min</span><span>≈ £1.66</span></div>,
   },
   {
-    title: 'Priced before you shop',
+    title: 'Priced Before You Shop',
     photo: 'slide-price',
     body: 'The whole week’s estimated cost at Morrisons, dated, with no surprises.',
     preview: <div className="mini-price"><b>≈ £55.86</b><span>estimated Morrisons prices</span></div>,
   },
   {
-    title: 'Fills your trolley',
+    title: 'Fills Your Trolley',
     photo: 'slide-trolley',
     body: 'Send your list to a Morrisons trolley in a tap, with the Android app or Chrome add-on.',
-    preview: <div className="mini-trolley"><b>Fill my Morrisons trolley</b></div>,
+    preview: <div className="mini-trolley"><b>Checkout at Morrisons</b></div>,
   },
 ];
 

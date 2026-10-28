@@ -41,7 +41,7 @@ export default function Onboarding() {
         )}
         {step === 'dislikes' && <button className="linkbtn" onClick={() => update((p) => advance({ ...p, dislikes: [] }))}>Skip, I eat anything</button>}
         {skippable && (
-          <button className="linkbtn" onClick={() => update((p) => advance(skipStat(p, step as SkippableStep)))}>Prefer not to say</button>
+          <button className="linkbtn" onClick={() => update((p) => advance(skipStat(p, step as SkippableStep)))}>Prefer Not to Say</button>
         )}
       </>}>
       {hasBar && <p className="step">Step {stepIndex(step) + 1} of {BAR_STEPS}</p>}
@@ -69,7 +69,7 @@ function TargetStep({ p, update }: SP) {
   const hh = 1 + p.meals.dinner.extraServings;
   return (
     <>
-      <Title sub={`Based on your goal and stats. Dinners cook for ${hh}.`}>Your daily target</Title>
+      <Title sub={`Based on your goal and stats. Dinners cook for ${hh}.`}>Your Daily Target</Title>
       <div className="bignum">
         <div><div className="n">~{t.target.toLocaleString('en-GB')}<small>kcal a day</small></div><div className="muted" style={{ margin: '4px 0 0' }}>band {t.band[0].toLocaleString('en-GB')}–{t.band[1].toLocaleString('en-GB')}</div></div>
         <div><div className="n">≥{t.protein}g<small>protein a day</small></div></div>

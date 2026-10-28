@@ -12,6 +12,7 @@ import { Title, type SP } from '@/components/profile-fields';
 
 const LABEL: Record<MealTime, string> = { breakfast: 'Breakfast', lunch: 'Lunch', dinner: 'Dinner' };
 const PLURAL: Record<MealTime, string> = { breakfast: 'breakfasts', lunch: 'lunches', dinner: 'dinners' };
+const cap = (s: string) => s[0].toUpperCase() + s.slice(1);
 const FLING_AT = 90;   // px of drag that counts as a decision
 
 /** One card. Drag it left (skip) or right (keep), or use the buttons; either way it flies off before the next one comes up. */
@@ -99,7 +100,7 @@ export default function TasteSwipe({ p, update, onFinish }: SP & { onFinish: () 
 
   return (
     <>
-      <Title sub="Swipe right on meals you'd happily eat, left on the rest.">What do you like to eat?</Title>
+      <Title sub="Swipe right on meals you'd happily eat, left on the rest.">What Do You Like to Eat?</Title>
       <div className="tabs">
         {courses.map((c) => (
           <button key={c} className={(tab === c ? 'on' : '') + (prog[c].liked >= prog[c].needed ? ' done' : '')} onClick={() => { setTab(c); setPrompt(null); }}>
@@ -111,18 +112,18 @@ export default function TasteSwipe({ p, update, onFinish }: SP & { onFinish: () 
       {prompt ? (
         <div className="taste-prompt fade" role="status">
           <span className="tp-ico"><Check size={26} aria-hidden /></span>
-          <h3>That&apos;s {MIN_LIKES} {PLURAL[prompt]} picked</h3>
+          <h3>That&apos;s {MIN_LIKES} {cap(PLURAL[prompt])} Picked</h3>
           <p className="muted">
             {nextCourse
               ? `Keep going for more variety in your plans, or move on to ${PLURAL[nextCourse]}.`
               : allDone ? 'That’s all three. Keep going for more variety, or finish up.' : 'Keep going for more variety, or finish up.'}
           </p>
           {nextCourse ? (
-            <button className="btn" onClick={moveOn}>On to {PLURAL[nextCourse]}</button>
+            <button className="btn" onClick={moveOn}>On to {cap(PLURAL[nextCourse])}</button>
           ) : (
             <button className="btn" onClick={onFinish}>Finish</button>
           )}
-          <button className="btn ghost" onClick={keepGoing}>Keep picking {PLURAL[prompt]}</button>
+          <button className="btn ghost" onClick={keepGoing}>Keep Picking {cap(PLURAL[prompt])}</button>
         </div>
       ) : next ? (
         <>

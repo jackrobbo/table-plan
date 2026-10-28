@@ -11,7 +11,7 @@ export function DailyAverage({ averages, t }: { averages: Avg; t: Pick<Targets, 
   ];
   return (
     <div className="card avgbars" aria-label="Daily average against your target">
-      <h3>Daily average</h3>
+      <h3>Daily Average</h3>
       {rows.map(([label, v, target, unit]) => (
         <div className="avgrow" key={label}>
           <div className="avghead"><span>{label}</span><span><b>{v.toLocaleString('en-GB')}</b> / {label === 'Protein' ? '≥' : '~'}{target.toLocaleString('en-GB')}{unit}</span></div>
@@ -29,7 +29,7 @@ export function DailyAverage({ averages, t }: { averages: Avg; t: Pick<Targets, 
 export function WeekDone({ s, t }: { s: WeekSummary; t: Pick<Targets, 'target' | 'protein' | 'carbs' | 'fat'> }) {
   return (
     <div className="card weekdone" role="status">
-      <h2 style={{ margin: 0 }}>Week done ✓</h2>
+      <h2 style={{ margin: 0 }}>Week Done ✓</h2>
       <div className="bignum" style={{ margin: '12px 0' }}>
         <div><div className="n">{s.eaten}/{s.planned}<small>meals eaten</small></div></div>
         <div><div className="n">{s.daysInBand}/{s.days}<small>days on target</small></div></div>

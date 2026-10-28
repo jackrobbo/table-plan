@@ -7,8 +7,8 @@ import { reportError } from '@/lib/errorReport';
 export default function ErrorPage({ error, reset }: { error: Error & { digest?: string }; reset: () => void }) {
   useEffect(() => { console.error(error); reportError('boundary', error); }, [error]);
   return (
-    <Screen footer={<button className="btn" onClick={reset}>Try again</button>}>
-      <h2>Something went wrong</h2>
+    <Screen footer={<button className="btn" onClick={reset}>Try Again</button>}>
+      <h2>Something Went Wrong</h2>
       <p className="sub">Your answers and plans are saved. Try again, and if it keeps happening, let us know from your account page.</p>
     </Screen>
   );

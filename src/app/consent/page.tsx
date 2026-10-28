@@ -21,10 +21,10 @@ export default function Consent() {
 
   return (
     <Screen footer={<>
-      <button className="btn" disabled={!health || !terms} onClick={() => update((p) => giveConsent(p))}>Agree and continue</button>
-      <button className="linkbtn" onClick={() => setDeclined(true)}>I don&apos;t agree</button>
+      <button className="btn" disabled={!health || !terms} onClick={() => update((p) => giveConsent(p))}>Agree and Continue</button>
+      <button className="linkbtn" onClick={() => setDeclined(true)}>I Don&apos;t Agree</button>
     </>}>
-      <h2>Before we start</h2>
+      <h2>Before We Start</h2>
       <p className="sub">To plan meals that suit you, Table Plan asks about things the law treats as health information.</p>
       <div className="card">
         <p style={{ marginTop: 0 }}><b>What we ask for</b></p>

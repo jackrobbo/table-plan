@@ -115,14 +115,14 @@ export default function PlanNext() {
       progress={step === 'saved' ? undefined : { step: barIndex + 1, total: BAR.length }}
       footer={
         building ? undefined
-        : step === 'pick' ? <button className="btn" disabled={!picksOk} onClick={() => build(picks)}>Build my week</button>
+        : step === 'pick' ? <button className="btn" disabled={!picksOk} onClick={() => build(picks)}>Build My Week</button>
         : step === 'review' && draft?.days.length ? <button className="btn" onClick={() => { setHave([]); setStep('list'); }}>Save and continue</button>
         : step === 'list' ? <button className="btn" onClick={save}>Save list · {shopping!.lines.length - have.length} items</button>
         : step === 'saved' ? <button className="btn" onClick={() => router.push('/plan')}>Done</button> : undefined
       }>
       {building && (
         <div className="fade" role="status" aria-live="polite">
-          <h2>Building your week…</h2>
+          <h2>Building Your Week…</h2>
           <p className="sub">Checking every day against your targets and your spend.</p>
           <div className="skeleton-stack"><div className="skeleton sk-card" /><div className="skeleton sk-card" /><div className="skeleton sk-card" /></div>
         </div>
@@ -131,7 +131,7 @@ export default function PlanNext() {
 
       {!building && step === 'setup' && (
         <div className="fade">
-          <h2>Same settings as usual?</h2>
+          <h2>Same Settings as Usual?</h2>
           <p className="sub">Pick by midnight Sun {dayLabel(addDays(week.start, -1))}. Cooking starts Mon {dayLabel(week.start)}.</p>
           <div className="card list">
             {COURSES.map((c) => (
@@ -148,7 +148,7 @@ export default function PlanNext() {
               </div>
               <div className="muted">Tap a day to take it off. Weekends aren&apos;t planned yet.</div></div></div>
           </div>
-          <h3 style={{ marginTop: 18 }}>Weekly spend</h3>
+          <h3 style={{ marginTop: 18 }}>Weekly Spend</h3>
           <div className="chips" role="group" aria-label="Weekly spend">
             {BUDGETS.map((b) => (
               <button key={b} className={'chip lg' + (profile.budget === b ? ' on' : '')} aria-pressed={profile.budget === b} onClick={() => update((p) => ({ ...p, budget: b }))}>{BUDGET_LABEL[b]}</button>
@@ -156,14 +156,14 @@ export default function PlanNext() {
           </div>
           <p className="muted" style={{ marginTop: -4 }}>{budgetHelp(profile.budget)} We only go over this on a day that can&apos;t hit your targets without it.</p>
           <p className="muted">To change your meals or targets, <Link href="/settings">edit your answers</Link>. New settings apply from the next week you plan.</p>
-          <button className="btn" onClick={() => build(profile.likedRecipes)}>Pick for me</button>
-          <button className="btn ghost" style={{ marginTop: 8 }} onClick={() => setStep('pick')}>Pick my own (optional)</button>
+          <button className="btn" onClick={() => build(profile.likedRecipes)}>Pick for Me</button>
+          <button className="btn ghost" style={{ marginTop: 8 }} onClick={() => setStep('pick')}>Pick My Own (Optional)</button>
         </div>
       )}
 
       {!building && step === 'pick' && (
         <div className="fade">
-          <h2>Pick your own</h2>
+          <h2>Pick Your Own</h2>
           <p className="sub">Choose at least {MIN_PICKS} of each from meals you like. We&apos;ll plan the days around them and fill in snacks.</p>
           {planned.map((c) => (
             <div key={c}>
@@ -182,7 +182,7 @@ export default function PlanNext() {
 
       {!building && step === 'review' && (
         <div className="fade">
-          <h1>Your week</h1>
+          <h1>Your Week</h1>
           {!draft || !draft.days.length ? (
             <div className="estimate-flag">{draft?.issues[0] ?? 'Could not build a week.'}</div>
           ) : (<>
@@ -209,11 +209,11 @@ export default function PlanNext() {
 
       {!building && step === 'saved' && draft && (
         <div className="fade">
-          <h1>List saved</h1>
+          <h1>List Saved</h1>
           <p className="sub">{weekLabel(week.start)} is planned. It starts Mon {dayLabel(week.start)}.</p>
           <button className="btn ghost" onClick={async () => {
             try { await navigator.clipboard.writeText(listAsText(draft, have, `Estimated Morrisons prices, checked ${PRICES_META.checkedAt ? shortDate(PRICES_META.checkedAt) : 'not yet'}`)); setCopied('ok'); } catch { setCopied('fail'); }
-          }}>Save to Notes (copy list)</button>
+          }}>Copy List to Notes</button>
           {copied === 'ok' && <p className="muted" role="status">Copied. Paste it into Notes.</p>}
           {copied === 'fail' && <textarea className="copybox" readOnly onFocus={(e) => e.currentTarget.select()} value={listAsText(draft, have, 'Estimated Morrisons prices')} />}
         </div>
@@ -225,11 +225,11 @@ export default function PlanNext() {
         <div className="sheet-wrap" onClick={() => setLeaving(false)}>
           <div className="sheet" role="dialog" aria-label="Leave planning?" onClick={(e) => e.stopPropagation()}>
             <div className="grab" />
-            <h2>Leave planning?</h2>
+            <h2>Leave Planning?</h2>
             <p className="muted">{picks.length > 0 ? `Your ${picks.length} pick${picks.length === 1 ? '' : 's'} are saved, so you can finish later.` : ''}{draft?.days.length ? ' A week you\u2019ve built but not saved will be lost.' : ''}</p>
-            <button className="btn" onClick={() => router.push('/plan')}>Save and finish later</button>
+            <button className="btn" onClick={() => router.push('/plan')}>Save and Finish Later</button>
             {picks.length > 0 && <button className="btn ghost" style={{ marginTop: 8 }} onClick={() => { update((p) => ({ ...p, weeks: saveProgress(ensureWeeks(p.weeks, now), week.start, []) })); router.push('/plan'); }}>Discard picks</button>}
-            <button className="linkbtn" onClick={() => setLeaving(false)}>Keep planning</button>
+            <button className="linkbtn" onClick={() => setLeaving(false)}>Keep Planning</button>
           </div>
         </div>, document.body)}
       <InstallSheet when={step === 'saved'} />

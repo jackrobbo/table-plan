@@ -8,7 +8,7 @@ export default function StatusBanner() {
   return (
     <div className="status-banner" role="status">
       {s.kind === 'offline'
-        ? <>Can&apos;t reach Table Plan right now. Check your connection. <button className="linkbtn" onClick={() => location.reload()}>Try again</button></>
+        ? <>Can&apos;t reach Table Plan right now. Check your connection. <button className="linkbtn" onClick={() => location.reload()}>Try Again</button></>
         : <>Your latest change couldn&apos;t be saved. It will save with your next change, or check your connection.</>}
     </div>
   );

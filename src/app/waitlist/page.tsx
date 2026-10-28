@@ -21,7 +21,7 @@ export default function Waitlist() {
   };
 
   return (
-    <Screen footer={state !== 'done' ? <button className="btn" disabled={!email || !consent || state === 'busy'} onClick={submit}>Join the waitlist</button> : <Link className="btn ghost" href="/">Back to start</Link>}>
+    <Screen footer={state !== 'done' ? <button className="btn" disabled={!email || !consent || state === 'busy'} onClick={submit}>Join the Waitlist</button> : <Link className="btn ghost" href="/">Back to Start</Link>}>
       {state !== 'done' ? (<>
         <h1>Your goals.<br />Your meals.<br />Your budget.</h1>
         <p className="sub" style={{ maxWidth: '38ch' }}>Table Plan turns your nutritional goals and favourite meals into a realistic weekly meal plan and shopping list, without the cost of a meal-kit subscription. We&apos;re opening in small groups. Join the list for an invite.</p>
@@ -33,7 +33,7 @@ export default function Waitlist() {
         {error && <p className="err">{error}</p>}
         <p className="muted">We only use your email for this. We never sell it.</p>
       </>) : (<>
-        <h1>You&apos;re on the list.</h1>
+        <h1>You&apos;re on the List.</h1>
         <p className="sub">We&apos;ll email you when your invite is ready.</p>
       </>)}
     </Screen>

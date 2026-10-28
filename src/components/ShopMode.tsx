@@ -24,13 +24,13 @@ export default function ShopMode({ shopping, have, onClose }: { shopping: Shoppi
           <p className="muted" style={{ margin: 0 }}>≈ {money(l.costPence)} · for {l.usedBy.slice(0, 3).join(', ')}</p>
           <a className="btn" style={{ marginTop: 14 }} href={`https://groceries.morrisons.com/products/${l.slug}`} target="_blank" rel="noopener noreferrer">Open at Morrisons ↗</a>
           <p className="muted" style={{ margin: '8px 0' }}>Add {l.packs > 1 ? `${l.packs} of these` : 'it'} to your trolley there, then come back here.</p>
-          <button className="btn ghost" onClick={() => setI(i + 1)}>Added it, next</button>
+          <button className="btn ghost" onClick={() => setI(i + 1)}>Added It, Next</button>
           <div style={{ display: 'flex', justifyContent: 'space-between' }}>
             <button className="linkbtn" disabled={i === 0} onClick={() => setI(i - 1)}>Back</button>
-            <button className="linkbtn" onClick={() => setI(i + 1)}>Skip this one</button>
+            <button className="linkbtn" onClick={() => setI(i + 1)}>Skip This One</button>
           </div>
         </>) : (<>
-          <h2>That&apos;s the list</h2>
+          <h2>That&apos;s the List</h2>
           <p className="muted">Open your Morrisons trolley to check it, choose a delivery slot and pay. Anything you skipped is still on your list.</p>
           <a className="btn" href="https://groceries.morrisons.com/" target="_blank" rel="noopener noreferrer">Open Morrisons ↗</a>
         </>)}

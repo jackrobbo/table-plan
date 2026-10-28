@@ -33,13 +33,13 @@ function Radio({ on, title, desc, icon: Icon, onClick }: { on: boolean; title: s
 
 export function GoalStep({ p, update }: SP) {
   const goals: [Goal, string, string, LucideIcon][] = [
-    ['lose', 'Lose weight', 'Steady loss, about 1 lb a week', TrendingDown],
+    ['lose', 'Lose Weight', 'Steady loss, about 1 lb a week', TrendingDown],
     ['maintain', 'Maintain', 'Steady energy', Scale],
-    ['gain', 'Gain weight', 'Surplus for muscle', TrendingUp],
+    ['gain', 'Gain Weight', 'Surplus for muscle', TrendingUp],
   ];
   return (
     <>
-      <Title sub="Sets your calorie band and protein floor.">What&apos;s your goal?</Title>
+      <Title sub="Sets your calorie band and protein floor.">What&apos;s Your Goal?</Title>
       <div className="opts" role="radiogroup">
         {goals.map(([g, t, d, ic]) => <Radio key={g} on={p.goal === g} title={t} desc={d} icon={ic} onClick={() => update((x) => ({ ...x, goal: g }))} />)}
       </div>
@@ -53,7 +53,7 @@ export function HeightStep({ p, update }: SP) {
   const set = (heightCm: number | undefined) => update((x) => ({ ...x, stats: { ...x.stats, heightCm }, skipped: { ...x.skipped, height: undefined } }));
   return (
     <>
-      <Title sub="Private. Only used to size your portions.">How tall are you?</Title>
+      <Title sub="Private. Only used to size your portions.">How Tall Are You?</Title>
       <div className="seg2">
         {(['cm', 'ftin'] as const).map((u) => (
           <button key={u} className={p.heightUnit === u ? 'on' : ''} onClick={() => update((x) => ({ ...x, heightUnit: u }))}>{u === 'cm' ? 'cm' : 'ft / in'}</button>
@@ -77,7 +77,7 @@ export function WeightStep({ p, update }: SP) {
   const set = (weightKg: number | undefined) => update((x) => ({ ...x, stats: { ...x.stats, weightKg }, skipped: { ...x.skipped, weight: undefined } }));
   return (
     <>
-      <Title sub="Private. You can update it any time.">What do you weigh?</Title>
+      <Title sub="Private. You can update it any time.">What Do You Weigh?</Title>
       <div className="seg2">
         {([['kg', 'kg'], ['stlb', 'st / lb'], ['lb', 'lb']] as const).map(([u, l]) => (
           <button key={u} className={p.weightUnit === u ? 'on' : ''} onClick={() => update((x) => ({ ...x, weightUnit: u }))}>{l}</button>
@@ -102,7 +102,7 @@ export function WeightStep({ p, update }: SP) {
 export function AgeStep({ p, update }: SP) {
   return (
     <>
-      <Title sub="Calorie needs change with age. Table Plan is for adults (18+).">How old are you?</Title>
+      <Title sub="Calorie needs change with age. Table Plan is for adults (18+).">How Old Are You?</Title>
       <div className="value"><label><input aria-label="Age in years" type="number" inputMode="numeric" placeholder="34" value={p.stats.age ?? ''}
         onChange={(e) => update((x) => ({ ...x, stats: { ...x.stats, age: num(e.target.value) }, skipped: { ...x.skipped, age: undefined } }))} /><span className="unit">years</span></label></div>
     </>
@@ -113,7 +113,7 @@ export function SexStep({ p, update }: SP) {
   const plain = useContext(Plain);
   return (
     <>
-      <Title sub="Men and women need slightly different calories.">Are you male or female?</Title>
+      <Title sub="Men and women need slightly different calories.">Are You Male or Female?</Title>
       <div className="opts" role="radiogroup">
         {([['f', 'Female'], ['m', 'Male']] as [Sex, string][]).map(([v, l]) => (
           <Radio key={v} on={p.stats.sex === v} title={l}
@@ -126,14 +126,14 @@ export function SexStep({ p, update }: SP) {
 
 export function ActivityStep({ p, update }: SP) {
   const opts: [number, string, string, LucideIcon][] = [
-    [1.2, 'Mostly sitting', 'Desk job, little exercise', Armchair],
-    [1.375, 'Lightly active', 'On your feet, walks', Footprints],
+    [1.2, 'Mostly Sitting', 'Desk job, little exercise', Armchair],
+    [1.375, 'Lightly Active', 'On your feet, walks', Footprints],
     [1.55, 'Active', 'Exercise 3–5 days', Bike],
-    [1.725, 'Very active', 'Physical job or daily training', Dumbbell],
+    [1.725, 'Very Active', 'Physical job or daily training', Dumbbell],
   ];
   return (
     <>
-      <Title sub="Most days, including work.">How active are you?</Title>
+      <Title sub="Most days, including work.">How Active Are You?</Title>
       <div className="opts" role="radiogroup">
         {opts.map(([v, t, d, ic]) => <Radio key={v} on={p.stats.activity === v} title={t} desc={d} icon={ic} onClick={() => update((x) => ({ ...x, stats: { ...x.stats, activity: v } }))} />)}
       </div>
@@ -148,7 +148,7 @@ export function MealsStep({ p, update }: SP) {
     update((x) => ({ ...x, meals: { ...x.meals, [m]: { ...x.meals[m], ...patch } } }));
   return (
     <>
-      <Title sub="Planned meals come with recipes and go on your list. For the rest, you just get a macro target.">Which meals should we plan?</Title>
+      <Title sub="Planned meals come with recipes and go on your list. For the rest, you just get a macro target.">Which Meals Should We Plan?</Title>
       {(Object.keys(labels) as MealTime[]).map((m) => {
         const s = p.meals[m];
         return (
@@ -156,13 +156,13 @@ export function MealsStep({ p, update }: SP) {
             <div className="top">
               <h3 className="ico-h">{(() => { const Icon = mealIcon[m]; return <Icon size={18} aria-hidden />; })()}{labels[m]}</h3>
               <div className="seg2 small">
-                <button className={s.mode === 'plan' ? 'on' : ''} onClick={() => set(m, { mode: 'plan' })}>Plan it</button>
-                <button className={s.mode === 'macros' ? 'on' : ''} onClick={() => set(m, { mode: 'macros', extraServings: 0 })}>Macros only</button>
+                <button className={s.mode === 'plan' ? 'on' : ''} onClick={() => set(m, { mode: 'plan' })}>Plan It</button>
+                <button className={s.mode === 'macros' ? 'on' : ''} onClick={() => set(m, { mode: 'macros', extraServings: 0 })}>Macros Only</button>
               </div>
             </div>
             {s.mode === 'plan' ? (
               <div className="extra">
-                <span>Extra servings for others</span>
+                <span>Extra Servings for Others</span>
                 <span className="stepper">
                   <button aria-label="Fewer" onClick={() => set(m, { extraServings: Math.max(0, s.extraServings - 1) })}>−</button>
                   <b>{s.extraServings}</b>
@@ -184,7 +184,7 @@ export function AllergiesStep({ p, update }: SP) {
     update((x) => setAllergies(x, x.allergies.includes(a) ? x.allergies.filter((y) => y !== a) : [...x.allergies, a]));
   return (
     <>
-      <Title sub="Everyone eats the same meals, so include anyone you're cooking for. Recipes with these are fully excluded.">Any allergies in your household?</Title>
+      <Title sub="Everyone eats the same meals, so include anyone you're cooking for. Recipes with these are fully excluded.">Any Allergies in Your Household?</Title>
       <div className="chips">
         {ALLERGENS.map(([k, l]) => (
           <button key={k} className={'chip amber' + (p.allergies.includes(k) ? ' on' : '')} aria-pressed={p.allergies.includes(k)} onClick={() => toggle(k)}>{l}</button>
@@ -205,7 +205,7 @@ export function DislikesStep({ p, update }: SP) {
     update((x) => ({ ...x, dislikes: x.dislikes.includes(d) ? x.dislikes.filter((y) => y !== d) : [...x.dislikes, d] }));
   return (
     <>
-      <Title sub="We'll show these less often. Skip if you eat anything.">Anything you don&apos;t like?</Title>
+      <Title sub="We'll show these less often. Skip if you eat anything.">Anything You Don&apos;t Like?</Title>
       <input className="text" placeholder="Search ingredients" aria-label="Search ingredients" value={q} onChange={(e) => setQ(e.target.value)} />
       {DISLIKE_GROUPS.map((g) => {
         const items = g.items.filter((i) => i.toLowerCase().includes(q.toLowerCase()));

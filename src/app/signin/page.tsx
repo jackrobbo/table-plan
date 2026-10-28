@@ -86,10 +86,10 @@ export default function SignIn() {
 
   return (
     <Screen onBack={back}
-      footer={!sent ? <button className="btn" disabled={!email || busy || (needsInvite && !invite)} onClick={send}>Send code</button> : undefined}>
+      footer={!sent ? <button className="btn" disabled={!email || busy || (needsInvite && !invite)} onClick={send}>Send Code</button> : undefined}>
       {!sent ? (
         <>
-          <h2>What&apos;s your email?</h2>
+          <h2>What&apos;s Your Email?</h2>
           <p className="sub">We&apos;ll send {OTP_LENGTH === 8 ? 'an' : 'a'} {OTP_LENGTH}-digit code. No password. We only use your email for Table Plan, never for anything else.</p>
           <input id="email" className="text" type="email" inputMode="email" autoComplete="email" placeholder="you@example.co.uk" value={email}
             aria-label="Email" onChange={(e) => setEmail(e.target.value)} onKeyDown={(e) => e.key === 'Enter' && send()} />
@@ -102,7 +102,7 @@ export default function SignIn() {
         </>
       ) : (
         <>
-          <h2>Check your email</h2>
+          <h2>Check Your Email</h2>
           <p className="sub">Code sent to {email}</p>
           <div className="otp" onClick={() => codeInput.current?.focus()}>
             <input ref={codeInput} className="otp-input" value={code} onChange={(e) => onCode(e.target.value)} inputMode="numeric"
@@ -116,7 +116,7 @@ export default function SignIn() {
             <button className="linkbtn" disabled={wait > 0 || busy} onClick={send}>
               {wait > 0 ? `Resend in 0:${String(wait).padStart(2, '0')}` : 'Resend code'}
             </button>
-            <button className="linkbtn" onClick={back}>Wrong email?</button>
+            <button className="linkbtn" onClick={back}>Wrong Email?</button>
           </div>
         </>
       )}

@@ -49,7 +49,7 @@ export default function Subscribe() {
           Renews automatically until you cancel. Manage or cancel any time in your account. See the <Link href="/terms">terms</Link>.
         </p>
       </>}>
-      <h2>Your week is ready</h2>
+      <h2>Your Week Is Ready</h2>
       <p className="sub">Unlock your shopping list and a new plan every week.</p>
       <div className="plans" role="radiogroup">
         <Card id="yearly" tag="1 week free" sub={`${perMonth(PLANS.yearly)} a month`} />

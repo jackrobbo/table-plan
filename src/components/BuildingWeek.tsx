@@ -27,7 +27,7 @@ export default function BuildingWeek({ onDone }: { onDone: () => void }) {
         <div className="bw-card a"><Coffee size={34} /><b>Monday</b></div>
         <div className="bw-card b"><Utensils size={34} /><b>Tuesday</b></div>
       </div>
-      <h2>Building your week</h2>
+      <h2>Building Your Week</h2>
       <p className="sub">Checking every day against your targets.</p>
       <ul className="bw-steps">
         {STEPS.map((s, i) => (

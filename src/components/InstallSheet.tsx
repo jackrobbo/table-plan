@@ -63,7 +63,7 @@ export default function InstallSheet({ when, delayMs = 900 }: { when: boolean; d
         <div className="install-head">
           <div className="logo" aria-hidden>T</div>
           <div>
-            <h2 id="install-title" style={{ fontSize: 22 }}>Add Table Plan to your home screen</h2>
+            <h2 id="install-title" style={{ fontSize: 22 }}>Add Table Plan to Your Home Screen</h2>
             <p className="muted" style={{ margin: '4px 0 0' }}>Open your week like an app: full screen, one tap away, with your shopping list ready in the shop.</p>
           </div>
         </div>
@@ -77,9 +77,9 @@ export default function InstallSheet({ when, delayMs = 900 }: { when: boolean; d
         {platform === 'ios' && <p className="muted" style={{ margin: '0 0 12px' }}>The first time you open it from your home screen you&apos;ll sign in once more with a code, then you stay signed in.</p>}
         <div className="install-actions">
           {platform === 'ios'
-            ? <button ref={primary} className="btn" onClick={notNow}>Got it</button>
-            : <button ref={primary} className="btn" onClick={add}>Add to home screen</button>}
-          {platform !== 'ios' && <button className="linkbtn" onClick={notNow}>Not now</button>}
+            ? <button ref={primary} className="btn" onClick={notNow}>Got It</button>
+            : <button ref={primary} className="btn" onClick={add}>Add to Home Screen</button>}
+          {platform !== 'ios' && <button className="linkbtn" onClick={notNow}>Not Now</button>}
         </div>
       </div>
     </div>,
