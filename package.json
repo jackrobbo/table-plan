@@ -11,6 +11,7 @@
     "test": "vitest run",
     "content:import": "tsx scripts/import-content.ts",
     "content:verify": "tsx scripts/verify-content.ts",
+    "match": "tsx scripts/match-products.ts",
     "prices:refresh": "NODE_USE_ENV_PROXY=1 tsx scripts/refresh-prices.ts",
     "beta:invites": "tsx scripts/make-invites.ts",
     "supabase:bundle": "node scripts/bundle-sql.mjs",

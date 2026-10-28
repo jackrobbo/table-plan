@@ -49,3 +49,18 @@ Shooting tips: same backdrop and light for every dish, top-down or about 45 degr
 - **live** also needs every non-cupboard ingredient mapped to a priced product.
 - `source: "poc"` recipes that still carry hand-declared `per_portion` are grandfathered (5 of them lack data). The other 26 were
   recomputed from their ingredients; several declared figures were 20-30% low (lasagne 575 -> 755 kcal).
+
+## Matching another store's products (Tesco, Asda...)
+Morrisons is mapped by hand (above). For another store, use the matching tool, which reads a price file from **any source**
+(Yappman, Hobnight, a hand-made CSV/JSON) and never needs to know which:
+
+1. `npm run match -- suggest --store tesco --input <file.json|csv> [--source yappman|hobnight|generic] [--price-unit pounds|pence] [--map cols.json]`
+   ranks the closest stand-ins for each ingredient (name first, then own-brand tier, pack size and unit price) and saves
+   `content/matches/tesco.json`. Shelf prices only: was, loyalty and promotion prices are ignored. `--map` renames columns, e.g. `{"productId":"external_id"}`.
+2. `npm run match -- review --store tesco` opens a local page (127.0.0.1:4177): confirm, change (search the file), say "no equivalent", or
+   skip each ingredient. "Accept clear matches" confirms only top matches with every name word, a clear lead and no warnings.
+3. `npm run match -- status --store tesco` shows progress and **coverage of the ingredients live meals use** (aim for about 95% before the store goes live).
+4. `npm run match -- apply --store tesco [--dry]` writes `products.tesco` into `ingredients.json` and `content/prices.tesco.json`, then run
+   `npm run content:import`. Set `live: true` for the store in `src/lib/stores.ts` only when coverage is there.
+
+`content/matches/` is gitignored on purpose: vendor files and their licences stay local. Only the result of `apply` is committed.
