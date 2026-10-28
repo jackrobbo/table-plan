@@ -19,7 +19,8 @@
     "catalogue:payload": "tsx scripts/catalogue-payload.ts",
     "images:build": "tsx scripts/build-images.ts",
     "extension:zip": "node scripts/build-extension.mjs",
-    "android:build": "node scripts/build-android.mjs"
+    "android:build": "node scripts/build-android.mjs",
+    "dev:demo": "NEXT_PUBLIC_SUPABASE_URL= NEXT_PUBLIC_SUPABASE_ANON_KEY= NEXT_PUBLIC_FREE_BETA=1 next dev -p 3001"
   },
   "dependencies": {
     "@supabase/supabase-js": "^2.118.0",
