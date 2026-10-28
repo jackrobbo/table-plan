@@ -7,7 +7,7 @@ import { mealImageSrc, mealImageSrcSet } from '@/lib/images';
  * A meal's header photo. Until it arrives (or if the meal has none, or the file fails) the tile shows the emoji on the photo's
  * average colour, so layout never jumps and nothing is ever blank. The photo fades in over the placeholder.
  */
-export default function MealImage({ r, size, sizes }: { r: Pick<Recipe, 'id' | 'e' | 'img'>; size: 'hero' | 'sheet' | 'thumb'; sizes: string }) {
+export default function MealImage({ r, size, sizes }: { r: Pick<Recipe, 'id' | 'e' | 'img'>; size: 'hero' | 'sheet' | 'thumb' | 'sq'; sizes: string }) {
   const [state, setState] = useState<'loading' | 'ready' | 'failed'>('loading');
   const photo = r.img && state !== 'failed';
   const file = r.img?.ph ? `ph-${r.img.ph}` : r.id;   // a stand-in photo until the meal has its own

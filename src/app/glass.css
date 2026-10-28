@@ -111,3 +111,8 @@ body::before{content:''; position:fixed; inset:0; z-index:-1; pointer-events:non
 
 /* carousel cards: blur inside a scrolling strip paints a hard-edged band behind the strip, so they use a plain translucent surface */
 .card.slide{-webkit-backdrop-filter:none; backdrop-filter:none; background:var(--glass-strong);}
+
+/* taste swipe buttons: the round ones keep their own colours */
+.swipebtns.round button{background:var(--glass-strong); background-image:none;}
+.swipebtns.round button.keep{background:var(--ok); color:#fff;}
+.taste-prompt .btn.ghost{background:var(--fill); background-image:none; color:var(--ink); box-shadow:inset 0 0 0 1px var(--glass-ring);}

@@ -1,16 +1,12 @@
 'use client';
 import { useEffect, useState } from 'react';
 import { useRouter } from 'next/navigation';
-import { safeRecipes } from '@/lib/allergens';
-import { tierMark } from '@/lib/budget';
 import {
-  SKIPPABLE, advance, back, canContinue, setAllergies, skipStat, stepIndex, STEPS, swipe, swipeCourses,
-  tasteDeck, tasteProgress, MIN_LIKES, type SkippableStep,
+  SKIPPABLE, advance, back, canContinue, setAllergies, skipStat, stepIndex, type SkippableStep,
 } from '@/lib/onboarding';
-import type { Profile, MealTime } from '@/lib/profile';
 import { computeTargets } from '@/lib/targets';
 import { ActivityStep, AgeStep, AllergiesStep, DislikesStep, GoalStep, HeightStep, MealsStep, SexStep, Title, WeightStep, type SP } from '@/components/profile-fields';
-import MealImage from '@/components/MealImage';
+import TasteSwipe from '@/components/TasteSwipe';
 import Screen from '@/components/Screen';
 import { track } from '@/lib/analytics';
 import { needsConsent } from '@/lib/consent';
@@ -60,7 +56,7 @@ export default function Onboarding() {
       {step === 'allergies' && <AllergiesStep p={profile} update={update} />}
       {step === 'target' && <TargetStep p={profile} update={update} />}
       {step === 'dislikes' && <DislikesStep p={profile} update={update} />}
-      {step === 'taste' && <TasteStep p={profile} update={update} />}
+      {step === 'taste' && <TasteSwipe p={profile} update={update} onFinish={() => { track('onboarding_done', { step }); update(advance); }} />}
     </Screen>
   );
 }
@@ -85,52 +81,6 @@ function TargetStep({ p, update }: SP) {
       )}
       <div className="note"><b>Steady, not extreme.</b> {t.maintenance ? `Estimated maintenance is ${t.maintenance} kcal. ` : 'Using a sensible default; add your stats for a personal number. '}We never plan below 1,300 kcal.</div>
       <p className="muted">Every day is kept inside this band. Change anything later. Not medical or dietetic advice: talk to your GP before changing your diet if you have a medical condition.</p>
-    </>
-  );
-}
-
-function TasteStep({ p, update }: SP) {
-  const courses = swipeCourses(p);
-  const [tab, setTab] = useState<MealTime>(courses[0] ?? 'dinner');
-  const prog = tasteProgress(p);
-  const seen = new Set([...p.likedRecipes, ...p.skippedRecipes]);
-  const pool = tasteDeck(safeRecipes(p.allergies).filter((r) => r.c === tab));
-  const next = pool.find((r) => !seen.has(r.id));
-  const label: Record<MealTime, string> = { breakfast: 'Breakfast', lunch: 'Lunch', dinner: 'Dinner' };
-  return (
-    <>
-      <Title sub={`Like at least ${MIN_LIKES} of each. Keep going as long as you like; more likes, more variety.`}>What do you like to eat?</Title>
-      <div className="tabs">
-        {courses.map((c) => (
-          <button key={c} className={tab === c ? 'on' : ''} onClick={() => setTab(c)}>{label[c]} {prog[c].liked}/{prog[c].needed}</button>
-        ))}
-      </div>
-      {next ? (
-        <>
-          <div className="swipecard">
-            {next.img ? <MealImage r={next} size="hero" sizes="(max-width: 430px) 100vw, 430px" /> : <div className="photo" aria-hidden>{next.e}</div>}
-            <div className="body">
-              <span className="kind">{label[tab]}</span>
-              <h3>{next.n}</h3>
-              <div className="tags">
-                <span className="p">P {next.p}g</span><span>{next.k} kcal</span>{tierMark(next.b) && <span title="Cost per portion">{tierMark(next.b)}</span>}{next.serves > 1 && <span>serves {next.serves}</span>}
-              </div>
-            </div>
-          </div>
-          <div className="swipebtns">
-            <button onClick={() => update((x) => swipe(x, next.id, false))}>Skip</button>
-            <button className="keep" onClick={() => update((x) => swipe(x, next.id, true))}>Keep</button>
-          </div>
-        </>
-      ) : (
-        <div className="note">
-          That&apos;s all the {label[tab].toLowerCase()} options for now.
-          {prog[tab].liked < prog[tab].needed && (
-            <> You need {prog[tab].needed - prog[tab].liked} more.{' '}
-              <button className="linkbtn accent" onClick={() => update((x) => ({ ...x, skippedRecipes: x.skippedRecipes.filter((id) => !pool.some((r) => r.id === id)) }))}>Revisit skipped</button></>
-          )}
-        </div>
-      )}
     </>
   );
 }

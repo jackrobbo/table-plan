@@ -1,7 +1,7 @@
 'use client';
 import { useState } from 'react';
 import { createPortal } from 'react-dom';
-import { Apple, Clock, Coffee, Plus, Sandwich, Utensils, type LucideIcon } from 'lucide-react';
+import { Apple, ArrowLeftRight, Clock, Coffee, Plus, Sandwich, Utensils, type LucideIcon } from 'lucide-react';
 import { timeLabel } from '@/lib/cookTime';
 import { PRODUCTS, RECIPES } from '@/data';
 import MealImage from '@/components/MealImage';
@@ -17,21 +17,26 @@ export const money = (p: number) => '£' + (p / 100).toFixed(2);
 
 export function MealRow({ m, tick, onTick, onOpen, onSwap, isNew }: { m: PlannedMeal; tick?: boolean; onTick?: () => void; onOpen?: () => void; onSwap?: () => void; isNew?: boolean }) {
   const r = recipeById.get(m.recipeId)!;
+  const Icon = SLOT_ICON[m.slot];
+  const time = timeLabel(r.t);
+  const adj = Math.abs(m.scale - 1) >= 0.02;
   return (
     <div className="meal">
-      <span className="slot">{(() => { const Icon = SLOT_ICON[m.slot]; return Icon && <Icon size={14} aria-hidden />; })()}{SLOT_LABEL[m.slot]}</span>
+      <button className="mphoto" onClick={onOpen} disabled={!onOpen} tabIndex={-1} aria-hidden>
+        {r.img ? <MealImage r={r} size="sq" sizes="64px" /> : <div className="mealimg sq"><span className="emoji">{r.e}</span></div>}
+      </button>
       <button className="mbody linkish" onClick={onOpen} disabled={!onOpen}>
-        <div className="mname">{r.e} {r.n}</div>
-        <div className="tags">
-          <span className="p">P {m.protein}g</span>{r.cb != null && <span>C {Math.round(r.cb * m.scale)}g</span>}{r.f != null && <span>F {Math.round(r.f * m.scale)}g</span>}<span>{m.kcal} kcal</span>
-          {timeLabel(r.t) && <span className="time" title="Estimated prep and cooking time"><Clock size={11} aria-hidden />{timeLabel(r.t)}</span>}
+        <div className="mslot">{Icon && <Icon size={12} aria-hidden />}{SLOT_LABEL[m.slot]}{isNew && <span className="newtag">New for you</span>}</div>
+        <div className="mname">{r.n}</div>
+        <div className="mmeta"><b>{m.protein}g protein</b> · {m.kcal} kcal</div>
+        <div className="mmeta">
+          {time && <span className="time" title="Estimated prep and cooking time"><Clock size={11} aria-hidden />{time.replace('≈ ', '≈\u00a0')}</span>}
           {r.cost != null && <span title="Estimated cost of this portion">≈ {money(Math.round(r.cost * m.scale))}</span>}
-          {Math.abs(m.scale - 1) >= 0.02 && <span className="adj">Portion {Math.round(m.scale * 100)}%</span>}
+          {adj && <span className="adj" title="Portion resized to fit your day">{Math.round(m.scale * 100)}% portion</span>}
           {m.extra > 0 && <span>+{m.extra} to share</span>}
-          {isNew && <span className="newtag">New for you</span>}
         </div>
       </button>
-      {onSwap && <button className="swapbtn" aria-label={`Swap ${r.n}`} onClick={onSwap}>Swap</button>}
+      {onSwap && <button className="swapbtn" aria-label={`Swap ${r.n}`} onClick={onSwap}><ArrowLeftRight size={16} aria-hidden /></button>}
       {onTick && (
         <button className={'tick' + (tick ? ' on' : '')} role="checkbox" aria-checked={!!tick} aria-label={`Ate ${r.n}`} onClick={onTick}>
           <svg viewBox="0 0 16 16" aria-hidden><path d="M3.5 8.5l3 3 6-7" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" /></svg>

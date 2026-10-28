@@ -347,7 +347,7 @@ svg.lucide{stroke-width:1.75; flex:none;}
 .opt.on .opt-ico{color:var(--ink);}
 .opt-txt{flex:1; min-width:0;}
 .ico-h{display:flex; align-items:center; gap:8px;}
-.meal .slot{display:flex; flex-direction:column; align-items:flex-start; gap:3px;}
+
 
 /* ---- motion language: one set of timings and curves; everything below uses them ---- */
 :root{--ease-out:cubic-bezier(.2,.8,.2,1); --ease-spring:cubic-bezier(.34,1.5,.5,1); --dur-press:.12s; --dur-fast:.18s; --dur-base:.26s;}
@@ -432,3 +432,46 @@ body:has(.welcome) .site-header{display:none;}   /* the page carries its own log
 .bw-steps li.done .bw-mark{background:var(--ok); border-color:var(--ok); color:#fff; animation:tickPop var(--dur-base,.26s) var(--ease-spring,ease);}
 @keyframes bwSpin{to{transform:rotate(360deg)}}
 .tags span.time{display:inline-flex; align-items:center; gap:4px;}
+
+/* ---- taste swipe: a stack of cards you drag or tap ---- */
+.swipestack{position:relative; height:min(44dvh,400px); margin:8px 0 14px; touch-action:pan-y; user-select:none;}
+.swipestack .swipecard{position:absolute; inset:0; margin:0; border-radius:26px; overflow:hidden; cursor:grab; touch-action:pan-y;}
+.swipestack .swipecard:active{cursor:grabbing;}
+.swipestack .swipecard .mealimg.hero{position:absolute; inset:0; height:auto; border-radius:0;}
+.swipestack .swipecard .photo{position:absolute; inset:0; height:auto; font-size:96px;}
+.swipestack .swipecard.front{animation:cardIn var(--dur-base,.26s) var(--ease-out,ease) backwards;}
+.swipestack .swipecard.peek{transform:scale(.94) translateY(14px); opacity:.7; pointer-events:none;}
+@keyframes cardIn{from{transform:scale(.95) translateY(10px)} to{transform:none}}
+.swipestack .swipecard .body{position:absolute; left:0; right:0; bottom:0; padding:60px 18px 16px; color:#fff; background:linear-gradient(to top,rgba(0,0,0,.82),rgba(0,0,0,.5) 55%,transparent);}
+.swipestack .swipecard .kind{color:rgba(255,255,255,.75);}
+.swipestack .swipecard h3{font-size:26px; margin:2px 0 10px;}
+.swipestack .swipecard .tags span{background:rgba(255,255,255,.18); color:#fff;}
+.swipestack .swipecard .tags span.p{background:rgba(110,210,160,.3); color:#fff;}
+.stamp{position:absolute; top:22px; padding:4px 14px; border:3px solid; border-radius:10px; font-size:24px; font-weight:800; letter-spacing:.06em; text-transform:uppercase; opacity:0; pointer-events:none; background:rgba(0,0,0,.25);}
+.stamp.keep{left:18px; color:#7be0a8; border-color:#7be0a8; transform:rotate(-12deg);}
+.stamp.skip{right:18px; color:#ff8a8a; border-color:#ff8a8a; transform:rotate(12deg);}
+.swipebtns.round{display:flex; justify-content:center; gap:28px; margin:0;}
+.swipebtns.round button{width:68px; height:68px; padding:0; border-radius:50%; display:grid; place-items:center; border:0; cursor:pointer; background:var(--card); color:var(--ink);}
+.swipebtns.round button.skip{color:#e5484d;}
+.swipebtns.round button.keep{color:#fff; background:var(--ok);}
+.swipebtns.round button:active{transform:scale(.9);}
+.swipehint{text-align:center; margin:12px 0 0;}
+.tabs button.done{color:var(--ok);}
+.tabs button{display:inline-flex; align-items:center; justify-content:center; gap:4px;}
+.taste-prompt{text-align:center; padding:26px 8px 8px; display:flex; flex-direction:column; gap:10px; align-items:stretch;}
+.taste-prompt h3{font-size:24px; margin:6px 0 0; letter-spacing:-0.02em;}
+.taste-prompt p{margin:0 0 6px;}
+.tp-ico{align-self:center; width:56px; height:56px; border-radius:50%; display:grid; place-items:center; background:var(--ok); color:#fff; animation:tickPop var(--dur-base,.26s) var(--ease-spring,ease);}
+
+/* ---- plan rows: photo, name, two quiet lines ---- */
+.meal{align-items:center; gap:12px;}
+.mphoto{flex:none; padding:0; border:0; background:none; cursor:pointer; border-radius:12px;}
+.mealimg.sq,.mphoto .mealimg{width:64px; height:64px; border-radius:12px; font-size:28px; margin:0;}
+.meal .mslot{display:flex; align-items:center; gap:5px; font-size:11px; font-weight:600; letter-spacing:.05em; text-transform:uppercase; color:var(--ink2);}
+.meal .mslot .newtag{margin-left:4px; padding:1px 6px; border-radius:5px; font-size:10px; letter-spacing:.02em; text-transform:none; background:oklch(0.94 0.04 250); color:oklch(0.42 0.14 250);}
+.meal .mname{font-size:16px; line-height:1.25; margin:2px 0 3px;}
+.meal .mmeta{display:flex; flex-wrap:wrap; align-items:center; gap:0 8px; font-size:13px; color:var(--ink2); font-variant-numeric:tabular-nums; line-height:1.5;}
+.meal .mmeta b{color:var(--ok-ink, var(--ok)); font-weight:600;}
+.meal .mmeta .time{display:inline-flex; align-items:center; gap:3px;}
+.meal .mmeta .adj{color:var(--warn-ink); background:var(--warn-soft); border-radius:5px; padding:0 6px; font-weight:600; font-size:12px;}
+.swapbtn{width:36px; height:36px; padding:0; display:grid; place-items:center; border-radius:50%; flex:none;}
