@@ -1,8 +1,9 @@
 'use client';
-import { useEffect, useMemo, useState } from 'react';
+import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { useRouter, useSearchParams } from 'next/navigation';
 import PriceNote from '@/components/PriceNote';
 import Screen from '@/components/Screen';
+import BuildingWeek from '@/components/BuildingWeek';
 import MealImage from '@/components/MealImage';
 import BasketButton from '@/components/BasketButton';
 import SwapSheet from '@/components/SwapSheet';
@@ -50,6 +51,10 @@ export default function Plan() {
   const [rate, setRate] = useState<string | null>(null);
   const [swap, setSwap] = useState<{ week: string; day: number; meal: number } | null>(null);
   const [copied, setCopied] = useState<string | null>(null);
+  // The first time in, show what the planner checks while the first week is built.
+  const [building, setBuilding] = useState(false);
+  const sawBuild = useRef(false);
+  const buildDone = useCallback(() => setBuilding(false), []);
 
   useEffect(() => {
     if (!ready) return;
@@ -62,6 +67,7 @@ export default function Plan() {
   const weeksKey = profile ? Object.keys(profile.weeks).length : 0;
   useEffect(() => {
     if (!ready || !profile?.completed) return;
+    if (!sawBuild.current && !Object.keys(profile.weeks).length) { sawBuild.current = true; setBuilding(true); }
     update((p) => {
       if (!Object.keys(p.weeks).length) {
         const w = firstWeek(planWeek(planInputFrom(p)), now);
@@ -79,6 +85,7 @@ export default function Plan() {
   const badge = badgeCount(snap);
   useEffect(() => { if (snap.thisWeek) setTabBadge(badge); }, [badge, snap.thisWeek]);
 
+  if (building && session && profile?.completed) return <Screen><BuildingWeek onDone={buildDone} /></Screen>;
   if (!ready || !profile?.completed || !session || !snap.thisWeek) {
     return (
       <Screen><div className="skeleton-stack" aria-busy="true" aria-label="Building your week">
