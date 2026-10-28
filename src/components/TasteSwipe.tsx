@@ -35,7 +35,8 @@ function SwipeCard({ r, kind, command, onDecide }: { r: Recipe; kind: string; co
   const skipAmt = Math.min(1, Math.max(0, -dx / FLING_AT)) || (gone === -1 ? 1 : 0);
   const style = {
     transform: gone ? `translateX(${gone * 520}px) rotate(${gone * 22}deg)` : `translateX(${dx}px) rotate(${dx / 16}deg)`,
-    transition: dragging ? 'none' : 'transform .25s var(--ease-out, ease)',
+    // The fade needs its own transition: with only `transform` animated, the card would vanish at once when a button flings it.
+    transition: dragging ? 'none' : 'transform .28s var(--ease-out, ease), opacity .24s ease .06s',
     opacity: gone ? 0 : 1,
   } as const;
 
