@@ -23,7 +23,7 @@ export interface Recipe {
   /** Estimated minutes, prep plus cooking (0 = ready to eat). */
   t?: number;
   /** Header photo: alt text and the placeholder colour. Files are /meals/<id>-<width>.webp (see src/lib/images.ts). */
-  img?: { a: string; c: string };
+  img?: { a: string; c: string; /** set while the meal has no photo of its own: the stand-in's key (files /meals/ph-<key>-<w>.webp) */ ph?: string };
 }
 export interface Topup { n: string; p: number; k: number; prod: string; qty: number }
 

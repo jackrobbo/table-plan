@@ -1,0 +1,140 @@
+{
+ "food-eggs": {
+  "alt": "Omelette on a plate",
+  "by": "amirali mirhashemian",
+  "page": "https://unsplash.com/photos/egg-omelet-4gmBIFraSuE",
+  "colour": "#c8c8c8"
+ },
+ "food-fry": {
+  "alt": "A cooked breakfast plate with eggs and bacon",
+  "by": "Ajeet Panesar",
+  "page": "https://unsplash.com/photos/a-plate-of-food-_Tci2omfmHI",
+  "colour": "#080808"
+ },
+ "food-oats": {
+  "alt": "A white bowl of oats topped with sliced fruit",
+  "by": "Anastasia Eremina",
+  "page": "https://unsplash.com/photos/sliced-apples-and-bananas-in-white-ceramic-bowl-QiN3ZBskOBY",
+  "colour": "#e8e8e8"
+ },
+ "food-yogurt": {
+  "alt": "A bowl of yogurt with blueberries and granola",
+  "by": "Shayna Douglas",
+  "page": "https://unsplash.com/photos/a-bowl-of-cereal-with-blueberries-and-granola-z71M3cfW40c",
+  "colour": "#e8e8d8"
+ },
+ "food-smoothie": {
+  "alt": "A pink smoothie in a glass with a straw",
+  "by": "Doug Bagg",
+  "page": "https://unsplash.com/photos/clear-cup-with-straw-on-beige-wooden-surface-1Add_A_10Lw",
+  "colour": "#584838"
+ },
+ "food-wrap": {
+  "alt": "Three filled wraps stacked on a table",
+  "by": "Yosia Cahyana",
+  "page": "https://unsplash.com/photos/three-meat-and-lettuce-wraps-stacked-on-a-table-UmnvfuGPIuE",
+  "colour": "#080808"
+ },
+ "food-sandwich": {
+  "alt": "A sandwich on a black plate",
+  "by": "Eiliv Aceron",
+  "page": "https://unsplash.com/photos/black-plate-with-sandwich-mAQZ3X_8_l0",
+  "colour": "#181818"
+ },
+ "food-soup": {
+  "alt": "A bowl of creamy soup with parsley and bread",
+  "by": "Elena Leya",
+  "page": "https://unsplash.com/photos/creamy-pumpkin-soup-with-parsley-and-bread-JELuDsF96tA",
+  "colour": "#e89808"
+ },
+ "food-pasta": {
+  "alt": "Penne pasta with a meat sauce",
+  "by": "Ben Lei",
+  "page": "https://unsplash.com/photos/penne-pasta-with-meat-sauce-flFd8L7_B3g",
+  "colour": "#d8e8f8"
+ },
+ "food-curry": {
+  "alt": "A bowl of curry with a spoon",
+  "by": "Roman Bonapart",
+  "page": "https://unsplash.com/photos/white-ceramic-bowl-with-stainless-steel-spoon-rsgscg6sBDQ",
+  "colour": "#e8a808"
+ },
+ "food-noodles": {
+  "alt": "A bowl of noodles with vegetables",
+  "by": "Lindsay Moe",
+  "page": "https://unsplash.com/photos/bowl-of-vegetable-UP5jWpuIvZI",
+  "colour": "#181808"
+ },
+ "food-traybake": {
+  "alt": "A plate of roast meat and vegetables",
+  "by": "Nick Nice",
+  "page": "https://unsplash.com/photos/a-close-up-of-a-plate-of-food-with-meat-and-veggies--cLe54AcdYg",
+  "colour": "#282828"
+ },
+ "food-tacos": {
+  "alt": "Three tacos with meat and lettuce on a white plate",
+  "by": "Robby McCullough",
+  "page": "https://unsplash.com/photos/three-tacos-with-meat-lettuce-and-sauce-on-a-white-plate-oDC_9Uq1los",
+  "colour": "#080808"
+ },
+ "food-steak": {
+  "alt": "Grilled meat on a white plate",
+  "by": "Tim Toomey",
+  "page": "https://unsplash.com/photos/grilled-meat-on-white-ceramic-plate-pe9dvM1rQkM",
+  "colour": "#080808"
+ },
+ "food-sausage": {
+  "alt": "A plate of sausages, mushrooms and mashed potato",
+  "by": "Adam Fathony",
+  "page": "https://unsplash.com/photos/a-plate-with-sausages-mushrooms-and-mashed-potatoes-1vu9LPsNmrw",
+  "colour": "#282818"
+ },
+ "food-fish": {
+  "alt": "A white plate with fish and vegetables",
+  "by": "Orkun Orcan",
+  "page": "https://unsplash.com/photos/a-white-plate-topped-with-fish-and-vegetables-3ru16c1mSsU",
+  "colour": "#c8c8b8"
+ },
+ "food-potato": {
+  "alt": "A baked potato with melted cheese and bacon",
+  "by": "nobleseed nobleseed",
+  "page": "https://unsplash.com/photos/baked-potato-with-melted-cheese-and-bacon-bits-TWA_MRXBpXY",
+  "colour": "#c8b8a8"
+ },
+ "food-snack": {
+  "alt": "A white bowl of mixed nuts",
+  "by": "Pratik Bachhav",
+  "page": "https://unsplash.com/photos/brown-and-black-nuts-on-white-ceramic-bowl-5p6B2SGx1qc",
+  "colour": "#080808"
+ },
+ "food-burger": {
+  "alt": "A burger with lettuce and tomato",
+  "by": "David Foodphototasty",
+  "page": "https://unsplash.com/photos/burger-with-lettuce-and-tomato-E94j3rMcxlw",
+  "colour": "#080808"
+ },
+ "slide-targets": {
+  "alt": "A colourful bowl of meat and vegetables",
+  "by": "Anh Nguyen",
+  "page": "https://unsplash.com/photos/vegetable-and-meat-on-bowl-kcA-c3f_3FE",
+  "colour": "#e8e8e8"
+ },
+ "slide-meals": {
+  "alt": "A burger with relish",
+  "by": "martin becker",
+  "page": "https://unsplash.com/photos/burger-with-relish-bYKlXDxKVl8",
+  "colour": "#080808"
+ },
+ "slide-price": {
+  "alt": "Carrots and cucumber in a woven basket",
+  "by": "Sara Scarpa",
+  "page": "https://unsplash.com/photos/carrots-and-cucumber-on-brown-woven-basket-AJFQGDaFP-s",
+  "colour": "#080808"
+ },
+ "slide-trolley": {
+  "alt": "Someone pushing a trolley full of shopping",
+  "by": "Karsten Winegeart",
+  "page": "https://unsplash.com/photos/a-person-pushing-a-shopping-cart-full-of-food-CZtK_E89omo",
+  "colour": "#181818"
+ }
+}

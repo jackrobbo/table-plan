@@ -11,6 +11,11 @@
   "f": 8,
   "cost": 66,
   "b": "medium",
+  "img": {
+   "a": "Illustrative photo: a white bowl of mixed nuts",
+   "c": "#080808",
+   "ph": "food-snack"
+  },
   "t": 1,
   "macros_only": false,
   "fresh": [
@@ -45,6 +50,11 @@
   "f": 10,
   "cost": 53,
   "b": "medium",
+  "img": {
+   "a": "Illustrative photo: a white bowl of mixed nuts",
+   "c": "#080808",
+   "ph": "food-snack"
+  },
   "t": 2,
   "macros_only": false,
   "fresh": [
@@ -78,6 +88,11 @@
   "f": 23,
   "cost": 112,
   "b": "medium",
+  "img": {
+   "a": "Illustrative photo: omelette on a plate",
+   "c": "#c8c8c8",
+   "ph": "food-eggs"
+  },
   "t": 10,
   "macros_only": false,
   "fresh": [
@@ -122,6 +137,11 @@
   "f": 9,
   "cost": 82,
   "b": "medium",
+  "img": {
+   "a": "Illustrative photo: a white bowl of mixed nuts",
+   "c": "#080808",
+   "ph": "food-snack"
+  },
   "t": 1,
   "macros_only": false,
   "fresh": [
@@ -148,6 +168,11 @@
   "f": 32,
   "cost": 234,
   "b": "medium",
+  "img": {
+   "a": "Illustrative photo: penne pasta with a meat sauce",
+   "c": "#d8e8f8",
+   "ph": "food-pasta"
+  },
   "t": 28,
   "macros_only": false,
   "fresh": [
@@ -198,6 +223,11 @@
   "f": 16,
   "cost": 234,
   "b": "high",
+  "img": {
+   "a": "Illustrative photo: a cooked breakfast plate with eggs and bacon",
+   "c": "#080808",
+   "ph": "food-fry"
+  },
   "t": 17,
   "macros_only": false,
   "fresh": [
@@ -244,6 +274,11 @@
   "f": 16,
   "cost": 209,
   "b": "high",
+  "img": {
+   "a": "Illustrative photo: three filled wraps stacked on a table",
+   "c": "#080808",
+   "ph": "food-wrap"
+  },
   "t": 11,
   "macros_only": false,
   "fresh": [
@@ -283,6 +318,11 @@
   "f": 15,
   "cost": 181,
   "b": "high",
+  "img": {
+   "a": "Illustrative photo: a cooked breakfast plate with eggs and bacon",
+   "c": "#080808",
+   "ph": "food-fry"
+  },
   "t": 12,
   "macros_only": false,
   "fresh": [
@@ -323,6 +363,11 @@
   "f": 14,
   "cost": 46,
   "b": "low",
+  "img": {
+   "a": "Illustrative photo: a pink smoothie in a glass with a straw",
+   "c": "#584838",
+   "ph": "food-smoothie"
+  },
   "t": 3,
   "macros_only": false,
   "fresh": [
@@ -366,6 +411,11 @@
   "f": 9,
   "cost": 45,
   "b": "low",
+  "img": {
+   "a": "Illustrative photo: a white bowl of oats topped with sliced fruit",
+   "c": "#e8e8e8",
+   "ph": "food-oats"
+  },
   "t": 7,
   "macros_only": false,
   "fresh": [
@@ -409,6 +459,11 @@
   "f": 12,
   "cost": 57,
   "b": "low",
+  "img": {
+   "a": "Illustrative photo: a pink smoothie in a glass with a straw",
+   "c": "#584838",
+   "ph": "food-smoothie"
+  },
   "t": 3,
   "macros_only": false,
   "fresh": [
@@ -446,6 +501,11 @@
   "f": 8,
   "cost": 185,
   "b": "low",
+  "img": {
+   "a": "Illustrative photo: a colourful bowl of meat and vegetables",
+   "c": "#e8e8e8",
+   "ph": "slide-targets"
+  },
   "t": 23,
   "macros_only": false,
   "fresh": [
@@ -496,6 +556,11 @@
   "f": 14,
   "cost": 121,
   "b": "medium",
+  "img": {
+   "a": "Illustrative photo: three filled wraps stacked on a table",
+   "c": "#080808",
+   "ph": "food-wrap"
+  },
   "t": 12,
   "macros_only": false,
   "fresh": [
@@ -545,6 +610,11 @@
   "f": 25,
   "cost": 109,
   "b": "low",
+  "img": {
+   "a": "Illustrative photo: three tacos with meat and lettuce on a white plate",
+   "c": "#080808",
+   "ph": "food-tacos"
+  },
   "t": 10,
   "macros_only": false,
   "fresh": [
@@ -592,6 +662,11 @@
   "f": 18,
   "cost": 156,
   "b": "low",
+  "img": {
+   "a": "Illustrative photo: a bowl of curry with a spoon",
+   "c": "#e8a808",
+   "ph": "food-curry"
+  },
   "t": 40,
   "macros_only": false,
   "fresh": [
@@ -653,6 +728,11 @@
   "f": 12,
   "cost": 48,
   "b": "low",
+  "img": {
+   "a": "Illustrative photo: a sandwich on a black plate",
+   "c": "#181818",
+   "ph": "food-sandwich"
+  },
   "t": 7,
   "macros_only": false,
   "fresh": [
@@ -693,6 +773,11 @@
   "f": 14,
   "cost": 369,
   "b": "high",
+  "img": {
+   "a": "Illustrative photo: a bowl of noodles with vegetables",
+   "c": "#181808",
+   "ph": "food-noodles"
+  },
   "t": 20,
   "macros_only": false,
   "fresh": [
@@ -746,6 +831,11 @@
   "f": 20,
   "cost": 246,
   "b": "medium",
+  "img": {
+   "a": "Illustrative photo: three tacos with meat and lettuce on a white plate",
+   "c": "#080808",
+   "ph": "food-tacos"
+  },
   "t": 26,
   "macros_only": false,
   "fresh": [
@@ -808,6 +898,11 @@
   "f": 8,
   "cost": 106,
   "b": "high",
+  "img": {
+   "a": "Illustrative photo: a bowl of yogurt with blueberries and granola",
+   "c": "#e8e8d8",
+   "ph": "food-yogurt"
+  },
   "t": 2,
   "macros_only": false,
   "fresh": [
@@ -841,6 +936,11 @@
   "f": 15,
   "cost": 107,
   "b": "low",
+  "img": {
+   "a": "Illustrative photo: a white bowl of oats topped with sliced fruit",
+   "c": "#e8e8e8",
+   "ph": "food-oats"
+  },
   "t": 5,
   "macros_only": false,
   "fresh": [
@@ -886,6 +986,11 @@
   "f": 23,
   "cost": 108,
   "b": "low",
+  "img": {
+   "a": "Illustrative photo: omelette on a plate",
+   "c": "#c8c8c8",
+   "ph": "food-eggs"
+  },
   "t": 10,
   "macros_only": false,
   "fresh": [
@@ -927,6 +1032,11 @@
   "f": 9,
   "cost": 60,
   "b": "medium",
+  "img": {
+   "a": "Illustrative photo: omelette on a plate",
+   "c": "#c8c8c8",
+   "ph": "food-eggs"
+  },
   "t": 10,
   "macros_only": false,
   "fresh": [
@@ -956,6 +1066,11 @@
   "f": 14,
   "cost": 59,
   "b": "low",
+  "img": {
+   "a": "Illustrative photo: a baked potato with melted cheese and bacon",
+   "c": "#c8b8a8",
+   "ph": "food-potato"
+  },
   "t": 65,
   "macros_only": false,
   "fresh": [
@@ -994,6 +1109,11 @@
   "f": 14,
   "cost": 20,
   "b": "low",
+  "img": {
+   "a": "Illustrative photo: a white bowl of mixed nuts",
+   "c": "#080808",
+   "ph": "food-snack"
+  },
   "t": 2,
   "macros_only": false,
   "fresh": [
@@ -1028,6 +1148,11 @@
   "f": 30,
   "cost": 139,
   "b": "medium",
+  "img": {
+   "a": "Illustrative photo: omelette on a plate",
+   "c": "#c8c8c8",
+   "ph": "food-eggs"
+  },
   "t": 8,
   "macros_only": false,
   "fresh": [
@@ -1075,6 +1200,11 @@
   "f": 20,
   "cost": 128,
   "b": "low",
+  "img": {
+   "a": "Illustrative photo: penne pasta with a meat sauce",
+   "c": "#d8e8f8",
+   "ph": "food-pasta"
+  },
   "t": 43,
   "macros_only": false,
   "fresh": [
@@ -1124,6 +1254,11 @@
   "f": 16,
   "cost": 223,
   "b": "high",
+  "img": {
+   "a": "Illustrative photo: a colourful bowl of meat and vegetables",
+   "c": "#e8e8e8",
+   "ph": "slide-targets"
+  },
   "t": 16,
   "macros_only": false,
   "fresh": [
@@ -1172,6 +1307,11 @@
   "f": 13,
   "cost": 214,
   "b": "high",
+  "img": {
+   "a": "Illustrative photo: a sandwich on a black plate",
+   "c": "#181818",
+   "ph": "food-sandwich"
+  },
   "t": 5,
   "macros_only": false,
   "fresh": [
@@ -1215,6 +1355,11 @@
   "f": 26,
   "cost": 215,
   "b": "medium",
+  "img": {
+   "a": "Illustrative photo: three tacos with meat and lettuce on a white plate",
+   "c": "#080808",
+   "ph": "food-tacos"
+  },
   "t": 25,
   "macros_only": false,
   "fresh": [
@@ -1267,6 +1412,11 @@
   "f": 19,
   "cost": 158,
   "b": "medium",
+  "img": {
+   "a": "Illustrative photo: a bowl of noodles with vegetables",
+   "c": "#181808",
+   "ph": "food-noodles"
+  },
   "t": 20,
   "macros_only": false,
   "fresh": [
@@ -1319,6 +1469,11 @@
   "f": 8,
   "cost": 230,
   "b": "high",
+  "img": {
+   "a": "Illustrative photo: three filled wraps stacked on a table",
+   "c": "#080808",
+   "ph": "food-wrap"
+  },
   "t": 4,
   "macros_only": false,
   "fresh": [
@@ -1365,6 +1520,11 @@
   "f": 8,
   "cost": 155,
   "b": "medium",
+  "img": {
+   "a": "Illustrative photo: a colourful bowl of meat and vegetables",
+   "c": "#e8e8e8",
+   "ph": "slide-targets"
+  },
   "t": 35,
   "macros_only": false,
   "fresh": [
@@ -1407,6 +1567,11 @@
   "f": 14,
   "cost": 227,
   "b": "medium",
+  "img": {
+   "a": "Illustrative photo: a plate of roast meat and vegetables",
+   "c": "#282828",
+   "ph": "food-traybake"
+  },
   "t": 57,
   "macros_only": false,
   "fresh": [
@@ -1457,6 +1622,11 @@
   "f": 15,
   "cost": 154,
   "b": "medium",
+  "img": {
+   "a": "Illustrative photo: a bowl of curry with a spoon",
+   "c": "#e8a808",
+   "ph": "food-curry"
+  },
   "t": 21,
   "macros_only": false,
   "fresh": [
@@ -1508,6 +1678,11 @@
   "f": 11,
   "cost": 248,
   "b": "high",
+  "img": {
+   "a": "Illustrative photo: three filled wraps stacked on a table",
+   "c": "#080808",
+   "ph": "food-wrap"
+  },
   "t": 4,
   "macros_only": false,
   "fresh": [
@@ -1555,6 +1730,11 @@
   "f": 21,
   "cost": 206,
   "b": "medium",
+  "img": {
+   "a": "Illustrative photo: three tacos with meat and lettuce on a white plate",
+   "c": "#080808",
+   "ph": "food-tacos"
+  },
   "t": 20,
   "macros_only": false,
   "fresh": [
@@ -1607,6 +1787,11 @@
   "f": 7,
   "cost": 198,
   "b": "low",
+  "img": {
+   "a": "Illustrative photo: a bowl of noodles with vegetables",
+   "c": "#181808",
+   "ph": "food-noodles"
+  },
   "t": 25,
   "macros_only": false,
   "fresh": [
@@ -1667,6 +1852,11 @@
   "f": 16,
   "cost": 204,
   "b": "high",
+  "img": {
+   "a": "Illustrative photo: a sandwich on a black plate",
+   "c": "#181818",
+   "ph": "food-sandwich"
+  },
   "t": 4,
   "macros_only": false,
   "fresh": [
@@ -1715,6 +1905,11 @@
   "f": 3,
   "cost": 135,
   "b": "medium",
+  "img": {
+   "a": "Illustrative photo: a bowl of creamy soup with parsley and bread",
+   "c": "#e89808",
+   "ph": "food-soup"
+  },
   "t": 21,
   "macros_only": false,
   "fresh": [
@@ -1765,6 +1960,11 @@
   "f": 15,
   "cost": 140,
   "b": "medium",
+  "img": {
+   "a": "Illustrative photo: penne pasta with a meat sauce",
+   "c": "#d8e8f8",
+   "ph": "food-pasta"
+  },
   "t": 23,
   "macros_only": false,
   "fresh": [
@@ -1816,6 +2016,11 @@
   "f": 20,
   "cost": 233,
   "b": "medium",
+  "img": {
+   "a": "Illustrative photo: a bowl of noodles with vegetables",
+   "c": "#181808",
+   "ph": "food-noodles"
+  },
   "t": 25,
   "macros_only": false,
   "fresh": [
@@ -1872,6 +2077,11 @@
   "f": 26,
   "cost": 197,
   "b": "low",
+  "img": {
+   "a": "Illustrative photo: a bowl of curry with a spoon",
+   "c": "#e8a808",
+   "ph": "food-curry"
+  },
   "t": 33,
   "macros_only": false,
   "fresh": [
@@ -1923,6 +2133,11 @@
   "f": 31,
   "cost": 160,
   "b": "low",
+  "img": {
+   "a": "Illustrative photo: a bowl of curry with a spoon",
+   "c": "#e8a808",
+   "ph": "food-curry"
+  },
   "t": 28,
   "macros_only": false,
   "fresh": [
@@ -1978,6 +2193,11 @@
   "f": 14,
   "cost": 281,
   "b": "high",
+  "img": {
+   "a": "Illustrative photo: a bowl of curry with a spoon",
+   "c": "#e8a808",
+   "ph": "food-curry"
+  },
   "t": 40,
   "macros_only": false,
   "fresh": [
@@ -2037,6 +2257,11 @@
   "f": 11,
   "cost": 301,
   "b": "high",
+  "img": {
+   "a": "Illustrative photo: a bowl of noodles with vegetables",
+   "c": "#181808",
+   "ph": "food-noodles"
+  },
   "t": 18,
   "macros_only": false,
   "fresh": [
@@ -2080,6 +2305,11 @@
   "f": 15,
   "cost": 401,
   "b": "high",
+  "img": {
+   "a": "Illustrative photo: a white plate with fish and vegetables",
+   "c": "#c8c8b8",
+   "ph": "food-fish"
+  },
   "t": 27,
   "macros_only": false,
   "fresh": [
@@ -2127,6 +2357,11 @@
   "f": 2,
   "cost": 128,
   "b": "high",
+  "img": {
+   "a": "Illustrative photo: a bowl of yogurt with blueberries and granola",
+   "c": "#e8e8d8",
+   "ph": "food-yogurt"
+  },
   "t": 2,
   "macros_only": false,
   "fresh": [
@@ -2160,6 +2395,11 @@
   "f": 2,
   "cost": 80,
   "b": "medium",
+  "img": {
+   "a": "Illustrative photo: a white bowl of mixed nuts",
+   "c": "#080808",
+   "ph": "food-snack"
+  },
   "t": 3,
   "macros_only": false,
   "fresh": [
@@ -2193,6 +2433,11 @@
   "f": 7,
   "cost": 179,
   "b": "high",
+  "img": {
+   "a": "Illustrative photo: a bowl of yogurt with blueberries and granola",
+   "c": "#e8e8d8",
+   "ph": "food-yogurt"
+  },
   "t": 3,
   "macros_only": false,
   "fresh": [
@@ -2233,6 +2478,11 @@
   "f": 2,
   "cost": 83,
   "b": "medium",
+  "img": {
+   "a": "Illustrative photo: a white bowl of mixed nuts",
+   "c": "#080808",
+   "ph": "food-snack"
+  },
   "t": 3,
   "macros_only": false,
   "fresh": [
@@ -2270,6 +2520,11 @@
   "f": 14,
   "cost": 177,
   "b": "low",
+  "img": {
+   "a": "Illustrative photo: penne pasta with a meat sauce",
+   "c": "#d8e8f8",
+   "ph": "food-pasta"
+  },
   "t": 26,
   "macros_only": false,
   "fresh": [
@@ -2318,6 +2573,11 @@
   "f": 13,
   "cost": 208,
   "b": "medium",
+  "img": {
+   "a": "Illustrative photo: a bowl of noodles with vegetables",
+   "c": "#181808",
+   "ph": "food-noodles"
+  },
   "t": 20,
   "macros_only": false,
   "fresh": [
@@ -2367,6 +2627,11 @@
   "f": 6,
   "cost": 76,
   "b": "medium",
+  "img": {
+   "a": "Illustrative photo: a white bowl of mixed nuts",
+   "c": "#080808",
+   "ph": "food-snack"
+  },
   "t": 3,
   "macros_only": false,
   "fresh": [
@@ -2400,6 +2665,11 @@
   "f": 5,
   "cost": 57,
   "b": "medium",
+  "img": {
+   "a": "Illustrative photo: omelette on a plate",
+   "c": "#c8c8c8",
+   "ph": "food-eggs"
+  },
   "t": 10,
   "macros_only": false,
   "fresh": [
@@ -2433,6 +2703,11 @@
   "f": 16,
   "cost": 94,
   "b": "low",
+  "img": {
+   "a": "Illustrative photo: a sandwich on a black plate",
+   "c": "#181818",
+   "ph": "food-sandwich"
+  },
   "t": 14,
   "macros_only": false,
   "fresh": [
@@ -2478,6 +2753,11 @@
   "f": 19,
   "cost": 117,
   "b": "medium",
+  "img": {
+   "a": "Illustrative photo: omelette on a plate",
+   "c": "#c8c8c8",
+   "ph": "food-eggs"
+  },
   "t": 12,
   "macros_only": false,
   "fresh": [
@@ -2516,6 +2796,11 @@
   "f": 40,
   "cost": 301,
   "b": "high",
+  "img": {
+   "a": "Illustrative photo: a cooked breakfast plate with eggs and bacon",
+   "c": "#080808",
+   "ph": "food-fry"
+  },
   "t": 30,
   "macros_only": false,
   "fresh": [
@@ -2578,6 +2863,11 @@
   "f": 20,
   "cost": 253,
   "b": "medium",
+  "img": {
+   "a": "Illustrative photo: three tacos with meat and lettuce on a white plate",
+   "c": "#080808",
+   "ph": "food-tacos"
+  },
   "t": 27,
   "macros_only": false,
   "fresh": [
@@ -2642,6 +2932,11 @@
   "f": 19,
   "cost": 132,
   "b": "medium",
+  "img": {
+   "a": "Illustrative photo: three tacos with meat and lettuce on a white plate",
+   "c": "#080808",
+   "ph": "food-tacos"
+  },
   "t": 9,
   "macros_only": false,
   "fresh": [
@@ -2690,6 +2985,11 @@
   "f": 11,
   "cost": 39,
   "b": "low",
+  "img": {
+   "a": "Illustrative photo: a bowl of yogurt with blueberries and granola",
+   "c": "#e8e8d8",
+   "ph": "food-yogurt"
+  },
   "t": 1,
   "macros_only": false,
   "fresh": [
@@ -2723,6 +3023,11 @@
   "f": 19,
   "cost": 118,
   "b": "medium",
+  "img": {
+   "a": "Illustrative photo: a bowl of yogurt with blueberries and granola",
+   "c": "#e8e8d8",
+   "ph": "food-yogurt"
+  },
   "t": 3,
   "macros_only": false,
   "fresh": [
@@ -2761,6 +3066,11 @@
   "f": null,
   "cost": 250,
   "b": "high",
+  "img": {
+   "a": "Illustrative photo: a white bowl of mixed nuts",
+   "c": "#080808",
+   "ph": "food-snack"
+  },
   "t": 0,
   "macros_only": false,
   "fresh": [
@@ -2791,6 +3101,11 @@
   "f": 33,
   "cost": 238,
   "b": "medium",
+  "img": {
+   "a": "Illustrative photo: a plate of roast meat and vegetables",
+   "c": "#282828",
+   "ph": "food-traybake"
+  },
   "t": 45,
   "macros_only": false,
   "fresh": [
@@ -2842,6 +3157,11 @@
   "f": 22,
   "cost": 135,
   "b": "medium",
+  "img": {
+   "a": "Illustrative photo: three filled wraps stacked on a table",
+   "c": "#080808",
+   "ph": "food-wrap"
+  },
   "t": 12,
   "macros_only": false,
   "fresh": [
@@ -2894,6 +3214,11 @@
   "f": 24,
   "cost": 158,
   "b": "medium",
+  "img": {
+   "a": "Illustrative photo: three filled wraps stacked on a table",
+   "c": "#080808",
+   "ph": "food-wrap"
+  },
   "t": 9,
   "macros_only": false,
   "fresh": [
@@ -2940,6 +3265,11 @@
   "f": 21,
   "cost": 151,
   "b": "medium",
+  "img": {
+   "a": "Illustrative photo: a sandwich on a black plate",
+   "c": "#181818",
+   "ph": "food-sandwich"
+  },
   "t": 4,
   "macros_only": false,
   "fresh": [
@@ -2985,6 +3315,11 @@
   "f": 20,
   "cost": 134,
   "b": "medium",
+  "img": {
+   "a": "Illustrative photo: a sandwich on a black plate",
+   "c": "#181818",
+   "ph": "food-sandwich"
+  },
   "t": 9,
   "macros_only": false,
   "fresh": [
@@ -3027,6 +3362,11 @@
   "f": 3,
   "cost": 177,
   "b": "low",
+  "img": {
+   "a": "Illustrative photo: a bowl of noodles with vegetables",
+   "c": "#181808",
+   "ph": "food-noodles"
+  },
   "t": 26,
   "macros_only": false,
   "fresh": [
@@ -3075,6 +3415,11 @@
   "f": 7,
   "cost": 41,
   "b": "low",
+  "img": {
+   "a": "Illustrative photo: a white bowl of mixed nuts",
+   "c": "#080808",
+   "ph": "food-snack"
+  },
   "t": 4,
   "macros_only": false,
   "fresh": [
@@ -3108,6 +3453,11 @@
   "f": 34,
   "cost": 248,
   "b": "medium",
+  "img": {
+   "a": "Illustrative photo: three tacos with meat and lettuce on a white plate",
+   "c": "#080808",
+   "ph": "food-tacos"
+  },
   "t": 27,
   "macros_only": false,
   "fresh": [
@@ -3172,6 +3522,11 @@
   "f": 21,
   "cost": 272,
   "b": "high",
+  "img": {
+   "a": "Illustrative photo: penne pasta with a meat sauce",
+   "c": "#d8e8f8",
+   "ph": "food-pasta"
+  },
   "t": 80,
   "macros_only": false,
   "fresh": [
@@ -3231,6 +3586,11 @@
   "f": 9,
   "cost": 230,
   "b": "medium",
+  "img": {
+   "a": "Illustrative photo: a plate of sausages, mushrooms and mashed potato",
+   "c": "#282818",
+   "ph": "food-sausage"
+  },
   "t": 50,
   "macros_only": false,
   "fresh": [
@@ -3285,6 +3645,11 @@
   "f": 16,
   "cost": 255,
   "b": "medium",
+  "img": {
+   "a": "Illustrative photo: a plate of sausages, mushrooms and mashed potato",
+   "c": "#282818",
+   "ph": "food-sausage"
+  },
   "t": 55,
   "macros_only": false,
   "fresh": [
@@ -3341,6 +3706,11 @@
   "f": 30,
   "cost": 245,
   "b": "medium",
+  "img": {
+   "a": "Illustrative photo: a plate of roast meat and vegetables",
+   "c": "#282828",
+   "ph": "food-traybake"
+  },
   "t": 40,
   "macros_only": false,
   "fresh": [
@@ -3387,6 +3757,11 @@
   "f": 5,
   "cost": 62,
   "b": "low",
+  "img": {
+   "a": "Illustrative photo: a bowl of creamy soup with parsley and bread",
+   "c": "#e89808",
+   "ph": "food-soup"
+  },
   "t": 31,
   "macros_only": false,
   "fresh": [
@@ -3433,6 +3808,11 @@
   "f": 8,
   "cost": 81,
   "b": "low",
+  "img": {
+   "a": "Illustrative photo: a bowl of creamy soup with parsley and bread",
+   "c": "#e89808",
+   "ph": "food-soup"
+  },
   "t": 32,
   "macros_only": false,
   "fresh": [
@@ -3489,6 +3869,11 @@
   "f": 10,
   "cost": 221,
   "b": "medium",
+  "img": {
+   "a": "Illustrative photo: a bowl of curry with a spoon",
+   "c": "#e8a808",
+   "ph": "food-curry"
+  },
   "t": 30,
   "macros_only": false,
   "fresh": [
@@ -3543,6 +3928,11 @@
   "f": 12,
   "cost": 191,
   "b": "low",
+  "img": {
+   "a": "Illustrative photo: a plate of roast meat and vegetables",
+   "c": "#282828",
+   "ph": "food-traybake"
+  },
   "t": 38,
   "macros_only": false,
   "fresh": [
@@ -3596,6 +3986,11 @@
   "f": 17,
   "cost": 41,
   "b": "low",
+  "img": {
+   "a": "Illustrative photo: a sandwich on a black plate",
+   "c": "#181818",
+   "ph": "food-sandwich"
+  },
   "t": 5,
   "macros_only": false,
   "fresh": [
@@ -3636,6 +4031,11 @@
   "f": 20,
   "cost": 46,
   "b": "low",
+  "img": {
+   "a": "Illustrative photo: a white bowl of oats topped with sliced fruit",
+   "c": "#e8e8e8",
+   "ph": "food-oats"
+  },
   "t": 8,
   "macros_only": false,
   "fresh": [
@@ -3680,6 +4080,11 @@
   "f": 13,
   "cost": 38,
   "b": "low",
+  "img": {
+   "a": "Illustrative photo: a white bowl of mixed nuts",
+   "c": "#080808",
+   "ph": "food-snack"
+  },
   "t": 2,
   "macros_only": false,
   "fresh": [
@@ -3713,6 +4118,11 @@
   "f": 20,
   "cost": 420,
   "b": "high",
+  "img": {
+   "a": "Illustrative photo: a plate of roast meat and vegetables",
+   "c": "#282828",
+   "ph": "food-traybake"
+  },
   "t": 30,
   "macros_only": false,
   "fresh": [
@@ -3760,6 +4170,11 @@
   "f": 10,
   "cost": 224,
   "b": "medium",
+  "img": {
+   "a": "Illustrative photo: a plate of roast meat and vegetables",
+   "c": "#282828",
+   "ph": "food-traybake"
+  },
   "t": 50,
   "macros_only": false,
   "fresh": [
@@ -3812,6 +4227,11 @@
   "f": 33,
   "cost": 200,
   "b": "low",
+  "img": {
+   "a": "Illustrative photo: a plate of sausages, mushrooms and mashed potato",
+   "c": "#282818",
+   "ph": "food-sausage"
+  },
   "t": 55,
   "macros_only": false,
   "fresh": [
@@ -3855,6 +4275,11 @@
   "f": 15,
   "cost": 215,
   "b": "high",
+  "img": {
+   "a": "Illustrative photo: three filled wraps stacked on a table",
+   "c": "#080808",
+   "ph": "food-wrap"
+  },
   "t": 5,
   "macros_only": false,
   "fresh": [
@@ -3904,6 +4329,11 @@
   "f": null,
   "cost": 323,
   "b": "high",
+  "img": {
+   "a": "Illustrative photo: a white plate with fish and vegetables",
+   "c": "#c8c8b8",
+   "ph": "food-fish"
+  },
   "t": 5,
   "macros_only": false,
   "fresh": [
@@ -3952,6 +4382,11 @@
   "f": 21,
   "cost": 440,
   "b": "high",
+  "img": {
+   "a": "Illustrative photo: a bowl of noodles with vegetables",
+   "c": "#181808",
+   "ph": "food-noodles"
+  },
   "t": 18,
   "macros_only": false,
   "fresh": [
@@ -4009,6 +4444,11 @@
   "f": null,
   "cost": 370,
   "b": "high",
+  "img": {
+   "a": "Illustrative photo: a white bowl of mixed nuts",
+   "c": "#080808",
+   "ph": "food-snack"
+  },
   "t": 1,
   "macros_only": false,
   "fresh": [
@@ -4049,6 +4489,11 @@
   "f": 27,
   "cost": 95,
   "b": "low",
+  "img": {
+   "a": "Illustrative photo: a white bowl of oats topped with sliced fruit",
+   "c": "#e8e8e8",
+   "ph": "food-oats"
+  },
   "t": 13,
   "macros_only": false,
   "fresh": [
@@ -4102,6 +4547,11 @@
   "f": 5,
   "cost": 125,
   "b": "high",
+  "img": {
+   "a": "Illustrative photo: a white bowl of mixed nuts",
+   "c": "#080808",
+   "ph": "food-snack"
+  },
   "t": 0,
   "macros_only": false,
   "fresh": [
@@ -4129,6 +4579,11 @@
   "f": null,
   "cost": 155,
   "b": "medium",
+  "img": {
+   "a": "Illustrative photo: a pink smoothie in a glass with a straw",
+   "c": "#584838",
+   "ph": "food-smoothie"
+  },
   "t": 3,
   "macros_only": false,
   "fresh": [
@@ -4169,6 +4624,11 @@
   "f": 9,
   "cost": 200,
   "b": "high",
+  "img": {
+   "a": "Illustrative photo: a white bowl of mixed nuts",
+   "c": "#080808",
+   "ph": "food-snack"
+  },
   "t": 0,
   "macros_only": false,
   "fresh": [
@@ -4199,6 +4659,11 @@
   "f": 0,
   "cost": 75,
   "b": "medium",
+  "img": {
+   "a": "Illustrative photo: a bowl of yogurt with blueberries and granola",
+   "c": "#e8e8d8",
+   "ph": "food-yogurt"
+  },
   "t": 1,
   "macros_only": false,
   "fresh": [
@@ -4225,6 +4690,11 @@
   "f": 21,
   "cost": 342,
   "b": "high",
+  "img": {
+   "a": "Illustrative photo: a white plate with fish and vegetables",
+   "c": "#c8c8b8",
+   "ph": "food-fish"
+  },
   "t": 23,
   "macros_only": false,
   "fresh": [
@@ -4275,6 +4745,11 @@
   "f": 20,
   "cost": 321,
   "b": "high",
+  "img": {
+   "a": "Illustrative photo: a white plate with fish and vegetables",
+   "c": "#c8c8b8",
+   "ph": "food-fish"
+  },
   "t": 35,
   "macros_only": false,
   "fresh": [
@@ -4321,6 +4796,11 @@
   "f": 22,
   "cost": 321,
   "b": "high",
+  "img": {
+   "a": "Illustrative photo: a white plate with fish and vegetables",
+   "c": "#c8c8b8",
+   "ph": "food-fish"
+  },
   "t": 25,
   "macros_only": false,
   "fresh": [
@@ -4367,6 +4847,11 @@
   "f": 7,
   "cost": 221,
   "b": "medium",
+  "img": {
+   "a": "Illustrative photo: a bowl of noodles with vegetables",
+   "c": "#181808",
+   "ph": "food-noodles"
+  },
   "t": 30,
   "macros_only": false,
   "fresh": [
@@ -4426,6 +4911,11 @@
   "f": 37,
   "cost": 135,
   "b": "low",
+  "img": {
+   "a": "Illustrative photo: a plate of sausages, mushrooms and mashed potato",
+   "c": "#282818",
+   "ph": "food-sausage"
+  },
   "t": 35,
   "macros_only": false,
   "fresh": [
@@ -4484,6 +4974,11 @@
   "f": 33,
   "cost": 177,
   "b": "low",
+  "img": {
+   "a": "Illustrative photo: a plate of sausages, mushrooms and mashed potato",
+   "c": "#282818",
+   "ph": "food-sausage"
+  },
   "t": 55,
   "macros_only": false,
   "fresh": [
@@ -4537,6 +5032,11 @@
   "f": 40,
   "cost": 144,
   "b": "medium",
+  "img": {
+   "a": "Illustrative photo: a cooked breakfast plate with eggs and bacon",
+   "c": "#080808",
+   "ph": "food-fry"
+  },
   "t": 24,
   "macros_only": false,
   "fresh": [
@@ -4586,6 +5086,11 @@
   "f": 27,
   "cost": 110,
   "b": "low",
+  "img": {
+   "a": "Illustrative photo: omelette on a plate",
+   "c": "#c8c8c8",
+   "ph": "food-eggs"
+  },
   "t": 9,
   "macros_only": false,
   "fresh": [
@@ -4627,6 +5132,11 @@
   "f": 29,
   "cost": 230,
   "b": "medium",
+  "img": {
+   "a": "Illustrative photo: omelette on a plate",
+   "c": "#c8c8c8",
+   "ph": "food-eggs"
+  },
   "t": 30,
   "macros_only": false,
   "fresh": [
@@ -4689,6 +5199,11 @@
   "f": 20,
   "cost": 281,
   "b": "high",
+  "img": {
+   "a": "Illustrative photo: a white plate with fish and vegetables",
+   "c": "#c8c8b8",
+   "ph": "food-fish"
+  },
   "t": 12,
   "macros_only": false,
   "fresh": [
@@ -4732,6 +5247,11 @@
   "f": 11,
   "cost": 233,
   "b": "high",
+  "img": {
+   "a": "Illustrative photo: a sandwich on a black plate",
+   "c": "#181818",
+   "ph": "food-sandwich"
+  },
   "t": 6,
   "macros_only": false,
   "fresh": [
@@ -4772,6 +5292,11 @@
   "f": 29,
   "cost": 296,
   "b": "high",
+  "img": {
+   "a": "Illustrative photo: omelette on a plate",
+   "c": "#c8c8c8",
+   "ph": "food-eggs"
+  },
   "t": 8,
   "macros_only": false,
   "fresh": [
@@ -4818,6 +5343,11 @@
   "f": 10,
   "cost": 258,
   "b": "medium",
+  "img": {
+   "a": "Illustrative photo: penne pasta with a meat sauce",
+   "c": "#d8e8f8",
+   "ph": "food-pasta"
+  },
   "t": 40,
   "macros_only": false,
   "fresh": [
@@ -4878,6 +5408,11 @@
   "f": 16,
   "cost": 80,
   "b": "low",
+  "img": {
+   "a": "Illustrative photo: a bowl of curry with a spoon",
+   "c": "#e8a808",
+   "ph": "food-curry"
+  },
   "t": 20,
   "macros_only": false,
   "fresh": [
@@ -4926,6 +5461,11 @@
   "f": 26,
   "cost": 175,
   "b": "high",
+  "img": {
+   "a": "Illustrative photo: omelette on a plate",
+   "c": "#c8c8c8",
+   "ph": "food-eggs"
+  },
   "t": 16,
   "macros_only": false,
   "fresh": [
@@ -4975,6 +5515,11 @@
   "f": 27,
   "cost": 525,
   "b": "high",
+  "img": {
+   "a": "Illustrative photo: grilled meat on a white plate",
+   "c": "#080808",
+   "ph": "food-steak"
+  },
   "t": 30,
   "macros_only": false,
   "fresh": [
@@ -5024,6 +5569,11 @@
   "f": 11,
   "cost": 403,
   "b": "high",
+  "img": {
+   "a": "Illustrative photo: three tacos with meat and lettuce on a white plate",
+   "c": "#080808",
+   "ph": "food-tacos"
+  },
   "t": 20,
   "macros_only": false,
   "fresh": [
@@ -5072,6 +5622,11 @@
   "f": 25,
   "cost": 626,
   "b": "high",
+  "img": {
+   "a": "Illustrative photo: grilled meat on a white plate",
+   "c": "#080808",
+   "ph": "food-steak"
+  },
   "t": 35,
   "macros_only": false,
   "fresh": [
@@ -5116,6 +5671,11 @@
   "f": 30,
   "cost": 191,
   "b": "low",
+  "img": {
+   "a": "Illustrative photo: a bowl of curry with a spoon",
+   "c": "#e8a808",
+   "ph": "food-curry"
+  },
   "t": 38,
   "macros_only": false,
   "fresh": [
@@ -5175,6 +5735,11 @@
   "f": 15,
   "cost": 135,
   "b": "medium",
+  "img": {
+   "a": "Illustrative photo: omelette on a plate",
+   "c": "#c8c8c8",
+   "ph": "food-eggs"
+  },
   "t": 28,
   "macros_only": false,
   "fresh": [
@@ -5223,6 +5788,11 @@
   "f": 17,
   "cost": 139,
   "b": "low",
+  "img": {
+   "a": "Illustrative photo: a bowl of curry with a spoon",
+   "c": "#e8a808",
+   "ph": "food-curry"
+  },
   "t": 60,
   "macros_only": false,
   "fresh": [
@@ -5280,6 +5850,11 @@
   "f": 6,
   "cost": 230,
   "b": "medium",
+  "img": {
+   "a": "Illustrative photo: a bowl of noodles with vegetables",
+   "c": "#181808",
+   "ph": "food-noodles"
+  },
   "t": 18,
   "macros_only": false,
   "fresh": [
@@ -5323,6 +5898,11 @@
   "f": 34,
   "cost": 105,
   "b": "low",
+  "img": {
+   "a": "Illustrative photo: a bowl of creamy soup with parsley and bread",
+   "c": "#e89808",
+   "ph": "food-soup"
+  },
   "t": 11,
   "macros_only": false,
   "fresh": [
@@ -5365,6 +5945,11 @@
   "f": 7,
   "cost": 165,
   "b": "high",
+  "img": {
+   "a": "Illustrative photo: a white plate with fish and vegetables",
+   "c": "#c8c8b8",
+   "ph": "food-fish"
+  },
   "t": 6,
   "macros_only": false,
   "fresh": [
@@ -5417,6 +6002,11 @@
   "f": 8,
   "cost": 96,
   "b": "low",
+  "img": {
+   "a": "Illustrative photo: a baked potato with melted cheese and bacon",
+   "c": "#c8b8a8",
+   "ph": "food-potato"
+  },
   "t": 65,
   "macros_only": false,
   "fresh": [
@@ -5457,6 +6047,11 @@
   "f": 9,
   "cost": 109,
   "b": "low",
+  "img": {
+   "a": "Illustrative photo: penne pasta with a meat sauce",
+   "c": "#d8e8f8",
+   "ph": "food-pasta"
+  },
   "t": 16,
   "macros_only": false,
   "fresh": [
@@ -5501,6 +6096,11 @@
   "f": 24,
   "cost": 81,
   "b": "low",
+  "img": {
+   "a": "Illustrative photo: a sandwich on a black plate",
+   "c": "#181818",
+   "ph": "food-sandwich"
+  },
   "t": 10,
   "macros_only": false,
   "fresh": [
@@ -5546,6 +6146,11 @@
   "f": 8,
   "cost": 40,
   "b": "low",
+  "img": {
+   "a": "Illustrative photo: a white bowl of mixed nuts",
+   "c": "#080808",
+   "ph": "food-snack"
+  },
   "t": 3,
   "macros_only": false,
   "fresh": [
@@ -5584,6 +6189,11 @@
   "f": 1,
   "cost": 62,
   "b": "medium",
+  "img": {
+   "a": "Illustrative photo: a white bowl of mixed nuts",
+   "c": "#080808",
+   "ph": "food-snack"
+  },
   "t": 3,
   "macros_only": false,
   "fresh": [
@@ -5621,6 +6231,11 @@
   "f": 8,
   "cost": 113,
   "b": "low",
+  "img": {
+   "a": "Illustrative photo: a baked potato with melted cheese and bacon",
+   "c": "#c8b8a8",
+   "ph": "food-potato"
+  },
   "t": 68,
   "macros_only": false,
   "fresh": [
@@ -5665,6 +6280,11 @@
   "f": 8,
   "cost": 218,
   "b": "medium",
+  "img": {
+   "a": "Illustrative photo: a bowl of curry with a spoon",
+   "c": "#e8a808",
+   "ph": "food-curry"
+  },
   "t": 40,
   "macros_only": false,
   "fresh": [
@@ -5719,6 +6339,11 @@
   "f": 7,
   "cost": 149,
   "b": "medium",
+  "img": {
+   "a": "Illustrative photo: a bowl of creamy soup with parsley and bread",
+   "c": "#e89808",
+   "ph": "food-soup"
+  },
   "t": 28,
   "macros_only": false,
   "fresh": [
@@ -5765,6 +6390,11 @@
   "f": 12,
   "cost": 210,
   "b": "medium",
+  "img": {
+   "a": "Illustrative photo: a bowl of curry with a spoon",
+   "c": "#e8a808",
+   "ph": "food-curry"
+  },
   "t": 30,
   "macros_only": false,
   "fresh": [
@@ -5818,6 +6448,11 @@
   "f": 12,
   "cost": 206,
   "b": "medium",
+  "img": {
+   "a": "Illustrative photo: a plate of roast meat and vegetables",
+   "c": "#282828",
+   "ph": "food-traybake"
+  },
   "t": 60,
   "macros_only": false,
   "fresh": [
@@ -5870,6 +6505,11 @@
   "f": 15,
   "cost": 235,
   "b": "medium",
+  "img": {
+   "a": "Illustrative photo: penne pasta with a meat sauce",
+   "c": "#d8e8f8",
+   "ph": "food-pasta"
+  },
   "t": 40,
   "macros_only": false,
   "fresh": [
@@ -5927,6 +6567,11 @@
   "f": 13,
   "cost": 122,
   "b": "medium",
+  "img": {
+   "a": "Illustrative photo: omelette on a plate",
+   "c": "#c8c8c8",
+   "ph": "food-eggs"
+  },
   "t": 13,
   "macros_only": false,
   "fresh": [
@@ -5973,6 +6618,11 @@
   "f": 10,
   "cost": 119,
   "b": "medium",
+  "img": {
+   "a": "Illustrative photo: a bowl of yogurt with blueberries and granola",
+   "c": "#e8e8d8",
+   "ph": "food-yogurt"
+  },
   "t": 3,
   "macros_only": false,
   "fresh": [
@@ -6012,6 +6662,11 @@
   "f": null,
   "cost": 216,
   "b": "high",
+  "img": {
+   "a": "Illustrative photo: a bowl of yogurt with blueberries and granola",
+   "c": "#e8e8d8",
+   "ph": "food-yogurt"
+  },
   "t": 2,
   "macros_only": false,
   "fresh": [

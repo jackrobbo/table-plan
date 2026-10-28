@@ -6,6 +6,7 @@ import type { IngredientDef, RecipeDef } from '../src/lib/content/types';
 import type { PriceCache } from '../src/lib/pricing/refresh';
 import { BUDGET_LIMITS, budgetTier, costPerPortion, resolvePerPortion } from '../src/lib/content/macros';
 import { deriveAllergens, validateContent } from '../src/lib/content/validate';
+import { placeholderKey } from '../src/lib/content/placeholder';
 
 const readJson = <T>(f: string) => JSON.parse(fs.readFileSync(f, 'utf8')) as T;
 const ingredients = readJson<IngredientDef[]>('content/ingredients.json');
@@ -21,6 +22,7 @@ for (const i of ingredients) {
   const e = i.product && prices[i.slug];
   if (e && i.product && (e.status === 'ok' || e.status === 'out_of_stock')) i.product.price_pence = e.price_pence;
 }
+const placeholders = fs.existsSync('content/images/placeholders.json') ? readJson<Record<string, { alt: string; colour?: string }>>('content/images/placeholders.json') : {};
 const images = fs.existsSync('content/images/manifest.json') ? readJson<Record<string, { colour: string }>>('content/images/manifest.json') : {};
 const issues = validateContent(ingredients, recipes, images);
 for (const i of issues) console.log(`${i.level === 'error' ? '✖' : '⚠'} ${i.where}: ${i.message}`);
@@ -58,7 +60,9 @@ out('recipes', recipes.filter((r) => r.status === 'live').map((r) => ({
   id: r.slug, c: r.course, e: r.emoji ?? '🍽️', n: r.name, p: resolved.get(r.slug)!.m.protein_g, k: resolved.get(r.slug)!.m.kcal, serves: r.serves,
   cb: resolved.get(r.slug)!.m.carbs_g ?? null, f: resolved.get(r.slug)!.m.fat_g ?? null,
   cost: resolved.get(r.slug)!.cost, b: resolved.get(r.slug)!.budget,
-  ...(r.image && images[r.slug] ? { img: { a: r.image.alt, c: images[r.slug].colour } } : {}),
+  ...(r.image && images[r.slug] ? { img: { a: r.image.alt, c: images[r.slug].colour } }
+    : !r.macros_only && placeholders[placeholderKey(r)]
+      ? { img: { a: `Illustrative photo: ${placeholders[placeholderKey(r)].alt.replace(/^./, (c) => c.toLowerCase())}`, c: placeholders[placeholderKey(r)].colour ?? '#222222', ph: placeholderKey(r) } } : {}),
   ...(r.time ? { t: r.time.prep + r.time.cook } : {}),
   macros_only: r.macros_only ?? false,
   fresh: r.ingredients.map((l) => [l.ingredient, l.qty]), cup: r.cupboard, ...(r.cupboard_qty ? { cq: r.cupboard_qty } : {}), m: r.method,

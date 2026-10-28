@@ -1,12 +1,37 @@
 'use client';
-import { useRef, useState } from 'react';
-import { Heart, PoundSterling, ShoppingCart, Target, type LucideIcon } from 'lucide-react';
+import { useRef, useState, type ReactNode } from 'react';
+import { mealImageSrc, mealImageSrcSet } from '@/lib/images';
 
-const FEATURES: { icon: LucideIcon; title: string; body: string }[] = [
-  { icon: Target, title: 'Hits your targets', body: 'Calories and protein set from your stats, with every day kept in range. No maths.' },
-  { icon: Heart, title: 'Meals you’ll actually eat', body: 'Tell us what you like and what to avoid. Allergies are always left out, and you can swap any meal.' },
-  { icon: PoundSterling, title: 'Priced before you shop', body: 'See the estimated cost of the whole week at Morrisons, dated, so there are no surprises.' },
-  { icon: ShoppingCart, title: 'Fills your trolley', body: 'Send your list to a Morrisons trolley in a tap with the Android app or Chrome add-on.' },
+/** Small, static pictures of the real screens (example numbers), so each card shows the feature rather than describing it. */
+const bar = (label: string, value: string, pct: number) => (
+  <div className="mini-bar"><div className="mini-row"><span>{label}</span><b>{value}</b></div><div className="mini-track"><i style={{ width: `${pct}%` }} /></div></div>
+);
+
+const FEATURES: { title: string; body: string; photo: string; preview: ReactNode }[] = [
+  {
+    title: 'Hits your targets',
+    photo: 'slide-targets',
+    body: 'Calories and protein set from your stats, every day kept in range.',
+    preview: bar('Protein', '159 / ≥153g', 92),
+  },
+  {
+    title: 'Meals you’ll actually eat',
+    photo: 'slide-meals',
+    body: 'Tell us what you like. Allergies are always left out, and you can swap any meal.',
+    preview: <div className="mini-tags"><span className="p">P 43g</span><span>616 kcal</span><span>≈ 20 min</span><span>≈ £1.66</span></div>,
+  },
+  {
+    title: 'Priced before you shop',
+    photo: 'slide-price',
+    body: 'The whole week’s estimated cost at Morrisons, dated, with no surprises.',
+    preview: <div className="mini-price"><b>≈ £55.86</b><span>estimated Morrisons prices</span></div>,
+  },
+  {
+    title: 'Fills your trolley',
+    photo: 'slide-trolley',
+    body: 'Send your list to a Morrisons trolley in a tap, with the Android app or Chrome add-on.',
+    preview: <div className="mini-trolley"><b>Fill my Morrisons trolley</b></div>,
+  },
 ];
 
 /** Swipeable feature cards: native scroll-snap, with dots that follow and jump. No autoplay. */
@@ -30,9 +55,14 @@ export default function FeatureCarousel() {
   return (
     <section aria-label="What Table Plan does" className="carousel-wrap">
       <ul className="carousel" ref={track} onScroll={onScroll}>
-        {FEATURES.map(({ icon: Icon, title, body }, n) => (
+        {FEATURES.map(({ title, body, photo, preview }, n) => (
           <li key={title} className="slide card" aria-label={`${n + 1} of ${FEATURES.length}`}>
-            <span className="slide-ico"><Icon size={22} aria-hidden /></span>
+            <div className="slide-pic">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img src={mealImageSrc(`ph-${photo}`, 960)} srcSet={mealImageSrcSet(`ph-${photo}`)} sizes="(max-width: 430px) 80vw, 340px" alt="" loading="lazy" decoding="async" />
+              <div className="slide-ui" aria-hidden>{preview}</div>
+              <em aria-hidden>Example</em>
+            </div>
             <h3>{title}</h3>
             <p className="muted">{body}</p>
           </li>
