@@ -1,5 +1,6 @@
 import { ALLERGENS } from '../allergens';
 import { computePerPortion, costPerPortion, gramsOf, recipeLines, resolvePerPortion } from './macros';
+import { STORES, isStoreId } from '../stores';
 import type { IngredientDef, Issue, RecipeDef } from './types';
 
 const SLUG = /^[a-z0-9]+(-[a-z0-9]+)*$/;
@@ -37,6 +38,18 @@ export function validateContent(ingredients: IngredientDef[], recipes: RecipeDef
     for (const a of i.allergens ?? []) if (!ALLERGEN_KEYS.has(a)) err(w, `unknown allergen "${a}"`);
     if (i.product && !(i.product.price_pence >= 0 && i.product.pack_size > 0)) err(w, 'product needs price_pence >= 0 and pack_size > 0');
     if (!i.cupboard && !i.product) warn(w, 'not mapped to a retailer product yet (will be unpriced)');
+    // A neutral name is what recipes show once there is more than one store; it must not carry a store's brand.
+    if ((i.product || i.cupboard) && !i.display) warn(w, 'no neutral `display` name (recipes would show a store product name)');
+    if (i.display && /morrisons|tesco|asda|sainsbury/i.test(i.display)) err(w, '`display` must be a neutral name, without a store brand');
+    // Other stores' mappings: each must be a real store, with a slug the trolley adapter can use and a usable price and pack size.
+    for (const [store, pm] of Object.entries(i.products ?? {})) {
+      const def = isStoreId(store) ? STORES[store] : null;
+      if (!def) { err(w, `unknown store "${store}" in products`); continue; }
+      if (store === 'morrisons') err(w, 'Morrisons is the `product` mapping; remove it from `products`');
+      if (!pm) continue;
+      if (!(pm.price_pence >= 0 && pm.pack_size > 0)) err(w, `${store}: needs price_pence >= 0 and pack_size > 0`);
+      if (!def.slugPattern.test(pm.slug)) err(w, `${store}: slug "${pm.slug}" is not a valid ${def.name} product slug`);
+    }
     for (const [re, a] of NAME_IMPLIES) {
       // "coconut milk", "peanut butter" and "cream crackers" are not dairy, whatever the words suggest.
       if (re.test(i.name) && !/coconut milk|cornflour|peanut butter|cream crackers/i.test(i.name) && !(i.allergens ?? []).includes(a as never)) err(w, `name suggests "${a}" but it is not in allergens`);

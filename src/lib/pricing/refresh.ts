@@ -60,13 +60,13 @@ const MONTHS = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', '
 export const shortDate = (iso: string) => { const d = new Date(iso); return `${d.getUTCDate()} ${MONTHS[d.getUTCMonth()]}`; };
 
 /** "≈ £42.10 · Morrisons prices checked 23 Oct" with a warning once data gets old. */
-export function describeEstimate(totalPence: number, checkedAt: string | null, now = new Date()) {
+export function describeEstimate(totalPence: number, checkedAt: string | null, now = new Date(), storeName = 'Morrisons') {
   const level = staleness(checkedAt, now);
   const money = '£' + (totalPence / 100).toFixed(2);
   const when = checkedAt ? `checked ${shortDate(checkedAt)}` : 'not yet checked';
   return {
     level,
-    text: `≈ ${money} · estimated Morrisons prices, ${when}`,
-    warning: level === 'stale' ? 'These prices may be out of date. Check them at Morrisons before you buy.' : null,
+    text: `≈ ${money} · estimated ${storeName} prices, ${when}`,
+    warning: level === 'stale' ? `These prices may be out of date. Check them at ${storeName} before you buy.` : null,
   };
 }

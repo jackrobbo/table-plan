@@ -7,6 +7,7 @@ import type { PriceCache } from '../src/lib/pricing/refresh';
 import { BUDGET_LIMITS, budgetTier, costPerPortion, resolvePerPortion } from '../src/lib/content/macros';
 import { deriveAllergens, validateContent } from '../src/lib/content/validate';
 import { placeholderKey } from '../src/lib/content/placeholder';
+import { STORE_IDS, type StoreId } from '../src/lib/stores';
 
 const readJson = <T>(f: string) => JSON.parse(fs.readFileSync(f, 'utf8')) as T;
 const ingredients = readJson<IngredientDef[]>('content/ingredients.json');
@@ -22,6 +23,13 @@ for (const i of ingredients) {
   const e = i.product && prices[i.slug];
   if (e && i.product && (e.status === 'ok' || e.status === 'out_of_stock')) i.product.price_pence = e.price_pence;
 }
+// Other stores: each has its own mapping (`products.<store>`) and price cache (content/prices.<store>.json).
+const otherStores = STORE_IDS.filter((s) => s !== 'morrisons');
+const storePrices = new Map<StoreId, PriceCache>(otherStores.map((s) => [s, fs.existsSync(`content/prices.${s}.json`) ? readJson<PriceCache>(`content/prices.${s}.json`) : {}]));
+for (const s of otherStores) for (const i of ingredients) {
+  const p = i.products?.[s], e = storePrices.get(s)![i.slug];
+  if (p && e && (e.status === 'ok' || e.status === 'out_of_stock')) p.price_pence = e.price_pence;
+}
 const placeholders = fs.existsSync('content/images/placeholders.json') ? readJson<Record<string, { alt: string; colour?: string }>>('content/images/placeholders.json') : {};
 const images = fs.existsSync('content/images/manifest.json') ? readJson<Record<string, { colour: string }>>('content/images/manifest.json') : {};
 const issues = validateContent(ingredients, recipes, images);
@@ -35,7 +43,10 @@ const ingMap = new Map(ingredients.map((i) => [i.slug, i]));
 const resolved = new Map(recipes.map((r) => {
   const m = resolvePerPortion(r, ingMap);
   const cost = r.macros_only ? null : costPerPortion(r, ingMap);
-  return [r.slug, { m, cost, budget: cost == null ? null : budgetTier(cost, r.course) }] as const;
+  // The same marginal cost and tier at each other store that prices every line of the recipe (none yet, until a catalogue is mapped).
+  const sc: Record<string, { cost: number; b: string }> = {};
+  if (!r.macros_only) for (const st of otherStores) { const c = costPerPortion(r, ingMap, st); if (c != null) sc[st] = { cost: c, b: budgetTier(c, r.course) }; }
+  return [r.slug, { m, cost, budget: cost == null ? null : budgetTier(cost, r.course), sc }] as const;
 }));
 const byStatus = (s: string) => recipes.filter((r) => r.status === s).length;
 console.log(`live ${byStatus('live')} · verified ${byStatus('verified')} · draft ${byStatus('draft')}`);
@@ -56,10 +67,21 @@ out('cupboard', Object.fromEntries(ingredients.filter((i) => i.cupboard).map((i)
 // "Easy Cook Long Grain Rice 1kg" → "Easy Cook Long Grain Rice": the recipe sheet shows what you use, not the pack you buy.
 const shortName = (n: string) => n.replace(/\s+\d[\d.,×x\s]*(?:g|kg|ml|l|cl)\b.*$/i, '').replace(/\s+\d+$/, '').replace(/^Savers\s+/, '');
 out('cupboard-names', Object.fromEntries(ingredients.filter((i) => i.cupboard).map((i) => [i.slug, shortName(i.name)])));
+// Neutral ingredient names (recipes, cooking sheet); product names are per store.
+out('ingredient-names', Object.fromEntries(ingredients.filter((i) => i.product || i.cupboard).map((i) => [i.slug, i.display ?? shortName(i.name)])));
+// Other stores' catalogues, same shape as products.json (Morrisons stays in products.json, the reference store).
+out('stores', Object.fromEntries(otherStores.map((st) => {
+  const pc = storePrices.get(st)!;
+  const products = Object.fromEntries(ingredients.filter((i) => i.products?.[st]).map((i) => { const p = i.products![st]!, e = pc[i.slug];
+    return [i.slug, { n: p.name, pr: p.price_pence, pack: p.pack_size, u: i.unit, s: p.slug, c: i.category ?? 'Other', ...(e && e.status !== 'ok' ? { st: e.status } : {}) }]; }));
+  const checked = Object.values(pc).map((e) => e.checked_at).sort();
+  return [st, { products, checkedAt: checked.at(-1) ?? null }];
+})));
 out('recipes', recipes.filter((r) => r.status === 'live').map((r) => ({
   id: r.slug, c: r.course, e: r.emoji ?? '🍽️', n: r.name, p: resolved.get(r.slug)!.m.protein_g, k: resolved.get(r.slug)!.m.kcal, serves: r.serves,
   cb: resolved.get(r.slug)!.m.carbs_g ?? null, f: resolved.get(r.slug)!.m.fat_g ?? null,
   cost: resolved.get(r.slug)!.cost, b: resolved.get(r.slug)!.budget,
+  ...(Object.keys(resolved.get(r.slug)!.sc).length ? { sc: resolved.get(r.slug)!.sc } : {}),
   ...(r.image && images[r.slug] ? { img: { a: r.image.alt, c: images[r.slug].colour } }
     : !r.macros_only && placeholders[placeholderKey(r)]
       ? { img: { a: `Illustrative photo: ${placeholders[placeholderKey(r)].alt.replace(/^./, (c) => c.toLowerCase())}`, c: placeholders[placeholderKey(r)].colour ?? '#222222', ph: placeholderKey(r) } } : {}),

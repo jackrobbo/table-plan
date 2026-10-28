@@ -7,6 +7,8 @@ import { PRODUCTS, RECIPES } from '@/data';
 import MealImage from '@/components/MealImage';
 import { ingredientIcon } from '@/lib/ingredientIcon';
 import { tierClass, tierMark } from '@/lib/budget';
+import { buildShoppingFor, ingredientName } from '@/lib/catalogue';
+import { DEFAULT_STORE, STORES, type Store } from '@/lib/stores';
 import { allergenNames, cupboardLines } from '@/lib/recipeFacts';
 import { buildShopping, byAisle, type Shopping } from '@/lib/planner/shopping';
 import type { Plan, PlannedDay, PlannedMeal } from '@/lib/planner/types';
@@ -93,7 +95,7 @@ export function DayCard({ d, index, ticks, onTick, onOpen, onSwap, label, today,
   );
 }
 
-export function ShoppingList({ shopping, have, onToggle, want = [], onToggleCupboard }: { shopping: Shopping; have?: string[]; onToggle?: (key: string) => void; want?: string[]; onToggleCupboard?: (key: string) => void }) {
+export function ShoppingList({ shopping, have, onToggle, want = [], onToggleCupboard, store = STORES[DEFAULT_STORE] }: { shopping: Shopping; have?: string[]; onToggle?: (key: string) => void; want?: string[]; onToggleCupboard?: (key: string) => void; store?: Store }) {
   return (
     <>
       {byAisle(shopping.lines).map(({ aisle, lines }) => (
@@ -113,7 +115,7 @@ export function ShoppingList({ shopping, have, onToggle, want = [], onToggleCupb
                   <div className="lbody">
                     <b>{l.name}{l.packs > 1 ? ` ×${l.packs}` : ''}</b>
                     {l.slug && (
-                      <a className="shoplink" href={`https://groceries.morrisons.com/products/${l.slug}`} target="_blank" rel="noopener noreferrer" aria-label={`Open ${l.name} at Morrisons (opens in a new tab)`}>Morrisons ↗</a>
+                      <a className="shoplink" href={store.productUrl(l.slug)} target="_blank" rel="noopener noreferrer" aria-label={`Open ${l.name} at ${store.name} (opens in a new tab)`}>{store.short} ↗</a>
                     )}
                     {l.status && l.status !== 'ok' && <div className="flag">May be unavailable at the moment</div>}
                   </div>
@@ -150,8 +152,8 @@ export function ShoppingList({ shopping, have, onToggle, want = [], onToggleCupb
 }
 
 /** Plain-text list for Save to Notes / share. Honest about prices being dated estimates. */
-export function listAsText(plan: Plan, have: string[], dated: string, want: string[] = []): string {
-  const s = buildShopping(plan);
+export function listAsText(plan: Plan, have: string[], dated: string, want: string[] = [], store: Store = STORES[DEFAULT_STORE]): string {
+  const s = buildShoppingFor(plan, store.id);
   const picked = (s.cupboardItems ?? []).filter((c) => want.includes(c.key));
   const rest = (s.cupboardItems ?? []).filter((c) => !want.includes(c.key));
   const groups = byAisle(s.lines.filter((l) => !have.includes(l.key)))
@@ -163,12 +165,12 @@ export function listAsText(plan: Plan, have: string[], dated: string, want: stri
 /** Rating controls for a recipe sheet: whether it's liked now, and what the two actions do. */
 export interface RateControls { liked: boolean; onLike: (id: string) => void; onRemove: (id: string) => void }
 
-export function RecipeSheet({ id, onClose, portions, onNever, rating }: { id: string | null; onClose: () => void; portions?: number; onNever?: (id: string) => void; rating?: RateControls }) {
+export function RecipeSheet({ id, onClose, portions, onNever, rating, store }: { id: string | null; onClose: () => void; portions?: number; onNever?: (id: string) => void; rating?: RateControls; store?: Store }) {
   const r = id ? recipeById.get(id) : undefined;
-  return r ? createPortal(<RecipeSheetBody key={r.id} r={r} onClose={onClose} portions={portions} onNever={onNever} rating={rating} />, document.body) : null;
+  return r ? createPortal(<RecipeSheetBody key={r.id} r={r} onClose={onClose} portions={portions} onNever={onNever} rating={rating} store={store ?? STORES[DEFAULT_STORE]} />, document.body) : null;
 }
 
-function RecipeSheetBody({ r, onClose, portions, onNever, rating }: { r: NonNullable<ReturnType<typeof recipeById.get>>; onClose: () => void; portions?: number; onNever?: (id: string) => void; rating?: RateControls }) {
+function RecipeSheetBody({ r, onClose, portions, onNever, rating, store }: { r: NonNullable<ReturnType<typeof recipeById.get>>; onClose: () => void; portions?: number; onNever?: (id: string) => void; rating?: RateControls; store: Store }) {
   const [tab, setTab] = useState<'ingredients' | 'cook'>('ingredients');
   const [struck, setStruck] = useState<string[]>([]);
   const [asked, setAsked] = useState(false);
@@ -217,7 +219,7 @@ function RecipeSheetBody({ r, onClose, portions, onNever, rating }: { r: NonNull
           <p className="muted" style={{ margin: '8px 0 4px' }}>Whole dish. Tap an ingredient to cross it off as you go.</p>
           <ul className="plain strike">
             {r.fresh.map(([k, q]) => (
-              <li key={k}><button className={'strikebtn' + (struck.includes(k) ? ' on' : '')} aria-pressed={struck.includes(k)} onClick={() => strike(k)}>{PRODUCTS[k]?.n ?? k}: {Math.round(q * 10) / 10} {PRODUCTS[k]?.u}</button></li>
+              <li key={k}><button className={'strikebtn' + (struck.includes(k) ? ' on' : '')} aria-pressed={struck.includes(k)} onClick={() => strike(k)}>{ingredientName(k, store.id)}: {Math.round(q * 10) / 10} {PRODUCTS[k]?.u}</button></li>
             ))}
             {cupboard.length > 0 && <li className="muted">From your cupboard: {cupboard.join(' · ')}</li>}
           </ul>

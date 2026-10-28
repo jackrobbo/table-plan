@@ -6,37 +6,38 @@ import BasketButton from '@/components/BasketButton';
 import PriceNote from '@/components/PriceNote';
 import { ShoppingList } from '@/components/week';
 import type { Shopping } from '@/lib/planner/shopping';
+import { DEFAULT_STORE, STORES, type Store } from '@/lib/stores';
 
 /** What the person has chosen to buy from the store cupboard, and what that adds to the shop. */
 export const cupboardPence = (s: Shopping, want: readonly string[]) =>
   (s.cupboardItems ?? []).filter((c) => want.includes(c.key)).reduce((a, c) => a + (c.pricePence ?? 0), 0);
 
 /** The shopping-list screen, shared by this week's list and the "plan next week" flow so they look and behave the same. */
-export function ListStepBody({ shopping, have, onToggle, want, onToggleCupboard, onCheckedOut }: {
-  shopping: Shopping; have: string[]; onToggle: (key: string) => void; want: string[]; onToggleCupboard: (key: string) => void; onCheckedOut?: () => void;
+export function ListStepBody({ shopping, have, onToggle, want, onToggleCupboard, onCheckedOut, store = STORES[DEFAULT_STORE] }: {
+  shopping: Shopping; have: string[]; onToggle: (key: string) => void; want: string[]; onToggleCupboard: (key: string) => void; onCheckedOut?: () => void; store?: Store;
 }) {
   const toBuy = shopping.lines.filter((l) => !have.includes(l.key));
   const total = toBuy.reduce((a, l) => a + l.costPence, 0) + cupboardPence(shopping, want);
   return (
     <>
-      <PriceNote totalPence={total} />
+      <PriceNote totalPence={total} store={store} />
       <ol className="nextsteps" aria-label="What to do next">
         <li><span className="n">1</span><span><b>Untick What You Already Have</b><small>Ticked items go into your trolley.</small></span></li>
         <li><span className="n">2</span><span><b>Check Your Total</b><small>{toBuy.length} item{toBuy.length === 1 ? '' : 's'} ticked. The total above updates as you untick.</small></span></li>
-        <li><span className="n">3</span><span><b>Tap Checkout With Morrisons</b><small>Opens Morrisons and fills your trolley. Or copy the list to Notes.</small></span></li>
+        <li><span className="n">3</span><span><b>Tap Checkout With {store.name}</b><small>Opens {store.name} and fills your trolley. Or copy the list to Notes.</small></span></li>
       </ol>
-      <ShoppingList shopping={shopping} have={have} onToggle={onToggle} want={want} onToggleCupboard={onToggleCupboard} />
-      <BasketButton shopping={shopping} have={have} onDone={onCheckedOut} />
+      <ShoppingList shopping={shopping} have={have} onToggle={onToggle} want={want} onToggleCupboard={onToggleCupboard} store={store} />
+      <BasketButton shopping={shopping} have={have} onDone={onCheckedOut} store={store} />
     </>
   );
 }
 
 /** The pinned pair under the list: quiet copy on the left, the main checkout on the right. `onCheckout` lets a flow save first. */
-export function CheckoutBar({ onCopy, copied, onCheckout }: { onCopy: () => void; copied: boolean; onCheckout?: () => void }) {
+export function CheckoutBar({ onCopy, copied, onCheckout, store = STORES[DEFAULT_STORE] }: { onCopy: () => void; copied: boolean; onCheckout?: () => void; store?: Store }) {
   return (
     <div className="ctarow">
       <button className="btn ghost" onClick={onCopy}>{copied ? 'Copied' : 'Copy to Notes'}</button>
-      <button className="btn glare" onClick={onCheckout ?? (() => window.dispatchEvent(new Event('tp:checkout')))}>Checkout With Morrisons</button>
+      <button className="btn glare" onClick={onCheckout ?? (() => window.dispatchEvent(new Event('tp:checkout')))}>Checkout With {store.name}</button>
     </div>
   );
 }

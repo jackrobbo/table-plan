@@ -1,18 +1,20 @@
 'use client';
 import { useEffect, useState } from 'react';
 import { Check, Coffee, Utensils } from 'lucide-react';
+import { DEFAULT_STORE, STORES, type Store } from '@/lib/stores';
 
-const STEPS = [
+const steps = (shop: string) => [
   'Matching meals to your tastes and allergies',
   'Sizing portions to your calories',
   'Checking protein on every day',
   'Sharing ingredients to cut waste',
-  'Pricing the week at Morrisons',
+  `Pricing the week at ${shop}`,
 ];
 const TICK_MS = 650;
 
 /** Shown once, while the first week is built. The planner itself is quick; this lets the person see what it checks. */
-export default function BuildingWeek({ onDone }: { onDone: () => void }) {
+export default function BuildingWeek({ onDone, store = STORES[DEFAULT_STORE] }: { onDone: () => void; store?: Store }) {
+  const STEPS = steps(store.name);
   const [done, setDone] = useState(0);
 
   useEffect(() => {

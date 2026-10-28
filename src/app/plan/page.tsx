@@ -24,12 +24,13 @@ import { getBackend } from '@/lib/db';
 import { planInputFrom } from '@/lib/planner/fromProfile';
 import { applySwap } from '@/lib/planner/swap';
 import { track } from '@/lib/analytics';
-import { buildShopping } from '@/lib/planner/shopping';
+import { buildShoppingFor, checkedAtFor } from '@/lib/catalogue';
+import { storeOf, type Store } from '@/lib/stores';
 import { explainMisses, planWeek } from '@/lib/planner/solve';
-import { PRICES_META, RECIPES } from '@/data';
+import { RECIPES } from '@/data';
 import { shortDate } from '@/lib/pricing/refresh';
 import { computeTargets } from '@/lib/targets';
-import { MORRISONS_LOGO } from '@/lib/logos';
+import { STORE_LOGOS } from '@/lib/logos';
 import Link from 'next/link';
 import { useAccess } from '@/lib/useAccess';
 import { setTabBadge } from '@/lib/tabBadge';
@@ -100,7 +101,7 @@ export default function Plan() {
   const badge = badgeCount(snap);
   useEffect(() => { if (snap.thisWeek) setTabBadge(badge); }, [badge, snap.thisWeek]);
 
-  if (building && session && profile?.completed) return <Screen><BuildingWeek onDone={buildDone} /></Screen>;
+  if (building && session && profile?.completed) return <Screen><BuildingWeek onDone={buildDone} store={storeOf(profile)} /></Screen>;
   if (!ready || !profile?.completed || !session || !snap.thisWeek) {
     return (
       <Screen><div className="skeleton-stack" aria-busy="true" aria-label="Building your week">
@@ -119,7 +120,8 @@ export default function Plan() {
   const eating = started || shopped;
   const finished = wst === 'done';
   const plan = week.plan!;
-  const shopping = buildShopping(plan);
+  const store = storeOf(profile);
+  const shopping = buildShoppingFor(plan, store.id);
   // In the eating window today comes first, the other days follow in order, and a day with everything ticked sinks to the bottom.
   const todayIdx = started && !finished ? plan.days.findIndex((_, i) => addDays(week.start, i) === londonDate(now)) : -1;
   const dayDone = (i: number) => plan.days[i].meals.length > 0 && plan.days[i].meals.every((_, mi) => week.ticks[`${i}:${mi}`]);
@@ -149,7 +151,7 @@ export default function Plan() {
   // page opened by the extension), or item-by-item shopping reached its end. Tapping the button alone doesn't.
   const markShopped = (how: 'notes' | 'basket') => update((p) => { const w = p.weeks[week.start]; return w?.plan ? { ...p, weeks: saveList(p.weeks, week.start, w.haveAlready, how) } : p; });
   const copyList = async () => {
-    const ok = await copy(listAsText(plan, week.haveAlready, `Estimated Morrisons prices, checked ${PRICES_META.checkedAt ? shortDate(PRICES_META.checkedAt) : 'not yet'}`, week.wantCupboard), 'this');
+    const ok = await copy(listAsText(plan, week.haveAlready, `Estimated ${store.name} prices, checked ${checkedAtFor(store.id) ? shortDate(checkedAtFor(store.id)!) : 'not yet'}`, week.wantCupboard, store), 'this');
     if (ok) markShopped('notes');
     return ok;
   };
@@ -166,13 +168,13 @@ export default function Plan() {
   };
 
   return (
-    <Screen footer={accessLoaded && !access ? <Link className="btn shopbtn glare" href="/subscribe" aria-label={`Save and checkout with Morrisons, about ${money(shopping.totalPence)}`}>
-        <span className="sp">≈ {money(shopping.totalPence)}</span><i className="ssep" aria-hidden /><span>Checkout With</span><span className="slogo" aria-hidden>{/* eslint-disable-next-line @next/next/no-img-element */}<img src={MORRISONS_LOGO.light} alt="" height={16} /></span>
+    <Screen footer={accessLoaded && !access ? <Link className="btn shopbtn glare" href="/subscribe" aria-label={`Save and checkout with ${store.name}, about ${money(shopping.totalPence)}`}>
+        <span className="sp">≈ {money(shopping.totalPence)}</span><i className="ssep" aria-hidden /><span>Checkout With</span><span className="slogo" aria-hidden>{STORE_LOGOS[store.id] ? /* eslint-disable-next-line @next/next/no-img-element */ <img src={STORE_LOGOS[store.id]!.light} alt="" height={16} /> : store.name}</span>
       </Link>
       : access && tab === 'this' && !started && plan.days.length > 0 && sub === 'plan' && !shopped
         ? <button className="btn glare" onClick={goList}>Save &amp; Checkout</button>
       : access && tab === 'this' && !started && plan.days.length > 0 && shopped && sub === 'ingredients' && view !== 'recipes'
-        ? <CheckoutBar onCopy={copyList} copied={copied === 'this'} onCheckout={checkout} />
+        ? <CheckoutBar store={store} onCopy={copyList} copied={copied === 'this'} onCheckout={checkout} />
         : undefined}>
       <p className="step">Welcome Back</p>
 
@@ -212,9 +214,9 @@ export default function Plan() {
           {sub === 'plan' && <>
             {/* Built from the days, not plan.issues, so plans saved before the wording changed show the current message. */}
             {(plan.days.length ? explainMisses(plan.days, t.band, t.protein) : plan.issues).map((i) => <div key={i} className="estimate-flag">{i}</div>)}
-            {plan.days.length > 0 && !shopped && <PriceNote totalPence={shopping.totalPence} />}
+            {plan.days.length > 0 && !shopped && <PriceNote totalPence={shopping.totalPence} store={store} />}
             {plan.days.length > 0 && (finished || (started && allEaten(plan, week.ticks)))
-              ? <WeekDone s={summariseWeek(plan, week.ticks, shopping)} t={t} />
+              ? <WeekDone store={store} s={summariseWeek(plan, week.ticks, shopping)} t={t} />
               : plan.days.length > 0 && (todayIdx >= 0 && !plan.days[todayIdx].off
                 ? <DailyProgress eaten={dayEaten(plan.days[todayIdx], todayIdx, week.ticks)} t={t} />
                 : <DailyAverage averages={weekAverages(plan)} t={t} />)}
@@ -228,7 +230,7 @@ export default function Plan() {
 
           {sub === 'ingredients' && shopped && !started && (
             <>
-              <ListStepBody shopping={shopping} have={week.haveAlready} want={wantCup} onToggleCupboard={toggleCupboard} onCheckedOut={() => markShopped('basket')} onToggle={toggleHave} />
+              <ListStepBody store={store} shopping={shopping} have={week.haveAlready} want={wantCup} onToggleCupboard={toggleCupboard} onCheckedOut={() => markShopped('basket')} onToggle={toggleHave} />
               {copied?.startsWith('fail:') && <textarea className="copybox" readOnly value={copied.slice(5)} onFocus={(e) => e.currentTarget.select()} />}
             </>
           )}
@@ -303,8 +305,8 @@ export default function Plan() {
       {tab === 'upcoming' && (
         <div className="fade" key="up">
           <h1>Upcoming</h1>
-          <p className="sub">Each week opens for planning on Sunday at 6am, after we refresh Morrisons prices, so your list always uses the latest ones.</p>
-          <div className="pricefresh"><RefreshCw size={16} aria-hidden /><span>Prices last checked {PRICES_META.checkedAt ? shortDate(PRICES_META.checkedAt) : 'not yet'}. Next refresh: Sunday morning.</span></div>
+          <p className="sub">Each week opens for planning on Sunday at 6am, after we refresh {store.name} prices, so your list always uses the latest ones.</p>
+          <div className="pricefresh"><RefreshCw size={16} aria-hidden /><span>Prices last checked {checkedAtFor(store.id) ? shortDate(checkedAtFor(store.id)!) : 'not yet'}. Next refresh: Sunday morning.</span></div>
           <ol className="weeklist">
             {snap.upcoming.map(({ week: w, status }) => {
               const sel = upcomingSel?.week.start === w.start;
@@ -322,7 +324,7 @@ export default function Plan() {
                     </span>
                     <span className={'wkpill ' + status}>{STATE_COPY[status]}</span>
                   </button>
-                  {sel && upcomingSel && <div className="wkbody"><UpcomingCard week={upcomingSel.week} status={upcomingSel.status} weeks={weeks} now={now}
+                  {sel && upcomingSel && <div className="wkbody"><UpcomingCard week={upcomingSel.week} status={upcomingSel.status} weeks={weeks} now={now} store={store}
             onPlan={() => router.push(access ? '/plan/next' : '/subscribe')}
             onSkip={() => update((p) => ({ ...p, weeks: skipWeek(p.weeks, upcomingSel.week.start, now) }))}
             onUndo={() => update((p) => ({ ...p, weeks: undoSkip(p.weeks, upcomingSel.week.start, now) }))}
@@ -352,8 +354,8 @@ export default function Plan() {
         </div>
       )}
       {listOpen && access && (
-        <CheckoutSheet onClose={() => setListOpen(false)} footer={<CheckoutBar onCopy={async () => { if (await copyList()) setTimeout(() => setListOpen(false), 1300); }} copied={copied === 'this'} onCheckout={checkout} />}>
-          <ListStepBody shopping={shopping} have={week.haveAlready} want={wantCup} onToggleCupboard={toggleCupboard} onToggle={toggleHave} onCheckedOut={() => markShopped('basket')} />
+        <CheckoutSheet onClose={() => setListOpen(false)} footer={<CheckoutBar store={store} onCopy={async () => { if (await copyList()) setTimeout(() => setListOpen(false), 1300); }} copied={copied === 'this'} onCheckout={checkout} />}>
+          <ListStepBody store={store} shopping={shopping} have={week.haveAlready} want={wantCup} onToggleCupboard={toggleCupboard} onToggle={toggleHave} onCheckedOut={() => markShopped('basket')} />
           {copied?.startsWith('fail:') && <textarea className="copybox" readOnly value={copied.slice(5)} onFocus={(e) => e.currentTarget.select()} />}
         </CheckoutSheet>
       )}
@@ -361,7 +363,7 @@ export default function Plan() {
         <RateSheet meal={recipeById.get(rate)!.n} onLike={() => { update((p) => likeMeal(p, rate)); setRate(null); }}
           onNever={() => { update((p) => neverAgain(p, rate)); setRate(null); }} onClose={() => setRate(null)} />
       )}
-      <RecipeSheet id={sheet} onClose={() => setSheet(null)} portions={1} onNever={(rid) => update((p) => neverAgain(p, rid))} rating={sheet ? { ...rating, liked: profile.likedRecipes.includes(sheet) } : undefined} />
+      <RecipeSheet store={store} id={sheet} onClose={() => setSheet(null)} portions={1} onNever={(rid) => update((p) => neverAgain(p, rid))} rating={sheet ? { ...rating, liked: profile.likedRecipes.includes(sheet) } : undefined} />
       <SwapSheet plan={(swap && weeks[swap.week]?.plan) || plan} target={swap && weeks[swap.week]?.plan ? swap : null} input={planInputFrom(profile)} onClose={() => setSwap(null)}
         onPick={(id) => {
           if (!swap) return;
@@ -376,12 +378,12 @@ export default function Plan() {
   );
 }
 
-function UpcomingCard({ week, status, weeks, now, onPlan, onSkip, onUndo, onCopy, copied, onOpen, onSwap, onToggleHave, onToggleCupboard }: {
-  week: Week; status: WeekStatus; weeks: Record<string, Week>; now: Date; onPlan: () => void; onSkip: () => void; onUndo: () => void;
+function UpcomingCard({ week, status, weeks, now, store, onPlan, onSkip, onUndo, onCopy, copied, onOpen, onSwap, onToggleHave, onToggleCupboard }: {
+  week: Week; status: WeekStatus; weeks: Record<string, Week>; now: Date; store: Store; onPlan: () => void; onSkip: () => void; onUndo: () => void;
   onCopy: (t: string) => void; copied: string | null; onOpen: (id: string) => void; onSwap: (day: number, meal: number) => void; onToggleHave: (k: string) => void; onToggleCupboard: (k: string) => void;
 }) {
   const deadline = `midnight Sun ${dayLabel(addDays(week.start, -1))}`;
-  if (status === 'locked') return <div className="card"><h3>Why Sunday at 6am?</h3><p className="muted" style={{ margin: 0 }}>We refresh the Morrisons prices first, so your shopping list uses the latest ones. Only one week is open to plan at a time.</p></div>;
+  if (status === 'locked') return <div className="card"><h3>Why Sunday at 6am?</h3><p className="muted" style={{ margin: 0 }}>We refresh the {store.name} prices first, so your shopping list uses the latest ones. Only one week is open to plan at a time.</p></div>;
   if (status === 'missed') return <div className="card"><h3>{weekLabel(week.start)} · Missed</h3><p className="muted" style={{ margin: 0 }}>The deadline passed, so nothing was picked for you. You can plan the next week as normal.</p></div>;
   if (status === 'skipped') return <div className="card"><h3>{weekLabel(week.start)} · Skipped</h3><p className="muted">You skipped this week.</p><button className="btn ghost" onClick={onUndo}>Undo Skip</button></div>;
   if (status === 'to_plan' || status === 'in_progress') {
@@ -396,14 +398,14 @@ function UpcomingCard({ week, status, weeks, now, onPlan, onSkip, onUndo, onCopy
     );
   }
   const plan = week.plan!;
-  const shopping = buildShopping(plan);
+  const shopping = buildShoppingFor(plan, store.id);
   return (
     <div>
       <p className="muted">Planned. Starts Mon {dayLabel(week.start)}.</p>
       {plan.days.map((d, i) => <DayCard key={d.day} d={d} index={i} onOpen={onOpen} onSwap={onSwap} />)}
       <h2 style={{ marginTop: 22 }}>Shopping List</h2>
-      <ListStepBody shopping={shopping} have={week.haveAlready} onToggle={onToggleHave} want={week.wantCupboard ?? []} onToggleCupboard={onToggleCupboard} />
-      <CheckoutBar onCopy={() => onCopy(listAsText(plan, week.haveAlready, `Estimated Morrisons prices, checked ${PRICES_META.checkedAt ? shortDate(PRICES_META.checkedAt) : 'not yet'}`, week.wantCupboard))} copied={copied === week.start} />
+      <ListStepBody store={store} shopping={shopping} have={week.haveAlready} onToggle={onToggleHave} want={week.wantCupboard ?? []} onToggleCupboard={onToggleCupboard} />
+      <CheckoutBar store={store} onCopy={() => onCopy(listAsText(plan, week.haveAlready, `Estimated ${store.name} prices, checked ${checkedAtFor(store.id) ? shortDate(checkedAtFor(store.id)!) : 'not yet'}`, week.wantCupboard, store))} copied={copied === week.start} />
       {copied?.startsWith('fail:') && <textarea className="copybox" readOnly value={copied.slice(5)} onFocus={(e) => e.currentTarget.select()} />}
     </div>
   );

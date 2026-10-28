@@ -13,7 +13,7 @@ import ReminderSheet from '@/components/ReminderSheet';
 import MealImage from '@/components/MealImage';
 import Screen from '@/components/Screen';
 import { DayCard, listAsText } from '@/components/week';
-import { PRICES_META, RECIPES } from '@/data';
+import { RECIPES } from '@/data';
 import { safeRecipes } from '@/lib/allergens';
 import { addDays, dayLabel, weekLabel } from '@/lib/cycle/dates';
 import { ensureWeeks, saveList, savePlan, saveProgress, snapshot, type Week } from '@/lib/cycle/week';
@@ -22,7 +22,8 @@ import { planInputFrom } from '@/lib/planner/fromProfile';
 import { applySwap } from '@/lib/planner/swap';
 import { isNewForYou } from '@/lib/taste';
 import { swipe } from '@/lib/onboarding';
-import { buildShopping } from '@/lib/planner/shopping';
+import { buildShoppingFor, checkedAtFor } from '@/lib/catalogue';
+import { storeOf } from '@/lib/stores';
 import { explainMisses, planWeek } from '@/lib/planner/solve';
 import type { Plan } from '@/lib/planner/types';
 import type { MealTime } from '@/lib/profile';
@@ -75,6 +76,7 @@ export default function PlanNext() {
   if (!ready || !profile || !week) return <Screen><div className="skeleton-stack"><div className="skeleton sk-title" /><div className="skeleton sk-card" /></div></Screen>;
 
   const t = computeTargets(profile.goal ?? 'lose', profile.stats);
+  const store = storeOf(profile);
   const planned = COURSES.filter((c) => profile.meals[c].mode === 'plan');
   const picks = week.picks;
   const safe = safeRecipes(profile.allergies).filter((r) => profile.likedRecipes.includes(r.id));
@@ -106,7 +108,7 @@ export default function PlanNext() {
   };
   const copyList = async () => {
     if (!draft) return;
-    const text = listAsText(draft, have, `Estimated Morrisons prices, checked ${PRICES_META.checkedAt ? shortDate(PRICES_META.checkedAt) : 'not yet'}`, want);
+    const text = listAsText(draft, have, `Estimated ${store.name} prices, checked ${checkedAtFor(store.id) ? shortDate(checkedAtFor(store.id)!) : 'not yet'}`, want, store);
     try { await navigator.clipboard.writeText(text); setCopied('ok'); setTimeout(() => setCopied(null), 2500); } catch { setCopied('fail'); }
   };
   // Saving and checking out are one tap: save the week, then ask the (now mounted) list to start the checkout.
@@ -114,7 +116,7 @@ export default function PlanNext() {
   const toggleHave = (k: string) => setHave((h) => (h.includes(k) ? h.filter((x) => x !== k) : [...h, k]));
   const toggleWant = (k: string) => setWant((w) => (w.includes(k) ? w.filter((x) => x !== k) : [...w, k]));
   const barIndex = Math.min(STEPS.indexOf(step), 3);
-  const shopping = draft?.days.length ? buildShopping(draft) : null;
+  const shopping = draft?.days.length ? buildShoppingFor(draft, store.id) : null;
   // Leaving with picks or a built-but-unsaved week asks first (picks are kept either way; an unsaved week is not).
   const exit = () => ((draft?.days.length || picks.length > 0) && step !== 'saved' ? setLeaving(true) : router.push('/plan'));
   const back = () => (step === 'setup' ? exit() : step === 'pick' ? setStep('setup') : step === 'review' ? setStep(visitedTaste ? 'pick' : 'setup') : step === 'list' ? setStep('review') : exit());
@@ -126,10 +128,10 @@ export default function PlanNext() {
         building ? undefined
         : step === 'pick' ? <button className="btn" onClick={() => build(profile.likedRecipes)}>Build My Week</button>
         : step === 'review' && draft?.days.length ? <button className="btn" onClick={() => { setHave([]); setStep('list'); }}>Save and Continue</button>
-        : step === 'list' ? <CheckoutBar onCopy={copyList} copied={copied === 'ok'} onCheckout={saveAndCheckout} />
-        : step === 'saved' ? <><CheckoutBar onCopy={copyList} copied={copied === 'ok'} /><button className="linkbtn" onClick={() => router.push('/plan')}>Done</button></> : undefined
+        : step === 'list' ? <CheckoutBar store={store} onCopy={copyList} copied={copied === 'ok'} onCheckout={saveAndCheckout} />
+        : step === 'saved' ? <><CheckoutBar store={store} onCopy={copyList} copied={copied === 'ok'} /><button className="linkbtn" onClick={() => router.push('/plan')}>Done</button></> : undefined
       }>
-      {building && <BuildingWeek onDone={buildDone} />}
+      {building && <BuildingWeek onDone={buildDone} store={store} />}
       {!building && step !== 'saved' && <p className="step">{BAR[barIndex]} · Plan {weekLabel(week.start)}</p>}
 
       {!building && step === 'setup' && (
@@ -205,7 +207,7 @@ export default function PlanNext() {
             <p className="sub">{draft.days.filter((d) => !d.off && d.inBand).length} of {draft.days.filter((d) => !d.off).length} days in band. Resized or topped-up days are highlighted.</p>
             {explainMisses(draft.days, t.band, t.protein).map((i) => <div key={i} className="estimate-flag">{i}</div>)}
             {draft.notes?.map((n) => <p key={n} className="muted">{n}</p>)}
-            {shopping && <PriceNote totalPence={shopping.totalPence} />}
+            {shopping && <PriceNote totalPence={shopping.totalPence} store={store} />}
             {draft.days.map((d, i) => <DayCard key={d.day} d={d} index={i} label={dayLabel(addDays(week.start, i))} onSwap={(day, meal) => setSwap({ day, meal })} newIds={new Set(draft.days.flatMap((d) => d.meals).filter((m) => isNewForYou(profile, m.recipeId, m.slot)).map((m) => m.recipeId))} />)}
             <button className="btn ghost" onClick={() => build(profile.likedRecipes)}>Shuffle</button>
           </>)}
@@ -216,7 +218,7 @@ export default function PlanNext() {
         <div className="fade">
           <h2>Shopping List</h2>
           <p className="sub">Everything is ticked. Untick what you already have.</p>
-          <ListStepBody shopping={shopping} have={have} onToggle={toggleHave} want={want} onToggleCupboard={toggleWant} />
+          <ListStepBody store={store} shopping={shopping} have={have} onToggle={toggleHave} want={want} onToggleCupboard={toggleWant} />
         </div>
       )}
 
@@ -224,8 +226,8 @@ export default function PlanNext() {
         <div className="fade">
           <h1>List Saved</h1>
           <p className="sub">{weekLabel(week.start)} is planned. It starts Mon {dayLabel(week.start)}.</p>
-          <ListStepBody shopping={shopping} have={have} onToggle={toggleHave} want={want} onToggleCupboard={toggleWant} />
-          {copied === 'fail' && <textarea className="copybox" readOnly onFocus={(e) => e.currentTarget.select()} value={listAsText(draft, have, 'Estimated Morrisons prices', want)} />}
+          <ListStepBody store={store} shopping={shopping} have={have} onToggle={toggleHave} want={want} onToggleCupboard={toggleWant} />
+          {copied === 'fail' && <textarea className="copybox" readOnly onFocus={(e) => e.currentTarget.select()} value={listAsText(draft, have, `Estimated ${store.name} prices`, want, store)} />}
         </div>
       )}
 

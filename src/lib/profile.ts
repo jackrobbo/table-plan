@@ -13,6 +13,8 @@ export interface MealPlanSetting {
   extraServings: number;
 }
 
+import type { StoreId } from './stores';
+
 export type OnboardingStep =
   | 'goal' | 'height' | 'weight' | 'age' | 'sex' | 'activity'
   | 'meals' | 'allergies' | 'target' | 'dislikes' | 'taste';
@@ -39,6 +41,11 @@ export interface Profile {
   budget: Budget;
   /** When the person agreed to our use of their health information and to the terms, and which version they agreed to. Null until they do. */
   consent: { health: string; terms: string; version: string } | null;
+  /**
+   * The supermarket to price and shop at (see stores.ts). Unset means the default store. Saving it needs the `store` column
+   * (supabase/migrations/0008_store.sql), so the chooser stays hidden until a second store is live.
+   */
+  store?: StoreId;
   /** Reminder opt-in, and which nudges have already been shown (`${week}:${kind}`). */
   /** `asked`: the post-save reminders prompt has been answered (either way), so it isn't shown again. */
   reminders: { on: boolean; shown: string[]; asked?: boolean };

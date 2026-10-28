@@ -1,5 +1,6 @@
 import { emptyProfile, type Profile } from '../profile';
 import type { OnboardingStep } from '../profile';
+import { isStoreId, type StoreId } from '../stores';
 
 /** Shape of a `profiles` row (see supabase/migrations/0001_init.sql). */
 export interface ProfileRow {
@@ -25,6 +26,8 @@ export interface ProfileRow {
   budget: Profile['budget'];
   reminders: Profile['reminders'];
   consent: Profile['consent'];
+  /** Only present once the `store` column exists (0008_store.sql) and the person has chosen one. */
+  store?: StoreId;
 }
 
 const SKIP_KEYS = ['height', 'weight', 'age', 'sex'] as const;
@@ -36,6 +39,7 @@ export function profileToRow(userId: string, p: Profile): ProfileRow {
     activity: p.stats.activity, skipped_stats: SKIP_KEYS.filter((k) => p.skipped[k]), meals: p.meals,
     allergies: p.allergies, no_allergies: p.noAllergies, dislikes: p.dislikes, liked_recipes: p.likedRecipes,
     skipped_recipes: p.skippedRecipes, onboarding_step: p.step, completed: p.completed, weeks: p.weeks, budget: p.budget, reminders: p.reminders, consent: p.consent,
+    ...(p.store ? { store: p.store } : {}),
   };
 }
 
@@ -54,5 +58,6 @@ export function rowToProfile(r: Partial<ProfileRow>): Profile {
     dislikes: r.dislikes ?? d.dislikes, likedRecipes: r.liked_recipes ?? d.likedRecipes, skippedRecipes: r.skipped_recipes ?? d.skippedRecipes,
     step: (r.onboarding_step as OnboardingStep) ?? d.step, completed: r.completed ?? d.completed,
     weeks: r.weeks ?? d.weeks, budget: r.budget ?? d.budget, reminders: { ...d.reminders, ...(r.reminders ?? {}) }, consent: r.consent ?? null,
+    ...(isStoreId(r.store) ? { store: r.store } : {}),
   };
 }

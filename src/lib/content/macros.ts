@@ -1,3 +1,4 @@
+import type { StoreId } from '../stores';
 import type { Course, IngredientDef, RecipeDef } from './types';
 
 export interface Computed {
@@ -46,12 +47,13 @@ export function computePerPortion(r: RecipeDef, ing: Map<string, IngredientDef>)
 }
 
 /** Marginal cost of one portion in pence: what the ingredients actually used cost, ignoring pack leftovers. null if any priced line is unpriced. */
-export function costPerPortion(r: RecipeDef, ing: Map<string, IngredientDef>): number | null {
+export function costPerPortion(r: RecipeDef, ing: Map<string, IngredientDef>, store: StoreId = 'morrisons'): number | null {
   let total = 0;
   for (const l of recipeLines(r, ing)) {
     const d = ing.get(l.slug);
     if (!d) return null;
-    if (d.product) total += (l.qty * d.product.price_pence) / d.product.pack_size;
+    const product = store === 'morrisons' ? d.product : d.products?.[store];
+    if (product) total += (l.qty * product.price_pence) / product.pack_size;
     else if (d.cupboardPrice) { const g = gramsOf(d, l.qty); if (g == null) return null; total += (g * d.cupboardPrice.pence) / d.cupboardPrice.grams; }
     else if (!d.negligible) return null;
   }

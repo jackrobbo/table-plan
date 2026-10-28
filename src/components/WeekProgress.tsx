@@ -1,4 +1,5 @@
 import CountUp from '@/components/CountUp';
+import { DEFAULT_STORE, STORES, type Store } from '@/lib/stores';
 import { money } from '@/components/week';
 import type { WeekSummary } from '@/lib/cycle/summary';
 import type { dayEaten } from '@/lib/cycle/summary';
@@ -49,7 +50,7 @@ export function DailyProgress({ eaten, t }: { eaten: ReturnType<typeof dayEaten>
 }
 
 /** "Week done": the payoff screen at the end of Friday. */
-export function WeekDone({ s, t }: { s: WeekSummary; t: Pick<Targets, 'target' | 'protein' | 'carbs' | 'fat'> }) {
+export function WeekDone({ s, t, store = STORES[DEFAULT_STORE] }: { s: WeekSummary; t: Pick<Targets, 'target' | 'protein' | 'carbs' | 'fat'>; store?: Store }) {
   return (
     <div className="card weekdone" role="status">
       <h2 style={{ margin: 0 }}>Week Done ✓</h2>
@@ -58,7 +59,7 @@ export function WeekDone({ s, t }: { s: WeekSummary; t: Pick<Targets, 'target' |
         <div><div className="n">{s.daysInBand}/{s.days}<small>Days on Target</small></div></div>
       </div>
       <p style={{ margin: '0 0 8px' }}>About <b>{money(s.perMealPence)}</b> a meal, against about £6.50 from a meal-prep service{s.savedPence >= 100 ? <>: roughly <b>{money(s.savedPence)}</b> saved this week</> : ''}.</p>
-      <p className="muted" style={{ margin: 0 }}>Estimates from dated Morrisons prices and typical meal-prep prices.</p>
+      <p className="muted" style={{ margin: 0 }}>Estimates from dated {store.name} prices and typical meal-prep prices.</p>
       <DailyAverage averages={s.averages} t={t} />
     </div>
   );

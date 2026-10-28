@@ -4,6 +4,8 @@ import cupboardNames from './cupboard-names.json';
 import recipes from './recipes.json';
 import topups from './topups.json';
 import pricesMeta from './prices-meta.json';
+import ingredientNames from './ingredient-names.json';
+import stores from './stores.json';
 
 export type Course = 'breakfast' | 'lunch' | 'snack' | 'dinner';
 export type { Budget } from '@/lib/content/macros';
@@ -20,6 +22,8 @@ export interface Recipe {
   cq?: Record<string, number>;
   /** Marginal cost of one portion in pence, and its low/medium/high tier (see BUDGET_LIMITS). null for macros-only meals. */
   cost?: number | null; b?: Budget | null;
+  /** The same cost and tier at other stores that price every line of the meal (Morrisons is `cost`/`b`). */
+  sc?: Record<string, { cost: number; b: Budget }>;
   /** Estimated minutes, prep plus cooking (0 = ready to eat). */
   t?: number;
   /** Header photo: alt text and the placeholder colour. Files are /meals/<id>-<width>.webp (see src/lib/images.ts). */
@@ -35,3 +39,8 @@ export const RECIPES = recipes as unknown as Recipe[];
 export const TOPUPS = topups as Topup[];
 
 export const PRICES_META = pricesMeta as { checkedAt: string | null; oldestCheckAt: string | null; unavailable: string[]; heldForReview: string[] };
+
+/** Neutral ingredient names (no store brand or pack size), by ingredient key: what recipes and the cooking sheet can call things. */
+export const INGREDIENT_NAMES = ingredientNames as Record<string, string>;
+/** Catalogues of the stores other than Morrisons (which is PRODUCTS), with when each was last price-checked. */
+export const STORE_DATA = stores as Record<string, { products: Record<string, Product>; checkedAt: string | null }>;

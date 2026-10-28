@@ -2,6 +2,7 @@
  {
   "slug": "breast",
   "name": "Morrisons British Chicken Breast Fillets 1kg",
+  "display": "British Chicken Breast Fillets",
   "unit": "g",
   "cupboard": false,
   "allergens": [],
@@ -29,6 +30,7 @@
  {
   "slug": "thigh",
   "name": "Morrisons British Boneless Chicken Thigh Fillets 1kg",
+  "display": "British Boneless Chicken Thigh Fillets",
   "unit": "g",
   "cupboard": false,
   "allergens": [],
@@ -56,6 +58,7 @@
  {
   "slug": "mince",
   "name": "Morrisons British Beef Steak Mince 5% Fat 250g",
+  "display": "British Beef Steak Mince 5% Fat",
   "unit": "g",
   "cupboard": false,
   "allergens": [],
@@ -83,6 +86,7 @@
  {
   "slug": "sizzle",
   "name": "Morrisons British Beef Sizzle Steak 320g",
+  "display": "British Beef Sizzle Steak",
   "unit": "g",
   "cupboard": false,
   "allergens": [],
@@ -111,6 +115,7 @@
  {
   "slug": "rump",
   "name": "Morrisons British Beef Rump Steak 200g",
+  "display": "British Beef Rump Steak",
   "unit": "g",
   "cupboard": false,
   "allergens": [],
@@ -138,6 +143,7 @@
  {
   "slug": "prawns",
   "name": "Morrisons Savers King Prawns 150g",
+  "display": "King Prawns",
   "unit": "g",
   "cupboard": false,
   "allergens": [
@@ -168,6 +174,7 @@
  {
   "slug": "roast",
   "name": "Morrisons Roast Chicken Breast Slices 180g",
+  "display": "Roast Chicken Breast Slices",
   "unit": "g",
   "cupboard": false,
   "allergens": [],
@@ -196,6 +203,7 @@
  {
   "slug": "ham",
   "name": "Morrisons British Cooked Ham 120g",
+  "display": "British Cooked Ham",
   "unit": "g",
   "cupboard": false,
   "allergens": [],
@@ -223,6 +231,7 @@
  {
   "slug": "bacon",
   "name": "Morrisons Lean Smoked Bacon Medallions 8pk",
+  "display": "Lean Smoked Bacon Medallions",
   "unit": "medallions",
   "cupboard": false,
   "allergens": [],
@@ -252,6 +261,7 @@
  {
   "slug": "eggs",
   "name": "Morrisons Medium Free Range Eggs 6 Pack",
+  "display": "Medium Free Range Eggs",
   "unit": "eggs",
   "cupboard": false,
   "allergens": [
@@ -282,6 +292,7 @@
  {
   "slug": "milk",
   "name": "Morrisons British Semi Skimmed Milk 4 Pint",
+  "display": "Semi Skimmed Milk",
   "unit": "ml",
   "cupboard": false,
   "allergens": [
@@ -311,6 +322,7 @@
  {
   "slug": "yog",
   "name": "Morrisons Protein Yogurt 200g pot",
+  "display": "Protein Yogurt",
   "unit": "pots",
   "cupboard": false,
   "allergens": [
@@ -340,6 +352,7 @@
  {
   "slug": "greek",
   "name": "Morrisons Greek Style Yogurt 500g",
+  "display": "Greek Style Yogurt",
   "unit": "g",
   "cupboard": false,
   "allergens": [
@@ -369,6 +382,7 @@
  {
   "slug": "loaf",
   "name": "Morrisons White Farmhouse Loaf 800g",
+  "display": "White Farmhouse Loaf",
   "unit": "slices",
   "cupboard": false,
   "allergens": [
@@ -400,6 +414,7 @@
  {
   "slug": "wraps",
   "name": "Morrisons Plain Tortilla Wraps 8pk",
+  "display": "Plain Tortilla Wraps",
   "unit": "wraps",
   "cupboard": false,
   "allergens": [
@@ -430,6 +445,7 @@
  {
   "slug": "mission",
   "name": "Mission Protein Tortilla Wraps 6pk",
+  "display": "Mission Protein Tortilla Wraps",
   "unit": "wraps",
   "cupboard": false,
   "allergens": [
@@ -460,6 +476,7 @@
  {
   "slug": "pittas",
   "name": "Morrisons Stonebaked Wholemeal Pittas 6pk",
+  "display": "Wholemeal Pittas",
   "unit": "pittas",
   "cupboard": false,
   "allergens": [
@@ -490,6 +507,7 @@
  {
   "slug": "houm",
   "name": "Morrisons Red Pepper Houmous 200g",
+  "display": "Red Pepper Houmous",
   "unit": "g",
   "cupboard": false,
   "allergens": [
@@ -520,6 +538,7 @@
  {
   "slug": "blueb",
   "name": "Morrisons Savers Blueberries 125g",
+  "display": "Blueberries",
   "unit": "g",
   "cupboard": false,
   "allergens": [],
@@ -547,6 +566,7 @@
  {
   "slug": "banana",
   "name": "Fyffes Bananas 5 Pack",
+  "display": "Bananas",
   "unit": "bananas",
   "cupboard": false,
   "allergens": [],
@@ -575,6 +595,7 @@
  {
   "slug": "apple",
   "name": "Gala Apple (loose)",
+  "display": "Gala Apple",
   "unit": "apples",
   "cupboard": false,
   "allergens": [],
@@ -603,6 +624,7 @@
  {
   "slug": "lemon",
   "name": "Lemon (loose)",
+  "display": "Lemon",
   "unit": "lemons",
   "cupboard": false,
   "allergens": [],
@@ -620,6 +642,7 @@
  {
   "slug": "iceberg",
   "name": "Morrisons British Iceberg Lettuce",
+  "display": "British Iceberg Lettuce",
   "unit": "heads",
   "cupboard": false,
   "allergens": [],
@@ -648,6 +671,7 @@
  {
   "slug": "cuc",
   "name": "Whole Cucumber",
+  "display": "Whole Cucumber",
   "unit": "cucumbers",
   "cupboard": false,
   "allergens": [],
@@ -676,6 +700,7 @@
  {
   "slug": "plum",
   "name": "Morrisons Baby Plum Tomatoes 250g",
+  "display": "Baby Plum Tomatoes",
   "unit": "g",
   "cupboard": false,
   "allergens": [],
@@ -703,6 +728,7 @@
  {
   "slug": "salad",
   "name": "Morrisons Crispy Salad 120g",
+  "display": "Crispy Salad",
   "unit": "g",
   "cupboard": false,
   "allergens": [],
@@ -730,6 +756,7 @@
  {
   "slug": "onions",
   "name": "Morrisons Brown Onions 3 Pack",
+  "display": "Brown Onions",
   "unit": "onions",
   "cupboard": false,
   "allergens": [],
@@ -758,6 +785,7 @@
  {
   "slug": "spring",
   "name": "Morrisons Salad Onions (bunch)",
+  "display": "Salad Onions",
   "unit": "bunches",
   "cupboard": false,
   "allergens": [],
@@ -786,6 +814,7 @@
  {
   "slug": "carrots",
   "name": "Morrisons British Carrots 500g",
+  "display": "British Carrots",
   "unit": "g",
   "cupboard": false,
   "allergens": [],
@@ -813,6 +842,7 @@
  {
   "slug": "pepper",
   "name": "Red Pepper (loose)",
+  "display": "Red Pepper",
   "unit": "peppers",
   "cupboard": false,
   "allergens": [],
@@ -842,6 +872,7 @@
  {
   "slug": "mixpep",
   "name": "Morrisons Savers Mixed Peppers 3 Pack",
+  "display": "Mixed Peppers",
   "unit": "peppers",
   "cupboard": false,
   "allergens": [],
@@ -871,6 +902,7 @@
  {
   "slug": "chilli",
   "name": "Morrisons Fresh Red Chillies 50g",
+  "display": "Fresh Red Chillies",
   "unit": "g",
   "cupboard": false,
   "allergens": [],
@@ -898,6 +930,7 @@
  {
   "slug": "brocc",
   "name": "Morrisons British Organic Broccoli 300g",
+  "display": "British Organic Broccoli",
   "unit": "g",
   "cupboard": false,
   "allergens": [],
@@ -925,6 +958,7 @@
  {
   "slug": "pouch",
   "name": "Morrisons Baby Potatoes with Chives & Butter 350g",
+  "display": "Baby Potatoes with Chives & Butter",
   "unit": "g",
   "cupboard": false,
   "allergens": [
@@ -956,6 +990,7 @@
  {
   "slug": "cobs",
   "name": "Morrisons 2 Sweetcorn Cobs",
+  "display": "Sweetcorn Cobs",
   "unit": "cobs",
   "cupboard": false,
   "allergens": [],
@@ -984,6 +1019,7 @@
  {
   "slug": "stirfry",
   "name": "Morrisons Vegetable Stir Fry Mix 500g",
+  "display": "Vegetable Stir Fry Mix",
   "unit": "g",
   "cupboard": false,
   "allergens": [],
@@ -1013,6 +1049,7 @@
  {
   "slug": "slices",
   "name": "Morrisons Crispy Potato Slices 300g",
+  "display": "Crispy Potato Slices",
   "unit": "g",
   "cupboard": false,
   "allergens": [
@@ -1043,6 +1080,7 @@
  {
   "slug": "medley",
   "name": "Morrisons Green Vegetable Medley 250g",
+  "display": "Green Vegetable Medley",
   "unit": "g",
   "cupboard": false,
   "allergens": [
@@ -1074,6 +1112,7 @@
  {
   "slug": "spinach",
   "name": "Morrisons Baby Spinach 160g",
+  "display": "Baby Spinach",
   "unit": "g",
   "cupboard": false,
   "allergens": [],
@@ -1101,6 +1140,7 @@
  {
   "slug": "creme",
   "name": "Morrisons Reduced Fat Crème Fraîche 300ml",
+  "display": "Reduced Fat Crème Fraîche",
   "unit": "ml",
   "cupboard": false,
   "allergens": [
@@ -1130,6 +1170,7 @@
  {
   "slug": "ctoms",
   "name": "Morrisons Chopped Tomatoes 400g",
+  "display": "Chopped Tomatoes",
   "unit": "g",
   "cupboard": false,
   "allergens": [],
@@ -1157,6 +1198,7 @@
  {
   "slug": "kidney",
   "name": "Morrisons Red Kidney Beans 400g",
+  "display": "Red Kidney Beans",
   "unit": "g",
   "cupboard": false,
   "allergens": [],
@@ -1185,6 +1227,7 @@
  {
   "slug": "grenade",
   "name": "Grenade Oreo Protein Bars 4×60g",
+  "display": "Grenade Oreo Protein Bars",
   "unit": "bars",
   "cupboard": false,
   "allergens": [
@@ -1208,6 +1251,7 @@
  {
   "slug": "wafer",
   "name": "Myprotein Protein Wafer Vanilla 40g",
+  "display": "Myprotein Protein Wafer Vanilla",
   "unit": "wafers",
   "cupboard": false,
   "allergens": [
@@ -1241,6 +1285,7 @@
  {
   "slug": "pops",
   "name": "Novo Protein Pops Sour Cream & Onion 45g",
+  "display": "Novo Protein Pops Sour Cream & Onion",
   "unit": "bags",
   "cupboard": false,
   "allergens": [
@@ -1271,6 +1316,7 @@
  {
   "slug": "babybel",
   "name": "Mini Babybel Original 6×20g",
+  "display": "Mini Babybel Original",
   "unit": "cheeses",
   "cupboard": false,
   "allergens": [
@@ -1302,6 +1348,7 @@
  {
   "slug": "rice",
   "name": "Easy Cook Long Grain Rice 1kg",
+  "display": "Easy Cook Long Grain Rice",
   "unit": "g",
   "cupboard": true,
   "note": "Easy Cook Long Grain Rice 1kg · £1.25",
@@ -1327,6 +1374,7 @@
  {
   "slug": "spaghetti",
   "name": "Spaghetti 500g",
+  "display": "Spaghetti",
   "unit": "g",
   "cupboard": true,
   "note": "Spaghetti 500g · £0.75",
@@ -1354,6 +1402,7 @@
  {
   "slug": "fusilli",
   "name": "Fusilli 500g",
+  "display": "Fusilli",
   "unit": "g",
   "cupboard": true,
   "note": "Fusilli 500g · £0.75",
@@ -1381,6 +1430,7 @@
  {
   "slug": "noodles",
   "name": "Fine Egg Noodles 250g",
+  "display": "Fine Egg Noodles",
   "unit": "g",
   "cupboard": true,
   "note": "Fine Egg Noodles 250g · £0.95",
@@ -1409,6 +1459,7 @@
  {
   "slug": "lasagne",
   "name": "Lasagne Sheets 300g",
+  "display": "Lasagne Sheets",
   "unit": "g",
   "cupboard": true,
   "note": "Lasagne Sheets 300g · £0.75",
@@ -1437,6 +1488,7 @@
  {
   "slug": "granola",
   "name": "FUEL10K Protein Granola 400g",
+  "display": "FUEL10K Protein Granola",
   "unit": "g",
   "cupboard": true,
   "note": "FUEL10K Protein Granola 400g · £3.75",
@@ -1455,6 +1507,7 @@
  {
   "slug": "butter",
   "name": "Spreadable Butter 500g",
+  "display": "Spreadable Butter",
   "unit": "g",
   "cupboard": true,
   "note": "Spreadable Butter 500g · £2.18",
@@ -1482,6 +1535,7 @@
  {
   "slug": "puree",
   "name": "Tomato Puree 200g",
+  "display": "Tomato Puree",
   "unit": "g",
   "cupboard": true,
   "note": "Tomato Puree 200g · £0.59",
@@ -1507,6 +1561,7 @@
  {
   "slug": "tuna",
   "name": "Tuna Chunks in Brine 4×145g",
+  "display": "Tuna Chunks in Brine",
   "unit": "g",
   "cupboard": true,
   "note": "Tuna Chunks in Brine 4×145g · £2.49",
@@ -1534,6 +1589,7 @@
  {
   "slug": "peri",
   "name": "Nando's Peri-Peri Rub 25g",
+  "display": "Nando's Peri-Peri Rub",
   "unit": "g",
   "cupboard": true,
   "note": "Nando's Peri-Peri Rub 25g · £1.25",
@@ -1553,6 +1609,7 @@
  {
   "slug": "fajita",
   "name": "Fajita Seasoning 40g",
+  "display": "Fajita Seasoning",
   "unit": "g",
   "cupboard": true,
   "note": "Fajita Seasoning 40g · £1.09",
@@ -1570,6 +1627,7 @@
  {
   "slug": "fivespice",
   "name": "Chinese 5 Spice 33g",
+  "display": "Chinese 5 Spice",
   "unit": "g",
   "cupboard": true,
   "note": "Chinese 5 Spice 33g · £1.09",
@@ -1585,6 +1643,7 @@
  {
   "slug": "soy",
   "name": "Light Soy Sauce 150ml",
+  "display": "Light Soy Sauce",
   "unit": "g",
   "cupboard": true,
   "note": "Light Soy Sauce 150ml · £0.90",
@@ -1613,6 +1672,7 @@
  {
   "slug": "honey",
   "name": "Clear Honey 454g",
+  "display": "Clear Honey",
   "unit": "g",
   "cupboard": true,
   "note": "Clear Honey 454g · £1.95",
@@ -1638,6 +1698,7 @@
  {
   "slug": "teriyaki",
   "name": "Teriyaki Stir Fry Sauce 152g",
+  "display": "Teriyaki Stir Fry Sauce",
   "unit": "g",
   "cupboard": true,
   "note": "Teriyaki Stir Fry Sauce 152g · £0.55",
@@ -1668,6 +1729,7 @@
  {
   "slug": "mayo",
   "name": "Light Mayonnaise 500ml",
+  "display": "Light Mayonnaise",
   "unit": "g",
   "cupboard": true,
   "note": "Light Mayonnaise 500ml · £0.99",
@@ -1696,6 +1758,7 @@
  {
   "slug": "seafood",
   "name": "Seafood Sauce 250ml",
+  "display": "Seafood Sauce",
   "unit": "g",
   "cupboard": true,
   "note": "Seafood Sauce 250ml · £0.63",
@@ -1713,6 +1776,7 @@
  {
   "slug": "cheddar",
   "name": "Savers Mature Cheddar 625g",
+  "display": "Mature Cheddar",
   "unit": "g",
   "cupboard": true,
   "note": "Savers Mature Cheddar 625g · £3.39",
@@ -1740,6 +1804,7 @@
  {
   "slug": "frozenfruit",
   "name": "Frozen Summer Fruits 430g",
+  "display": "Frozen Summer Fruits",
   "unit": "g",
   "cupboard": true,
   "note": "Frozen Summer Fruits 430g · £3.35",
@@ -1766,6 +1831,7 @@
  {
   "slug": "sweetcorn",
   "name": "Savers Sweetcorn tin 326g",
+  "display": "Tinned Sweetcorn",
   "unit": "g",
   "cupboard": true,
   "note": "Savers Sweetcorn tin 326g · £0.50",
@@ -1791,6 +1857,7 @@
  {
   "slug": "nuts",
   "name": "Mixed Nuts 180g",
+  "display": "Mixed Nuts",
   "unit": "g",
   "cupboard": true,
   "note": "Mixed Nuts 180g · £2.55",
@@ -1819,6 +1886,7 @@
  {
   "slug": "garlic",
   "name": "Garlic 400g net",
+  "display": "Garlic",
   "unit": "g",
   "cupboard": true,
   "note": "Garlic 400g net · £2.00",
@@ -1844,6 +1912,7 @@
  {
   "slug": "parmesan",
   "name": "Grated Parmigiano Reggiano 100g",
+  "display": "Grated Parmigiano Reggiano",
   "unit": "g",
   "cupboard": true,
   "note": "Grated Parmigiano Reggiano 100g · £2.80",
@@ -1871,6 +1940,7 @@
  {
   "slug": "cornflour",
   "name": "Cornflour 500g",
+  "display": "Cornflour",
   "unit": "g",
   "cupboard": true,
   "note": "Cornflour 500g · £2.50",
@@ -1896,6 +1966,7 @@
  {
   "slug": "oil",
   "name": "Vegetable Oil 1L",
+  "display": "Vegetable Oil",
   "unit": "g",
   "cupboard": true,
   "note": "Vegetable Oil 1L · £1.45",
@@ -1921,6 +1992,7 @@
  {
   "slug": "herbs",
   "name": "Mixed Herbs 14g",
+  "display": "Mixed Herbs",
   "unit": "g",
   "cupboard": true,
   "note": "Mixed Herbs 14g · £1.09",
@@ -1936,6 +2008,7 @@
  {
   "slug": "oregano",
   "name": "Oregano 28g",
+  "display": "Oregano",
   "unit": "g",
   "cupboard": true,
   "note": "Oregano 28g · £1.90",
@@ -1951,6 +2024,7 @@
  {
   "slug": "isolate",
   "name": "Whey Isolate 1kg (MyProtein)",
+  "display": "Whey Isolate",
   "unit": "g",
   "cupboard": true,
   "note": "Whey Isolate 1kg (MyProtein) · ~£26",
@@ -1968,6 +2042,7 @@
  {
   "slug": "oats",
   "name": "Morrisons Porridge Oats 1kg",
+  "display": "Porridge Oats",
   "unit": "g",
   "cupboard": false,
   "allergens": [
@@ -1997,6 +2072,7 @@
  {
   "slug": "porkmince",
   "name": "Morrisons British Pork Mince 5% Fat 500g",
+  "display": "British Pork Mince 5% Fat",
   "unit": "g",
   "cupboard": false,
   "allergens": [],
@@ -2024,6 +2100,7 @@
  {
   "slug": "porkloin",
   "name": "Morrisons British Pork Loin Steaks 600g",
+  "display": "British Pork Loin Steaks",
   "unit": "g",
   "cupboard": false,
   "allergens": [],
@@ -2051,6 +2128,7 @@
  {
   "slug": "sausages",
   "name": "Morrisons Butcher's Style 8 Pork Sausages 454g",
+  "display": "Pork Sausages",
   "unit": "sausages",
   "cupboard": false,
   "allergens": [
@@ -2083,6 +2161,7 @@
  {
   "slug": "turkeymince",
   "name": "Morrisons Turkey Mince 4% 500g",
+  "display": "Turkey Mince 4% Fat",
   "unit": "g",
   "cupboard": false,
   "allergens": [],
@@ -2111,6 +2190,7 @@
  {
   "slug": "salmon",
   "name": "Morrisons Boneless 2 Atlantic Salmon Fillets",
+  "display": "Atlantic Salmon Fillets",
   "unit": "g",
   "cupboard": false,
   "allergens": [
@@ -2140,6 +2220,7 @@
  {
   "slug": "cod",
   "name": "Morrisons 2 Cod Fillets 220g",
+  "display": "Cod Fillets",
   "unit": "g",
   "cupboard": false,
   "allergens": [
@@ -2169,6 +2250,7 @@
  {
   "slug": "smokedsalmon",
   "name": "Morrisons Smoked Salmon Slices 120g",
+  "display": "Smoked Salmon Slices",
   "unit": "g",
   "cupboard": false,
   "allergens": [
@@ -2198,6 +2280,7 @@
  {
   "slug": "lambmince",
   "name": "Morrisons Lamb Mince 500g",
+  "display": "Lamb Mince",
   "unit": "g",
   "cupboard": false,
   "allergens": [],
@@ -2225,6 +2308,7 @@
  {
   "slug": "halloumi",
   "name": "Morrisons Halloumi 200g",
+  "display": "Halloumi",
   "unit": "g",
   "cupboard": false,
   "allergens": [
@@ -2254,6 +2338,7 @@
  {
   "slug": "feta",
   "name": "Morrisons Greek Feta 200g",
+  "display": "Greek Feta",
   "unit": "g",
   "cupboard": false,
   "allergens": [
@@ -2283,6 +2368,7 @@
  {
   "slug": "cottage",
   "name": "Morrisons Low Fat Cottage Cheese 300g",
+  "display": "Low Fat Cottage Cheese",
   "unit": "g",
   "cupboard": false,
   "allergens": [
@@ -2313,6 +2399,7 @@
  {
   "slug": "softcheese",
   "name": "Morrisons 50% Reduced Fat Soft Cheese 200g",
+  "display": "50% Reduced Fat Soft Cheese",
   "unit": "g",
   "cupboard": false,
   "allergens": [
@@ -2342,6 +2429,7 @@
  {
   "slug": "bagels",
   "name": "Morrisons Plain Bagels 5 Pack",
+  "display": "Plain Bagels",
   "unit": "bagels",
   "cupboard": false,
   "allergens": [
@@ -2372,6 +2460,7 @@
  {
   "slug": "avocado",
   "name": "Morrisons Ripe & Ready Avocados 2 Pack",
+  "display": "Avocados",
   "unit": "avocados",
   "cupboard": false,
   "allergens": [],
@@ -2400,6 +2489,7 @@
  {
   "slug": "mushrooms",
   "name": "Morrisons British Closed Cup Mushrooms 465g",
+  "display": "British Closed Cup Mushrooms",
   "unit": "g",
   "cupboard": false,
   "allergens": [],
@@ -2427,6 +2517,7 @@
  {
   "slug": "courgette",
   "name": "Morrisons Courgettes 500g",
+  "display": "Courgettes",
   "unit": "g",
   "cupboard": false,
   "allergens": [],
@@ -2454,6 +2545,7 @@
  {
   "slug": "bakepot",
   "name": "Morrisons British Baking Potatoes 4 Pack",
+  "display": "British Baking Potatoes",
   "unit": "potatoes",
   "cupboard": false,
   "allergens": [],
@@ -2482,6 +2574,7 @@
  {
   "slug": "potatoes",
   "name": "Morrisons British Maris Piper Potatoes 1.25kg",
+  "display": "British Maris Piper Potatoes",
   "unit": "g",
   "cupboard": false,
   "allergens": [],
@@ -2509,6 +2602,7 @@
  {
   "slug": "sweetpot",
   "name": "Morrisons Sweet Potatoes 1kg",
+  "display": "Sweet Potatoes",
   "unit": "g",
   "cupboard": false,
   "allergens": [],
@@ -2536,6 +2630,7 @@
  {
   "slug": "peas",
   "name": "Morrisons Garden Peas 1kg (frozen)",
+  "display": "Garden Peas (Frozen)",
   "unit": "g",
   "cupboard": false,
   "allergens": [],
@@ -2563,6 +2658,7 @@
  {
   "slug": "chips",
   "name": "Morrisons Straight Cut Chips 1.2kg (frozen)",
+  "display": "Straight Cut Chips (Frozen)",
   "unit": "g",
   "cupboard": false,
   "allergens": [],
@@ -2590,6 +2686,7 @@
  {
   "slug": "passata",
   "name": "Morrisons Passata 500g",
+  "display": "Passata",
   "unit": "g",
   "cupboard": false,
   "allergens": [],
@@ -2618,6 +2715,7 @@
  {
   "slug": "tikka",
   "name": "Morrisons Tikka Masala Curry Paste 180g",
+  "display": "Tikka Masala Curry Paste",
   "unit": "g",
   "cupboard": false,
   "allergens": [],
@@ -2647,6 +2745,7 @@
  {
   "slug": "coconut",
   "name": "Morrisons Canned Coconut Milk 400ml",
+  "display": "Canned Coconut Milk",
   "unit": "ml",
   "cupboard": false,
   "allergens": [],
@@ -2674,6 +2773,7 @@
  {
   "slug": "pesto",
   "name": "Morrisons Red Pesto 190g",
+  "display": "Red Pesto",
   "unit": "g",
   "cupboard": false,
   "allergens": [
@@ -2705,6 +2805,7 @@
  {
   "slug": "chickpeas",
   "name": "Morrisons Chickpeas in Water 400g (240g drained)",
+  "display": "Chickpeas",
   "unit": "g",
   "cupboard": false,
   "allergens": [],
@@ -2732,6 +2833,7 @@
  {
   "slug": "lentils",
   "name": "Morrisons Wholefoods Red Split Lentils 500g",
+  "display": "Red Split Lentils",
   "unit": "g",
   "cupboard": false,
   "allergens": [],
@@ -2759,6 +2861,7 @@
  {
   "slug": "beans",
   "name": "Morrisons Baked Beans 410g",
+  "display": "Baked Beans",
   "unit": "g",
   "cupboard": false,
   "allergens": [],
@@ -2786,6 +2889,7 @@
  {
   "slug": "bbq",
   "name": "Morrisons Smoky Kansas Style BBQ Sauce 300g",
+  "display": "Smoky Kansas Style BBQ Sauce",
   "unit": "g",
   "cupboard": false,
   "allergens": [
@@ -2815,6 +2919,7 @@
  {
   "slug": "pbutter",
   "name": "Morrisons Smooth Peanut Butter 1kg",
+  "display": "Smooth Peanut Butter",
   "unit": "g",
   "cupboard": false,
   "allergens": [
@@ -2844,6 +2949,7 @@
  {
   "slug": "ricecakes",
   "name": "Morrisons Lightly Salted Rice Cakes 100g",
+  "display": "Lightly Salted Rice Cakes",
   "unit": "g",
   "cupboard": false,
   "allergens": [],
@@ -2870,6 +2976,7 @@
  {
   "slug": "crackers",
   "name": "Morrisons Cream Crackers 300g",
+  "display": "Cream Crackers",
   "unit": "g",
   "cupboard": false,
   "allergens": [
@@ -2899,6 +3006,7 @@
  {
   "slug": "tomsoup",
   "name": "Morrisons Cream of Tomato Soup 400g",
+  "display": "Cream of Tomato Soup",
   "unit": "g",
   "cupboard": false,
   "allergens": [
@@ -2928,6 +3036,7 @@
  {
   "slug": "mixveg",
   "name": "Morrisons Savers Mixed Vegetables 1kg (frozen)",
+  "display": "Mixed Vegetables (Frozen)",
   "unit": "g",
   "cupboard": false,
   "allergens": [],
@@ -2955,6 +3064,7 @@
  {
   "slug": "naan",
   "name": "Morrisons Mini Naans 4 x 50g",
+  "display": "Mini Naans",
   "unit": "naans",
   "cupboard": false,
   "allergens": [
@@ -2986,6 +3096,7 @@
  {
   "slug": "wholeloaf",
   "name": "Morrisons Wholemeal Medium Sliced Bread 800g",
+  "display": "Wholemeal Medium Sliced Bread",
   "unit": "g",
   "cupboard": false,
   "allergens": [
@@ -3016,6 +3127,7 @@
  {
   "slug": "stock",
   "name": "Chicken Stock Cubes 12",
+  "display": "Chicken Stock Cubes",
   "unit": "g",
   "cupboard": true,
   "note": "Chicken Stock Cubes 12 · £1.30",
@@ -3033,6 +3145,7 @@
  {
   "slug": "cumin",
   "name": "Ground Cumin 33g",
+  "display": "Ground Cumin",
   "unit": "g",
   "cupboard": true,
   "note": "Ground Cumin 33g",
@@ -3044,6 +3157,7 @@
  {
   "slug": "paprika",
   "name": "Smoked Paprika",
+  "display": "Smoked Paprika",
   "unit": "g",
   "cupboard": true,
   "note": "Smoked Paprika",
@@ -3055,6 +3169,7 @@
  {
   "slug": "curry",
   "name": "Mild Curry Powder",
+  "display": "Mild Curry Powder",
   "unit": "g",
   "cupboard": true,
   "note": "Mild Curry Powder",
@@ -3076,6 +3191,7 @@
  {
   "slug": "chilliflakes",
   "name": "Chilli Flakes",
+  "display": "Chilli Flakes",
   "unit": "g",
   "cupboard": true,
   "note": "Chilli Flakes",

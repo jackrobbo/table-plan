@@ -1,11 +1,18 @@
 import type { Allergen } from '../allergens';
 
+import type { StoreId } from '../stores';
+
 export type Course = 'breakfast' | 'lunch' | 'snack' | 'dinner';
 export type RecipeStatus = 'draft' | 'verified' | 'live';
+
+/** A store's listing for an ingredient: the product we send people to, priced per pack. */
+export interface ProductMap { retailer: string; name: string; price_pence: number; pack_size: number; slug: string }
 
 export interface IngredientDef {
   slug: string;
   name: string;
+  /** Neutral name for recipes and the cooking sheet ("Chicken breast fillets"). `name` is the Morrisons product name; each store has its own. */
+  display?: string;
   unit: string;
   cupboard: boolean;
   note?: string;
@@ -27,7 +34,9 @@ export interface IngredientDef {
   /** Per 100 g (ml counted as g), as sold/raw unless the ingredient is a ready-to-use product. null until sourced. */
   per100: { kcal: number; protein_g: number; carbs_g: number; fat_g: number } | null;
   /** Retailer mapping; null = not yet mapped/priced (M3). */
-  product: { retailer: string; name: string; price_pence: number; pack_size: number; slug: string } | null;
+  product: ProductMap | null;
+  /** Other stores' mappings, by store id. `product` is the Morrisons (reference store) mapping. */
+  products?: Partial<Record<StoreId, ProductMap>>;
 }
 
 export interface RecipeDef {
