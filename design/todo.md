@@ -60,4 +60,6 @@ Where we are: free beta live at https://table-plan.co.uk (open sign-up, no paywa
 - [ ] **[CLAUDE] Later**: meal-photo brief, Sentry alerts, recipe catalogue from the database, iPhone app (needs a Mac and a $99/yr Apple account).
 
 ## Multi-store note
+Full research and plan: `design/multi-store-research.md` (28 Oct). Headline: no official APIs; Tesco, Asda, Sainsbury's and Ocado return 403 to our scripts; start with the store-neutral model, then a second store via affiliate feed or a paid price source (legal read first).
+
 Morrisons and Ocado run the same shop software, so the trolley script should carry over with small changes. Tesco, Sainsbury's and Asda block automated requests from our servers (HTTP 403 on 28 Oct), so price crawling there is hard; the in-browser trolley filling still works because it runs in the person's own browser. Lidl and Aldi have no online grocery shop to fill. Design: `ingredient_products(store, ingredient_id, sku, slug, pack_size, unit, price_pence, status, checked_at)`; the planner stays store-neutral and the shopping list is built per store, which also gives a "this week costs £X at Morrisons, £Y at Ocado" comparison.
