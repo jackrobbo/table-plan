@@ -27,7 +27,7 @@ export default function BasketButton({ shopping, have }: { shopping: Shopping; h
 
   if (app) {
     return (
-      <div className="card" style={{ marginTop: 12 }}>
+      <div className="card" id="checkout" style={{ marginTop: 12 }}>
         <button className="btn" onClick={() => { track('basket_fill_started', { items: items.length, packs, app: true }); void nativeMorrisons()?.open({ items }).then((r) => { if (r.results?.length) { saveFill(r); setReport(r); } }).catch(() => undefined); }}>
           Checkout at Morrisons
         </button>
@@ -52,7 +52,7 @@ export default function BasketButton({ shopping, have }: { shopping: Shopping; h
   }
   if (installed) {
     return (
-      <div className="card" style={{ marginTop: 12 }}>
+      <div className="card" id="checkout" style={{ marginTop: 12 }}>
         <button className="btn" onClick={() => { track('basket_fill_started', { items: items.length, packs }); window.open(url, '_blank', 'noopener'); }}>
           Checkout at Morrisons
         </button>
@@ -63,7 +63,7 @@ export default function BasketButton({ shopping, have }: { shopping: Shopping; h
     );
   }
   return (
-    <div className="card" style={{ marginTop: 12 }}>
+    <div className="card" id="checkout" style={{ marginTop: 12 }}>
       <h3>Your Morrisons Shop</h3>
       <p className="muted" style={{ margin: '4px 0 10px' }}>We add your list to a Morrisons trolley for you, then you pick a slot and pay at Morrisons.</p>
       <button className="btn" onClick={() => setChoose(true)}>Checkout at Morrisons</button>

@@ -114,6 +114,7 @@ export default function Settings() {
       </Section>
 
       <Section title="Meals You Like">
+        <p className="muted" style={{ marginTop: 0 }}>Changing the meals you keep updates what the planner picks for you from your next plan.</p>
         <p className="muted" style={{ marginTop: 0 }}>
           {(['breakfast', 'lunch', 'dinner'] as const).filter((m) => d.meals[m].mode === 'plan').map((m) => `${prog[m].liked} ${m}${prog[m].liked === 1 ? '' : 's'}`).join(' · ') || 'No planned meals'} kept.
         </p>

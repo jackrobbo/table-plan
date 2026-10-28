@@ -8,12 +8,14 @@ import { getBackend } from '@/lib/db';
 import { useAccess } from '@/lib/useAccess';
 import { freeBeta } from '@/lib/beta/config';
 import { useProfile } from '@/lib/useProfile';
+import { Heart } from 'lucide-react';
+import { swipeCourses, tasteProgress } from '@/lib/onboarding';
 
 const date = (iso: string | null) => (iso ? new Date(iso).toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' }) : '');
 
 export default function Account() {
   const router = useRouter();
-  const { session, ready, update } = useProfile();
+  const { session, profile, ready, update } = useProfile();
   const { sub, loaded, access, cancel, resume } = useAccess(session);
   const [confirmDelete, setConfirmDelete] = useState(false);
   const [confirmRestart, setConfirmRestart] = useState(false);
@@ -102,10 +104,22 @@ export default function Account() {
               <button className="btn" disabled={deleting} onClick={wipe}>{deleting ? 'Deleting…' : 'Yes, delete everything'}</button>
               <button className="linkbtn" disabled={deleting} onClick={() => { setConfirmDelete(false); setDeleteError(null); }}>Keep My Account</button></>}
       </div>
+      {profile && (() => {
+        const prog = tasteProgress(profile);
+        const counts = swipeCourses(profile).map((c) => `${prog[c].liked} ${c}${prog[c].liked === 1 ? '' : 's'}`).join(' · ');
+        return (
+          <div className="card" style={{ marginTop: 12 }}>
+            <h3 className="ico-h"><Heart size={18} aria-hidden />Meals You Like</h3>
+            <p className="muted">The meals you&apos;ve kept teach the planner your taste. Keep or skip more and it picks differently from your next plan. Plans you&apos;ve already made don&apos;t change.</p>
+            {counts && <p className="muted" style={{ marginTop: -4 }}><b>{counts}</b> kept so far.</p>}
+            <button className="btn ghost" onClick={() => { update((p) => ({ ...p, completed: false, step: 'taste' })); router.push('/onboarding'); }}>Adjust My Taste</button>
+          </div>
+        );
+      })()}
       <div className="card" style={{ marginTop: 12 }}>
-        <h3>Your Answers</h3>
-        <p className="muted">Change your goal, stats, meals, allergies, dislikes or spend. Your planned weeks stay as they are unless you choose to rebuild them.</p>
-        <Link className="btn ghost" href="/settings">Change My Answers</Link>
+        <h3>Your Details</h3>
+        <p className="muted">Your goal, stats, allergies, dislikes and weekly spend. These set your calorie and protein targets and which meals are allowed. Planned weeks stay as they are unless you choose to rebuild them.</p>
+        <Link className="btn ghost" href="/settings">Change My Details</Link>
         {!confirmRestart
           ? <button className="linkbtn" onClick={() => setConfirmRestart(true)}>Start Again From the First Question</button>
           : <><p className="err">This clears your planned weeks and takes you back to the first question.</p>

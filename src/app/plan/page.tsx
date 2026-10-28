@@ -1,4 +1,6 @@
 'use client';
+import { Heart, RefreshCw } from 'lucide-react';
+import { untilLabel } from '@/lib/cycle/countdown';
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { useRouter, useSearchParams } from 'next/navigation';
 import PriceNote from '@/components/PriceNote';
@@ -41,7 +43,7 @@ export default function Plan() {
   const now = useNow();
   const { session, profile, ready, update } = useProfile();
   const { access, loaded: accessLoaded } = useAccess(session);
-  // Which view is open comes from the bottom tab bar (?v=upcoming | recipes); the Plan / Ingredients switch stays local.
+  // Which view is open comes from the bottom tab bar (?v=upcoming | recipes); the Plan / Shopping List switch stays local.
   const view = useSearchParams().get('v');
   const tab: 'this' | 'upcoming' = view === 'upcoming' ? 'upcoming' : 'this';
   const [planSub, setSub] = useState<'plan' | 'ingredients'>('plan');
@@ -104,6 +106,8 @@ export default function Plan() {
   const newIds = new Set(plan.days.flatMap((d) => d.meals).filter((m) => m.slot !== 'snack' && recipeById.get(m.recipeId) && isNewForYou(profile, m.recipeId, m.slot)).map((m) => m.recipeId));
   const upcomingSel = snap.upcoming.find((x) => x.week.start === (picked ?? snap.toPlan?.start ?? snap.upcoming[0]?.week.start)) ?? snap.upcoming[0];
 
+  const toBuy = shopping.lines.filter((l) => !week.haveAlready.includes(l.key));
+  const goList = () => { setSub('ingredients'); window.scrollTo({ top: 0 }); };
   const copy = async (text: string, key: string) => {
     try { await navigator.clipboard.writeText(text); setCopied(key); } catch { setCopied('fail:' + text); }
   };
@@ -116,8 +120,10 @@ export default function Plan() {
 
   return (
     <Screen footer={accessLoaded && !access ? <Link className="btn" href="/subscribe">Save and Checkout</Link>
-      : access && tab === 'this' && !started && sub === 'plan' && plan.days.length > 0
-        ? <button className="btn" onClick={() => { setSub('ingredients'); window.scrollTo({ top: 0 }); }}>Shop This Week · ≈ {money(shopping.totalPence)}</button>
+      : access && tab === 'this' && !started && plan.days.length > 0 && sub === 'plan'
+        ? <button className="btn" onClick={goList}>Check Your Shopping List · ≈ {money(shopping.totalPence)}</button>
+      : access && tab === 'this' && !started && plan.days.length > 0 && sub === 'ingredients'
+        ? <button className="btn" onClick={() => document.getElementById('checkout')?.scrollIntoView({ behavior: 'smooth', block: 'center' })}>Checkout · {toBuy.length} Items · ≈ {money(toBuy.reduce((a, l) => a + l.costPence, 0))}</button>
         : undefined}>
       <p className="step">Welcome Back</p>
 
@@ -133,7 +139,8 @@ export default function Plan() {
 
       {tab === 'this' && (
         <div className="fade" key="this">
-          <h1>{sub === 'recipes' ? 'Recipes' : finished ? 'Last Week' : started ? 'This Week' : Object.keys(weeks).length > 3 ? 'Next Up' : 'Your First Week'} <span className="wk">{weekLabel(week.start)}</span></h1>
+          <h1>{sub === 'recipes' ? (started ? 'This Week’s Menu' : 'Next Week’s Menu') : finished ? 'Last Week' : started ? 'This Week' : Object.keys(weeks).length > 3 ? 'Next Up' : 'Your First Week'} <span className="wk">{weekLabel(week.start)}</span></h1>
+          {sub === 'recipes' && <p className="sub">Everything you&apos;re cooking {started ? 'this week' : `from Mon ${dayLabel(week.start)}`}, one card per meal. Tap one for the recipe.</p>}
           {sub !== 'recipes' && <p className="sub">
             {finished ? 'Nothing is planned for this week. Plan the next one from Upcoming.' : started ? `Kept inside ${t.band[0].toLocaleString('en-GB')}–${t.band[1].toLocaleString('en-GB')} kcal and ≥${t.protein}g protein a day.`
               : `Starts Mon ${dayLabel(week.start)}. Built from what you like, inside ${t.band[0].toLocaleString('en-GB')}–${t.band[1].toLocaleString('en-GB')} kcal and ≥${t.protein}g protein a day.`}
@@ -141,7 +148,7 @@ export default function Plan() {
           {sub !== 'recipes' && !started && (
             <div className="seg2">
               <button className={sub === 'plan' ? 'on' : ''} onClick={() => setSub('plan')}>Plan</button>
-              <button className={sub === 'ingredients' ? 'on' : ''} onClick={() => setSub('ingredients')}>Ingredients</button>
+              <button className={sub === 'ingredients' ? 'on' : ''} onClick={() => setSub('ingredients')}>Shopping List</button>
             </div>
           )}
 
@@ -149,6 +156,13 @@ export default function Plan() {
             {/* Built from the days, not plan.issues, so plans saved before the wording changed show the current message. */}
             {(plan.days.length ? explainMisses(plan.days, t.band, t.protein) : plan.issues).map((i) => <div key={i} className="estimate-flag">{i}</div>)}
             {plan.days.length > 0 && <PriceNote totalPence={shopping.totalPence} />}
+            {access && !started && plan.days.length > 0 && (
+              <div className="nextstep">
+                <span className="ns-num" aria-hidden>2</span>
+                <div><b>Next: Check Your Shopping List</b><p>Untick anything you already have at home, then check out at Morrisons.</p></div>
+                <button className="btn inline small" onClick={goList}>Check List</button>
+              </div>
+            )}
             {rate && recipeById.get(rate) && (
               <div className="note rate" role="status">
                 <b>New this week: {recipeById.get(rate)!.n}. How was it?</b>
@@ -174,6 +188,7 @@ export default function Plan() {
 
           {sub === 'ingredients' && !started && access && <>
             <PriceNote totalPence={shopping.totalPence} />
+            <div className="note"><b>Untick anything you already have.</b> Ticked items go into your trolley. When you&apos;re happy, check out below.</div>
             <ShoppingList shopping={shopping} have={week.haveAlready}
               onToggle={(k) => update((p) => { const w = p.weeks[week.start]; const have = w.haveAlready.includes(k) ? w.haveAlready.filter((x) => x !== k) : [...w.haveAlready, k]; return { ...p, weeks: { ...p.weeks, [week.start]: { ...w, haveAlready: have } } }; })} />
             <BasketButton shopping={shopping} have={week.haveAlready} />
@@ -198,6 +213,13 @@ export default function Plan() {
               })}
             </div>
           )}
+          {sub === 'recipes' && (
+            <div className="card tastelink">
+              <h3 className="ico-h"><Heart size={18} aria-hidden />Not Feeling These?</h3>
+              <p className="muted">The planner picks from the meals you keep. Adjust your taste and your next plan changes.</p>
+              <button className="btn ghost" onClick={() => { update((p) => ({ ...p, completed: false, step: 'taste' })); router.push('/onboarding'); }}>Adjust My Taste</button>
+            </div>
+          )}
 
           {!profile.reminders.on && (
             <div className="card remind-card">
@@ -213,20 +235,51 @@ export default function Plan() {
       {tab === 'upcoming' && (
         <div className="fade" key="up">
           <h1>Upcoming</h1>
-          <div className="chips weekchips">
-            {snap.upcoming.map(({ week: w, status }) => (
-              <button key={w.start} className={'chip lg' + (upcomingSel?.week.start === w.start ? ' on' : '') + (status === 'to_plan' || status === 'in_progress' ? ' amber-dot' : '')} onClick={() => setPicked(w.start)}>
-                {weekLabel(w.start)}<small>{STATE_COPY[status]}</small>
-              </button>
-            ))}
-          </div>
-          {upcomingSel && <UpcomingCard week={upcomingSel.week} status={upcomingSel.status} weeks={weeks} now={now}
+          <p className="sub">Each week opens for planning on Sunday at 6am, after we refresh Morrisons prices, so your list always uses the latest ones.</p>
+          <div className="pricefresh"><RefreshCw size={16} aria-hidden /><span>Prices last checked {PRICES_META.checkedAt ? shortDate(PRICES_META.checkedAt) : 'not yet'}. Next refresh: Sunday morning.</span></div>
+          <ol className="weeklist">
+            {snap.upcoming.map(({ week: w, status }) => {
+              const sel = upcomingSel?.week.start === w.start;
+              const opens = opensAt(weeks, w.start);
+              return (
+                <li key={w.start} className={'wkrow ' + status + (sel ? ' open' : '')}>
+                  <button className="wkhead" aria-expanded={sel} onClick={() => setPicked(w.start)}>
+                    <span className="wkdot" aria-hidden />
+                    <span className="wktxt">
+                      <b>{weekLabel(w.start)}</b>
+                      <small>{status === 'locked' ? `Opens Sun ${dayLabel(londonDate(opens))} at 6am · ${untilLabel(opens, now)}`
+                        : status === 'to_plan' || status === 'in_progress' ? `Open now · pick by midnight Sun ${dayLabel(addDays(w.start, -1))}`
+                        : status === 'planned' || status === 'shopped' ? `Planned · starts Mon ${dayLabel(w.start)}`
+                        : STATE_COPY[status]}</small>
+                    </span>
+                    <span className={'wkpill ' + status}>{STATE_COPY[status]}</span>
+                  </button>
+                  {sel && upcomingSel && <div className="wkbody"><UpcomingCard week={upcomingSel.week} status={upcomingSel.status} weeks={weeks} now={now}
             onPlan={() => router.push(access ? '/plan/next' : '/subscribe')}
             onSkip={() => update((p) => ({ ...p, weeks: skipWeek(p.weeks, upcomingSel.week.start, now) }))}
             onUndo={() => update((p) => ({ ...p, weeks: undoSkip(p.weeks, upcomingSel.week.start, now) }))}
             onCopy={(text) => copy(text, upcomingSel.week.start)} copied={copied} onOpen={setSheet}
             onSwap={(day, meal) => setSwap({ week: upcomingSel.week.start, day, meal })}
-            onToggleHave={(k) => update((p) => { const w = p.weeks[upcomingSel.week.start]; const have = w.haveAlready.includes(k) ? w.haveAlready.filter((x) => x !== k) : [...w.haveAlready, k]; return { ...p, weeks: saveList({ ...p.weeks, [w.start]: { ...w, haveAlready: have } }, w.start, have, w.checkout ?? 'notes') }; })} />}
+            onToggleHave={(k) => update((p) => { const w = p.weeks[upcomingSel.week.start]; const have = w.haveAlready.includes(k) ? w.haveAlready.filter((x) => x !== k) : [...w.haveAlready, k]; return { ...p, weeks: saveList({ ...p.weeks, [w.start]: { ...w, haveAlready: have } }, w.start, have, w.checkout ?? 'notes') }; })} /></div>}
+                </li>
+              );
+            })}
+            {/* Weeks further ahead aren't created yet: show when each one will open so people know when to come back. */}
+            {[1, 2].map((n) => {
+              const last = snap.upcoming[snap.upcoming.length - 1]?.week.start ?? week.start;
+              const start = addDays(last, 7 * n);
+              const opens = opensAt(weeks, start);
+              return (
+                <li key={start} className="wkrow later">
+                  <div className="wkhead static">
+                    <span className="wkdot" aria-hidden />
+                    <span className="wktxt"><b>{weekLabel(start)}</b><small>Opens Sun {dayLabel(londonDate(opens))} at 6am · {untilLabel(opens, now)}</small></span>
+                    <span className="wkpill locked">Not Open Yet</span>
+                  </div>
+                </li>
+              );
+            })}
+          </ol>
         </div>
       )}
       <RecipeSheet id={sheet} onClose={() => setSheet(null)} portions={1} onNever={(rid) => update((p) => neverAgain(p, rid))} />
@@ -249,7 +302,7 @@ function UpcomingCard({ week, status, weeks, now, onPlan, onSkip, onUndo, onCopy
   onCopy: (t: string) => void; copied: string | null; onOpen: (id: string) => void; onSwap: (day: number, meal: number) => void; onToggleHave: (k: string) => void;
 }) {
   const deadline = `midnight Sun ${dayLabel(addDays(week.start, -1))}`;
-  if (status === 'locked') return <div className="card"><h3>{weekLabel(week.start)}</h3><p className="muted" style={{ margin: 0 }}>Opens Sun {dayLabel(londonDate(opensAt(weeks, week.start)))} at 6am. Only one week is open to plan at a time.</p></div>;
+  if (status === 'locked') return <div className="card"><h3>Why Sunday at 6am?</h3><p className="muted" style={{ margin: 0 }}>We refresh the Morrisons prices first, so your shopping list uses the latest ones. Only one week is open to plan at a time.</p></div>;
   if (status === 'missed') return <div className="card"><h3>{weekLabel(week.start)} · Missed</h3><p className="muted" style={{ margin: 0 }}>The deadline passed, so nothing was picked for you. You can plan the next week as normal.</p></div>;
   if (status === 'skipped') return <div className="card"><h3>{weekLabel(week.start)} · Skipped</h3><p className="muted">You skipped this week.</p><button className="btn ghost" onClick={onUndo}>Undo Skip</button></div>;
   if (status === 'to_plan' || status === 'in_progress') {
@@ -269,7 +322,7 @@ function UpcomingCard({ week, status, weeks, now, onPlan, onSkip, onUndo, onCopy
     <div>
       <p className="muted">Planned. Starts Mon {dayLabel(week.start)}.</p>
       {plan.days.map((d, i) => <DayCard key={d.day} d={d} index={i} onOpen={onOpen} onSwap={onSwap} />)}
-      <h2 style={{ marginTop: 22 }}>Ingredients</h2>
+      <h2 style={{ marginTop: 22 }}>Shopping List</h2>
       <PriceNote totalPence={shopping.totalPence} />
       <ShoppingList shopping={shopping} have={week.haveAlready} onToggle={onToggleHave} />
       <BasketButton shopping={shopping} have={week.haveAlready} />

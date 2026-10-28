@@ -198,7 +198,7 @@ export default function PlanNext() {
 
       {!building && step === 'list' && shopping && (
         <div className="fade">
-          <h2>Ingredients</h2>
+          <h2>Shopping List</h2>
           <p className="sub">Everything is ticked. Untick what you already have.</p>
           <PriceNote totalPence={shopping.lines.filter((l) => !have.includes(l.key)).reduce((a, l) => a + l.costPence, 0)} />
           <ShoppingList shopping={shopping} have={have} onToggle={(k) => setHave((h) => (h.includes(k) ? h.filter((x) => x !== k) : [...h, k]))} />

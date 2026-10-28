@@ -480,3 +480,31 @@ a.opt{text-decoration:none; color:inherit;} a.opt .d{text-decoration:none;}
 /* the example number in a field is a hint, so it goes as soon as the field is focused */
 .value input:focus::placeholder,input.text:focus::placeholder,.otp-input:focus::placeholder{color:transparent;}
 .value input::placeholder{transition:color .12s ease;}
+
+/* "what to do next" prompt on the Plan tab */
+.nextstep{display:flex; align-items:center; gap:12px; margin:12px 0; padding:12px 14px; border-radius:var(--radius); background:var(--ok-soft); box-shadow:inset 0 0 0 1.5px var(--ok);}
+.nextstep p{margin:2px 0 0; font-size:13px; color:var(--ink2);} .nextstep b{font-size:15px;}
+.nextstep>div{flex:1; min-width:0;}
+.nextstep .btn{flex:none;}
+.ns-num{flex:none; width:28px; height:28px; border-radius:50%; display:grid; place-items:center; background:var(--ok); color:#fff; font-weight:700; font-size:14px;}
+
+/* ---- upcoming: a timeline of weeks ---- */
+.pricefresh{display:flex; align-items:center; gap:10px; margin:0 0 14px; padding:10px 12px; border-radius:var(--radius-sm); background:var(--fill); font-size:13px; color:var(--ink2);}
+.pricefresh svg{flex:none; color:var(--ok);}
+.weeklist{list-style:none; margin:0; padding:0; display:grid; gap:10px;}
+.wkrow{border-radius:var(--radius); background:var(--card); border:1px solid var(--line); overflow:hidden;}
+.wkrow.open{border-color:var(--ink3);}
+.wkrow.to_plan,.wkrow.in_progress{border-color:var(--warn);}
+.wkhead{display:flex; align-items:center; gap:12px; width:100%; padding:14px; background:none; border:0; font:inherit; color:inherit; text-align:left; cursor:pointer;}
+.wkhead.static{cursor:default;}
+.wkdot{flex:none; width:12px; height:12px; border-radius:50%; border:2px solid var(--ink3);}
+.wkrow.to_plan .wkdot,.wkrow.in_progress .wkdot{border-color:var(--warn); background:var(--warn);}
+.wkrow.planned .wkdot,.wkrow.shopped .wkdot{border-color:var(--ok); background:var(--ok);}
+.wktxt{flex:1; min-width:0; display:flex; flex-direction:column; gap:2px;}
+.wktxt b{font-size:17px;} .wktxt small{font-size:13px; color:var(--ink2);}
+.wkpill{flex:none; font-size:11px; font-weight:600; padding:3px 9px; border-radius:99px; background:var(--fill); color:var(--ink2);}
+.wkpill.to_plan,.wkpill.in_progress{background:var(--warn-soft); color:var(--warn-ink);}
+.wkpill.planned,.wkpill.shopped{background:var(--ok-soft); color:var(--ok-ink);}
+.wkbody{padding:0 14px 14px;}
+.wkbody>.card{margin:0; background:var(--fill); box-shadow:none;}
+.wkrow.later{opacity:.75; background:transparent; border-style:dashed;}

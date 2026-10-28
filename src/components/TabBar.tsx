@@ -32,7 +32,7 @@ export default function TabBar() {
   const tabs = [
     { id: 'plan', label: 'Plan', href: '/plan', on: onPlan && view !== 'upcoming' && view !== 'recipes' },
     { id: 'upcoming', label: 'Upcoming', href: '/plan?v=upcoming', on: onPlan && view === 'upcoming' },
-    { id: 'recipes', label: 'Recipes', href: '/plan?v=recipes', on: onPlan && view === 'recipes' },
+    { id: 'recipes', label: 'Menu', href: '/plan?v=recipes', on: onPlan && view === 'recipes' },
     { id: 'account', label: 'Account', href: '/account', on: !onPlan },
   ];
 
