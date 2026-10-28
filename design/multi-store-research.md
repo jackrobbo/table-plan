@@ -51,6 +51,25 @@ Cost of the paid route, for scale: about 120 products × 3 stores × weekly is w
 - **Deep links / affiliate**: I could not confirm an add-to-basket URL for Tesco or Asda. If affiliate approval comes through, deep links to product pages are standard on Awin.
 - Lidl and Aldi have no online grocery shop to fill, so only "price comparison" would apply, and I found no feed for them.
 
+## Update: vendor options from Jack's research (`uk_supermarket_price_feeds_tldr.md`), checked against the vendors' own pages (28 Oct)
+
+| Source | What I verified | What is still unknown |
+|---|---|---|
+| **Yappman free dataset** (data.yappman.com) | Daily 212-item basket, 4 UK supermarkets (Tesco, Sainsbury's, Asda, Aldi; Morrisons planned). Labelled **CC BY 4.0**, attribution "Yappman Data". Free monthly snapshot on Kaggle. | Field list and file format are not on the page. The licence covers their dataset, not rows from actor runs, and not retailer images or descriptions. |
+| **Yappman paid datasets** | Daily basket from **£2,400/yr**, weekly catalogue from **£6,000/yr**, one-month free trial, per buyer entity. | Catalogue size and coverage; whether the licence covers customer-facing display and caching. |
+| **Yappman Apify actor** (`yappman/uk-supermarket-price-scraper`) | Tesco, Sainsbury's, Asda, Aldi (Morrisons opt-in). Output per product per store: `ean` (nearly all Tesco and Sainsbury's, about 99% of Asda, none for Morrisons or Aldi), `matchKey`, `retailerProductId`, name, brand, pack size, price, **was price, loyalty (Clubcard/Nectar) price, promotion**, unit price, in stock, `scrapedAt`. **`POST /basket`** prices a list by EAN, name and pack size, or retailer product ID at **$0.002 per matched line per retailer**. Search mode **$2.50 per 1,000 products**. No postcode: Asda has a store id; Tesco and Sainsbury's are not store-specific. | Its README says plainly: "We make no claim that any retailer permits this use." Retailer terms are summarised as restricting automated access. |
+| **Hobnight API** (hobnight.com) | Read-only JSON API with bearer key, OpenAPI 3.1, endpoints for products, **product history**, categories and **cross-shop matches**. Retailers listed: Tesco, ASDA, Ocado, Morrisons, Sainsbury's, Waitrose, Iceland; "250k+ UK grocery products". Keys issued **manually** after a use-case request. | Pricing, free trial, update frequency, fields (EAN, loyalty price, pack size), **how the data is obtained**, and the commercial-use and caching terms: none are stated publicly. |
+
+**What this changes**
+- **Cost is not the question.** Pricing our whole catalogue weekly through the actor's basket endpoint is about 120 lines × 3 stores × $0.002, roughly **$0.70 a week**. The paid datasets cost far more than the data we need.
+- **The risk is unchanged in kind.** Every one of these is an intermediary that collects from the retailers' sites. Yappman says outright that it makes no claim retailers allow it. A paid licence gives us a contract with the vendor, not permission from Tesco. Only an affiliate feed or a retailer agreement is clean. The legal read of Tesco's terms still comes first.
+- **Loyalty prices must be kept apart.** The actor returns shelf, was and Clubcard/Nectar prices. We should estimate from the **shelf price** and never mix in loyalty prices, so we don't undersell a store's real cost.
+- **Matching is still ours to do.** EANs help for branded lines only (Morrisons publishes none). Own-brand equivalence ("Tesco Everyday Value mixed peppers" for "Morrisons Savers mixed peppers") needs our match-and-confirm tool whichever source we use. Hobnight's cross-shop matches may speed up branded lines.
+- **Build source-agnostic.** The tool should read any of these as a normalised row (`store, productId, name, brand, packSize, price, unitPrice, ean?, scrapedAt`), so we can swap vendors without rework.
+- **Store variation.** Asda has a store setting and prices may vary by store; Tesco and Sainsbury's are national in the actor. Note this in the UI as "estimated prices".
+
+**Sequence I recommend:** (1) Jack requests a Hobnight key and sends both vendors a short licence question list (drafted below in the chat reply); (2) Jack downloads the free Yappman CSV and I measure how many of our ingredients it covers and sanity-check prices against Morrisons; (3) I build the source-agnostic match-and-confirm tool and pilot about 20 ingredients with a tiny paid run; (4) choose the source on licence wording and coverage, not price; (5) keep the Awin application going as the long-term clean route.
+
 ## What has to change in our code (store-neutral model)
 
 Today everything is Morrisons-shaped: `content/ingredients.json` has one `product` per ingredient, recipe cost and tier are computed at import from Morrisons prices, and the shopping list shows the Morrisons product name.
