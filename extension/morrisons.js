@@ -8,6 +8,7 @@
 // format in extension/README.md). We store it, remove it from the address bar, and ask before doing anything.
 (() => {
   'use strict';
+  if (window.top !== window.self) return;   // the app injects this at document start, which would otherwise include frames
 
   const JOB_KEY = 'tp_job';
   const MAX_AGE_MS = 2 * 60 * 60 * 1000;
@@ -280,6 +281,8 @@
 
   // ---- entry --------------------------------------------------------------------------------------------------------
   async function init() {
+    // Injected at document start in the app, so the page may not have an element to draw on yet.
+    while (!document.documentElement) await sleep(5);
     const items = readHandoff();
     if (items) {
       history.replaceState(null, '', location.pathname + location.search);

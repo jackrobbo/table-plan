@@ -21,6 +21,8 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowCompat;
 import androidx.core.view.WindowInsetsCompat;
+import androidx.webkit.WebViewCompat;
+import androidx.webkit.WebViewFeature;
 import java.io.ByteArrayOutputStream;
 import java.io.InputStream;
 import org.json.JSONArray;
@@ -90,6 +92,11 @@ public class MorrisonsActivity extends Activity {
         CookieManager.getInstance().setAcceptCookie(true);
         CookieManager.getInstance().setAcceptThirdPartyCookies(web, true);
         web.addJavascriptInterface(new Bridge(), "TPNative");
+        // Run our script as each Morrisons page starts to load, so the trolley screen is up before the product page can show through.
+        // (Where that isn't supported, onPageFinished below still injects it, just later.)
+        if (!script.isEmpty() && WebViewFeature.isFeatureSupported(WebViewFeature.DOCUMENT_START_SCRIPT)) {
+            WebViewCompat.addDocumentStartJavaScript(web, script, new java.util.HashSet<>(java.util.Collections.singletonList("https://groceries.morrisons.com")));
+        }
         web.setWebViewClient(new WebViewClient() {
             @Override public boolean shouldOverrideUrlLoading(WebView v, WebResourceRequest r) {
                 Uri u = r.getUrl();
