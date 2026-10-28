@@ -125,6 +125,7 @@ public class MorrisonsActivity extends Activity {
             job.put("at", System.currentTimeMillis());
             lastJob = job.toString();
             prefs.edit().putString("job", lastJob).apply();
+            web.getSettings().setLoadsImagesAutomatically(false);
             web.loadUrl(BASE + items.getJSONObject(0).getString("s"));
         } catch (Exception e) {
             finish();
@@ -175,7 +176,13 @@ public class MorrisonsActivity extends Activity {
     private class Bridge {
         @JavascriptInterface public String getJob() { return prefs.getString("job", ""); }
         @JavascriptInterface public void setJob(String json) {
-            if (json != null && json.length() < MAX_JOB_CHARS) { lastJob = json; prefs.edit().putString("job", json).apply(); }
+            if (json != null && json.length() < MAX_JOB_CHARS) {
+                lastJob = json;
+                prefs.edit().putString("job", json).apply();
+                // Pages load much faster without pictures, and a run doesn't need them. Back on once it's over or paused.
+                final boolean busy = json.contains("\"state\":\"running\"") || json.contains("\"state\":\"ready\"");
+                runOnUiThread(() -> web.getSettings().setLoadsImagesAutomatically(!busy));
+            }
         }
         @JavascriptInterface public void clearJob() { prefs.edit().remove("job").apply(); }
         @JavascriptInterface public void close() { runOnUiThread(MorrisonsActivity.this::finish); }

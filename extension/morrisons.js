@@ -13,7 +13,7 @@
   const MAX_AGE_MS = 2 * 60 * 60 * 1000;
   const MAX_QTY = 36; // Morrisons' own limit on the quantity box
   const BASE = 'https://groceries.morrisons.com/products/';
-  const PACE_MS = 600;
+  const PACE_MS = 200;
 
   const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
   // Same script runs in the browser extension (chrome.storage) and in the Android app's Morrisons screen, where the app injects it
@@ -32,7 +32,7 @@
   };
 
   /** Polls until fn() is truthy; returns its value, or null on timeout. */
-  async function waitFor(fn, timeout = 10000, every = 150) {
+  async function waitFor(fn, timeout = 10000, every = 60) {
     const end = Date.now() + timeout;
     for (;;) {
       const v = fn();
@@ -110,6 +110,11 @@
       .spin{width:44px;height:44px;border:4px solid var(--track);border-top-color:var(--ink);border-radius:50%;animation:s 1s linear infinite;margin:0 auto 20px}@keyframes s{to{transform:rotate(1turn)}}
       .big{font-size:46px;font-weight:700;letter-spacing:-.02em;margin:0;font-variant-numeric:tabular-nums}.big span{font-size:20px;color:var(--ink2);font-weight:500;margin-left:6px}
       .t{font-size:17px;font-weight:600;margin:2px 0 6px}.cur{min-height:20px}.recent{margin:14px auto 0;max-width:320px;text-align:left}.recent li{border-top:0;padding:4px 0}.small{margin-top:16px;font-size:13px}
+      .bar i{position:relative;overflow:hidden}.bar i::after{content:'';position:absolute;inset:0;background:linear-gradient(100deg,transparent 20%,rgba(255,255,255,.55) 50%,transparent 80%);transform:translateX(-100%);animation:sh 1.3s ease-in-out infinite}@keyframes sh{to{transform:translateX(100%)}}
+      .trolley{display:inline-flex;align-items:center;gap:8px;margin:14px 0 0;font-size:15px;color:var(--ink2)}.trolley svg{width:22px;height:22px;color:var(--ink);flex:none}.trolley .cnt{color:var(--ink);display:inline-block;animation:pop .45s cubic-bezier(.34,1.5,.5,1)}
+      .recent li:first-child{animation:rowIn .45s cubic-bezier(.2,.8,.2,1) both}.recent li:first-child b{display:inline-block;animation:pop .5s cubic-bezier(.34,1.5,.5,1) .1s both}
+      @keyframes rowIn{from{opacity:0;transform:translateY(-10px) scale(.98)}}@keyframes pop{0%{transform:scale(.4)}60%{transform:scale(1.3)}100%{transform:scale(1)}}
+      @media (prefers-reduced-motion:reduce){.bar i::after,.trolley .cnt,.recent li:first-child,.recent li:first-child b{animation:none}}
       @media (prefers-reduced-motion:reduce){.spin{animation-duration:3s}.bar i{transition:none}}
       h3{font-size:13px;font-weight:600;color:var(--ink2);margin:18px 0 4px}li{align-items:flex-start}li .go{flex:0 0 auto;min-height:34px;padding:0 14px;font-size:14px;border-radius:10px}
       .pill{all:initial;position:fixed;left:16px;bottom:max(16px,env(safe-area-inset-bottom));background:var(--btn);color:var(--btn-ink);font:600 15px -apple-system,system-ui,sans-serif;padding:12px 18px;border-radius:99px;box-shadow:var(--shadow);cursor:pointer}
@@ -156,10 +161,23 @@
     const bar = `<div class="bar"><i style="width:${Math.round((job.i / n) * 100)}%"></i></div>`;
     if (native) {
       const recent = (job.results || []).slice(-3).reverse();
+      const added = (job.results || []).filter(isOk).length;
       const row = (x) => `<li class="${isOk(x) ? 'ok' : 'warn'}"><b>${isOk(x) ? '✓' : '!'}</b><span>${esc(x.n || x.s)}${x.q > 1 ? ` ×${x.q}` : ''}</span></li>`;
-      return show(`<div class="spin"></div><p class="big"><b>${job.i + 1}</b><span>of ${n}</span></p><p class="t">Filling Your Trolley</p>${bar}
-        <p class="m cur">${esc(item ? item.n || item.s : '')}</p>${recent.length ? `<ul class="recent">${recent.map(row).join('')}</ul>` : ''}
+      const cart = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="8" cy="21" r="1"/><circle cx="19" cy="21" r="1"/><path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"/></svg>';
+      // The page reloads for every product, so the bar starts where the last one's creep ended, snaps to this step, then keeps creeping.
+      const from = Math.max(0, (job.i - 0.15) / n), to = job.i / n, creep = Math.min(0.97, (job.i + 0.85) / n);
+      show(`<div class="spin"></div><p class="big"><b>${job.i + 1}</b><span>of ${n}</span></p><p class="t">Filling Your Trolley</p>
+        <div class="bar"><i style="width:${Math.round(from * 100)}%"></i></div>
+        <p class="m cur">${esc(item ? item.n || item.s : '')}</p>
+        <p class="trolley">${cart}<span><b class="cnt">${added}</b> in your trolley</span></p>
+        ${recent.length ? `<ul class="recent">${recent.map(row).join('')}</ul>` : ''}
         <p class="m small">Please wait. The page behind will keep changing.</p>`, stop, true);
+      const fill = ui().querySelector('.bar i');
+      if (fill) requestAnimationFrame(() => {
+        fill.style.transition = 'width .35s ease-out'; fill.style.width = `${to * 100}%`;
+        setTimeout(() => { fill.style.transition = 'width 4.5s linear'; fill.style.width = `${creep * 100}%`; }, 380);
+      });
+      return;
     }
     show(`<p><b>Adding ${job.i + 1} of ${n}</b></p><p class="m">${esc(item ? item.n || item.s : '')}</p>
       ${bar}${note ? `<p class="m">${esc(note)}</p>` : ''}`, stop);
@@ -213,7 +231,7 @@
       if (!moved) { closeDialogs(); moved = await waitFor(() => quantity() > cur, 3000); }
       if (!moved) break;
       cur = quantity();
-      await sleep(350);
+      await sleep(150);
     }
     closeDialogs();
     if (cur >= cap) return { status: 'added', got: cur, ...(before ? { note: `${before} were already in your trolley` } : {}) };
