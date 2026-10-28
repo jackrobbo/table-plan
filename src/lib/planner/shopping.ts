@@ -20,7 +20,15 @@ export function byAisle(lines: ShopLine[]): { aisle: string; lines: ShopLine[] }
   return [...groups].sort((a, b) => rank(a[0]) - rank(b[0])).map(([aisle, ls]) => ({ aisle, lines: [...ls].sort((a, b) => b.costPence - a.costPence) }));
 }
 
-export interface Shopping { lines: ShopLine[]; totalPence: number; wastePence: number; cupboard: string[] }
+/** A store-cupboard staple: on the list as an optional extra ("only if you're out"), priced when we know the pack price. */
+export interface CupboardItem { key: string; name: string; pricePence?: number; text: string }
+export interface Shopping { lines: ShopLine[]; totalPence: number; wastePence: number; cupboard: string[]; cupboardItems?: CupboardItem[] }
+
+/** "Easy Cook Long Grain Rice 1kg · £1.25" -> name and price; entries without a price keep the whole text as the name. */
+function cupboardItem(key: string, text: string): CupboardItem {
+  const m = text.match(/^(.*?)\s*·\s*£(\d+(?:\.\d{1,2})?)$/);
+  return m ? { key, name: m[1], pricePence: Math.round(parseFloat(m[2]) * 100), text } : { key, name: text, text };
+}
 
 const byId = new Map(RECIPES.map((r) => [r.id, r]));
 
@@ -53,5 +61,5 @@ export function buildShopping(plan: Plan, recipes: Map<string, Recipe> = byId, p
     return [{ key, name: p.n, slug: p.s, packs, costPence: cost, needed: q, bought: packs * p.pack, unit: p.u, usedBy: [...usedBy[key]], status: p.st, category: p.c ?? 'Other' }];
   }).sort((a, b) => b.costPence - a.costPence);
 
-  return { lines, totalPence: total, wastePence: waste, cupboard: [...cupboard].map((c) => cupboardInfo[c] ?? c) };
+  return { lines, totalPence: total, wastePence: waste, cupboard: [...cupboard].map((c) => cupboardInfo[c] ?? c), cupboardItems: [...cupboard].map((c) => cupboardItem(c, cupboardInfo[c] ?? c)) };
 }

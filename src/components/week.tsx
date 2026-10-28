@@ -1,11 +1,12 @@
 'use client';
 import { useState } from 'react';
 import { createPortal } from 'react-dom';
-import { Apple, ArrowLeftRight, Clock, Coffee, Plus, PoundSterling, Sandwich, ShieldCheck, TriangleAlert, User, Users, Utensils, type LucideIcon } from 'lucide-react';
+import { Apple, ArrowLeftRight, ChevronDown, Clock, Coffee, Heart, Plus, PoundSterling, Sandwich, ShieldCheck, TriangleAlert, User, Users, Utensils, X, type LucideIcon } from 'lucide-react';
 import { timeLabel } from '@/lib/cookTime';
 import { PRODUCTS, RECIPES } from '@/data';
 import MealImage from '@/components/MealImage';
-import { tierMark } from '@/lib/budget';
+import { ingredientIcon } from '@/lib/ingredientIcon';
+import { tierClass, tierMark } from '@/lib/budget';
 import { allergenNames, cupboardLines } from '@/lib/recipeFacts';
 import { buildShopping, byAisle, type Shopping } from '@/lib/planner/shopping';
 import type { Plan, PlannedDay, PlannedMeal } from '@/lib/planner/types';
@@ -28,11 +29,11 @@ export function MealRow({ m, tick, onTick, onOpen, onSwap, isNew }: { m: Planned
       <button className="mbody linkish" onClick={onOpen} disabled={!onOpen}>
         <div className="mslot">{Icon && <Icon size={12} aria-hidden />}{SLOT_LABEL[m.slot]}{isNew && <span className="newtag">New for You</span>}</div>
         <div className="mname">{r.n}</div>
-        <div className="mmeta"><b>{m.protein}g protein</b> · {m.kcal} kcal</div>
+        <div className="mmeta"><b>{m.protein}g Protein</b> · {m.kcal} kcal</div>
         <div className="mmeta">
           {time && <span className="time" title="Estimated prep and cooking time"><Clock size={11} aria-hidden />{time.replace('≈ ', '≈\u00a0')}</span>}
-          {r.cost != null && <span title="Estimated cost of this portion">≈ {money(Math.round(r.cost * m.scale))}</span>}
-          {adj && <span className="adj" title="Portion resized to fit your day">{Math.round(m.scale * 100)}% portion</span>}
+          {r.cost != null && <span className={tierClass(r.b)} title="Estimated cost of this portion">≈ {money(Math.round(r.cost * m.scale))}</span>}
+          {adj && <span className="adj" title="Portion resized to fit your day">{Math.round(m.scale * 100)}% Portion</span>}
           {m.extra > 0 && (
             <span className="feeds" role="img" aria-label={`Feeds ${1 + m.extra} (you plus ${m.extra} to share)`} title={`Feeds ${1 + m.extra}: you plus ${m.extra} to share`}>
               {1 + m.extra <= 4 ? Array.from({ length: 1 + m.extra }, (_, i) => <User key={i} size={13} aria-hidden />) : <><Users size={14} aria-hidden />{1 + m.extra}</>}
@@ -66,30 +67,33 @@ export function DayCard({ d, index, ticks, onTick, onOpen, onSwap, label, today,
   );
   const keys = d.meals.map((_, i) => `${index}:${i}`);
   const done = !!ticks && keys.length > 0 && keys.every((k) => ticks[k]);
+  // A finished day folds away to its header, but stays on the page: tap it to look back at what you ate.
+  const [open, setOpen] = useState(false);
+  const collapsed = done && !open;
   return (
     <section className={'daycard' + (d.adjusted ? ' adjusted' : '') + (done ? ' done' : '')} aria-label={d.day}>
       <header>
         <h3>{d.day}{label && <span className="muted"> · {label}</span>}{today && <span className="todaybadge">Today</span>}</h3>
-        {done ? <span className="daytot">Done ✓</span>
+        {done ? <button className="daytot dayfold" aria-expanded={open} onClick={() => setOpen((o) => !o)}>Done ✓<ChevronDown size={16} aria-hidden className={open ? 'up' : ''} /></button>
           : <span className="daytot"><i className={'dot' + (d.inBand ? '' : ' amber')} />{d.protein}g protein · {d.kcal.toLocaleString('en-GB')} kcal</span>}
       </header>
-      {!done && d.meals.map((m, i) => (
+      {!collapsed && d.meals.map((m, i) => (
         <MealRow key={i} m={m} tick={ticks?.[`${index}:${i}`]} onTick={onTick ? () => onTick(`${index}:${i}`) : undefined} onOpen={onOpen ? () => onOpen(m.recipeId) : undefined}
           onSwap={onSwap && !ticks?.[`${index}:${i}`] ? () => onSwap(index, i) : undefined} isNew={newIds?.has(m.recipeId)} />
       ))}
-      {!done && d.topups.map((t) => (
+      {!collapsed && !done && d.topups.map((t) => (
         <div className="meal" key={t.n}>
           <span className="slot"><Plus size={14} aria-hidden />Top-up</span>
           <div className="mbody"><div className="mname">{t.n}</div>
             <div className="tags"><span className="p">P {t.p}g</span><span>{t.k} kcal</span><span className="adj">Added to hit your day</span></div></div>
         </div>
       ))}
-      {!done && d.reserved.kcal > 0 && <p className="muted reserved">{d.reserved.kcal} kcal and {d.reserved.protein}g protein kept for meals you sort yourself.</p>}
+      {!collapsed && !done && d.reserved.kcal > 0 && <p className="muted reserved">{d.reserved.kcal} kcal and {d.reserved.protein}g protein kept for meals you sort yourself.</p>}
     </section>
   );
 }
 
-export function ShoppingList({ shopping, have, onToggle }: { shopping: Shopping; have?: string[]; onToggle?: (key: string) => void }) {
+export function ShoppingList({ shopping, have, onToggle, want = [], onToggleCupboard }: { shopping: Shopping; have?: string[]; onToggle?: (key: string) => void; want?: string[]; onToggleCupboard?: (key: string) => void }) {
   return (
     <>
       {byAisle(shopping.lines).map(({ aisle, lines }) => (
@@ -105,12 +109,12 @@ export function ShoppingList({ shopping, have, onToggle }: { shopping: Shopping;
                       <svg viewBox="0 0 16 16" aria-hidden><path d="M3.5 8.5l3 3 6-7" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" /></svg>
                     </button>
                   )}
+                  {(() => { const Icon = ingredientIcon(l.name, l.category); return <span className="ing" aria-hidden><Icon size={20} /></span>; })()}
                   <div className="lbody">
                     <b>{l.name}{l.packs > 1 ? ` ×${l.packs}` : ''}</b>
                     {l.slug && (
                       <a className="shoplink" href={`https://groceries.morrisons.com/products/${l.slug}`} target="_blank" rel="noopener noreferrer" aria-label={`Open ${l.name} at Morrisons (opens in a new tab)`}>Morrisons ↗</a>
                     )}
-                    <div className="muted">{l.usedBy.slice(0, 3).join(', ')}</div>
                     {l.status && l.status !== 'ok' && <div className="flag">May be unavailable at the moment</div>}
                   </div>
                   <span className="price">{money(l.costPence)}</span>
@@ -120,24 +124,51 @@ export function ShoppingList({ shopping, have, onToggle }: { shopping: Shopping;
           </div>
         </div>
       ))}
+      {onToggleCupboard && !!shopping.cupboardItems?.length && (
+        <div>
+          <p className="group-title">Only If You&apos;re Out</p>
+          <div className="card list">
+            {shopping.cupboardItems.map((c) => {
+              const Icon = ingredientIcon(c.name, 'Tins, jars & sauces');
+              const on = want.includes(c.key);
+              return (
+                <div className="line" key={c.key}>
+                  <button className={'tick' + (on ? ' on' : '')} role="checkbox" aria-checked={on} aria-label={`Add ${c.name}`} onClick={() => onToggleCupboard(c.key)}>
+                    <svg viewBox="0 0 16 16" aria-hidden><path d="M3.5 8.5l3 3 6-7" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" /></svg>
+                  </button>
+                  <span className="ing" aria-hidden><Icon size={20} /></span>
+                  <div className="lbody"><b>{c.name}</b></div>
+                  {c.pricePence != null && <span className={'price' + (on ? '' : ' faint')}>{money(c.pricePence)}</span>}
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      )}
     </>
   );
 }
 
 /** Plain-text list for Save to Notes / share. Honest about prices being dated estimates. */
-export function listAsText(plan: Plan, have: string[], dated: string): string {
+export function listAsText(plan: Plan, have: string[], dated: string, want: string[] = []): string {
   const s = buildShopping(plan);
+  const picked = (s.cupboardItems ?? []).filter((c) => want.includes(c.key));
+  const rest = (s.cupboardItems ?? []).filter((c) => !want.includes(c.key));
   const groups = byAisle(s.lines.filter((l) => !have.includes(l.key)))
     .map((g) => `${g.aisle.toUpperCase()}\n${g.lines.map((l) => `☐ ${l.name}${l.packs > 1 ? ` ×${l.packs}` : ''} (≈ ${money(l.costPence)})`).join('\n')}`);
-  return `Table Plan shopping list\n${dated}\n\n${groups.join('\n\n')}\n\nStore cupboard (only if you're out):\n${s.cupboard.join('\n')}`;
+  if (picked.length) groups.push(`STORE CUPBOARD\n${picked.map((c) => `☐ ${c.name}${c.pricePence != null ? ` (≈ ${money(c.pricePence)})` : ''}`).join('\n')}`);
+  return `Table Plan shopping list\n${dated}\n\n${groups.join('\n\n')}\n\nOnly if you're out:\n${(s.cupboardItems ? rest.map((c) => c.text) : s.cupboard).join('\n')}`;
 }
 
-export function RecipeSheet({ id, onClose, portions, onNever }: { id: string | null; onClose: () => void; portions?: number; onNever?: (id: string) => void }) {
+/** Rating controls for a recipe sheet: whether it's liked now, and what the two actions do. */
+export interface RateControls { liked: boolean; onLike: (id: string) => void; onRemove: (id: string) => void }
+
+export function RecipeSheet({ id, onClose, portions, onNever, rating }: { id: string | null; onClose: () => void; portions?: number; onNever?: (id: string) => void; rating?: RateControls }) {
   const r = id ? recipeById.get(id) : undefined;
-  return r ? createPortal(<RecipeSheetBody key={r.id} r={r} onClose={onClose} portions={portions} onNever={onNever} />, document.body) : null;
+  return r ? createPortal(<RecipeSheetBody key={r.id} r={r} onClose={onClose} portions={portions} onNever={onNever} rating={rating} />, document.body) : null;
 }
 
-function RecipeSheetBody({ r, onClose, portions, onNever }: { r: NonNullable<ReturnType<typeof recipeById.get>>; onClose: () => void; portions?: number; onNever?: (id: string) => void }) {
+function RecipeSheetBody({ r, onClose, portions, onNever, rating }: { r: NonNullable<ReturnType<typeof recipeById.get>>; onClose: () => void; portions?: number; onNever?: (id: string) => void; rating?: RateControls }) {
   const [tab, setTab] = useState<'ingredients' | 'cook'>('ingredients');
   const [struck, setStruck] = useState<string[]>([]);
   const [asked, setAsked] = useState(false);
@@ -152,6 +183,12 @@ function RecipeSheetBody({ r, onClose, portions, onNever }: { r: NonNullable<Ret
         <div className="grab" />
         {r.img ? <MealImage r={r} size="sheet" sizes="(max-width: 430px) 100vw, 430px" /> : <div className="sheet-hero" aria-hidden>{r.e}</div>}
         <h2>{r.n}</h2>
+        {rating && (
+          <div className="ratebox" role="group" aria-label="Rate this meal">
+            <button className={'chip' + (rating.liked ? ' on' : '')} aria-pressed={rating.liked} onClick={() => rating.onLike(r.id)}><Heart size={14} aria-hidden />{rating.liked ? 'Liked' : 'Like It'}</button>
+            {rating.liked && <button className="chip" onClick={() => { rating.onRemove(r.id); onClose(); }}><X size={14} aria-hidden />Remove From Liked</button>}
+          </div>
+        )}
         <div className="rstats">
           {timeLabel(r.t) && <div className="rs" title="Estimated prep and cooking time"><Clock size={16} aria-hidden /><b>{timeLabel(r.t)!.replace('≈ ', '')}</b><small>Time</small></div>}
           {r.cost != null && <div className="rs" title="Cost of the ingredients used, per portion"><PoundSterling size={16} aria-hidden /><b>{money(r.cost)}</b><small>A portion</small></div>}

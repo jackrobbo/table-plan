@@ -1,5 +1,5 @@
 'use client';
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { createPortal } from 'react-dom';
 import { ListChecks, Monitor, Smartphone } from 'lucide-react';
 import Link from 'next/link';
@@ -12,7 +12,7 @@ import { basketItems, basketUrl, clearFill, extensionInstalled, fillOutcome, loa
  * "Checkout at Morrisons": hands the list to the Table Plan browser extension, which presses Add on each product in the
  * person's own Morrisons session. Without the extension we say so rather than showing a button that does nothing.
  */
-export default function BasketButton({ shopping, have }: { shopping: Shopping; have: string[] }) {
+export default function BasketButton({ shopping, have, onDone }: { shopping: Shopping; have: string[]; onDone?: () => void }) {
   const [installed, setInstalled] = useState(false);
   const [app, setApp] = useState(false);
   const [report, setReport] = useState<FillReport | null>(null);
@@ -21,18 +21,32 @@ export default function BasketButton({ shopping, have }: { shopping: Shopping; h
   useEffect(() => { setInstalled(extensionInstalled()); setApp(!!nativeMorrisons()); setReport(loadFill()); }, []);
   const items = basketItems(shopping, have);
   const url = basketUrl(items);
+  const packs = items.reduce((a, x) => a + x.q, 0);
+
+  // The pinned "Checkout With Morrisons" button lives in the page footer and asks us to start: fill the trolley with the app or
+  // extension when there is one, otherwise let the person choose how.
+  const run = () => {
+    if (!url) return;
+    if (app) { track('basket_fill_started', { items: items.length, packs, app: true }); void nativeMorrisons()?.open({ items }).then((r) => { if (r.results?.length) { saveFill(r); setReport(r); onDone?.(); } }).catch(() => undefined); }
+    else if (installed) { track('basket_fill_started', { items: items.length, packs }); window.open(url, '_blank', 'noopener'); onDone?.(); }
+    else setChoose(true);
+  };
+  const latest = useRef(run);
+  latest.current = run;
+  useEffect(() => {
+    const on = () => latest.current();
+    window.addEventListener('tp:checkout', on);
+    return () => window.removeEventListener('tp:checkout', on);
+  }, []);
+
   if (!url) return null;
   const outcome = report ? fillOutcome(shopping, have, report) : null;
-  const packs = items.reduce((a, x) => a + x.q, 0);
 
   if (app) {
     return (
-      <div className="card" id="checkout" style={{ marginTop: 12 }}>
-        <button className="btn" onClick={() => { track('basket_fill_started', { items: items.length, packs, app: true }); void nativeMorrisons()?.open({ items }).then((r) => { if (r.results?.length) { saveFill(r); setReport(r); } }).catch(() => undefined); }}>
-          Checkout at Morrisons
-        </button>
-        <button className="linkbtn" onClick={() => setShop(true)}>Or Shop Item by Item</button>
-        {shopping_ && <ShopMode shopping={shopping} have={outcome ? [...have, ...outcome.added.map((l) => l.key)] : have} onClose={() => setShop(false)} />}
+      <div id="checkout" style={{ marginTop: 4, textAlign: 'center' }}>
+        <button className="linkbtn" onClick={() => setShop(true)}>Shop Item by Item Instead</button>
+        {shopping_ && <ShopMode shopping={shopping} have={outcome ? [...have, ...outcome.added.map((l) => l.key)] : have} onClose={() => setShop(false)} onFinish={onDone} />}
         {outcome && (
           <div className="note" style={{ marginTop: 12 }} role="status">
             <b>Last fill: {outcome.added.length} of {outcome.added.length + outcome.todo.length} in your trolley.</b>
@@ -46,27 +60,19 @@ export default function BasketButton({ shopping, have }: { shopping: Shopping; h
             <button className="linkbtn" onClick={() => { clearFill(); setReport(null); }}>Clear</button>
           </div>
         )}
-        <p className="muted" style={{ margin: '8px 0 0' }}>Opens Morrisons inside the app and adds {items.length} item{items.length === 1 ? '' : 's'} ({packs} pack{packs === 1 ? '' : 's'}). Sign in to Morrisons there if you like, then pick your slot and check out.</p>
       </div>
     );
   }
   if (installed) {
     return (
-      <div className="card" id="checkout" style={{ marginTop: 12 }}>
-        <button className="btn" onClick={() => { track('basket_fill_started', { items: items.length, packs }); window.open(url, '_blank', 'noopener'); }}>
-          Checkout at Morrisons
-        </button>
-        <button className="linkbtn" onClick={() => setShop(true)}>Or Shop Item by Item</button>
-        {shopping_ && <ShopMode shopping={shopping} have={have} onClose={() => setShop(false)} />}
-        <p className="muted" style={{ margin: '8px 0 0' }}>Opens Morrisons and adds {items.length} item{items.length === 1 ? '' : 's'} ({packs} pack{packs === 1 ? '' : 's'}) for you. You pick the slot and check out.</p>
+      <div id="checkout" style={{ marginTop: 4, textAlign: 'center' }}>
+        <button className="linkbtn" onClick={() => setShop(true)}>Shop Item by Item Instead</button>
+        {shopping_ && <ShopMode shopping={shopping} have={have} onClose={() => setShop(false)} onFinish={onDone} />}
       </div>
     );
   }
   return (
-    <div className="card" id="checkout" style={{ marginTop: 12 }}>
-      <h3>Your Morrisons Shop</h3>
-      <p className="muted" style={{ margin: '4px 0 10px' }}>We add your list to a Morrisons trolley for you, then you pick a slot and pay at Morrisons.</p>
-      <button className="btn" onClick={() => setChoose(true)}>Checkout at Morrisons</button>
+    <div id="checkout">
       {choose && createPortal(
         <div className="sheet-wrap" onClick={() => setChoose(false)}>
           <div className="sheet" role="dialog" aria-label="Check out at Morrisons" onClick={(e) => e.stopPropagation()}>
@@ -81,7 +87,7 @@ export default function BasketButton({ shopping, have }: { shopping: Shopping; h
             <div className="sheet-foot"><button className="btn ghost" onClick={() => setChoose(false)}>Cancel</button></div>
           </div>
         </div>, document.body)}
-      {shopping_ && <ShopMode shopping={shopping} have={have} onClose={() => setShop(false)} />}
+      {shopping_ && <ShopMode shopping={shopping} have={have} onClose={() => setShop(false)} onFinish={onDone} />}
     </div>
   );
 }

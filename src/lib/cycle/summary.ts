@@ -12,6 +12,17 @@ export function dayCarbsFat(d: PlannedDay): { carbs: number; fat: number } {
   return { carbs: Math.round(carbs), fat: Math.round(fat) };
 }
 
+/** What a day's ticked-off meals have delivered so far (carbs and fat from the recipes, so a floor, as in dayCarbsFat). */
+export function dayEaten(d: PlannedDay, index: number, ticks: Record<string, boolean>): { kcal: number; protein: number; carbs: number; fat: number; eaten: number; meals: number } {
+  let kcal = 0, protein = 0, carbs = 0, fat = 0, eaten = 0;
+  d.meals.forEach((m, i) => {
+    if (!ticks[`${index}:${i}`]) return;
+    const r = byId.get(m.recipeId);
+    eaten += 1; kcal += m.kcal; protein += m.protein; carbs += (r?.cb ?? 0) * m.scale; fat += (r?.f ?? 0) * m.scale;
+  });
+  return { kcal: Math.round(kcal), protein: Math.round(protein), carbs: Math.round(carbs), fat: Math.round(fat), eaten, meals: d.meals.length };
+}
+
 /** The "Daily average" across the planned days: what the week delivers per day, to set against the target. */
 export function weekAverages(plan: Plan) {
   const days = plan.days.filter((d) => !d.off);

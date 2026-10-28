@@ -6,6 +6,8 @@ import {
 } from '@/lib/onboarding';
 import { computeTargets } from '@/lib/targets';
 import { ActivityStep, AgeStep, AllergiesStep, DislikesStep, GoalStep, HeightStep, MealsStep, SexStep, Title, WeightStep, type SP } from '@/components/profile-fields';
+import { Droplet, Drumstick, Flame, Wheat, type LucideIcon } from 'lucide-react';
+import CountUp from '@/components/CountUp';
 import TasteSwipe from '@/components/TasteSwipe';
 import Screen from '@/components/Screen';
 import { track } from '@/lib/analytics';
@@ -40,9 +42,10 @@ export default function Onboarding() {
           <button className="linkbtn accent" onClick={() => update((p) => advance({ ...setAllergies(p, []), noAllergies: true }))}>No One Has Allergies</button>
         )}
         {step === 'dislikes' && <button className="linkbtn" onClick={() => update((p) => advance({ ...p, dislikes: [] }))}>Skip, I Eat Anything</button>}
-        {skippable && (
-          <button className="linkbtn" onClick={() => update((p) => advance(skipStat(p, step as SkippableStep)))}>Prefer Not to Say</button>
-        )}
+        {skippable && (<>
+          <button className="btn ghost" onClick={() => update((p) => advance(skipStat(p, step as SkippableStep)))}>Skip This Question</button>
+          <p className="muted skipnote">Skipping uses a typical value, so your targets will be less precise. You can add it later.</p>
+        </>)}
       </>}>
       {hasBar && <p className="step">Step {stepIndex(step) + 1} of {BAR_STEPS}</p>}
 
@@ -64,6 +67,8 @@ export default function Onboarding() {
 /** The wireframe's segmented bar covers the eight question steps (goal → allergies). */
 const BAR_STEPS = 8;
 
+const MI = ({ I, c }: { I: LucideIcon; c: string }) => <span className={'mi ' + c} aria-hidden><I size={20} /></span>;
+
 function TargetStep({ p, update }: SP) {
   const t = computeTargets(p.goal ?? 'lose', p.stats);
   const hh = 1 + p.meals.dinner.extraServings;
@@ -71,9 +76,9 @@ function TargetStep({ p, update }: SP) {
     <>
       <Title sub={`Based on your goal and stats. Dinners cook for ${hh}.`}>Your Daily Target</Title>
       <div className="bignum">
-        <div><div className="n">~{t.target.toLocaleString('en-GB')}<small>kcal a day</small></div><div className="muted" style={{ margin: '4px 0 0' }}>band {t.band[0].toLocaleString('en-GB')}–{t.band[1].toLocaleString('en-GB')}</div></div>
-        <div><div className="n">≥{t.protein}g<small>protein a day</small></div></div>
-        <div className="pair"><div className="n">~{t.carbs}g<small>carbs</small></div><div className="n">~{t.fat}g<small>fat</small></div></div>
+        <div><div className="n m"><MI I={Flame} c="kcal" /><span><CountUp value={t.target} /><small>Calories a Day</small></span></div><div className="muted band" style={{ margin: '4px 0 0' }}>Band <CountUp value={t.band[0]} />–<CountUp value={t.band[1]} /></div></div>
+        <div><div className="n m"><MI I={Drumstick} c="protein" /><span><CountUp value={t.protein} delay={150} />g<small>Protein a Day, at Least</small></span></div></div>
+        <div className="pair"><div className="n m"><MI I={Wheat} c="carbs" /><span><CountUp value={t.carbs} delay={300} />g<small>Carbs</small></span></div><div className="n m"><MI I={Droplet} c="fat" /><span><CountUp value={t.fat} delay={400} />g<small>Fat</small></span></div></div>
       </div>
       {t.estimated && (
         <div className="estimate-flag"><b>This is a general estimate.</b> Without your height, weight, age and sex we can only use a typical number for your goal, so it may be too high or too low for you.

@@ -92,22 +92,26 @@
     host.style.cssText = native ? 'position:fixed;inset:0;z-index:2147483647;' : 'position:fixed;right:16px;bottom:16px;max-width:calc(100vw - 32px);z-index:2147483647;';
     root = host.attachShadow({ mode: 'open' });
     root.innerHTML = `<style>
-      .p{all:initial;display:block;box-sizing:border-box;width:min(320px,calc(100vw - 32px));max-height:70vh;overflow:auto;font:14px/1.4 system-ui,-apple-system,Segoe UI,sans-serif;color:#1d1d1f;background:#fff;border:1px solid #d8d8dc;border-radius:14px;box-shadow:0 8px 30px rgba(0,0,0,.22);padding:14px 16px}
-      h2{font-size:15px;margin:0 0 4px;display:flex;align-items:center;gap:8px}
-      .logo{display:inline-grid;place-items:center;width:20px;height:20px;border-radius:6px;background:#1c6b4a;color:#fff;font-size:12px;font-weight:700}
-      p{margin:4px 0}.m{color:#6b6b72;font-size:13px}
-      .bar{height:6px;border-radius:3px;background:#ececef;margin:10px 0 8px;overflow:hidden}.bar i{display:block;height:100%;background:#1c6b4a;transition:width .3s}
-      .row{display:flex;gap:8px;margin-top:10px}
-      button{all:initial;box-sizing:border-box;font:600 14px system-ui,sans-serif;padding:9px 14px;border-radius:9px;cursor:pointer;text-align:center;flex:1}
-      .go{background:#1c6b4a;color:#fff}.no{background:#ececef;color:#1d1d1f}
-      ul{list-style:none;margin:8px 0 0;padding:0;font-size:13px}li{padding:3px 0;display:flex;gap:6px}li b{flex:0 0 14px}
-      .p.full{width:100%;max-width:none;height:100%;max-height:none;border:0;border-radius:0;box-shadow:none;padding:24px 20px;display:flex;flex-direction:column;overflow:auto;font-size:16px}
-      .full .row{margin-top:auto;padding-top:16px}.full button{padding:14px 16px;font-size:16px}
-      .c{margin:auto 0;text-align:center}.c h2{justify-content:center;font-size:21px}
-      .spin{width:48px;height:48px;border:5px solid #ececef;border-top-color:#1c6b4a;border-radius:50%;animation:s 1s linear infinite;margin:0 auto 20px}@keyframes s{to{transform:rotate(1turn)}}
-      h3{font-size:14px;margin:16px 0 4px}li{align-items:flex-start}li .go{flex:0 0 auto;padding:6px 12px;font-size:13px}
-      .pill{all:initial;position:fixed;left:16px;bottom:16px;background:#1c6b4a;color:#fff;font:600 14px system-ui,sans-serif;padding:10px 16px;border-radius:99px;box-shadow:0 4px 16px rgba(0,0,0,.3);cursor:pointer}
-      .ok b{color:#1c6b4a}.warn b{color:#a15c00}.bad b{color:#b3261e}
+      :host{--ink:#141414;--ink2:#6b6b70;--card:rgba(255,255,255,.94);--line:rgba(0,0,0,.1);--fill:rgba(118,118,128,.14);--btn:#141414;--btn-ink:#fff;--ok:oklch(0.55 0.13 150);--warn:oklch(0.55 0.13 60);--bad:#c4361f;--track:rgba(118,118,128,.2);--shadow:0 12px 34px rgba(32,64,60,.18),0 1px 2px rgba(0,0,0,.08)}
+      @media (prefers-color-scheme:dark){:host{--ink:#f4f4f6;--ink2:#98989f;--card:rgba(34,40,42,.94);--line:rgba(255,255,255,.14);--fill:rgba(118,118,128,.3);--btn:#f4f4f6;--btn-ink:#141414;--ok:oklch(0.75 0.14 150);--warn:oklch(0.78 0.13 75);--bad:#ff7a66;--shadow:0 12px 34px rgba(0,0,0,.5),0 1px 2px rgba(0,0,0,.4)}}
+      .p{all:initial;display:block;box-sizing:border-box;width:min(340px,calc(100vw - 32px));max-height:70vh;overflow:auto;font:15px/1.4 -apple-system,BlinkMacSystemFont,'SF Pro Text','Helvetica Neue',Arial,system-ui,sans-serif;-webkit-font-smoothing:antialiased;color:var(--ink);background:var(--card);-webkit-backdrop-filter:blur(22px) saturate(180%);backdrop-filter:blur(22px) saturate(180%);box-shadow:inset 0 0 0 1px var(--line),var(--shadow);border-radius:18px;padding:16px}
+      h2{font-size:15px;font-weight:600;margin:0 0 8px;display:flex;align-items:center;gap:8px}
+      .logo{display:inline-grid;place-items:center;width:26px;height:26px;border-radius:7px;background:linear-gradient(160deg,#3a3d44,#0e0f12);color:#fff;font-size:13px;font-weight:800;box-shadow:inset 0 1px 0 rgba(255,255,255,.3),0 3px 8px rgba(10,20,20,.25)}
+      p{margin:4px 0}.m{color:var(--ink2);font-size:14px}b{font-weight:600}
+      .bar{height:6px;border-radius:99px;background:var(--track);margin:12px 0 10px;overflow:hidden}.bar i{display:block;height:100%;border-radius:99px;background:var(--ink);transition:width .3s}
+      .row{display:flex;gap:8px;margin-top:14px}
+      button{all:initial;box-sizing:border-box;font:600 16px -apple-system,BlinkMacSystemFont,'SF Pro Text',system-ui,sans-serif;min-height:48px;display:flex;align-items:center;justify-content:center;padding:0 16px;border-radius:14px;cursor:pointer;text-align:center;flex:1}
+      button:focus-visible{outline:3px solid var(--ok);outline-offset:2px}
+      .go{background:var(--btn);color:var(--btn-ink)}.no{background:var(--fill);color:var(--ink)}
+      ul{list-style:none;margin:8px 0 0;padding:0;font-size:14px}li{padding:6px 0;display:flex;gap:8px;border-top:1px solid var(--line)}li:first-child{border-top:0}li b{flex:0 0 14px}
+      .p.full{width:100%;max-width:none;height:100%;max-height:none;border-radius:0;box-shadow:none;padding:24px 20px;display:flex;flex-direction:column;overflow:auto;font-size:17px;background:var(--card)}
+      .full .row{margin-top:auto;padding-top:16px;padding-bottom:max(8px,env(safe-area-inset-bottom))}.full button{min-height:52px;font-size:17px}
+      .c{margin:auto 0;text-align:center}.c h2{justify-content:center;font-size:20px}
+      .spin{width:44px;height:44px;border:4px solid var(--track);border-top-color:var(--ink);border-radius:50%;animation:s 1s linear infinite;margin:0 auto 20px}@keyframes s{to{transform:rotate(1turn)}}
+      @media (prefers-reduced-motion:reduce){.spin{animation-duration:3s}.bar i{transition:none}}
+      h3{font-size:13px;font-weight:600;color:var(--ink2);margin:18px 0 4px}li{align-items:flex-start}li .go{flex:0 0 auto;min-height:34px;padding:0 14px;font-size:14px;border-radius:10px}
+      .pill{all:initial;position:fixed;left:16px;bottom:max(16px,env(safe-area-inset-bottom));background:var(--btn);color:var(--btn-ink);font:600 15px -apple-system,system-ui,sans-serif;padding:12px 18px;border-radius:99px;box-shadow:var(--shadow);cursor:pointer}
+      .ok b{color:var(--ok)}.warn b{color:var(--warn)}.bad b{color:var(--bad)}
     </style><div class="p" role="status" aria-live="polite"></div>`;
     document.documentElement.appendChild(host);
     return root;

@@ -5,6 +5,8 @@ import StatusBanner from '@/components/StatusBanner';
 import { useSignedIn } from '@/lib/useSignedIn';
 
 /** Focused flows keep the brand but drop the nav, so nobody wanders off mid-setup. */
+/** Signed in on these, the tab bar is the header, so the brand pill steps aside (keep in step with TabBar). */
+const TABBED = ['/plan', '/account', '/settings'];
 const FOCUSED = ['/signin', '/onboarding', '/plan/next', '/subscribe'];
 
 /** Site header: logo + BETA on the left, nav on the right. Nav follows sign-in state (re-read on every route change). */
@@ -16,6 +18,8 @@ export default function SiteHeader() {
   const link = (href: string, label: string) => (
     <Link href={href} className="hnav-link" aria-current={path === href || (href === '/plan' && path.startsWith('/plan')) ? 'page' : undefined}>{label}</Link>
   );
+
+  if (signedIn === true && TABBED.includes(path)) return <StatusBanner />;
 
   return (
     <>

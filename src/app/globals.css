@@ -97,7 +97,7 @@ input.text:focus{outline:2px solid var(--ok);}
 .swapbtn{flex:none; align-self:center; width:auto; min-height:0; padding:6px 10px; border:1px solid var(--line, #d8d8dc); border-radius:8px; background:transparent; color:var(--ink2); font-size:12px; font-weight:600; line-height:1; cursor:pointer;}
 .swapopt{display:flex; gap:12px; align-items:center; width:100%; text-align:left; padding:12px 0; border:0; border-bottom:1px solid var(--line, #e4e4e8); background:none; color:inherit; cursor:pointer; font:inherit;}
 .swapopt:last-of-type{border-bottom:0}
-.swapopt .mealimg{width:64px; height:48px; flex:none; border-radius:10px; font-size:26px;}
+.swapopt .mealimg,.swapopt .mealimg.thumb{width:64px; height:48px; flex:none; border-radius:10px; font-size:26px; margin:0;}
 .swapopt .emoji{width:64px; height:48px; flex:none; display:grid; place-items:center; font-size:28px; background:var(--fill); border-radius:10px;}
 .swapopt .sbody{flex:1; min-width:0}
 .swapopt .sname{font-weight:600}
@@ -338,8 +338,6 @@ ul.plain,ol.plain{margin:6px 0 10px; padding-left:20px; font-size:15px;} ul.plai
 .tab[aria-current="page"]{color:var(--ink); font-weight:600;}
 .tab:focus-visible{outline:3px solid var(--ok); outline-offset:-2px;}
 .tab .badge{position:absolute; top:3px; left:calc(50% + 6px); min-width:16px; height:16px; font-size:10px;}
-body[data-tabbar] .screen main{padding-bottom:calc(var(--tabbar-h) + 28px + env(safe-area-inset-bottom,0px));}
-body[data-tabbar] .cta-bar{bottom:calc(var(--tabbar-h) + env(safe-area-inset-bottom,0px));}
 
 /* ---- icons (Lucide): one weight everywhere ---- */
 svg.lucide{stroke-width:1.75; flex:none;}
@@ -375,6 +373,15 @@ html[data-navdir="back"] .fade{animation-name:slideInBack;}
 .badge.pop{animation:pop var(--dur-base) var(--ease-spring);}
 .sheet{animation-duration:var(--dur-base); animation-timing-function:var(--ease-spring);}
 .swapbtn{transition:transform var(--dur-press) var(--ease-out), background var(--dur-fast) ease;}
+
+/* exits: sheets slide down and fade (MotionLayer keeps them mounted briefly); the page eases out before an in-app link navigates */
+@keyframes fadeOut{to{opacity:0}}
+@keyframes slideDown{to{transform:translateY(32px); opacity:0}}
+@keyframes pageOut{to{opacity:0; transform:translateY(-6px)}}
+.sheet-wrap.out{animation:fadeOut .2s ease forwards; pointer-events:none;}
+.sheet-wrap.out .sheet{animation:slideDown .2s var(--ease-out) forwards;}
+html[data-leaving] .screen main,html[data-leaving] .cta-bar{animation:pageOut var(--dur-fast) ease forwards; pointer-events:none;}
+@media (prefers-reduced-motion:reduce){.sheet-wrap.out,.sheet-wrap.out .sheet,html[data-leaving] .screen main,html[data-leaving] .cta-bar{animation:none;}}
 
 /* ---- welcome page ---- */
 body:has(.welcome) .site-header{display:none;}   /* the page carries its own logo, and the buttons below cover sign-in */
@@ -528,3 +535,82 @@ a.opt{text-decoration:none; color:inherit;} a.opt .d{text-decoration:none;}
 /* breathing room under a heading that has no sentence below it (before the tabs or cards) */
 main .fade>h1{margin-bottom:16px;}
 html,body{overflow-x:clip;}
+
+.skipnote{margin:2px 0 0; text-align:center; font-size:13px;}
+
+/* macro icons beside the target numbers */
+.bignum .n.m{display:flex; align-items:center; gap:12px;}
+.bignum .pair .n.m{gap:8px;}
+.mi{flex:none; width:40px; height:40px; border-radius:12px; display:grid; place-items:center; background:var(--fill); color:var(--ink2);}
+.bignum .pair .mi{width:32px; height:32px; border-radius:10px;} .bignum .pair .mi svg{width:16px; height:16px;}
+/* same neutral tile as the goal options; only the glyph carries a hint of colour */
+.mi.kcal{color:oklch(0.72 0.15 55);} .mi.protein{color:var(--ok);} .mi.carbs{color:oklch(0.78 0.13 85);} .mi.fat{color:#6cc3ff;}
+.bignum .band{margin-left:50px !important;}
+
+/* bars grow in from the left on every load, staggered by row; the target tick fades in after */
+@keyframes barGrow{from{transform:scaleX(0)}}
+@keyframes tickIn{from{opacity:0}}
+.avgtrack i{transform-origin:left center; animation:barGrow .8s var(--ease-out) backwards; animation-delay:calc(var(--i,0) * 90ms + 120ms);}
+.avgtrack em{animation:tickIn .3s ease backwards; animation-delay:calc(var(--i,0) * 90ms + 700ms);}
+@media (prefers-reduced-motion:reduce){.avgtrack i,.avgtrack em{animation:none;}}
+
+/* a small glyph per ingredient, between the tick and the name */
+.line .ing{flex:none; width:36px; height:36px; border-radius:11px; display:grid; place-items:center; background:var(--fill); color:var(--ink2);}
+.line.got .ing{opacity:.4;}
+
+.line .price.faint{color:var(--ink2); font-weight:500;}
+
+/* one colour per macro, the same ones as the icons on the Daily Target screen */
+.avgrow{--mc:var(--ok);}
+.avgrow.m-protein{--mc:var(--ok);} .avgrow.m-carbs{--mc:oklch(0.8 0.14 85);} .avgrow.m-fat{--mc:#6cc3ff;} .avgrow.m-calories{--mc:oklch(0.74 0.16 55);}
+.avgtrack i,.avgtrack i.ok{background:var(--mc);}
+.avghead .mlabel{display:inline-flex; align-items:center; gap:8px;}
+.mdot{width:8px; height:8px; border-radius:50%; background:var(--mc); flex:none;}
+
+.viewlist{display:flex; margin:-4px 0 4px auto; min-height:32px; font-size:14px; text-decoration:underline; text-underline-offset:3px;}
+
+/* checkout overlay: tall, scrolls under a pinned footer */
+.sheet.checkout-sheet{max-height:94dvh; min-height:70dvh;}
+.checkout-sheet .cs-head{display:flex; align-items:center; justify-content:space-between; gap:12px;}
+.checkout-sheet .cs-head h2{margin:6px 0;}
+.cs-x{flex:none; width:36px; height:36px; border-radius:50%; border:0; background:var(--fill); color:var(--ink); display:grid; place-items:center; cursor:pointer;}
+
+/* recipes by day: a heading per day, that day's meals as cards under it */
+.rday .rgrid{margin:8px 0 6px;}
+.rday .rdate{color:var(--ink3); font-weight:500; text-transform:none; letter-spacing:0; margin-left:6px;}
+.rcard .rslot{font-size:11px; font-weight:600; letter-spacing:.06em; text-transform:uppercase; color:var(--ink2); margin-top:6px;}
+
+.avgbars h3 .avgsub{display:block; font-size:13px; font-weight:500; color:var(--ink2); margin-top:2px;}
+
+/* Menu as favourites: filter chips, and rating chips inside the recipe sheet */
+.menufilter{margin:4px 0 6px;}
+.ratebox{display:flex; gap:8px; flex-wrap:wrap; margin:6px 0 10px;}
+.ratebox .chip{display:inline-flex; align-items:center; gap:6px;}
+
+/* a finished day: the "Done" label is a button that folds the day open and shut */
+.dayfold{display:inline-flex; align-items:center; gap:6px; background:none; border:0; padding:4px 0 4px 8px; color:var(--ink2); font:inherit; font-size:15px; cursor:pointer;}
+.dayfold svg{transition:transform var(--dur-base,.26s) var(--ease-spring,ease);} .dayfold svg.up{transform:rotate(180deg);}
+.daycard.done .meal{opacity:.7;}
+
+/* editable meals on the plan-next-week setup step */
+.setupmeal .top{display:flex; align-items:center; justify-content:space-between; gap:10px;}
+.setupmeal .extra{display:flex; justify-content:space-between; align-items:center; margin-top:10px; color:var(--ink2); font-size:14px;}
+
+/* swipe cards: a flag for meals from earlier weeks, and the "gone off it" link */
+.cardbadge{position:absolute; top:12px; left:12px; z-index:3; padding:4px 10px; border-radius:999px; font-size:12px; font-weight:600; color:#1c1300; background:oklch(0.82 0.13 80); box-shadow:0 2px 8px rgba(0,0,0,.3);}
+.goneoff{display:flex; margin:2px auto 0;}
+
+.guidenote{margin:-6px 0 12px; font-size:13px;}
+
+.tastecount{margin:0 0 8px; font-size:13px; text-align:center;}
+
+/* meal-type tag on swipe cards: a clear pill with the meal's icon, not small grey caps */
+.swipecard .kindchip{display:inline-flex; align-items:center; gap:6px; padding:5px 12px; border-radius:999px; margin-bottom:6px;
+  font-size:14px; font-weight:700; letter-spacing:.02em; color:#fff; background:rgba(255,255,255,.2);
+  -webkit-backdrop-filter:blur(10px); backdrop-filter:blur(10px); box-shadow:inset 0 0 0 1px rgba(255,255,255,.28);}
+
+/* price tiers, colour-coded wherever a cost shows: low green, medium amber, high coral */
+.tier{--tc:var(--ink2);}
+.tier-low{--tc:oklch(0.72 0.14 150);} .tier-medium{--tc:oklch(0.8 0.14 85);} .tier-high{--tc:oklch(0.7 0.18 30);}
+.tags .tier,.swipecard .tags .tier{color:var(--tc); background:color-mix(in srgb,var(--tc) 22%,rgba(0,0,0,.35)); box-shadow:inset 0 0 0 1px color-mix(in srgb,var(--tc) 55%,transparent); font-weight:600;}
+.mmeta .tier{color:var(--tc); font-weight:600;}

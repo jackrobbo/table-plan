@@ -6,6 +6,9 @@ export const BUDGET_LABEL: Record<Budget, string> = { low: '£ Low', medium: '£
 /** £ / ££ / £££ marker for a meal's cost tier ('' for macros-only meals, which have none). */
 export const tierMark = (b: Budget | null | undefined) => (b === 'low' ? '£' : b === 'medium' ? '££' : b === 'high' ? '£££' : '');
 
+/** CSS class for a meal's cost tier: low is green, medium amber, high coral. */
+export const tierClass = (b: Budget | null | undefined) => (b ? `tier tier-${b}` : '');
+
 const pounds = (pence: number) => `£${(pence / 100).toFixed(2)}`;
 
 /** What each spend setting means, in the same per-portion numbers the meal tiers are built from. */

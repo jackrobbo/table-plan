@@ -17,6 +17,8 @@ export interface Week {
   picks: string[];
   /** Ingredient keys the user has unticked on the list (already have it). */
   haveAlready: string[];
+  /** Store-cupboard staples the person chose to buy this week (they start unticked). */
+  wantCupboard?: string[];
   /** Tick marks: `${dayIndex}:${mealIndex}` → eaten. */
   ticks: Record<string, boolean>;
   checkout?: 'notes' | 'basket';

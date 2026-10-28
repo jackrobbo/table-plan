@@ -16,6 +16,7 @@ Empty Supabase vars give the mock backend (localStorage), so no keys are needed.
 - Android app 1.2 (Capacitor, `android-app/`, build with `npm run android:build`, needs JDK 17+ and the Android SDK). It loads the live site and has a native Morrisons screen that runs `extension/morrisons.js` and reports results back (`src/lib/basket.ts`, `src/components/BasketButton.tsx`). Download page `/app`.
 - Chrome extension: `extension/`, zip at `public/extension/`.
 - Prices: `content/prices.json`, refreshed 25 Oct. A cloud scheduled task (`trig_01UvGSSpDU4wTeAVQR2AFWrU`, Sundays 04:17 UTC) refreshes and pushes to `main`; Morrisons blocks GitHub's servers, so it must run from there or a home connection.
+- Plan screen flow (28 Oct): no tabs until checkout; checkout is an overlay list shared with Plan next week and the Upcoming card (`src/components/ListStep.tsx`); after copy / trolley fill the tabs become Plan | Recipes | Ingredients and the week is in its eating window (ticks, no swaps, Today's Progress). The Menu tab is the favourites page. New week/profile fields (`wantCupboard`, `checkout`, `reminders.asked`) live in the existing jsonb columns, so no migration. Details and follow-ups in `design/todo.md`.
 - Screen review page with per-screen comments: https://claude.ai/artifact/QzQfFvf4tTxxME9pQ2AHb4 (comments live in its `feedback` collection).
 
 ## Known small issues

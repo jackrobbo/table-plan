@@ -5,11 +5,11 @@ import { Clock } from 'lucide-react';
 import { timeLabel } from '@/lib/cookTime';
 import MealImage from '@/components/MealImage';
 import { money, recipeById } from '@/components/week';
-import { tierMark } from '@/lib/budget';
+import { tierClass, tierMark } from '@/lib/budget';
 import { swapOptions } from '@/lib/planner/swap';
 import type { Plan, PlanInput } from '@/lib/planner/types';
 
-const SLOT: Record<string, string> = { breakfast: 'breakfast', lunch: 'lunch', snack: 'snack', dinner: 'dinner' };
+const SLOT: Record<string, string> = { breakfast: 'Breakfast', lunch: 'Lunch', snack: 'Snack', dinner: 'Dinner' };
 const signed = (n: number, unit: string) => `${n > 0 ? '+' : n < 0 ? '−' : '±'}${Math.abs(n)}${unit}`;
 
 /** "Swap Monday lunch": same-course alternatives, each showing what it does to the day (and the week's shop) before you choose. */
@@ -24,6 +24,12 @@ export default function SwapSheet({ plan, target, input, onPick, onClose }: {
     const sorted = filter === 'cheaper' ? [...pool].sort((a, b) => inBand(a) - inBand(b) || a.dWeekPence - b.dWeekPence) : pool;
     return sorted.slice(0, 6);
   }, [all, filter]);
+  // The swap that moves the day's protein and calories least (protein weighted heavier, as the planner does), among those that keep the day in band.
+  const closestId = useMemo(() => {
+    const dist = (o: (typeof all)[number]) => Math.abs(o.dProtein) * 3 + Math.abs(o.dKcal) * 0.5;
+    const pool = all.filter((o) => o.day.inBand);
+    return pool.length ? pool.reduce((a, b) => (dist(b) < dist(a) ? b : a)).recipe.id : null;
+  }, [all]);
   if (!target) return null;
   const day = plan.days[target.day];
   const cur = day?.meals[target.meal];
@@ -45,14 +51,14 @@ export default function SwapSheet({ plan, target, input, onPick, onClose }: {
         {options.map((o) => {
           const wk = Math.abs(o.dWeekPence) >= 5 ? ` · week ${o.dWeekPence > 0 ? '+' : '−'}${money(Math.abs(o.dWeekPence))}` : '';
           return (
-            <button key={o.recipe.id} className="swapopt" onClick={() => onPick(o.recipe.id)}>
+            <button key={o.recipe.id} className={'swapopt' + (o.recipe.id === closestId ? ' best' : '')} onClick={() => onPick(o.recipe.id)}>
               {o.recipe.img ? <MealImage r={o.recipe} size="thumb" sizes="64px" /> : <span className="emoji">{o.recipe.e}</span>}
               <span className="sbody">
-                <span className="sname">{o.recipe.n}</span>
+                <span className="sname">{o.recipe.n}{o.recipe.id === closestId && <span className="besttag">Closest Match</span>}</span>
                 <span className="tags" style={{ margin: '4px 0 2px' }}>
                   <span className="p">P {o.recipe.p}g</span><span>{o.recipe.k} kcal</span>
                   {timeLabel(o.recipe.t) && <span className="time"><Clock size={11} aria-hidden />{timeLabel(o.recipe.t)}</span>}
-                  {o.recipe.cost != null && <span>≈ {money(o.recipe.cost)} · {tierMark(o.recipe.b)}</span>}
+                  {o.recipe.cost != null && <span className={tierClass(o.recipe.b)}>≈ {money(o.recipe.cost)} · {tierMark(o.recipe.b)}</span>}
                   {!o.liked && <span>New for You</span>}
                   {!o.withinSpend && <span className="adj">Over your spend</span>}
                 </span>

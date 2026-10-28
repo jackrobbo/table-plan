@@ -40,7 +40,8 @@ export interface Profile {
   /** When the person agreed to our use of their health information and to the terms, and which version they agreed to. Null until they do. */
   consent: { health: string; terms: string; version: string } | null;
   /** Reminder opt-in, and which nudges have already been shown (`${week}:${kind}`). */
-  reminders: { on: boolean; shown: string[] };
+  /** `asked`: the post-save reminders prompt has been answered (either way), so it isn't shown again. */
+  reminders: { on: boolean; shown: string[]; asked?: boolean };
 }
 
 export const emptyProfile = (): Profile => ({

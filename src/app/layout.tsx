@@ -5,6 +5,7 @@ import './glass.css';
 import ErrorReporter from '@/components/ErrorReporter';
 import { PwaInit } from '@/components/InstallSheet';
 import SiteHeader from '@/components/SiteHeader';
+import MotionLayer from '@/components/MotionLayer';
 import TabBar from '@/components/TabBar';
 import { Suspense } from 'react';
 
@@ -22,7 +23,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
   await connection();
   return (
     <html lang="en-GB" suppressHydrationWarning>
-      <body><PwaInit /><ErrorReporter /><SiteHeader />{children}<Suspense fallback={null}><TabBar /></Suspense></body>
+      <body><PwaInit /><ErrorReporter /><MotionLayer /><SiteHeader /><Suspense fallback={null}><TabBar /></Suspense>{children}</body>
     </html>
   );
 }

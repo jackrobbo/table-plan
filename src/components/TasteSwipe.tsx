@@ -1,6 +1,7 @@
 'use client';
 import { useEffect, useRef, useState } from 'react';
-import { Check, Clock, Heart, X } from 'lucide-react';
+import { Check, Clock, Coffee, Heart, Sandwich, Utensils, X, type LucideIcon } from 'lucide-react';
+import { tierClass, tierMark } from '@/lib/budget';
 import { safeRecipes } from '@/lib/allergens';
 import { timeLabel } from '@/lib/cookTime';
 import { MIN_LIKES, swipe, swipeCourses, tasteDeck, tasteProgress } from '@/lib/onboarding';
@@ -13,10 +14,11 @@ import { Title, type SP } from '@/components/profile-fields';
 const LABEL: Record<MealTime, string> = { breakfast: 'Breakfast', lunch: 'Lunch', dinner: 'Dinner' };
 const PLURAL: Record<MealTime, string> = { breakfast: 'breakfasts', lunch: 'lunches', dinner: 'dinners' };
 const cap = (s: string) => s[0].toUpperCase() + s.slice(1);
+const KIND_ICON: Record<string, LucideIcon> = { breakfast: Coffee, lunch: Sandwich, dinner: Utensils };
 const FLING_AT = 90;   // px of drag that counts as a decision
 
 /** One card. Drag it left (skip) or right (keep), or use the buttons; either way it flies off before the next one comes up. */
-function SwipeCard({ r, kind, command, onDecide }: { r: Recipe; kind: string; command: 'keep' | 'skip' | null; onDecide: (keep: boolean) => void }) {
+export function SwipeCard({ r, kind, command, onDecide, badge }: { r: Recipe; kind: string; command: 'keep' | 'skip' | null; onDecide: (keep: boolean) => void; badge?: string }) {
   const [dx, setDx] = useState(0);
   const [gone, setGone] = useState<0 | 1 | -1>(0);
   const [dragging, setDragging] = useState(false);
@@ -49,16 +51,17 @@ function SwipeCard({ r, kind, command, onDecide }: { r: Recipe; kind: string; co
       onPointerCancel={() => { start.current = null; setDragging(false); setDx(0); }}
     >
       {r.img ? <MealImage r={r} size="hero" sizes="(max-width: 430px) 100vw, 430px" /> : <div className="photo" aria-hidden>{r.e}</div>}
+      {badge && <span className="cardbadge">{badge}</span>}
       <span className="stamp keep" style={{ opacity: keepAmt }}>Keep</span>
       <span className="stamp skip" style={{ opacity: skipAmt }}>Skip</span>
       <div className="body">
-        <span className="kind">{kind}</span>
+        {(() => { const Icon = KIND_ICON[kind.toLowerCase()]; return <span className="kindchip">{Icon && <Icon size={15} aria-hidden />}{kind}</span>; })()}
         <h3>{r.n}</h3>
         <div className="tags">
           <span className="p">P {r.p}g</span><span>{r.k} kcal</span>
           {timeLabel(r.t) && <span className="time" title="Estimated prep and cooking time"><Clock size={11} aria-hidden />{timeLabel(r.t)}</span>}
-          {r.cost != null && <span title="Estimated cost of one portion">≈ {money(r.cost)} a portion</span>}
-          {r.serves > 1 && <span>serves {r.serves}</span>}
+          {r.cost != null && <span className={tierClass(r.b)} title="Estimated cost of one portion">≈ {money(r.cost)} A Portion{tierMark(r.b) && ` · ${tierMark(r.b)}`}</span>}
+          {r.serves > 1 && <span>Serves {r.serves}</span>}
         </div>
       </div>
     </div>
