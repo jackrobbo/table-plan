@@ -83,8 +83,8 @@ body::before{content:''; position:fixed; inset:0; z-index:-1; pointer-events:non
 .cta-bar{background:none; isolation:isolate;}
 .cta-bar::before{content:''; position:absolute; inset:0; z-index:-1; pointer-events:none;
   -webkit-backdrop-filter:blur(16px) saturate(160%); backdrop-filter:blur(16px) saturate(160%);
-  background:linear-gradient(to bottom,transparent,color-mix(in srgb,var(--bg) 55%,transparent));
-  -webkit-mask-image:linear-gradient(to bottom,transparent,#000 40%); mask-image:linear-gradient(to bottom,transparent,#000 40%);}
+  background:linear-gradient(to bottom,transparent,color-mix(in srgb,var(--bg) 88%,transparent) 55%);
+  -webkit-mask-image:linear-gradient(to bottom,transparent,#000 30%); mask-image:linear-gradient(to bottom,transparent,#000 30%);}
 
 /* sheets */
 .sheet-wrap{background:rgba(16,28,28,.30); -webkit-backdrop-filter:blur(6px); backdrop-filter:blur(6px);}
