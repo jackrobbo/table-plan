@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from 'next';
 import { connection } from 'next/server';
 import './globals.css';
+import './glass.css';
 import ErrorReporter from '@/components/ErrorReporter';
 import { PwaInit } from '@/components/InstallSheet';
 import SiteHeader from '@/components/SiteHeader';
