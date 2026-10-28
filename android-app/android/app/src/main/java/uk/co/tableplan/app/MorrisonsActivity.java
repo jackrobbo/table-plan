@@ -4,6 +4,7 @@ import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.content.res.Configuration;
 import android.graphics.Color;
 import android.net.Uri;
 import android.os.Bundle;
@@ -51,20 +52,25 @@ public class MorrisonsActivity extends Activity {
 
         LinearLayout root = new LinearLayout(this);
         root.setOrientation(LinearLayout.VERTICAL);
-        root.setBackgroundColor(Color.WHITE);
+        // Match the app's own look: near-black in dark mode, the soft grey of the app in light mode.
+        final boolean night = (getResources().getConfiguration().uiMode & Configuration.UI_MODE_NIGHT_MASK) == Configuration.UI_MODE_NIGHT_YES;
+        final int pageBg = night ? Color.BLACK : Color.parseColor("#f2f2f6");
+        final int ink = night ? Color.parseColor("#f4f4f6") : Color.parseColor("#141414");
+        root.setBackgroundColor(pageBg);
         float d = getResources().getDisplayMetrics().density;
-        // The back header: the whole green bar is one big tap target.
+        // The back header: the whole bar is one big tap target.
         TextView bar = new TextView(this);
         bar.setText("\u2039  Back to Table Plan");
-        bar.setTextColor(Color.WHITE);
-        bar.setTextSize(18);
+        bar.setTextColor(ink);
+        bar.setTextSize(17);
         bar.setTypeface(null, android.graphics.Typeface.BOLD);
         bar.setGravity(Gravity.CENTER_VERTICAL);
-        bar.setBackgroundColor(Color.parseColor("#1c6b4a"));
+        bar.setBackgroundColor(night ? Color.parseColor("#1c1c1e") : Color.WHITE);
         final int barPad = (int) (16 * d);
         bar.setPadding(barPad, barPad, barPad, barPad);
         bar.setOnClickListener(v -> finish());
         web = new WebView(this);
+        web.setBackgroundColor(pageBg);
         root.addView(bar, new LinearLayout.LayoutParams(-1, -2));
         root.addView(web, new LinearLayout.LayoutParams(-1, 0, 1f));
         setContentView(root);
@@ -75,7 +81,7 @@ public class MorrisonsActivity extends Activity {
             v.setPadding(0, 0, 0, sb.bottom);
             return insets;
         });
-        WindowCompat.getInsetsController(getWindow(), root).setAppearanceLightStatusBars(false);
+        WindowCompat.getInsetsController(getWindow(), root).setAppearanceLightStatusBars(!night);
 
         WebSettings s = web.getSettings();
         s.setJavaScriptEnabled(true);
