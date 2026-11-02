@@ -80,9 +80,23 @@ export function getSignupStore(): SignupStore | null {
     async createUser(email) {
       const { error } = await sb.auth.admin.createUser({ email, email_confirm: true });
       if (!error) return 'created';
-      return error.code === 'email_exists' || /already (been )?registered/i.test(error.message) ? 'exists' : 'failed';
+      if (!(error.code === 'email_exists' || /already (been )?registered/i.test(error.message))) return 'failed';
+      await confirmExisting(sb, email);
+      return 'exists';
     },
   };
+}
+
+/**
+ * An account started under the old open sign-up and never confirmed can't be sent a sign-in code now that Supabase's public sign-up is
+ * off (it is treated as a sign-up). Confirming it here is safe: the code still goes to the inbox, so only its owner gets in.
+ */
+async function confirmExisting(sb: SupabaseClient, email: string): Promise<void> {
+  try {
+    const { data } = await sb.auth.admin.generateLink({ type: 'magiclink', email });
+    const user = data?.user;
+    if (user && !user.email_confirmed_at) await sb.auth.admin.updateUserById(user.id, { email_confirm: true });
+  } catch { /* the sign-in code step reports a real problem */ }
 }
 
 export async function saveFeedback(user: ServerUser | null, msg: { message: string; page: string }): Promise<boolean> {
