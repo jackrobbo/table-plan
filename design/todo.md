@@ -5,7 +5,7 @@ Replaces `design/tomorrow.md` (kept for the detailed security steps). **[JACK]**
 Where we are: free beta live at https://table-plan.co.uk (open sign-up, no paywall). Android app 1.2 at `/app` fills a Morrisons trolley and reports back what went in and what is still to add. Prices refreshed 25 Oct.
 
 ## Jack: launch blockers
-- [ ] **[JACK] Zoho Mail on table-plan.co.uk**: verify domain (TXT), MX (`mx.zoho.eu` 10, `mx2.zoho.eu` 20, `mx3.zoho.eu` 50), SPF `v=spf1 include:zoho.eu ~all`, DKIM (`zoho._domainkey`), DMARC (`_dmarc`, start `p=none`). Tell Claude when done; Claude checks the records and mail-tester score.
+- [x] **[JACK] Domain email (2 Nov)**: Zoho is no longer free, so instead: Porkbun forwards `hello@table-plan.co.uk` to `emails.tableplan.app@gmail.com` (tested, works); Resend verified for `table-plan.co.uk` (Ireland) with Gmail "Send mail as" through `smtp.resend.com` (key `gmail-send-as`, sending access, this domain only); `hello@` is the default sender. Still to do: send a test and check SPF/DKIM/DMARC PASS in "Show original"; rename the sender to Table Plan (optional). Porkbun trial inbox expires 9 Nov (unused). Contact email in the app defaults to `hello@table-plan.co.uk` (uncommitted; a `NEXT_PUBLIC_CONTACT_EMAIL` set in Vercel would override it) and the extension matches `table-plan.co.uk` (reload the extension).
 - [ ] **[JACK] Resend (or similar) sender for sign-in codes**: free account, add domain, add its DNS records at Porkbun, give Supabase the SMTP details (Claude walks through). Supabase's built-in sender allows only a few emails an hour.
 - [ ] **[JACK] Supabase**: Authentication → URL Configuration (Site URL `https://table-plan.co.uk`, redirect `https://table-plan.co.uk/**`); turn off "Allow new users to sign up"; shorten email code expiry to 10 minutes.
 - [ ] **[JACK] Sign-in code: 6 digits, not 8** (Jack: easier to remember). Supabase → Authentication → Sign In / Providers → Email → "Email OTP Length" → 6. Then **[CLAUDE]** set `NEXT_PUBLIC_OTP_LENGTH=6` in Vercel (or change the default in `src/app/signin/page.tsx`, line 13) and redeploy; do both together or sign-in breaks (the screen waits for 8 digits, Supabase sends 6). The mock backend already uses 6.
@@ -60,6 +60,19 @@ Where we are: free beta live at https://table-plan.co.uk (open sign-up, no paywa
 - [ ] **[CLAUDE] Sign-up CAPTCHA** once the Turnstile key is in.
 - [ ] **[CLAUDE] Draft outreach emails** to Samsung Food and Morrisons.
 - [ ] **[CLAUDE] Later**: meal-photo brief, Sentry alerts, recipe catalogue from the database, iPhone app (needs a Mac and a $99/yr Apple account).
+
+## Added 2 Nov: prices and suppliers
+Morrisons now blocks scripted product-page requests (HTTP 403, new since 25 Oct), so the weekly refresh cannot run; prices stay at 25 Oct and the app says they may be out of date. We do not work round the block. The weekly routine (`trig_01UvGSSpDU4wTeAVQR2AFWrU`) has also never had push access.
+- [ ] **[JACK] Send the three emails** in `design/outreach-emails.md` (Hobnight, Yappman, Morrisons), after Zoho is live so they come from the domain. Ask Hobnight for an API key in the same email.
+- [ ] **[JACK] Tesco affiliate application on Awin**; check whether Morrisons and Asda have affiliate programmes.
+- [ ] **[JACK] Download the Yappman free CSV** so Claude can measure ingredient coverage (`npm run match -- suggest --store tesco --input <file>`).
+- [ ] **[JACK] Test the new Android APK** (uninstall the old app first; the signing key changed). Decide whether to store a fixed signing key as a GitHub secret.
+- [ ] **[JACK] Decide the exposure reducers**: text instead of the Morrisons logo, an "independent, not affiliated" line, a remote kill switch.
+- [ ] **[JACK] Price routine**: add `jackrobbo/table-plan` as a source (so it can push) or pause it.
+- [ ] **[JACK] Solicitor**: read Morrisons and Tesco terms alongside the `/privacy` and `/terms` review.
+- [ ] **[CLAUDE] Top-20 price list** for a manual check: the products that move plan cost most, with stored price and link; Jack checks them and Claude updates `content/prices.json`.
+- [ ] **[CLAUDE] Price importer** for a licensed file: build only once a sample file and licence exist (format and match key unknown until then).
+- [ ] **[CLAUDE] Tesco matching** once a price source is chosen.
 
 ## Multi-store note
 Full research and plan: `design/multi-store-research.md` (28 Oct). Headline: no official APIs; Tesco, Asda, Sainsbury's and Ocado return 403 to our scripts; start with the store-neutral model, then a second store via affiliate feed or a paid price source (legal read first).

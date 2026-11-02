@@ -23,6 +23,8 @@
     },
     {
       "matches": [
+        "https://table-plan.co.uk/*",
+        "https://www.table-plan.co.uk/*",
         "https://table-plan-app.vercel.app/*",
         "https://table-plan-app-jack-betmateapps-projects.vercel.app/*",
         "http://localhost:3000/*"
