@@ -9,8 +9,8 @@ import { normaliseCode } from '@/lib/beta/invites';
 import { track } from '@/lib/analytics';
 
 const RESEND_SECONDS = 30;
-/** Must match Supabase's "Email OTP Length" setting (currently 8). The mock backend uses 6. */
-const OTP_LENGTH = isMocked ? 6 : Number(process.env.NEXT_PUBLIC_OTP_LENGTH) || 8;
+/** Must match Supabase's "Email OTP Length" setting (currently 6). The mock backend uses 6. */
+const OTP_LENGTH = isMocked ? 6 : Number(process.env.NEXT_PUBLIC_OTP_LENGTH) || 6;
 
 export default function SignIn() {
   const router = useRouter();
