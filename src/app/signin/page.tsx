@@ -118,6 +118,7 @@ export default function SignIn() {
             </button>
             <button className="linkbtn" onClick={back}>Wrong Email?</button>
           </div>
+          <p className="muted" style={{ marginTop: 12 }}>Can&apos;t see it? Check your junk or spam folder. It comes from hello@table-plan.co.uk.</p>
         </>
       )}
       {isMocked && <p className="mock">Dev mode: no email is sent. Use code <b>{MOCK_CODE}</b>.</p>}
