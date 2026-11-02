@@ -61,7 +61,7 @@ export default function InstallSheet({ when, delayMs = 900 }: { when: boolean; d
       <div className="sheet install" role="dialog" aria-modal="true" aria-labelledby="install-title" onClick={(e) => e.stopPropagation()}>
         <div className="grab" />
         <div className="install-head">
-          <div className="logo" aria-hidden>T</div>
+          <img className="logo" src="/brand/table-plan-icon.svg" alt="" aria-hidden />
           <div>
             <h2 id="install-title" style={{ fontSize: 22 }}>Add Table Plan to Your Home Screen</h2>
             <p className="muted" style={{ margin: '4px 0 0' }}>Open your week like an app: full screen, one tap away, with your shopping list ready in the shop.</p>

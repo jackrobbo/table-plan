@@ -63,8 +63,8 @@ Where we are: free beta live at https://table-plan.co.uk (open sign-up, no paywa
 
 ## Added 2 Nov: prices and suppliers
 Morrisons now blocks scripted product-page requests (HTTP 403, new since 25 Oct), so the weekly refresh cannot run; prices stay at 25 Oct and the app says they may be out of date. We do not work round the block. The weekly routine (`trig_01UvGSSpDU4wTeAVQR2AFWrU`) has also never had push access.
-- [ ] **[JACK] Send the three emails** in `design/outreach-emails.md` (Hobnight, Yappman, Morrisons), after Zoho is live so they come from the domain. Ask Hobnight for an API key in the same email.
-- [ ] **[JACK] Tesco affiliate application on Awin**; check whether Morrisons and Asda have affiliate programmes.
+- [ ] **[JACK] Send the three emails** in `design/outreach-emails.md` (Hobnight, Yappman, Morrisons), after Zoho is live so they come from the domain. Ask Hobnight for an API key in the same email. **Yappman sent 2 Nov 21:21; Hobnight request sent 2 Nov (key request, then licence questions by email)** from hello@ to info@yappman.com (subject "Licensing question about your UK supermarket data"); chase around 9 Nov if no reply. Hobnight is a web form at hobnight.com/access (not an email). No public Morrisons partnerships address found: try Awin first, or a named LinkedIn contact.
+- [ ] **[JACK] Tesco affiliate application on Awin**; check whether Morrisons and Asda have affiliate programmes. **Awin publisher account approved 2 Nov (Editorial Content, table-plan.co.uk).** Next: search the programme directory for Tesco, Morrisons, Asda, Sainsbury's, Ocado and apply to each that is open.
 - [ ] **[JACK] Download the Yappman free CSV** so Claude can measure ingredient coverage (`npm run match -- suggest --store tesco --input <file>`).
 - [ ] **[JACK] Test the new Android APK** (uninstall the old app first; the signing key changed). Decide whether to store a fixed signing key as a GitHub secret.
 - [ ] **[JACK] Decide the exposure reducers**: text instead of the Morrisons logo, an "independent, not affiliated" line, a remote kill switch.
@@ -73,6 +73,10 @@ Morrisons now blocks scripted product-page requests (HTTP 403, new since 25 Oct)
 - [ ] **[CLAUDE] Top-20 price list** for a manual check: the products that move plan cost most, with stored price and link; Jack checks them and Claude updates `content/prices.json`.
 - [ ] **[CLAUDE] Price importer** for a licensed file: build only once a sample file and licence exist (format and match key unknown until then).
 - [ ] **[CLAUDE] Tesco matching** once a price source is chosen.
+
+## Brand (2 Nov)
+- [x] **[CLAUDE] New logo** (Jack): a glass "T" that is a table, with a gradient-ring plate on top, in the site's glass palette. Sources of truth are the SVGs in `public/brand/` (`table-plan-icon.svg` full-bleed 1024, `table-plan-mark.svg` transparent mark); PNGs are generated from the icon SVG. Applied to `public/icons/*`, `extension/icons/*`, Android launcher icons (adaptive foreground at 88% so masks keep it in the safe zone, background `#05090A`) and the "T" tile on the welcome screen, header and install sheet. Not done: Android splash image; a new APK is needed to see the launcher icon (reload the Chrome extension for its icon). The Figma copy lives on a "Table Plan Logo" page in the Tote / HKJC file and can be deleted.
+- [ ] **[JACK]** Upload `public/brand/table-plan-icon.svg` (or a 1024 PNG of it) as the Awin profile picture.
 
 ## Multi-store note
 Full research and plan: `design/multi-store-research.md` (28 Oct). Headline: no official APIs; Tesco, Asda, Sainsbury's and Ocado return 403 to our scripts; start with the store-neutral model, then a second store via affiliate feed or a paid price source (legal read first).

@@ -18,7 +18,7 @@ export default function Welcome() {
     </>}>
       <div className="welcome">
         <div className="brandblock">
-          <span className="logo lg" aria-hidden>T</span>
+          <img className="logo lg" src="/brand/table-plan-icon.svg" alt="" aria-hidden />
           <span className="bname">Table Plan</span><span className="beta" aria-hidden>BETA</span>
         </div>
         <div className="hero">

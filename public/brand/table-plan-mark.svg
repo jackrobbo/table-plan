@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="132 111 760 792" width="760" height="792">
+  <title>Table Plan</title>
+  <defs>
+    <linearGradient id="glassT" gradientUnits="userSpaceOnUse" x1="0" y1="543" x2="0" y2="843"><stop offset="0" stop-color="#FFFFFF"/><stop offset="1" stop-color="#CBD3D8"/></linearGradient>
+    <linearGradient id="glassP" gradientUnits="userSpaceOnUse" x1="0" y1="229" x2="0" y2="465"><stop offset="0" stop-color="#FFFFFF"/><stop offset="1" stop-color="#CBD3D8"/></linearGradient>
+    <linearGradient id="ringG" gradientUnits="userSpaceOnUse" x1="341" y1="518" x2="683" y2="176"><stop offset="0" stop-color="#4CD48F"/><stop offset=".5" stop-color="#6CC3FF"/><stop offset="1" stop-color="#B79CFF"/></linearGradient>
+    <filter id="fT" x="-30%" y="-30%" width="160%" height="170%" color-interpolation-filters="sRGB">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="22" result="b"/>
+      <feOffset in="b" dy="22" result="o"/>
+      <feFlood flood-color="#000" flood-opacity="0.55"/>
+      <feComposite in2="o" operator="in" result="drop"/>
+      <feComponentTransfer in="SourceAlpha" result="inv"><feFuncA type="table" tableValues="1 0"/></feComponentTransfer>
+      <feGaussianBlur in="inv" stdDeviation="1"/>
+      <feOffset dy="3" result="io"/>
+      <feFlood flood-color="#fff" flood-opacity="0.95"/>
+      <feComposite in2="io" operator="in"/>
+      <feComposite in2="SourceAlpha" operator="in" result="edge"/>
+      <feMerge><feMergeNode in="drop"/><feMergeNode in="SourceGraphic"/><feMergeNode in="edge"/></feMerge>
+    </filter>
+    <filter id="fP" x="-30%" y="-30%" width="160%" height="170%" color-interpolation-filters="sRGB">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="14" result="b"/>
+      <feOffset in="b" dy="12" result="o"/>
+      <feFlood flood-color="#000" flood-opacity="0.45"/>
+      <feComposite in2="o" operator="in" result="drop"/>
+      <feComponentTransfer in="SourceAlpha" result="inv"><feFuncA type="table" tableValues="1 0"/></feComponentTransfer>
+      <feGaussianBlur in="inv" stdDeviation="1"/>
+      <feOffset dy="3" result="io"/>
+      <feFlood flood-color="#fff" flood-opacity="0.95"/>
+      <feComposite in2="io" operator="in"/>
+      <feComposite in2="SourceAlpha" operator="in" result="edge"/>
+      <feMerge><feMergeNode in="drop"/><feMergeNode in="SourceGraphic"/><feMergeNode in="edge"/></feMerge>
+    </filter>
+    <filter id="fR" x="-30%" y="-30%" width="160%" height="170%" color-interpolation-filters="sRGB">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="15" result="b"/>
+      <feOffset in="b" dy="14" result="o"/>
+      <feFlood flood-color="#000" flood-opacity="0.4"/>
+      <feComposite in2="o" operator="in" result="drop"/>
+      <feMerge><feMergeNode in="drop"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <g filter="url(#fT)" fill="url(#glassT)">
+    <rect x="212" y="543" width="600" height="100" rx="34"/>
+    <rect x="465" y="593" width="94" height="250" rx="34"/>
+  </g>
+  <circle cx="512" cy="347" r="171" fill="none" stroke="url(#ringG)" stroke-width="50" filter="url(#fR)"/>
+  <circle cx="512" cy="347" r="118" fill="url(#glassP)" filter="url(#fP)"/>
+  <circle cx="512" cy="347" r="116.5" fill="none" stroke="#fff" stroke-opacity=".55" stroke-width="3"/>
+</svg>

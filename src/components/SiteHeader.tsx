@@ -26,7 +26,7 @@ export default function SiteHeader() {
     <header className="site-header">
       <div className="site-header-in">
         <Link href={signedIn ? '/plan' : '/'} className="hbrand" aria-label="Table Plan, beta">
-          <span className="logo sm" aria-hidden>T</span>
+          <img className="logo sm" src="/brand/table-plan-icon.svg" alt="" aria-hidden />
           <span className="hname">Table Plan</span>
           <span className="beta" aria-hidden>BETA</span>
         </Link>

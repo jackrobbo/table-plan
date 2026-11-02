@@ -389,6 +389,7 @@ body:has(.welcome) .site-header{display:none;}   /* the page carries its own log
 .welcome{display:flex; flex-direction:column; flex:1; gap:18px; padding-top:4px;}
 .brandblock{display:flex; align-items:center; gap:10px;}
 .logo.lg{width:44px; height:44px; border-radius:13px; font-size:21px;}
+img.logo{display:block; object-fit:cover; background:none; padding:0;}
 .bname{font-size:20px; font-weight:700; letter-spacing:-0.02em;}
 .hero{margin-top:auto;}
 .hero h1{font-size:clamp(36px,10.5vw,44px); line-height:1.02; letter-spacing:-0.035em; margin:0;}
