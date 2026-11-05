@@ -3,7 +3,7 @@
 Read this first, then `design/todo.md` (Jack / Claude to-dos) and `design/ux-audit.md`.
 
 ## What this is
-Table Plan: UK meal-planning PWA. Next.js 15.5 App Router, Supabase (project `dyaztrnlrmhcyrbctsbs`, eu-west-1), Stripe (test mode, unused during free beta), Vercel project `table-plan-app` (`prj_IzzsvenOpPzIRk5TeiS4xjOX4XmC`, team `team_Y5egWNPILI7F20uMIyWHNftS`). Morrisons-only, GBP. Live at https://table-plan.co.uk (also table-plan-app.vercel.app). GitHub `jackrobbo/table-plan`; `main` is the production branch and auto-deploys.
+Table Plan: UK meal-planning PWA. Next.js 15.5 App Router, Supabase (project `dyaztrnlrmhcyrbctsbs`, eu-west-1), Stripe (test mode, unused during free beta; account "Table Plan sandbox", `acct_1UU3cFLgXCiVZJ0t`), Vercel project `table-plan-app` (`prj_IzzsvenOpPzIRk5TeiS4xjOX4XmC`, team `team_Y5egWNPILI7F20uMIyWHNftS`). Morrisons-only, GBP. Live at https://table-plan.co.uk (also table-plan-app.vercel.app). GitHub `jackrobbo/table-plan`; `main` is the production branch and auto-deploys.
 
 ## Run it locally
     npm ci
