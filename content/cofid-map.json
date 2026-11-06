@@ -415,5 +415,38 @@
  "chilliflakes": {
   "negligible": true,
   "labelPage": "morrisons-chilli-flakes/106628453"
+ },
+ "celery": {
+  "code": "13-636",
+  "gpu": 40
+ },
+ "flour": {
+  "code": "11-886"
+ },
+ "vinegar": {
+  "code": "17-339"
+ },
+ "chorizo": {
+  "code": "19-516"
+ },
+ "greenbeans": {
+  "code": "13-514"
+ },
+ "breadcrumbs": {
+  "code": "11-1145",
+  "scale": 1.5,
+  "approx": "dried breadcrumbs: average white bread scaled for water loss; check against the pack label"
+ },
+ "butterbeans": {
+  "code": "13-559"
+ },
+ "coriander": {
+  "code": "13-888"
+ },
+ "lime": {
+  "negligible": true
+ },
+ "cabbage": {
+  "code": "13-509"
  }
 }

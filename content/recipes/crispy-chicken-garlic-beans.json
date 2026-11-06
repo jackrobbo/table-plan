@@ -1,0 +1,58 @@
+{
+ "slug": "crispy-chicken-garlic-beans",
+ "name": "Crispy Chicken & Garlicky Beans",
+ "course": "dinner",
+ "emoji": "🍗",
+ "serves": 2,
+ "status": "draft",
+ "time": {
+  "prep": 10,
+  "cook": 10
+ },
+ "ingredients": [
+  {
+   "ingredient": "breast",
+   "qty": 300
+  },
+  {
+   "ingredient": "brocc",
+   "qty": 160
+  },
+  {
+   "ingredient": "greenbeans",
+   "qty": 160
+  },
+  {
+   "ingredient": "butterbeans",
+   "qty": 240
+  },
+  {
+   "ingredient": "lemon",
+   "qty": 1
+  },
+  {
+   "ingredient": "greek",
+   "qty": 30
+  }
+ ],
+ "cupboard": [
+  "breadcrumbs",
+  "garlic",
+  "herbs",
+  "oil"
+ ],
+ "cupboard_qty": {
+  "breadcrumbs": 30,
+  "garlic": 6,
+  "herbs": 1,
+  "oil": 15
+ },
+ "method": [
+  "Slice each chicken breast through the middle to make two thin pieces and flatten them with a rolling pin. Press both sides into the breadcrumbs mixed with the grated lemon zest and herbs.",
+  "Boil or steam the green beans and broccoli for 4 to 5 minutes until just tender.",
+  "Pan-fry the chicken in half the oil for 3 to 4 minutes each side, until golden and cooked right through.",
+  "Warm the drained butter beans in the rest of the oil with the sliced garlic, take off the heat and stir in the yoghurt and a squeeze of lemon.",
+  "Serve the chicken on the beans with the greens alongside."
+ ],
+ "source": "idea: Jamie Oliver"
+}

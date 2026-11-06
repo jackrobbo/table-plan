@@ -1,0 +1,76 @@
+{
+ "slug": "chicken-chorizo-traybake",
+ "name": "Chicken & Chorizo Tray Bake",
+ "course": "dinner",
+ "emoji": "🍗",
+ "serves": 4,
+ "status": "draft",
+ "time": {
+  "prep": 15,
+  "cook": 55
+ },
+ "ingredients": [
+  {
+   "ingredient": "thigh",
+   "qty": 500
+  },
+  {
+   "ingredient": "chorizo",
+   "qty": 75
+  },
+  {
+   "ingredient": "sweetpot",
+   "qty": 400
+  },
+  {
+   "ingredient": "bakepot",
+   "qty": 2
+  },
+  {
+   "ingredient": "onions",
+   "qty": 2
+  },
+  {
+   "ingredient": "mixpep",
+   "qty": 2
+  },
+  {
+   "ingredient": "chilli",
+   "qty": 10
+  },
+  {
+   "ingredient": "greek",
+   "qty": 60
+  },
+  {
+   "ingredient": "lemon",
+   "qty": 1
+  }
+ ],
+ "cupboard": [
+  "garlic",
+  "stock",
+  "herbs",
+  "vinegar",
+  "paprika",
+  "oil",
+  "nuts"
+ ],
+ "cupboard_qty": {
+  "garlic": 6,
+  "stock": 10,
+  "herbs": 3,
+  "vinegar": 20,
+  "paprika": 3,
+  "oil": 15,
+  "nuts": 20
+ },
+ "method": [
+  "Heat the oven to 200C (180C fan). Chop the potatoes and sweet potatoes into chunky pieces, the onions into wedges and the peppers into strips, and tip everything into a deep tray with the oil.",
+  "Fry the diced chorizo in a pan until the oil runs, add the sliced garlic and herbs, then pour in the stock cube dissolved in 200ml hot water and the vinegar.",
+  "Season the chicken with the paprika, sit it on the vegetables and pour the chorizo stock over. Cover with foil and bake for 35 minutes.",
+  "Take the foil off and bake for another 20 minutes, until the chicken is golden and cooked through and the vegetables are tender.",
+  "Serve with a spoonful of yoghurt, the chopped chilli, crushed almonds and a squeeze of lemon."
+ ],
+ "source": "idea: Jamie Oliver"
+}

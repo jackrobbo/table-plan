@@ -3199,5 +3199,282 @@
   "per100": null,
   "product": null,
   "negligible": true
+ },
+ {
+  "slug": "celery",
+  "name": "Morrisons Celery",
+  "display": "Celery",
+  "unit": "sticks",
+  "cupboard": false,
+  "allergens": [
+   "celery"
+  ],
+  "per100": {
+   "kcal": 9,
+   "protein_g": 0.5,
+   "carbs_g": 1.4,
+   "fat_g": 0.1
+  },
+  "product": {
+   "retailer": "morrisons",
+   "name": "Morrisons Celery",
+   "price_pence": 74,
+   "pack_size": 10,
+   "slug": "morrisons-celery/108336032"
+  },
+  "category": "Fruit & veg",
+  "note": "One head, about 10 sticks",
+  "gramsPerUnit": 40,
+  "cofid": {
+   "code": "13-636",
+   "name": "Celery, raw",
+   "verified": true,
+   "basis": "cofid"
+  }
+ },
+ {
+  "slug": "flour",
+  "name": "Plain Flour 500g",
+  "display": "Plain Flour",
+  "unit": "g",
+  "cupboard": true,
+  "note": "Plain flour 500g · £0.53",
+  "allergens": [
+   "gluten"
+  ],
+  "per100": {
+   "kcal": 352,
+   "protein_g": 9.1,
+   "carbs_g": 80.9,
+   "fat_g": 1.4
+  },
+  "product": null,
+  "cupboardPrice": {
+   "pence": 53,
+   "grams": 500
+  },
+  "cofid": {
+   "code": "11-886",
+   "name": "Flour, wheat, white, plain, soft",
+   "verified": true,
+   "basis": "cofid"
+  }
+ },
+ {
+  "slug": "vinegar",
+  "name": "Red Wine Vinegar 350ml",
+  "display": "Red Wine Vinegar",
+  "unit": "g",
+  "cupboard": true,
+  "note": "Red wine vinegar 350ml · £1.16",
+  "allergens": [
+   "sulphites"
+  ],
+  "per100": {
+   "kcal": 22,
+   "protein_g": 0.4,
+   "carbs_g": 0.6,
+   "fat_g": 0
+  },
+  "product": null,
+  "cupboardPrice": {
+   "pence": 116,
+   "grams": 350
+  },
+  "cofid": {
+   "code": "17-339",
+   "name": "Vinegar",
+   "verified": true,
+   "basis": "cofid"
+  }
+ },
+ {
+  "slug": "chorizo",
+  "name": "Morrisons Sliced Chorizo 140g",
+  "display": "Chorizo",
+  "unit": "g",
+  "cupboard": false,
+  "allergens": [],
+  "per100": {
+   "kcal": 395,
+   "protein_g": 24,
+   "carbs_g": 2.4,
+   "fat_g": 32.2
+  },
+  "product": {
+   "retailer": "morrisons",
+   "name": "Morrisons Sliced Chorizo 140g",
+   "price_pence": 150,
+   "pack_size": 140,
+   "slug": "morrisons-sliced-chorizo/115399293"
+  },
+  "category": "Meat & fish",
+  "cofid": {
+   "code": "19-516",
+   "name": "Chorizo",
+   "verified": true,
+   "basis": "cofid"
+  }
+ },
+ {
+  "slug": "greenbeans",
+  "name": "Morrisons Fine Beans 170g",
+  "display": "Green Beans",
+  "unit": "g",
+  "cupboard": false,
+  "allergens": [],
+  "per100": {
+   "kcal": 24,
+   "protein_g": 2.1,
+   "carbs_g": 3.1,
+   "fat_g": 0.4
+  },
+  "product": {
+   "retailer": "morrisons",
+   "name": "Morrisons Fine Beans 170g",
+   "price_pence": 139,
+   "pack_size": 170,
+   "slug": "morrisons-fine-beans-170g/113430859"
+  },
+  "category": "Fruit & veg",
+  "cofid": {
+   "code": "13-514",
+   "name": "Beans, green, raw",
+   "verified": true,
+   "basis": "cofid"
+  }
+ },
+ {
+  "slug": "breadcrumbs",
+  "name": "Natural Breadcrumbs 175g",
+  "display": "Breadcrumbs",
+  "unit": "g",
+  "cupboard": true,
+  "note": "Natural breadcrumbs 175g · £1.20",
+  "allergens": [
+   "gluten"
+  ],
+  "per100": {
+   "kcal": 354,
+   "protein_g": 13,
+   "carbs_g": 73.1,
+   "fat_g": 3.2
+  },
+  "product": null,
+  "cupboardPrice": {
+   "pence": 120,
+   "grams": 175
+  },
+  "cofid": {
+   "code": "11-1145",
+   "name": "Bread, white, average",
+   "verified": true,
+   "basis": "cofid",
+   "approx": "dried breadcrumbs: average white bread scaled for water loss; check against the pack label"
+  }
+ },
+ {
+  "slug": "butterbeans",
+  "name": "Morrisons Butter Beans In Water (400g)",
+  "display": "Butter Beans",
+  "unit": "g",
+  "cupboard": false,
+  "allergens": [],
+  "per100": {
+   "kcal": 77,
+   "protein_g": 5.9,
+   "carbs_g": 13,
+   "fat_g": 0.5
+  },
+  "product": {
+   "retailer": "morrisons",
+   "name": "Morrisons Butter Beans In Water (400g)",
+   "price_pence": 45,
+   "pack_size": 240,
+   "slug": "morrisons-butter-beans-in-water-400g/110428155"
+  },
+  "category": "Tins, jars & sauces",
+  "note": "Drained weight 240g per tin",
+  "cofid": {
+   "code": "13-559",
+   "name": "Beans, butter, canned, re-heated, drained",
+   "verified": true,
+   "basis": "cofid"
+  }
+ },
+ {
+  "slug": "coriander",
+  "name": "Morrisons Fresh Coriander",
+  "display": "Fresh Coriander",
+  "unit": "g",
+  "cupboard": false,
+  "allergens": [],
+  "per100": {
+   "kcal": 18,
+   "protein_g": 2.1,
+   "carbs_g": 1.2,
+   "fat_g": 0.5
+  },
+  "product": {
+   "retailer": "morrisons",
+   "name": "Morrisons Fresh Coriander",
+   "price_pence": 50,
+   "pack_size": 30,
+   "slug": "morrisons-fresh-coriander/110429684"
+  },
+  "category": "Fruit & veg",
+  "cofid": {
+   "code": "13-888",
+   "name": "Coriander leaves, fresh",
+   "verified": true,
+   "basis": "cofid"
+  }
+ },
+ {
+  "slug": "lime",
+  "name": "Morrisons Limes 4 Pack",
+  "display": "Lime",
+  "unit": "limes",
+  "cupboard": false,
+  "allergens": [],
+  "per100": null,
+  "product": {
+   "retailer": "morrisons",
+   "name": "Morrisons Limes 4 Pack",
+   "price_pence": 92,
+   "pack_size": 4,
+   "slug": "morrisons-limes-4-pack/109567748"
+  },
+  "category": "Fruit & veg",
+  "negligible": true
+ },
+ {
+  "slug": "cabbage",
+  "name": "Morrisons British White Cabbage",
+  "display": "White Cabbage",
+  "unit": "g",
+  "cupboard": false,
+  "allergens": [],
+  "per100": {
+   "kcal": 24,
+   "protein_g": 1.2,
+   "carbs_g": 4.8,
+   "fat_g": 0.1
+  },
+  "product": {
+   "retailer": "morrisons",
+   "name": "Morrisons British White Cabbage",
+   "price_pence": 89,
+   "pack_size": 900,
+   "slug": "morrisons-british-white-cabbage/108300785"
+  },
+  "category": "Fruit & veg",
+  "note": "One head, about 900g",
+  "cofid": {
+   "code": "13-509",
+   "name": "Cabbage, white, raw",
+   "verified": true,
+   "basis": "cofid"
+  }
  }
 ]

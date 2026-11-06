@@ -1,0 +1,16 @@
+{
+  "mode": "search",
+  "retailers": [
+    "tesco",
+    "sainsburys",
+    "asda"
+  ],
+  "queries": [
+    "chicken breast fillets",
+    "mince beef 5% fat",
+    "semi skimmed milk",
+    "porridge oats",
+    "baby plum tomatoes"
+  ],
+  "maxItems": 45
+}

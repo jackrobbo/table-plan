@@ -52,7 +52,7 @@ export function validateContent(ingredients: IngredientDef[], recipes: RecipeDef
     }
     for (const [re, a] of NAME_IMPLIES) {
       // "coconut milk", "peanut butter" and "cream crackers" are not dairy, whatever the words suggest.
-      if (re.test(i.name) && !/coconut milk|cornflour|peanut butter|cream crackers/i.test(i.name) && !(i.allergens ?? []).includes(a as never)) err(w, `name suggests "${a}" but it is not in allergens`);
+      if (re.test(i.name) && !/coconut milk|cornflour|peanut butter|butter beans?|cream crackers/i.test(i.name) && !(i.allergens ?? []).includes(a as never)) err(w, `name suggests "${a}" but it is not in allergens`);
     }
   }
 

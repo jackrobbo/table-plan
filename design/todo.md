@@ -17,6 +17,8 @@ Where we are: free beta live at https://table-plan.co.uk (open sign-up, no paywa
 ## Jack: before real users / money
 - [ ] **[JACK] Supabase Pro** (backups, no idle pause).
 - [ ] **[JACK] ICO registration**, business name and address for `/privacy` and `/terms`, solicitor read.
+  - ICO to find out (use the ICO's own "do I need to pay" self-assessment on ico.org.uk): confirm the data-protection fee tier and amount (roughly £50 a year for a small business; check the site), whether you register as a sole trader or a company, and what the register will show publicly (name and address). Decide the trading name and a non-home address if you want one.
+  - Solicitor questions (bring these): (1) do Morrisons, Tesco and Sainsbury's website terms stop an app showing their prices from a licensed third-party feed (Yappman) or, if scraped, at all; (2) is the trolley-fill automation (user's own browser, user's own session, stops at the trolley) within their terms; (3) using retailer names and logos with an "independent, not affiliated" line; (4) is a "cheapest" price claim safe, and what wording (prices are online catalogue prices, offers and More Card prices vary, pack sizes differ); (5) health and nutrition: we ask about health, so special-category consent, DPIA need, allergen and "not medical advice" wording; (6) review `/privacy` and `/terms`, and processor terms with Supabase, Vercel, Stripe, Resend, Apify; (7) Yappman's licence terms and database rights; (8) affiliate disclosure if Awin links are added; (9) copying recipes from other sites: what we can use (ideas, ingredient lists) and what we must write ourselves (method text, photos).
 - [ ] **[JACK] Outreach**: Samsung Food (Whisk) business team and Morrisons partnerships / Awin affiliate. (Claude drafts; Jack sends.)
 - [ ] **[JACK] Decide**: meal photos (own photography vs one illustration style).
 - [ ] **[JACK] Stripe live mode** only at go-live; the free-beta flag (`NEXT_PUBLIC_FREE_BETA`) comes off then.
@@ -72,7 +74,8 @@ Morrisons now blocks scripted product-page requests (HTTP 403, new since 25 Oct)
   - [ ] Jack: save as a Task, Schedule `0 6 * * 1` Europe/London, max cost per run about $0.25.
   - [ ] Claude: Monday import from the named dataset into Supabase with a "prices as of" date, held-for-review checks, unavailable handling (needs `APIFY_TOKEN` in Vercel, added by Jack). Build after the test run so the real fields are known.
   - [ ] Jack: send Russell the short thank-you reply, then a results update after the test.
-  - Later: Tesco, Sainsbury's, Asda, Aldi via the basket endpoint (barcodes available), up to about $4/week for the whole library.
+  - Other stores (6 Nov): search mode is the wrong tool (its row cap is shared, the first ingredient used all 45 rows). Use the basket endpoint by name: `npm run basket` (`scripts/yappman-basket.ts`) sends all 83 ingredients for Tesco, Sainsbury's and Asda in one call (about $0.50 at most), writes `content/matches/raw/yappman-<store>.json`, then `npm run match -- suggest --store <store> --input <that file> --source yappman` and `review`. Jack: paste the Standby URL (Actor > Server tab, copy button; it includes the token) into `YAPPMAN_BASKET_URL` in his own terminal, then run with `--go`.
+  - Open: basket answers carry no product page link or pack size. Tesco links can be built from the id; Sainsbury's and Asda need a lookup before a trolley fill can be built for them. The 33 cupboard staples have no store product and need a decision.
 - [ ] **[JACK] Test the new Android APK** (uninstall the old app first; the signing key changed). Decide whether to store a fixed signing key as a GitHub secret.
 - [ ] **[JACK] Decide the exposure reducers**: text instead of the Morrisons logo, an "independent, not affiliated" line, a remote kill switch.
 - [ ] **[JACK] Price routine**: add `jackrobbo/table-plan` as a source (so it can push) or pause it.
@@ -80,6 +83,12 @@ Morrisons now blocks scripted product-page requests (HTTP 403, new since 25 Oct)
 - [ ] **[CLAUDE] Top-20 price list** for a manual check: the products that move plan cost most, with stored price and link; Jack checks them and Claude updates `content/prices.json`.
 - [ ] **[CLAUDE] Price importer** for a licensed file: build only once a sample file and licence exist (format and match key unknown until then).
 - [ ] **[CLAUDE] Tesco matching** once a price source is chosen.
+
+## Menus first, then ingredients, then stores (6 Nov)
+Agreed order: (1) ingredient principles (`design/ingredient-principles.md`, Jack to edit and answer its open questions), (2) more considered menus, text only (own method wording, photos later), (3) lock the ingredient list and update the Morrisons product list, (4) match Tesco, Sainsbury's and Asda (tooling and budget are ready: `npm run basket`, `--pass2`, `--search`, `npm run match`), (5) photos (`design/recipe-photo-shotlist.md`) and the Monday import in parallel.
+- [ ] **[JACK]** Edit `design/ingredient-principles.md`; define "better quality".
+- [ ] **[JACK / CLAUDE]** Source and draft new meals (ideas and ingredient lists may be lifted; method text and photos must be our own).
+- State: Tesco 86 of 116 ingredients confirmed, 30 reopened for review; Sainsbury's and Asda not reviewed yet. Availability report: `design/ingredient-availability.md` (70 ingredients have a match at all three shops).
 
 ## Brand (2 Nov)
 - [x] **[CLAUDE] New logo** (Jack): a glass "T" that is a table, with a gradient-ring plate on top, in the site's glass palette. Sources of truth are the SVGs in `public/brand/` (`table-plan-icon.svg` full-bleed 1024, `table-plan-mark.svg` transparent mark); PNGs are generated from the icon SVG. Applied to `public/icons/*`, `extension/icons/*`, Android launcher icons (adaptive foreground at 88% so masks keep it in the safe zone, background `#05090A`) and the "T" tile on the welcome screen, header and install sheet. Not done: Android splash image; a new APK is needed to see the launcher icon (reload the Chrome extension for its icon). The Figma copy lives on a "Table Plan Logo" page in the Tote / HKJC file and can be deleted.
