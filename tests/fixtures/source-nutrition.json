@@ -60,5 +60,11 @@
     "source": "EatingWell (serves 1)",
     "tolerance": 0.35,
     "note": "no poppy seed dressing (lemon and honey instead) and fewer seeds; a pitta added on the side so the lunch is not mostly fat"
+  },
+  "chicken-caesar-pasta": {
+    "kcal": 425,
+    "source": "Pinch of Nom (serves 4)",
+    "tolerance": 0.25,
+    "note": "ordinary bread croutons instead of gluten-free ciabatta; no mustard powder or Worcestershire"
   }
 }

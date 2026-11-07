@@ -1,0 +1,63 @@
+{
+ "slug": "spanish-shakshuka",
+ "name": "Spanish-Style Shakshuka",
+ "course": "breakfast",
+ "emoji": "🍳",
+ "serves": 1,
+ "status": "draft",
+ "time": {
+  "prep": 10,
+  "cook": 25
+ },
+ "ingredients": [
+  {
+   "ingredient": "chorizo",
+   "qty": 40
+  },
+  {
+   "ingredient": "onions",
+   "qty": 0.5
+  },
+  {
+   "ingredient": "pepper",
+   "qty": 1
+  },
+  {
+   "ingredient": "ctoms",
+   "qty": 135
+  },
+  {
+   "ingredient": "eggs",
+   "qty": 2
+  },
+  {
+   "ingredient": "greek",
+   "qty": 30
+  },
+  {
+   "ingredient": "wholeloaf",
+   "qty": 70
+  }
+ ],
+ "cupboard": [
+  "oil",
+  "paprika",
+  "cumin",
+  "puree"
+ ],
+ "cupboard_qty": {
+  "oil": 2,
+  "paprika": 3,
+  "cumin": 2,
+  "puree": 10
+ },
+ "method": [
+  "Heat the oil in a small frying pan over a medium heat, add the chopped chorizo and fry gently for 3 to 4 minutes.",
+  "Add the sliced onion and pepper and fry for 5 minutes until softened.",
+  "Stir in most of the paprika, the cumin and the tomato puree, fry for a minute, then add a splash of water.",
+  "Pour in the tomatoes, bring to a simmer and cook for 8 to 10 minutes until reduced slightly, then season.",
+  "Make two wells in the sauce and crack an egg into each. Cover and cook gently for 3 to 4 minutes until the whites are set and the yolks still runny.",
+  "Spoon over the yoghurt, finish with a pinch of paprika and serve with two slices of toasted bread."
+ ],
+ "source": "idea: Joe Wicks"
+}

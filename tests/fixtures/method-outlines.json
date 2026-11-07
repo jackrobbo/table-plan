@@ -1551,5 +1551,330 @@
     ]
    }
   ]
+ },
+ "chicken-caesar-pasta": {
+  "source": "Pinch of Nom",
+  "steps": [
+   {
+    "do": [
+     "fry"
+    ],
+    "mins": [
+     5,
+     5
+    ]
+   },
+   {
+    "do": [
+     "simmer"
+    ],
+    "mins": [
+     10,
+     10
+    ]
+   },
+   {
+    "do": [
+     "pasta"
+    ],
+    "mins": [
+     10,
+     10
+    ]
+   },
+   {
+    "do": [
+     "grill",
+     "croutons",
+     "toast"
+    ],
+    "mins": [
+     5,
+     5
+    ]
+   },
+   {
+    "do": [
+     "parmesan"
+    ]
+   },
+   {
+    "do": [
+     "serve"
+    ]
+   }
+  ]
+ },
+ "bacon-egg-breakfast-naan": {
+  "source": "Joe Wicks",
+  "steps": [
+   {
+    "do": [
+     "bacon"
+    ]
+   },
+   {
+    "do": [
+     "egg"
+    ]
+   },
+   {
+    "do": [
+     "yoghurt",
+     "blitz"
+    ]
+   },
+   {
+    "do": [
+     "naans",
+     "warm"
+    ]
+   },
+   {
+    "do": [
+     "fill"
+    ]
+   }
+  ]
+ },
+ "spanish-shakshuka": {
+  "source": "Joe Wicks",
+  "steps": [
+   {
+    "do": [
+     "chorizo"
+    ],
+    "mins": [
+     3,
+     4
+    ]
+   },
+   {
+    "do": [
+     "onion"
+    ],
+    "mins": [
+     5,
+     5
+    ]
+   },
+   {
+    "do": [
+     "paprika",
+     "puree"
+    ]
+   },
+   {
+    "do": [
+     "tomatoes",
+     "simmer"
+    ],
+    "mins": [
+     8,
+     10
+    ]
+   },
+   {
+    "do": [
+     "wells",
+     "crack"
+    ],
+    "mins": [
+     3,
+     4
+    ]
+   },
+   {
+    "do": [
+     "yoghurt"
+    ]
+   }
+  ]
+ },
+ "cowboy-beans-poached-egg": {
+  "source": "Joe Wicks",
+  "steps": [
+   {
+    "do": [
+     "sausages"
+    ],
+    "mins": [
+     5,
+     5
+    ]
+   },
+   {
+    "do": [
+     "tomatoes"
+    ],
+    "mins": [
+     5,
+     5
+    ]
+   },
+   {
+    "do": [
+     "beans"
+    ],
+    "mins": [
+     5,
+     5
+    ]
+   },
+   {
+    "do": [
+     "poach"
+    ],
+    "mins": [
+     3,
+     3
+    ]
+   },
+   {
+    "do": [
+     "spoon"
+    ]
+   }
+  ]
+ },
+ "tortilla-breakfast-pizza": {
+  "source": "Joe Wicks",
+  "steps": [
+   {
+    "do": [
+     "oven"
+    ],
+    "temp": 200
+   },
+   {
+    "do": [
+     "wrap"
+    ]
+   },
+   {
+    "do": [
+     "bake"
+    ],
+    "mins": [
+     8,
+     10
+    ],
+    "deviation": "the original gives no oven time; 8 to 10 minutes is ours, until the egg is set"
+   }
+  ]
+ },
+ "french-toast-crispy-bacon": {
+  "source": "Joe Wicks",
+  "steps": [
+   {
+    "do": [
+     "grill"
+    ]
+   },
+   {
+    "do": [
+     "soak"
+    ],
+    "mins": [
+     5,
+     5
+    ]
+   },
+   {
+    "do": [
+     "bacon"
+    ],
+    "mins": [
+     2,
+     2
+    ]
+   },
+   {
+    "do": [
+     "fry"
+    ],
+    "mins": [
+     2,
+     2
+    ]
+   },
+   {
+    "do": [
+     "drizzle"
+    ]
+   }
+  ]
+ },
+ "chorizo-potato-hash-eggs": {
+  "source": "Joe Wicks",
+  "steps": [
+   {
+    "do": [
+     "chorizo"
+    ],
+    "mins": [
+     4,
+     5
+    ]
+   },
+   {
+    "do": [
+     "onion"
+    ]
+   },
+   {
+    "do": [
+     "potatoes"
+    ],
+    "mins": [
+     3,
+     4
+    ]
+   },
+   {
+    "do": [
+     "spinach"
+    ]
+   },
+   {
+    "do": [
+     "poach"
+    ],
+    "mins": [
+     3,
+     3
+    ]
+   },
+   {
+    "do": [
+     "top"
+    ]
+   }
+  ]
+ },
+ "bacon-avocado-breakfast-tacos": {
+  "source": "Joe Wicks",
+  "steps": [
+   {
+    "do": [
+     "grill"
+    ]
+   },
+   {
+    "do": [
+     "scrambled"
+    ]
+   },
+   {
+    "do": [
+     "warm"
+    ]
+   },
+   {
+    "do": [
+     "avocado"
+    ]
+   }
+  ]
  }
 }

@@ -1,0 +1,56 @@
+{
+ "slug": "chicken-caesar-pasta",
+ "name": "Chicken Caesar Pasta",
+ "course": "dinner",
+ "emoji": "🍝",
+ "serves": 4,
+ "status": "draft",
+ "time": {
+  "prep": 15,
+  "cook": 20
+ },
+ "ingredients": [
+  {
+   "ingredient": "breast",
+   "qty": 340
+  },
+  {
+   "ingredient": "bacon",
+   "qty": 4
+  },
+  {
+   "ingredient": "softcheese",
+   "qty": 180
+  },
+  {
+   "ingredient": "lemon",
+   "qty": 1.5
+  },
+  {
+   "ingredient": "loaf",
+   "qty": 3
+  }
+ ],
+ "cupboard": [
+  "fusilli",
+  "parmesan",
+  "garlic",
+  "stock",
+  "oil"
+ ],
+ "cupboard_qty": {
+  "fusilli": 200,
+  "parmesan": 15,
+  "garlic": 9,
+  "stock": 10,
+  "oil": 10
+ },
+ "method": [
+  "Fry the diced bacon, chicken chunks and half the garlic in half the oil over a medium heat for 5 minutes until the chicken has coloured.",
+  "Add the lemon juice and the stock cube dissolved in 150ml boiling water, mix well and simmer for 10 minutes until the chicken is cooked through and the liquid has reduced to a glossy coating. Meanwhile cook the pasta for about 10 minutes and drain.",
+  "Heat the grill to high. Cut the bread into cubes, toss with the rest of the garlic and oil, spread on a tray and toast for 5 minutes until crisp.",
+  "Stir the parmesan and soft cheese into the chicken until heated through, add the pasta and stir until coated.",
+  "Season and serve topped with the croutons."
+ ],
+ "source": "idea: Pinch of Nom"
+}

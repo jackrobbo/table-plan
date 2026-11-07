@@ -19,7 +19,7 @@ const recipes = fs.readdirSync(path.join(root, 'content/recipes')).filter((f) =>
 }).filter((r) => !r.macros_only);
 // All dinners, plus lunches that are new (not live yet, or part of the sourced set with a recorded outline); older live lunches predate these checks.
 const outlineKeys = new Set(Object.keys(JSON.parse(fs.readFileSync(path.join(root, 'tests/fixtures/method-outlines.json'), 'utf8')) as Record<string, unknown>));
-const inScope = (r: RecipeDef) => r.course === 'dinner' || (r.course === 'lunch' && (r.status !== 'live' || outlineKeys.has(r.slug)));
+const inScope = (r: RecipeDef) => r.course === 'dinner' || ((r.course === 'lunch' || r.course === 'breakfast') && (r.status !== 'live' || outlineKeys.has(r.slug)));
 
 const scoped = recipes.filter(inScope);
 const products = Object.fromEntries(ingredients.filter((i) => i.product).map((i) => [i.slug, { n: i.product!.name, pr: i.product!.price_pence, pack: i.product!.pack_size, u: i.unit, s: i.product!.slug, c: i.category ?? 'Other' }]));

@@ -1,0 +1,47 @@
+{
+ "slug": "bacon-avocado-breakfast-tacos",
+ "name": "Bacon & Avocado Breakfast Tacos",
+ "course": "breakfast",
+ "emoji": "🌮",
+ "serves": 1,
+ "status": "draft",
+ "time": {
+  "prep": 5,
+  "cook": 10
+ },
+ "ingredients": [
+  {
+   "ingredient": "bacon",
+   "qty": 2
+  },
+  {
+   "ingredient": "eggs",
+   "qty": 3
+  },
+  {
+   "ingredient": "wraps",
+   "qty": 1
+  },
+  {
+   "ingredient": "avocado",
+   "qty": 0.35
+  },
+  {
+   "ingredient": "coriander",
+   "qty": 5
+  }
+ ],
+ "cupboard": [
+  "butter"
+ ],
+ "cupboard_qty": {
+  "butter": 7
+ },
+ "method": [
+  "Heat the grill to high and grill the bacon for a couple of minutes on each side until crisp, then chop it into small pieces.",
+  "Melt the butter in a non-stick pan, add the eggs and cook gently, stirring, until scrambled. Fold in the bacon and season.",
+  "Warm the wrap in a dry frying pan, cut or fold it into two tacos and divide the egg and bacon between them.",
+  "Top with the sliced avocado and coriander and serve."
+ ],
+ "source": "idea: Joe Wicks"
+}

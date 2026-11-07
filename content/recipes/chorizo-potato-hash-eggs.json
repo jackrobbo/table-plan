@@ -1,0 +1,61 @@
+{
+ "slug": "chorizo-potato-hash-eggs",
+ "name": "Chorizo & Potato Hash with Egg",
+ "course": "breakfast",
+ "emoji": "🥔",
+ "serves": 1,
+ "status": "draft",
+ "time": {
+  "prep": 10,
+  "cook": 20
+ },
+ "ingredients": [
+  {
+   "ingredient": "chorizo",
+   "qty": 50
+  },
+  {
+   "ingredient": "onions",
+   "qty": 0.5
+  },
+  {
+   "ingredient": "pepper",
+   "qty": 0.5
+  },
+  {
+   "ingredient": "potatoes",
+   "qty": 140
+  },
+  {
+   "ingredient": "spinach",
+   "qty": 20
+  },
+  {
+   "ingredient": "roast",
+   "qty": 60
+  },
+  {
+   "ingredient": "eggs",
+   "qty": 1
+  },
+  {
+   "ingredient": "coriander",
+   "qty": 5
+  }
+ ],
+ "cupboard": [
+  "chilliflakes"
+ ],
+ "cupboard_qty": {
+  "chilliflakes": 0.3
+ },
+ "method": [
+  "Boil the chopped potatoes for 10 minutes until just tender, then drain and leave to cool. Cooking them ahead helps them crisp.",
+  "Fry the diced chorizo in a non-stick pan over a medium heat for 4 to 5 minutes until crisp and the oil has run.",
+  "Turn up the heat, add the diced onion and pepper and cook for a couple of minutes, then add the potatoes and cook for 3 to 4 minutes until crisp at the edges.",
+  "Add the spinach, chopped chicken and chilli flakes and fry for a couple of minutes, then season.",
+  "Meanwhile poach the egg in gently simmering water for 3 minutes until the white is set and the yolk is runny.",
+  "Top the hash with the egg, scatter over the coriander and serve."
+ ],
+ "source": "idea: Joe Wicks"
+}

@@ -1,0 +1,45 @@
+{
+ "slug": "french-toast-crispy-bacon",
+ "name": "French Toast with Crispy Bacon",
+ "course": "breakfast",
+ "emoji": "🥓",
+ "serves": 1,
+ "status": "draft",
+ "time": {
+  "prep": 10,
+  "cook": 12
+ },
+ "ingredients": [
+  {
+   "ingredient": "eggs",
+   "qty": 2
+  },
+  {
+   "ingredient": "milk",
+   "qty": 60
+  },
+  {
+   "ingredient": "wholeloaf",
+   "qty": 70
+  },
+  {
+   "ingredient": "bacon",
+   "qty": 2
+  }
+ ],
+ "cupboard": [
+  "oil",
+  "honey"
+ ],
+ "cupboard_qty": {
+  "oil": 3,
+  "honey": 20
+ },
+ "method": [
+  "Heat the grill to high. Whisk the eggs and milk with a pinch of salt in a wide bowl, add the bread, push it down gently and leave it to soak for 5 minutes, turning it halfway.",
+  "Meanwhile grill the bacon for about 2 minutes on each side until crisp.",
+  "Heat the oil in a non-stick frying pan and fry the soaked bread for 2 minutes on each side until golden.",
+  "Put the bread on a plate, top with the bacon and drizzle over the honey to serve."
+ ],
+ "source": "idea: Joe Wicks"
+}

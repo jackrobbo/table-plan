@@ -1,0 +1,48 @@
+{
+ "slug": "bacon-egg-breakfast-naan",
+ "name": "Bacon & Egg Breakfast Naan",
+ "course": "breakfast",
+ "emoji": "🫓",
+ "serves": 1,
+ "status": "draft",
+ "time": {
+  "prep": 5,
+  "cook": 10
+ },
+ "ingredients": [
+  {
+   "ingredient": "bacon",
+   "qty": 2
+  },
+  {
+   "ingredient": "eggs",
+   "qty": 1
+  },
+  {
+   "ingredient": "greek",
+   "qty": 40
+  },
+  {
+   "ingredient": "coriander",
+   "qty": 5
+  },
+  {
+   "ingredient": "naan",
+   "qty": 2
+  }
+ ],
+ "cupboard": [
+  "oil"
+ ],
+ "cupboard_qty": {
+  "oil": 5
+ },
+ "method": [
+  "Heat the oil in a non-stick frying pan over a medium to high heat and cook the bacon for 3 to 4 minutes on each side (about 7 minutes in all) until crispy.",
+  "Push the bacon to one side and fry the egg for 2 to 3 minutes until the white is set and the yolk is still runny.",
+  "Meanwhile blitz or stir the yoghurt with most of the coriander and a pinch of salt until smooth.",
+  "Warm the naans in the microwave for a few seconds until soft and spread them with the yoghurt mix.",
+  "Fill with the bacon and egg, scatter over the rest of the coriander and serve."
+ ],
+ "source": "idea: Joe Wicks"
+}

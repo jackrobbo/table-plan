@@ -1,0 +1,50 @@
+{
+ "slug": "cowboy-beans-poached-egg",
+ "name": "Cowboy Beans with Poached Egg",
+ "course": "breakfast",
+ "emoji": "🤠",
+ "serves": 1,
+ "status": "draft",
+ "time": {
+  "prep": 5,
+  "cook": 20
+ },
+ "ingredients": [
+  {
+   "ingredient": "sausages",
+   "qty": 2
+  },
+  {
+   "ingredient": "ctoms",
+   "qty": 150
+  },
+  {
+   "ingredient": "butterbeans",
+   "qty": 200
+  },
+  {
+   "ingredient": "eggs",
+   "qty": 1
+  }
+ ],
+ "cupboard": [
+  "oil",
+  "puree",
+  "paprika",
+  "honey"
+ ],
+ "cupboard_qty": {
+  "oil": 5,
+  "puree": 8,
+  "paprika": 2,
+  "honey": 5
+ },
+ "method": [
+  "Heat the oil in a saucepan over a medium heat, add the sausages and fry for 5 minutes until browned all over, then lift them out.",
+  "Pour in the tomatoes with the tomato puree, paprika, honey and a splash of water, bring to the boil and simmer for 5 minutes.",
+  "Chop the sausages into bite-sized pieces and stir them into the sauce with the drained beans. Simmer gently for 5 minutes until the sausages are cooked through, then season.",
+  "Meanwhile poach the egg in a small pan of simmering water for about 3 minutes until the white is set and the yolk is still runny.",
+  "Spoon the beans into a bowl, top with the poached egg and serve."
+ ],
+ "source": "idea: Joe Wicks"
+}
