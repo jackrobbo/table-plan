@@ -3,6 +3,8 @@ import { safeRecipes } from '../allergens';
 import { computeTargets } from '../targets';
 import { rng } from './rng';
 import { buildShopping } from './shopping';
+import { pickDinners, orderByFreshness } from './week';
+import { shoppingLeftover, varietyPenalty } from './waste';
 import { DAY_NAMES, type Plan, type PlanInput, type PlannedDay, type PlannedMeal, type Slot } from './types';
 
 /** How far a cooked meal's portion may be resized to land a day in band (before top-ups). */
@@ -14,7 +16,7 @@ export const RESERVE_SHARE = { breakfast: 0.25, lunch: 0.3, dinner: 0.35 } as co
 const DISLIKE_WEIGHT = 120;   // kcal-equivalents per disliked ingredient/name match
 const REPEAT_WEIGHT = 40;
 export const RESIZE_WEIGHT = 220;    // prefer unadjusted portions
-const SHARE_BONUS = 25;       // reuse of a product already bought this week
+const SHARE_BONUS = 60;       // reuse of a product already bought this week, or in the same week's dinners (a preference, never a rule)
 const TRIALS = 100;
 /** Typical split of a day's calories; snacks take the rest. Only steers sampling, never a constraint. */
 const KCAL_SHARE = { breakfast: 0.27, lunch: 0.3, dinner: 0.33, snack: 0.1 } as const;
@@ -115,18 +117,24 @@ export function generatePlan(input: PlanInput, seed = 1): Plan {
   const ladder = input.budget ? TIERS.slice(TIERS.indexOf(input.budget) + 1).map((t) => space(pools({ ...input, budget: t }, unseen))) : [];
   const overCap: string[] = [];
 
-  const dinners: Recipe[] = [];
+  // The week's dinners are chosen together, not day by day: meals that share ingredients (so nothing is bought for one recipe
+  // and left over), a sensible mix of proteins, short-life food cooked early, and meals the person likes at a size that suits.
+  const dinners: (Recipe | undefined)[] = [];
   if (input.meals.dinner.mode === 'plan') {
-    const order = R.weightedShuffle(P.dinner, (r) => fit(r, slotTarget.dinner)).sort((a, b) => dislikeHits(a, input.dislikes) - dislikeHits(b, input.dislikes));
-    for (let i = 0; i < DAY_NAMES.length; i++) dinners.push(order[i % order.length]);
+    const cookDays = DAY_NAMES.map((_, d) => d).filter((d) => !input.daysOff?.includes(d));
+    // One "New for you" dinner a week: a meal they haven't rated, within their spend limit, sized to suit the day.
+    let explore: Recipe | null = null;
+    if (input.explore !== false) {
+      const capIdx = input.budget && input.budget !== 'high' ? TIERS.indexOf(input.budget) : TIERS.length;
+      const fresh = unseen.dinner.filter((r) => !r.b || TIERS.indexOf(r.b) <= capIdx);
+      if (fresh.length) explore = R.pickWeighted(fresh, (r) => fit(r, slotTarget.dinner));
+    }
+    const maxFit = Math.max(1e-6, ...P.dinner.map((r) => fit(r, slotTarget.dinner)));
+    const tastePenalty = (r: Recipe) => dislikeHits(r, input.dislikes) * 2000 + (1 - fit(r, slotTarget.dinner) / maxFit) * 200;
+    const week = orderByFreshness(pickDinners({ pool: P.dinner, n: cookDays.length, portions: 1 + input.meals.dinner.extraServings, R, tastePenalty, fixed: explore ? [explore] : [] }));
+    cookDays.forEach((d, i) => { dinners[d] = week[i]; });
   }
-
-  // One "New for you" dinner a week: a meal they haven't rated, within their spend limit, sized to suit the day.
-  if (input.meals.dinner.mode === 'plan' && input.explore !== false) {
-    const capIdx = input.budget && input.budget !== 'high' ? TIERS.indexOf(input.budget) : TIERS.length;
-    const fresh = unseen.dinner.filter((r) => !r.b || TIERS.indexOf(r.b) <= capIdx);
-    if (fresh.length) dinners[2] = R.pickWeighted(fresh, (r) => fit(r, slotTarget.dinner));
-  }
+  const dinnerKeys = new Set(dinners.flatMap((r) => r?.fresh.map(([k]) => k) ?? []));
 
   const useCount: Record<string, number> = {};
   const bought = new Set<string>();
@@ -170,7 +178,9 @@ export function generatePlan(input: PlanInput, seed = 1): Plan {
           if (!inBand && closest && miss >= closest.miss) continue;
 
           const products = all.flatMap((r) => r?.fresh.map(([k]) => k) ?? []);
-          const shared = products.filter((k) => bought.has(k)).length;
+          // Breakfasts, lunches and snacks also count sharing with the week's dinners; the dinner's own items only count against what is already bought.
+          const dinKeys = new Set(din?.fresh.map(([k]) => k) ?? []);
+          const shared = products.filter((k) => bought.has(k) || (dinnerKeys.has(k) && !dinKeys.has(k))).length;
           const rep = [b, l, ...snacks].reduce((a, r) => a + (r ? useCount[r.id] ?? 0 : 0), 0);
           const dis = all.reduce((a, r) => a + (r ? dislikeHits(r, input.dislikes) : 0), 0);
           const score = Math.abs(mid - K) * 0.5 + rep * REPEAT_WEIGHT + dis * DISLIKE_WEIGHT + Math.abs(sc - 1) * RESIZE_WEIGHT + tu.length * 30 - shared * SHARE_BONUS;
@@ -266,8 +276,8 @@ export function generatePlan(input: PlanInput, seed = 1): Plan {
 }
 
 /**
- * Waste consolidation: build several candidate weeks and keep the one whose shopping list is cheapest
- * (fewest wasted pack leftovers), preferring weeks where every day lands in band.
+ * Build several candidate weeks and keep the best: cheapest shopping list, fewest leftovers that would spoil, a varied mix of
+ * proteins, preferring weeks where every day lands in band.
  */
 export function planWeek(input: PlanInput, candidates = 24, baseSeed = 1): Plan {
   let best: { plan: Plan; cost: number } | null = null;
@@ -275,7 +285,9 @@ export function planWeek(input: PlanInput, candidates = 24, baseSeed = 1): Plan 
     const plan = generatePlan(input, baseSeed + i * 7919);
     if (!plan.days.length) return plan;
     const misses = plan.days.filter((d) => !d.inBand).length;
-    const cost = buildShopping(plan).totalPence + misses * 100000;
+    const shop = buildShopping(plan);
+    const dinnerRecipes = plan.days.flatMap((d) => d.meals.filter((m) => m.slot === 'dinner').map((m) => RECIPES.find((r) => r.id === m.recipeId))).filter((r): r is Recipe => !!r);
+    const cost = shop.totalPence + shoppingLeftover(shop.lines) + varietyPenalty(dinnerRecipes) + misses * 100000;
     if (!best || cost < best.cost) best = { plan, cost };
   }
   return best!.plan;
