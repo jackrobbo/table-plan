@@ -1237,7 +1237,12 @@
    "peanuts",
    "soya"
   ],
-  "per100": null,
+  "per100": {
+   "kcal": 389,
+   "protein_g": 35,
+   "carbs_g": 34,
+   "fat_g": 17
+  },
   "product": {
    "retailer": "morrisons",
    "name": "Grenade Oreo Protein Bars 4×60g",
@@ -1246,7 +1251,12 @@
    "slug": "grenade-protein-bars-oreo-4x60g/113338551"
   },
   "gramsPerUnit": 60,
-  "category": "Cereals, snacks & protein"
+  "category": "Cereals, snacks & protein",
+  "cofid": {
+   "name": "Pack label (no CoFID cross-check)",
+   "verified": true,
+   "basis": "label"
+  }
  },
  {
   "slug": "wafer",
@@ -3476,6 +3486,90 @@
    "name": "Cabbage, white, raw",
    "verified": true,
    "basis": "cofid"
+  }
+ },
+ {
+  "slug": "turkeyslices",
+  "name": "Morrisons Carvery Turkey Slices 120g",
+  "display": "Turkey Slices",
+  "unit": "g",
+  "cupboard": false,
+  "allergens": [],
+  "per100": {
+   "kcal": 103,
+   "protein_g": 22.7,
+   "carbs_g": 1,
+   "fat_g": 0.8
+  },
+  "product": {
+   "retailer": "morrisons",
+   "name": "Morrisons Carvery Turkey Slices 120g",
+   "price_pence": 275,
+   "pack_size": 120,
+   "slug": "morrisons-carvery-turkey-slices/114005985"
+  },
+  "category": "Meat & fish",
+  "cofid": {
+   "name": "Pack label (no CoFID cross-check)",
+   "verified": true,
+   "basis": "label"
+  }
+ },
+ {
+  "slug": "thinchicken",
+  "name": "Morrisons Wafer Thin Cooked Chicken 400g",
+  "display": "Wafer Thin Cooked Chicken",
+  "unit": "g",
+  "cupboard": false,
+  "allergens": [],
+  "per100": {
+   "kcal": 131,
+   "protein_g": 15.7,
+   "carbs_g": 3.7,
+   "fat_g": 5.8
+  },
+  "product": {
+   "retailer": "morrisons",
+   "name": "Morrisons Wafer Thin Cooked Chicken 400g",
+   "price_pence": 250,
+   "pack_size": 400,
+   "slug": "morrisons-wafer-thin-cooked-chicken-400g/103107361"
+  },
+  "category": "Meat & fish",
+  "cofid": {
+   "name": "Pack label (no CoFID cross-check)",
+   "verified": true,
+   "basis": "label"
+  }
+ },
+ {
+  "slug": "proteinpitta",
+  "name": "Warburtons Protein Soft Pittas 4 pack",
+  "display": "Protein Pittas",
+  "unit": "pittas",
+  "cupboard": false,
+  "allergens": [
+   "gluten"
+  ],
+  "per100": {
+   "kcal": 240,
+   "protein_g": 12.9,
+   "carbs_g": 35.3,
+   "fat_g": 3.8
+  },
+  "product": {
+   "retailer": "morrisons",
+   "name": "Warburtons Protein Soft Pittas 4 pack",
+   "price_pence": 140,
+   "pack_size": 4,
+   "slug": "warburtons-protein-soft-pittas/114098974"
+  },
+  "category": "Bakery",
+  "gramsPerUnit": 63,
+  "cofid": {
+   "name": "Pack label (no CoFID cross-check)",
+   "verified": true,
+   "basis": "label"
   }
  }
 ]

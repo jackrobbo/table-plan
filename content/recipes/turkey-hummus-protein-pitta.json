@@ -1,0 +1,42 @@
+{
+ "slug": "turkey-hummus-protein-pitta",
+ "name": "Turkey & Hummus Protein Pitta",
+ "course": "lunch",
+ "emoji": "💪",
+ "serves": 1,
+ "status": "draft",
+ "time": {
+  "prep": 5,
+  "cook": 0
+ },
+ "ingredients": [
+  {
+   "ingredient": "proteinpitta",
+   "qty": 2
+  },
+  {
+   "ingredient": "turkeyslices",
+   "qty": 60
+  },
+  {
+   "ingredient": "houm",
+   "qty": 40
+  },
+  {
+   "ingredient": "cuc",
+   "qty": 0.2
+  },
+  {
+   "ingredient": "plum",
+   "qty": 60
+  }
+ ],
+ "cupboard": [],
+ "cupboard_qty": {},
+ "method": [
+  "Warm the protein pittas in a toaster or the microwave and split them open.",
+  "Spread the inside of each with houmous and fill with the turkey slices, sliced cucumber and tomato.",
+  "Serve straight away, or wrap them and keep chilled for later."
+ ],
+ "source": "table-plan"
+}

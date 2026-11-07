@@ -1,0 +1,42 @@
+{
+ "slug": "turkey-cheese-protein-wrap",
+ "name": "Turkey & Cheese Protein Wrap",
+ "course": "lunch",
+ "emoji": "💪",
+ "serves": 1,
+ "status": "draft",
+ "time": {
+  "prep": 4,
+  "cook": 0
+ },
+ "ingredients": [
+  {
+   "ingredient": "mission",
+   "qty": 1
+  },
+  {
+   "ingredient": "turkeyslices",
+   "qty": 50
+  },
+  {
+   "ingredient": "salad",
+   "qty": 20
+  },
+  {
+   "ingredient": "plum",
+   "qty": 50
+  }
+ ],
+ "cupboard": [
+  "cheddar"
+ ],
+ "cupboard_qty": {
+  "cheddar": 25
+ },
+ "method": [
+  "Grate the cheddar and slice the tomato.",
+  "Lay the turkey slices, cheese, salad leaves and tomato down the middle of the protein wrap.",
+  "Fold in the sides, roll up tightly and serve."
+ ],
+ "source": "table-plan"
+}

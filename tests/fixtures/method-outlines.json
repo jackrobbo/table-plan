@@ -1932,5 +1932,25 @@
  "blt-sandwich": {
   "source": "table-plan (our own classic build, no original recipe)",
   "steps": []
+ },
+ "turkey-salad-sandwich": {
+  "source": "table-plan (our own classic build, no original recipe)",
+  "steps": []
+ },
+ "turkey-cheese-protein-wrap": {
+  "source": "table-plan (our own classic build, no original recipe)",
+  "steps": []
+ },
+ "turkey-hummus-protein-pitta": {
+  "source": "table-plan (our own classic build, no original recipe)",
+  "steps": []
+ },
+ "budget-chicken-mayo-sandwich": {
+  "source": "table-plan (our own classic build, no original recipe)",
+  "steps": []
+ },
+ "chicken-salad-protein-pitta": {
+  "source": "table-plan (our own classic build, no original recipe)",
+  "steps": []
  }
 }

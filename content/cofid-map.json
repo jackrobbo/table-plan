@@ -450,5 +450,10 @@
  },
  "cabbage": {
   "code": "13-509"
+ },
+ "turkeyslices": {},
+ "thinchicken": {},
+ "proteinpitta": {
+  "gpu": 63
  }
 }

@@ -1,0 +1,42 @@
+{
+ "slug": "chicken-salad-protein-pitta",
+ "name": "Chicken Salad Protein Pitta",
+ "course": "lunch",
+ "emoji": "💪",
+ "serves": 1,
+ "status": "draft",
+ "time": {
+  "prep": 5,
+  "cook": 0
+ },
+ "ingredients": [
+  {
+   "ingredient": "proteinpitta",
+   "qty": 2
+  },
+  {
+   "ingredient": "thinchicken",
+   "qty": 80
+  },
+  {
+   "ingredient": "salad",
+   "qty": 25
+  },
+  {
+   "ingredient": "plum",
+   "qty": 60
+  }
+ ],
+ "cupboard": [
+  "mayo"
+ ],
+ "cupboard_qty": {
+  "mayo": 10
+ },
+ "method": [
+  "Warm the protein pittas in a toaster or the microwave and split them open.",
+  "Spread the inside of each with the mayonnaise and fill with the chicken, salad leaves and sliced tomato.",
+  "Serve straight away, or wrap them and keep chilled for later."
+ ],
+ "source": "table-plan"
+}

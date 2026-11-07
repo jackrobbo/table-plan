@@ -1,0 +1,46 @@
+{
+ "slug": "turkey-salad-sandwich",
+ "name": "Turkey Salad Sandwich",
+ "course": "lunch",
+ "emoji": "🦃",
+ "serves": 1,
+ "status": "draft",
+ "time": {
+  "prep": 5,
+  "cook": 0
+ },
+ "ingredients": [
+  {
+   "ingredient": "wholeloaf",
+   "qty": 80
+  },
+  {
+   "ingredient": "turkeyslices",
+   "qty": 60
+  },
+  {
+   "ingredient": "salad",
+   "qty": 25
+  },
+  {
+   "ingredient": "plum",
+   "qty": 60
+  },
+  {
+   "ingredient": "cuc",
+   "qty": 0.1
+  }
+ ],
+ "cupboard": [
+  "mayo"
+ ],
+ "cupboard_qty": {
+  "mayo": 10
+ },
+ "method": [
+  "Spread one side of each slice of bread with the mayonnaise.",
+  "Layer the turkey slices, salad leaves, sliced tomato and cucumber on one slice.",
+  "Top with the second slice of bread, cut in half and serve."
+ ],
+ "source": "table-plan"
+}
