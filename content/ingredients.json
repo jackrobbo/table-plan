@@ -4761,5 +4761,242 @@
    "verified": true,
    "basis": "label"
   }
+ },
+ {
+  "slug": "kvarg",
+  "name": "Lindahls Kvarg Vanilla 150g",
+  "display": "Kvarg Vanilla Pot",
+  "unit": "pots",
+  "cupboard": false,
+  "allergens": [
+   "milk"
+  ],
+  "per100": {
+   "kcal": 54,
+   "protein_g": 10,
+   "carbs_g": 3.5,
+   "fat_g": 0.2
+  },
+  "gramsPerUnit": 150,
+  "product": {
+   "retailer": "morrisons",
+   "name": "Lindahls Kvarg Vanilla 150g",
+   "price_pence": 145,
+   "pack_size": 1,
+   "slug": "lindahls-kvarg-vanilla-150g/109841217"
+  },
+  "category": "Dairy & eggs",
+  "cofid": {
+   "name": "Pack label (no CoFID cross-check)",
+   "verified": true,
+   "basis": "label"
+  }
+ },
+ {
+  "slug": "getpro",
+  "name": "GetPRO Vanilla High Protein Yoghurt 160g",
+  "display": "GetPRO Protein Yoghurt",
+  "unit": "pots",
+  "cupboard": false,
+  "allergens": [
+   "milk"
+  ],
+  "per100": {
+   "kcal": 53,
+   "protein_g": 9.4,
+   "carbs_g": 3.6,
+   "fat_g": 0.1
+  },
+  "gramsPerUnit": 160,
+  "product": {
+   "retailer": "morrisons",
+   "name": "GetPRO Vanilla High Protein Yoghurt 160g",
+   "price_pence": 125,
+   "pack_size": 1,
+   "slug": "getpro-vanilla-high-protein-yoghurt/113386499"
+  },
+  "category": "Dairy & eggs",
+  "cofid": {
+   "name": "Pack label (no CoFID cross-check)",
+   "verified": true,
+   "basis": "label"
+  }
+ },
+ {
+  "slug": "skyr",
+  "name": "Danone Skyr High Protein 0% Fat Natural Yoghurt 450g",
+  "display": "Skyr",
+  "unit": "g",
+  "cupboard": false,
+  "allergens": [
+   "milk"
+  ],
+  "per100": {
+   "kcal": 51,
+   "protein_g": 9,
+   "carbs_g": 3.4,
+   "fat_g": 0.1
+  },
+  "product": {
+   "retailer": "morrisons",
+   "name": "Danone Skyr High Protein 0% Fat Natural Yoghurt 450g",
+   "price_pence": 240,
+   "pack_size": 450,
+   "slug": "danone-skyr-high-protein-0-fat-natural-yoghurt-450g/115003703"
+  },
+  "category": "Dairy & eggs",
+  "cofid": {
+   "name": "Pack label (no CoFID cross-check)",
+   "verified": true,
+   "basis": "label"
+  }
+ },
+ {
+  "slug": "biltong",
+  "name": "Ember Original Biltong 45g",
+  "display": "Biltong",
+  "unit": "packs",
+  "cupboard": false,
+  "allergens": [],
+  "per100": {
+   "kcal": 244,
+   "protein_g": 51.8,
+   "carbs_g": 2.1,
+   "fat_g": 4.3
+  },
+  "gramsPerUnit": 45,
+  "product": {
+   "retailer": "morrisons",
+   "name": "Ember Original Biltong 45g",
+   "price_pence": 395,
+   "pack_size": 1,
+   "slug": "ember-original-biltong-snack-45g/115201902"
+  },
+  "category": "Meat & fish",
+  "cofid": {
+   "name": "Pack label (no CoFID cross-check)",
+   "verified": true,
+   "basis": "label"
+  }
+ },
+ {
+  "slug": "jerky",
+  "name": "Jack Link's Original Beef Jerky 25g",
+  "display": "Beef Jerky",
+  "unit": "packs",
+  "cupboard": false,
+  "allergens": [
+   "gluten",
+   "soya"
+  ],
+  "per100": {
+   "kcal": 253,
+   "protein_g": 35,
+   "carbs_g": 20,
+   "fat_g": 3.5
+  },
+  "gramsPerUnit": 25,
+  "product": {
+   "retailer": "morrisons",
+   "name": "Jack Link's Original Beef Jerky 25g",
+   "price_pence": 169,
+   "pack_size": 1,
+   "slug": "jack-link-s-original-beef-jerky/103237051"
+  },
+  "category": "Meat & fish",
+  "cofid": {
+   "name": "Pack label (no CoFID cross-check)",
+   "verified": true,
+   "basis": "label"
+  }
+ },
+ {
+  "slug": "promlk",
+  "name": "Pro MLK Chocolate Protein Drink 330ml",
+  "display": "Pro MLK Protein Drink",
+  "unit": "bottles",
+  "cupboard": false,
+  "allergens": [
+   "milk"
+  ],
+  "per100": {
+   "kcal": 62,
+   "protein_g": 7.8,
+   "carbs_g": 6.6,
+   "fat_g": 0.5
+  },
+  "gramsPerUnit": 330,
+  "product": {
+   "retailer": "morrisons",
+   "name": "Pro MLK Chocolate Protein Drink 330ml",
+   "price_pence": 115,
+   "pack_size": 1,
+   "slug": "pro-mlk-chocolate-protein-drink-330ml/113642528"
+  },
+  "category": "Dairy & eggs",
+  "cofid": {
+   "name": "Pack label (no CoFID cross-check)",
+   "verified": true,
+   "basis": "label"
+  }
+ },
+ {
+  "slug": "ufit",
+  "name": "Ufit Chocolate High Protein Milkshake 500ml",
+  "display": "Ufit Protein Milkshake",
+  "unit": "bottles",
+  "cupboard": false,
+  "allergens": [
+   "milk"
+  ],
+  "per100": {
+   "kcal": 59,
+   "protein_g": 10,
+   "carbs_g": 3.6,
+   "fat_g": 0.3
+  },
+  "gramsPerUnit": 500,
+  "product": {
+   "retailer": "morrisons",
+   "name": "Ufit Chocolate High Protein Milkshake 500ml",
+   "price_pence": 300,
+   "pack_size": 1,
+   "slug": "ufit-chocolate-high-protein-milkshake-500ml/110199532"
+  },
+  "category": "Dairy & eggs",
+  "cofid": {
+   "name": "Pack label (no CoFID cross-check)",
+   "verified": true,
+   "basis": "label"
+  }
+ },
+ {
+  "slug": "grapes",
+  "name": "Morrisons Seedless Green Grapes Punnet 400g",
+  "display": "Seedless Grapes",
+  "unit": "g",
+  "cupboard": false,
+  "allergens": [],
+  "per100": {
+   "kcal": 65,
+   "protein_g": 0.7,
+   "carbs_g": 16.1,
+   "fat_g": 0.2
+  },
+  "product": {
+   "retailer": "morrisons",
+   "name": "Morrisons Seedless Green Grapes Punnet 400g",
+   "price_pence": 200,
+   "pack_size": 400,
+   "slug": "morrisons-seedless-green-grapes-punnet-400g/108306239"
+  },
+  "category": "Fruit & veg",
+  "cofid": {
+   "code": "14-350",
+   "name": "Grapes, average",
+   "verified": true,
+   "basis": "cofid",
+   "approx": "Grapes, average for green seedless"
+  }
  }
 ]

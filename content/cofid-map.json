@@ -548,5 +548,29 @@
  "sundried": {},
  "mascarpone": {},
  "sourcream": {},
- "cranberry": {}
+ "cranberry": {},
+ "kvarg": {
+  "gpu": 150
+ },
+ "getpro": {
+  "gpu": 160
+ },
+ "skyr": {},
+ "biltong": {
+  "gpu": 45
+ },
+ "jerky": {
+  "gpu": 25
+ },
+ "promlk": {
+  "gpu": 330
+ },
+ "ufit": {
+  "gpu": 500
+ },
+ "grapes": {
+  "code": "14-350",
+  "prefer": "cofid",
+  "approx": "Grapes, average for green seedless"
+ }
 }

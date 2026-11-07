@@ -958,5 +958,69 @@
   "u": "g",
   "s": "morrisons-the-best-cranberry-sauce-200g/108534186",
   "c": "Tins, jars & sauces"
+ },
+ "kvarg": {
+  "n": "Lindahls Kvarg Vanilla 150g",
+  "pr": 145,
+  "pack": 1,
+  "u": "pots",
+  "s": "lindahls-kvarg-vanilla-150g/109841217",
+  "c": "Dairy & eggs"
+ },
+ "getpro": {
+  "n": "GetPRO Vanilla High Protein Yoghurt 160g",
+  "pr": 125,
+  "pack": 1,
+  "u": "pots",
+  "s": "getpro-vanilla-high-protein-yoghurt/113386499",
+  "c": "Dairy & eggs"
+ },
+ "skyr": {
+  "n": "Danone Skyr High Protein 0% Fat Natural Yoghurt 450g",
+  "pr": 240,
+  "pack": 450,
+  "u": "g",
+  "s": "danone-skyr-high-protein-0-fat-natural-yoghurt-450g/115003703",
+  "c": "Dairy & eggs"
+ },
+ "biltong": {
+  "n": "Ember Original Biltong 45g",
+  "pr": 395,
+  "pack": 1,
+  "u": "packs",
+  "s": "ember-original-biltong-snack-45g/115201902",
+  "c": "Meat & fish"
+ },
+ "jerky": {
+  "n": "Jack Link's Original Beef Jerky 25g",
+  "pr": 169,
+  "pack": 1,
+  "u": "packs",
+  "s": "jack-link-s-original-beef-jerky/103237051",
+  "c": "Meat & fish"
+ },
+ "promlk": {
+  "n": "Pro MLK Chocolate Protein Drink 330ml",
+  "pr": 115,
+  "pack": 1,
+  "u": "bottles",
+  "s": "pro-mlk-chocolate-protein-drink-330ml/113642528",
+  "c": "Dairy & eggs"
+ },
+ "ufit": {
+  "n": "Ufit Chocolate High Protein Milkshake 500ml",
+  "pr": 300,
+  "pack": 1,
+  "u": "bottles",
+  "s": "ufit-chocolate-high-protein-milkshake-500ml/110199532",
+  "c": "Dairy & eggs"
+ },
+ "grapes": {
+  "n": "Morrisons Seedless Green Grapes Punnet 400g",
+  "pr": 200,
+  "pack": 400,
+  "u": "g",
+  "s": "morrisons-seedless-green-grapes-punnet-400g/108306239",
+  "c": "Fruit & veg"
  }
 }

@@ -1,0 +1,25 @@
+{
+ "slug": "skyr-and-blueberries",
+ "name": "Skyr and Blueberries",
+ "course": "snack",
+ "emoji": "🫐",
+ "serves": 1,
+ "status": "draft",
+ "time": {
+  "prep": 1,
+  "cook": 0
+ },
+ "ingredients": [
+  {
+   "ingredient": "skyr",
+   "qty": 150
+  },
+  {
+   "ingredient": "blueb",
+   "qty": 60
+  }
+ ],
+ "cupboard": [],
+ "method": [],
+ "source": "idea: Morrisons snack list (design/snack-candidates.md)"
+}

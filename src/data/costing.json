@@ -1000,6 +1000,52 @@
    "unit": "g",
    "pack": 200,
    "pr": 195
+  },
+  "kvarg": {
+   "unit": "pots",
+   "pack": 1,
+   "pr": 145,
+   "g": 150
+  },
+  "getpro": {
+   "unit": "pots",
+   "pack": 1,
+   "pr": 125,
+   "g": 160
+  },
+  "skyr": {
+   "unit": "g",
+   "pack": 450,
+   "pr": 240
+  },
+  "biltong": {
+   "unit": "packs",
+   "pack": 1,
+   "pr": 395,
+   "g": 45
+  },
+  "jerky": {
+   "unit": "packs",
+   "pack": 1,
+   "pr": 169,
+   "g": 25
+  },
+  "promlk": {
+   "unit": "bottles",
+   "pack": 1,
+   "pr": 115,
+   "g": 330
+  },
+  "ufit": {
+   "unit": "bottles",
+   "pack": 1,
+   "pr": 300,
+   "g": 500
+  },
+  "grapes": {
+   "unit": "g",
+   "pack": 400,
+   "pr": 200
   }
  },
  "recipes": {
