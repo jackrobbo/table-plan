@@ -1,0 +1,64 @@
+{
+ "slug": "smoky-beef-enchiladas",
+ "name": "Smoky Beef Enchiladas",
+ "course": "dinner",
+ "emoji": "🌯",
+ "serves": 4,
+ "status": "draft",
+ "time": {
+  "prep": 15,
+  "cook": 25
+ },
+ "ingredients": [
+  {
+   "ingredient": "mince",
+   "qty": 500
+  },
+  {
+   "ingredient": "onions",
+   "qty": 2
+  },
+  {
+   "ingredient": "wraps",
+   "qty": 8
+  },
+  {
+   "ingredient": "plum",
+   "qty": 250
+  },
+  {
+   "ingredient": "spring",
+   "qty": 0.25
+  },
+  {
+   "ingredient": "coriander",
+   "qty": 10
+  }
+ ],
+ "cupboard": [
+  "puree",
+  "stock",
+  "cumin",
+  "paprika",
+  "chilliflakes",
+  "cheddar",
+  "oil"
+ ],
+ "cupboard_qty": {
+  "puree": 30,
+  "stock": 10,
+  "cumin": 3,
+  "paprika": 5,
+  "chilliflakes": 1,
+  "cheddar": 80,
+  "oil": 15
+ },
+ "method": [
+  "Heat the oven to 200C (180C fan). Soften the chopped onions in half the oil for 4 to 5 minutes.",
+  "Add the mince, cumin, paprika and chilli flakes, turn the heat up and brown for 4 to 5 minutes, breaking it up.",
+  "Dissolve the stock cube and tomato puree in 400ml hot water, pour into the pan and simmer for 5 minutes until thick and no longer wet.",
+  "Divide the mince between the wraps, roll up and place in an oiled dish. Top with the grated cheese and bake for 8 to 10 minutes until crisp at the edges.",
+  "Chop the tomatoes, spring onion and coriander with a splash of oil for a quick salsa and spoon over to serve."
+ ],
+ "source": "idea: Gousto"
+}

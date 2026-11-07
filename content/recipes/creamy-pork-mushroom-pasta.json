@@ -1,0 +1,53 @@
+{
+ "slug": "creamy-pork-mushroom-pasta",
+ "name": "Creamy Pork & Mushroom Pasta",
+ "course": "dinner",
+ "emoji": "🍄",
+ "serves": 4,
+ "status": "draft",
+ "time": {
+  "prep": 10,
+  "cook": 30
+ },
+ "ingredients": [
+  {
+   "ingredient": "porkloin",
+   "qty": 400
+  },
+  {
+   "ingredient": "mushrooms",
+   "qty": 300
+  },
+  {
+   "ingredient": "onions",
+   "qty": 2
+  },
+  {
+   "ingredient": "creme",
+   "qty": 150
+  }
+ ],
+ "cupboard": [
+  "fusilli",
+  "parmesan",
+  "stock",
+  "herbs",
+  "garlic",
+  "oil"
+ ],
+ "cupboard_qty": {
+  "fusilli": 400,
+  "parmesan": 50,
+  "stock": 5,
+  "herbs": 2,
+  "garlic": 6,
+  "oil": 15
+ },
+ "method": [
+  "Heat the oven to 200C (180C fan). Sear the pork steaks in the oil for 2 minutes each side, then roast on a tray for 8 to 10 minutes until cooked through. Cover and rest.",
+  "Cook the pasta to the packet instructions and drain.",
+  "In the pork pan, soften the chopped onion and garlic for a minute, add the quartered mushrooms for a minute, then the stock cube in 200ml hot water. Simmer for 5 minutes and stir in the crème fraîche and herbs.",
+  "Toss the pasta through the sauce, top with sliced pork and grated parmesan."
+ ],
+ "source": "idea: Gousto"
+}

@@ -1,0 +1,47 @@
+{
+ "slug": "pesto-chicken-courgette-pasta",
+ "name": "Pesto Chicken & Courgette Pasta",
+ "course": "dinner",
+ "emoji": "🌿",
+ "serves": 4,
+ "status": "draft",
+ "time": {
+  "prep": 10,
+  "cook": 15
+ },
+ "ingredients": [
+  {
+   "ingredient": "roast",
+   "qty": 270
+  },
+  {
+   "ingredient": "courgette",
+   "qty": 300
+  },
+  {
+   "ingredient": "plum",
+   "qty": 250
+  },
+  {
+   "ingredient": "pesto",
+   "qty": 100
+  }
+ ],
+ "cupboard": [
+  "fusilli",
+  "parmesan",
+  "oil"
+ ],
+ "cupboard_qty": {
+  "fusilli": 300,
+  "parmesan": 20,
+  "oil": 10
+ },
+ "method": [
+  "Cook the pasta to the packet instructions, then drain, keeping a little of the water.",
+  "Meanwhile fry the sliced courgette in the oil for 5 minutes until softened and lightly golden.",
+  "Add the chopped chicken and diced tomatoes and warm through for a couple of minutes.",
+  "Toss everything with the pasta and pesto, loosening with a splash of pasta water, and top with shavings of parmesan."
+ ],
+ "source": "idea: Sainsbury's recipes"
+}

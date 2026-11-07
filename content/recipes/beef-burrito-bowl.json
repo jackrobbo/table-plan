@@ -1,0 +1,82 @@
+{
+ "slug": "beef-burrito-bowl",
+ "name": "Beef Burrito Bowl",
+ "course": "dinner",
+ "emoji": "🥗",
+ "serves": 4,
+ "status": "draft",
+ "time": {
+  "prep": 10,
+  "cook": 30
+ },
+ "ingredients": [
+  {
+   "ingredient": "mince",
+   "qty": 350
+  },
+  {
+   "ingredient": "onions",
+   "qty": 1
+  },
+  {
+   "ingredient": "ctoms",
+   "qty": 400
+  },
+  {
+   "ingredient": "plum",
+   "qty": 150
+  },
+  {
+   "ingredient": "mixpep",
+   "qty": 2
+  },
+  {
+   "ingredient": "kidney",
+   "qty": 200
+  },
+  {
+   "ingredient": "avocado",
+   "qty": 1
+  },
+  {
+   "ingredient": "spring",
+   "qty": 0.25
+  },
+  {
+   "ingredient": "coriander",
+   "qty": 10
+  },
+  {
+   "ingredient": "lime",
+   "qty": 1
+  },
+  {
+   "ingredient": "greek",
+   "qty": 60
+  }
+ ],
+ "cupboard": [
+  "rice",
+  "puree",
+  "garlic",
+  "paprika",
+  "chilliflakes",
+  "oil"
+ ],
+ "cupboard_qty": {
+  "rice": 240,
+  "puree": 15,
+  "garlic": 4,
+  "paprika": 3,
+  "chilliflakes": 1,
+  "oil": 20
+ },
+ "method": [
+  "Fry the chopped onion in half the oil over a high heat for 5 to 7 minutes until soft and starting to colour. Add the garlic for a minute, then the mince, breaking it up until browned.",
+  "Stir in the paprika, chilli flakes and tomato puree for a minute, then add the tinned tomatoes and half a tin of water. Simmer for 20 minutes.",
+  "Meanwhile quarter the cherry tomatoes and mix with the sliced spring onion and coriander for a salsa. Slice the avocado and squeeze over the lime.",
+  "Fry the sliced peppers in the rest of the oil for 3 to 4 minutes, add the drained beans and heat through. Cook the rice, then stir the peppers and beans through it.",
+  "Divide the rice between bowls and top with the chilli, salsa, avocado and a spoonful of yoghurt."
+ ],
+ "source": "idea: Tesco Real Food"
+}

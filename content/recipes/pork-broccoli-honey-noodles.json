@@ -1,0 +1,53 @@
+{
+ "slug": "pork-broccoli-honey-noodles",
+ "name": "Pork, Broccoli & Honey Stir-Fry",
+ "course": "dinner",
+ "emoji": "🥦",
+ "serves": 4,
+ "status": "draft",
+ "time": {
+  "prep": 10,
+  "cook": 15
+ },
+ "ingredients": [
+  {
+   "ingredient": "porkloin",
+   "qty": 450
+  },
+  {
+   "ingredient": "brocc",
+   "qty": 250
+  },
+  {
+   "ingredient": "pepper",
+   "qty": 1
+  },
+  {
+   "ingredient": "chilli",
+   "qty": 8
+  }
+ ],
+ "cupboard": [
+  "noodles",
+  "honey",
+  "soy",
+  "cornflour",
+  "garlic",
+  "oil"
+ ],
+ "cupboard_qty": {
+  "noodles": 240,
+  "honey": 30,
+  "soy": 30,
+  "cornflour": 6,
+  "garlic": 3,
+  "oil": 15
+ },
+ "method": [
+  "Slice the pork into 1cm strips. Mix the cornflour with a tablespoon of water and set aside.",
+  "Cook the noodles to the packet instructions and drain.",
+  "Stir-fry the pork in the oil over a high heat for 3 to 4 minutes, then add the broccoli, sliced pepper, garlic and chilli and cook for 4 minutes.",
+  "Add the soy sauce, honey and cornflour mixture and bubble for a minute until glossy, then toss through the noodles."
+ ],
+ "source": "idea: Sainsbury's recipes"
+}
