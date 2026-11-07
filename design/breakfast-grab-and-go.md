@@ -23,3 +23,18 @@ Exact macros from pack labels; long shelf life so little waste; the item is the 
 
 ## What the catalogue has today
 Morrisons Protein Yogurt 200g (68 kcal, 10.5 g protein per 100 g), Greek Style Yogurt, Mission Protein Wraps, Myprotein Protein Wafer, Novo Protein Pops, Babybel, Low Fat Cottage Cheese, Porridge Oats. Grenade bars, FUEL10K granola and whey isolate have no nutrition data yet.
+
+## Also: supermarket ready meals, for lunch and dinner (Jack, 7 Nov 2026)
+Example: Tesco Gym Kitchen ready meals (high-protein, calories on the pack). Other stores have similar healthy ranges (names to confirm when we search; I believe Sainsbury's has "Be Good To Yourself"-style ranges, Asda and Morrisons have own-brand healthy ranges).
+
+**Why:** zero cooking, exact macros from the label, and no leftover ingredients, so it also serves the low-waste aim. Good for rushed days and for people who will not cook at all.
+
+**What changes in the app (a data-model point, not just content):**
+- A ready meal is a store product, not a recipe. Tesco Gym Kitchen only exists at Tesco, so the meal differs per store, and so do the calories and protein. Today a recipe has one set of macros computed from ingredients that are the same everywhere. A ready meal needs macros, price and a link per store.
+- Matching is by nutrition band, as for the packaged breakfasts: "high-protein chicken and rice, about 40 g protein, under 550 kcal" maps to each store's closest own-range meal, and the person sees their own store's numbers. If a store has no match for a band, the meal is simply not offered to that store's users.
+- This works best once the user has a default supermarket (set at registration, per Jack's earlier idea).
+- Add to basket is one product per meal, which is simpler than a recipe.
+
+**Cautions:** chilled meals last about 3 to 5 days, so they should sit early in the planned week or be frozen; price is typically £3 to £4.50 a meal, so they land in the "high" cost tier; and some are highly processed, so the quality rule (see above) applies here too.
+
+**Build order:** after the packaged-breakfast build, since it needs the same store search and label reading. Needs the Apify token step from Jack.

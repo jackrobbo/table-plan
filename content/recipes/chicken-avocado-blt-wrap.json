@@ -1,0 +1,46 @@
+{
+ "slug": "chicken-avocado-blt-wrap",
+ "name": "Chicken & Avocado BLT Wrap",
+ "course": "lunch",
+ "emoji": "🥑",
+ "serves": 1,
+ "status": "draft",
+ "time": {
+  "prep": 8,
+  "cook": 4
+ },
+ "ingredients": [
+  {
+   "ingredient": "wraps",
+   "qty": 1
+  },
+  {
+   "ingredient": "spinach",
+   "qty": 25
+  },
+  {
+   "ingredient": "roast",
+   "qty": 55
+  },
+  {
+   "ingredient": "plum",
+   "qty": 60
+  },
+  {
+   "ingredient": "bacon",
+   "qty": 1
+  },
+  {
+   "ingredient": "avocado",
+   "qty": 0.25
+  }
+ ],
+ "cupboard": [],
+ "cupboard_qty": {},
+ "method": [
+  "Fry the bacon in a dry pan for 3 to 4 minutes until crisp, then drain it.",
+  "Mash the avocado and spread it over the wrap, then top with the spinach, shredded chicken, halved tomatoes and the bacon.",
+  "Roll the wrap up tightly and serve."
+ ],
+ "source": "idea: EatingWell"
+}

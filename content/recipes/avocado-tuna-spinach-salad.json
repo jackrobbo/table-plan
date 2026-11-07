@@ -1,0 +1,56 @@
+{
+ "slug": "avocado-tuna-spinach-salad",
+ "name": "Avocado Tuna Spinach Salad",
+ "course": "lunch",
+ "emoji": "🥗",
+ "serves": 1,
+ "status": "draft",
+ "time": {
+  "prep": 10,
+  "cook": 0
+ },
+ "ingredients": [
+  {
+   "ingredient": "avocado",
+   "qty": 0.25
+  },
+  {
+   "ingredient": "plum",
+   "qty": 60
+  },
+  {
+   "ingredient": "onions",
+   "qty": 0.1
+  },
+  {
+   "ingredient": "spinach",
+   "qty": 60
+  },
+  {
+   "ingredient": "lemon",
+   "qty": 0.5
+  },
+  {
+   "ingredient": "pittas",
+   "qty": 1
+  }
+ ],
+ "cupboard": [
+  "tuna",
+  "oil",
+  "honey",
+  "nuts"
+ ],
+ "cupboard_qty": {
+  "tuna": 100,
+  "oil": 8,
+  "honey": 3,
+  "nuts": 10
+ },
+ "method": [
+  "Drain the tuna and put it in a bowl with the diced avocado, halved tomatoes and finely diced onion.",
+  "Add the oil, lemon juice and honey and mix gently.",
+  "Serve over the baby spinach, sprinkle with the chopped nuts and have a toasted pitta alongside."
+ ],
+ "source": "idea: EatingWell"
+}

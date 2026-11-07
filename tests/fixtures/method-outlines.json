@@ -1369,5 +1369,85 @@
     ]
    }
   ]
+ },
+ "chicken-blt-wrap": {
+  "source": "EatingWell",
+  "steps": [
+   {
+    "do": [
+     "spread"
+    ]
+   },
+   {
+    "do": [
+     "top"
+    ]
+   },
+   {
+    "do": [
+     "roll"
+    ]
+   }
+  ]
+ },
+ "chicken-avocado-blt-wrap": {
+  "source": "EatingWell",
+  "steps": [
+   {
+    "do": [
+     "spread"
+    ]
+   },
+   {
+    "do": [
+     "top"
+    ]
+   },
+   {
+    "do": [
+     "roll"
+    ]
+   }
+  ]
+ },
+ "avocado-tuna-spinach-salad": {
+  "source": "EatingWell",
+  "steps": [
+   {
+    "do": [
+     "tuna"
+    ]
+   },
+   {
+    "do": [
+     "oil"
+    ]
+   },
+   {
+    "do": [
+     "serve"
+    ]
+   }
+  ]
+ },
+ "egg-avocado-toast": {
+  "source": "EatingWell",
+  "steps": [
+   {
+    "do": [
+     "mash"
+    ]
+   },
+   {
+    "do": [
+     "mix"
+    ]
+   },
+   {
+    "do": [
+     "toast"
+    ]
+   }
+  ]
  }
 }

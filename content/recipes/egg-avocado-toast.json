@@ -1,0 +1,47 @@
+{
+ "slug": "egg-avocado-toast",
+ "name": "Egg Salad Avocado Toast",
+ "course": "lunch",
+ "emoji": "🥑",
+ "serves": 1,
+ "status": "draft",
+ "time": {
+  "prep": 5,
+  "cook": 8
+ },
+ "ingredients": [
+  {
+   "ingredient": "eggs",
+   "qty": 2
+  },
+  {
+   "ingredient": "avocado",
+   "qty": 0.5
+  },
+  {
+   "ingredient": "celery",
+   "qty": 0.25
+  },
+  {
+   "ingredient": "lemon",
+   "qty": 0.25
+  },
+  {
+   "ingredient": "wholeloaf",
+   "qty": 70
+  }
+ ],
+ "cupboard": [
+  "chilliflakes"
+ ],
+ "cupboard_qty": {
+  "chilliflakes": 0.3
+ },
+ "method": [
+  "Hard-boil the eggs for 8 minutes, cool them under cold water, then peel and chop them.",
+  "Mash the avocado in a small bowl with the finely chopped celery, a squeeze of lemon juice, the chilli flakes and a pinch of salt.",
+  "Mix the chopped egg into the avocado.",
+  "Toast the bread, spread the egg and avocado mix on top and serve."
+ ],
+ "source": "idea: EatingWell"
+}

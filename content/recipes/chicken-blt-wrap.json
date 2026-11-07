@@ -1,0 +1,46 @@
+{
+ "slug": "chicken-blt-wrap",
+ "name": "Chicken BLT Wrap",
+ "course": "lunch",
+ "emoji": "🌯",
+ "serves": 1,
+ "status": "draft",
+ "time": {
+  "prep": 5,
+  "cook": 4
+ },
+ "ingredients": [
+  {
+   "ingredient": "wraps",
+   "qty": 1
+  },
+  {
+   "ingredient": "iceberg",
+   "qty": 0.05
+  },
+  {
+   "ingredient": "roast",
+   "qty": 60
+  },
+  {
+   "ingredient": "plum",
+   "qty": 60
+  },
+  {
+   "ingredient": "bacon",
+   "qty": 1
+  }
+ ],
+ "cupboard": [
+  "mayo"
+ ],
+ "cupboard_qty": {
+  "mayo": 15
+ },
+ "method": [
+  "Fry the bacon in a dry pan for 3 to 4 minutes until crisp, then drain it on kitchen paper.",
+  "Spread the wrap with the mayonnaise, then top with the lettuce, sliced chicken, sliced tomato and bacon.",
+  "Roll the wrap closed, cut it in half and serve."
+ ],
+ "source": "idea: EatingWell"
+}
