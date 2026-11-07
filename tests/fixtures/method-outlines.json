@@ -1449,5 +1449,107 @@
     ]
    }
   ]
+ },
+ "finger-licking-chicken-pittas": {
+  "source": "NHS Healthier Families",
+  "steps": [
+   {
+    "do": [
+     "chill"
+    ],
+    "mins": [
+     15,
+     15
+    ]
+   },
+   {
+    "do": [
+     "heat"
+    ]
+   },
+   {
+    "do": [
+     "stir-fry"
+    ],
+    "mins": [
+     5,
+     8
+    ]
+   },
+   {
+    "do": [
+     "pittas"
+    ]
+   }
+  ]
+ },
+ "ham-coleslaw-pittas": {
+  "source": "NHS Healthier Families",
+  "steps": [
+   {
+    "do": [
+     "mix"
+    ]
+   },
+   {
+    "do": [
+     "warm"
+    ]
+   },
+   {
+    "do": [
+     "serve"
+    ]
+   }
+  ]
+ },
+ "chicken-apple-coleslaw-sarnie": {
+  "source": "NHS Healthier Families",
+  "steps": [
+   {
+    "do": [
+     "spread"
+    ]
+   },
+   {
+    "do": [
+     "mix"
+    ]
+   },
+   {
+    "do": [
+     "sandwich"
+    ]
+   }
+  ]
+ },
+ "tuna-potato-salad": {
+  "source": "NHS Healthier Families",
+  "steps": [
+   {
+    "do": [
+     "potatoes"
+    ],
+    "mins": [
+     20,
+     20
+    ]
+   },
+   {
+    "do": [
+     "lemon"
+    ]
+   },
+   {
+    "do": [
+     "drain"
+    ]
+   },
+   {
+    "do": [
+     "tuna"
+    ]
+   }
+  ]
  }
 }

@@ -79,3 +79,8 @@ EatingWell is a US site, so ingredients and names may be American (tostadas, cra
 - Strongest new ideas: Turkey BLT wraps, chicken avocado BLT wrap, avocado tuna spinach salad, egg salad avocado toast.
 - Avocados push cost up (about 75p each); check the lunch cost tier before building several.
 - Two caprese sandwiches need fresh mozzarella and basil, which we do not stock; build one at most if we add them.
+
+## NHS Healthier Families (links from Jack, 7 Nov 2026) - read and drafted
+Drafted (status draft): Finger-licking chicken pittas, Ham & fresh coleslaw pittas, Chicken sarnie with apple coleslaw (from "Turkey sarnie with coleslaw", roast chicken slices instead of turkey), Tuna & potato salad. NHS portions are small family-lunchbox sizes (162, 220, 302 and 199 kcal), so ours are scaled up for adults and are not calorie-matched to the source; the method order, timings and ingredients are.
+
+**Licence (read 7 Nov, from nhs.uk/our-policies/terms-and-conditions, last reviewed Jan 2021):** NHS website content is released under the Open Government Licence v3.0, including commercial use. Adapted content must carry "Contains public sector information licensed under the Open Government Licence v3.0" and must NOT be attributed to the NHS. Photos, logos and image rights are excluded, so we use our own photos. Recipe pages carry "© Crown copyright" and the Healthier Families section has its own terms page, which has not been read yet. Not legal advice; add to the solicitor list. See `design/todo.md`.
