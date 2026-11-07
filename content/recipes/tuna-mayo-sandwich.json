@@ -1,0 +1,40 @@
+{
+ "slug": "tuna-mayo-sandwich",
+ "name": "Tuna Mayo Sandwich",
+ "course": "lunch",
+ "emoji": "🥪",
+ "serves": 1,
+ "status": "draft",
+ "time": {
+  "prep": 5,
+  "cook": 0
+ },
+ "ingredients": [
+  {
+   "ingredient": "loaf",
+   "qty": 2
+  },
+  {
+   "ingredient": "spring",
+   "qty": 0.1
+  },
+  {
+   "ingredient": "salad",
+   "qty": 15
+  }
+ ],
+ "cupboard": [
+  "tuna",
+  "mayo"
+ ],
+ "cupboard_qty": {
+  "tuna": 80,
+  "mayo": 15
+ },
+ "method": [
+  "Drain the tuna and mix it with the mayonnaise and the finely sliced spring onion in a small bowl.",
+  "Pile the tuna mayo onto one slice of bread and top with the salad leaves.",
+  "Close with the second slice, cut in half and serve."
+ ],
+ "source": "table-plan"
+}

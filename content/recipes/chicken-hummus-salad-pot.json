@@ -1,0 +1,46 @@
+{
+ "slug": "chicken-hummus-salad-pot",
+ "name": "Chicken & Hummus Salad Pot",
+ "course": "lunch",
+ "emoji": "🥗",
+ "serves": 1,
+ "status": "draft",
+ "time": {
+  "prep": 5,
+  "cook": 0
+ },
+ "ingredients": [
+  {
+   "ingredient": "roast",
+   "qty": 100
+  },
+  {
+   "ingredient": "salad",
+   "qty": 60
+  },
+  {
+   "ingredient": "plum",
+   "qty": 80
+  },
+  {
+   "ingredient": "cuc",
+   "qty": 0.25
+  },
+  {
+   "ingredient": "houm",
+   "qty": 40
+  },
+  {
+   "ingredient": "pittas",
+   "qty": 1
+  }
+ ],
+ "cupboard": [],
+ "cupboard_qty": {},
+ "method": [
+  "Put the salad leaves in a lunchbox or tub and add the halved tomatoes and sliced cucumber.",
+  "Chop the chicken slices and scatter them on top.",
+  "Add the houmous in a spoonful on one side and serve with a pitta, or put the lid on and keep it chilled for later."
+ ],
+ "source": "table-plan"
+}

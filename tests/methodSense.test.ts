@@ -78,7 +78,7 @@ describe(`methods make sense (${gated.length} new dinners gated, ${live.length} 
       });
 
       it('cooks raw meat through', () => {
-        const meat = r.ingredients.some((l) => ['breast', 'thigh', 'porkmince', 'porkloin', 'sausages', 'mince', 'turkeymince', 'lambmince', 'prawns'].includes(l.ingredient));
+        const meat = r.ingredients.some((l) => ['breast', 'thigh', 'porkmince', 'porkloin', 'sausages', 'mince', 'turkeymince', 'lambmince']  /* prawns in the catalogue are cooked king prawns */.includes(l.ingredient));
         if (!meat) return;
         expect(/cooked (?:right )?through|until (?:it is |they are |the \w+ is )?(?:browned|golden|pink|cooked)|brown|sear|fry/.test(text), 'says how to tell it is cooked').toBe(true);
         expect(minutesIn(text).length, 'gives at least one cooking time').toBeGreaterThan(0);

@@ -1,0 +1,38 @@
+{
+ "slug": "chicken-mayo-protein-wrap",
+ "name": "Chicken Mayo Protein Wrap",
+ "course": "lunch",
+ "emoji": "💪",
+ "serves": 1,
+ "status": "draft",
+ "time": {
+  "prep": 4,
+  "cook": 0
+ },
+ "ingredients": [
+  {
+   "ingredient": "mission",
+   "qty": 1
+  },
+  {
+   "ingredient": "roast",
+   "qty": 100
+  },
+  {
+   "ingredient": "salad",
+   "qty": 20
+  }
+ ],
+ "cupboard": [
+  "mayo"
+ ],
+ "cupboard_qty": {
+  "mayo": 15
+ },
+ "method": [
+  "Chop the chicken slices and mix them with the mayonnaise.",
+  "Put the salad leaves down the middle of the protein wrap and spoon the chicken mayo on top.",
+  "Fold in the sides, roll up tightly and serve."
+ ],
+ "source": "table-plan"
+}

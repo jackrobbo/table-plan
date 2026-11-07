@@ -1,0 +1,52 @@
+{
+ "slug": "tuna-sweetcorn-salad-pot",
+ "name": "Tuna & Sweetcorn Salad Pot",
+ "course": "lunch",
+ "emoji": "🥗",
+ "serves": 1,
+ "status": "draft",
+ "time": {
+  "prep": 5,
+  "cook": 0
+ },
+ "ingredients": [
+  {
+   "ingredient": "salad",
+   "qty": 60
+  },
+  {
+   "ingredient": "plum",
+   "qty": 80
+  },
+  {
+   "ingredient": "cuc",
+   "qty": 0.25
+  },
+  {
+   "ingredient": "greek",
+   "qty": 30
+  },
+  {
+   "ingredient": "lemon",
+   "qty": 0.25
+  },
+  {
+   "ingredient": "pittas",
+   "qty": 1
+  }
+ ],
+ "cupboard": [
+  "tuna",
+  "sweetcorn"
+ ],
+ "cupboard_qty": {
+  "tuna": 100,
+  "sweetcorn": 60
+ },
+ "method": [
+  "Put the salad leaves in a lunchbox or tub and add the halved tomatoes and sliced cucumber.",
+  "Drain the tuna and sweetcorn and mix them with the yoghurt and a squeeze of lemon juice.",
+  "Spoon the tuna mix on top and serve with a pitta, or put the lid on and keep it chilled for later."
+ ],
+ "source": "table-plan"
+}

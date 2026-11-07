@@ -1,0 +1,42 @@
+{
+ "slug": "blt-sandwich",
+ "name": "BLT Sandwich",
+ "course": "lunch",
+ "emoji": "🥓",
+ "serves": 1,
+ "status": "draft",
+ "time": {
+  "prep": 5,
+  "cook": 5
+ },
+ "ingredients": [
+  {
+   "ingredient": "loaf",
+   "qty": 2
+  },
+  {
+   "ingredient": "bacon",
+   "qty": 2
+  },
+  {
+   "ingredient": "iceberg",
+   "qty": 0.05
+  },
+  {
+   "ingredient": "plum",
+   "qty": 60
+  }
+ ],
+ "cupboard": [
+  "mayo"
+ ],
+ "cupboard_qty": {
+  "mayo": 12
+ },
+ "method": [
+  "Fry the bacon in a dry pan for about 4 minutes until crisp, then drain it.",
+  "Spread the mayonnaise over the bread and layer the lettuce, sliced tomato and bacon on one slice.",
+  "Top with the second slice, cut in half and serve."
+ ],
+ "source": "table-plan"
+}

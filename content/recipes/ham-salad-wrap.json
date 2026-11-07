@@ -1,0 +1,46 @@
+{
+ "slug": "ham-salad-wrap",
+ "name": "Ham & Salad Wrap",
+ "course": "lunch",
+ "emoji": "🥬",
+ "serves": 1,
+ "status": "draft",
+ "time": {
+  "prep": 4,
+  "cook": 0
+ },
+ "ingredients": [
+  {
+   "ingredient": "wraps",
+   "qty": 1
+  },
+  {
+   "ingredient": "ham",
+   "qty": 50
+  },
+  {
+   "ingredient": "salad",
+   "qty": 25
+  },
+  {
+   "ingredient": "plum",
+   "qty": 60
+  },
+  {
+   "ingredient": "cuc",
+   "qty": 0.15
+  }
+ ],
+ "cupboard": [
+  "mayo"
+ ],
+ "cupboard_qty": {
+  "mayo": 10
+ },
+ "method": [
+  "Spread the wrap with the mayonnaise.",
+  "Layer the ham, salad leaves, sliced tomato and cucumber down the middle.",
+  "Fold in the sides, roll up tightly and serve."
+ ],
+ "source": "table-plan"
+}

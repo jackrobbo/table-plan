@@ -1876,5 +1876,61 @@
     ]
    }
   ]
+ },
+ "tuna-mayo-sandwich": {
+  "source": "table-plan (our own classic build, no original recipe)",
+  "steps": []
+ },
+ "tuna-sweetcorn-wrap": {
+  "source": "table-plan (our own classic build, no original recipe)",
+  "steps": []
+ },
+ "tuna-cucumber-protein-wrap": {
+  "source": "table-plan (our own classic build, no original recipe)",
+  "steps": []
+ },
+ "tuna-sweetcorn-salad-pot": {
+  "source": "table-plan (our own classic build, no original recipe)",
+  "steps": []
+ },
+ "chicken-salad-sandwich": {
+  "source": "table-plan (our own classic build, no original recipe)",
+  "steps": []
+ },
+ "chicken-mayo-protein-wrap": {
+  "source": "table-plan (our own classic build, no original recipe)",
+  "steps": []
+ },
+ "chicken-hummus-salad-pot": {
+  "source": "table-plan (our own classic build, no original recipe)",
+  "steps": []
+ },
+ "coronation-chicken-wrap": {
+  "source": "table-plan (our own classic build, no original recipe)",
+  "steps": []
+ },
+ "cheese-tomato-sandwich": {
+  "source": "table-plan (our own classic build, no original recipe)",
+  "steps": []
+ },
+ "ham-salad-wrap": {
+  "source": "table-plan (our own classic build, no original recipe)",
+  "steps": []
+ },
+ "ham-cheese-protein-wrap": {
+  "source": "table-plan (our own classic build, no original recipe)",
+  "steps": []
+ },
+ "prawn-mayo-sandwich": {
+  "source": "table-plan (our own classic build, no original recipe)",
+  "steps": []
+ },
+ "egg-avocado-protein-wrap": {
+  "source": "table-plan (our own classic build, no original recipe)",
+  "steps": []
+ },
+ "blt-sandwich": {
+  "source": "table-plan (our own classic build, no original recipe)",
+  "steps": []
  }
 }

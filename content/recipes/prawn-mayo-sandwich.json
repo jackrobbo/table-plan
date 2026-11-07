@@ -1,0 +1,42 @@
+{
+ "slug": "prawn-mayo-sandwich",
+ "name": "Prawn Mayo Sandwich",
+ "course": "lunch",
+ "emoji": "🦐",
+ "serves": 1,
+ "status": "draft",
+ "time": {
+  "prep": 5,
+  "cook": 0
+ },
+ "ingredients": [
+  {
+   "ingredient": "loaf",
+   "qty": 2
+  },
+  {
+   "ingredient": "prawns",
+   "qty": 80
+  },
+  {
+   "ingredient": "salad",
+   "qty": 20
+  },
+  {
+   "ingredient": "lemon",
+   "qty": 0.1
+  }
+ ],
+ "cupboard": [
+  "mayo"
+ ],
+ "cupboard_qty": {
+  "mayo": 15
+ },
+ "method": [
+  "Mix the prawns with the mayonnaise and a squeeze of lemon juice.",
+  "Pile the prawn mayo onto one slice of bread and top with the salad leaves.",
+  "Close with the second slice, cut in half and serve."
+ ],
+ "source": "table-plan"
+}

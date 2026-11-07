@@ -1,0 +1,42 @@
+{
+ "slug": "tuna-cucumber-protein-wrap",
+ "name": "Tuna & Cucumber Protein Wrap",
+ "course": "lunch",
+ "emoji": "💪",
+ "serves": 1,
+ "status": "draft",
+ "time": {
+  "prep": 5,
+  "cook": 0
+ },
+ "ingredients": [
+  {
+   "ingredient": "mission",
+   "qty": 1
+  },
+  {
+   "ingredient": "greek",
+   "qty": 30
+  },
+  {
+   "ingredient": "cuc",
+   "qty": 0.25
+  },
+  {
+   "ingredient": "lemon",
+   "qty": 0.25
+  }
+ ],
+ "cupboard": [
+  "tuna"
+ ],
+ "cupboard_qty": {
+  "tuna": 100
+ },
+ "method": [
+  "Drain the tuna and mix it with the yoghurt and a squeeze of lemon juice, and season with black pepper.",
+  "Slice the cucumber into thin strips.",
+  "Spoon the tuna mix onto the protein wrap, add the cucumber, roll up tightly and serve."
+ ],
+ "source": "table-plan"
+}

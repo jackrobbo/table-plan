@@ -1,0 +1,44 @@
+{
+ "slug": "coronation-chicken-wrap",
+ "name": "Coronation Chicken Wrap",
+ "course": "lunch",
+ "emoji": "👑",
+ "serves": 1,
+ "status": "draft",
+ "time": {
+  "prep": 5,
+  "cook": 0
+ },
+ "ingredients": [
+  {
+   "ingredient": "wraps",
+   "qty": 1
+  },
+  {
+   "ingredient": "roast",
+   "qty": 90
+  },
+  {
+   "ingredient": "greek",
+   "qty": 40
+  },
+  {
+   "ingredient": "salad",
+   "qty": 20
+  }
+ ],
+ "cupboard": [
+  "curry",
+  "honey"
+ ],
+ "cupboard_qty": {
+  "curry": 2,
+  "honey": 5
+ },
+ "method": [
+  "Chop the chicken slices and stir them into the yoghurt with the curry powder and honey.",
+  "Lay the salad leaves down the middle of the wrap and spoon the coronation chicken on top.",
+  "Fold in the sides, roll up tightly and serve."
+ ],
+ "source": "table-plan"
+}

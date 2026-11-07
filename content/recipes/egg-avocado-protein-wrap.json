@@ -1,0 +1,42 @@
+{
+ "slug": "egg-avocado-protein-wrap",
+ "name": "Egg & Avocado Protein Wrap",
+ "course": "lunch",
+ "emoji": "💪",
+ "serves": 1,
+ "status": "draft",
+ "time": {
+  "prep": 5,
+  "cook": 8
+ },
+ "ingredients": [
+  {
+   "ingredient": "mission",
+   "qty": 1
+  },
+  {
+   "ingredient": "eggs",
+   "qty": 2
+  },
+  {
+   "ingredient": "avocado",
+   "qty": 0.25
+  },
+  {
+   "ingredient": "plum",
+   "qty": 40
+  }
+ ],
+ "cupboard": [
+  "mayo"
+ ],
+ "cupboard_qty": {
+  "mayo": 8
+ },
+ "method": [
+  "Hard-boil the eggs for 8 minutes, cool them under cold water, then peel and chop them.",
+  "Mash the avocado and mix it with the chopped egg, the mayonnaise and a pinch of salt.",
+  "Spoon the egg mix onto the protein wrap, add the sliced tomato, roll up tightly and serve."
+ ],
+ "source": "table-plan"
+}

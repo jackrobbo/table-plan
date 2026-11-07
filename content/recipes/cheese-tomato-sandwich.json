@@ -1,0 +1,40 @@
+{
+ "slug": "cheese-tomato-sandwich",
+ "name": "Cheese & Tomato Sandwich",
+ "course": "lunch",
+ "emoji": "🧀",
+ "serves": 1,
+ "status": "draft",
+ "time": {
+  "prep": 5,
+  "cook": 0
+ },
+ "ingredients": [
+  {
+   "ingredient": "loaf",
+   "qty": 2
+  },
+  {
+   "ingredient": "plum",
+   "qty": 80
+  },
+  {
+   "ingredient": "salad",
+   "qty": 15
+  }
+ ],
+ "cupboard": [
+  "cheddar",
+  "butter"
+ ],
+ "cupboard_qty": {
+  "cheddar": 40,
+  "butter": 8
+ },
+ "method": [
+  "Butter both slices of bread and slice or grate the cheddar.",
+  "Layer the cheese, sliced tomatoes and salad leaves on one slice.",
+  "Top with the second slice, cut in half and serve."
+ ],
+ "source": "table-plan"
+}

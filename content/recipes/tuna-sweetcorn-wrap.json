@@ -1,0 +1,38 @@
+{
+ "slug": "tuna-sweetcorn-wrap",
+ "name": "Tuna & Sweetcorn Wrap",
+ "course": "lunch",
+ "emoji": "🌯",
+ "serves": 1,
+ "status": "draft",
+ "time": {
+  "prep": 5,
+  "cook": 0
+ },
+ "ingredients": [
+  {
+   "ingredient": "wraps",
+   "qty": 1
+  },
+  {
+   "ingredient": "salad",
+   "qty": 20
+  }
+ ],
+ "cupboard": [
+  "tuna",
+  "mayo",
+  "sweetcorn"
+ ],
+ "cupboard_qty": {
+  "tuna": 80,
+  "mayo": 15,
+  "sweetcorn": 40
+ },
+ "method": [
+  "Drain the tuna and sweetcorn and mix them with the mayonnaise.",
+  "Lay the salad leaves down the middle of the wrap and spoon the tuna mix on top.",
+  "Fold in the sides, roll up tightly and serve."
+ ],
+ "source": "table-plan"
+}
