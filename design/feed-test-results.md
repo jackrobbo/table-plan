@@ -64,3 +64,10 @@ Setup before it can run (Jack, in Vercel > table-plan-app > Settings > Environme
 4. `SUPABASE_SERVICE_ROLE_KEY` should already be set (used by `/api/prices`).
 Then redeploy. To test without waiting for Monday, call the cron route once by hand with the CRON_SECRET (costs about $0.50).
 `.github/workflows/prices.yml` is manual-only (Morrisons blocks GitHub), so it is left as a fallback.
+
+## First live run of the weekly job (7 Nov 2026, 18:00 UTC): passed
+Triggered by hand from Vercel (Settings > Observability > Schedules > Cron Jobs > row menu > Run). Morrisons 120 of 120 and Tesco 86 of 86 came back, 0 held, 206 price rows and 288 Morrisons recipe costs written by the new run.
+Two things the first attempt (17:50) taught us, both fixed in `7d0d874`:
+- Apify marked the runs "Failed" even though they pushed every row (exit code 0). The ingest now reads any run that has a dataset and lets the coverage check decide.
+- The secret header is trimmed on both sides (`pbcopy` adds a trailing newline).
+Four test runs from that attempt were closed as failed in `price_runs`. Real cost of a full two-store run: about $0.53 (Morrisons $0.31, Tesco $0.22). Runs take 2 to 4 minutes.
