@@ -2077,10 +2077,10 @@
   "cupboard": false,
   "allergens": [],
   "per100": {
-   "kcal": 164,
-   "protein_g": 19.2,
+   "kcal": 132,
+   "protein_g": 22.8,
    "carbs_g": 0,
-   "fat_g": 9.7
+   "fat_g": 4.5
   },
   "product": {
    "retailer": "morrisons",
@@ -2090,10 +2090,11 @@
    "slug": "morrisons-british-pork-mince-5-fat-500g/107781821"
   },
   "cofid": {
-   "code": "18-606",
-   "name": "Pork, mince, raw",
-   "verified": false,
-   "basis": "cofid"
+   "code": "18-530",
+   "name": "Pork, diced, raw, lean and fat",
+   "verified": true,
+   "basis": "cofid",
+   "approx": "pork diced raw lean and fat (4.5 g fat) for 5% fat pork mince; CoFID raw pork mince is a ~10% fat product. The Morrisons page shows 33.2 g protein per 100 g, which is not credible for 5% fat mince, so it is not used"
   },
   "category": "Meat & fish"
  },

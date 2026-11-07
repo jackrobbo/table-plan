@@ -1,0 +1,10 @@
+{
+  "_about": "Calories per serving stated by the original recipe (a fact we compare against, not copied text). Our figure is computed from our own ingredients, so some difference is expected; 'tolerance' is the allowed gap as a fraction, and 'note' says why a bigger one is acceptable.",
+  "beef-burrito-bowl": { "kcal": 489, "source": "Tesco recipes (serves 6)", "tolerance": 0.2 },
+  "chicken-fajita-pasta": { "kcal": 620, "source": "Sainsbury's recipes (serves 4)", "tolerance": 0.2 },
+  "pork-broccoli-honey-noodles": { "kcal": 500, "source": "Sainsbury's recipes (serves 4)", "tolerance": 0.2 },
+  "pesto-chicken-courgette-pasta": { "kcal": 629, "source": "Sainsbury's recipes (serves 4)", "tolerance": 0.3, "note": "ours uses 270 g sliced roast chicken and no extra oil; the original's 300 g cooked chicken, olive oil and parmesan add calories" },
+  "prawn-egg-fried-rice": { "kcal": 418, "source": "BBC Good Food (serves 4)", "tolerance": 0.2 },
+  "beef-noodle-stir-fry": { "kcal": 407, "source": "BBC Good Food (serves 2)", "tolerance": 0.2 },
+  "chicken-sweetcorn-tacos": { "kcal": 382, "source": "BBC Good Food (serves 4 plus 2 lunchboxes)", "tolerance": 0.4, "note": "Good Food makes its own tortillas; a shop-bought 62 g wrap is larger" }
+}

@@ -256,7 +256,9 @@
   "code": "11-788"
  },
  "porkmince": {
-  "code": "18-606"
+  "code": "18-530",
+  "approx": "pork diced raw lean and fat (4.5 g fat) for 5% fat pork mince; CoFID raw pork mince is a ~10% fat product. The Morrisons page shows 33.2 g protein per 100 g, which is not credible for 5% fat mince, so it is not used",
+  "prefer": "cofid"
  },
  "porkloin": {
   "code": "18-522"
