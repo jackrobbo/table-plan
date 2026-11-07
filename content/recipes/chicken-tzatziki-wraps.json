@@ -1,0 +1,47 @@
+{
+ "slug": "chicken-tzatziki-wraps",
+ "name": "Chicken Tzatziki Wrap",
+ "course": "lunch",
+ "emoji": "🌯",
+ "serves": 1,
+ "status": "draft",
+ "time": {
+  "prep": 10,
+  "cook": 12
+ },
+ "ingredients": [
+  {
+   "ingredient": "breast",
+   "qty": 125
+  },
+  {
+   "ingredient": "greek",
+   "qty": 60
+  },
+  {
+   "ingredient": "cuc",
+   "qty": 0.25
+  },
+  {
+   "ingredient": "wraps",
+   "qty": 1
+  },
+  {
+   "ingredient": "plum",
+   "qty": 120
+  }
+ ],
+ "cupboard": [
+  "oil"
+ ],
+ "cupboard_qty": {
+  "oil": 8
+ },
+ "method": [
+  "Grate most of the cucumber into the yoghurt, mix well and season. This is your tzatziki. Slice the rest of the cucumber.",
+  "Season the chicken and rub it with half the oil. Heat the rest of the oil in a pan over a medium heat and cook the chicken for 8 to 10 minutes until golden and cooked through.",
+  "Warm the wrap in a dry pan or the microwave and spread it with the tzatziki.",
+  "Top with the chicken, sliced tomatoes and cucumber, fold in the sides, roll up tightly and serve."
+ ],
+ "source": "idea: BBC Good Food"
+}

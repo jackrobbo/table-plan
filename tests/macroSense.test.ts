@@ -58,13 +58,13 @@ describe('every recipe is costed from verified ingredients', () => {
 });
 
 describe('recipe totals look like real food', () => {
-  for (const r of recipes.filter((x) => x.course === 'dinner' && isNew(x))) {
+  for (const r of recipes.filter((x) => (x.course === 'dinner' || x.course === 'lunch') && isNew(x))) {
     it(r.slug, () => {
       const c = computePerPortion(r, ing);
       expect(c.missing).toEqual([]);
       // Plate weight: ingredients as bought (raw, dry), so a dinner is 200 to 700 g per person.
       const grams = recipeLines(r, ing).reduce((a, l) => a + (gramsOf(ing.get(l.slug)!, l.qty) ?? 0), 0) / r.serves;
-      expect(grams, `${Math.round(grams)} g per portion`).toBeGreaterThan(200);
+      expect(grams, `${Math.round(grams)} g per portion`).toBeGreaterThan(r.course === 'lunch' ? 150 : 200);
       expect(grams).toBeLessThan(750);
       const density = c.kcal / grams;
       expect(density, `${density.toFixed(2)} kcal per g`).toBeGreaterThan(0.6);

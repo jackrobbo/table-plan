@@ -10,7 +10,7 @@ const ing = new Map(ingredients.map((i) => [i.slug, i]));
 const recipes = fs.readdirSync(path.join(root, 'content/recipes')).filter((f) => f.endsWith('.json')).flatMap((f) => {
   const v = JSON.parse(fs.readFileSync(path.join(root, 'content/recipes', f), 'utf8')) as RecipeDef | RecipeDef[];
   return Array.isArray(v) ? v : [v];
-}).filter((r) => r.course === 'dinner' && !r.macros_only);
+}).filter((r) => (r.course === 'dinner' || r.course === 'lunch') && !r.macros_only);
 
 /** Words a method may use for an ingredient slug, besides the words in its name. */
 const WORDS: Record<string, string[]> = {

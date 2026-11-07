@@ -1,0 +1,55 @@
+{
+ "slug": "chicken-tikka-wrap",
+ "name": "Chicken Tikka Wrap",
+ "course": "lunch",
+ "emoji": "🌯",
+ "serves": 1,
+ "status": "draft",
+ "time": {
+  "prep": 40,
+  "cook": 10
+ },
+ "ingredients": [
+  {
+   "ingredient": "breast",
+   "qty": 140
+  },
+  {
+   "ingredient": "greek",
+   "qty": 60
+  },
+  {
+   "ingredient": "tikka",
+   "qty": 15
+  },
+  {
+   "ingredient": "wraps",
+   "qty": 1
+  },
+  {
+   "ingredient": "plum",
+   "qty": 60
+  },
+  {
+   "ingredient": "cuc",
+   "qty": 0.25
+  },
+  {
+   "ingredient": "coriander",
+   "qty": 5
+  }
+ ],
+ "cupboard": [
+  "oil"
+ ],
+ "cupboard_qty": {
+  "oil": 5
+ },
+ "method": [
+  "Toss the chicken pieces with half the yoghurt, the tikka paste and the oil, then cover and chill for at least 30 minutes (overnight is fine).",
+  "Heat the grill to high and line a tray with foil. Grill the chicken for 7 to 8 minutes, turning once, until lightly charred and cooked through, then leave to cool a little.",
+  "Warm the wrap for a few seconds in the microwave and spread it with the rest of the yoghurt.",
+  "Top with sliced tomato, cucumber, coriander and the chicken, roll up tightly, slice in half and serve."
+ ],
+ "source": "idea: Joe Wicks"
+}

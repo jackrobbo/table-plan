@@ -1080,5 +1080,294 @@
     ]
    }
   ]
+ },
+ "prep-ahead-chicken-mayo-wrap": {
+  "source": "Joe Wicks",
+  "steps": [
+   {
+    "do": [
+     "mayonnaise",
+     "mayo"
+    ]
+   },
+   {
+    "do": [
+     "spread"
+    ]
+   },
+   {
+    "do": [
+     "roll"
+    ]
+   }
+  ]
+ },
+ "tuna-chickpea-salad": {
+  "source": "Joe Wicks",
+  "steps": [
+   {
+    "do": [
+     "chickpeas"
+    ]
+   },
+   {
+    "do": [
+     "tuna"
+    ]
+   },
+   {
+    "do": [
+     "serve"
+    ]
+   }
+  ]
+ },
+ "chicken-tikka-wrap": {
+  "source": "Joe Wicks",
+  "steps": [
+   {
+    "do": [
+     "chill"
+    ]
+   },
+   {
+    "do": [
+     "grill"
+    ],
+    "mins": [
+     7,
+     8
+    ]
+   },
+   {
+    "do": [
+     "warm"
+    ]
+   },
+   {
+    "do": [
+     "top"
+    ]
+   }
+  ]
+ },
+ "greek-pasta-salad": {
+  "source": "Joe Wicks",
+  "steps": [
+   {
+    "do": [
+     "pasta"
+    ]
+   },
+   {
+    "do": [
+     "whisk"
+    ]
+   },
+   {
+    "do": [
+     "feta"
+    ]
+   },
+   {
+    "do": [
+     "toss"
+    ]
+   }
+  ]
+ },
+ "chicken-tzatziki-wraps": {
+  "source": "BBC Good Food",
+  "steps": [
+   {
+    "do": [
+     "tzatziki"
+    ]
+   },
+   {
+    "do": [
+     "chicken"
+    ],
+    "mins": [
+     8,
+     10
+    ]
+   },
+   {
+    "do": [
+     "warm"
+    ]
+   },
+   {
+    "do": [
+     "roll"
+    ]
+   }
+  ]
+ },
+ "chicken-bacon-chopped-salad": {
+  "source": "Mob",
+  "steps": [
+   {
+    "do": [
+     "oven"
+    ],
+    "temp": 180
+   },
+   {
+    "do": [
+     "broccoli"
+    ],
+    "mins": [
+     3,
+     4
+    ]
+   },
+   {
+    "do": [
+     "bake"
+    ],
+    "mins": [
+     25,
+     25
+    ]
+   },
+   {
+    "do": [
+     "rice"
+    ]
+   },
+   {
+    "do": [
+     "chop"
+    ]
+   },
+   {
+    "do": [
+     "whisk"
+    ]
+   }
+  ]
+ },
+ "chicken-pepper-cucumber-salad": {
+  "source": "Mob",
+  "steps": [
+   {
+    "do": [
+     "oven"
+    ],
+    "temp": 180
+   },
+   {
+    "do": [
+     "bake"
+    ],
+    "mins": [
+     25,
+     25
+    ]
+   },
+   {
+    "do": [
+     "chop"
+    ]
+   },
+   {
+    "do": [
+     "dress"
+    ]
+   },
+   {
+    "do": [
+     "cottage"
+    ]
+   }
+  ]
+ },
+ "buttery-tomatoes-cheese-on-toast": {
+  "source": "Mob",
+  "steps": [
+   {
+    "do": [
+     "toast"
+    ]
+   },
+   {
+    "do": [
+     "garlic"
+    ],
+    "mins": [
+     1,
+     1
+    ]
+   },
+   {
+    "do": [
+     "tomatoes"
+    ],
+    "mins": [
+     10,
+     10
+    ]
+   },
+   {
+    "do": [
+     "whisk"
+    ]
+   },
+   {
+    "do": [
+     "grill"
+    ],
+    "mins": [
+     2,
+     2
+    ]
+   }
+  ]
+ },
+ "paprika-chicken-chorizo-wrap": {
+  "source": "Mob",
+  "steps": [
+   {
+    "do": [
+     "dice"
+    ]
+   },
+   {
+    "do": [
+     "fry"
+    ],
+    "mins": [
+     10,
+     10
+    ]
+   },
+   {
+    "do": [
+     "puree"
+    ]
+   },
+   {
+    "do": [
+     "microwave",
+     "warm"
+    ]
+   },
+   {
+    "do": [
+     "pan"
+    ]
+   },
+   {
+    "do": [
+     "leave"
+    ],
+    "mins": [
+     5,
+     5
+    ]
+   }
+  ]
  }
 }

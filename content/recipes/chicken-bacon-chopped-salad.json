@@ -1,0 +1,52 @@
+{
+ "slug": "chicken-bacon-chopped-salad",
+ "name": "Chicken & Bacon Chopped Salad",
+ "course": "lunch",
+ "emoji": "🥗",
+ "serves": 2,
+ "status": "draft",
+ "time": {
+  "prep": 15,
+  "cook": 30
+ },
+ "ingredients": [
+  {
+   "ingredient": "breast",
+   "qty": 300
+  },
+  {
+   "ingredient": "bacon",
+   "qty": 4
+  },
+  {
+   "ingredient": "brocc",
+   "qty": 150
+  },
+  {
+   "ingredient": "iceberg",
+   "qty": 0.5
+  },
+  {
+   "ingredient": "lemon",
+   "qty": 1
+  }
+ ],
+ "cupboard": [
+  "rice",
+  "honey",
+  "oil"
+ ],
+ "cupboard_qty": {
+  "rice": 100,
+  "honey": 10,
+  "oil": 15
+ },
+ "method": [
+  "Heat the oven to 180C (160C fan). Boil the broccoli in salted water for 3 to 4 minutes, then drain and leave to cool.",
+  "Season the chicken, put it on a baking tray and bake for 25 minutes until cooked through, adding the bacon for the last 10 minutes until crisp. Leave to cool, as this salad is not served warm.",
+  "Cook the rice to the packet instructions and let it cool a little.",
+  "Chop the lettuce, broccoli, chicken and bacon and put them in a bowl with the rice.",
+  "Whisk the oil, lemon juice and honey together, toss through the salad and serve."
+ ],
+ "source": "idea: Mob"
+}

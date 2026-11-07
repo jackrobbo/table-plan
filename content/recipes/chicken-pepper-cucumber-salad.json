@@ -1,0 +1,51 @@
+{
+ "slug": "chicken-pepper-cucumber-salad",
+ "name": "Chicken, Pepper & Cucumber Chopped Salad",
+ "course": "lunch",
+ "emoji": "🥒",
+ "serves": 2,
+ "status": "draft",
+ "time": {
+  "prep": 15,
+  "cook": 25
+ },
+ "ingredients": [
+  {
+   "ingredient": "breast",
+   "qty": 300
+  },
+  {
+   "ingredient": "pepper",
+   "qty": 1
+  },
+  {
+   "ingredient": "cuc",
+   "qty": 1
+  },
+  {
+   "ingredient": "coriander",
+   "qty": 10
+  },
+  {
+   "ingredient": "cottage",
+   "qty": 100
+  }
+ ],
+ "cupboard": [
+  "nuts",
+  "vinegar",
+  "oil"
+ ],
+ "cupboard_qty": {
+  "nuts": 20,
+  "vinegar": 10,
+  "oil": 10
+ },
+ "method": [
+  "Heat the oven to 180C (160C fan). Season the chicken, put it on a baking tray and bake for 25 minutes until cooked through, then leave to cool, as this salad is not served warm.",
+  "Chop the chicken, pepper, cucumber, coriander and nuts into even pieces and mix in a bowl.",
+  "Dress with the vinegar and oil and toss vigorously.",
+  "Serve with a spoonful of cottage cheese on each portion."
+ ],
+ "source": "idea: Mob"
+}

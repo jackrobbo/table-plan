@@ -1,0 +1,46 @@
+{
+ "slug": "buttery-tomatoes-cheese-on-toast",
+ "name": "Buttery Tomatoes on Cheese on Toast",
+ "course": "lunch",
+ "emoji": "🧀",
+ "serves": 2,
+ "status": "draft",
+ "time": {
+  "prep": 10,
+  "cook": 20
+ },
+ "ingredients": [
+  {
+   "ingredient": "loaf",
+   "qty": 4
+  },
+  {
+   "ingredient": "plum",
+   "qty": 200
+  }
+ ],
+ "cupboard": [
+  "cheddar",
+  "garlic",
+  "butter",
+  "chilliflakes",
+  "herbs",
+  "oil"
+ ],
+ "cupboard_qty": {
+  "cheddar": 60,
+  "garlic": 3,
+  "butter": 25,
+  "chilliflakes": 1,
+  "herbs": 1,
+  "oil": 10
+ },
+ "method": [
+  "Butter one side of each slice using 10g of the butter and toast it butter-side down in a medium pan for a few minutes until deep golden. Grate the cheese and pile it on the untoasted sides.",
+  "In the same pan heat the oil, fry the crushed garlic for a minute, then add the chilli flakes and cook for 30 seconds.",
+  "Add the halved tomatoes, season and cook for 10 minutes until they have broken down.",
+  "Turn the pan to low and whisk in the rest of the cold butter in small cubes until glossy, then stir through the herbs.",
+  "Heat the grill to high and grill the bread for 2 minutes until the cheese melts. Spoon the tomatoes on top and serve."
+ ],
+ "source": "idea: Mob"
+}

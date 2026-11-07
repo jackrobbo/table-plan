@@ -1,0 +1,48 @@
+{
+ "slug": "prep-ahead-chicken-mayo-wrap",
+ "name": "Prep-Ahead Chicken Mayo Wrap",
+ "course": "lunch",
+ "emoji": "🌯",
+ "serves": 1,
+ "status": "draft",
+ "time": {
+  "prep": 10,
+  "cook": 0
+ },
+ "ingredients": [
+  {
+   "ingredient": "roast",
+   "qty": 120
+  },
+  {
+   "ingredient": "wraps",
+   "qty": 2
+  },
+  {
+   "ingredient": "plum",
+   "qty": 100
+  },
+  {
+   "ingredient": "cuc",
+   "qty": 0.25
+  },
+  {
+   "ingredient": "iceberg",
+   "qty": 0.1
+  }
+ ],
+ "cupboard": [
+  "mayo",
+  "garlic"
+ ],
+ "cupboard_qty": {
+  "mayo": 40,
+  "garlic": 2
+ },
+ "method": [
+  "Stir the crushed garlic into the mayonnaise in a small bowl.",
+  "Spread the garlic mayo over the wraps, then add the shredded chicken, sliced tomatoes, cucumber and chopped lettuce.",
+  "Roll the wraps up tightly and serve, or pack them in a lunch box for later."
+ ],
+ "source": "idea: Joe Wicks"
+}

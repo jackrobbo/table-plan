@@ -16,8 +16,12 @@ const ing = new Map(ingredients.map((i) => [i.slug, i]));
 const recipes = fs.readdirSync(path.join(root, 'content/recipes')).filter((f) => f.endsWith('.json')).flatMap((f) => {
   const v = JSON.parse(fs.readFileSync(path.join(root, 'content/recipes', f), 'utf8')) as RecipeDef | RecipeDef[];
   return Array.isArray(v) ? v : [v];
-}).filter((r) => r.course === 'dinner' && !r.macros_only);
+}).filter((r) => !r.macros_only);
+// All dinners, plus lunches that are new (not live yet, or part of the sourced set with a recorded outline); older live lunches predate these checks.
+const outlineKeys = new Set(Object.keys(JSON.parse(fs.readFileSync(path.join(root, 'tests/fixtures/method-outlines.json'), 'utf8')) as Record<string, unknown>));
+const inScope = (r: RecipeDef) => r.course === 'dinner' || (r.course === 'lunch' && (r.status !== 'live' || outlineKeys.has(r.slug)));
 
+const scoped = recipes.filter(inScope);
 const products = Object.fromEntries(ingredients.filter((i) => i.product).map((i) => [i.slug, { n: i.product!.name, pr: i.product!.price_pence, pack: i.product!.pack_size, u: i.unit, s: i.product!.slug, c: i.category ?? 'Other' }]));
 const toApp = (r: RecipeDef): Recipe => ({
   id: r.slug, c: r.course, e: r.emoji, n: r.name, p: 0, k: 0, serves: r.serves,
@@ -31,8 +35,8 @@ const planFor = (id: string, scale: number, extra: number): Plan => {
   return { seed: 1, days: [{ day: 'Monday', meals: [meal], topups: [], kcal: 0, protein: 0, reserved: { kcal: 0, protein: 0 }, inBand: true, adjusted: false }], issues: [] };
 };
 
-describe(`every dinner, ${RUNS.length} runs each (${recipes.length} recipes)`, () => {
-  for (const r of recipes) {
+describe(`every dinner and new lunch, ${RUNS.length} runs each (${scoped.length} recipes)`, () => {
+  for (const r of scoped) {
     describe(r.slug, () => {
       const app = toApp(r);
       const map = new Map([[app.id, app]]);
