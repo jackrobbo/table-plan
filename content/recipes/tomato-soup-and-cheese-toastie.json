@@ -28,8 +28,9 @@
   "butter": 10
  },
  "method": [
-  "Heat the soup until steaming hot.",
-  "Butter the bread, fill with grated cheese and toast in a pan until golden. Dunk away."
+  "Pour the tomato soup into a small pan and heat gently for 5 minutes until steaming hot.",
+  "Butter the outside of the bread slices and fill with grated cheddar.",
+  "Toast the sandwich in a frying pan for 2 to 3 minutes each side until golden and the cheese has melted. Cut in half and serve with the soup for dunking."
  ],
  "source": "table-plan"
 }

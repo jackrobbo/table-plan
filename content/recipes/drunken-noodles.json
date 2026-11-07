@@ -1,0 +1,65 @@
+{
+ "slug": "drunken-noodles",
+ "name": "Drunken Noodles",
+ "course": "dinner",
+ "emoji": "🍜",
+ "serves": 4,
+ "status": "live",
+ "time": {
+  "prep": 15,
+  "cook": 15
+ },
+ "ingredients": [
+  {
+   "ingredient": "breast",
+   "qty": 450
+  },
+  {
+   "ingredient": "ricenoodles",
+   "qty": 300
+  },
+  {
+   "ingredient": "onions",
+   "qty": 1
+  },
+  {
+   "ingredient": "chilli",
+   "qty": 15
+  },
+  {
+   "ingredient": "spring",
+   "qty": 1
+  },
+  {
+   "ingredient": "mixpep",
+   "qty": 2
+  }
+ ],
+ "cupboard": [
+  "garlic",
+  "fishsauce",
+  "oystersauce",
+  "soy",
+  "darksoy",
+  "honey",
+  "oil"
+ ],
+ "cupboard_qty": {
+  "garlic": 12,
+  "fishsauce": 20,
+  "oystersauce": 30,
+  "soy": 30,
+  "darksoy": 15,
+  "honey": 15,
+  "oil": 30
+ },
+ "method": [
+  "Soak the rice noodles in boiling water for about 10 minutes, or as the packet says, then drain. Mince the garlic, slice the chilli, onion and peppers, cut the spring onion into 4cm pieces and thinly slice the chicken.",
+  "Stir together the fish sauce, oyster sauce, soy sauce, dark soy and honey in a bowl.",
+  "Heat the oil in a large wok until very hot and stir-fry the garlic, onion, peppers and chilli for 2 minutes.",
+  "Add the chicken and cook for 4 to 5 minutes, stirring, until cooked through with no pink left.",
+  "Pour in the sauce, add the noodles and toss until coated, then mix in the spring onion.",
+  "Divide between bowls and serve straight away."
+ ],
+ "source": "idea: Mob"
+}

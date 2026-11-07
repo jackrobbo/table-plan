@@ -1,0 +1,70 @@
+{
+ "slug": "lamb-meatball-pitta-wraps",
+ "name": "Lamb Meatball Pitta Wraps",
+ "course": "dinner",
+ "emoji": "🥙",
+ "serves": 4,
+ "time": {
+  "prep": 15,
+  "cook": 15
+ },
+ "ingredients": [
+  {
+   "ingredient": "lambmince",
+   "qty": 350
+  },
+  {
+   "ingredient": "pittas",
+   "qty": 4
+  },
+  {
+   "ingredient": "onions",
+   "qty": 0.5
+  },
+  {
+   "ingredient": "plum",
+   "qty": 150
+  },
+  {
+   "ingredient": "harissa",
+   "qty": 10
+  },
+  {
+   "ingredient": "greek",
+   "qty": 150
+  },
+  {
+   "ingredient": "houm",
+   "qty": 60
+  },
+  {
+   "ingredient": "coriander",
+   "qty": 10
+  }
+ ],
+ "cupboard": [
+  "oregano",
+  "sesameseeds",
+  "oil",
+  "vinegar",
+  "honey",
+  "nuts"
+ ],
+ "cupboard_qty": {
+  "oregano": 2,
+  "sesameseeds": 5,
+  "oil": 10,
+  "vinegar": 10,
+  "honey": 5,
+  "nuts": 20
+ },
+ "method": [
+  "Heat the oven to 190C (170C fan). Mix the lamb mince with the oregano and sesame seeds and roll into 16 small meatballs.",
+  "Fry the meatballs in the oil for 4 minutes until browned all over, then move to a baking tray. Sprinkle the pittas with water and wrap in foil.",
+  "Bake the meatballs and pittas together for 6 to 8 minutes until the lamb is cooked through and the bread is warm.",
+  "Meanwhile toast the chopped nuts in a dry pan for 2 minutes and cool. Toss the sliced onion and quartered tomatoes with the vinegar and honey, and ripple the harissa through the yoghurt.",
+  "Split the pittas and fill with the meatballs, tomato salad, harissa yoghurt and houmous, then scatter with the coriander and nuts and serve."
+ ],
+ "source": "idea: Sainsbury's recipes",
+ "status": "live"
+}

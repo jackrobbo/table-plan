@@ -1,0 +1,63 @@
+{
+ "slug": "chilli-wraps",
+ "name": "Chilli Wraps",
+ "course": "lunch",
+ "emoji": "🌯",
+ "serves": 1,
+ "status": "live",
+ "time": {
+  "prep": 8,
+  "cook": 12
+ },
+ "ingredients": [
+  {
+   "ingredient": "mince",
+   "qty": 120
+  },
+  {
+   "ingredient": "onions",
+   "qty": 0.5
+  },
+  {
+   "ingredient": "ctoms",
+   "qty": 130
+  },
+  {
+   "ingredient": "kidney",
+   "qty": 60
+  },
+  {
+   "ingredient": "wraps",
+   "qty": 2
+  },
+  {
+   "ingredient": "coriander",
+   "qty": 5
+  },
+  {
+   "ingredient": "greek",
+   "qty": 20
+  }
+ ],
+ "cupboard": [
+  "oil",
+  "garlic",
+  "cumin",
+  "paprika",
+  "chilliflakes"
+ ],
+ "cupboard_qty": {
+  "oil": 5,
+  "garlic": 3,
+  "cumin": 1.5,
+  "paprika": 1.5,
+  "chilliflakes": 0.5
+ },
+ "method": [
+  "Heat the oil in a frying pan over a medium-high heat and fry the chopped onion and garlic for 3 minutes until starting to soften.",
+  "Add the beef mince with the cumin, paprika and chilli flakes and cook for 3 to 4 minutes, breaking it up, until browned and fragrant.",
+  "Stir in the chopped tomatoes and kidney beans and simmer for 5 minutes until thick and the mince is cooked through, then season.",
+  "Warm the wraps, spoon the chilli into them, top with the coriander and a spoonful of yoghurt, then roll up and serve."
+ ],
+ "source": "idea: Joe Wicks"
+}

@@ -1,0 +1,152 @@
+{
+ "crispy-sweet-chilli-beef-noodles": {
+  "source": "Morrisons / Good Food",
+  "steps": [
+   {
+    "do": [
+     "boiling"
+    ],
+    "deviation": "Original uses straight-to-wok noodles; we use dried egg noodles boiled first."
+   },
+   {
+    "do": [
+     "crispy"
+    ]
+   },
+   {
+    "do": [
+     "onion"
+    ]
+   },
+   {
+    "do": [
+     "puree"
+    ],
+    "mins": [
+     1,
+     1
+    ]
+   },
+   {
+    "do": [
+     "toss"
+    ],
+    "mins": [
+     2,
+     2
+    ]
+   }
+  ]
+ },
+ "bbq-chicken-gyros-cabbage-salad": {
+  "source": "Morrisons / Good Food",
+  "steps": [
+   {
+    "do": [
+     "marinade"
+    ]
+   },
+   {
+    "do": [
+     "skewers"
+    ]
+   },
+   {
+    "do": [
+     "charred"
+    ],
+    "mins": [
+     15,
+     15
+    ],
+    "deviation": "Original cooks whole thighs on a BBQ; we grill smaller chunks so each side takes less time."
+   },
+   {
+    "do": [
+     "pittas"
+    ]
+   }
+  ]
+ },
+ "caribbean-fish-curry": {
+  "source": "Morrisons / Good Food",
+  "steps": [
+   {
+    "do": [
+     "fry"
+    ],
+    "mins": [
+     5,
+     5
+    ]
+   },
+   {
+    "do": [
+     "simmer"
+    ],
+    "mins": [
+     15,
+     15
+    ]
+   },
+   {
+    "do": [
+     "rice"
+    ],
+    "deviation": "Rice cooked separately in boiling water; original serves with steamed rice."
+   },
+   {
+    "do": [
+     "cod"
+    ],
+    "mins": [
+     5,
+     5
+    ]
+   }
+  ]
+ },
+ "tandoori-chicken-kebab-bean-biryani": {
+  "source": "Morrisons / Good Food",
+  "steps": [
+   {
+    "do": [
+     "soak"
+    ],
+    "deviation": "Tikka paste replaces tandoori paste, which the catalogue lacks."
+   },
+   {
+    "do": [
+     "onion"
+    ],
+    "mins": [
+     6,
+     6
+    ]
+   },
+   {
+    "do": [
+     "cover"
+    ],
+    "mins": [
+     10,
+     10
+    ]
+   },
+   {
+    "do": [
+     "skewers"
+    ]
+   },
+   {
+    "do": [
+     "turning"
+    ],
+    "mins": [
+     20,
+     20
+    ]
+   }
+  ]
+ }
+}

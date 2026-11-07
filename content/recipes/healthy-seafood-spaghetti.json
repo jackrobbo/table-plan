@@ -1,0 +1,55 @@
+{
+ "slug": "healthy-seafood-spaghetti",
+ "name": "Healthy Seafood Spaghetti",
+ "course": "dinner",
+ "emoji": "🍝",
+ "serves": 2,
+ "status": "live",
+ "time": {
+  "prep": 10,
+  "cook": 20
+ },
+ "ingredients": [
+  {
+   "ingredient": "celery",
+   "qty": 3
+  },
+  {
+   "ingredient": "onions",
+   "qty": 1
+  },
+  {
+   "ingredient": "lemon",
+   "qty": 0.5
+  },
+  {
+   "ingredient": "seafoodmix",
+   "qty": 300
+  },
+  {
+   "ingredient": "basil",
+   "qty": 10
+  }
+ ],
+ "cupboard": [
+  "puree",
+  "oil",
+  "spaghetti",
+  "chilliflakes",
+  "garlic"
+ ],
+ "cupboard_qty": {
+  "puree": 45,
+  "oil": 26,
+  "spaghetti": 150,
+  "chilliflakes": 1,
+  "garlic": 9
+ },
+ "method": [
+  "Heat the oil in a large non-stick pan and cook the sliced celery and chopped onion for 10 minutes, stirring now and then, until softened. Meanwhile boil the spaghetti for 10 minutes until al dente.",
+  "Stir the chilli flakes, grated garlic, lemon zest and lemon juice into the softened vegetables, then add the tomato puree and cook briefly, stirring all the time.",
+  "Drain the spaghetti, keeping a mugful of the cooking water. Add the seafood to the sauce and warm it through for 2 to 3 minutes.",
+  "Toss the spaghetti into the sauce with the chopped basil and just enough of the cooking water to loosen it. Season and serve."
+ ],
+ "source": "idea: BBC Good Food"
+}

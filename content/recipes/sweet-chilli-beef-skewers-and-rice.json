@@ -1,0 +1,62 @@
+{
+ "slug": "sweet-chilli-beef-skewers-and-rice",
+ "name": "Sweet Chilli Beef Skewers with Veg Rice",
+ "course": "dinner",
+ "emoji": "🍢",
+ "serves": 4,
+ "time": {
+  "prep": 15,
+  "cook": 16
+ },
+ "ingredients": [
+  {
+   "ingredient": "sizzle",
+   "qty": 300
+  },
+  {
+   "ingredient": "plum",
+   "qty": 170
+  },
+  {
+   "ingredient": "sweetchilli",
+   "qty": 175
+  },
+  {
+   "ingredient": "babycorn",
+   "qty": 100
+  },
+  {
+   "ingredient": "sugarsnap",
+   "qty": 75
+  },
+  {
+   "ingredient": "spring",
+   "qty": 0.5
+  },
+  {
+   "ingredient": "lime",
+   "qty": 1
+  },
+  {
+   "ingredient": "coriander",
+   "qty": 10
+  }
+ ],
+ "cupboard": [
+  "rice",
+  "oil"
+ ],
+ "cupboard_qty": {
+  "rice": 240,
+  "oil": 5
+ },
+ "method": [
+  "Soak 8 wooden skewers in water for 10 minutes. Cook the rice to the packet instructions, about 12 minutes, then drain.",
+  "Heat the grill to medium-high. Toss the beef strips and halved tomatoes with two thirds of the sweet chilli sauce, then thread onto the skewers.",
+  "Grill the skewers for 6 minutes, turning once, until the beef is cooked through.",
+  "Meanwhile heat the oil in a wok and stir-fry the baby corn, sugar snap peas and spring onions for 2 minutes, adding a splash of water to steam.",
+  "Add the rice and the rest of the sweet chilli sauce and cook for 2 minutes until hot. Serve the skewers on the rice with lime wedges and torn coriander."
+ ],
+ "source": "idea: Sainsbury's recipes",
+ "status": "live"
+}

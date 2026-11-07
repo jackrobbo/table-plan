@@ -1,0 +1,48 @@
+{
+ "slug": "steak-and-eggs-potatoes",
+ "name": "New York-Style Steak & Eggs",
+ "course": "breakfast",
+ "emoji": "🥩",
+ "serves": 1,
+ "status": "live",
+ "time": {
+  "prep": 10,
+  "cook": 20
+ },
+ "ingredients": [
+  {
+   "ingredient": "rump",
+   "qty": 135
+  },
+  {
+   "ingredient": "potatoes",
+   "qty": 100
+  },
+  {
+   "ingredient": "onions",
+   "qty": 0.5
+  },
+  {
+   "ingredient": "mixpep",
+   "qty": 0.5
+  },
+  {
+   "ingredient": "eggs",
+   "qty": 2
+  }
+ ],
+ "cupboard": [
+  "oil"
+ ],
+ "cupboard_qty": {
+  "oil": 8
+ },
+ "method": [
+  "Boil the diced potatoes in salted water for 5 minutes, drain well and leave them to steam dry for 2 minutes.",
+  "Heat half the oil in a frying pan and fry the chopped onion and pepper for 5 minutes until soft, then set aside. Fry the potatoes in the same pan for 5 to 6 minutes until crisp, return the onion and pepper, toss and season.",
+  "Meanwhile heat a griddle or frying pan until very hot, season the steak and cook it for 3 minutes on each side, or longer until cooked to your liking. Rest it for a few minutes.",
+  "Wipe out the pan, heat the rest of the oil over a medium heat and fry the eggs for 3 minutes until the whites are set and the yolks still runny.",
+  "Serve the sliced steak with the potato mixture and fried eggs."
+ ],
+ "source": "idea: Joe Wicks"
+}

@@ -1,0 +1,52 @@
+{
+ "slug": "prawn-harissa-spaghetti",
+ "name": "Prawn and Harissa Spaghetti",
+ "course": "dinner",
+ "emoji": "🍝",
+ "serves": 2,
+ "status": "live",
+ "time": {
+  "prep": 5,
+  "cook": 15
+ },
+ "ingredients": [
+  {
+   "ingredient": "brocc",
+   "qty": 100
+  },
+  {
+   "ingredient": "plum",
+   "qty": 150
+  },
+  {
+   "ingredient": "prawns",
+   "qty": 150
+  },
+  {
+   "ingredient": "harissa",
+   "qty": 20
+  },
+  {
+   "ingredient": "lemon",
+   "qty": 0.5
+  }
+ ],
+ "cupboard": [
+  "spaghetti",
+  "oil",
+  "garlic"
+ ],
+ "cupboard_qty": {
+  "spaghetti": 180,
+  "oil": 30,
+  "garlic": 5
+ },
+ "method": [
+  "Boil the broccoli florets in lightly salted water for 2 minutes until tender, then lift out and set aside. Cook the spaghetti in the same water following the pack instructions, then drain, keeping a ladleful of the cooking water.",
+  "Heat the oil in a large frying pan, add the bashed garlic and fry over a low heat for 2 minutes, then remove the garlic and discard it.",
+  "Add the tomatoes to the pan and fry over a medium heat for 5 minutes until soft and juicy. Stir in the prawns and heat them through for 2 minutes.",
+  "Add the harissa and the lemon zest and stir to coat.",
+  "Toss the spaghetti, a splash of the pasta water and the broccoli through the prawns. Season and serve."
+ ],
+ "source": "idea: BBC Good Food"
+}

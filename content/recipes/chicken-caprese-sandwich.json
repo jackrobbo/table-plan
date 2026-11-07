@@ -1,0 +1,55 @@
+{
+ "slug": "chicken-caprese-sandwich",
+ "name": "Chicken Caprese Sandwich",
+ "course": "lunch",
+ "emoji": "🥪",
+ "serves": 1,
+ "status": "live",
+ "time": {
+  "prep": 5,
+  "cook": 4
+ },
+ "ingredients": [
+  {
+   "ingredient": "wholeloaf",
+   "qty": 70
+  },
+  {
+   "ingredient": "greek",
+   "qty": 15
+  },
+  {
+   "ingredient": "pesto",
+   "qty": 15
+  },
+  {
+   "ingredient": "mozzarella",
+   "qty": 55
+  },
+  {
+   "ingredient": "roast",
+   "qty": 60
+  },
+  {
+   "ingredient": "plum",
+   "qty": 60
+  },
+  {
+   "ingredient": "basil",
+   "qty": 15
+  }
+ ],
+ "cupboard": [
+  "butter"
+ ],
+ "cupboard_qty": {
+  "butter": 7
+ },
+ "method": [
+  "Stir the Greek yogurt and pesto together in a small bowl.",
+  "Butter the outside of the bread. Spread the pesto mixture over the inside of both slices, then layer the mozzarella, sliced chicken, tomatoes and basil between them.",
+  "Cook the sandwich in a non-stick frying pan over a medium heat for 2 minutes each side, pressing down lightly, until the bread is toasted and the cheese just starts to melt.",
+  "Cut in half and serve."
+ ],
+ "source": "idea: EatingWell"
+}

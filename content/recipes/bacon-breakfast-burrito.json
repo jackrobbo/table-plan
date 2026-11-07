@@ -1,0 +1,59 @@
+{
+ "slug": "bacon-breakfast-burrito",
+ "name": "Bacon Breakfast Burrito",
+ "course": "breakfast",
+ "emoji": "🌯",
+ "serves": 1,
+ "status": "live",
+ "time": {
+  "prep": 8,
+  "cook": 12
+ },
+ "ingredients": [
+  {
+   "ingredient": "bacon",
+   "qty": 2
+  },
+  {
+   "ingredient": "onions",
+   "qty": 0.5
+  },
+  {
+   "ingredient": "pepper",
+   "qty": 0.5
+  },
+  {
+   "ingredient": "avocado",
+   "qty": 0.3
+  },
+  {
+   "ingredient": "wraps",
+   "qty": 1
+  },
+  {
+   "ingredient": "eggs",
+   "qty": 2
+  },
+  {
+   "ingredient": "feta",
+   "qty": 20
+  },
+  {
+   "ingredient": "coriander",
+   "qty": 5
+  }
+ ],
+ "cupboard": [
+  "oil"
+ ],
+ "cupboard_qty": {
+  "oil": 6
+ },
+ "method": [
+  "Heat half the oil in a frying pan and fry the sliced bacon for 5 minutes until crisp and cooked through. Add the chopped onion and pepper and fry for 5 minutes more until soft.",
+  "While that cooks, roughly mash the avocado and spread it down the middle of the wrap, then spoon the bacon mixture alongside.",
+  "Wipe out the pan, add the rest of the oil and the beaten eggs, and stir gently over a low heat for 2 to 3 minutes until just set.",
+  "Spoon the eggs onto the wrap, crumble over the feta and scatter with the chopped coriander. Roll up tightly and serve."
+ ],
+ "source": "idea: Joe Wicks"
+}

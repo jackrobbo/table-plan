@@ -1,0 +1,56 @@
+{
+ "slug": "creamy-chicken-mushroom-pasta",
+ "name": "Creamy Chicken & Mushroom Pasta",
+ "course": "dinner",
+ "emoji": "🍝",
+ "serves": 2,
+ "status": "live",
+ "time": {
+  "prep": 10,
+  "cook": 18
+ },
+ "ingredients": [
+  {
+   "ingredient": "breast",
+   "qty": 160
+  },
+  {
+   "ingredient": "mushrooms",
+   "qty": 120
+  },
+  {
+   "ingredient": "courgette",
+   "qty": 300
+  },
+  {
+   "ingredient": "creme",
+   "qty": 80
+  },
+  {
+   "ingredient": "lemon",
+   "qty": 0.5
+  }
+ ],
+ "cupboard": [
+  "spaghetti",
+  "oil",
+  "garlic",
+  "herbs",
+  "parmesan"
+ ],
+ "cupboard_qty": {
+  "spaghetti": 160,
+  "oil": 10,
+  "garlic": 6,
+  "herbs": 2,
+  "parmesan": 20
+ },
+ "method": [
+  "Cook the spaghetti in boiling water to packet instructions, about 10 minutes, adding the courgette strips for the final minute, then drain and keep a mugful of the cooking water.",
+  "Heat the oil in a frying pan over a medium heat and cook the mushrooms and bite-sized chicken pieces for about 5 minutes, until the chicken is cooked through and the mushrooms are golden.",
+  "Stir in the garlic and cook for 1 minute more.",
+  "Take the pan off the heat and stir in the creme fraiche, the lemon zest and the herbs, loosening with a splash of the reserved water.",
+  "Toss through the spaghetti and courgette, divide between bowls and finish with black pepper and the parmesan."
+ ],
+ "source": "idea: Joe Wicks"
+}

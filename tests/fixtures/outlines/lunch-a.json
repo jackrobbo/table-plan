@@ -1,0 +1,109 @@
+{
+ "bbq-chicken-herb-slaw-wrap": {
+  "source": "Joe Wicks",
+  "steps": [
+   {
+    "do": [
+     "frying pan"
+    ],
+    "mins": [
+     3,
+     4
+    ]
+   },
+   {
+    "do": [
+     "massage"
+    ],
+    "mins": [
+     2,
+     2
+    ]
+   },
+   {
+    "do": [
+     "barbecue"
+    ]
+   }
+  ]
+ },
+ "creamy-sun-dried-tomato-pasta-salad": {
+  "source": "Mob",
+  "steps": [
+   {
+    "do": [
+     "boiling"
+    ],
+    "mins": [
+     8,
+     12
+    ]
+   },
+   {
+    "do": [
+     "stir"
+    ]
+   }
+  ]
+ },
+ "coronation-chicken-salad": {
+  "source": "Joe Wicks",
+  "steps": [
+   {
+    "do": [
+     "stir"
+    ]
+   },
+   {
+    "do": [
+     "chicken"
+    ]
+   },
+   {
+    "do": [
+     "salad"
+    ]
+   }
+  ]
+ },
+ "creamy-chicken-caesar-sandwich": {
+  "source": "Mob",
+  "steps": [
+   {
+    "do": [
+     "stir"
+    ]
+   },
+   {
+    "do": [
+     "spinach"
+    ]
+   },
+   {
+    "do": [
+     "pile"
+    ]
+   }
+  ]
+ },
+ "herby-mayo-chicken-sandwich": {
+  "source": "Mob",
+  "steps": [
+   {
+    "do": [
+     "stir"
+    ]
+   },
+   {
+    "do": [
+     "toast"
+    ]
+   },
+   {
+    "do": [
+     "spread"
+    ]
+   }
+  ]
+ }
+}

@@ -1,0 +1,50 @@
+{
+ "slug": "avocado-toast-chilli-salmon",
+ "name": "Avocado Toast with Chilli Salmon",
+ "course": "breakfast",
+ "emoji": "🥑",
+ "serves": 1,
+ "status": "live",
+ "time": {
+  "prep": 8,
+  "cook": 3
+ },
+ "ingredients": [
+  {
+   "ingredient": "avocado",
+   "qty": 0.5
+  },
+  {
+   "ingredient": "softcheese",
+   "qty": 40
+  },
+  {
+   "ingredient": "loaf",
+   "qty": 2
+  },
+  {
+   "ingredient": "smokedsalmon",
+   "qty": 60
+  },
+  {
+   "ingredient": "chilli",
+   "qty": 2
+  },
+  {
+   "ingredient": "lemon",
+   "qty": 0.25
+  }
+ ],
+ "cupboard": [
+  "honey"
+ ],
+ "cupboard_qty": {
+  "honey": 8
+ },
+ "method": [
+  "Toast the bread for 2 to 3 minutes until golden, then leave it on a board.",
+  "Mash the avocado with the soft cheese and a squeeze of lemon until creamy, then spread it over the toast.",
+  "Stir the finely chopped chilli into the honey. Lay the smoked salmon over the avocado, drizzle with the chilli honey and serve."
+ ],
+ "source": "idea: Joe Wicks"
+}

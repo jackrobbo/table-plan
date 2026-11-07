@@ -1,0 +1,74 @@
+{
+ "slug": "lamb-moussaka",
+ "name": "Lamb Moussaka",
+ "course": "dinner",
+ "emoji": "🍆",
+ "serves": 4,
+ "status": "live",
+ "time": {
+  "prep": 20,
+  "cook": 65
+ },
+ "ingredients": [
+  {
+   "ingredient": "lambmince",
+   "qty": 400
+  },
+  {
+   "ingredient": "onions",
+   "qty": 2
+  },
+  {
+   "ingredient": "aubergine",
+   "qty": 2
+  },
+  {
+   "ingredient": "milk",
+   "qty": 400
+  },
+  {
+   "ingredient": "eggs",
+   "qty": 1
+  },
+  {
+   "ingredient": "ctoms",
+   "qty": 400
+  },
+  {
+   "ingredient": "potatoes",
+   "qty": 600
+  }
+ ],
+ "cupboard": [
+  "garlic",
+  "oil",
+  "cinnamon",
+  "oregano",
+  "puree",
+  "stock",
+  "butter",
+  "flour",
+  "parmesan",
+  "nutmeg"
+ ],
+ "cupboard_qty": {
+  "garlic": 6,
+  "oil": 10,
+  "cinnamon": 2,
+  "oregano": 2,
+  "puree": 25,
+  "stock": 5,
+  "butter": 20,
+  "flour": 30,
+  "parmesan": 20,
+  "nutmeg": 0.5
+ },
+ "method": [
+  "Heat the oven to 160C (140C fan). Heat 2 teaspoons of the oil in a large pan and fry the chopped onions and garlic for 5 minutes until soft. Turn up the heat, add the lamb mince and fry for 5 minutes until browned.",
+  "Stir in the cinnamon, oregano and tomato puree and cook for 1 minute. Add the chopped tomatoes, the stock cube and 150ml boiling water and simmer for 20 minutes until thick and the lamb is cooked through. Season.",
+  "Meanwhile, heat a griddle pan until very hot. Slice the aubergines lengthways into 1cm slices, brush with the remaining oil and griddle for 2 minutes each side in batches until golden.",
+  "Melt the butter in a pan, whisk in the flour and cook for 1 minute. Gradually whisk in the milk and simmer for 2 minutes until thick. Off the heat, whisk in the parmesan, nutmeg and then the beaten egg.",
+  "Layer half the aubergine, all the lamb, then the rest of the aubergine in an ovenproof dish and pour over the sauce. Bake for 35 to 40 minutes until risen and golden. Boil the potatoes for 15 minutes in the meantime, drain, rest the moussaka for 5 minutes, then serve with the potatoes."
+ ],
+ "source": "idea: Joe Wicks"
+}

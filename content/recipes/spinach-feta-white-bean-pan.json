@@ -1,0 +1,58 @@
+{
+ "slug": "spinach-feta-white-bean-pan",
+ "name": "Spinach, Feta & White Bean Pan",
+ "course": "dinner",
+ "emoji": "🫘",
+ "serves": 2,
+ "status": "live",
+ "time": {
+  "prep": 10,
+  "cook": 20
+ },
+ "ingredients": [
+  {
+   "ingredient": "spring",
+   "qty": 1
+  },
+  {
+   "ingredient": "butterbeans",
+   "qty": 400
+  },
+  {
+   "ingredient": "spinach",
+   "qty": 150
+  },
+  {
+   "ingredient": "lemon",
+   "qty": 1
+  },
+  {
+   "ingredient": "feta",
+   "qty": 100
+  },
+  {
+   "ingredient": "coriander",
+   "qty": 10
+  },
+  {
+   "ingredient": "pittas",
+   "qty": 2
+  }
+ ],
+ "cupboard": [
+  "garlic",
+  "oil"
+ ],
+ "cupboard_qty": {
+  "garlic": 6,
+  "oil": 15
+ },
+ "method": [
+  "Slice the spring onions and garlic. Soften them in the oil with a pinch of salt in a large lidded frying pan over a medium heat for 5 minutes.",
+  "Tip in the butter beans with their liquid, then add the spinach a handful at a time, letting each handful wilt for about 2 minutes.",
+  "Turn the heat down, stir in the lemon zest and crumble in most of the feta until creamy, adding a splash of hot water if it needs more sauce. Do not let it boil.",
+  "Cover and warm through for 3 minutes while you toast the pittas.",
+  "Top with torn coriander, black pepper and the last of the feta and serve from the pan with the warm pittas."
+ ],
+ "source": "idea: Mob"
+}

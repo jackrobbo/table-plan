@@ -1,0 +1,186 @@
+{
+ "marry-me-chicken-and-orzo": {
+  "source": "Morrisons (Good Food)",
+  "steps": [
+   {
+    "do": [
+     "chicken"
+    ],
+    "mins": [
+     10,
+     12
+    ]
+   },
+   {
+    "do": [
+     "paprika"
+    ],
+    "mins": [
+     2,
+     2
+    ]
+   },
+   {
+    "do": [
+     "orzo"
+    ],
+    "mins": [
+     12,
+     12
+    ]
+   },
+   {
+    "do": [
+     "spinach"
+    ],
+    "mins": [
+     2,
+     3
+    ]
+   }
+  ]
+ },
+ "thai-red-turkey-meatball-curry": {
+  "source": "Mob",
+  "steps": [
+   {
+    "do": [
+     "fry"
+    ],
+    "mins": [
+     10,
+     15
+    ],
+    "deviation": "Turkey mince replaces chicken mince and we use small meatballs, so they brown in about 7 minutes before simmering in the curry."
+   },
+   {
+    "do": [
+     "rice"
+    ]
+   },
+   {
+    "do": [
+     "curry paste"
+    ],
+    "mins": [
+     2,
+     2
+    ]
+   },
+   {
+    "do": [
+     "divide"
+    ]
+   }
+  ]
+ },
+ "sticky-sesame-turkey-meatballs": {
+  "source": "Mob",
+  "steps": [
+   {
+    "do": [
+     "oven"
+    ],
+    "temp": 180
+   },
+   {
+    "do": [
+     "bake"
+    ],
+    "mins": [
+     16,
+     18
+    ],
+    "deviation": "Turkey mince replaces chicken mince and a smaller batch makes 10 balls; the oven is set to 200C (180C fan), within tolerance."
+   },
+   {
+    "do": [
+     "sauce",
+     "honey"
+    ],
+    "mins": [
+     3,
+     5
+    ]
+   },
+   {
+    "do": [
+     "broccoli"
+    ],
+    "mins": [
+     2,
+     5
+    ]
+   },
+   {
+    "do": [
+     "toss"
+    ]
+   }
+  ]
+ },
+ "thai-red-curry-cod-parcels": {
+  "source": "Mob",
+  "steps": [
+   {
+    "do": [
+     "oven"
+    ],
+    "temp": 180
+   },
+   {
+    "do": [
+     "whisk"
+    ]
+   },
+   {
+    "do": [
+     "parchment",
+     "fillet"
+    ]
+   },
+   {
+    "do": [
+     "bake"
+    ],
+    "mins": [
+     12,
+     18
+    ],
+    "deviation": "Oven set to 200C (180C fan), within tolerance; about 15 minutes for 110g fillets."
+   }
+  ]
+ },
+ "moroccan-chicken-couscous": {
+  "source": "Mob",
+  "steps": [
+   {
+    "do": [
+     "air fry",
+     "oven"
+    ],
+    "temp": 200,
+    "mins": [
+     14,
+     18
+    ],
+    "deviation": "Oven method is given as an alternative to the air fryer, so 20 to 25 minutes at 200C fan."
+   },
+   {
+    "do": [
+     "couscous"
+    ]
+   },
+   {
+    "do": [
+     "yoghurt"
+    ]
+   },
+   {
+    "do": [
+     "rest"
+    ]
+   }
+  ]
+ }
+}

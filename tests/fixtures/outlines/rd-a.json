@@ -1,0 +1,239 @@
+{
+ "chicken-and-tomato-gnocchi-bake": {
+  "source": "Joe Wicks",
+  "steps": [
+   {
+    "do": [
+     "oven"
+    ],
+    "temp": 220
+   },
+   {
+    "do": [
+     "bacon"
+    ],
+    "mins": [
+     3,
+     4
+    ]
+   },
+   {
+    "do": [
+     "simmer"
+    ],
+    "mins": [
+     5,
+     5
+    ]
+   },
+   {
+    "do": [
+     "bake"
+    ],
+    "mins": [
+     10,
+     10
+    ]
+   }
+  ]
+ },
+ "one-pan-gnocchi-bake": {
+  "source": "Joe Wicks",
+  "steps": [
+   {
+    "do": [
+     "fry"
+    ]
+   },
+   {
+    "do": [
+     "tomatoes"
+    ]
+   },
+   {
+    "do": [
+     "simmer"
+    ],
+    "mins": [
+     5,
+     6
+    ]
+   },
+   {
+    "do": [
+     "grill"
+    ]
+   }
+  ]
+ },
+ "chicken-and-pineapple-kebabs-with-spicy-rice": {
+  "source": "Joe Wicks",
+  "steps": [
+   {
+    "do": [
+     "grill"
+    ]
+   },
+   {
+    "do": [
+     "grill"
+    ],
+    "mins": [
+     8,
+     10
+    ]
+   },
+   {
+    "do": [
+     "spring"
+    ],
+    "mins": [
+     2,
+     3
+    ]
+   },
+   {
+    "do": [
+     "jerk"
+    ],
+    "mins": [
+     2,
+     3
+    ]
+   }
+  ]
+ },
+ "chicken-and-leek-pie": {
+  "source": "Joe Wicks",
+  "steps": [
+   {
+    "do": [
+     "oven"
+    ],
+    "temp": 200
+   },
+   {
+    "do": [
+     "chicken"
+    ]
+   },
+   {
+    "do": [
+     "leeks"
+    ],
+    "mins": [
+     5,
+     5
+    ]
+   },
+   {
+    "do": [
+     "yoghurt"
+    ]
+   },
+   {
+    "do": [
+     "bake"
+    ],
+    "mins": [
+     20,
+     25
+    ]
+   },
+   {
+    "do": [
+     "broccoli"
+    ]
+   }
+  ]
+ },
+ "lamb-moussaka": {
+  "source": "Joe Wicks",
+  "steps": [
+   {
+    "do": [
+     "oven"
+    ],
+    "temp": 160
+   },
+   {
+    "do": [
+     "onions"
+    ],
+    "mins": [
+     5,
+     5
+    ]
+   },
+   {
+    "do": [
+     "simmer"
+    ],
+    "mins": [
+     20,
+     20
+    ]
+   },
+   {
+    "do": [
+     "griddle"
+    ],
+    "mins": [
+     2,
+     2
+    ]
+   },
+   {
+    "do": [
+     "butter"
+    ],
+    "mins": [
+     1,
+     1
+    ]
+   },
+   {
+    "do": [
+     "bake"
+    ],
+    "mins": [
+     35,
+     40
+    ]
+   }
+  ]
+ },
+ "lamb-leg-steaks-with-rosemary-potatoes": {
+  "source": "Joe Wicks",
+  "steps": [
+   {
+    "do": [
+     "potatoes"
+    ],
+    "mins": [
+     8,
+     8
+    ],
+    "deviation": "Maris Piper chunks replace halved new potatoes, so they need longer."
+   },
+   {
+    "do": [
+     "griddle"
+    ],
+    "mins": [
+     4,
+     5
+    ]
+   },
+   {
+    "do": [
+     "garlic"
+    ],
+    "mins": [
+     4,
+     5
+    ]
+   }
+  ]
+ }
+}

@@ -1,0 +1,62 @@
+{
+ "slug": "singapore-noodles-with-prawns",
+ "name": "Singapore Noodles with Prawns",
+ "course": "dinner",
+ "emoji": "🍜",
+ "serves": 2,
+ "status": "live",
+ "time": {
+  "prep": 10,
+  "cook": 12
+ },
+ "ingredients": [
+  {
+   "ingredient": "prawns",
+   "qty": 240
+  },
+  {
+   "ingredient": "onions",
+   "qty": 1
+  },
+  {
+   "ingredient": "chilli",
+   "qty": 10
+  },
+  {
+   "ingredient": "greenbeans",
+   "qty": 100
+  },
+  {
+   "ingredient": "mixpep",
+   "qty": 1
+  },
+  {
+   "ingredient": "spinach",
+   "qty": 100
+  }
+ ],
+ "cupboard": [
+  "noodles",
+  "oil",
+  "garlic",
+  "curry",
+  "nuts",
+  "soy"
+ ],
+ "cupboard_qty": {
+  "noodles": 100,
+  "oil": 10,
+  "garlic": 6,
+  "curry": 8,
+  "nuts": 40,
+  "soy": 20
+ },
+ "method": [
+  "Put the noodles in a bowl, cover with boiling water and leave for 3 minutes, then drain and rinse under cold water. Slice the onion and pepper, chop the chilli, crush the garlic and cut the green beans into thirds.",
+  "Heat the oil in a wok or large frying pan until very hot. Add the onion, garlic and chilli and stir fry for 2 minutes, then add the curry powder and fry for 1 minute.",
+  "Add a splash of water, then the green beans and pepper, and stir fry for 4 to 5 minutes until just tender. Add the spinach and let it wilt.",
+  "Add the cooked prawns and heat them through for 2 minutes, then add the noodles and crushed nuts and toss everything together.",
+  "Take off the heat, splash over the soy sauce and serve in two bowls."
+ ],
+ "source": "idea: Joe Wicks"
+}

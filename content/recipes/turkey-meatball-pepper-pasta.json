@@ -1,0 +1,47 @@
+{
+ "slug": "turkey-meatball-pepper-pasta",
+ "name": "Turkey Meatball & Red Pepper Pasta",
+ "course": "dinner",
+ "emoji": "🍝",
+ "serves": 2,
+ "status": "live",
+ "time": {
+  "prep": 15,
+  "cook": 22
+ },
+ "ingredients": [
+  {
+   "ingredient": "turkeymince",
+   "qty": 300
+  },
+  {
+   "ingredient": "pepper",
+   "qty": 2
+  },
+  {
+   "ingredient": "greek",
+   "qty": 80
+  }
+ ],
+ "cupboard": [
+  "spaghetti",
+  "herbs",
+  "oil",
+  "garlic"
+ ],
+ "cupboard_qty": {
+  "spaghetti": 130,
+  "herbs": 3,
+  "oil": 8,
+  "garlic": 4
+ },
+ "method": [
+  "Cook the spaghetti in boiling salted water for about 10 minutes, then drain. At the same time, simmer the sliced peppers in a small pan with a splash of water and the lid on for 10 minutes until very soft.",
+  "Mix the turkey mince with the herbs, garlic and plenty of black pepper, then roll into small even meatballs.",
+  "Fry the meatballs in the oil in a large frying pan for 8 minutes, turning, until golden and cooked through.",
+  "Blitz the soft peppers until smooth, pour them over the meatballs and heat through for 2 minutes.",
+  "Take the pan off the heat and stir in the yoghurt to make a creamy sauce, then season to taste.",
+  "Divide the spaghetti between bowls and top with the meatballs and sauce."
+ ],
+ "source": "idea: Joe Wicks"
+}

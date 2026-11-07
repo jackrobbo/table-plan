@@ -1,0 +1,56 @@
+{
+ "slug": "chinese-chicken-curry",
+ "name": "Chinese Chicken Curry",
+ "course": "dinner",
+ "emoji": "🍛",
+ "serves": 4,
+ "status": "live",
+ "time": {
+  "prep": 10,
+  "cook": 35
+ },
+ "ingredients": [
+  {
+   "ingredient": "breast",
+   "qty": 600
+  },
+  {
+   "ingredient": "onions",
+   "qty": 1
+  },
+  {
+   "ingredient": "ginger",
+   "qty": 5
+  },
+  {
+   "ingredient": "peas",
+   "qty": 80
+  }
+ ],
+ "cupboard": [
+  "cornflour",
+  "oil",
+  "garlic",
+  "curry",
+  "stock",
+  "soy",
+  "rice"
+ ],
+ "cupboard_qty": {
+  "cornflour": 10,
+  "oil": 15,
+  "garlic": 3,
+  "curry": 4,
+  "stock": 6,
+  "soy": 5,
+  "rice": 300
+ },
+ "method": [
+  "Toss the chicken pieces in the cornflour with a little seasoning and set aside.",
+  "Fry the chopped onion in half the oil in a wok over a low to medium heat for 5 to 6 minutes, then add the garlic and cook for 1 minute. Stir in the curry powder and ginger and cook for 1 minute more.",
+  "Pour in the stock made with the cube and 400ml of hot water, add the soy sauce, bring to a simmer and cook for 20 minutes. Tip the sauce into a blender and blitz until smooth.",
+  "Wipe out the pan, then fry the chicken in the remaining oil until browned all over. Pour the sauce back in and simmer for 5 minutes until the chicken is cooked through.",
+  "Stir in the peas for the last 3 minutes while you cook the rice following the pack instructions. Serve the curry over the rice."
+ ],
+ "source": "idea: BBC Good Food"
+}

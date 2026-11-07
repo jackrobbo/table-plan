@@ -1,0 +1,52 @@
+{
+ "slug": "spanish-chicken-stew",
+ "name": "Spanish Chicken Stew",
+ "course": "dinner",
+ "emoji": "🥘",
+ "serves": 4,
+ "status": "live",
+ "time": {
+  "prep": 10,
+  "cook": 30
+ },
+ "ingredients": [
+  {
+   "ingredient": "thigh",
+   "qty": 500
+  },
+  {
+   "ingredient": "pepper",
+   "qty": 1
+  },
+  {
+   "ingredient": "onions",
+   "qty": 1
+  }
+ ],
+ "cupboard": [
+  "oil",
+  "garlic",
+  "vinegar",
+  "paprika",
+  "stock",
+  "nuts",
+  "rice"
+ ],
+ "cupboard_qty": {
+  "oil": 25,
+  "garlic": 6,
+  "vinegar": 15,
+  "paprika": 8,
+  "stock": 6,
+  "nuts": 50,
+  "rice": 300
+ },
+ "method": [
+  "Heat half the oil in a large saucepan, season the chicken thighs and brown them for 7 to 8 minutes, turning once, then lift out onto a plate.",
+  "Add the rest of the oil to the pan with the chopped pepper, onion and garlic and fry for 8 minutes until lightly golden. Pour in the vinegar and cook for 1 minute.",
+  "Return the chicken to the pan with the smoked paprika and the stock made with the cube and 400ml of hot water. Bring to the boil, then simmer for 15 minutes until the chicken is cooked through.",
+  "Cook the rice following the pack instructions while the stew simmers.",
+  "Scatter the nuts over the stew and serve with the rice."
+ ],
+ "source": "idea: BBC Good Food"
+}

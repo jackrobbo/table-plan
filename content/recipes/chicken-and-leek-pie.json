@@ -1,0 +1,54 @@
+{
+ "slug": "chicken-and-leek-pie",
+ "name": "Chicken and Leek Pie",
+ "course": "dinner",
+ "emoji": "🥧",
+ "serves": 4,
+ "status": "live",
+ "time": {
+  "prep": 10,
+  "cook": 40
+ },
+ "ingredients": [
+  {
+   "ingredient": "breast",
+   "qty": 600
+  },
+  {
+   "ingredient": "leeks",
+   "qty": 250
+  },
+  {
+   "ingredient": "greek",
+   "qty": 250
+  },
+  {
+   "ingredient": "pastry",
+   "qty": 250
+  },
+  {
+   "ingredient": "brocc",
+   "qty": 240
+  }
+ ],
+ "cupboard": [
+  "butter",
+  "herbs",
+  "stock",
+  "wholegrainmustard"
+ ],
+ "cupboard_qty": {
+  "butter": 10,
+  "herbs": 2,
+  "stock": 5,
+  "wholegrainmustard": 20
+ },
+ "method": [
+  "Heat the oven to 200C (180C fan). Melt the butter in a large frying pan over a medium heat and fry the chicken breast chunks for 6 minutes until golden.",
+  "Add the sliced leeks and cook for 5 minutes until softened. Stir in the mixed herbs, a stock cube dissolved in 150ml hot water, and the mustard.",
+  "Take the pan off the heat, stir in the yoghurt and season well, then tip into a baking dish.",
+  "Lay the pastry over the top, pinch the edges to seal and cut two slits in the middle. Bake for 20 to 25 minutes until the pastry is golden and the chicken is cooked through.",
+  "Steam the broccoli for 5 minutes, then serve it alongside slices of the pie."
+ ],
+ "source": "idea: Joe Wicks"
+}

@@ -1,0 +1,46 @@
+{
+ "slug": "banoffee-overnight-oats",
+ "name": "Banoffee Overnight Oats",
+ "course": "breakfast",
+ "emoji": "🍌",
+ "serves": 1,
+ "status": "live",
+ "time": {
+  "prep": 8,
+  "cook": 0
+ },
+ "ingredients": [
+  {
+   "ingredient": "oats",
+   "qty": 40
+  },
+  {
+   "ingredient": "milk",
+   "qty": 120
+  },
+  {
+   "ingredient": "greek",
+   "qty": 100
+  },
+  {
+   "ingredient": "banana",
+   "qty": 1.5
+  },
+  {
+   "ingredient": "pbutter",
+   "qty": 10
+  }
+ ],
+ "cupboard": [
+  "honey"
+ ],
+ "cupboard_qty": {
+  "honey": 10
+ },
+ "method": [
+  "Stir the oats, milk and half the Greek yoghurt together in a jar, cover and chill in the fridge overnight.",
+  "For the sauce, mash half the banana with the peanut butter and honey, loosening with a splash of milk until smooth and spoonable.",
+  "In the morning, slice the rest of the banana. Layer sauce and banana over the oats, top with the remaining Greek yoghurt and serve."
+ ],
+ "source": "idea: Mob"
+}

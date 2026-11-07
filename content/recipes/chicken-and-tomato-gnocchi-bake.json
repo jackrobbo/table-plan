@@ -1,0 +1,52 @@
+{
+ "slug": "chicken-and-tomato-gnocchi-bake",
+ "name": "Chicken and Tomato Gnocchi Bake",
+ "course": "dinner",
+ "emoji": "🍅",
+ "serves": 2,
+ "status": "live",
+ "time": {
+  "prep": 5,
+  "cook": 20
+ },
+ "ingredients": [
+  {
+   "ingredient": "roast",
+   "qty": 170
+  },
+  {
+   "ingredient": "gnocchi",
+   "qty": 250
+  },
+  {
+   "ingredient": "ctoms",
+   "qty": 400
+  },
+  {
+   "ingredient": "bacon",
+   "qty": 2
+  }
+ ],
+ "cupboard": [
+  "puree",
+  "garlic",
+  "oil",
+  "breadcrumbs",
+  "cheddar"
+ ],
+ "cupboard_qty": {
+  "puree": 15,
+  "garlic": 4,
+  "oil": 5,
+  "breadcrumbs": 30,
+  "cheddar": 60
+ },
+ "method": [
+  "Heat the oven to 220C (200C fan). Heat the oil in a saucepan over a medium-high heat and fry the bacon, chopped, for 3 to 4 minutes until crisp.",
+  "Add the garlic and fry for 1 minute, then stir in the tomato puree, chopped tomatoes and a mugful of boiling water. Simmer gently for 5 minutes.",
+  "Stir in the gnocchi and the roast chicken slices, torn up, and bring back to a simmer. Tip everything into an ovenproof dish.",
+  "Scatter the breadcrumbs and grated cheddar over the top and bake for 10 minutes until golden and bubbling.",
+  "Leave to settle for 2 minutes, then serve in bowls with a green salad."
+ ],
+ "source": "idea: Joe Wicks"
+}

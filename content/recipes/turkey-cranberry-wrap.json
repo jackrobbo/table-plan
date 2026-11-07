@@ -1,0 +1,42 @@
+{
+ "slug": "turkey-cranberry-wrap",
+ "name": "Turkey and Cranberry Wrap",
+ "course": "lunch",
+ "emoji": "🌯",
+ "serves": 1,
+ "status": "live",
+ "time": {
+  "prep": 5,
+  "cook": 0
+ },
+ "ingredients": [
+  {
+   "ingredient": "wraps",
+   "qty": 1
+  },
+  {
+   "ingredient": "softcheese",
+   "qty": 40
+  },
+  {
+   "ingredient": "salad",
+   "qty": 30
+  },
+  {
+   "ingredient": "turkeyslices",
+   "qty": 85
+  },
+  {
+   "ingredient": "cranberry",
+   "qty": 30
+  }
+ ],
+ "cupboard": [],
+ "cupboard_qty": {},
+ "method": [
+  "Lay the wrap flat and spread the soft cheese evenly over one side.",
+  "Top with the salad leaves, then the sliced turkey and a spoonful of cranberry sauce.",
+  "Fold in the sides and roll the wrap up tightly. Cut in half and serve."
+ ],
+ "source": "idea: EatingWell"
+}

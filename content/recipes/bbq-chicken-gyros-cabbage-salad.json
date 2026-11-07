@@ -1,0 +1,69 @@
+{
+ "slug": "bbq-chicken-gyros-cabbage-salad",
+ "name": "Spiced Chicken Gyros with Cabbage Salad",
+ "course": "dinner",
+ "emoji": "🥙",
+ "serves": 2,
+ "status": "live",
+ "time": {
+  "prep": 135,
+  "cook": 22
+ },
+ "ingredients": [
+  {
+   "ingredient": "thigh",
+   "qty": 500
+  },
+  {
+   "ingredient": "greek",
+   "qty": 200
+  },
+  {
+   "ingredient": "cabbage",
+   "qty": 150
+  },
+  {
+   "ingredient": "plum",
+   "qty": 60
+  },
+  {
+   "ingredient": "onions",
+   "qty": 0.5
+  },
+  {
+   "ingredient": "lemon",
+   "qty": 1
+  },
+  {
+   "ingredient": "coriander",
+   "qty": 10
+  },
+  {
+   "ingredient": "pittas",
+   "qty": 2
+  }
+ ],
+ "cupboard": [
+  "garlic",
+  "oil",
+  "cumin",
+  "paprika",
+  "oregano",
+  "chilliflakes"
+ ],
+ "cupboard_qty": {
+  "garlic": 6,
+  "oil": 25,
+  "cumin": 3,
+  "paprika": 2,
+  "oregano": 2,
+  "chilliflakes": 1
+ },
+ "method": [
+  "Mix half the yoghurt with 15g of the oil, the lemon zest and juice, garlic, cumin, paprika, oregano and chilli flakes. Cut the chicken thighs into large chunks, coat well in the marinade, cover and chill for at least 2 hours.",
+  "Thread the chicken onto metal skewers. Shred the cabbage finely and toss with the sliced onion, tomatoes, chopped coriander, the rest of the oil and a pinch of salt.",
+  "Heat the grill to high and line a tray with foil. Grill the skewers for 8 to 10 minutes on each side, turning until charred and cooked through with no pink inside.",
+  "Warm the pittas under the grill for 1 minute, slice the chicken off the skewers and pile into the pittas with the cabbage salad. Spoon over the remaining yoghurt and serve."
+ ],
+ "source": "idea: Morrisons Recipes (Good Food)"
+}

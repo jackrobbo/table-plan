@@ -1,0 +1,5 @@
+{ "singapore-noodles-with-prawns": { "source": "Joe Wicks", "steps": [
+  { "do": ["noodles"], "mins": [3, 3] },
+  { "do": ["onion"], "mins": [2, 2] },
+  { "do": ["curry"], "mins": [1, 1] }
+] } }

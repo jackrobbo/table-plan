@@ -1,0 +1,46 @@
+{
+ "slug": "creamy-sun-dried-tomato-pasta-salad",
+ "name": "Creamy Sun-Dried Tomato Pasta Salad",
+ "course": "lunch",
+ "emoji": "🍝",
+ "serves": 1,
+ "status": "live",
+ "time": {
+  "prep": 5,
+  "cook": 12
+ },
+ "ingredients": [
+  {
+   "ingredient": "cottage",
+   "qty": 100
+  },
+  {
+   "ingredient": "pesto",
+   "qty": 20
+  },
+  {
+   "ingredient": "plum",
+   "qty": 40
+  },
+  {
+   "ingredient": "spinach",
+   "qty": 40
+  }
+ ],
+ "cupboard": [
+  "fusilli",
+  "garlic",
+  "parmesan"
+ ],
+ "cupboard_qty": {
+  "fusilli": 75,
+  "garlic": 2,
+  "parmesan": 10
+ },
+ "method": [
+  "Cook the fusilli in boiling salted water for 10 minutes. Slice the garlic and add it to the pan with the spinach for the final minute, until the spinach wilts. Drain, cool for a few minutes, then squeeze out any excess water.",
+  "Chop the tomatoes. Stir the cottage cheese, red pesto, tomatoes and most of the parmesan through the pasta and spinach, and season well with salt and pepper.",
+  "Scatter over the rest of the parmesan and serve at room temperature, or pack into a container and chill for up to 3 days."
+ ],
+ "source": "idea: Mob"
+}

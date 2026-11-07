@@ -1,0 +1,7 @@
+{ "honey-sriracha-chicken-bowls": { "source": "Mob", "steps": [
+  { "do": ["rice"] },
+  { "do": ["chilli"] },
+  { "do": ["fry"], "mins": [10, 10], "deviation": "Original crisps skin-on thighs skin-side down; ours are skinless fillets cut small first, so a little less time." },
+  { "do": ["garlic"], "mins": [5, 5] },
+  { "do": ["sauce"] },
+  { "do": ["spoon"] } ] } }

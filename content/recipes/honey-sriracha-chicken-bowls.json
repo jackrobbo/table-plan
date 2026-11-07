@@ -1,0 +1,51 @@
+{
+ "slug": "honey-sriracha-chicken-bowls",
+ "name": "Honey Sriracha Chicken Bowls",
+ "course": "dinner",
+ "emoji": "🍗",
+ "serves": 4,
+ "status": "live",
+ "time": {
+  "prep": 10,
+  "cook": 25
+ },
+ "ingredients": [
+  {
+   "ingredient": "thigh",
+   "qty": 700
+  },
+  {
+   "ingredient": "chilli",
+   "qty": 30
+  },
+  {
+   "ingredient": "spring",
+   "qty": 1
+  }
+ ],
+ "cupboard": [
+  "rice",
+  "honey",
+  "soy",
+  "puree",
+  "garlic",
+  "oil"
+ ],
+ "cupboard_qty": {
+  "rice": 300,
+  "honey": 40,
+  "soy": 45,
+  "puree": 20,
+  "garlic": 12,
+  "oil": 10
+ },
+ "method": [
+  "Cook the rice following the packet, about 12 minutes, then drain and keep covered.",
+  "Finely chop the chilli and stir it with the tomato puree, honey, soy sauce and a splash of water for a quick sriracha-style sauce. Slice the spring onions and garlic, keeping a handful of the spring onions back.",
+  "Heat the oil in a large frying pan over a medium-high heat. Cut the chicken thighs into bite-size pieces and fry for 8 to 10 minutes, turning, until golden.",
+  "Add the garlic and most of the spring onions and cook for 5 minutes until soft and fragrant.",
+  "Pour in the sauce and bubble for 3 to 4 minutes until sticky and the chicken is cooked through with no pink left.",
+  "Spoon the rice into bowls, top with the chicken and scatter over the reserved spring onions."
+ ],
+ "source": "idea: Mob"
+}

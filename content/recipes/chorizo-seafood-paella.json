@@ -1,0 +1,58 @@
+{
+ "slug": "chorizo-seafood-paella",
+ "name": "Chorizo and Seafood Paella",
+ "course": "dinner",
+ "emoji": "🥘",
+ "serves": 4,
+ "time": {
+  "prep": 10,
+  "cook": 30
+ },
+ "ingredients": [
+  {
+   "ingredient": "chorizo",
+   "qty": 250
+  },
+  {
+   "ingredient": "onions",
+   "qty": 1
+  },
+  {
+   "ingredient": "pepper",
+   "qty": 1
+  },
+  {
+   "ingredient": "seafoodmix",
+   "qty": 350
+  },
+  {
+   "ingredient": "peas",
+   "qty": 150
+  },
+  {
+   "ingredient": "lemon",
+   "qty": 1
+  }
+ ],
+ "cupboard": [
+  "paellarice",
+  "oil",
+  "paprika",
+  "stock"
+ ],
+ "cupboard_qty": {
+  "paellarice": 250,
+  "oil": 15,
+  "paprika": 3,
+  "stock": 10
+ },
+ "method": [
+  "Fry the halved chorizo in a large lidded sauté pan on a high heat for 2 to 3 minutes, then lift out and pour off most of the oil.",
+  "Add the oil and sliced onion, cover and cook for 5 minutes, then add the sliced pepper and cook for 2 to 3 minutes. Stir in the paella rice.",
+  "Stir the paprika into 800ml hot water with the crumbled stock cube, pour it over the rice and bring to the boil, then simmer uncovered for 10 minutes, stirring now and then. Cover and cook for 5 minutes.",
+  "Stir in the seafood and chorizo, cover and cook for 3 minutes until the seafood is piping hot and cooked through, then add the peas and cook for 2 minutes.",
+  "Squeeze over some lemon, leave to stand for 1 minute, then serve with the rest of the lemon in wedges."
+ ],
+ "source": "idea: Sainsbury's recipes",
+ "status": "live"
+}

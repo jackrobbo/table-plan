@@ -1,0 +1,77 @@
+{
+ "slug": "thai-basil-chicken-stir-fry",
+ "name": "Thai Basil Chicken Stir-Fry",
+ "course": "dinner",
+ "emoji": "🌿",
+ "serves": 2,
+ "status": "live",
+ "time": {
+  "prep": 20,
+  "cook": 15
+ },
+ "ingredients": [
+  {
+   "ingredient": "breast",
+   "qty": 300
+  },
+  {
+   "ingredient": "pepper",
+   "qty": 1
+  },
+  {
+   "ingredient": "onions",
+   "qty": 1
+  },
+  {
+   "ingredient": "chilli",
+   "qty": 10
+  },
+  {
+   "ingredient": "greenbeans",
+   "qty": 100
+  },
+  {
+   "ingredient": "thaibasil",
+   "qty": 20
+  },
+  {
+   "ingredient": "eggs",
+   "qty": 2
+  },
+  {
+   "ingredient": "lime",
+   "qty": 1
+  }
+ ],
+ "cupboard": [
+  "rice",
+  "garlic",
+  "fishsauce",
+  "oystersauce",
+  "soy",
+  "darksoy",
+  "honey",
+  "ricevinegar",
+  "oil"
+ ],
+ "cupboard_qty": {
+  "rice": 150,
+  "garlic": 9,
+  "fishsauce": 25,
+  "oystersauce": 20,
+  "soy": 15,
+  "darksoy": 10,
+  "honey": 5,
+  "ricevinegar": 10,
+  "oil": 20
+ },
+ "method": [
+  "Cook the rice following the packet, about 12 minutes, then drain and keep warm. Slice the pepper, onion, chilli and garlic, cut the green beans into 2cm pieces and pick the Thai basil leaves.",
+  "Slice the chicken, halve the slices and toss with 1 teaspoon of the fish sauce. Mix the rest of the fish sauce with the oyster sauce, soy sauce, dark soy and honey. Stir a little of the rice vinegar with some chilli for a dressing.",
+  "Heat half the oil in a large pan over a high heat and sear the chicken for 3 minutes until golden. Tip it into a bowl, it will finish cooking later.",
+  "Add the remaining oil and stir-fry the pepper, onion and chilli for 3 minutes. Add the garlic, then the beans with 2 tablespoons of water for 1 minute.",
+  "Return the chicken, pour in the sauce and cook for 2 to 3 minutes until thick and the chicken is cooked through. Off the heat, stir in the basil. Fry the eggs to your liking.",
+  "Serve the rice topped with the stir-fry, a fried egg, lime wedges and the dressing."
+ ],
+ "source": "idea: Mob"
+}

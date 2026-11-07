@@ -1,0 +1,69 @@
+{
+ "slug": "pad-see-ew-chicken-noodles",
+ "name": "Pad See Ew Chicken Noodles",
+ "course": "dinner",
+ "emoji": "🥢",
+ "serves": 2,
+ "status": "live",
+ "time": {
+  "prep": 15,
+  "cook": 12
+ },
+ "ingredients": [
+  {
+   "ingredient": "thigh",
+   "qty": 300
+  },
+  {
+   "ingredient": "brocc",
+   "qty": 200
+  },
+  {
+   "ingredient": "ricenoodles",
+   "qty": 180
+  },
+  {
+   "ingredient": "eggs",
+   "qty": 2
+  },
+  {
+   "ingredient": "chilli",
+   "qty": 10
+  },
+  {
+   "ingredient": "cuc",
+   "qty": 0.5
+  }
+ ],
+ "cupboard": [
+  "garlic",
+  "fishsauce",
+  "darksoy",
+  "oystersauce",
+  "soy",
+  "ricevinegar",
+  "sesameoil",
+  "honey",
+  "nuts"
+ ],
+ "cupboard_qty": {
+  "garlic": 9,
+  "fishsauce": 15,
+  "darksoy": 15,
+  "oystersauce": 20,
+  "soy": 15,
+  "ricevinegar": 15,
+  "sesameoil": 15,
+  "honey": 5,
+  "nuts": 15
+ },
+ "method": [
+  "Slice the chicken and marinate it with half the fish sauce and a pinch of salt for 10 minutes. Mince the garlic and cut the broccoli into 3cm pieces. Soak the noodles in boiling water until soft, drain and toss with the dark soy.",
+  "Mix the oyster sauce, soy sauce, honey and the rest of the fish sauce for the noodle sauce. Stir the chopped chilli and a little rice vinegar together for a dipping sauce.",
+  "Heat half the sesame oil in a large pan over a high heat and sear the chicken for 2 minutes each side until golden. Remove it from the pan.",
+  "Add the rest of the oil and fry the garlic for 30 seconds. Scramble the eggs in big chunks, then add the broccoli, noodles and half the sauce and toss for 2 minutes.",
+  "Return the chicken, adding more sauce, and cook for 2 to 3 minutes until charred in places and the chicken is cooked through.",
+  "Divide between bowls and top with sliced cucumber, chopped nuts and the dipping sauce."
+ ],
+ "source": "idea: Mob"
+}

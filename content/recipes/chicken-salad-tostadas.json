@@ -1,0 +1,48 @@
+{
+ "slug": "chicken-salad-tostadas",
+ "name": "Chicken Salad Tostadas",
+ "course": "lunch",
+ "emoji": "🌮",
+ "serves": 1,
+ "status": "live",
+ "time": {
+  "prep": 5,
+  "cook": 6
+ },
+ "ingredients": [
+  {
+   "ingredient": "mission",
+   "qty": 1
+  },
+  {
+   "ingredient": "salad",
+   "qty": 80
+  },
+  {
+   "ingredient": "roast",
+   "qty": 70
+  },
+  {
+   "ingredient": "sourcream",
+   "qty": 20
+  },
+  {
+   "ingredient": "lime",
+   "qty": 0.25
+  }
+ ],
+ "cupboard": [
+  "sweetcorn",
+  "cheddar"
+ ],
+ "cupboard_qty": {
+  "sweetcorn": 30,
+  "cheddar": 15
+ },
+ "method": [
+  "Heat the oven to 200C (180C fan). Cut each wrap into wedges, spread them on a baking tray and bake for 6 minutes until crisp.",
+  "Toss the salad leaves with the sweetcorn, the sliced chicken and the soured cream, then add a squeeze of lime.",
+  "Pile the chicken salad onto the crisp wrap wedges and scatter the cheese over the top. Serve."
+ ],
+ "source": "idea: EatingWell"
+}

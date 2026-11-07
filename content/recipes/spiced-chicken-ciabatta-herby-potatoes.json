@@ -1,0 +1,58 @@
+{
+ "slug": "spiced-chicken-ciabatta-herby-potatoes",
+ "name": "Spiced Chicken Sandwich with Herby Potatoes",
+ "course": "dinner",
+ "emoji": "🥪",
+ "serves": 2,
+ "time": {
+  "prep": 15,
+  "cook": 30
+ },
+ "ingredients": [
+  {
+   "ingredient": "breast",
+   "qty": 300
+  },
+  {
+   "ingredient": "potatoes",
+   "qty": 450
+  },
+  {
+   "ingredient": "loaf",
+   "qty": 4
+  },
+  {
+   "ingredient": "spring",
+   "qty": 0.25
+  },
+  {
+   "ingredient": "iceberg",
+   "qty": 0.25
+  }
+ ],
+ "cupboard": [
+  "oregano",
+  "chilliflakes",
+  "garlic",
+  "vinegar",
+  "oil",
+  "mayo"
+ ],
+ "cupboard_qty": {
+  "oregano": 2,
+  "chilliflakes": 1,
+  "garlic": 3,
+  "vinegar": 15,
+  "oil": 30,
+  "mayo": 30
+ },
+ "method": [
+  "Heat the oven to 220C (200C fan). Cut the potatoes into bite-sized pieces, toss on a baking tray with half the oil, the oregano, salt and pepper and roast for 25 minutes until golden and crisp.",
+  "Season the chicken breasts with the chilli flakes, salt and pepper. Mix the sliced spring onion with the mayonnaise, chopped garlic, vinegar and a pinch of salt to make a garlic mayo.",
+  "Heat the rest of the oil in a lidded pan and fry the chicken for 3 minutes on each side until golden, add a splash of water, cover and cook for 10 to 12 minutes until cooked through with no pink.",
+  "Toast the bread on a tray in the oven for 5 minutes until hot, and shred the lettuce.",
+  "Slice the chicken, fill the toast with the chicken, garlic mayo and lettuce, and serve with the herby potatoes and the rest of the lettuce."
+ ],
+ "source": "idea: Gousto",
+ "status": "live"
+}

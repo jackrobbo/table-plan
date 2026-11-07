@@ -1,0 +1,181 @@
+{
+ "berry-cheesecake-overnight-oats": {
+  "source": "The Happy Foodie",
+  "steps": [
+   {
+    "do": [
+     "compote",
+     "berries",
+     "fruit"
+    ],
+    "mins": [
+     5,
+     8
+    ],
+    "deviation": "Original cooks 400g berries for four; we heat 100g for one portion so it is quicker."
+   },
+   {
+    "do": [
+     "oats"
+    ]
+   },
+   {
+    "do": [
+     "chill",
+     "overnight"
+    ]
+   }
+  ]
+ },
+ "cottage-cheese-pancakes": {
+  "source": "The Happy Foodie",
+  "steps": [
+   {
+    "do": [
+     "blend"
+    ]
+   },
+   {
+    "do": [
+     "oil",
+     "batter"
+    ]
+   },
+   {
+    "do": [
+     "flip"
+    ],
+    "mins": [
+     3,
+     4
+    ]
+   }
+  ]
+ },
+ "creamy-egg-on-toast": {
+  "source": "The Happy Foodie",
+  "steps": [
+   {
+    "do": [
+     "boil"
+    ],
+    "mins": [
+     8,
+     10
+    ]
+   },
+   {
+    "do": [
+     "mash"
+    ]
+   },
+   {
+    "do": [
+     "chop"
+    ]
+   },
+   {
+    "do": [
+     "toast"
+    ]
+   }
+  ]
+ },
+ "pork-and-potato-breakfast-burrito": {
+  "source": "Mob",
+  "steps": [
+   {
+    "do": [
+     "microwave"
+    ],
+    "mins": [
+     3,
+     4
+    ],
+    "deviation": "Original crisps the potatoes in an air fryer; we use a frying pan as not everyone has one."
+   },
+   {
+    "do": [
+     "mince"
+    ],
+    "mins": [
+     5,
+     5
+    ]
+   },
+   {
+    "do": [
+     "whisk"
+    ]
+   },
+   {
+    "do": [
+     "melt",
+     "butter"
+    ],
+    "mins": [
+     2,
+     3
+    ]
+   },
+   {
+    "do": [
+     "wrap",
+     "layer"
+    ]
+   },
+   {
+    "do": [
+     "brown"
+    ],
+    "mins": [
+     2,
+     3
+    ]
+   }
+  ]
+ },
+ "banoffee-overnight-oats": {
+  "source": "Mob",
+  "steps": [
+   {
+    "do": [
+     "oats"
+    ],
+    "deviation": "Original blends soaked Medjool dates into a caramel sauce; dates are not stocked so we mash banana with peanut butter and honey."
+   },
+   {
+    "do": [
+     "mash",
+     "sauce"
+    ]
+   },
+   {
+    "do": [
+     "layer"
+    ]
+   }
+  ]
+ },
+ "peanut-butter-banana-overnight-oats": {
+  "source": "Mob",
+  "steps": [
+   {
+    "do": [
+     "whisk"
+    ]
+   },
+   {
+    "do": [
+     "chill",
+     "overnight"
+    ]
+   },
+   {
+    "do": [
+     "banana"
+    ]
+   }
+  ]
+ }
+}

@@ -1,0 +1,65 @@
+{
+ "slug": "tandoori-chicken-kebab-bean-biryani",
+ "name": "Tikka Chicken Kebab with Green Bean Biryani",
+ "course": "dinner",
+ "emoji": "🍢",
+ "serves": 4,
+ "status": "live",
+ "time": {
+  "prep": 45,
+  "cook": 37
+ },
+ "ingredients": [
+  {
+   "ingredient": "thigh",
+   "qty": 600
+  },
+  {
+   "ingredient": "tikka",
+   "qty": 45
+  },
+  {
+   "ingredient": "greek",
+   "qty": 30
+  },
+  {
+   "ingredient": "greenbeans",
+   "qty": 200
+  },
+  {
+   "ingredient": "onions",
+   "qty": 1
+  },
+  {
+   "ingredient": "coriander",
+   "qty": 15
+  },
+  {
+   "ingredient": "lemon",
+   "qty": 1
+  }
+ ],
+ "cupboard": [
+  "rice",
+  "stock",
+  "butter",
+  "oil",
+  "curry"
+ ],
+ "cupboard_qty": {
+  "rice": 300,
+  "stock": 12,
+  "butter": 25,
+  "oil": 10,
+  "curry": 4
+ },
+ "method": [
+  "Soak the rice in cold water for 30 minutes. Meanwhile mix the tikka paste and yoghurt in a large bowl, stir in half the chopped coriander, add the chicken thighs, coat well, cover and chill.",
+  "Melt the butter with the oil in a lidded pan and fry the sliced onion over a gentle heat for 6 minutes until soft and golden. Drain the rice and stir it in with the curry powder.",
+  "Pour in 750ml hot water with the crumbled stock cubes, add the green beans, bring to the boil, cover and cook on a low heat for 10 minutes.",
+  "Heat the grill to high. Lay the chicken thighs side by side with the long edges touching and push two long skewers through to hold them as one large kebab.",
+  "Grill the kebab for 20 minutes, turning the skewers a couple of times, until browned and cooked through with no pink where the thighs meet.",
+  "Spoon the biryani onto a platter, top with the kebab, scatter with the remaining coriander and serve with lemon wedges."
+ ],
+ "source": "idea: Morrisons Recipes (Good Food)"
+}

@@ -1,0 +1,52 @@
+{
+ "slug": "chicken-milanese-pasta",
+ "name": "Chicken Milanese Pasta",
+ "course": "dinner",
+ "emoji": "🍝",
+ "serves": 2,
+ "status": "live",
+ "time": {
+  "prep": 15,
+  "cook": 20
+ },
+ "ingredients": [
+  {
+   "ingredient": "breast",
+   "qty": 300
+  },
+  {
+   "ingredient": "eggs",
+   "qty": 1
+  },
+  {
+   "ingredient": "passata",
+   "qty": 260
+  }
+ ],
+ "cupboard": [
+  "spaghetti",
+  "flour",
+  "breadcrumbs",
+  "oil",
+  "parmesan",
+  "garlic",
+  "herbs"
+ ],
+ "cupboard_qty": {
+  "spaghetti": 160,
+  "flour": 10,
+  "breadcrumbs": 30,
+  "oil": 10,
+  "parmesan": 25,
+  "garlic": 3,
+  "herbs": 2
+ },
+ "method": [
+  "Cut each chicken breast in half through the middle, then flatten the pieces between two sheets of baking paper until thin and even.",
+  "Dust the chicken with the flour, dip it in the beaten egg, then press on the breadcrumbs mixed with a pinch of salt and pepper until fully coated.",
+  "Fry the chicken in the oil in a frying pan over a medium-high heat for 4 to 5 minutes each side until golden, crisp and cooked through.",
+  "Meanwhile cook the spaghetti in salted boiling water to packet instructions, about 10 minutes, then drain and stir through the passata, garlic and herbs for 2 minutes over a low heat.",
+  "Divide the spaghetti between two plates, top with the sliced chicken and scatter over the parmesan."
+ ],
+ "source": "idea: Joe Wicks"
+}

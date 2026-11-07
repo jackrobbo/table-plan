@@ -1,0 +1,71 @@
+{
+ "slug": "spicy-gochujang-beef-pasta",
+ "name": "Spicy Gochujang Beef Pasta",
+ "course": "dinner",
+ "emoji": "🍝",
+ "serves": 4,
+ "status": "live",
+ "time": {
+  "prep": 15,
+  "cook": 25
+ },
+ "ingredients": [
+  {
+   "ingredient": "mince",
+   "qty": 400
+  },
+  {
+   "ingredient": "onions",
+   "qty": 1
+  },
+  {
+   "ingredient": "ginger",
+   "qty": 15
+  },
+  {
+   "ingredient": "chilli",
+   "qty": 10
+  },
+  {
+   "ingredient": "spring",
+   "qty": 1
+  },
+  {
+   "ingredient": "lime",
+   "qty": 1
+  },
+  {
+   "ingredient": "gochujang",
+   "qty": 45
+  }
+ ],
+ "cupboard": [
+  "fusilli",
+  "garlic",
+  "puree",
+  "darksoy",
+  "honey",
+  "sesameoil",
+  "sesameseeds",
+  "oil"
+ ],
+ "cupboard_qty": {
+  "fusilli": 320,
+  "garlic": 9,
+  "puree": 30,
+  "darksoy": 15,
+  "honey": 20,
+  "sesameoil": 10,
+  "sesameseeds": 6,
+  "oil": 5
+ },
+ "method": [
+  "Finely dice the onion and ginger, crush the garlic and thinly slice the chilli and spring onions, keeping the chilli and spring onions back for the top.",
+  "Cook the fusilli in boiling salted water following the packet, about 10 minutes. Save a mugful of the cooking water before draining.",
+  "Heat the oil in a large pan over a high heat and brown the mince in a thin layer for 5 minutes, breaking it up, until cooked through. Lift out and keep the juices in the pan.",
+  "Turn the heat to medium and soften the onion, garlic and ginger for about 7 minutes. Return the beef and stir in the tomato puree, gochujang, soy sauce and honey with a couple of ladles of pasta water. Simmer for 2 minutes.",
+  "Add the pasta and sesame oil, loosening with more water if needed, and finish with a squeeze of lime juice.",
+  "Divide between bowls and top with the spring onions, chilli and sesame seeds."
+ ],
+ "source": "idea: Mob"
+}

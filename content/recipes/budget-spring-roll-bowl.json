@@ -1,0 +1,54 @@
+{
+ "slug": "budget-spring-roll-bowl",
+ "name": "Pork Spring Roll Bowl",
+ "course": "dinner",
+ "emoji": "🥢",
+ "serves": 2,
+ "status": "live",
+ "time": {
+  "prep": 10,
+  "cook": 15
+ },
+ "ingredients": [
+  {
+   "ingredient": "porkmince",
+   "qty": 260
+  },
+  {
+   "ingredient": "mushrooms",
+   "qty": 160
+  },
+  {
+   "ingredient": "cabbage",
+   "qty": 160
+  },
+  {
+   "ingredient": "carrots",
+   "qty": 150
+  },
+  {
+   "ingredient": "spring",
+   "qty": 0.3
+  }
+ ],
+ "cupboard": [
+  "noodles",
+  "garlic",
+  "oil",
+  "soy"
+ ],
+ "cupboard_qty": {
+  "noodles": 140,
+  "garlic": 6,
+  "oil": 10,
+  "soy": 20
+ },
+ "method": [
+  "Cook the noodles following the pack instructions, then drain. Slice the mushrooms, shred the cabbage, grate the carrots and slice the spring onion.",
+  "Heat the oil in a large frying pan over a medium-high heat. Cook the pork mince with the crushed garlic for 4 to 5 minutes, breaking it up, until browned.",
+  "Add the mushrooms, cabbage and carrots and cook for about 10 minutes, stirring often, until the pork is cooked through and the vegetables are soft.",
+  "Stir in the soy sauce and season to taste with salt and pepper.",
+  "Divide the noodles between two bowls, top with the pork and vegetables and scatter over the spring onion."
+ ],
+ "source": "idea: Joe Wicks"
+}

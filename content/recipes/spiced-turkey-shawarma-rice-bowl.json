@@ -1,0 +1,68 @@
+{
+ "slug": "spiced-turkey-shawarma-rice-bowl",
+ "name": "Spiced Turkey Shawarma Rice Bowl",
+ "course": "dinner",
+ "emoji": "🥙",
+ "serves": 2,
+ "status": "live",
+ "time": {
+  "prep": 10,
+  "cook": 30
+ },
+ "ingredients": [
+  {
+   "ingredient": "turkeymince",
+   "qty": 300
+  },
+  {
+   "ingredient": "onions",
+   "qty": 1
+  },
+  {
+   "ingredient": "plum",
+   "qty": 160
+  },
+  {
+   "ingredient": "cuc",
+   "qty": 0.5
+  },
+  {
+   "ingredient": "greek",
+   "qty": 120
+  },
+  {
+   "ingredient": "lemon",
+   "qty": 1
+  },
+  {
+   "ingredient": "coriander",
+   "qty": 10
+  }
+ ],
+ "cupboard": [
+  "rice",
+  "garlic",
+  "oil",
+  "cumin",
+  "paprika",
+  "chilliflakes",
+  "puree"
+ ],
+ "cupboard_qty": {
+  "rice": 120,
+  "garlic": 8,
+  "oil": 20,
+  "cumin": 3,
+  "paprika": 4,
+  "chilliflakes": 1,
+  "puree": 15
+ },
+ "method": [
+  "Heat the oven to 210C (190C fan). Cut the onion into wedges, toss with the tomatoes and half the oil on a tray, and roast for 20 to 25 minutes until soft and lightly charred at the edges.",
+  "Meanwhile, boil the rice for 12 minutes, then drain. Fry the turkey mince in the rest of the oil over a medium-high heat for 10 minutes, breaking it up, until golden and crisp.",
+  "Stir the cumin, paprika, chilli flakes, tomato puree and half the grated garlic into the mince and fry for 5 minutes until fragrant and cooked through.",
+  "Mix the yoghurt with the remaining grated garlic, the juice of half the lemon and a pinch of salt. Slice the cucumber, chop the coriander and stir both through the roasted onion and tomatoes with a squeeze of lemon.",
+  "Divide the rice between two bowls, top with the roasted salad and spiced mince, and spoon over the garlic yoghurt."
+ ],
+ "source": "idea: Mob"
+}

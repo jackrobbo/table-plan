@@ -1,0 +1,67 @@
+{
+ "slug": "sticky-sesame-turkey-meatballs",
+ "name": "Sticky Sesame Turkey Meatballs",
+ "course": "dinner",
+ "emoji": "🥢",
+ "serves": 2,
+ "time": {
+  "prep": 15,
+  "cook": 25
+ },
+ "ingredients": [
+  {
+   "ingredient": "turkeymince",
+   "qty": 300
+  },
+  {
+   "ingredient": "spring",
+   "qty": 1
+  },
+  {
+   "ingredient": "eggs",
+   "qty": 1
+  },
+  {
+   "ingredient": "ginger",
+   "qty": 5
+  },
+  {
+   "ingredient": "brocc",
+   "qty": 200
+  },
+  {
+   "ingredient": "lime",
+   "qty": 1
+  }
+ ],
+ "cupboard": [
+  "rice",
+  "garlic",
+  "breadcrumbs",
+  "chilliflakes",
+  "soy",
+  "sesameoil",
+  "honey",
+  "cornflour",
+  "sesameseeds"
+ ],
+ "cupboard_qty": {
+  "rice": 140,
+  "garlic": 6,
+  "breadcrumbs": 25,
+  "chilliflakes": 1,
+  "soy": 35,
+  "sesameoil": 5,
+  "honey": 25,
+  "cornflour": 6,
+  "sesameseeds": 6
+ },
+ "method": [
+  "Heat the oven to 200C (180C fan). Mix the turkey mince, half the sliced spring onions, half the garlic, breadcrumbs, egg, grated ginger, chilli flakes, half the soy sauce and the sesame oil, then shape into 10 balls.",
+  "Bake the meatballs on a lined tray for 16 to 18 minutes until golden and cooked through with no pink inside. Meanwhile boil the rice for 10 to 12 minutes.",
+  "For the sauce, put the honey, remaining soy sauce, garlic, the white of the remaining spring onions, the juice of half the lime and 100ml water in a small pan. Stir the cornflour with 1 tablespoon water, add it and simmer for 3 to 5 minutes until thick and glossy. Stir in the green spring onion and half the sesame seeds.",
+  "Boil the broccoli for 3 to 4 minutes, then drain. Toss the cooked meatballs in the sauce until coated, then serve over the rice with the broccoli, the remaining sesame seeds and a wedge of the remaining lime."
+ ],
+ "source": "idea: Mob",
+ "status": "live"
+}

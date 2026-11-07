@@ -1,0 +1,68 @@
+{
+ "slug": "curried-satay-noodles",
+ "name": "Curried Satay Noodles",
+ "course": "dinner",
+ "emoji": "🍜",
+ "serves": 2,
+ "status": "live",
+ "time": {
+  "prep": 10,
+  "cook": 12
+ },
+ "ingredients": [
+  {
+   "ingredient": "pepper",
+   "qty": 1
+  },
+  {
+   "ingredient": "carrots",
+   "qty": 90
+  },
+  {
+   "ingredient": "ginger",
+   "qty": 10
+  },
+  {
+   "ingredient": "chilli",
+   "qty": 5
+  },
+  {
+   "ingredient": "peas",
+   "qty": 100
+  },
+  {
+   "ingredient": "lemon",
+   "qty": 0.5
+  },
+  {
+   "ingredient": "pbutter",
+   "qty": 50
+  }
+ ],
+ "cupboard": [
+  "puree",
+  "noodles",
+  "oil",
+  "garlic",
+  "cumin",
+  "curry",
+  "stock"
+ ],
+ "cupboard_qty": {
+  "puree": 15,
+  "noodles": 150,
+  "oil": 10,
+  "garlic": 9,
+  "cumin": 1,
+  "curry": 3,
+  "stock": 3
+ },
+ "method": [
+  "Boil the noodles for 4 minutes, then drain and rinse well so the strands stay separate.",
+  "Meanwhile heat the oil in a wok over a high heat and stir-fry the pepper, carrots, ginger, garlic and chilli for 5 minutes until softened. Stir in the cumin and curry powder and cook for 30 seconds until fragrant.",
+  "Mix the peanut butter and tomato puree with the stock made from the cube and 150ml of hot water until smooth.",
+  "Add the drained noodles and peas to the wok and pour in the peanut mixture. Toss everything together, loosening with a splash of water if it is thick.",
+  "Squeeze over the lemon juice, toss again and serve."
+ ],
+ "source": "idea: BBC Good Food"
+}

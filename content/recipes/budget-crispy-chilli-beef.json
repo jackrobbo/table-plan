@@ -1,0 +1,52 @@
+{
+ "slug": "budget-crispy-chilli-beef",
+ "name": "Crispy Chilli Beef with Peanut Sauce",
+ "course": "dinner",
+ "emoji": "🥩",
+ "serves": 2,
+ "status": "live",
+ "time": {
+  "prep": 8,
+  "cook": 15
+ },
+ "ingredients": [
+  {
+   "ingredient": "mince",
+   "qty": 260
+  },
+  {
+   "ingredient": "peas",
+   "qty": 130
+  },
+  {
+   "ingredient": "brocc",
+   "qty": 130
+  },
+  {
+   "ingredient": "pbutter",
+   "qty": 30
+  }
+ ],
+ "cupboard": [
+  "rice",
+  "garlic",
+  "chilliflakes",
+  "oil",
+  "soy"
+ ],
+ "cupboard_qty": {
+  "rice": 120,
+  "garlic": 6,
+  "chilliflakes": 2,
+  "oil": 10,
+  "soy": 20
+ },
+ "method": [
+  "Cook the rice following the pack instructions. Mix the mince with the crushed garlic and chilli flakes.",
+  "Heat the oil in a large frying pan over a medium-high heat and cook the mince for 8 to 10 minutes, breaking it up, until browned, crispy at the edges and cooked through.",
+  "Stir the soy sauce and peanut butter together with a splash of boiling water to make a loose sauce.",
+  "Boil the peas and broccoli in salted water for 3 to 4 minutes, then drain.",
+  "Divide the rice, crispy beef and vegetables between two bowls and spoon over the peanut sauce."
+ ],
+ "source": "idea: Joe Wicks"
+}

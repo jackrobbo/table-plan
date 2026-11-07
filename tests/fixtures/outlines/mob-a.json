@@ -1,0 +1,148 @@
+{
+ "chicken-chorizo-fajita-wraps": {
+  "source": "Mob",
+  "steps": [
+   {
+    "do": [
+     "avocado"
+    ]
+   },
+   {
+    "do": [
+     "chorizo"
+    ],
+    "mins": [
+     3,
+     5
+    ]
+   },
+   {
+    "do": [
+     "peppers"
+    ],
+    "mins": [
+     4,
+     6
+    ]
+   },
+   {
+    "do": [
+     "chicken"
+    ],
+    "mins": [
+     4,
+     6
+    ]
+   },
+   {
+    "do": [
+     "roll"
+    ]
+   }
+  ]
+ },
+ "parmesan-chicken-caesar-wrap": {
+  "source": "Mob",
+  "steps": [
+   {
+    "do": [
+     "chicken"
+    ]
+   },
+   {
+    "do": [
+     "fry"
+    ],
+    "deviation": "Original sprays oil and flips the chicken once; we give a time as the page has none."
+   },
+   {
+    "do": [
+     "dressing"
+    ]
+   },
+   {
+    "do": [
+     "wrap"
+    ]
+   },
+   {
+    "do": [
+     "wrap"
+    ],
+    "deviation": "Original crisps the wrap for a few minutes; we give 2 to 3 minutes."
+   }
+  ]
+ },
+ "marry-me-chicken-pasta-bake": {
+  "source": "Mob",
+  "steps": [
+   {
+    "do": [
+     "fusilli"
+    ]
+   },
+   {
+    "do": [
+     "grill"
+    ]
+   },
+   {
+    "do": [
+     "blend"
+    ]
+   },
+   {
+    "do": [
+     "pasta"
+    ]
+   },
+   {
+    "do": [
+     "grill"
+    ],
+    "mins": [
+     8,
+     12
+    ]
+   }
+  ]
+ },
+ "marry-me-spaghetti-meatballs": {
+  "source": "Mob",
+  "steps": [
+   {
+    "do": [
+     "onion"
+    ]
+   },
+   {
+    "do": [
+     "meatballs"
+    ],
+    "mins": [
+     10,
+     10
+    ]
+   },
+   {
+    "do": [
+     "spaghetti"
+    ]
+   },
+   {
+    "do": [
+     "onion"
+    ],
+    "mins": [
+     7,
+     7
+    ]
+   },
+   {
+    "do": [
+     "toss"
+    ]
+   }
+  ]
+ }
+}

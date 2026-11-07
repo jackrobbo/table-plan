@@ -1,0 +1,52 @@
+{
+ "slug": "spicy-soy-chicken-and-cabbage",
+ "name": "Spicy Soy Chicken & Cabbage",
+ "course": "dinner",
+ "emoji": "🥬",
+ "serves": 2,
+ "status": "live",
+ "time": {
+  "prep": 10,
+  "cook": 20
+ },
+ "ingredients": [
+  {
+   "ingredient": "thigh",
+   "qty": 350
+  },
+  {
+   "ingredient": "cabbage",
+   "qty": 250
+  },
+  {
+   "ingredient": "chilli",
+   "qty": 10
+  },
+  {
+   "ingredient": "coriander",
+   "qty": 5
+  }
+ ],
+ "cupboard": [
+  "rice",
+  "garlic",
+  "soy",
+  "honey",
+  "oil"
+ ],
+ "cupboard_qty": {
+  "rice": 140,
+  "garlic": 6,
+  "soy": 25,
+  "honey": 10,
+  "oil": 15
+ },
+ "method": [
+  "Start the rice following the pack instructions, about 12 minutes. Cut the chicken into 3cm pieces, chop the cabbage into large pieces and finely chop the garlic and chilli.",
+  "Heat the oil in a wok over a high heat. Season the chicken and fry for 8 to 10 minutes until golden and cooked through, add the garlic and chilli for 2 minutes, then lift everything out.",
+  "Fry the cabbage in the hot wok for 5 minutes until charred but still crunchy.",
+  "Return the chicken, add the soy sauce and honey and bubble for 2 to 3 minutes until slightly reduced.",
+  "Spoon the chicken and cabbage over the rice with the pan juices and scatter with coriander."
+ ],
+ "source": "idea: Mob"
+}

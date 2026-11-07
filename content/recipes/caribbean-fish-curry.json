@@ -1,0 +1,68 @@
+{
+ "slug": "caribbean-fish-curry",
+ "name": "Caribbean Fish Curry",
+ "course": "dinner",
+ "emoji": "🍛",
+ "serves": 4,
+ "status": "live",
+ "time": {
+  "prep": 15,
+  "cook": 25
+ },
+ "ingredients": [
+  {
+   "ingredient": "cod",
+   "qty": 600
+  },
+  {
+   "ingredient": "sweetpot",
+   "qty": 400
+  },
+  {
+   "ingredient": "onions",
+   "qty": 1
+  },
+  {
+   "ingredient": "chilli",
+   "qty": 10
+  },
+  {
+   "ingredient": "plum",
+   "qty": 150
+  },
+  {
+   "ingredient": "lime",
+   "qty": 1
+  },
+  {
+   "ingredient": "coriander",
+   "qty": 10
+  }
+ ],
+ "cupboard": [
+  "rice",
+  "oil",
+  "garlic",
+  "paprika",
+  "curry",
+  "cumin",
+  "stock"
+ ],
+ "cupboard_qty": {
+  "rice": 280,
+  "oil": 10,
+  "garlic": 6,
+  "paprika": 3,
+  "curry": 8,
+  "cumin": 3,
+  "stock": 6
+ },
+ "method": [
+  "Fry the chopped onion, chilli and garlic in the oil for 5 minutes until soft, then stir in the paprika, curry powder and cumin and cook for 1 minute.",
+  "Add the diced sweet potato, then pour in 500ml hot water mixed with the crumbled stock cube and the lime juice. Simmer over a medium heat for 15 minutes until the sweet potato is tender.",
+  "While that simmers, cook the rice in plenty of boiling water for 12 minutes, then drain.",
+  "Add the cod in chunks and the halved tomatoes to the curry and simmer gently for 5 minutes, until the fish is opaque and flakes easily.",
+  "Spoon the rice into bowls, ladle over the curry and scatter with coriander to serve."
+ ],
+ "source": "idea: Morrisons Recipes (Good Food)"
+}

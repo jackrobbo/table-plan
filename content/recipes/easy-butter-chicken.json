@@ -1,0 +1,68 @@
+{
+ "slug": "easy-butter-chicken",
+ "name": "Easy Butter Chicken",
+ "course": "dinner",
+ "emoji": "🍛",
+ "serves": 4,
+ "status": "live",
+ "time": {
+  "prep": 40,
+  "cook": 32
+ },
+ "ingredients": [
+  {
+   "ingredient": "thigh",
+   "qty": 500
+  },
+  {
+   "ingredient": "greek",
+   "qty": 200
+  },
+  {
+   "ingredient": "lemon",
+   "qty": 0.5
+  },
+  {
+   "ingredient": "onions",
+   "qty": 1
+  },
+  {
+   "ingredient": "ginger",
+   "qty": 10
+  },
+  {
+   "ingredient": "coriander",
+   "qty": 10
+  }
+ ],
+ "cupboard": [
+  "puree",
+  "cumin",
+  "paprika",
+  "chilliflakes",
+  "oil",
+  "garlic",
+  "stock",
+  "nuts",
+  "basmati"
+ ],
+ "cupboard_qty": {
+  "puree": 45,
+  "cumin": 4,
+  "paprika": 4,
+  "chilliflakes": 1,
+  "oil": 26,
+  "garlic": 9,
+  "stock": 6,
+  "nuts": 30,
+  "basmati": 300
+ },
+ "method": [
+  "Mix the Greek yogurt, lemon juice, cumin, paprika and chilli flakes in a bowl. Toss the chopped chicken thighs through it, cover and chill for 30 minutes.",
+  "Heat the oil in a large heavy pan and fry the chopped onion, garlic and ginger over a medium heat for 10 minutes until soft.",
+  "Stir in the tomato puree and cook for 2 minutes, then pour in the stock made with the cube and 300ml of hot water. Add the marinated chicken and cook for 15 minutes.",
+  "Pour in any marinade left in the bowl, simmer for 5 minutes until the chicken is cooked through, and cook the basmati rice following the pack instructions.",
+  "Scatter the nuts and coriander over the curry. Serve with the rice."
+ ],
+ "source": "idea: BBC Good Food"
+}

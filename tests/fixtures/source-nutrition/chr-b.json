@@ -1,0 +1,50 @@
+{
+ "creamy-salmon-pasta-bake": {
+  "kcal": 778,
+  "source": "Sainsbury's (serves 4)",
+  "tolerance": 0.4,
+  "note": "Swaps and own-built meatballs/portions explain a gap."
+ },
+ "sweet-chilli-beef-skewers-and-rice": {
+  "kcal": 438,
+  "source": "Sainsbury's (serves 4)",
+  "tolerance": 0.4,
+  "note": "Swaps and own-built meatballs/portions explain a gap."
+ },
+ "middle-eastern-meatball-wraps": {
+  "kcal": 325,
+  "source": "Sainsbury's (serves 2)",
+  "tolerance": 0.4,
+  "note": "Swaps and own-built meatballs/portions explain a gap."
+ },
+ "texan-beef-burritos": {
+  "kcal": 726,
+  "source": "Sainsbury's (serves 4)",
+  "tolerance": 0.4,
+  "note": "Swaps and own-built meatballs/portions explain a gap."
+ },
+ "lamb-meatball-pitta-wraps": {
+  "kcal": 583,
+  "source": "Sainsbury's (serves 4)",
+  "tolerance": 0.4,
+  "note": "Swaps and own-built meatballs/portions explain a gap."
+ },
+ "beef-meatball-goulash": {
+  "kcal": 621,
+  "source": "Sainsbury's (serves 4)",
+  "tolerance": 0.4,
+  "note": "Swaps and own-built meatballs/portions explain a gap."
+ },
+ "thai-chicken-and-broccoli-curry": {
+  "kcal": 447,
+  "source": "Sainsbury's (serves 4)",
+  "tolerance": 0.4,
+  "note": "Swaps and own-built meatballs/portions explain a gap."
+ },
+ "chorizo-seafood-paella": {
+  "kcal": 633,
+  "source": "Sainsbury's (serves 4)",
+  "tolerance": 0.4,
+  "note": "Swaps and own-built meatballs/portions explain a gap."
+ }
+}

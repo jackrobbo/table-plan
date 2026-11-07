@@ -1,0 +1,58 @@
+{
+ "slug": "chicken-and-pineapple-kebabs-with-spicy-rice",
+ "name": "Chicken and Pineapple Kebabs with Spicy Rice",
+ "course": "dinner",
+ "emoji": "🍍",
+ "serves": 2,
+ "status": "live",
+ "time": {
+  "prep": 15,
+  "cook": 20
+ },
+ "ingredients": [
+  {
+   "ingredient": "thigh",
+   "qty": 300
+  },
+  {
+   "ingredient": "pineapple",
+   "qty": 120
+  },
+  {
+   "ingredient": "onions",
+   "qty": 1
+  },
+  {
+   "ingredient": "spring",
+   "qty": 0.5
+  },
+  {
+   "ingredient": "greek",
+   "qty": 100
+  },
+  {
+   "ingredient": "lime",
+   "qty": 1
+  }
+ ],
+ "cupboard": [
+  "rice",
+  "oil",
+  "paprika",
+  "jerk"
+ ],
+ "cupboard_qty": {
+  "rice": 120,
+  "oil": 15,
+  "paprika": 2,
+  "jerk": 6
+ },
+ "method": [
+  "Heat the grill to high. Thread the chicken thigh chunks, pineapple and quartered onion onto skewers, brush with half the oil and rub with the paprika, salt and pepper.",
+  "Grill the kebabs for 8 to 10 minutes, turning now and then, until the chicken is cooked through.",
+  "Meanwhile, boil the rice for 10 to 12 minutes, then drain well.",
+  "Heat the rest of the oil in a frying pan and fry the chopped spring onions for 2 minutes. Add the jerk seasoning and rice and fry for 3 minutes.",
+  "Serve the spicy rice with the kebabs, a spoonful of yoghurt and lime wedges."
+ ],
+ "source": "idea: Joe Wicks"
+}

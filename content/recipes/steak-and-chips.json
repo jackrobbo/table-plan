@@ -36,9 +36,11 @@
   "butter": 10
  },
  "method": [
-  "Bake the chips following the pack instructions.",
-  "Fry the steaks in the oil for 2–3 minutes each side for medium, adding the butter at the end, and rest for 3 minutes.",
-  "Fry the mushrooms in the pan juices, boil the peas and serve together."
+  "Heat the oven to 220C (200C fan). Spread the chips on a large tray and bake for 25 minutes, turning once, until golden and crisp.",
+  "Take the steaks out of the fridge, pat dry and season well. Slice the mushrooms. Heat the oil in a heavy frying pan until very hot.",
+  "Fry the steaks for 2 to 3 minutes each side for medium, adding the butter for the last minute and spooning it over. Rest on a plate for 3 minutes.",
+  "Fry the mushrooms in the pan juices for 4 minutes until golden. Boil the peas for 3 minutes and drain.",
+  "Slice the steak and serve with the chips, mushrooms and peas."
  ],
  "source": "table-plan"
 }

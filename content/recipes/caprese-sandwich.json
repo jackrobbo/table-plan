@@ -1,0 +1,46 @@
+{
+ "slug": "caprese-sandwich",
+ "name": "Caprese Sandwich",
+ "course": "lunch",
+ "emoji": "🥪",
+ "serves": 1,
+ "status": "live",
+ "time": {
+  "prep": 5,
+  "cook": 0
+ },
+ "ingredients": [
+  {
+   "ingredient": "loaf",
+   "qty": 2
+  },
+  {
+   "ingredient": "basil",
+   "qty": 8
+  },
+  {
+   "ingredient": "mozzarella",
+   "qty": 55
+  },
+  {
+   "ingredient": "plum",
+   "qty": 60
+  },
+  {
+   "ingredient": "sundried",
+   "qty": 10
+  }
+ ],
+ "cupboard": [
+  "vinegar"
+ ],
+ "cupboard_qty": {
+  "vinegar": 3
+ },
+ "method": [
+  "Lay half the basil leaves on one slice of bread, then add the sliced mozzarella.",
+  "Top with the sliced tomatoes and chopped sun-dried tomatoes and drizzle over the vinegar.",
+  "Finish with the rest of the basil and the second slice of bread. Cut in half and serve."
+ ],
+ "source": "idea: EatingWell"
+}

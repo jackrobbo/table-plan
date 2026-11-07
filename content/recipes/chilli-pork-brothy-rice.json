@@ -1,0 +1,56 @@
+{
+ "slug": "chilli-pork-brothy-rice",
+ "name": "Chilli Pork Brothy Rice",
+ "course": "dinner",
+ "emoji": "🍚",
+ "serves": 2,
+ "status": "live",
+ "time": {
+  "prep": 10,
+  "cook": 30
+ },
+ "ingredients": [
+  {
+   "ingredient": "porkmince",
+   "qty": 250
+  },
+  {
+   "ingredient": "cabbage",
+   "qty": 150
+  },
+  {
+   "ingredient": "spring",
+   "qty": 1
+  }
+ ],
+ "cupboard": [
+  "rice",
+  "garlic",
+  "soy",
+  "stock",
+  "vinegar",
+  "chilliflakes",
+  "fivespice",
+  "teriyaki",
+  "oil"
+ ],
+ "cupboard_qty": {
+  "rice": 140,
+  "garlic": 9,
+  "soy": 20,
+  "stock": 10,
+  "vinegar": 10,
+  "chilliflakes": 2,
+  "fivespice": 1,
+  "teriyaki": 20,
+  "oil": 15
+ },
+ "method": [
+  "Rinse the rice, cover with twice its volume of water, bring to the boil, then cover and simmer on low for 12 minutes. Leave covered off the heat for 10 minutes, then fluff.",
+  "Thinly slice the cabbage, garlic and spring onions. Stir-fry the pork mince in half the oil over a medium heat for 5 to 7 minutes until browned and cooked through.",
+  "Add the cabbage, five spice, a pinch of salt and pepper and the teriyaki sauce and toss for 2 minutes, then set aside.",
+  "In the same pan fry the garlic and most of the spring onions in the rest of the oil for 2 minutes, then add the soy sauce, chilli flakes and the stock cube dissolved in 400ml water. Simmer for 4 minutes and season with the vinegar.",
+  "Spoon the rice into bowls, top with the pork, ladle over the broth and scatter with the last spring onions."
+ ],
+ "source": "idea: Mob"
+}

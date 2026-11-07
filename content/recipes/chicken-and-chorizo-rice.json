@@ -1,0 +1,52 @@
+{
+ "slug": "chicken-and-chorizo-rice",
+ "name": "Chicken & Chorizo Rice",
+ "course": "dinner",
+ "emoji": "🍛",
+ "serves": 4,
+ "status": "live",
+ "time": {
+  "prep": 10,
+  "cook": 35
+ },
+ "ingredients": [
+  {
+   "ingredient": "breast",
+   "qty": 530
+  },
+  {
+   "ingredient": "chorizo",
+   "qty": 170
+  },
+  {
+   "ingredient": "mixpep",
+   "qty": 3
+  },
+  {
+   "ingredient": "chickpeas",
+   "qty": 330
+  }
+ ],
+ "cupboard": [
+  "rice",
+  "garlic",
+  "paprika",
+  "puree",
+  "stock"
+ ],
+ "cupboard_qty": {
+  "rice": 320,
+  "garlic": 12,
+  "paprika": 6,
+  "puree": 30,
+  "stock": 15
+ },
+ "method": [
+  "Fry the diced chorizo in a large lidded pan over a medium to high heat for 3 to 4 minutes until it has given up its oil and turned crisp, then lift it out and set it aside.",
+  "Add the chicken, cut into bite-sized pieces, to the chorizo oil and fry for 5 to 6 minutes until golden, then stir in the sliced peppers and the garlic and cook for 3 minutes more.",
+  "Stir in the paprika, tomato puree and rice, then pour in the stock made from the stock cubes and 600ml boiling water, and season with salt and pepper.",
+  "Cover, turn the heat right down and simmer for 15 to 20 minutes, stirring now and then, until the rice is tender and the chicken is cooked through.",
+  "Stir in the chickpeas and the crisp chorizo, heat through for 2 minutes and serve in bowls."
+ ],
+ "source": "idea: Joe Wicks"
+}

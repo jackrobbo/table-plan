@@ -1,0 +1,221 @@
+{
+ "marry-me-chicken-loaded-fries": {
+  "source": "Mob",
+  "steps": [
+   {
+    "do": [
+     "microwave"
+    ],
+    "mins": [
+     7,
+     7
+    ]
+   },
+   {
+    "do": [
+     "oven"
+    ],
+    "temp": 190,
+    "mins": [
+     20,
+     20
+    ],
+    "deviation": "Original is air-fried at 190C for 20 minutes; the oven method roasts hotter for longer, air fryer timing is in the step."
+   },
+   {
+    "do": [
+     "fry"
+    ],
+    "mins": [
+     7,
+     7
+    ]
+   },
+   {
+    "do": [
+     "simmer"
+    ],
+    "mins": [
+     2,
+     3
+    ]
+   }
+  ]
+ },
+ "tandoori-chicken-skewers-and-rice": {
+  "source": "Mob",
+  "steps": [
+   {
+    "do": [
+     "skewers"
+    ],
+    "temp": 200,
+    "mins": [
+     6,
+     8
+    ],
+    "deviation": "Original is air-fried at 200C for 6 to 8 minutes; the oven method needs 220C for 15 minutes, air fryer timing is in the step."
+   }
+  ]
+ },
+ "spicy-soy-chicken-and-cabbage": {
+  "source": "Mob",
+  "steps": [
+   {
+    "do": [
+     "fry"
+    ],
+    "mins": [
+     8,
+     10
+    ]
+   },
+   {
+    "do": [
+     "cabbage"
+    ],
+    "mins": [
+     5,
+     6
+    ]
+   },
+   {
+    "do": [
+     "bubble"
+    ],
+    "mins": [
+     2,
+     3
+    ]
+   }
+  ]
+ },
+ "chicken-broccoli-cheesy-bean-traybake": {
+  "source": "Mob",
+  "steps": [
+   {
+    "do": [
+     "oven"
+    ],
+    "temp": 200
+   },
+   {
+    "do": [
+     "bake"
+    ],
+    "mins": [
+     30,
+     30
+    ]
+   }
+  ]
+ },
+ "spinach-feta-white-bean-pan": {
+  "source": "Mob",
+  "steps": [
+   {
+    "do": [
+     "soften"
+    ],
+    "mins": [
+     4,
+     5
+    ]
+   },
+   {
+    "do": [
+     "cover"
+    ],
+    "mins": [
+     2,
+     3
+    ]
+   }
+  ]
+ },
+ "steak-chimichurri-chickpea-salad": {
+  "source": "Mob",
+  "steps": [
+   {
+    "do": [
+     "sear"
+    ],
+    "mins": [
+     2,
+     2
+    ]
+   },
+   {
+    "do": [
+     "rest"
+    ],
+    "mins": [
+     15,
+     15
+    ],
+    "deviation": "A shorter rest of 10 minutes keeps the steak warm when it meets the salad."
+   }
+  ]
+ },
+ "tikka-coconut-cod-traybake": {
+  "source": "Mob",
+  "steps": [
+   {
+    "do": [
+     "oven"
+    ],
+    "temp": 190
+   },
+   {
+    "do": [
+     "bake"
+    ],
+    "mins": [
+     20,
+     20
+    ]
+   },
+   {
+    "do": [
+     "cod"
+    ],
+    "mins": [
+     10,
+     10
+    ]
+   }
+  ]
+ },
+ "chilli-pork-brothy-rice": {
+  "source": "Mob",
+  "steps": [
+   {
+    "do": [
+     "simmer"
+    ],
+    "mins": [
+     12,
+     12
+    ]
+   },
+   {
+    "do": [
+     "stir-fry"
+    ],
+    "mins": [
+     5,
+     7
+    ]
+   },
+   {
+    "do": [
+     "simmer"
+    ],
+    "mins": [
+     4,
+     5
+    ]
+   }
+  ]
+ }
+}

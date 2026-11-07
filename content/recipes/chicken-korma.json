@@ -1,0 +1,60 @@
+{
+ "slug": "chicken-korma",
+ "name": "Chicken Korma",
+ "course": "dinner",
+ "emoji": "🍛",
+ "serves": 4,
+ "status": "live",
+ "time": {
+  "prep": 10,
+  "cook": 25
+ },
+ "ingredients": [
+  {
+   "ingredient": "breast",
+   "qty": 600
+  },
+  {
+   "ingredient": "onions",
+   "qty": 1
+  },
+  {
+   "ingredient": "ginger",
+   "qty": 10
+  },
+  {
+   "ingredient": "kormapaste",
+   "qty": 70
+  },
+  {
+   "ingredient": "greek",
+   "qty": 150
+  },
+  {
+   "ingredient": "coriander",
+   "qty": 10
+  }
+ ],
+ "cupboard": [
+  "garlic",
+  "nuts",
+  "stock",
+  "basmati",
+  "oil"
+ ],
+ "cupboard_qty": {
+  "garlic": 6,
+  "nuts": 50,
+  "stock": 6,
+  "basmati": 300,
+  "oil": 10
+ },
+ "method": [
+  "Blitz the onion, garlic and ginger to a paste in a food processor. Cook the paste in a large high-sided frying pan with the oil and 3 tablespoons of water for 5 minutes.",
+  "Stir in the korma paste and cook for 2 minutes until fragrant, then add the diced chicken and turn it through the sauce.",
+  "Add the chopped nuts and the stock cube dissolved in 400ml of hot water. Cover and simmer for 10 minutes, until the chicken is cooked through.",
+  "Cook the basmati rice following the pack instructions while the curry simmers.",
+  "Take the pan off the heat, stir in the Greek yogurt and scatter over the coriander. Serve spooned over the rice."
+ ],
+ "source": "idea: BBC Good Food"
+}

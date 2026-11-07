@@ -1,0 +1,59 @@
+{
+ "slug": "thai-red-curry-cod-parcels",
+ "name": "Thai Red Curry Cod Parcels",
+ "course": "dinner",
+ "emoji": "🐟",
+ "serves": 2,
+ "time": {
+  "prep": 15,
+  "cook": 20
+ },
+ "ingredients": [
+  {
+   "ingredient": "cod",
+   "qty": 220
+  },
+  {
+   "ingredient": "thaicurry",
+   "qty": 30
+  },
+  {
+   "ingredient": "coconut",
+   "qty": 100
+  },
+  {
+   "ingredient": "sugarsnap",
+   "qty": 150
+  },
+  {
+   "ingredient": "lime",
+   "qty": 1.5
+  },
+  {
+   "ingredient": "chilli",
+   "qty": 5
+  },
+  {
+   "ingredient": "coriander",
+   "qty": 8
+  }
+ ],
+ "cupboard": [
+  "basmati",
+  "fishsauce",
+  "oil"
+ ],
+ "cupboard_qty": {
+  "basmati": 120,
+  "fishsauce": 10,
+  "oil": 5
+ },
+ "method": [
+  "Heat the oven to 200C (180C fan). Boil the basmati rice for 10 to 12 minutes until tender, then drain.",
+  "Whisk the coconut milk with the curry paste, fish sauce and the finely grated zest of half the lime. Halve the sugar snap peas lengthways and toss them with the oil.",
+  "Divide the peas between two large sheets of baking parchment, set a cod fillet on each and spoon over the coconut mixture. Fold and seal the parcels tightly and place on a baking tray.",
+  "Bake for 12 to 15 minutes until the fish flakes easily and the peas are tender. Open the parcels, squeeze over the juice of one lime, then serve with the rice, sliced chilli, coriander and lime wedges, spooning the sauce over."
+ ],
+ "source": "idea: Mob",
+ "status": "live"
+}

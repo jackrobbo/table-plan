@@ -1,0 +1,56 @@
+{
+ "slug": "pork-and-potato-breakfast-burrito",
+ "name": "Pork and Potato Breakfast Burrito",
+ "course": "breakfast",
+ "emoji": "🌯",
+ "serves": 1,
+ "status": "live",
+ "time": {
+  "prep": 10,
+  "cook": 20
+ },
+ "ingredients": [
+  {
+   "ingredient": "potatoes",
+   "qty": 150
+  },
+  {
+   "ingredient": "porkmince",
+   "qty": 60
+  },
+  {
+   "ingredient": "eggs",
+   "qty": 2
+  },
+  {
+   "ingredient": "mission",
+   "qty": 1
+  },
+  {
+   "ingredient": "bbq",
+   "qty": 15
+  }
+ ],
+ "cupboard": [
+  "oil",
+  "paprika",
+  "puree",
+  "butter",
+  "cheddar"
+ ],
+ "cupboard_qty": {
+  "oil": 8,
+  "paprika": 2,
+  "puree": 5,
+  "butter": 5,
+  "cheddar": 20
+ },
+ "method": [
+  "Cut the potatoes into small chunks and microwave for 4 minutes, then fry in the oil over a medium-high heat for 12 minutes with the paprika, salt and pepper until crisp. Tip out and keep warm.",
+  "In the same pan cook the pork mince for 5 minutes, breaking it up, until browned and cooked through. Stir in the tomato puree and set aside, then wipe the pan.",
+  "Whisk the eggs with salt and pepper. Melt the butter over a low heat, add the eggs and stir gently for 3 minutes, taking the pan off the heat just before they look done.",
+  "Warm the wrap, spread with the BBQ sauce, then layer on the potatoes, eggs, pork and grated cheddar. Fold in the sides and roll up tightly.",
+  "Brown the burrito in the pan for 2 minutes each side, rest for 5 minutes, then cut in half and serve."
+ ],
+ "source": "idea: Mob"
+}

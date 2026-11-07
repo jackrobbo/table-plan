@@ -1,0 +1,53 @@
+{
+ "slug": "lamb-leg-steaks-with-rosemary-potatoes",
+ "name": "Lamb Leg Steaks with Rosemary Potatoes",
+ "course": "dinner",
+ "emoji": "🍖",
+ "serves": 2,
+ "status": "live",
+ "time": {
+  "prep": 10,
+  "cook": 25
+ },
+ "ingredients": [
+  {
+   "ingredient": "lambsteaks",
+   "qty": 260
+  },
+  {
+   "ingredient": "potatoes",
+   "qty": 400
+  },
+  {
+   "ingredient": "rosemary",
+   "qty": 6
+  },
+  {
+   "ingredient": "brocc",
+   "qty": 80
+  },
+  {
+   "ingredient": "greenbeans",
+   "qty": 80
+  }
+ ],
+ "cupboard": [
+  "garlic",
+  "oil",
+  "capers",
+  "dijon"
+ ],
+ "cupboard_qty": {
+  "garlic": 3,
+  "oil": 10,
+  "capers": 30,
+  "dijon": 5
+ },
+ "method": [
+  "Cut the potatoes into small chunks and boil for 12 minutes until just tender. Drain and let them steam dry in the colander.",
+  "Heat a griddle pan until very hot. Rub half the oil over the lamb steaks, season, and cook for 4 to 5 minutes on each side until cooked through to your liking. Rest on a plate.",
+  "Heat the remaining oil in a large frying pan, then fry the crushed garlic, chopped rosemary, capers and potatoes for 5 minutes. Stir in the Dijon mustard.",
+  "Boil the broccoli and green beans for 4 minutes, then serve alongside the lamb and potatoes."
+ ],
+ "source": "idea: Joe Wicks"
+}

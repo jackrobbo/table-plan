@@ -1,0 +1,63 @@
+{
+ "slug": "tikka-coconut-cod-traybake",
+ "name": "Tikka Coconut Cod Traybake",
+ "course": "dinner",
+ "emoji": "🐟",
+ "serves": 2,
+ "status": "live",
+ "time": {
+  "prep": 10,
+  "cook": 35
+ },
+ "ingredients": [
+  {
+   "ingredient": "plum",
+   "qty": 200
+  },
+  {
+   "ingredient": "onions",
+   "qty": 1
+  },
+  {
+   "ingredient": "cod",
+   "qty": 300
+  },
+  {
+   "ingredient": "chickpeas",
+   "qty": 240
+  },
+  {
+   "ingredient": "coconut",
+   "qty": 150
+  },
+  {
+   "ingredient": "tikka",
+   "qty": 40
+  },
+  {
+   "ingredient": "peas",
+   "qty": 100
+  },
+  {
+   "ingredient": "lime",
+   "qty": 1
+  }
+ ],
+ "cupboard": [
+  "rice",
+  "garlic",
+  "oil"
+ ],
+ "cupboard_qty": {
+  "rice": 80,
+  "garlic": 6,
+  "oil": 10
+ },
+ "method": [
+  "Heat the oven to 190C (170C fan). Quarter the tomatoes, cut the onion into wedges, season the cod and drizzle it with half the oil.",
+  "Tip the drained chickpeas into a small roasting tray with the coconut milk, tomatoes, onion and tikka paste, grate in the garlic, season and bake for 20 minutes.",
+  "Meanwhile boil the rice following the pack instructions, about 12 minutes, and drain. Stir the rice and peas into the tray, lay the cod on top and bake for 10 minutes more until the fish flakes easily.",
+  "Cut the lime into wedges and serve the traybake with a wedge for squeezing over."
+ ],
+ "source": "idea: Mob"
+}

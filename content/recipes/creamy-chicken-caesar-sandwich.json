@@ -1,0 +1,56 @@
+{
+ "slug": "creamy-chicken-caesar-sandwich",
+ "name": "Creamy Chicken Caesar Sandwich",
+ "course": "lunch",
+ "emoji": "🥪",
+ "serves": 1,
+ "status": "live",
+ "time": {
+  "prep": 6,
+  "cook": 0
+ },
+ "ingredients": [
+  {
+   "ingredient": "roast",
+   "qty": 90
+  },
+  {
+   "ingredient": "greek",
+   "qty": 20
+  },
+  {
+   "ingredient": "spinach",
+   "qty": 30
+  },
+  {
+   "ingredient": "loaf",
+   "qty": 2
+  },
+  {
+   "ingredient": "coriander",
+   "qty": 3
+  },
+  {
+   "ingredient": "lemon",
+   "qty": 0.1
+  }
+ ],
+ "cupboard": [
+  "mayo",
+  "garlic",
+  "parmesan",
+  "oil"
+ ],
+ "cupboard_qty": {
+  "mayo": 10,
+  "garlic": 1,
+  "parmesan": 8,
+  "oil": 3
+ },
+ "method": [
+  "Stir the mayonnaise, yoghurt, crushed garlic, a squeeze of lemon juice and half the parmesan together, and season with black pepper to make a creamy Caesar dressing.",
+  "Rub the spinach with the oil and a pinch of salt for a minute to soften it. Chop the chicken slices and the coriander and toss them through the spinach with the dressing.",
+  "Pile the filling onto a slice of bread, scatter over the rest of the parmesan, top with the second slice and serve cut in half."
+ ],
+ "source": "idea: Mob"
+}

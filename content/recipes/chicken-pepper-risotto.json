@@ -1,0 +1,66 @@
+{
+ "slug": "chicken-pepper-risotto",
+ "name": "Chicken and Roast Pepper Risotto",
+ "course": "dinner",
+ "emoji": "🍚",
+ "serves": 2,
+ "time": {
+  "prep": 10,
+  "cook": 45
+ },
+ "ingredients": [
+  {
+   "ingredient": "breast",
+   "qty": 300
+  },
+  {
+   "ingredient": "mixpep",
+   "qty": 1
+  },
+  {
+   "ingredient": "onions",
+   "qty": 1
+  },
+  {
+   "ingredient": "spring",
+   "qty": 0.25
+  }
+ ],
+ "cupboard": [
+  "paellarice",
+  "puree",
+  "paprika",
+  "curry",
+  "stock",
+  "cheddar",
+  "garlic",
+  "chilliflakes",
+  "honey",
+  "ricevinegar",
+  "butter",
+  "oil"
+ ],
+ "cupboard_qty": {
+  "paellarice": 160,
+  "puree": 30,
+  "paprika": 3,
+  "curry": 1,
+  "stock": 6,
+  "cheddar": 40,
+  "garlic": 9,
+  "chilliflakes": 1,
+  "honey": 10,
+  "ricevinegar": 10,
+  "butter": 10,
+  "oil": 10
+ },
+ "method": [
+  "Heat the oven to 200C (180C fan). Brown the chicken breasts in a hot pan with a little oil for 3 minutes on each side, then lift onto a foil-lined tray with the sliced pepper and a drizzle of oil.",
+  "Roast for 15 to 20 minutes until the pepper is soft and the chicken is cooked through with no pink.",
+  "Stir the stock cube into 700ml boiling water with the tomato puree, rice vinegar, honey and chilli flakes. Soften the diced onion in the butter for 4 minutes, then stir in the rice, chopped garlic, paprika and curry powder for 1 minute.",
+  "Add the stock a ladle at a time, stirring, for 25 to 30 minutes until the rice is tender and creamy.",
+  "Shred the chicken, stir it into the risotto with the roasted pepper and half the grated cheddar, and serve topped with the rest of the cheese and sliced spring onion."
+ ],
+ "source": "idea: Gousto",
+ "status": "live"
+}

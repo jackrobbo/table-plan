@@ -1,14 +1,14 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { describe, expect, it } from 'vitest';
+import { loadOutlines, type OutlineStep } from './helpers/fixtures';
 import type { RecipeDef } from '@/lib/content/types';
 
 // Our methods are in our own words, but they must keep the original's cooking: the same steps in the same order, the same
 // oven temperatures (within 20C, since fan and conventional differ) and the same key timings (within a third), unless a step
 // records a deliberate deviation. The outlines in tests/fixtures/method-outlines.json hold facts only, not the original wording.
 const root = path.resolve(__dirname, '..');
-interface Step { do: string[]; temp?: number; mins?: [number, number]; deviation?: string }
-const outlines = JSON.parse(fs.readFileSync(path.join(root, 'tests/fixtures/method-outlines.json'), 'utf8')) as Record<string, { source: string; steps: Step[] }>;
+const outlines = loadOutlines() as Record<string, { source: string; steps: OutlineStep[] }>;
 const recipes = new Map(fs.readdirSync(path.join(root, 'content/recipes')).filter((f) => f.endsWith('.json')).flatMap((f) => {
   const v = JSON.parse(fs.readFileSync(path.join(root, 'content/recipes', f), 'utf8')) as RecipeDef | RecipeDef[];
   return (Array.isArray(v) ? v : [v]).map((r) => [r.slug, r] as const);
@@ -27,7 +27,7 @@ describe('methods keep the original cooking', () => {
     expect(missing, `no outline for: ${missing.join(', ')}`).toEqual([]);
   });
   for (const [slug, o] of Object.entries(outlines)) {
-    if (slug === '_about') continue;
+    
     describe(`${slug} (from ${o.source})`, () => {
       const r = recipes.get(slug);
       it('exists', () => expect(r, `${slug} recipe file`).toBeTruthy());

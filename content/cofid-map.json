@@ -455,5 +455,98 @@
  "thinchicken": {},
  "proteinpitta": {
   "gpu": 63
- }
+ },
+ "gnocchi": {
+  "approx": "pack label is as consumed; scaled to uncooked weight (no CoFID entry for gnocchi)"
+ },
+ "orzo": {
+  "code": "11-716",
+  "prefer": "cofid",
+  "approx": "dried white pasta for orzo (the Morrisons page label is as cooked only)"
+ },
+ "couscous": {
+  "code": "11-901",
+  "prefer": "cofid",
+  "approx": "plain raw couscous (the Morrisons page label is as cooked only)"
+ },
+ "harissa": {},
+ "gochujang": {},
+ "thaicurry": {},
+ "fishsauce": {},
+ "oystersauce": {},
+ "darksoy": {},
+ "ricenoodles": {},
+ "sugarsnap": {},
+ "pineapple": {},
+ "edamame": {
+  "code": "13-667",
+  "prefer": "cofid",
+  "approx": "edamame, frozen, boiled (the Morrisons page label is as boiled)"
+ },
+ "leeks": {
+  "code": "13-624",
+  "prefer": "cofid"
+ },
+ "pastry": {},
+ "aubergine": {
+  "code": "13-651",
+  "prefer": "cofid",
+  "approx": "aubergine, boiled (CoFID has no raw entry; raw is about 15 kcal per 100 g)",
+  "gpu": 250
+ },
+ "lambsteaks": {},
+ "rosemary": {
+  "negligible": true
+ },
+ "thaibasil": {
+  "negligible": true
+ },
+ "basil": {
+  "negligible": true
+ },
+ "ginger": {
+  "code": "13-890",
+  "prefer": "cofid"
+ },
+ "sesameseeds": {},
+ "sesameoil": {},
+ "jerk": {
+  "negligible": true
+ },
+ "cinnamon": {
+  "negligible": true
+ },
+ "nutmeg": {
+  "negligible": true
+ },
+ "dijon": {},
+ "wholegrainmustard": {},
+ "capers": {},
+ "sweetchilli": {},
+ "babycorn": {
+  "code": "13-634",
+  "prefer": "cofid",
+  "approx": "baby sweetcorn, boiled (the Morrisons page label macros are inconsistent; no raw entry in CoFID)"
+ },
+ "mozzarella": {},
+ "ricevinegar": {},
+ "tandoori": {},
+ "basmati": {
+  "code": "11-859",
+  "prefer": "cofid",
+  "approx": "white basmati easy cook raw (the Morrisons page label is as boiled only)"
+ },
+ "katsu": {},
+ "panko": {},
+ "kormapaste": {},
+ "paellarice": {},
+ "seafoodmix": {
+  "code": "16-389",
+  "prefer": "cofid",
+  "approx": "cooked king prawns for a frozen seafood mix (the Morrisons page label is shallow fried; no mix in CoFID)"
+ },
+ "sundried": {},
+ "mascarpone": {},
+ "sourcream": {},
+ "cranberry": {}
 }

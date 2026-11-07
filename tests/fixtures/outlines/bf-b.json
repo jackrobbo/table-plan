@@ -1,0 +1,144 @@
+{
+ "avocado-toast-chilli-salmon": {
+  "source": "Joe Wicks",
+  "steps": [
+   {
+    "do": [
+     "mash"
+    ]
+   },
+   {
+    "do": [
+     "salmon"
+    ]
+   }
+  ]
+ },
+ "bacon-breakfast-burrito": {
+  "source": "Joe Wicks",
+  "steps": [
+   {
+    "do": [
+     "fry"
+    ],
+    "mins": [
+     5,
+     5
+    ]
+   },
+   {
+    "do": [
+     "mash"
+    ]
+   },
+   {
+    "do": [
+     "eggs"
+    ],
+    "mins": [
+     2,
+     3
+    ]
+   }
+  ]
+ },
+ "smashed-eggs-avocado-chilli": {
+  "source": "Joe Wicks",
+  "steps": [
+   {
+    "do": [
+     "boil"
+    ],
+    "mins": [
+     6,
+     6
+    ]
+   },
+   {
+    "do": [
+     "butter"
+    ]
+   },
+   {
+    "do": [
+     "avocado"
+    ]
+   }
+  ]
+ },
+ "summer-fruit-cheesecake-bagel": {
+  "source": "Joe Wicks",
+  "steps": [
+   {
+    "do": [
+     "whisk"
+    ]
+   },
+   {
+    "do": [
+     "spread"
+    ]
+   }
+  ]
+ },
+ "blueberry-french-toast": {
+  "source": "Joe Wicks",
+  "steps": [
+   {
+    "do": [
+     "whisk"
+    ]
+   },
+   {
+    "do": [
+     "fry"
+    ],
+    "mins": [
+     2,
+     2
+    ]
+   },
+   {
+    "do": [
+     "simmer"
+    ],
+    "mins": [
+     2,
+     2
+    ]
+   }
+  ]
+ },
+ "steak-and-eggs-potatoes": {
+  "source": "Joe Wicks",
+  "steps": [
+   {
+    "do": [
+     "boil"
+    ],
+    "mins": [
+     5,
+     5
+    ]
+   },
+   {
+    "do": [
+     "fry"
+    ],
+    "mins": [
+     5,
+     6
+    ]
+   },
+   {
+    "do": [
+     "steak"
+    ],
+    "mins": [
+     3,
+     3
+    ]
+   }
+  ]
+ }
+}

@@ -1,6 +1,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { describe, expect, it } from 'vitest';
+import { loadOutlines } from './helpers/fixtures';
 import type { Recipe } from '@/data';
 import { buildShopping } from '@/lib/planner/shopping';
 import type { Plan, PlannedMeal } from '@/lib/planner/types';
@@ -18,7 +19,7 @@ const recipes = fs.readdirSync(path.join(root, 'content/recipes')).filter((f) =>
   return Array.isArray(v) ? v : [v];
 }).filter((r) => !r.macros_only);
 // All dinners, plus lunches that are new (not live yet, or part of the sourced set with a recorded outline); older live lunches predate these checks.
-const outlineKeys = new Set(Object.keys(JSON.parse(fs.readFileSync(path.join(root, 'tests/fixtures/method-outlines.json'), 'utf8')) as Record<string, unknown>));
+const outlineKeys = new Set(Object.keys(loadOutlines()));
 const inScope = (r: RecipeDef) => r.course === 'dinner' || ((r.course === 'lunch' || r.course === 'breakfast') && (r.status !== 'live' || outlineKeys.has(r.slug)));
 
 const scoped = recipes.filter(inScope);

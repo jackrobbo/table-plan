@@ -1,0 +1,19 @@
+{
+  "_about": "Per-ingredient decisions applied by scripts/add-looked-up-ingredients.py on top of the Morrisons lookup. cofid: use the CoFID food (raw, as bought) instead of a pack label that is 'as cooked' or was estimated. allergens: replace the looked-up list (conservative where the page gave no allergen text; verify against the pack). pack_size: costing weight (drained weight for tinned items).",
+  "orzo": { "cofid": "11-716", "approx": "dried white pasta for orzo (the Morrisons page label is as cooked only)" },
+  "couscous": { "cofid": "11-901", "approx": "plain raw couscous (the Morrisons page label is as cooked only)" },
+  "basmati": { "cofid": "11-859", "approx": "white basmati easy cook raw (the Morrisons page label is as boiled only)" },
+  "babycorn": { "cofid": "13-634", "approx": "baby sweetcorn, boiled (the Morrisons page label macros are inconsistent; no raw entry in CoFID)" },
+  "leeks": { "cofid": "13-624" },
+  "aubergine": { "cofid": "13-651", "approx": "aubergine, boiled (CoFID has no raw entry; raw is about 15 kcal per 100 g)" },
+  "ginger": { "cofid": "13-890" },
+  "edamame": { "cofid": "13-667", "approx": "edamame, frozen, boiled (the Morrisons page label is as boiled)" },
+  "seafoodmix": { "cofid": "16-389", "approx": "cooked king prawns for a frozen seafood mix (the Morrisons page label is shallow fried; no mix in CoFID)" },
+  "gnocchi": { "approx": "pack label is as consumed; scaled to uncooked weight (no CoFID entry for gnocchi)" },
+  "pineapple": { "pack_size": 260 },
+  "oystersauce": { "allergens": ["molluscs", "gluten", "soya"] },
+  "dijon": { "allergens": ["mustard", "sulphites"] },
+  "kormapaste": { "allergens": ["milk", "nuts", "mustard"] },
+  "korma": { "allergens": ["milk", "nuts", "mustard"] },
+  "tandoori": { "allergens": ["milk", "mustard"] }
+}

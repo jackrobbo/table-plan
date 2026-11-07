@@ -1,0 +1,67 @@
+{
+ "slug": "moroccan-chicken-couscous",
+ "name": "Moroccan Chicken Couscous",
+ "course": "dinner",
+ "emoji": "🍋",
+ "serves": 4,
+ "time": {
+  "prep": 15,
+  "cook": 25
+ },
+ "ingredients": [
+  {
+   "ingredient": "breast",
+   "qty": 600
+  },
+  {
+   "ingredient": "lemon",
+   "qty": 1
+  },
+  {
+   "ingredient": "sundried",
+   "qty": 40
+  },
+  {
+   "ingredient": "cuc",
+   "qty": 0.5
+  },
+  {
+   "ingredient": "basil",
+   "qty": 10
+  },
+  {
+   "ingredient": "greek",
+   "qty": 200
+  }
+ ],
+ "cupboard": [
+  "couscous",
+  "oil",
+  "garlic",
+  "cumin",
+  "paprika",
+  "oregano",
+  "curry",
+  "stock",
+  "vinegar"
+ ],
+ "cupboard_qty": {
+  "couscous": 240,
+  "oil": 15,
+  "garlic": 10,
+  "cumin": 4,
+  "paprika": 4,
+  "oregano": 2,
+  "curry": 3,
+  "stock": 6,
+  "vinegar": 10
+ },
+ "method": [
+  "Mix the chicken with the oil, half the garlic, cumin, paprika, oregano, curry powder, the zest of the lemon and half its juice, plus salt and pepper. Air fry at 200C for 14 to 18 minutes until cooked through, shaking halfway. Or heat the oven to 220C (200C fan) and roast on a tray for 20 to 25 minutes until golden and cooked through with no pink inside.",
+  "Meanwhile put the couscous in a heatproof bowl, pour over 300ml boiling water mixed with the stock cube, cover and leave for 8 to 10 minutes.",
+  "Stir the Greek yoghurt with the remaining garlic and lemon juice. Chop the sun-dried tomatoes, dice the cucumber and tear the basil.",
+  "Rest the chicken for 3 minutes and slice. Fluff the couscous with a fork, stir in the tomatoes, cucumber, basil and vinegar, then serve topped with the chicken and the garlic yoghurt."
+ ],
+ "source": "idea: Mob",
+ "status": "live"
+}

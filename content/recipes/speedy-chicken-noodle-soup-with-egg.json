@@ -1,0 +1,49 @@
+{
+ "slug": "speedy-chicken-noodle-soup-with-egg",
+ "name": "Speedy Chicken Noodle Soup with Egg",
+ "course": "dinner",
+ "emoji": "🍜",
+ "serves": 2,
+ "status": "live",
+ "time": {
+  "prep": 5,
+  "cook": 15
+ },
+ "ingredients": [
+  {
+   "ingredient": "eggs",
+   "qty": 2
+  },
+  {
+   "ingredient": "spinach",
+   "qty": 100
+  },
+  {
+   "ingredient": "roast",
+   "qty": 120
+  },
+  {
+   "ingredient": "coriander",
+   "qty": 10
+  }
+ ],
+ "cupboard": [
+  "noodles",
+  "stock",
+  "soy",
+  "chilliflakes"
+ ],
+ "cupboard_qty": {
+  "noodles": 120,
+  "stock": 10,
+  "soy": 15,
+  "chilliflakes": 1
+ },
+ "method": [
+  "Lower the eggs into boiling water and simmer for 6 to 7 minutes, then cool in cold water, peel and halve.",
+  "Dissolve the stock cube in 700ml boiling water in a pan, add the noodles and simmer for 4 minutes.",
+  "Stir the spinach into the broth for 1 minute until wilted, then add the soy sauce.",
+  "Ladle the noodles and broth into two bowls and top with the sliced chicken, the egg halves, coriander and a pinch of chilli flakes."
+ ],
+ "source": "idea: Mob"
+}

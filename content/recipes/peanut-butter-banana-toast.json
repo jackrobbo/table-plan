@@ -26,8 +26,9 @@
  "cupboard": [],
  "cupboard_qty": {},
  "method": [
-  "Toast the bread.",
-  "Spread with peanut butter and top with sliced banana."
+  "Toast the bread for 2 minutes until golden.",
+  "Spread the peanut butter over the hot toast while it is warm so it melts slightly.",
+  "Slice the banana, lay it over the top and serve straight away."
  ],
  "source": "table-plan"
 }

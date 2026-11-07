@@ -1,0 +1,46 @@
+{
+ "slug": "bacon-carbonara-pasta",
+ "name": "Bacon Carbonara Pasta",
+ "course": "dinner",
+ "emoji": "🍝",
+ "serves": 4,
+ "status": "live",
+ "time": {
+  "prep": 5,
+  "cook": 15
+ },
+ "ingredients": [
+  {
+   "ingredient": "eggs",
+   "qty": 3
+  },
+  {
+   "ingredient": "bacon",
+   "qty": 6
+  },
+  {
+   "ingredient": "peas",
+   "qty": 200
+  }
+ ],
+ "cupboard": [
+  "fusilli",
+  "parmesan",
+  "garlic",
+  "chilliflakes"
+ ],
+ "cupboard_qty": {
+  "fusilli": 320,
+  "parmesan": 40,
+  "garlic": 8,
+  "chilliflakes": 1
+ },
+ "method": [
+  "Beat the eggs in a bowl with the grated parmesan and plenty of black pepper, and set aside.",
+  "Chop the bacon and put it in a cold frying pan. Heat over a medium heat for 6 to 8 minutes until crisp.",
+  "Boil the fusilli in salted water for 2 minutes less than the packet says, adding the peas for the last 3 minutes, then drain, saving a mugful of the cooking water.",
+  "Add the chopped garlic and chilli flakes to the bacon for 1 minute, then tip in the pasta. Take the pan off the heat.",
+  "Loosen the egg mixture with a splash of pasta water and stir it through the pasta, adding more water a little at a time until the sauce is silky. Serve straight away."
+ ],
+ "source": "idea: Mob"
+}

@@ -1,0 +1,50 @@
+{
+ "slug": "peanut-butter-banana-overnight-oats",
+ "name": "Peanut Butter Banana Overnight Oats",
+ "course": "breakfast",
+ "emoji": "🥜",
+ "serves": 1,
+ "status": "live",
+ "time": {
+  "prep": 5,
+  "cook": 0
+ },
+ "ingredients": [
+  {
+   "ingredient": "oats",
+   "qty": 45
+  },
+  {
+   "ingredient": "milk",
+   "qty": 120
+  },
+  {
+   "ingredient": "greek",
+   "qty": 100
+  },
+  {
+   "ingredient": "pbutter",
+   "qty": 15
+  },
+  {
+   "ingredient": "blueb",
+   "qty": 30
+  },
+  {
+   "ingredient": "banana",
+   "qty": 1
+  }
+ ],
+ "cupboard": [
+  "honey"
+ ],
+ "cupboard_qty": {
+  "honey": 8
+ },
+ "method": [
+  "Whisk the peanut butter, honey and milk together in a jar until smooth, then stir in the oats and the blueberries.",
+  "Cover and chill in the fridge overnight so the oats soak up the milk.",
+  "In the morning spoon the Greek yoghurt over the oats, top with the sliced banana and serve."
+ ],
+ "source": "idea: Mob"
+}

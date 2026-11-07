@@ -1,0 +1,58 @@
+{
+ "slug": "marry-me-chicken-pasta-bake",
+ "name": "Marry Me Chicken Pasta Bake",
+ "course": "dinner",
+ "emoji": "🍝",
+ "serves": 2,
+ "time": {
+  "prep": 10,
+  "cook": 25
+ },
+ "ingredients": [
+  {
+   "ingredient": "roast",
+   "qty": 200
+  },
+  {
+   "ingredient": "cottage",
+   "qty": 150
+  },
+  {
+   "ingredient": "pesto",
+   "qty": 40
+  },
+  {
+   "ingredient": "passata",
+   "qty": 100
+  },
+  {
+   "ingredient": "plum",
+   "qty": 100
+  }
+ ],
+ "cupboard": [
+  "fusilli",
+  "puree",
+  "garlic",
+  "chilliflakes",
+  "paprika",
+  "parmesan"
+ ],
+ "cupboard_qty": {
+  "fusilli": 160,
+  "puree": 15,
+  "garlic": 3,
+  "chilliflakes": 1,
+  "paprika": 2,
+  "parmesan": 20
+ },
+ "method": [
+  "Cook the fusilli in boiling salted water for 10 to 12 minutes until al dente. Scoop out a mug of the pasta water, then drain.",
+  "Halve the tomatoes and shred the cooked chicken. Heat the grill to high.",
+  "Blend the cottage cheese, pesto, tomato puree, passata, garlic, chilli flakes and paprika until smooth, loosening with a splash of pasta water.",
+  "Tip the pasta, chicken and tomatoes into an ovenproof dish, pour over the sauce and stir until coated, adding more pasta water if it looks dry.",
+  "Grate the parmesan over the top and grill for 8 to 10 minutes until golden and bubbling, then serve."
+ ],
+ "source": "idea: Mob",
+ "status": "live"
+}

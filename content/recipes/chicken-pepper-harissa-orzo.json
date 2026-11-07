@@ -1,0 +1,56 @@
+{
+ "slug": "chicken-pepper-harissa-orzo",
+ "name": "Chicken, Pepper & Harissa Orzo",
+ "course": "dinner",
+ "emoji": "🌶️",
+ "serves": 4,
+ "status": "live",
+ "time": {
+  "prep": 15,
+  "cook": 30
+ },
+ "ingredients": [
+  {
+   "ingredient": "breast",
+   "qty": 500
+  },
+  {
+   "ingredient": "mixpep",
+   "qty": 3
+  },
+  {
+   "ingredient": "sundried",
+   "qty": 40
+  },
+  {
+   "ingredient": "harissa",
+   "qty": 40
+  },
+  {
+   "ingredient": "mascarpone",
+   "qty": 60
+  }
+ ],
+ "cupboard": [
+  "orzo",
+  "garlic",
+  "stock",
+  "vinegar",
+  "oil"
+ ],
+ "cupboard_qty": {
+  "orzo": 300,
+  "garlic": 12,
+  "stock": 10,
+  "vinegar": 10,
+  "oil": 15
+ },
+ "method": [
+  "Chop the peppers into chunky pieces, slice the garlic, finely chop the sun-dried tomatoes and cut the chicken into 3cm pieces. Crumble the stock cube into 700ml of hot water.",
+  "Heat the oil in a large saucepan over a medium heat and cook the peppers for 6 to 8 minutes until starting to soften. Stir in the garlic and orzo for a minute.",
+  "Pour in the stock, then add the harissa, sun-dried tomatoes and chicken. Simmer, stirring now and then, for 12 to 15 minutes until the orzo is tender, the liquid has been absorbed and the chicken is cooked through with no pink left. Add a splash of water if it dries out.",
+  "Stir in the mascarpone and red wine vinegar and season to taste.",
+  "Divide between bowls and serve."
+ ],
+ "source": "idea: Mob"
+}

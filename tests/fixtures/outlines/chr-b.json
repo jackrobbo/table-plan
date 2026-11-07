@@ -1,0 +1,481 @@
+{
+ "creamy-salmon-pasta-bake": {
+  "source": "Sainsbury's",
+  "steps": [
+   {
+    "do": [
+     "oven"
+    ],
+    "temp": 180
+   },
+   {
+    "do": [
+     "salmon"
+    ],
+    "mins": [
+     15,
+     15
+    ]
+   },
+   {
+    "do": [
+     "fusilli",
+     "boil"
+    ],
+    "mins": [
+     10,
+     12
+    ],
+    "deviation": "Original boils spirali for 15 minutes; fusilli packet time is shorter."
+   },
+   {
+    "do": [
+     "leeks"
+    ],
+    "mins": [
+     5,
+     5
+    ]
+   },
+   {
+    "do": [
+     "bake"
+    ],
+    "mins": [
+     15,
+     15
+    ]
+   }
+  ]
+ },
+ "sweet-chilli-beef-skewers-and-rice": {
+  "source": "Sainsbury's",
+  "steps": [
+   {
+    "do": [
+     "grill"
+    ]
+   },
+   {
+    "do": [
+     "skewers"
+    ],
+    "mins": [
+     6,
+     6
+    ]
+   },
+   {
+    "do": [
+     "stir-fry",
+     "wok"
+    ],
+    "mins": [
+     1,
+     2
+    ]
+   },
+   {
+    "do": [
+     "rice"
+    ],
+    "mins": [
+     2,
+     2
+    ]
+   }
+  ]
+ },
+ "middle-eastern-meatball-wraps": {
+  "source": "Sainsbury's",
+  "steps": [
+   {
+    "do": [
+     "meatballs"
+    ],
+    "mins": [
+     5,
+     5
+    ],
+    "deviation": "Original uses ready-made beef meatballs; ours are shaped from raw mince so cook longer to be cooked through."
+   },
+   {
+    "do": [
+     "peppers"
+    ],
+    "mins": [
+     5,
+     5
+    ]
+   },
+   {
+    "do": [
+     "yoghurt"
+    ]
+   },
+   {
+    "do": [
+     "wraps"
+    ]
+   }
+  ]
+ },
+ "texan-beef-burritos": {
+  "source": "Sainsbury's",
+  "steps": [
+   {
+    "do": [
+     "brown"
+    ],
+    "mins": [
+     5,
+     5
+    ]
+   },
+   {
+    "do": [
+     "simmer"
+    ],
+    "mins": [
+     10,
+     10
+    ]
+   },
+   {
+    "do": [
+     "grill"
+    ]
+   },
+   {
+    "do": [
+     "wraps"
+    ]
+   },
+   {
+    "do": [
+     "grill"
+    ],
+    "mins": [
+     2,
+     2
+    ]
+   }
+  ]
+ },
+ "lamb-meatball-pitta-wraps": {
+  "source": "Sainsbury's",
+  "steps": [
+   {
+    "do": [
+     "oven"
+    ],
+    "temp": 190
+   },
+   {
+    "do": [
+     "fry"
+    ],
+    "mins": [
+     4,
+     4
+    ]
+   },
+   {
+    "do": [
+     "bake"
+    ],
+    "mins": [
+     6,
+     8
+    ]
+   },
+   {
+    "do": [
+     "toast"
+    ],
+    "mins": [
+     2,
+     2
+    ]
+   }
+  ]
+ },
+ "beef-meatball-goulash": {
+  "source": "Sainsbury's",
+  "steps": [
+   {
+    "do": [
+     "oven"
+    ],
+    "temp": 200
+   },
+   {
+    "do": [
+     "bake"
+    ],
+    "mins": [
+     22,
+     22
+    ],
+    "deviation": "Our meatballs are shaped from fresh mince and are smaller than frozen ones, so 20 minutes is enough."
+   },
+   {
+    "do": [
+     "onion"
+    ],
+    "mins": [
+     5,
+     5
+    ]
+   },
+   {
+    "do": [
+     "simmer"
+    ],
+    "mins": [
+     15,
+     15
+    ]
+   },
+   {
+    "do": [
+     "spaghetti"
+    ],
+    "mins": [
+     7,
+     9
+    ]
+   },
+   {
+    "do": [
+     "peppers"
+    ],
+    "mins": [
+     5,
+     5
+    ]
+   }
+  ]
+ },
+ "thai-chicken-and-broccoli-curry": {
+  "source": "Sainsbury's",
+  "steps": [
+   {
+    "do": [
+     "rice"
+    ]
+   },
+   {
+    "do": [
+     "onion"
+    ]
+   },
+   {
+    "do": [
+     "chicken"
+    ]
+   },
+   {
+    "do": [
+     "broccoli"
+    ],
+    "mins": [
+     2,
+     2
+    ]
+   },
+   {
+    "do": [
+     "simmer"
+    ],
+    "mins": [
+     5,
+     7
+    ]
+   }
+  ]
+ },
+ "chorizo-seafood-paella": {
+  "source": "Sainsbury's",
+  "steps": [
+   {
+    "do": [
+     "chorizo"
+    ],
+    "mins": [
+     2,
+     3
+    ]
+   },
+   {
+    "do": [
+     "onion"
+    ],
+    "mins": [
+     5,
+     5
+    ]
+   },
+   {
+    "do": [
+     "simmer"
+    ],
+    "mins": [
+     10,
+     10
+    ]
+   },
+   {
+    "do": [
+     "seafood"
+    ],
+    "mins": [
+     3,
+     3
+    ]
+   },
+   {
+    "do": [
+     "peas"
+    ],
+    "mins": [
+     2,
+     2
+    ]
+   }
+  ]
+ },
+ "malaysian-coconut-chicken-and-rice": {
+  "source": "Gousto",
+  "steps": [
+   {
+    "do": [
+     "pickle",
+     "vinegar"
+    ]
+   },
+   {
+    "do": [
+     "rice"
+    ],
+    "mins": [
+     10,
+     12
+    ]
+   },
+   {
+    "do": [
+     "chicken",
+     "brown"
+    ],
+    "mins": [
+     4,
+     5
+    ]
+   },
+   {
+    "do": [
+     "paste"
+    ],
+    "mins": [
+     5,
+     6
+    ]
+   },
+   {
+    "do": [
+     "cover"
+    ],
+    "mins": [
+     10,
+     10
+    ]
+   }
+  ]
+ },
+ "spiced-chicken-ciabatta-herby-potatoes": {
+  "source": "Gousto",
+  "steps": [
+   {
+    "do": [
+     "oven"
+    ],
+    "temp": 220
+   },
+   {
+    "do": [
+     "roast"
+    ],
+    "mins": [
+     25,
+     25
+    ]
+   },
+   {
+    "do": [
+     "chicken"
+    ],
+    "mins": [
+     3,
+     3
+    ]
+   },
+   {
+    "do": [
+     "toast"
+    ],
+    "mins": [
+     5,
+     5
+    ]
+   }
+  ]
+ },
+ "chicken-pepper-risotto": {
+  "source": "Gousto",
+  "steps": [
+   {
+    "do": [
+     "oven"
+    ],
+    "temp": 200
+   },
+   {
+    "do": [
+     "brown"
+    ],
+    "mins": [
+     3,
+     3
+    ]
+   },
+   {
+    "do": [
+     "roast"
+    ],
+    "mins": [
+     15,
+     20
+    ]
+   },
+   {
+    "do": [
+     "onion"
+    ],
+    "mins": [
+     4,
+     4
+    ]
+   },
+   {
+    "do": [
+     "ladle"
+    ],
+    "mins": [
+     25,
+     30
+    ]
+   }
+  ]
+ }
+}

@@ -1,0 +1,58 @@
+{
+ "slug": "middle-eastern-meatball-wraps",
+ "name": "Middle Eastern Meatball Wraps",
+ "course": "dinner",
+ "emoji": "🌯",
+ "serves": 2,
+ "time": {
+  "prep": 15,
+  "cook": 12
+ },
+ "ingredients": [
+  {
+   "ingredient": "mince",
+   "qty": 175
+  },
+  {
+   "ingredient": "mixpep",
+   "qty": 1
+  },
+  {
+   "ingredient": "greek",
+   "qty": 90
+  },
+  {
+   "ingredient": "lemon",
+   "qty": 0.5
+  },
+  {
+   "ingredient": "wraps",
+   "qty": 2
+  },
+  {
+   "ingredient": "spinach",
+   "qty": 50
+  },
+  {
+   "ingredient": "coriander",
+   "qty": 15
+  }
+ ],
+ "cupboard": [
+  "cumin",
+  "oil"
+ ],
+ "cupboard_qty": {
+  "cumin": 3,
+  "oil": 5
+ },
+ "method": [
+  "Mix the beef mince with the cumin and a pinch of salt and roll into 10 small meatballs, then flatten them slightly.",
+  "Heat the oil in a large non-stick frying pan and cook the meatballs for 8 minutes, turning, until browned and cooked through.",
+  "Add the sliced peppers and cook over a high heat for 5 minutes until softened and lightly charred.",
+  "Stir a squeeze of lemon into the yoghurt. Warm the wraps for 20 seconds in the microwave and pile the spinach and torn coriander into each.",
+  "Top with the meatballs and peppers, spoon over the lemony yoghurt and serve rolled up."
+ ],
+ "source": "idea: Sainsbury's recipes",
+ "status": "live"
+}

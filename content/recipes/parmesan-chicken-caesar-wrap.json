@@ -1,0 +1,52 @@
+{
+ "slug": "parmesan-chicken-caesar-wrap",
+ "name": "Parmesan Chicken Caesar Wrap",
+ "course": "lunch",
+ "emoji": "🌯",
+ "serves": 1,
+ "time": {
+  "prep": 5,
+  "cook": 10
+ },
+ "ingredients": [
+  {
+   "ingredient": "breast",
+   "qty": 120
+  },
+  {
+   "ingredient": "salad",
+   "qty": 50
+  },
+  {
+   "ingredient": "wraps",
+   "qty": 1
+  }
+ ],
+ "cupboard": [
+  "herbs",
+  "oil",
+  "mayo",
+  "vinegar",
+  "garlic",
+  "parmesan",
+  "cheddar"
+ ],
+ "cupboard_qty": {
+  "herbs": 1,
+  "oil": 5,
+  "mayo": 20,
+  "vinegar": 3,
+  "garlic": 2,
+  "parmesan": 10,
+  "cheddar": 15
+ },
+ "method": [
+  "Slice the chicken into thin strips and toss with the mixed herbs, salt and pepper. Roughly chop the salad leaves and finely grate the parmesan and cheddar.",
+  "Heat the oil in a non-stick pan over high heat and fry the chicken for 5 to 6 minutes, turning once, until golden and cooked through.",
+  "Meanwhile stir the mayonnaise, vinegar, crushed garlic and a splash of water into a dressing, then toss the salad in it.",
+  "Warm the wrap in the microwave for 10 to 15 seconds. Layer the chicken, dressed salad, parmesan and cheddar down the middle, fold in the sides and roll up tightly.",
+  "Return the wrap to the pan over a medium heat for 2 to 3 minutes, turning once, until golden and crisp, then serve."
+ ],
+ "source": "idea: Mob",
+ "status": "live"
+}

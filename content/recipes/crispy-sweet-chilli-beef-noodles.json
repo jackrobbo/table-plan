@@ -1,0 +1,62 @@
+{
+ "slug": "crispy-sweet-chilli-beef-noodles",
+ "name": "Crispy Sweet Chilli Beef Noodles",
+ "course": "dinner",
+ "emoji": "🍜",
+ "serves": 2,
+ "status": "live",
+ "time": {
+  "prep": 15,
+  "cook": 20
+ },
+ "ingredients": [
+  {
+   "ingredient": "sizzle",
+   "qty": 320
+  },
+  {
+   "ingredient": "onions",
+   "qty": 1
+  },
+  {
+   "ingredient": "pepper",
+   "qty": 2
+  },
+  {
+   "ingredient": "spring",
+   "qty": 0.5
+  },
+  {
+   "ingredient": "chilli",
+   "qty": 10
+  }
+ ],
+ "cupboard": [
+  "cornflour",
+  "oil",
+  "garlic",
+  "honey",
+  "puree",
+  "vinegar",
+  "soy",
+  "noodles"
+ ],
+ "cupboard_qty": {
+  "cornflour": 30,
+  "oil": 20,
+  "garlic": 9,
+  "honey": 25,
+  "puree": 15,
+  "vinegar": 15,
+  "soy": 15,
+  "noodles": 140
+ },
+ "method": [
+  "Cook the noodles in boiling water for 4 minutes, drain and rinse under cold water. Toss the sliced steak in the cornflour with a pinch of salt and pepper until evenly coated.",
+  "Heat the oil in a large frying pan or wok over a medium heat and fry the steak for 5 to 6 minutes until crispy and cooked through. Lift it out and keep to one side, leaving the oil in the pan.",
+  "Fry the sliced onion and peppers in the same pan for 4 minutes until soft, then add the spring onions, chilli and garlic and cook for 2 minutes more.",
+  "Stir in the honey, tomato puree, vinegar and soy sauce with a splash of water and cook for 1 minute until glossy.",
+  "Add the noodles and crispy steak and toss for 2 minutes to heat through, then divide between bowls and serve."
+ ],
+ "source": "idea: Morrisons Recipes (Good Food)"
+}

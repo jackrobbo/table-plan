@@ -1,0 +1,52 @@
+{
+ "slug": "beef-meatball-goulash",
+ "name": "Beef Meatball Goulash",
+ "course": "dinner",
+ "emoji": "🍝",
+ "serves": 4,
+ "time": {
+  "prep": 15,
+  "cook": 30
+ },
+ "ingredients": [
+  {
+   "ingredient": "mince",
+   "qty": 500
+  },
+  {
+   "ingredient": "onions",
+   "qty": 1
+  },
+  {
+   "ingredient": "ctoms",
+   "qty": 230
+  },
+  {
+   "ingredient": "mixpep",
+   "qty": 2
+  }
+ ],
+ "cupboard": [
+  "spaghetti",
+  "oil",
+  "garlic",
+  "paprika",
+  "stock"
+ ],
+ "cupboard_qty": {
+  "spaghetti": 300,
+  "oil": 15,
+  "garlic": 6,
+  "paprika": 6,
+  "stock": 6
+ },
+ "method": [
+  "Heat the oven to 200C (180C fan). Roll the beef mince into 20 meatballs, put them on a baking tray and bake for 20 minutes until browned and cooked through.",
+  "Meanwhile soften the chopped onion in the oil for 5 minutes, then stir in the garlic and paprika and cook for 1 minute.",
+  "Add the chopped tomatoes, 300ml water and the crumbled stock cube, bring to the boil and simmer for 15 minutes until thickened.",
+  "Cook the spaghetti in boiling water for 8 minutes until just tender, then drain.",
+  "Add the meatballs and sliced peppers to the sauce and simmer for 5 minutes until the peppers are tender and everything is piping hot. Serve over the spaghetti."
+ ],
+ "source": "idea: Sainsbury's recipes",
+ "status": "live"
+}

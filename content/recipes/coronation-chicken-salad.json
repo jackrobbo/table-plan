@@ -1,0 +1,56 @@
+{
+ "slug": "coronation-chicken-salad",
+ "name": "Coronation Chicken Salad",
+ "course": "lunch",
+ "emoji": "🥗",
+ "serves": 1,
+ "status": "live",
+ "time": {
+  "prep": 10,
+  "cook": 0
+ },
+ "ingredients": [
+  {
+   "ingredient": "roast",
+   "qty": 120
+  },
+  {
+   "ingredient": "greek",
+   "qty": 15
+  },
+  {
+   "ingredient": "apple",
+   "qty": 0.3
+  },
+  {
+   "ingredient": "salad",
+   "qty": 40
+  },
+  {
+   "ingredient": "spinach",
+   "qty": 20
+  },
+  {
+   "ingredient": "lemon",
+   "qty": 0.1
+  }
+ ],
+ "cupboard": [
+  "mayo",
+  "curry",
+  "honey",
+  "nuts"
+ ],
+ "cupboard_qty": {
+  "mayo": 15,
+  "curry": 1,
+  "honey": 5,
+  "nuts": 15
+ },
+ "method": [
+  "Stir the yoghurt, mayonnaise, curry powder, honey and a squeeze of lemon juice together in a bowl, and season with salt and pepper.",
+  "Slice the chicken and dice the apple. Chop the nuts roughly, then fold the chicken, apple and nuts through the dressing.",
+  "Tear the salad leaves into a bowl with the spinach, spoon the coronation chicken on top and serve. For a packed lunch, keep the chicken and leaves apart until you eat."
+ ],
+ "source": "idea: Joe Wicks"
+}

@@ -1,0 +1,39 @@
+{
+ "slug": "cottage-cheese-pancakes",
+ "name": "Cottage Cheese Pancakes",
+ "course": "breakfast",
+ "emoji": "🥞",
+ "serves": 1,
+ "status": "live",
+ "time": {
+  "prep": 10,
+  "cook": 8
+ },
+ "ingredients": [
+  {
+   "ingredient": "eggs",
+   "qty": 2
+  },
+  {
+   "ingredient": "cottage",
+   "qty": 110
+  }
+ ],
+ "cupboard": [
+  "flour",
+  "honey",
+  "oil"
+ ],
+ "cupboard_qty": {
+  "flour": 30,
+  "honey": 7,
+  "oil": 5
+ },
+ "method": [
+  "Blend the eggs, cottage cheese, flour and honey until smooth, then leave the batter to rest for 5 minutes.",
+  "Heat the oil in a non-stick frying pan over a medium heat and spoon in the batter in small rounds, in two batches.",
+  "Cook for 3 minutes until bubbles appear on top, flip and cook for another 3 minutes until golden and cooked through.",
+  "Stack the pancakes on a plate and serve with a drizzle of honey if you like."
+ ],
+ "source": "idea: The Happy Foodie"
+}

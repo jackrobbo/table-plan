@@ -1,0 +1,10 @@
+{
+  "budget-crispy-chilli-beef": { "source": "Joe Wicks", "steps": [
+    { "do": ["mince"], "mins": [8, 10] },
+    { "do": ["peas"], "mins": [3, 5], "deviation": "Original boils peas and broccoli for a few minutes; we give 3 to 4 minutes." }
+  ] },
+  "budget-spring-roll-bowl": { "source": "Joe Wicks", "steps": [
+    { "do": ["pork"], "mins": [3, 5], "deviation": "Original cooks the pork for a few minutes first; we give 4 to 5 minutes for double the quantity." },
+    { "do": ["mushrooms"], "mins": [10, 10] }
+  ] }
+}

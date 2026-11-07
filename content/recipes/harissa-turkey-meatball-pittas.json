@@ -1,0 +1,62 @@
+{
+ "slug": "harissa-turkey-meatball-pittas",
+ "name": "Harissa Turkey Meatball Pittas",
+ "course": "dinner",
+ "emoji": "🧆",
+ "serves": 2,
+ "status": "live",
+ "time": {
+  "prep": 20,
+  "cook": 15
+ },
+ "ingredients": [
+  {
+   "ingredient": "turkeymince",
+   "qty": 300
+  },
+  {
+   "ingredient": "harissa",
+   "qty": 30
+  },
+  {
+   "ingredient": "cuc",
+   "qty": 0.5
+  },
+  {
+   "ingredient": "greek",
+   "qty": 150
+  },
+  {
+   "ingredient": "lemon",
+   "qty": 0.5
+  },
+  {
+   "ingredient": "coriander",
+   "qty": 10
+  },
+  {
+   "ingredient": "pepper",
+   "qty": 1
+  },
+  {
+   "ingredient": "pittas",
+   "qty": 2
+  }
+ ],
+ "cupboard": [
+  "oregano",
+  "oil"
+ ],
+ "cupboard_qty": {
+  "oregano": 1,
+  "oil": 5
+ },
+ "method": [
+  "Slice the cucumber, salt it and leave it in a colander for 10 minutes, then squeeze out the water. Heat the oven to 200C (180C fan).",
+  "Chop most of the coriander, keeping a few leaves back. Mix the turkey mince with the oregano, half the harissa, salt and pepper and shape into about 10 small meatballs with wet hands.",
+  "Put the meatballs on a lined tray, brush with the oil and bake for 12 to 15 minutes until golden and cooked through with no pink inside.",
+  "Slice the red pepper and toss it with the cucumber, a squeeze of lemon juice and the grated zest.",
+  "Spread the yoghurt on plates and swirl in the remaining harissa. Warm the pittas, cut into triangles, and serve with the meatballs, salad and reserved coriander."
+ ],
+ "source": "idea: Mob"
+}

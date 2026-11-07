@@ -1,6 +1,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { describe, expect, it } from 'vitest';
+import { loadOutlines, loadSourceNutrition } from './helpers/fixtures';
 import type { IngredientDef, RecipeDef } from '@/lib/content/types';
 import { computePerPortion, gramsOf, recipeLines } from '@/lib/content/macros';
 import { verifyRecipe } from '@/lib/content/validate';
@@ -14,9 +15,9 @@ const recipes = fs.readdirSync(path.join(root, 'content/recipes')).filter((f) =>
   const v = JSON.parse(fs.readFileSync(path.join(root, 'content/recipes', f), 'utf8')) as RecipeDef | RecipeDef[];
   return Array.isArray(v) ? v : [v];
 }).filter((r) => !r.macros_only);
-const outlineKeys = new Set(Object.keys(JSON.parse(fs.readFileSync(path.join(root, 'tests/fixtures/method-outlines.json'), 'utf8')) as Record<string, unknown>));
+const outlineKeys = new Set(Object.keys(loadOutlines()));
 const isNew = (r: RecipeDef) => r.status !== 'live' || outlineKeys.has(r.slug);
-const src = JSON.parse(fs.readFileSync(path.join(root, 'tests/fixtures/source-nutrition.json'), 'utf8')) as Record<string, { kcal: number; source: string; tolerance: number; note?: string }>;
+const src = loadSourceNutrition();
 
 // Known gaps in live meals that use branded items we have no data for yet (tracked in design/todo.md). New recipes may not use them.
 const KNOWN_NO_DATA = new Set(['grenade', 'granola', 'seafood', 'isolate']);

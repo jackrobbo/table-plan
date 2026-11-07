@@ -1,0 +1,48 @@
+{
+ "slug": "blueberry-french-toast",
+ "name": "Blueberry French Toast",
+ "course": "breakfast",
+ "emoji": "🫐",
+ "serves": 1,
+ "status": "live",
+ "time": {
+  "prep": 4,
+  "cook": 8
+ },
+ "ingredients": [
+  {
+   "ingredient": "eggs",
+   "qty": 2
+  },
+  {
+   "ingredient": "greek",
+   "qty": 60
+  },
+  {
+   "ingredient": "loaf",
+   "qty": 2
+  },
+  {
+   "ingredient": "blueb",
+   "qty": 70
+  }
+ ],
+ "cupboard": [
+  "flour",
+  "butter",
+  "honey"
+ ],
+ "cupboard_qty": {
+  "flour": 10,
+  "butter": 5,
+  "honey": 15
+ },
+ "method": [
+  "Whisk the eggs, Greek yoghurt and flour together in a shallow dish until smooth.",
+  "Lightly toast the bread, then press it into the mixture for a minute until both slices have soaked up the liquid.",
+  "Melt the butter in a large frying pan over a medium heat and fry the soaked bread for 2 minutes on each side until golden.",
+  "Meanwhile put the blueberries and honey in a small pan, bring to the boil, then simmer for 2 minutes until soft and syrupy.",
+  "Lift the French toast onto a plate, spoon the blueberry sauce over the top and serve."
+ ],
+ "source": "idea: Joe Wicks"
+}

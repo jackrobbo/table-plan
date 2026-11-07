@@ -1,0 +1,375 @@
+{
+ "chicken-korma": {
+  "source": "BBC Good Food",
+  "steps": [
+   {
+    "do": [
+     "paste",
+     "blitz"
+    ]
+   },
+   {
+    "do": [
+     "korma"
+    ],
+    "mins": [
+     2,
+     2
+    ]
+   },
+   {
+    "do": [
+     "chicken"
+    ]
+   },
+   {
+    "do": [
+     "simmer"
+    ],
+    "mins": [
+     10,
+     10
+    ]
+   },
+   {
+    "do": [
+     "rice"
+    ]
+   },
+   {
+    "do": [
+     "yogurt"
+    ]
+   }
+  ]
+ },
+ "easy-butter-chicken": {
+  "source": "BBC Good Food",
+  "steps": [
+   {
+    "do": [
+     "marinade",
+     "chill"
+    ],
+    "mins": [
+     60,
+     60
+    ],
+    "deviation": "Original chills the chicken for an hour or overnight; we keep it to 30 minutes to suit a weeknight."
+   },
+   {
+    "do": [
+     "onion"
+    ],
+    "mins": [
+     10,
+     10
+    ]
+   },
+   {
+    "do": [
+     "puree"
+    ],
+    "mins": [
+     2,
+     2
+    ]
+   },
+   {
+    "do": [
+     "chicken"
+    ],
+    "mins": [
+     15,
+     15
+    ]
+   },
+   {
+    "do": [
+     "simmer"
+    ],
+    "mins": [
+     5,
+     5
+    ]
+   },
+   {
+    "do": [
+     "scatter"
+    ]
+   }
+  ]
+ },
+ "chinese-chicken-curry": {
+  "source": "BBC Good Food",
+  "steps": [
+   {
+    "do": [
+     "cornflour"
+    ]
+   },
+   {
+    "do": [
+     "onion"
+    ],
+    "mins": [
+     5,
+     6
+    ]
+   },
+   {
+    "do": [
+     "stock",
+     "simmer"
+    ],
+    "mins": [
+     20,
+     20
+    ]
+   },
+   {
+    "do": [
+     "chicken"
+    ]
+   },
+   {
+    "do": [
+     "peas"
+    ],
+    "mins": [
+     5,
+     5
+    ]
+   },
+   {
+    "do": [
+     "rice"
+    ]
+   }
+  ]
+ },
+ "spanish-chicken-stew": {
+  "source": "BBC Good Food",
+  "steps": [
+   {
+    "do": [
+     "brown"
+    ],
+    "mins": [
+     7,
+     8
+    ]
+   },
+   {
+    "do": [
+     "pepper",
+     "fry"
+    ],
+    "mins": [
+     8,
+     8
+    ]
+   },
+   {
+    "do": [
+     "paprika",
+     "simmer"
+    ],
+    "mins": [
+     25,
+     25
+    ],
+    "deviation": "Original simmers for 25 minutes; we simmer 15 as thigh pieces are cooked through sooner and the pan time sits with the brown stage."
+   },
+   {
+    "do": [
+     "rice"
+    ]
+   },
+   {
+    "do": [
+     "scatter"
+    ]
+   }
+  ]
+ },
+ "curried-satay-noodles": {
+  "source": "BBC Good Food",
+  "steps": [
+   {
+    "do": [
+     "noodles"
+    ]
+   },
+   {
+    "do": [
+     "stir-fry"
+    ],
+    "mins": [
+     5,
+     5
+    ]
+   },
+   {
+    "do": [
+     "peanut"
+    ]
+   },
+   {
+    "do": [
+     "noodles",
+     "peas"
+    ]
+   },
+   {
+    "do": [
+     "lemon"
+    ]
+   }
+  ]
+ },
+ "prawn-harissa-spaghetti": {
+  "source": "BBC Good Food",
+  "steps": [
+   {
+    "do": [
+     "broccoli"
+    ],
+    "mins": [
+     1,
+     2
+    ]
+   },
+   {
+    "do": [
+     "garlic"
+    ],
+    "mins": [
+     2,
+     2
+    ]
+   },
+   {
+    "do": [
+     "tomatoes"
+    ],
+    "mins": [
+     5,
+     5
+    ],
+    "deviation": "Original cooks raw prawns for 2 minutes until pink; ours are already cooked so they are only heated through."
+   },
+   {
+    "do": [
+     "harissa"
+    ]
+   },
+   {
+    "do": [
+     "toss"
+    ]
+   }
+  ]
+ },
+ "chicken-katsu-curry": {
+  "source": "BBC Good Food",
+  "steps": [
+   {
+    "do": [
+     "oven"
+    ],
+    "temp": 220
+   },
+   {
+    "do": [
+     "bake"
+    ],
+    "mins": [
+     20,
+     20
+    ]
+   },
+   {
+    "do": [
+     "rice"
+    ],
+    "mins": [
+     35,
+     35
+    ],
+    "deviation": "Original uses brown rice that takes 35 minutes; we use basmati cooked to the pack instructions, which is much quicker."
+   },
+   {
+    "do": [
+     "carrot",
+     "cucumber"
+    ]
+   },
+   {
+    "do": [
+     "divide"
+    ]
+   }
+  ]
+ },
+ "healthy-seafood-spaghetti": {
+  "source": "BBC Good Food",
+  "steps": [
+   {
+    "do": [
+     "celery",
+     "onion"
+    ],
+    "mins": [
+     10,
+     10
+    ],
+    "deviation": "Original uses fennel; celery is the stocked swap and softens in the same time."
+   },
+   {
+    "do": [
+     "chilli",
+     "puree"
+    ]
+   },
+   {
+    "do": [
+     "seafood"
+    ]
+   },
+   {
+    "do": [
+     "toss"
+    ]
+   }
+  ]
+ },
+ "turkey-cranberry-wrap": {
+  "source": "EatingWell",
+  "steps": []
+ },
+ "caprese-sandwich": {
+  "source": "EatingWell",
+  "steps": []
+ },
+ "chicken-caprese-sandwich": {
+  "source": "EatingWell",
+  "steps": [
+   {
+    "do": [
+     "pan",
+     "frying"
+    ],
+    "mins": [
+     2,
+     2
+    ],
+    "deviation": "Original browns the sandwich for about 90 seconds a side; we allow 2 minutes a side for thicker bread."
+   }
+  ]
+ },
+ "chicken-salad-tostadas": {
+  "source": "EatingWell",
+  "steps": []
+ }
+}

@@ -1,0 +1,66 @@
+{
+ "slug": "bbq-chicken-herb-slaw-wrap",
+ "name": "BBQ Chicken Wrap with Herb Slaw",
+ "course": "lunch",
+ "emoji": "🌯",
+ "serves": 1,
+ "status": "live",
+ "time": {
+  "prep": 12,
+  "cook": 8
+ },
+ "ingredients": [
+  {
+   "ingredient": "breast",
+   "qty": 140
+  },
+  {
+   "ingredient": "cabbage",
+   "qty": 70
+  },
+  {
+   "ingredient": "carrots",
+   "qty": 60
+  },
+  {
+   "ingredient": "greek",
+   "qty": 20
+  },
+  {
+   "ingredient": "coriander",
+   "qty": 5
+  },
+  {
+   "ingredient": "chilli",
+   "qty": 3
+  },
+  {
+   "ingredient": "bbq",
+   "qty": 40
+  },
+  {
+   "ingredient": "wraps",
+   "qty": 1
+  },
+  {
+   "ingredient": "avocado",
+   "qty": 0.45
+  }
+ ],
+ "cupboard": [
+  "mayo",
+  "paprika",
+  "oil"
+ ],
+ "cupboard_qty": {
+  "mayo": 20,
+  "paprika": 1,
+  "oil": 5
+ },
+ "method": [
+  "Rub the chicken breast with the smoked paprika, salt and pepper. Heat the oil in a frying pan over a high heat and cook the chicken for 3 to 4 minutes on each side, until golden and cooked through. Set aside to rest.",
+  "While the chicken cooks, shred the cabbage and grate the carrot into a bowl with a pinch of salt and massage for 2 minutes until softened. Stir in the yoghurt and mayonnaise, then the chopped coriander and finely chopped chilli.",
+  "Brush the chicken with the barbecue sauce and slice it. Spread the herb slaw down the middle of the wrap, top with the chicken and sliced avocado, then fold in the sides and roll up. Cut in half and serve."
+ ],
+ "source": "idea: Joe Wicks"
+}

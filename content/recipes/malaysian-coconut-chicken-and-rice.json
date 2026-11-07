@@ -1,0 +1,70 @@
+{
+ "slug": "malaysian-coconut-chicken-and-rice",
+ "name": "Malaysian Coconut Chicken with Pickled Cucumber",
+ "course": "dinner",
+ "emoji": "🥥",
+ "serves": 2,
+ "time": {
+  "prep": 15,
+  "cook": 35
+ },
+ "ingredients": [
+  {
+   "ingredient": "thigh",
+   "qty": 320
+  },
+  {
+   "ingredient": "cuc",
+   "qty": 0.5
+  },
+  {
+   "ingredient": "onions",
+   "qty": 0.5
+  },
+  {
+   "ingredient": "chilli",
+   "qty": 20
+  },
+  {
+   "ingredient": "ginger",
+   "qty": 10
+  },
+  {
+   "ingredient": "lime",
+   "qty": 1
+  },
+  {
+   "ingredient": "coconut",
+   "qty": 80
+  }
+ ],
+ "cupboard": [
+  "basmati",
+  "ricevinegar",
+  "curry",
+  "nuts",
+  "soy",
+  "garlic",
+  "honey",
+  "oil"
+ ],
+ "cupboard_qty": {
+  "basmati": 130,
+  "ricevinegar": 15,
+  "curry": 3,
+  "nuts": 20,
+  "soy": 10,
+  "garlic": 6,
+  "honey": 5,
+  "oil": 15
+ },
+ "method": [
+  "Slice the cucumber finely and mix with the rice vinegar, half the honey and a pinch of salt; set aside to pickle. Put the basmati rice in a lidded pot with 300ml cold water, bring to the boil, then cover and cook on very low for 10 to 12 minutes.",
+  "Heat half the oil in a wide lidded pan and brown the chicken thighs with half the curry powder, salt and pepper for 4 to 5 minutes each side.",
+  "Meanwhile blitz half the chilli with the onion, nuts, ginger, garlic, soy, the rest of the curry powder, oil and honey into a chunky paste. Stir it into the chicken and cook for 5 minutes until fragrant.",
+  "Add the juice of the lime and 100ml water, cover and cook for 10 minutes until the chicken is cooked through, then pour in the coconut milk and cook for 1 minute.",
+  "Pull the chicken into chunks with two forks. Serve with the rice and pickled cucumber, scattered with the remaining chilli sliced into rounds."
+ ],
+ "source": "idea: Gousto",
+ "status": "live"
+}

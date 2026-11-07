@@ -1,0 +1,45 @@
+{
+ "slug": "creamy-egg-on-toast",
+ "name": "Creamy Egg Mash on Toast",
+ "course": "breakfast",
+ "emoji": "🥚",
+ "serves": 1,
+ "status": "live",
+ "time": {
+  "prep": 5,
+  "cook": 10
+ },
+ "ingredients": [
+  {
+   "ingredient": "eggs",
+   "qty": 3
+  },
+  {
+   "ingredient": "greek",
+   "qty": 15
+  },
+  {
+   "ingredient": "softcheese",
+   "qty": 15
+  },
+  {
+   "ingredient": "loaf",
+   "qty": 2
+  }
+ ],
+ "cupboard": [
+  "paprika",
+  "chilliflakes"
+ ],
+ "cupboard_qty": {
+  "paprika": 2,
+  "chilliflakes": 1
+ },
+ "method": [
+  "Boil the eggs for 8 minutes until the yolks are firm, then drain, cool under cold water and peel.",
+  "Halve the eggs and mash the yolks in a bowl with the Greek yoghurt, soft cheese, paprika, salt and pepper until creamy.",
+  "Finely chop the egg whites and stir them into the yolk mixture.",
+  "Toast the bread, pile the creamy egg on top, scatter over the chilli flakes and serve straight away."
+ ],
+ "source": "idea: The Happy Foodie"
+}

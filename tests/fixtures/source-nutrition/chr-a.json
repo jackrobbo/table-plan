@@ -1,0 +1,74 @@
+{
+ "chicken-korma": {
+  "kcal": 641,
+  "source": "BBC Good Food (serves 4, plus about 75g dry rice per portion added by us)",
+  "tolerance": 0.4,
+  "note": "We serve with 75g dry rice per portion, original is the curry alone, and sultanas are left out."
+ },
+ "easy-butter-chicken": {
+  "kcal": 667,
+  "source": "BBC Good Food (serves 4, plus about 75g dry rice per portion added by us)",
+  "tolerance": 0.4,
+  "note": "Original has no rice or naan in the figure; we serve with rice, and fenugreek and garam masala are left out."
+ },
+ "chinese-chicken-curry": {
+  "kcal": 529,
+  "source": "BBC Good Food (serves 4, plus about 75g dry rice per portion added by us)",
+  "tolerance": 0.4,
+  "note": "We serve with 75g dry rice per portion; turmeric and sugar are left out."
+ },
+ "spanish-chicken-stew": {
+  "kcal": 594,
+  "source": "BBC Good Food (serves 4, plus about 75g dry rice per portion added by us)",
+  "tolerance": 0.4,
+  "note": "We serve with 75g dry rice per portion; olives are left out."
+ },
+ "curried-satay-noodles": {
+  "kcal": 522,
+  "source": "BBC Good Food (serves 2)",
+  "tolerance": 0.4,
+  "note": "Egg noodles stand in for wholewheat noodles."
+ },
+ "prawn-harissa-spaghetti": {
+  "kcal": 511,
+  "source": "BBC Good Food (serves 2)",
+  "tolerance": 0.3,
+  "note": "Cooked prawns stand in for raw ones, so they are only heated through."
+ },
+ "chicken-katsu-curry": {
+  "kcal": 585,
+  "source": "BBC Good Food (serves 2)",
+  "tolerance": 0.4,
+  "note": "Original has an almond crust and a homemade spiced sauce; we use panko and a ready katsu sauce."
+ },
+ "healthy-seafood-spaghetti": {
+  "kcal": 531,
+  "source": "BBC Good Food (serves 2)",
+  "tolerance": 0.4,
+  "note": "Fennel swapped for celery, wholemeal spaghetti for regular and parsley for basil."
+ },
+ "turkey-cranberry-wrap": {
+  "kcal": 270,
+  "source": "EatingWell (serves 1)",
+  "tolerance": 0.4,
+  "note": "Plain wrap and a little more turkey than the original low-calorie flatbread."
+ },
+ "caprese-sandwich": {
+  "kcal": 641,
+  "source": "EatingWell (serves 1)",
+  "tolerance": 0.4,
+  "note": "Farmhouse bread stands in for toasted ciabatta, and balsamic glaze for vinegar."
+ },
+ "chicken-caprese-sandwich": {
+  "kcal": 667,
+  "source": "EatingWell (serves 1)",
+  "tolerance": 0.4,
+  "note": "Less butter and cheese than the original."
+ },
+ "chicken-salad-tostadas": {
+  "kcal": 437,
+  "source": "EatingWell (serves 2, pack of salad kit)",
+  "tolerance": 0.4,
+  "note": "Oven-crisped protein wraps stand in for tostada shells and soured cream for the kit dressing."
+ }
+}

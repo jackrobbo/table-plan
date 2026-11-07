@@ -1,0 +1,55 @@
+{
+ "slug": "crispy-chicken-spicy-honey-noodles",
+ "name": "Crispy Chicken Spicy Honey Noodles",
+ "course": "dinner",
+ "emoji": "🍜",
+ "serves": 2,
+ "status": "live",
+ "time": {
+  "prep": 10,
+  "cook": 20
+ },
+ "ingredients": [
+  {
+   "ingredient": "thigh",
+   "qty": 300
+  },
+  {
+   "ingredient": "spring",
+   "qty": 0.5
+  },
+  {
+   "ingredient": "chilli",
+   "qty": 10
+  }
+ ],
+ "cupboard": [
+  "noodles",
+  "soy",
+  "vinegar",
+  "honey",
+  "garlic",
+  "puree",
+  "chilliflakes",
+  "oil"
+ ],
+ "cupboard_qty": {
+  "noodles": 120,
+  "soy": 30,
+  "vinegar": 15,
+  "honey": 30,
+  "garlic": 6,
+  "puree": 15,
+  "chilliflakes": 2,
+  "oil": 10
+ },
+ "method": [
+  "Season the chicken thighs with salt. Fry in the oil over a medium heat for 6 minutes, turn, and fry for 5 to 6 minutes more until crisp, golden and cooked through. Lift out and leave to rest.",
+  "Slice the spring onion and chilli and stir with half the soy sauce, half the vinegar, half the honey and half the crushed garlic to make a quick topping.",
+  "Mix the tomato puree, chilli flakes, the rest of the soy sauce, vinegar, honey and garlic with 4 tablespoons of water for the sauce.",
+  "Boil the noodles for 3 minutes, then drain, saving a little cooking water.",
+  "Pour the sauce into the chicken pan and bubble for 1 minute, then toss through the noodles with a splash of the cooking water.",
+  "Slice the chicken, pile it on the noodles and spoon over the spring onion topping."
+ ],
+ "source": "idea: Mob"
+}

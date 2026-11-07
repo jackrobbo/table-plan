@@ -1,0 +1,54 @@
+{
+ "slug": "texan-beef-burritos",
+ "name": "Texan Beef Burritos",
+ "course": "dinner",
+ "emoji": "🌯",
+ "serves": 4,
+ "time": {
+  "prep": 10,
+  "cook": 20
+ },
+ "ingredients": [
+  {
+   "ingredient": "mince",
+   "qty": 500
+  },
+  {
+   "ingredient": "bbq",
+   "qty": 200
+  },
+  {
+   "ingredient": "ctoms",
+   "qty": 200
+  },
+  {
+   "ingredient": "kidney",
+   "qty": 380
+  },
+  {
+   "ingredient": "wraps",
+   "qty": 8
+  },
+  {
+   "ingredient": "avocado",
+   "qty": 1.5
+  }
+ ],
+ "cupboard": [
+  "oil",
+  "cheddar"
+ ],
+ "cupboard_qty": {
+  "oil": 15,
+  "cheddar": 100
+ },
+ "method": [
+  "Brown the beef mince in a pan for 5 minutes until no pink remains. Set aside 2 tablespoons of the BBQ sauce, stir the rest into the mince with the chopped tomatoes and simmer for 10 minutes until cooked through and thick.",
+  "Heat the grill to high. Warm the drained kidney beans in the oil with 3 tablespoons of water for 3 minutes, then mash them coarsely with a fork.",
+  "Warm the wraps for 30 seconds in the microwave. Spread the beans down the middle of each, spoon on the beef and roll up into burritos.",
+  "Lay the burritos seam side down on a baking tray, brush with the reserved sauce, scatter over the cheddar and grill for 2 minutes until melted and golden.",
+  "Mash the avocado with a pinch of salt and serve it alongside the burritos."
+ ],
+ "source": "idea: Sainsbury's recipes",
+ "status": "live"
+}

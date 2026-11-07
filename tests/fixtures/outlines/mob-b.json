@@ -1,0 +1,26 @@
+{
+ "spiced-turkey-shawarma-rice-bowl": {"source":"Mob","steps":[
+  {"do":["oven"],"temp":210,"mins":[20,25]},
+  {"do":["fry"],"mins":[10,10],"deviation":"Turkey mince replaces chicken mince; rice is boiled from dry rather than microwave pouch."},
+  {"do":["fry"],"mins":[5,5]},
+  {"do":["yoghurt"]},
+  {"do":["divide"]}]},
+ "bacon-carbonara-pasta": {"source":"Mob","steps":[
+  {"do":["beat"]},
+  {"do":["bacon"]},
+  {"do":["boil"],"mins":[10,12],"deviation":"Fusilli replaces orzo, so the packet time is the guide, 2 minutes short of al dente."},
+  {"do":["garlic"]},
+  {"do":["egg"]}]},
+ "speedy-chicken-noodle-soup-with-egg": {"source":"Mob","steps":[
+  {"do":["eggs"],"mins":[6,7]},
+  {"do":["noodles"],"mins":[4,5],"deviation":"Fine egg noodles replace udon and cook in about 4 minutes."},
+  {"do":["spinach"],"deviation":"Spinach replaces pak choi and wilts in about 1 minute, so no timing is recorded."},
+  {"do":["ladle"]}]},
+ "crispy-chicken-spicy-honey-noodles": {"source":"Mob","steps":[
+  {"do":["fry"],"mins":[12,12],"deviation":"Boneless skinless thighs cook faster than skin-on, so about 6 minutes a side instead of 12 plus 8."},
+  {"do":["spring"]},
+  {"do":["puree"],"deviation":"Tomato puree and chilli flakes replace gochujang, mirin and oyster sauce, which are not stocked."},
+  {"do":["noodles"],"deviation":"Fine egg noodles replace instant ramen and cook in about 3 minutes."},
+  {"do":["sauce"],"mins":[1,1]},
+  {"do":["slice"]}]}
+}

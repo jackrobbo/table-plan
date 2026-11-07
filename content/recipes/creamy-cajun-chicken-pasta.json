@@ -1,0 +1,55 @@
+{
+ "slug": "creamy-cajun-chicken-pasta",
+ "name": "Creamy Cajun Chicken Pasta",
+ "course": "dinner",
+ "emoji": "🍝",
+ "serves": 2,
+ "status": "live",
+ "time": {
+  "prep": 10,
+  "cook": 20
+ },
+ "ingredients": [
+  {
+   "ingredient": "breast",
+   "qty": 270
+  },
+  {
+   "ingredient": "peas",
+   "qty": 80
+  },
+  {
+   "ingredient": "onions",
+   "qty": 1
+  },
+  {
+   "ingredient": "softcheese",
+   "qty": 80
+  }
+ ],
+ "cupboard": [
+  "fusilli",
+  "oil",
+  "paprika",
+  "cumin",
+  "oregano",
+  "chilliflakes",
+  "garlic"
+ ],
+ "cupboard_qty": {
+  "fusilli": 140,
+  "oil": 10,
+  "paprika": 4,
+  "cumin": 2,
+  "oregano": 2,
+  "chilliflakes": 1,
+  "garlic": 3
+ },
+ "method": [
+  "Cook the fusilli in boiling salted water to packet instructions, about 10 minutes, adding the peas for the last 2 minutes, then drain and keep a mugful of the water.",
+  "Heat the oil in a large frying pan over a medium heat and cook the diced onion for 5 minutes until soft.",
+  "Add the chicken strips with the paprika, cumin, oregano, chilli flakes and garlic and cook for 5 minutes, until the chicken is cooked through.",
+  "Tip in the fusilli and peas, stir through the soft cheese with a splash of the pasta water until creamy, season, then divide between bowls and serve."
+ ],
+ "source": "idea: Joe Wicks"
+}

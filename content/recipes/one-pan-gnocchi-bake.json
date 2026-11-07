@@ -1,0 +1,51 @@
+{
+ "slug": "one-pan-gnocchi-bake",
+ "name": "One-Pan Gnocchi Bake",
+ "course": "dinner",
+ "emoji": "🥘",
+ "serves": 4,
+ "status": "live",
+ "time": {
+  "prep": 10,
+  "cook": 20
+ },
+ "ingredients": [
+  {
+   "ingredient": "gnocchi",
+   "qty": 500
+  },
+  {
+   "ingredient": "breast",
+   "qty": 500
+  },
+  {
+   "ingredient": "ctoms",
+   "qty": 400
+  },
+  {
+   "ingredient": "mixpep",
+   "qty": 1
+  },
+  {
+   "ingredient": "greenbeans",
+   "qty": 200
+  },
+  {
+   "ingredient": "mozzarella",
+   "qty": 80
+  }
+ ],
+ "cupboard": [
+  "oil"
+ ],
+ "cupboard_qty": {
+  "oil": 15
+ },
+ "method": [
+  "Heat the oil in a large, deep frying pan over a medium-high heat. Add the gnocchi and diced chicken breast and fry for 5 minutes, turning, to brown the outside.",
+  "Stir in the chopped tomatoes, sliced mixed peppers and trimmed green beans, then add a good splash of water.",
+  "Simmer for 6 minutes until the gnocchi is soft and the chicken is cooked through with no pink inside.",
+  "Heat the grill to high. Scatter the mozzarella over the pan and grill for 3 minutes until melted and golden, then serve straight from the pan."
+ ],
+ "source": "idea: Joe Wicks"
+}

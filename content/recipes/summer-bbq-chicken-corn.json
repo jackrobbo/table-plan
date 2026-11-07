@@ -1,0 +1,65 @@
+{
+ "slug": "summer-bbq-chicken-corn",
+ "name": "Summer BBQ Chicken with Corn",
+ "course": "dinner",
+ "emoji": "🌽",
+ "serves": 2,
+ "status": "live",
+ "time": {
+  "prep": 20,
+  "cook": 15
+ },
+ "ingredients": [
+  {
+   "ingredient": "thigh",
+   "qty": 300
+  },
+  {
+   "ingredient": "bbq",
+   "qty": 50
+  },
+  {
+   "ingredient": "avocado",
+   "qty": 1
+  },
+  {
+   "ingredient": "plum",
+   "qty": 80
+  },
+  {
+   "ingredient": "salad",
+   "qty": 120
+  },
+  {
+   "ingredient": "cabbage",
+   "qty": 130
+  },
+  {
+   "ingredient": "cobs",
+   "qty": 2
+  },
+  {
+   "ingredient": "greek",
+   "qty": 40
+  }
+ ],
+ "cupboard": [
+  "butter",
+  "oil",
+  "vinegar"
+ ],
+ "cupboard_qty": {
+  "butter": 10,
+  "oil": 15,
+  "vinegar": 5
+ },
+ "method": [
+  "Toss the chicken thighs with the barbecue sauce in a bowl and leave to marinate for 15 minutes, or longer if you have time.",
+  "Mix the chopped avocado, tomatoes, salad and shredded cabbage in a large bowl. Whisk the yoghurt, oil and vinegar with a pinch of salt and pepper, pour over the salad and toss.",
+  "Put the corn in a covered bowl with a splash of water and microwave for 4 minutes.",
+  "Heat a griddle pan over a high heat until very hot, then cook the chicken for 3 to 4 minutes on each side until charred and cooked through.",
+  "Cook the corn on the griddle for 5 minutes, turning now and then, until lightly charred all over.",
+  "Serve the chicken with the salad and corn, spreading the butter over the corn with a pinch of salt."
+ ],
+ "source": "idea: Joe Wicks"
+}

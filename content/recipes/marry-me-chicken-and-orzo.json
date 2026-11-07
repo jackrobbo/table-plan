@@ -1,0 +1,69 @@
+{
+ "slug": "marry-me-chicken-and-orzo",
+ "name": "Marry Me Chicken & Orzo",
+ "course": "dinner",
+ "emoji": "🍗",
+ "serves": 4,
+ "time": {
+  "prep": 10,
+  "cook": 30
+ },
+ "ingredients": [
+  {
+   "ingredient": "breast",
+   "qty": 500
+  },
+  {
+   "ingredient": "mascarpone",
+   "qty": 150
+  },
+  {
+   "ingredient": "spinach",
+   "qty": 160
+  },
+  {
+   "ingredient": "lemon",
+   "qty": 1
+  },
+  {
+   "ingredient": "sundried",
+   "qty": 40
+  },
+  {
+   "ingredient": "basil",
+   "qty": 10
+  }
+ ],
+ "cupboard": [
+  "orzo",
+  "garlic",
+  "parmesan",
+  "stock",
+  "paprika",
+  "oregano",
+  "chilliflakes",
+  "herbs",
+  "oil",
+  "butter"
+ ],
+ "cupboard_qty": {
+  "orzo": 250,
+  "garlic": 12,
+  "parmesan": 40,
+  "stock": 5,
+  "paprika": 4,
+  "oregano": 2,
+  "chilliflakes": 1,
+  "herbs": 2,
+  "oil": 10,
+  "butter": 10
+ },
+ "method": [
+  "Heat the oil and butter in a large lidded pan over a medium heat. Cut the chicken into small pieces, add to the pan and fry for 10 to 12 minutes, turning, until browned and cooked through.",
+  "Sprinkle over the paprika, oregano, mixed herbs and chilli flakes. Stir in the garlic and chopped sun-dried tomatoes and cook for 2 minutes.",
+  "Add the orzo, crumble in the stock cube and pour in 650ml hot water. Cover and cook for 12 minutes, stirring often, until the orzo is almost tender, adding a splash of water if it looks dry.",
+  "Stir in the spinach, lemon zest and juice, mascarpone and parmesan and cook for 2 to 3 minutes until the spinach has wilted and the sauce is creamy. Scatter with torn basil and serve."
+ ],
+ "source": "Morrisons (Good Food)",
+ "status": "live"
+}

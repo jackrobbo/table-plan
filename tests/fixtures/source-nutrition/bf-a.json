@@ -1,0 +1,14 @@
+{
+ "berry-cheesecake-overnight-oats": {
+  "kcal": 336,
+  "source": "The Happy Foodie (serves 4, includes 50g protein powder)",
+  "tolerance": 0.4,
+  "note": "Protein powder left out and oats portion differs."
+ },
+ "creamy-egg-on-toast": {
+  "kcal": 419,
+  "source": "Tasty High Protein (serves 1)",
+  "tolerance": 0.4,
+  "note": "Original uses 4 eggs on low-calorie bread; we use 3 eggs on farmhouse bread."
+ }
+}

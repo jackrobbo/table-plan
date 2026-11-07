@@ -1,0 +1,54 @@
+{
+ "slug": "thai-chicken-and-broccoli-curry",
+ "name": "Thai Chicken and Broccoli Curry",
+ "course": "dinner",
+ "emoji": "🍛",
+ "serves": 4,
+ "time": {
+  "prep": 10,
+  "cook": 25
+ },
+ "ingredients": [
+  {
+   "ingredient": "thigh",
+   "qty": 450
+  },
+  {
+   "ingredient": "onions",
+   "qty": 1
+  },
+  {
+   "ingredient": "brocc",
+   "qty": 300
+  },
+  {
+   "ingredient": "carrots",
+   "qty": 100
+  },
+  {
+   "ingredient": "thaicurry",
+   "qty": 60
+  },
+  {
+   "ingredient": "coconut",
+   "qty": 250
+  }
+ ],
+ "cupboard": [
+  "rice",
+  "oil"
+ ],
+ "cupboard_qty": {
+  "rice": 300,
+  "oil": 15
+ },
+ "method": [
+  "Cook the rice to the packet instructions, about 12 minutes, then drain and keep warm.",
+  "Heat the oil in a deep frying pan or wok and stir-fry the sliced onion for 5 minutes until golden, then lift out. Fry the chopped chicken thighs for 5 minutes until coloured all over.",
+  "Return the onion with the broccoli and sliced carrot and stir-fry for 2 minutes. Stir in the curry paste for 1 minute.",
+  "Pour in the coconut milk and 150ml water and simmer for 6 to 8 minutes until the chicken is cooked through and the vegetables are tender.",
+  "Spoon the curry over the rice and serve."
+ ],
+ "source": "idea: Sainsbury's recipes (Thai green chicken curry, red paste swap)",
+ "status": "live"
+}

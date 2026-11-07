@@ -3571,5 +3571,1195 @@
    "verified": true,
    "basis": "label"
   }
+ },
+ {
+  "slug": "gnocchi",
+  "name": "Morrisons Gnocchi 500g",
+  "display": "Gnocchi",
+  "unit": "g",
+  "cupboard": false,
+  "allergens": [
+   "gluten",
+   "milk"
+  ],
+  "per100": {
+   "kcal": 155,
+   "protein_g": 4.2,
+   "carbs_g": 33.3,
+   "fat_g": 0.3
+  },
+  "product": {
+   "retailer": "morrisons",
+   "name": "Morrisons Gnocchi 500g",
+   "price_pence": 190,
+   "pack_size": 500,
+   "slug": "morrisons-gnocchi/104585955"
+  },
+  "category": "Frozen & ready to cook",
+  "cofid": {
+   "name": "Pack label (no CoFID cross-check)",
+   "verified": true,
+   "basis": "label",
+   "approx": "pack label is as consumed; scaled to uncooked weight (no CoFID entry for gnocchi)"
+  }
+ },
+ {
+  "slug": "orzo",
+  "name": "Morrisons The Best Orzo 500g",
+  "display": "Orzo",
+  "unit": "g",
+  "cupboard": true,
+  "allergens": [
+   "gluten"
+  ],
+  "per100": {
+   "kcal": 343,
+   "protein_g": 11.3,
+   "carbs_g": 75.6,
+   "fat_g": 1.6
+  },
+  "note": "Morrisons The Best Orzo 500g · £2.15",
+  "product": null,
+  "cupboardPrice": {
+   "pence": 215,
+   "grams": 500
+  },
+  "cofid": {
+   "code": "11-716",
+   "name": "Pasta, white, dried, raw",
+   "verified": true,
+   "basis": "cofid",
+   "approx": "dried white pasta for orzo (the Morrisons page label is as cooked only)"
+  }
+ },
+ {
+  "slug": "couscous",
+  "name": "Morrisons Wholefoods Cous Cous 500g",
+  "display": "Couscous",
+  "unit": "g",
+  "cupboard": true,
+  "allergens": [
+   "gluten"
+  ],
+  "per100": {
+   "kcal": 364,
+   "protein_g": 12,
+   "carbs_g": 79.2,
+   "fat_g": 2.1
+  },
+  "note": "Morrisons Wholefoods Cous Cous 500g · £1.30",
+  "product": null,
+  "cupboardPrice": {
+   "pence": 130,
+   "grams": 500
+  },
+  "cofid": {
+   "code": "11-901",
+   "name": "Couscous, plain, raw",
+   "verified": true,
+   "basis": "cofid",
+   "approx": "plain raw couscous (the Morrisons page label is as cooked only)"
+  }
+ },
+ {
+  "slug": "harissa",
+  "name": "Morrisons Smoky Harissa Paste 170g",
+  "display": "Harissa paste",
+  "unit": "g",
+  "cupboard": false,
+  "allergens": [],
+  "per100": {
+   "kcal": 81,
+   "protein_g": 1.7,
+   "carbs_g": 10,
+   "fat_g": 3.1
+  },
+  "product": {
+   "retailer": "morrisons",
+   "name": "Morrisons Smoky Harissa Paste 170g",
+   "price_pence": 340,
+   "pack_size": 170,
+   "slug": "morrisons-smoky-harissa-paste/113761519"
+  },
+  "category": "Tins, jars & sauces",
+  "cofid": {
+   "name": "Pack label (no CoFID cross-check)",
+   "verified": true,
+   "basis": "label"
+  }
+ },
+ {
+  "slug": "gochujang",
+  "name": "Blue Dragon Gochujang Korean Chilli Paste 135g",
+  "display": "Gochujang",
+  "unit": "g",
+  "cupboard": false,
+  "allergens": [
+   "gluten",
+   "soya"
+  ],
+  "per100": {
+   "kcal": 231,
+   "protein_g": 6,
+   "carbs_g": 43,
+   "fat_g": 3
+  },
+  "product": {
+   "retailer": "morrisons",
+   "name": "Blue Dragon Gochujang Korean Chilli Paste 135g",
+   "price_pence": 260,
+   "pack_size": 135,
+   "slug": "blue-dragon-gochujang-korean-chilli-paste-135g/114973071"
+  },
+  "category": "Tins, jars & sauces",
+  "cofid": {
+   "name": "Pack label (no CoFID cross-check)",
+   "verified": true,
+   "basis": "label"
+  }
+ },
+ {
+  "slug": "thaicurry",
+  "name": "Morrisons Red Thai Paste 180g",
+  "display": "Thai red curry paste",
+  "unit": "g",
+  "cupboard": false,
+  "allergens": [],
+  "per100": {
+   "kcal": 100,
+   "protein_g": 0.9,
+   "carbs_g": 12.4,
+   "fat_g": 4.4
+  },
+  "product": {
+   "retailer": "morrisons",
+   "name": "Morrisons Red Thai Paste 180g",
+   "price_pence": 230,
+   "pack_size": 180,
+   "slug": "morrisons-red-thai-paste/112526875"
+  },
+  "category": "Tins, jars & sauces",
+  "cofid": {
+   "name": "Pack label (no CoFID cross-check)",
+   "verified": true,
+   "basis": "label"
+  }
+ },
+ {
+  "slug": "fishsauce",
+  "name": "Squid Brand Fish Sauce 725ml",
+  "display": "Fish sauce",
+  "unit": "ml",
+  "cupboard": true,
+  "allergens": [
+   "fish"
+  ],
+  "per100": {
+   "kcal": 56,
+   "protein_g": 11,
+   "carbs_g": 3,
+   "fat_g": 0
+  },
+  "note": "Squid Brand Fish Sauce 725ml · £2.40",
+  "product": null,
+  "cupboardPrice": {
+   "pence": 240,
+   "grams": 725
+  },
+  "cofid": {
+   "name": "Pack label (no CoFID cross-check)",
+   "verified": true,
+   "basis": "label"
+  }
+ },
+ {
+  "slug": "oystersauce",
+  "name": "Lee Kum Kee Panda Oyster Sauce 510ml",
+  "display": "Oyster sauce",
+  "unit": "ml",
+  "cupboard": true,
+  "allergens": [
+   "gluten",
+   "molluscs",
+   "soya"
+  ],
+  "per100": {
+   "kcal": 113,
+   "protein_g": 1.2,
+   "carbs_g": 27,
+   "fat_g": 0.3
+  },
+  "note": "Lee Kum Kee Panda Oyster Sauce 510ml · £2.80",
+  "product": null,
+  "cupboardPrice": {
+   "pence": 280,
+   "grams": 510
+  },
+  "cofid": {
+   "name": "Pack label (no CoFID cross-check)",
+   "verified": true,
+   "basis": "label"
+  }
+ },
+ {
+  "slug": "darksoy",
+  "name": "Blue Dragon Dark Soy Sauce 150ml",
+  "display": "Dark soy sauce",
+  "unit": "ml",
+  "cupboard": true,
+  "allergens": [
+   "gluten",
+   "soya"
+  ],
+  "per100": {
+   "kcal": 97,
+   "protein_g": 1.1,
+   "carbs_g": 23,
+   "fat_g": 0.3
+  },
+  "note": "Blue Dragon Dark Soy Sauce 150ml · £1.90",
+  "product": null,
+  "cupboardPrice": {
+   "pence": 190,
+   "grams": 150
+  },
+  "cofid": {
+   "name": "Pack label (no CoFID cross-check)",
+   "verified": true,
+   "basis": "label"
+  }
+ },
+ {
+  "slug": "ricenoodles",
+  "name": "Thai Dragon Rice Stick Noodles 400g",
+  "display": "Rice noodles",
+  "unit": "g",
+  "cupboard": false,
+  "allergens": [],
+  "per100": {
+   "kcal": 350,
+   "protein_g": 5.43,
+   "carbs_g": 81.1,
+   "fat_g": 0.4
+  },
+  "product": {
+   "retailer": "morrisons",
+   "name": "Thai Dragon Rice Stick Noodles 400g",
+   "price_pence": 200,
+   "pack_size": 400,
+   "slug": "thai-dragon-rice-stick-noodles/111874042"
+  },
+  "category": "Cereals, snacks & protein",
+  "cofid": {
+   "name": "Pack label (no CoFID cross-check)",
+   "verified": true,
+   "basis": "label"
+  }
+ },
+ {
+  "slug": "sugarsnap",
+  "name": "Morrisons Sugar Snap Peas 150g",
+  "display": "Sugar snap peas",
+  "unit": "g",
+  "cupboard": false,
+  "allergens": [],
+  "per100": {
+   "kcal": 49,
+   "protein_g": 2.8,
+   "carbs_g": 7.6,
+   "fat_g": 0.2
+  },
+  "product": {
+   "retailer": "morrisons",
+   "name": "Morrisons Sugar Snap Peas 150g",
+   "price_pence": 139,
+   "pack_size": 150,
+   "slug": "morrisons-sugar-snap-peas-150g/108392018"
+  },
+  "category": "Fruit & veg",
+  "cofid": {
+   "name": "Pack label (no CoFID cross-check)",
+   "verified": true,
+   "basis": "label"
+  }
+ },
+ {
+  "slug": "pineapple",
+  "name": "Morrisons Pineapple Chunks In Juice 425g",
+  "display": "Pineapple chunks",
+  "unit": "g",
+  "cupboard": false,
+  "allergens": [],
+  "per100": {
+   "kcal": 51,
+   "protein_g": 0.3,
+   "carbs_g": 12.2,
+   "fat_g": 0
+  },
+  "product": {
+   "retailer": "morrisons",
+   "name": "Morrisons Pineapple Chunks In Juice 425g",
+   "price_pence": 115,
+   "pack_size": 260,
+   "slug": "morrisons-pineapple-chunks-in-juice-425g/105327034"
+  },
+  "category": "Tins, jars & sauces",
+  "cofid": {
+   "name": "Pack label (no CoFID cross-check)",
+   "verified": true,
+   "basis": "label"
+  }
+ },
+ {
+  "slug": "edamame",
+  "name": "Morrisons Edamame Beans 500g",
+  "display": "Edamame beans",
+  "unit": "g",
+  "cupboard": false,
+  "allergens": [
+   "soya"
+  ],
+  "per100": {
+   "kcal": 142,
+   "protein_g": 12.2,
+   "carbs_g": 6.5,
+   "fat_g": 7.6
+  },
+  "product": {
+   "retailer": "morrisons",
+   "name": "Morrisons Edamame Beans 500g",
+   "price_pence": 285,
+   "pack_size": 500,
+   "slug": "morrisons-edamame-beans/108571585"
+  },
+  "category": "Frozen & ready to cook",
+  "cofid": {
+   "code": "13-667",
+   "name": "Beans, edamame, frozen, boiled in unsalted water",
+   "verified": true,
+   "basis": "cofid",
+   "approx": "edamame, frozen, boiled (the Morrisons page label is as boiled)"
+  }
+ },
+ {
+  "slug": "leeks",
+  "name": "Morrisons Trimmed Leeks 500g",
+  "display": "Leeks",
+  "unit": "g",
+  "cupboard": false,
+  "allergens": [],
+  "per100": {
+   "kcal": 23,
+   "protein_g": 1.5,
+   "carbs_g": 4.1,
+   "fat_g": 0.2
+  },
+  "product": {
+   "retailer": "morrisons",
+   "name": "Morrisons Trimmed Leeks 500g",
+   "price_pence": 137,
+   "pack_size": 500,
+   "slug": "morrisons-trimmed-leeks-500g/108304920"
+  },
+  "category": "Fruit & veg",
+  "cofid": {
+   "code": "13-624",
+   "name": "Leeks, raw",
+   "verified": true,
+   "basis": "cofid"
+  }
+ },
+ {
+  "slug": "pastry",
+  "name": "Morrisons Ready Roll Puff Pastry 320g",
+  "display": "Puff pastry sheet",
+  "unit": "g",
+  "cupboard": false,
+  "allergens": [
+   "gluten"
+  ],
+  "per100": {
+   "kcal": 422,
+   "protein_g": 6.3,
+   "carbs_g": 42.5,
+   "fat_g": 24.8
+  },
+  "product": {
+   "retailer": "morrisons",
+   "name": "Morrisons Ready Roll Puff Pastry 320g",
+   "price_pence": 135,
+   "pack_size": 320,
+   "slug": "morrisons-ready-roll-puff-pastry-320g/112975831"
+  },
+  "category": "Frozen & ready to cook",
+  "cofid": {
+   "name": "Pack label (no CoFID cross-check)",
+   "verified": true,
+   "basis": "label"
+  }
+ },
+ {
+  "slug": "aubergine",
+  "name": "Morrisons Purple Aubergine",
+  "display": "Aubergine",
+  "unit": "aubergines",
+  "cupboard": false,
+  "allergens": [],
+  "per100": {
+   "kcal": 14,
+   "protein_g": 0.7,
+   "carbs_g": 1.8,
+   "fat_g": 0.5
+  },
+  "gramsPerUnit": 250,
+  "product": {
+   "retailer": "morrisons",
+   "name": "Morrisons Purple Aubergine",
+   "price_pence": 95,
+   "pack_size": 1,
+   "slug": "morrisons-purple-aubergine/108392641"
+  },
+  "category": "Fruit & veg",
+  "cofid": {
+   "code": "13-651",
+   "name": "Aubergine, flesh and skin, boiled in unsalted water",
+   "verified": true,
+   "basis": "cofid",
+   "approx": "aubergine, boiled (CoFID has no raw entry; raw is about 15 kcal per 100 g)"
+  }
+ },
+ {
+  "slug": "lambsteaks",
+  "name": "Morrisons Lamb Leg Steaks 300g",
+  "display": "Lamb leg steaks",
+  "unit": "g",
+  "cupboard": false,
+  "allergens": [],
+  "per100": {
+   "kcal": 160,
+   "protein_g": 15,
+   "carbs_g": 0,
+   "fat_g": 11.1
+  },
+  "product": {
+   "retailer": "morrisons",
+   "name": "Morrisons Lamb Leg Steaks 300g",
+   "price_pence": 600,
+   "pack_size": 300,
+   "slug": "morrisons-lamb-leg-steaks-300g/114711986"
+  },
+  "category": "Meat & fish",
+  "cofid": {
+   "name": "Pack label (no CoFID cross-check)",
+   "verified": true,
+   "basis": "label"
+  }
+ },
+ {
+  "slug": "rosemary",
+  "name": "Morrisons Fresh Rosemary 20g",
+  "display": "Fresh rosemary",
+  "unit": "g",
+  "cupboard": false,
+  "allergens": [],
+  "per100": null,
+  "negligible": true,
+  "product": {
+   "retailer": "morrisons",
+   "name": "Morrisons Fresh Rosemary 20g",
+   "price_pence": 50,
+   "pack_size": 20,
+   "slug": "morrisons-fresh-rosemary-20g/110441341"
+  },
+  "category": "Fruit & veg"
+ },
+ {
+  "slug": "thaibasil",
+  "name": "Market Street Fresh Thai Basil 20g",
+  "display": "Thai basil",
+  "unit": "g",
+  "cupboard": false,
+  "allergens": [],
+  "per100": null,
+  "negligible": true,
+  "product": {
+   "retailer": "morrisons",
+   "name": "Market Street Fresh Thai Basil 20g",
+   "price_pence": 90,
+   "pack_size": 20,
+   "slug": "market-street-fresh-thai-basil/114493384"
+  },
+  "category": "Fruit & veg"
+ },
+ {
+  "slug": "basil",
+  "name": "Morrisons Fresh Basil 30g",
+  "display": "Fresh basil",
+  "unit": "g",
+  "cupboard": false,
+  "allergens": [],
+  "per100": null,
+  "negligible": true,
+  "product": {
+   "retailer": "morrisons",
+   "name": "Morrisons Fresh Basil 30g",
+   "price_pence": 50,
+   "pack_size": 30,
+   "slug": "morrisons-fresh-basil-30g/110419419"
+  },
+  "category": "Fruit & veg"
+ },
+ {
+  "slug": "ginger",
+  "name": "Morrisons Ginger 125g",
+  "display": "Fresh root ginger",
+  "unit": "g",
+  "cupboard": false,
+  "allergens": [],
+  "per100": {
+   "kcal": 44,
+   "protein_g": 1.8,
+   "carbs_g": 8.1,
+   "fat_g": 0.8
+  },
+  "product": {
+   "retailer": "morrisons",
+   "name": "Morrisons Ginger 125g",
+   "price_pence": 155,
+   "pack_size": 125,
+   "slug": "morrisons-ginger-125g/110541561"
+  },
+  "category": "Fruit & veg",
+  "cofid": {
+   "code": "13-890",
+   "name": "Ginger, fresh",
+   "verified": true,
+   "basis": "cofid"
+  }
+ },
+ {
+  "slug": "sesameseeds",
+  "name": "Morrisons Sesame Seeds 100g",
+  "display": "Sesame seeds",
+  "unit": "g",
+  "cupboard": true,
+  "allergens": [
+   "sesame"
+  ],
+  "per100": {
+   "kcal": 630,
+   "protein_g": 22.8,
+   "carbs_g": 0.8,
+   "fat_g": 56.8
+  },
+  "note": "Morrisons Sesame Seeds 100g · £1.13",
+  "product": null,
+  "cupboardPrice": {
+   "pence": 113,
+   "grams": 100
+  },
+  "cofid": {
+   "name": "Pack label (no CoFID cross-check)",
+   "verified": true,
+   "basis": "label"
+  }
+ },
+ {
+  "slug": "sesameoil",
+  "name": "Morrisons Toasted Sesame Oil 250ml",
+  "display": "Sesame oil",
+  "unit": "ml",
+  "cupboard": true,
+  "allergens": [
+   "sesame"
+  ],
+  "per100": {
+   "kcal": 827,
+   "protein_g": 0,
+   "carbs_g": 0,
+   "fat_g": 91.9
+  },
+  "note": "Morrisons Toasted Sesame Oil 250ml · £2.65",
+  "product": null,
+  "cupboardPrice": {
+   "pence": 265,
+   "grams": 250
+  },
+  "cofid": {
+   "name": "Pack label (no CoFID cross-check)",
+   "verified": true,
+   "basis": "label"
+  }
+ },
+ {
+  "slug": "jerk",
+  "name": "Dunn's River Jamaican Jerk Seasoning 100g",
+  "display": "Jerk seasoning",
+  "unit": "g",
+  "cupboard": true,
+  "allergens": [
+   "mustard"
+  ],
+  "per100": {
+   "kcal": 209,
+   "protein_g": 4.5,
+   "carbs_g": 24,
+   "fat_g": 5.9
+  },
+  "negligible": true,
+  "note": "Dunn's River Jamaican Jerk Seasoning 100g · £1.20",
+  "product": null,
+  "cupboardPrice": {
+   "pence": 120,
+   "grams": 100
+  },
+  "cofid": {
+   "name": "Pack label (no CoFID cross-check)",
+   "verified": true,
+   "basis": "label"
+  }
+ },
+ {
+  "slug": "cinnamon",
+  "name": "Morrisons Ground Cinnamon 32g",
+  "display": "Ground cinnamon",
+  "unit": "g",
+  "cupboard": true,
+  "allergens": [],
+  "per100": null,
+  "negligible": true,
+  "note": "Morrisons Ground Cinnamon 32g · £1.09",
+  "product": null,
+  "cupboardPrice": {
+   "pence": 109,
+   "grams": 32
+  }
+ },
+ {
+  "slug": "nutmeg",
+  "name": "Morrisons Ground Nutmeg 42g",
+  "display": "Ground nutmeg",
+  "unit": "g",
+  "cupboard": true,
+  "allergens": [],
+  "per100": null,
+  "negligible": true,
+  "note": "Morrisons Ground Nutmeg 42g · £1.09",
+  "product": null,
+  "cupboardPrice": {
+   "pence": 109,
+   "grams": 42
+  }
+ },
+ {
+  "slug": "dijon",
+  "name": "Morrisons Dijon Mustard 185g",
+  "display": "Dijon mustard",
+  "unit": "g",
+  "cupboard": true,
+  "allergens": [
+   "mustard",
+   "sulphites"
+  ],
+  "per100": {
+   "kcal": 157,
+   "protein_g": 7.2,
+   "carbs_g": 5.5,
+   "fat_g": 11.4
+  },
+  "note": "Morrisons Dijon Mustard 185g · £0.45",
+  "product": null,
+  "cupboardPrice": {
+   "pence": 45,
+   "grams": 185
+  },
+  "cofid": {
+   "name": "Pack label (no CoFID cross-check)",
+   "verified": true,
+   "basis": "label"
+  }
+ },
+ {
+  "slug": "wholegrainmustard",
+  "name": "Morrisons Wholegrain Mustard 175g",
+  "display": "Wholegrain mustard",
+  "unit": "g",
+  "cupboard": true,
+  "allergens": [
+   "mustard",
+   "sulphites"
+  ],
+  "per100": {
+   "kcal": 201,
+   "protein_g": 10,
+   "carbs_g": 8.5,
+   "fat_g": 12.5
+  },
+  "note": "Morrisons Wholegrain Mustard 175g · £0.44",
+  "product": null,
+  "cupboardPrice": {
+   "pence": 44,
+   "grams": 175
+  },
+  "cofid": {
+   "name": "Pack label (no CoFID cross-check)",
+   "verified": true,
+   "basis": "label"
+  }
+ },
+ {
+  "slug": "capers",
+  "name": "Morrisons Nonpareille Capers 99g",
+  "display": "Capers",
+  "unit": "g",
+  "cupboard": true,
+  "allergens": [],
+  "per100": {
+   "kcal": 33,
+   "protein_g": 2.4,
+   "carbs_g": 2.9,
+   "fat_g": 0.6
+  },
+  "note": "Morrisons Nonpareille Capers 99g · £1.85",
+  "product": null,
+  "cupboardPrice": {
+   "pence": 185,
+   "grams": 99
+  },
+  "cofid": {
+   "name": "Pack label (no CoFID cross-check)",
+   "verified": true,
+   "basis": "label"
+  }
+ },
+ {
+  "slug": "sweetchilli",
+  "name": "Thai Dragon Sweet Chilli Sauce 455ml",
+  "display": "Sweet chilli sauce",
+  "unit": "ml",
+  "cupboard": false,
+  "allergens": [],
+  "per100": {
+   "kcal": 152,
+   "protein_g": 0.5,
+   "carbs_g": 37,
+   "fat_g": 0.5
+  },
+  "product": {
+   "retailer": "morrisons",
+   "name": "Thai Dragon Sweet Chilli Sauce 455ml",
+   "price_pence": 200,
+   "pack_size": 455,
+   "slug": "thai-dragon-sweet-chilli-sauce-455ml/111152971"
+  },
+  "category": "Tins, jars & sauces",
+  "cofid": {
+   "name": "Pack label (no CoFID cross-check)",
+   "verified": true,
+   "basis": "label"
+  }
+ },
+ {
+  "slug": "babycorn",
+  "name": "Morrisons Baby Corn 125g",
+  "display": "Baby sweetcorn",
+  "unit": "g",
+  "cupboard": false,
+  "allergens": [],
+  "per100": {
+   "kcal": 31,
+   "protein_g": 2.2,
+   "carbs_g": 4.6,
+   "fat_g": 0.6
+  },
+  "product": {
+   "retailer": "morrisons",
+   "name": "Morrisons Baby Corn 125g",
+   "price_pence": 145,
+   "pack_size": 125,
+   "slug": "morrisons-baby-corn-125g/108391912"
+  },
+  "category": "Fruit & veg",
+  "cofid": {
+   "code": "13-634",
+   "name": "Sweetcorn, baby, boiled in unsalted water",
+   "verified": true,
+   "basis": "cofid",
+   "approx": "baby sweetcorn, boiled (the Morrisons page label macros are inconsistent; no raw entry in CoFID)"
+  }
+ },
+ {
+  "slug": "mozzarella",
+  "name": "Morrisons Mozzarella 125g",
+  "display": "Mozzarella",
+  "unit": "g",
+  "cupboard": false,
+  "allergens": [
+   "milk"
+  ],
+  "per100": {
+   "kcal": 216,
+   "protein_g": 17,
+   "carbs_g": 1,
+   "fat_g": 16
+  },
+  "product": {
+   "retailer": "morrisons",
+   "name": "Morrisons Mozzarella 125g",
+   "price_pence": 130,
+   "pack_size": 125,
+   "slug": "morrisons-mozzarella/104667416"
+  },
+  "category": "Dairy & eggs",
+  "cofid": {
+   "name": "Pack label (no CoFID cross-check)",
+   "verified": true,
+   "basis": "label"
+  }
+ },
+ {
+  "slug": "ricevinegar",
+  "name": "Morrisons Rice Vinegar 350ml",
+  "display": "Rice vinegar",
+  "unit": "ml",
+  "cupboard": true,
+  "allergens": [
+   "sulphites"
+  ],
+  "per100": {
+   "kcal": 8,
+   "protein_g": 0.1,
+   "carbs_g": 2,
+   "fat_g": 0
+  },
+  "note": "Morrisons Rice Vinegar 350ml · £2.75",
+  "product": null,
+  "cupboardPrice": {
+   "pence": 275,
+   "grams": 350
+  },
+  "cofid": {
+   "name": "Pack label (no CoFID cross-check)",
+   "verified": true,
+   "basis": "label"
+  }
+ },
+ {
+  "slug": "tandoori",
+  "name": "Patak's Indian Tandoori Marinade Curry Paste 312g",
+  "display": "Tandoori paste",
+  "unit": "g",
+  "cupboard": false,
+  "allergens": [
+   "milk",
+   "mustard"
+  ],
+  "per100": {
+   "kcal": 93,
+   "protein_g": 2.7,
+   "carbs_g": 6.7,
+   "fat_g": 4.5
+  },
+  "product": {
+   "retailer": "morrisons",
+   "name": "Patak's Indian Tandoori Marinade Curry Paste 312g",
+   "price_pence": 275,
+   "pack_size": 312,
+   "slug": "patak-s-indian-tandoori-marinade-curry-paste-312g/113850941"
+  },
+  "category": "Tins, jars & sauces",
+  "cofid": {
+   "name": "Pack label (no CoFID cross-check)",
+   "verified": true,
+   "basis": "label"
+  }
+ },
+ {
+  "slug": "basmati",
+  "name": "Morrisons Basmati Rice 1kg",
+  "display": "Basmati rice",
+  "unit": "g",
+  "cupboard": true,
+  "allergens": [],
+  "per100": {
+   "kcal": 350,
+   "protein_g": 8.1,
+   "carbs_g": 83.8,
+   "fat_g": 0.4
+  },
+  "note": "Morrisons Basmati Rice 1kg · £1.79",
+  "product": null,
+  "cupboardPrice": {
+   "pence": 179,
+   "grams": 1000
+  },
+  "cofid": {
+   "code": "11-859",
+   "name": "Rice, white, basmati, easy cook, raw",
+   "verified": true,
+   "basis": "cofid",
+   "approx": "white basmati easy cook raw (the Morrisons page label is as boiled only)"
+  }
+ },
+ {
+  "slug": "katsu",
+  "name": "Morrisons Katsu Curry Cooking Sauce 340g",
+  "display": "Katsu curry sauce",
+  "unit": "g",
+  "cupboard": false,
+  "allergens": [
+   "gluten",
+   "soya"
+  ],
+  "per100": {
+   "kcal": 83,
+   "protein_g": 0.9,
+   "carbs_g": 8.1,
+   "fat_g": 5
+  },
+  "product": {
+   "retailer": "morrisons",
+   "name": "Morrisons Katsu Curry Cooking Sauce 340g",
+   "price_pence": 125,
+   "pack_size": 340,
+   "slug": "morrisons-katsu-curry-cooking-sauce-340g/114837950"
+  },
+  "category": "Tins, jars & sauces",
+  "cofid": {
+   "name": "Pack label (no CoFID cross-check)",
+   "verified": true,
+   "basis": "label"
+  }
+ },
+ {
+  "slug": "panko",
+  "name": "Morrisons Panko Breadcrumbs 150g",
+  "display": "Panko breadcrumbs",
+  "unit": "g",
+  "cupboard": true,
+  "allergens": [
+   "gluten"
+  ],
+  "per100": {
+   "kcal": 376,
+   "protein_g": 10.9,
+   "carbs_g": 76.8,
+   "fat_g": 1.5
+  },
+  "note": "Morrisons Panko Breadcrumbs 150g · £2.10",
+  "product": null,
+  "cupboardPrice": {
+   "pence": 210,
+   "grams": 150
+  },
+  "cofid": {
+   "name": "Pack label (no CoFID cross-check)",
+   "verified": true,
+   "basis": "label"
+  }
+ },
+ {
+  "slug": "kormapaste",
+  "name": "Morrisons Korma Curry Paste 180g",
+  "display": "Korma curry paste",
+  "unit": "g",
+  "cupboard": false,
+  "allergens": [
+   "milk",
+   "mustard",
+   "nuts"
+  ],
+  "per100": {
+   "kcal": 150,
+   "protein_g": 1.6,
+   "carbs_g": 16.2,
+   "fat_g": 8.1
+  },
+  "product": {
+   "retailer": "morrisons",
+   "name": "Morrisons Korma Curry Paste 180g",
+   "price_pence": 190,
+   "pack_size": 180,
+   "slug": "morrisons-korma-curry-paste/112526816"
+  },
+  "category": "Tins, jars & sauces",
+  "cofid": {
+   "name": "Pack label (no CoFID cross-check)",
+   "verified": true,
+   "basis": "label"
+  }
+ },
+ {
+  "slug": "paellarice",
+  "name": "Morrisons Paella Rice 500g",
+  "display": "Paella rice",
+  "unit": "g",
+  "cupboard": true,
+  "allergens": [],
+  "per100": {
+   "kcal": 344,
+   "protein_g": 7.5,
+   "carbs_g": 75.1,
+   "fat_g": 0.9
+  },
+  "note": "Morrisons Paella Rice 500g · £2.50",
+  "product": null,
+  "cupboardPrice": {
+   "pence": 250,
+   "grams": 500
+  },
+  "cofid": {
+   "name": "Pack label (no CoFID cross-check)",
+   "verified": true,
+   "basis": "label"
+  }
+ },
+ {
+  "slug": "seafoodmix",
+  "name": "Morrisons Seafood Selection 350g",
+  "display": "Seafood mix",
+  "unit": "g",
+  "cupboard": false,
+  "allergens": [
+   "crustaceans",
+   "molluscs"
+  ],
+  "per100": {
+   "kcal": 68,
+   "protein_g": 16.2,
+   "carbs_g": 0,
+   "fat_g": 0.4
+  },
+  "product": {
+   "retailer": "morrisons",
+   "name": "Morrisons Seafood Selection 350g",
+   "price_pence": 400,
+   "pack_size": 350,
+   "slug": "morrisons-seafood-selection/115651971"
+  },
+  "category": "Frozen & ready to cook",
+  "cofid": {
+   "code": "16-389",
+   "name": "Prawns, king, purchased cooked",
+   "verified": true,
+   "basis": "cofid",
+   "approx": "cooked king prawns for a frozen seafood mix (the Morrisons page label is shallow fried; no mix in CoFID)"
+  }
+ },
+ {
+  "slug": "sundried",
+  "name": "Morrisons Sundried Tomatoes 280g",
+  "display": "Sun-dried tomatoes",
+  "unit": "g",
+  "cupboard": false,
+  "allergens": [
+   "sulphites"
+  ],
+  "per100": {
+   "kcal": 190,
+   "protein_g": 2.4,
+   "carbs_g": 4,
+   "fat_g": 16.8
+  },
+  "product": {
+   "retailer": "morrisons",
+   "name": "Morrisons Sundried Tomatoes 280g",
+   "price_pence": 325,
+   "pack_size": 280,
+   "slug": "morrisons-sundried-tomatoes-280g/109603278"
+  },
+  "category": "Tins, jars & sauces",
+  "cofid": {
+   "name": "Pack label (no CoFID cross-check)",
+   "verified": true,
+   "basis": "label"
+  }
+ },
+ {
+  "slug": "mascarpone",
+  "name": "Morrisons Mascarpone 250g",
+  "display": "Mascarpone",
+  "unit": "g",
+  "cupboard": false,
+  "allergens": [
+   "milk"
+  ],
+  "per100": {
+   "kcal": 370,
+   "protein_g": 4,
+   "carbs_g": 2.9,
+   "fat_g": 38
+  },
+  "product": {
+   "retailer": "morrisons",
+   "name": "Morrisons Mascarpone 250g",
+   "price_pence": 225,
+   "pack_size": 250,
+   "slug": "morrisons-mascarpone-250g/104667467"
+  },
+  "category": "Dairy & eggs",
+  "cofid": {
+   "name": "Pack label (no CoFID cross-check)",
+   "verified": true,
+   "basis": "label"
+  }
+ },
+ {
+  "slug": "sourcream",
+  "name": "Morrisons British Soured Cream 300ml",
+  "display": "Soured cream",
+  "unit": "ml",
+  "cupboard": false,
+  "allergens": [
+   "milk"
+  ],
+  "per100": {
+   "kcal": 206,
+   "protein_g": 2.9,
+   "carbs_g": 3.8,
+   "fat_g": 19.9
+  },
+  "product": {
+   "retailer": "morrisons",
+   "name": "Morrisons British Soured Cream 300ml",
+   "price_pence": 85,
+   "pack_size": 300,
+   "slug": "morrisons-british-soured-cream-300ml/103046167"
+  },
+  "category": "Dairy & eggs",
+  "cofid": {
+   "name": "Pack label (no CoFID cross-check)",
+   "verified": true,
+   "basis": "label"
+  }
+ },
+ {
+  "slug": "cranberry",
+  "name": "Morrisons The Best Cranberry Sauce 200g",
+  "display": "Cranberry sauce",
+  "unit": "g",
+  "cupboard": false,
+  "allergens": [
+   "sulphites"
+  ],
+  "per100": {
+   "kcal": 160,
+   "protein_g": 0.1,
+   "carbs_g": 38.2,
+   "fat_g": 0.5
+  },
+  "product": {
+   "retailer": "morrisons",
+   "name": "Morrisons The Best Cranberry Sauce 200g",
+   "price_pence": 195,
+   "pack_size": 200,
+   "slug": "morrisons-the-best-cranberry-sauce-200g/108534186"
+  },
+  "category": "Tins, jars & sauces",
+  "cofid": {
+   "name": "Pack label (no CoFID cross-check)",
+   "verified": true,
+   "basis": "label"
+  }
  }
 ]

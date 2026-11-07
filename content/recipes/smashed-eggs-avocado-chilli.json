@@ -1,0 +1,51 @@
+{
+ "slug": "smashed-eggs-avocado-chilli",
+ "name": "Smashed Eggs with Avocado & Chilli",
+ "course": "breakfast",
+ "emoji": "🥚",
+ "serves": 1,
+ "status": "live",
+ "time": {
+  "prep": 5,
+  "cook": 8
+ },
+ "ingredients": [
+  {
+   "ingredient": "eggs",
+   "qty": 3
+  },
+  {
+   "ingredient": "avocado",
+   "qty": 0.3
+  },
+  {
+   "ingredient": "lime",
+   "qty": 0.5
+  },
+  {
+   "ingredient": "wholeloaf",
+   "qty": 80
+  },
+  {
+   "ingredient": "coriander",
+   "qty": 5
+  }
+ ],
+ "cupboard": [
+  "butter",
+  "paprika",
+  "chilliflakes"
+ ],
+ "cupboard_qty": {
+  "butter": 4,
+  "paprika": 1,
+  "chilliflakes": 1
+ },
+ "method": [
+  "Lower the eggs into a pan of boiling water and boil for 6 minutes. Drain, cool under cold running water for 1 minute, then peel.",
+  "Meanwhile melt the butter with the smoked paprika and chilli flakes in a small pan over a low heat for 1 minute.",
+  "Toast the bread. Dice the avocado, toss it in the lime juice and spoon it onto the toast slices.",
+  "Break the eggs over the avocado, drizzle with the spiced butter, scatter over the coriander and serve."
+ ],
+ "source": "idea: Joe Wicks"
+}

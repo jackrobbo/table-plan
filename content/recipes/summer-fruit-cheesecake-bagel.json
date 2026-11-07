@@ -1,0 +1,44 @@
+{
+ "slug": "summer-fruit-cheesecake-bagel",
+ "name": "Summer Fruit Cheesecake Bagel",
+ "course": "breakfast",
+ "emoji": "🍓",
+ "serves": 1,
+ "status": "live",
+ "time": {
+  "prep": 8,
+  "cook": 3
+ },
+ "ingredients": [
+  {
+   "ingredient": "bagels",
+   "qty": 1
+  },
+  {
+   "ingredient": "softcheese",
+   "qty": 60
+  },
+  {
+   "ingredient": "greek",
+   "qty": 25
+  },
+  {
+   "ingredient": "lemon",
+   "qty": 0.1
+  }
+ ],
+ "cupboard": [
+  "honey",
+  "frozenfruit"
+ ],
+ "cupboard_qty": {
+  "honey": 8,
+  "frozenfruit": 60
+ },
+ "method": [
+  "Split the bagel and toast the cut sides for 2 to 3 minutes until golden. Leave the frozen summer fruits to thaw on a plate.",
+  "Whisk the soft cheese, Greek yoghurt, honey and a squeeze of lemon juice together until smooth.",
+  "Spread the cheesecake mixture over the warm bagel, spoon over the thawed fruit and its juices and serve."
+ ],
+ "source": "idea: Joe Wicks"
+}

@@ -1,0 +1,58 @@
+{
+ "slug": "tandoori-chicken-skewers-and-rice",
+ "name": "Tandoori Chicken Skewers & Rice",
+ "course": "dinner",
+ "emoji": "🍢",
+ "serves": 2,
+ "status": "live",
+ "time": {
+  "prep": 25,
+  "cook": 20
+ },
+ "ingredients": [
+  {
+   "ingredient": "breast",
+   "qty": 350
+  },
+  {
+   "ingredient": "greek",
+   "qty": 150
+  },
+  {
+   "ingredient": "lemon",
+   "qty": 0.5
+  },
+  {
+   "ingredient": "lime",
+   "qty": 0.5
+  },
+  {
+   "ingredient": "coriander",
+   "qty": 10
+  }
+ ],
+ "cupboard": [
+  "rice",
+  "paprika",
+  "cumin",
+  "curry",
+  "puree",
+  "garlic"
+ ],
+ "cupboard_qty": {
+  "rice": 150,
+  "paprika": 5,
+  "cumin": 3,
+  "curry": 5,
+  "puree": 15,
+  "garlic": 6
+ },
+ "method": [
+  "Cut the chicken into 3cm chunks. Mix half the yoghurt with the paprika, cumin, curry powder, tomato puree, crushed garlic and the lemon juice, then coat the chicken and marinate for 15 minutes.",
+  "Thread the chicken onto skewers. Oven method: heat the oven to 220C (200C fan) and roast on a tray for 15 minutes, turning once, until charred and cooked through. In an air fryer, cook at 200C for 6 to 8 minutes in a single layer.",
+  "Cook the rice following the pack instructions, about 12 minutes, then drain and fluff with a fork.",
+  "Mix the rest of the yoghurt with the chopped coriander, the lime juice, salt and pepper for a cooling dip.",
+  "Serve the skewers on the rice with the coriander and lime yoghurt spooned over."
+ ],
+ "source": "idea: Mob"
+}

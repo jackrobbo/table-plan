@@ -1,0 +1,74 @@
+{
+ "slug": "thai-red-turkey-meatball-curry",
+ "name": "Thai Red Turkey Meatball Curry",
+ "course": "dinner",
+ "emoji": "🍛",
+ "serves": 2,
+ "time": {
+  "prep": 15,
+  "cook": 20
+ },
+ "ingredients": [
+  {
+   "ingredient": "turkeymince",
+   "qty": 300
+  },
+  {
+   "ingredient": "spring",
+   "qty": 0.5
+  },
+  {
+   "ingredient": "greenbeans",
+   "qty": 100
+  },
+  {
+   "ingredient": "thaicurry",
+   "qty": 40
+  },
+  {
+   "ingredient": "coconut",
+   "qty": 200
+  },
+  {
+   "ingredient": "basil",
+   "qty": 8
+  },
+  {
+   "ingredient": "coriander",
+   "qty": 8
+  },
+  {
+   "ingredient": "lime",
+   "qty": 1
+  },
+  {
+   "ingredient": "eggs",
+   "qty": 1
+  }
+ ],
+ "cupboard": [
+  "rice",
+  "garlic",
+  "breadcrumbs",
+  "fishsauce",
+  "sesameseeds",
+  "oil"
+ ],
+ "cupboard_qty": {
+  "rice": 120,
+  "garlic": 6,
+  "breadcrumbs": 20,
+  "fishsauce": 10,
+  "sesameseeds": 5,
+  "oil": 10
+ },
+ "method": [
+  "Mix the turkey mince, sliced spring onions, garlic, breadcrumbs and egg in a bowl, then shape into 12 small balls.",
+  "Heat the oil in a large deep pan over a medium heat and fry the meatballs for 6 to 8 minutes until golden all over. Lift out onto a plate.",
+  "Boil the rice for 10 to 12 minutes until tender, adding the green beans for the last 4 minutes, then drain.",
+  "Fry the curry paste in the same pan for 2 minutes, then pour in the coconut milk and bring to a simmer. Return the meatballs and simmer for 6 to 8 minutes, until cooked through with no pink inside. Season with fish sauce and a squeeze of lime.",
+  "Divide the rice and beans between bowls, spoon over the curry and scatter with torn basil, coriander and sesame seeds, with lime wedges alongside."
+ ],
+ "source": "idea: Mob",
+ "status": "live"
+}

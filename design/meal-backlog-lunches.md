@@ -80,11 +80,8 @@ EatingWell is a US site, so ingredients and names may be American (tostadas, cra
 - Avocados push cost up (about 75p each); check the lunch cost tier before building several.
 - Two caprese sandwiches need fresh mozzarella and basil, which we do not stock; build one at most if we add them.
 
-## NHS Healthier Families (links from Jack, 7 Nov 2026) - read and drafted
-Drafted (status draft): Finger-licking chicken pittas, Ham & fresh coleslaw pittas, Chicken sarnie with apple coleslaw (from "Turkey sarnie with coleslaw", roast chicken slices instead of turkey), Tuna & potato salad. NHS portions are small family-lunchbox sizes (162, 220, 302 and 199 kcal), so ours are scaled up for adults and are not calorie-matched to the source; the method order, timings and ingredients are.
-
-**Licence (read 7 Nov, from nhs.uk/our-policies/terms-and-conditions, last reviewed Jan 2021):** NHS website content is released under the Open Government Licence v3.0, including commercial use. Adapted content must carry "Contains public sector information licensed under the Open Government Licence v3.0" and must NOT be attributed to the NHS. Photos, logos and image rights are excluded, so we use our own photos. Recipe pages carry "© Crown copyright" and the Healthier Families section has its own terms page, which has not been read yet. Not legal advice; add to the solicitor list. See `design/todo.md`.
-
+## NHS Healthier Families (links from Jack, 7 Nov 2026) - REMOVED
+The four drafts built from these were deleted on Jack's decision (7 Nov): they would have needed an Open Government Licence attribution line. Not used.
 ## Pinch of Nom (links from Jack, 7 Nov 2026)
 - Chicken Caesar pasta (https://pinchofnom.com/recipes/chicken-caesar-pasta/): read and drafted as a **dinner** (hot, serves 4, 425 kcal on the page).
 - Cottage cheese bagels (https://pinchofnom.com/recipes/cottage-cheese-bagels/, serves 4, 349 kcal, breakfast or lunch) and chicken and chorizo quesadillas (https://pinchofnom.com/recipes/chicken-and-chorizo-quesadillas/, serves 4, 480 kcal, dinner or cold lunchbox): **not drafted**. Both pages say the recipe is only in the Pinch of Nom Meal Prep book, so there is no ingredient list or method to work from. We have our own quesadilla and bagel ideas already if wanted.

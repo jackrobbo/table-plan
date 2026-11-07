@@ -1,0 +1,163 @@
+{
+ "chicken-pepper-harissa-orzo": {
+  "source": "Mob",
+  "steps": [
+   {
+    "do": [
+     "peppers"
+    ],
+    "mins": [
+     5,
+     8
+    ]
+   },
+   {
+    "do": [
+     "stock"
+    ],
+    "mins": [
+     10,
+     15
+    ]
+   }
+  ]
+ },
+ "harissa-turkey-meatball-pittas": {
+  "source": "Mob",
+  "steps": [
+   {
+    "do": [
+     "oven"
+    ],
+    "temp": 180
+   },
+   {
+    "do": [
+     "bake"
+    ],
+    "mins": [
+     10,
+     12
+    ],
+    "deviation": "Oven rather than air fryer, so a little longer at a similar temperature."
+   }
+  ]
+ },
+ "spicy-gochujang-beef-pasta": {
+  "source": "Mob",
+  "steps": [
+   {
+    "do": [
+     "pasta",
+     "fusilli"
+    ]
+   },
+   {
+    "do": [
+     "mince"
+    ],
+    "mins": [
+     2,
+     4
+    ],
+    "deviation": "Brown the mince 5 minutes in one go for a simpler method."
+   },
+   {
+    "do": [
+     "soften"
+    ],
+    "mins": [
+     7,
+     7
+    ]
+   }
+  ]
+ },
+ "thai-basil-chicken-stir-fry": {
+  "source": "Mob",
+  "steps": [
+   {
+    "do": [
+     "rice"
+    ]
+   },
+   {
+    "do": [
+     "sear"
+    ],
+    "mins": [
+     2,
+     3
+    ],
+    "deviation": "Sear time is estimated for sliced chicken; the page gives no figure."
+   },
+   {
+    "do": [
+     "pepper"
+    ],
+    "mins": [
+     2,
+     3
+    ]
+   }
+  ]
+ },
+ "drunken-noodles": {
+  "source": "Mob",
+  "steps": [
+   {
+    "do": [
+     "soak"
+    ],
+    "mins": [
+     10,
+     10
+    ]
+   },
+   {
+    "do": [
+     "wok"
+    ],
+    "mins": [
+     1,
+     1
+    ],
+    "deviation": "Peppers added for extra vegetables, so the veg fry is a little longer."
+   },
+   {
+    "do": [
+     "chicken"
+    ],
+    "mins": [
+     3,
+     3
+    ],
+    "deviation": "Larger batch of chicken for four portions needs a little longer."
+   }
+  ]
+ },
+ "pad-see-ew-chicken-noodles": {
+  "source": "Mob",
+  "steps": [
+   {
+    "do": [
+     "marinate"
+    ]
+   },
+   {
+    "do": [
+     "sear"
+    ],
+    "mins": [
+     2,
+     2
+    ]
+   },
+   {
+    "do": [
+     "garlic"
+    ]
+   }
+  ]
+ }
+}

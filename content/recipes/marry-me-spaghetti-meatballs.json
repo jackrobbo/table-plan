@@ -1,0 +1,58 @@
+{
+ "slug": "marry-me-spaghetti-meatballs",
+ "name": "Marry Me Spaghetti & Meatballs",
+ "course": "dinner",
+ "emoji": "🍝",
+ "serves": 2,
+ "time": {
+  "prep": 10,
+  "cook": 25
+ },
+ "ingredients": [
+  {
+   "ingredient": "mince",
+   "qty": 300
+  },
+  {
+   "ingredient": "onions",
+   "qty": 1
+  },
+  {
+   "ingredient": "pesto",
+   "qty": 40
+  },
+  {
+   "ingredient": "creme",
+   "qty": 100
+  }
+ ],
+ "cupboard": [
+  "spaghetti",
+  "oil",
+  "garlic",
+  "oregano",
+  "herbs",
+  "stock",
+  "puree",
+  "parmesan"
+ ],
+ "cupboard_qty": {
+  "spaghetti": 160,
+  "oil": 10,
+  "garlic": 4,
+  "oregano": 2,
+  "herbs": 1,
+  "stock": 5,
+  "puree": 15,
+  "parmesan": 15
+ },
+ "method": [
+  "Finely dice the onion and crush the garlic. Mix the mince with the oregano, mixed herbs, salt and pepper and roll into 12 small meatballs.",
+  "Fry the meatballs in half the oil over a medium heat for 10 minutes, turning, until browned and cooked through. Lift them onto a plate.",
+  "Boil a large pan of water with the stock cube dissolved in it and cook the spaghetti for 10 minutes, saving a mug of the water before draining.",
+  "Fry the onion and garlic in the meatball pan with the rest of the oil for 7 minutes until soft, then stir in the pesto, tomato puree and crème fraîche with a ladle of pasta water. Return the meatballs and simmer for 3 minutes.",
+  "Toss the drained spaghetti through the sauce and serve topped with grated parmesan."
+ ],
+ "source": "idea: Mob",
+ "status": "live"
+}

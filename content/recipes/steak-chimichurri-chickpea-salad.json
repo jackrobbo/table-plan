@@ -1,0 +1,59 @@
+{
+ "slug": "steak-chimichurri-chickpea-salad",
+ "name": "Steak & Chimichurri Chickpea Salad",
+ "course": "dinner",
+ "emoji": "🥗",
+ "serves": 2,
+ "status": "live",
+ "time": {
+  "prep": 20,
+  "cook": 10
+ },
+ "ingredients": [
+  {
+   "ingredient": "rump",
+   "qty": 300
+  },
+  {
+   "ingredient": "chickpeas",
+   "qty": 240
+  },
+  {
+   "ingredient": "coriander",
+   "qty": 20
+  },
+  {
+   "ingredient": "chilli",
+   "qty": 10
+  },
+  {
+   "ingredient": "plum",
+   "qty": 150
+  },
+  {
+   "ingredient": "spinach",
+   "qty": 60
+  }
+ ],
+ "cupboard": [
+  "garlic",
+  "chilliflakes",
+  "oregano",
+  "vinegar",
+  "oil"
+ ],
+ "cupboard_qty": {
+  "garlic": 6,
+  "chilliflakes": 1,
+  "oregano": 1,
+  "vinegar": 15,
+  "oil": 25
+ },
+ "method": [
+  "Take the steaks out of the fridge, pat them dry, and season generously with salt. Drain and rinse the chickpeas and halve the tomatoes.",
+  "Finely chop the coriander and chilli and whisk in a large bowl with the grated garlic, chilli flakes, oregano, vinegar and 20g of the oil. Season, then stir in the chickpeas and tomatoes.",
+  "Heat a heavy frying pan until very hot with the rest of the oil. Sear the steaks, pressing down, for 2 minutes, then turn and cook for 1 to 2 minutes more. Rest for 10 minutes, then slice.",
+  "Toss the spinach through the chickpeas, top with the sliced steak and spoon over any resting juices."
+ ],
+ "source": "idea: Mob"
+}

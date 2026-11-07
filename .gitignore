@@ -15,3 +15,4 @@ content/images/originals/
 # Vendor price files and match decisions for other stores (licensed data stays local; only `npm run match -- apply` output is committed)
 content/matches/
 content/reviews/
+content/feed/

@@ -1,0 +1,51 @@
+{
+ "slug": "chicken-broccoli-cheesy-bean-traybake",
+ "name": "Chicken, Broccoli & Cheesy Bean Traybake",
+ "course": "dinner",
+ "emoji": "🥦",
+ "serves": 4,
+ "status": "live",
+ "time": {
+  "prep": 10,
+  "cook": 35
+ },
+ "ingredients": [
+  {
+   "ingredient": "breast",
+   "qty": 600
+  },
+  {
+   "ingredient": "brocc",
+   "qty": 400
+  },
+  {
+   "ingredient": "butterbeans",
+   "qty": 480
+  },
+  {
+   "ingredient": "creme",
+   "qty": 150
+  },
+  {
+   "ingredient": "lemon",
+   "qty": 1
+  }
+ ],
+ "cupboard": [
+  "garlic",
+  "oil",
+  "cheddar"
+ ],
+ "cupboard_qty": {
+  "garlic": 6,
+  "oil": 10,
+  "cheddar": 100
+ },
+ "method": [
+  "Heat the oven to 200C (180C fan). Coarsely grate the broccoli, stalk included, into a deep baking dish.",
+  "Add the butter beans with their liquid, the crème fraîche, most of the cheddar and the finely grated garlic. Season, mix, then scatter over the remaining cheddar.",
+  "Sit the chicken breasts on top, season and drizzle with the oil. Bake for 30 minutes until the chicken is cooked through and the cheese is golden.",
+  "Cut the lemon into wedges and serve the traybake in scoops with a wedge for squeezing over."
+ ],
+ "source": "idea: Mob"
+}

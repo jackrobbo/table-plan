@@ -1,0 +1,259 @@
+{
+ "chicken-and-chorizo-rice": {
+  "source": "Joe Wicks",
+  "steps": [
+   {
+    "do": [
+     "chorizo"
+    ]
+   },
+   {
+    "do": [
+     "chicken"
+    ]
+   },
+   {
+    "do": [
+     "rice"
+    ]
+   },
+   {
+    "do": [
+     "simmer"
+    ],
+    "mins": [
+     15,
+     20
+    ]
+   },
+   {
+    "do": [
+     "chickpeas"
+    ]
+   }
+  ]
+ },
+ "chicken-milanese-pasta": {
+  "source": "Joe Wicks",
+  "steps": [
+   {
+    "do": [
+     "flatten"
+    ]
+   },
+   {
+    "do": [
+     "dust"
+    ]
+   },
+   {
+    "do": [
+     "fry"
+    ],
+    "mins": [
+     4,
+     5
+    ]
+   },
+   {
+    "do": [
+     "spaghetti"
+    ]
+   },
+   {
+    "do": [
+     "parmesan"
+    ]
+   }
+  ]
+ },
+ "turkey-meatball-pepper-pasta": {
+  "source": "Joe Wicks",
+  "steps": [
+   {
+    "do": [
+     "spaghetti"
+    ]
+   },
+   {
+    "do": [
+     "roll"
+    ]
+   },
+   {
+    "do": [
+     "fry"
+    ],
+    "mins": [
+     8,
+     8
+    ],
+    "deviation": "Turkey mince meatballs replace the original chicken sausage meat; same frying time works for both."
+   },
+   {
+    "do": [
+     "blitz"
+    ]
+   },
+   {
+    "do": [
+     "yoghurt"
+    ]
+   }
+  ]
+ },
+ "creamy-chicken-mushroom-pasta": {
+  "source": "Joe Wicks",
+  "steps": [
+   {
+    "do": [
+     "spaghetti"
+    ]
+   },
+   {
+    "do": [
+     "chicken"
+    ],
+    "mins": [
+     5,
+     5
+    ]
+   },
+   {
+    "do": [
+     "garlic"
+    ],
+    "mins": [
+     1,
+     1
+    ]
+   },
+   {
+    "do": [
+     "cream",
+     "creme"
+    ]
+   },
+   {
+    "do": [
+     "parmesan"
+    ]
+   }
+  ]
+ },
+ "chilli-wraps": {
+  "source": "Joe Wicks",
+  "steps": [
+   {
+    "do": [
+     "fry",
+     "heat"
+    ]
+   },
+   {
+    "do": [
+     "mince"
+    ],
+    "mins": [
+     3,
+     4
+    ]
+   },
+   {
+    "do": [
+     "simmer"
+    ],
+    "mins": [
+     5,
+     5
+    ],
+    "deviation": "Kidney beans replace black beans, which the catalogue does not stock; the simmer time is unchanged."
+   },
+   {
+    "do": [
+     "wraps"
+    ]
+   }
+  ]
+ },
+ "summer-bbq-chicken-corn": {
+  "source": "Joe Wicks",
+  "steps": [
+   {
+    "do": [
+     "marinate"
+    ]
+   },
+   {
+    "do": [
+     "whisk"
+    ]
+   },
+   {
+    "do": [
+     "microwave"
+    ],
+    "mins": [
+     4,
+     4
+    ]
+   },
+   {
+    "do": [
+     "griddle"
+    ],
+    "mins": [
+     3,
+     4
+    ]
+   },
+   {
+    "do": [
+     "corn"
+    ],
+    "mins": [
+     5,
+     5
+    ]
+   },
+   {
+    "do": [
+     "serve"
+    ]
+   }
+  ]
+ },
+ "creamy-cajun-chicken-pasta": {
+  "source": "Joe Wicks",
+  "steps": [
+   {
+    "do": [
+     "fusilli"
+    ]
+   },
+   {
+    "do": [
+     "onion"
+    ],
+    "mins": [
+     5,
+     5
+    ]
+   },
+   {
+    "do": [
+     "chicken"
+    ],
+    "mins": [
+     5,
+     5
+    ]
+   },
+   {
+    "do": [
+     "cheese"
+    ]
+   }
+  ]
+ }
+}

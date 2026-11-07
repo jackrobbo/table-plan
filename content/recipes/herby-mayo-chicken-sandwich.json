@@ -1,0 +1,58 @@
+{
+ "slug": "herby-mayo-chicken-sandwich",
+ "name": "Herby Mayo Chicken Sandwich",
+ "course": "lunch",
+ "emoji": "🥪",
+ "serves": 1,
+ "status": "live",
+ "time": {
+  "prep": 8,
+  "cook": 0
+ },
+ "ingredients": [
+  {
+   "ingredient": "roast",
+   "qty": 90
+  },
+  {
+   "ingredient": "loaf",
+   "qty": 2
+  },
+  {
+   "ingredient": "spring",
+   "qty": 0.15
+  },
+  {
+   "ingredient": "coriander",
+   "qty": 4
+  },
+  {
+   "ingredient": "lemon",
+   "qty": 0.1
+  },
+  {
+   "ingredient": "cuc",
+   "qty": 0.1
+  },
+  {
+   "ingredient": "plum",
+   "qty": 60
+  },
+  {
+   "ingredient": "salad",
+   "qty": 25
+  }
+ ],
+ "cupboard": [
+  "mayo"
+ ],
+ "cupboard_qty": {
+  "mayo": 20
+ },
+ "method": [
+  "Finely chop the spring onions and coriander and stir them into the mayonnaise with a good squeeze of lemon juice, salt and pepper.",
+  "Toast the bread and let it cool a moment. Slice the chicken, cucumber and tomatoes, and season the tomatoes with a pinch of salt.",
+  "Spread herby mayonnaise on both slices of toast. Layer the cucumber, chicken, tomatoes and salad leaves on one, close the sandwich, press down gently and serve cut in half."
+ ],
+ "source": "idea: Mob"
+}

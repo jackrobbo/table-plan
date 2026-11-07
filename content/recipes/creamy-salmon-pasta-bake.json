@@ -1,0 +1,60 @@
+{
+ "slug": "creamy-salmon-pasta-bake",
+ "name": "Creamy Salmon Pasta Bake",
+ "course": "dinner",
+ "emoji": "🐟",
+ "serves": 4,
+ "time": {
+  "prep": 15,
+  "cook": 30
+ },
+ "ingredients": [
+  {
+   "ingredient": "salmon",
+   "qty": 350
+  },
+  {
+   "ingredient": "leeks",
+   "qty": 250
+  },
+  {
+   "ingredient": "milk",
+   "qty": 250
+  },
+  {
+   "ingredient": "greek",
+   "qty": 60
+  },
+  {
+   "ingredient": "lemon",
+   "qty": 0.5
+  }
+ ],
+ "cupboard": [
+  "fusilli",
+  "garlic",
+  "butter",
+  "flour",
+  "breadcrumbs",
+  "oil",
+  "wholegrainmustard"
+ ],
+ "cupboard_qty": {
+  "fusilli": 320,
+  "garlic": 6,
+  "butter": 25,
+  "flour": 10,
+  "breadcrumbs": 30,
+  "oil": 10,
+  "wholegrainmustard": 15
+ },
+ "method": [
+  "Heat the oven to 180C (160C fan). Wrap the salmon in foil with a drizzle of oil, half the garlic, a squeeze of lemon, salt and pepper, and bake for 15 minutes until cooked through.",
+  "Meanwhile boil the fusilli in salted water for 10 to 12 minutes until just tender, then drain.",
+  "Soften the sliced leeks in the butter and the rest of the garlic for 5 minutes, stir in the flour, then add the milk a little at a time, stirring, until you have a thick creamy sauce. Stir in the yoghurt and mustard and season well with pepper.",
+  "Tip the pasta into an ovenproof dish, flake the salmon over it (check for bones), spoon the creamy leeks over to the edges and scatter with the breadcrumbs.",
+  "Bake for 15 minutes until golden on top, then serve in bowls."
+ ],
+ "source": "idea: Sainsbury's recipes",
+ "status": "live"
+}

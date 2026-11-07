@@ -1,0 +1,45 @@
+{
+ "slug": "berry-cheesecake-overnight-oats",
+ "name": "Berry Cheesecake Overnight Oats",
+ "course": "breakfast",
+ "emoji": "🫐",
+ "serves": 1,
+ "status": "live",
+ "time": {
+  "prep": 5,
+  "cook": 5
+ },
+ "ingredients": [
+  {
+   "ingredient": "oats",
+   "qty": 40
+  },
+  {
+   "ingredient": "softcheese",
+   "qty": 30
+  },
+  {
+   "ingredient": "greek",
+   "qty": 80
+  },
+  {
+   "ingredient": "milk",
+   "qty": 100
+  }
+ ],
+ "cupboard": [
+  "honey",
+  "frozenfruit"
+ ],
+ "cupboard_qty": {
+  "honey": 8,
+  "frozenfruit": 100
+ },
+ "method": [
+  "Tip the frozen fruit into a small pan with a splash of water and heat for 5 minutes, mashing it down until it breaks into a thick compote. Let it cool a little.",
+  "Stir the oats, soft cheese, Greek yoghurt, milk and honey together in a jar until smooth and well combined.",
+  "Spoon the compote over the top, cover and chill in the fridge overnight so the oats soften.",
+  "In the morning give it a quick stir if you like and serve cold."
+ ],
+ "source": "idea: The Happy Foodie"
+}

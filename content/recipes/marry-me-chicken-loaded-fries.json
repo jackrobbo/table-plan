@@ -1,0 +1,52 @@
+{
+ "slug": "marry-me-chicken-loaded-fries",
+ "name": "Marry Me Chicken Loaded Fries",
+ "course": "dinner",
+ "emoji": "🍟",
+ "serves": 2,
+ "status": "live",
+ "time": {
+  "prep": 15,
+  "cook": 30
+ },
+ "ingredients": [
+  {
+   "ingredient": "potatoes",
+   "qty": 500
+  },
+  {
+   "ingredient": "breast",
+   "qty": 300
+  },
+  {
+   "ingredient": "pesto",
+   "qty": 40
+  },
+  {
+   "ingredient": "softcheese",
+   "qty": 60
+  }
+ ],
+ "cupboard": [
+  "garlic",
+  "paprika",
+  "herbs",
+  "oregano",
+  "oil"
+ ],
+ "cupboard_qty": {
+  "garlic": 6,
+  "paprika": 3,
+  "herbs": 2,
+  "oregano": 1,
+  "oil": 15
+ },
+ "method": [
+  "Cut the potatoes into skinny chips and microwave them on medium-high for 7 minutes until just soft. Toss with half the oil, the paprika, mixed herbs, salt and pepper.",
+  "Oven method: heat the oven to 220C (200C fan), spread the chips on a large tray and roast for 30 minutes, turning halfway, until golden. In an air fryer, cook at 190C for 20 minutes instead, shaking halfway.",
+  "Dice the chicken and fry it in the remaining oil over a medium heat for 7 minutes until golden and cooked through. Add the crushed garlic and cook for 2 minutes.",
+  "Stir in the oregano, red pesto, soft cheese and 100ml water, then simmer gently for 3 minutes into a creamy sauce. Season to taste.",
+  "Pile the chips into bowls and spoon the creamy marry me chicken over the top."
+ ],
+ "source": "idea: Mob"
+}

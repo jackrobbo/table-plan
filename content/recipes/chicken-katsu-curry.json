@@ -1,0 +1,60 @@
+{
+ "slug": "chicken-katsu-curry",
+ "name": "Crispy Chicken Katsu Curry",
+ "course": "dinner",
+ "emoji": "🍛",
+ "serves": 2,
+ "status": "live",
+ "time": {
+  "prep": 15,
+  "cook": 30
+ },
+ "ingredients": [
+  {
+   "ingredient": "breast",
+   "qty": 300
+  },
+  {
+   "ingredient": "katsu",
+   "qty": 200
+  },
+  {
+   "ingredient": "spring",
+   "qty": 0.5
+  },
+  {
+   "ingredient": "carrots",
+   "qty": 80
+  },
+  {
+   "ingredient": "cuc",
+   "qty": 0.33
+  },
+  {
+   "ingredient": "chilli",
+   "qty": 5
+  },
+  {
+   "ingredient": "lime",
+   "qty": 1
+  }
+ ],
+ "cupboard": [
+  "panko",
+  "oil",
+  "basmati"
+ ],
+ "cupboard_qty": {
+  "panko": 40,
+  "oil": 8,
+  "basmati": 140
+ },
+ "method": [
+  "Heat the oven to 220C (200C fan). Brush the chicken breasts on both sides with the oil, season and press them into the panko so they are coated all over. Place on a baking tray.",
+  "Bake for 20 minutes until golden and cooked through, then rest for 4 to 5 minutes and slice thickly.",
+  "Meanwhile cook the rice following the pack instructions, stirring in the sliced spring onions for the last minute. Warm the katsu sauce in a small pan for 5 minutes.",
+  "Peel the carrot and cucumber into ribbons and toss with the chopped chilli and a squeeze of lime.",
+  "Divide the sliced chicken between two plates, pour over the sauce and serve with the rice, the salad and the rest of the lime in wedges."
+ ],
+ "source": "idea: BBC Good Food"
+}
