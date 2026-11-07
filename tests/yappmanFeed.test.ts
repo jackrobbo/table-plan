@@ -70,3 +70,28 @@ describe('yappman feed: cost guard', () => {
     expect(estimateCost({ morrisonsRows: 0, basketLines: 0, stores: 0 })).toBe(0);
   });
 });
+
+import { morrisonsRecipeCosts, parsePack } from '../scripts/feed-to-sql';
+import type { IngredientDef, RecipeDef } from '../src/lib/content/types';
+
+describe('feed to sql: packs and recipe costs', () => {
+  it('reads pack sizes in grams and millilitres', () => {
+    expect(parsePack('1kg')).toEqual({ size: 1000, unit: 'g' });
+    expect(parsePack('250G')).toEqual({ size: 250, unit: 'g' });
+    expect(parsePack('1.5L')).toEqual({ size: 1500, unit: 'ml' });
+    expect(parsePack('75cl')).toEqual({ size: 750, unit: 'ml' });
+    expect(parsePack('6 pack')).toBeNull();
+    expect(parsePack(null)).toBeNull();
+  });
+  it('prices a recipe from the run, and lists an ingredient with no price', () => {
+    const mk = (slug: string, price: number | null): IngredientDef => ({ slug, name: slug, unit: 'g', cupboard: false, allergens: [], per100: { kcal: 100, protein_g: 10, carbs_g: 0, fat_g: 1 }, product: price == null ? null : { retailer: 'morrisons', name: slug, price_pence: price, pack_size: 100, slug: `${slug}/${slug === 'a' ? 111 : 222}` } });
+    const ing = [mk('a', 100), mk('b', null)];
+    const r = { slug: 'x', name: 'X', course: 'dinner', emoji: '', serves: 2, status: 'live', ingredients: [{ ingredient: 'a', qty: 200 }], cupboard: [], method: [] } as unknown as RecipeDef;
+    const priced = morrisonsRecipeCosts(ing, [r], new Map([['111', 150]]));
+    expect(priced[0].cost).toBe(150);          // 200 g of a 100 g / 150p product, for 2 portions
+    expect(priced[0].missing).toEqual([]);
+    const r2 = { ...r, slug: 'y', ingredients: [{ ingredient: 'a', qty: 100 }, { ingredient: 'b', qty: 50 }] } as unknown as RecipeDef;
+    const incomplete = morrisonsRecipeCosts(ing, [r2], new Map([['111', 150]]));
+    expect(incomplete[0].cost).toBeNull(); expect(incomplete[0].missing).toEqual(['b']);
+  });
+});

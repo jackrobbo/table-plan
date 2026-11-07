@@ -32,3 +32,23 @@ Per store: coverage, duplicates, missing or impossible prices, price moves over 
 
 ## Next (stage 2, needs Jack's go-ahead before touching Supabase)
 Price tables with an `as_of` date and a run record, the import writing each run into them, per-store recipe cost and tier recalculated from the latest prices. See `design/architecture.md` section 6.
+
+## Stage 2 done (7 Nov 2026): price tables in Supabase
+Migration `supabase/migrations/0009_price_feed.sql`, applied to project `dyaztrnlrmhcyrbctsbs`:
+`price_runs`, `store_products`, `store_prices` (history, rows can be held), view `latest_prices`, `recipe_costs`. RLS on, no policies, grants to `anon` and `authenticated` revoked: only the server's service role can read or write, because the vendor licence allows display but not bulk redistribution.
+
+Loaded from the full run above with `npm run feed:sql` (writes three SQL files in `content/feed/`, no secrets, no network) and applied in order:
+- 1 run, 206 price rows (sum 39,638p, identical to the local snapshot), 0 held, 5 out of stock, 23 with a promotion.
+- 206 store products: 120 Morrisons (our mapping) and 86 Tesco (confirmed matches). 0 mapped products without a price.
+- 288 recipe costs at Morrisons, all complete. Cost uses the regular (was) price when a simple offer is running, so a one-week promotion does not swing a recipe's cost. Tiers: 82 low, 105 medium, 101 high.
+
+The app does not read these tables yet; it still uses the bundled data. Wiring it (a server route that returns the signed-in person's store prices and costs, and the planner using them) is the next step.
+
+### Tesco matches to revisit when the review resumes
+The load showed some confirmed Tesco matches that are not like for like:
+- `mission`: Tesco Mission **Original** wraps, but our product is Mission **Protein** wraps (different nutrition).
+- `grenade`: a single 35 g bar, ours is a 4 x 60 g pack of a different bar size.
+- `porkmince`: 10% fat, ours is 5% fat. `lambmince` 10% fat.
+- `loaf`: a 400 g loaf against our 800 g one. `bagels`: thin bagels against plain.
+- `chilliflakes`: chipotle flakes, ours are plain chilli flakes.
+- Packs without a parseable size (eggs, wraps, bananas, naan, garlic): the count is in the product name.
