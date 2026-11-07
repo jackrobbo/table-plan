@@ -5,6 +5,7 @@ import type { Subscription } from '../billing/types';
 import type { AccountStore } from './account';
 import type { SignupStore } from './signup';
 import { shapeSnapshot, type PriceSnapshot } from '../pricing/snapshot';
+import type { FeedDb } from './feed';
 import type { RateStore } from './guard';
 import { fileWaitlistStore } from './waitlistFile';
 
@@ -175,6 +176,64 @@ export function getPriceStore(): PriceStore | null {
       ]);
       for (const r of [products, prices, costs]) if (r.error) throw new Error(r.error.message);
       return shapeSnapshot({ store, products: products.data ?? [], prices: prices.data ?? [], costs: costs.data ?? [] });
+    },
+  };
+}
+
+/** Database access for the weekly price job (service role; the price tables have no browser access). Null when the database is not configured. */
+export function getFeedDb(): FeedDb | null {
+  const sb = admin();
+  if (!sb) return null;
+  const must = (what: string, e: { message: string } | null) => { if (e) throw new Error(`${what}: ${e.message}`); };
+  return {
+    async targets(store) {
+      const [prods, prices] = await Promise.all([
+        sb.from('store_products').select('ingredient_slug, product_ref, url').eq('store', store),
+        sb.from('latest_prices').select('product_ref, price_pence, pack_text').eq('store', store),
+      ]);
+      must('store_products', prods.error); must('latest_prices', prices.error);
+      const last = new Map((prices.data ?? []).map((p) => [p.product_ref as string, p]));
+      return (prods.data ?? []).filter((p) => p.url).map((p) => ({ slug: p.ingredient_slug as string, ref: p.product_ref as string, url: p.url as string, lastPricePence: (last.get(p.product_ref as string)?.price_pence as number | undefined) ?? null, lastPackText: (last.get(p.product_ref as string)?.pack_text as string | undefined) ?? null }));
+    },
+    async createRun(store, expected, notes) {
+      const { data, error } = await sb.from('price_runs').insert({ source: 'yappman', stores: [store], status: 'running', rows_expected: expected, notes }).select('id').single();
+      must('price_runs', error);
+      return data!.id as string;
+    },
+    async getRun(id) {
+      const { data, error } = await sb.from('price_runs').select('id, status, stores').eq('id', id).maybeSingle();
+      must('price_runs', error);
+      return data ? { id: data.id as string, status: data.status as string, stores: data.stores as string[] } : null;
+    },
+    async saveRows(runId, rows) {
+      for (let i = 0; i < rows.length; i += 200) {
+        const chunk = rows.slice(i, i + 200).map((r) => ({
+          run_id: runId, store: r.store, product_ref: r.productRef, price_pence: r.pricePence, was_price_pence: r.wasPricePence, loyalty_price_pence: r.loyaltyPricePence,
+          promo_text: r.promoText, in_stock: r.inStock, pack_text: r.packSize, priced_at: r.pricedAt ?? new Date().toISOString(), held: r.held, hold_reason: r.holdReason,
+        }));
+        must('store_prices', (await sb.from('store_prices').insert(chunk)).error);
+      }
+    },
+    async finishRun(id, f) {
+      must('price_runs', (await sb.from('price_runs').update({ status: f.status, finished_at: new Date().toISOString(), rows_received: f.rowsReceived, rows_held: f.rowsHeld, notes: f.notes }).eq('id', id)).error);
+    },
+    async currentPrices(store) {
+      const [prods, prices] = await Promise.all([
+        sb.from('store_products').select('ingredient_slug, product_ref').eq('store', store),
+        sb.from('latest_prices').select('product_ref, price_pence, was_price_pence').eq('store', store),
+      ]);
+      must('store_products', prods.error); must('latest_prices', prices.error);
+      const p = new Map((prices.data ?? []).map((x) => [x.product_ref as string, (x.was_price_pence ?? x.price_pence) as number]));
+      const out: Record<string, number> = {};
+      for (const sp of prods.data ?? []) { const v = p.get(sp.product_ref as string); if (v) out[sp.ingredient_slug as string] = v; }
+      return out;
+    },
+    async saveCosts(store, runId, costs) {
+      const asOf = new Date().toISOString();
+      for (let i = 0; i < costs.length; i += 200) {
+        const chunk = costs.slice(i, i + 200).map((c) => ({ store, recipe_slug: c.slug, cost_pence: c.cost, budget_tier: c.tier, complete: c.cost != null, missing: c.missing, run_id: runId, as_of: asOf }));
+        must('recipe_costs', (await sb.from('recipe_costs').upsert(chunk, { onConflict: 'store,recipe_slug' })).error);
+      }
     },
   };
 }

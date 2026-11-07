@@ -52,3 +52,15 @@ The load showed some confirmed Tesco matches that are not like for like:
 - `loaf`: a 400 g loaf against our 800 g one. `bagels`: thin bagels against plain.
 - `chilliflakes`: chipotle flakes, ours are plain chilli flakes.
 - Packs without a parseable size (eggs, wraps, bananas, naan, garlic): the count is in the product name.
+
+## Stage 3 built (7 Nov 2026): the weekly job
+Code: `src/lib/server/feed.ts` (logic, tested in `tests/priceFeedJob.test.ts`), `/api/cron/price-feed` (Vercel cron, Mondays 05:00 UTC, `vercel.json`), `/api/feed/ingest` (Apify webhook back to us).
+Flow: cron records a run per store (Morrisons, Tesco) and asks Apify to price the exact product pages; Apify calls the webhook when done; we check the rows, store them (price moves over 50% are held, never served), recompute every Morrisons meal cost from `src/data/costing.json`, and close the run. If under 80% of products come back, or Apify fails, the run is marked failed and the app keeps serving the previous snapshot.
+
+Setup before it can run (Jack, in Vercel > table-plan-app > Settings > Environment Variables, Production):
+1. `CRON_SECRET`: any long random string. Vercel sends it to the cron route.
+2. `FEED_SECRET`: another long random string. Apify sends it back to the webhook.
+3. `APIFY_TOKEN`: from Apify Console > Settings > API & Integrations.
+4. `SUPABASE_SERVICE_ROLE_KEY` should already be set (used by `/api/prices`).
+Then redeploy. To test without waiting for Monday, call the cron route once by hand with the CRON_SECRET (costs about $0.50).
+`.github/workflows/prices.yml` is manual-only (Morrisons blocks GitHub), so it is left as a fallback.

@@ -7,6 +7,7 @@ import type { PriceCache } from '../src/lib/pricing/refresh';
 import { BUDGET_LIMITS, budgetTier, costPerPortion, resolvePerPortion } from '../src/lib/content/macros';
 import { deriveAllergens, validateContent } from '../src/lib/content/validate';
 import { placeholderKey } from '../src/lib/content/placeholder';
+import { buildCostingData } from '../src/lib/pricing/costing';
 import { STORE_IDS, type StoreId } from '../src/lib/stores';
 
 const readJson = <T>(f: string) => JSON.parse(fs.readFileSync(f, 'utf8')) as T;
@@ -90,6 +91,9 @@ out('recipes', recipes.filter((r) => r.status === 'live').map((r) => ({
   fresh: r.ingredients.map((l) => [l.ingredient, l.qty]), cup: r.cupboard, ...(r.cupboard_qty ? { cq: r.cupboard_qty } : {}), m: r.method,
   allergens: deriveAllergens(r, ingMap),
 })));
+
+// Server-side costing data (the weekly price job recomputes every meal's cost from fresh prices). Never imported by the browser.
+out('costing', buildCostingData(ingredients, recipes));
 
 // ---- idempotent SQL ----
 const q = (s: unknown) => (s == null ? 'null' : `'${String(s).replace(/'/g, "''")}'`);

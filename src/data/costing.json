@@ -1,0 +1,11487 @@
+{
+ "ingredients": {
+  "breast": {
+   "unit": "g",
+   "pack": 1000,
+   "pr": 699
+  },
+  "thigh": {
+   "unit": "g",
+   "pack": 1000,
+   "pr": 725
+  },
+  "mince": {
+   "unit": "g",
+   "pack": 250,
+   "pr": 295
+  },
+  "sizzle": {
+   "unit": "g",
+   "pack": 320,
+   "pr": 525
+  },
+  "rump": {
+   "unit": "g",
+   "pack": 200,
+   "pr": 440
+  },
+  "prawns": {
+   "unit": "g",
+   "pack": 150,
+   "pr": 249
+  },
+  "roast": {
+   "unit": "g",
+   "pack": 180,
+   "pr": 375
+  },
+  "ham": {
+   "unit": "g",
+   "pack": 120,
+   "pr": 200
+  },
+  "bacon": {
+   "unit": "medallions",
+   "pack": 8,
+   "pr": 325,
+   "g": 28
+  },
+  "eggs": {
+   "unit": "eggs",
+   "pack": 6,
+   "pr": 180,
+   "g": 50
+  },
+  "milk": {
+   "unit": "ml",
+   "pack": 2272,
+   "pr": 165
+  },
+  "yog": {
+   "unit": "pots",
+   "pack": 1,
+   "pr": 75,
+   "g": 200
+  },
+  "greek": {
+   "unit": "g",
+   "pack": 500,
+   "pr": 115
+  },
+  "loaf": {
+   "unit": "slices",
+   "pack": 16,
+   "pr": 110,
+   "g": 50
+  },
+  "wraps": {
+   "unit": "wraps",
+   "pack": 8,
+   "pr": 140,
+   "g": 62
+  },
+  "mission": {
+   "unit": "wraps",
+   "pack": 6,
+   "pr": 160,
+   "g": 60
+  },
+  "pittas": {
+   "unit": "pittas",
+   "pack": 6,
+   "pr": 50,
+   "g": 60
+  },
+  "houm": {
+   "unit": "g",
+   "pack": 200,
+   "pr": 130
+  },
+  "blueb": {
+   "unit": "g",
+   "pack": 125,
+   "pr": 129
+  },
+  "banana": {
+   "unit": "bananas",
+   "pack": 5,
+   "pr": 78,
+   "g": 100
+  },
+  "apple": {
+   "unit": "apples",
+   "pack": 1,
+   "pr": 45,
+   "g": 140
+  },
+  "lemon": {
+   "unit": "lemons",
+   "pack": 1,
+   "pr": 37,
+   "neg": 1
+  },
+  "iceberg": {
+   "unit": "heads",
+   "pack": 1,
+   "pr": 89,
+   "g": 400
+  },
+  "cuc": {
+   "unit": "cucumbers",
+   "pack": 1,
+   "pr": 99,
+   "g": 300
+  },
+  "plum": {
+   "unit": "g",
+   "pack": 250,
+   "pr": 83
+  },
+  "salad": {
+   "unit": "g",
+   "pack": 120,
+   "pr": 100
+  },
+  "onions": {
+   "unit": "onions",
+   "pack": 3,
+   "pr": 95,
+   "g": 110
+  },
+  "spring": {
+   "unit": "bunches",
+   "pack": 1,
+   "pr": 65,
+   "g": 90
+  },
+  "carrots": {
+   "unit": "g",
+   "pack": 500,
+   "pr": 44
+  },
+  "pepper": {
+   "unit": "peppers",
+   "pack": 1,
+   "pr": 70,
+   "g": 150
+  },
+  "mixpep": {
+   "unit": "peppers",
+   "pack": 3,
+   "pr": 175,
+   "g": 150
+  },
+  "chilli": {
+   "unit": "g",
+   "pack": 50,
+   "pr": 59
+  },
+  "brocc": {
+   "unit": "g",
+   "pack": 300,
+   "pr": 140
+  },
+  "pouch": {
+   "unit": "g",
+   "pack": 350,
+   "pr": 225
+  },
+  "cobs": {
+   "unit": "cobs",
+   "pack": 2,
+   "pr": 129,
+   "g": 230
+  },
+  "stirfry": {
+   "unit": "g",
+   "pack": 500,
+   "pr": 246
+  },
+  "slices": {
+   "unit": "g",
+   "pack": 300,
+   "pr": 150
+  },
+  "medley": {
+   "unit": "g",
+   "pack": 250,
+   "pr": 220
+  },
+  "spinach": {
+   "unit": "g",
+   "pack": 160,
+   "pr": 100
+  },
+  "creme": {
+   "unit": "ml",
+   "pack": 300,
+   "pr": 75
+  },
+  "ctoms": {
+   "unit": "g",
+   "pack": 400,
+   "pr": 45
+  },
+  "kidney": {
+   "unit": "g",
+   "pack": 400,
+   "pr": 37
+  },
+  "grenade": {
+   "unit": "bars",
+   "pack": 4,
+   "pr": 1000,
+   "g": 60
+  },
+  "wafer": {
+   "unit": "wafers",
+   "pack": 1,
+   "pr": 200,
+   "g": 40
+  },
+  "pops": {
+   "unit": "bags",
+   "pack": 1,
+   "pr": 125,
+   "g": 45
+  },
+  "babybel": {
+   "unit": "cheeses",
+   "pack": 6,
+   "pr": 245,
+   "g": 20
+  },
+  "rice": {
+   "unit": "g",
+   "cp": [
+    125,
+    1000
+   ]
+  },
+  "spaghetti": {
+   "unit": "g",
+   "cp": [
+    75,
+    500
+   ]
+  },
+  "fusilli": {
+   "unit": "g",
+   "cp": [
+    75,
+    500
+   ]
+  },
+  "noodles": {
+   "unit": "g",
+   "cp": [
+    95,
+    250
+   ]
+  },
+  "lasagne": {
+   "unit": "g",
+   "cp": [
+    75,
+    300
+   ]
+  },
+  "granola": {
+   "unit": "g",
+   "cp": [
+    375,
+    400
+   ]
+  },
+  "butter": {
+   "unit": "g",
+   "cp": [
+    218,
+    500
+   ]
+  },
+  "puree": {
+   "unit": "g",
+   "cp": [
+    59,
+    200
+   ]
+  },
+  "tuna": {
+   "unit": "g",
+   "cp": [
+    249,
+    448
+   ]
+  },
+  "peri": {
+   "unit": "g",
+   "cp": [
+    125,
+    25
+   ],
+   "neg": 1
+  },
+  "fajita": {
+   "unit": "g",
+   "cp": [
+    109,
+    40
+   ],
+   "neg": 1
+  },
+  "fivespice": {
+   "unit": "g",
+   "cp": [
+    109,
+    33
+   ],
+   "neg": 1
+  },
+  "soy": {
+   "unit": "g",
+   "cp": [
+    90,
+    150
+   ]
+  },
+  "honey": {
+   "unit": "g",
+   "cp": [
+    195,
+    454
+   ]
+  },
+  "teriyaki": {
+   "unit": "g",
+   "cp": [
+    55,
+    152
+   ]
+  },
+  "mayo": {
+   "unit": "g",
+   "cp": [
+    99,
+    500
+   ]
+  },
+  "seafood": {
+   "unit": "g",
+   "cp": [
+    63,
+    250
+   ]
+  },
+  "cheddar": {
+   "unit": "g",
+   "cp": [
+    339,
+    625
+   ]
+  },
+  "frozenfruit": {
+   "unit": "g",
+   "cp": [
+    335,
+    430
+   ]
+  },
+  "sweetcorn": {
+   "unit": "g",
+   "cp": [
+    50,
+    285
+   ]
+  },
+  "nuts": {
+   "unit": "g",
+   "cp": [
+    255,
+    180
+   ]
+  },
+  "garlic": {
+   "unit": "g",
+   "cp": [
+    200,
+    400
+   ]
+  },
+  "parmesan": {
+   "unit": "g",
+   "cp": [
+    280,
+    100
+   ]
+  },
+  "cornflour": {
+   "unit": "g",
+   "cp": [
+    250,
+    500
+   ]
+  },
+  "oil": {
+   "unit": "g",
+   "cp": [
+    145,
+    1000
+   ]
+  },
+  "herbs": {
+   "unit": "g",
+   "cp": [
+    109,
+    14
+   ],
+   "neg": 1
+  },
+  "oregano": {
+   "unit": "g",
+   "cp": [
+    190,
+    28
+   ],
+   "neg": 1
+  },
+  "isolate": {
+   "unit": "g",
+   "cp": [
+    2600,
+    1000
+   ]
+  },
+  "oats": {
+   "unit": "g",
+   "pack": 1000,
+   "pr": 135
+  },
+  "porkmince": {
+   "unit": "g",
+   "pack": 500,
+   "pr": 249
+  },
+  "porkloin": {
+   "unit": "g",
+   "pack": 600,
+   "pr": 590
+  },
+  "sausages": {
+   "unit": "sausages",
+   "pack": 8,
+   "pr": 179,
+   "g": 56.75
+  },
+  "turkeymince": {
+   "unit": "g",
+   "pack": 500,
+   "pr": 450
+  },
+  "salmon": {
+   "unit": "g",
+   "pack": 220,
+   "pr": 495
+  },
+  "cod": {
+   "unit": "g",
+   "pack": 220,
+   "pr": 650
+  },
+  "smokedsalmon": {
+   "unit": "g",
+   "pack": 120,
+   "pr": 450
+  },
+  "lambmince": {
+   "unit": "g",
+   "pack": 500,
+   "pr": 550
+  },
+  "halloumi": {
+   "unit": "g",
+   "pack": 200,
+   "pr": 177
+  },
+  "feta": {
+   "unit": "g",
+   "pack": 200,
+   "pr": 225
+  },
+  "cottage": {
+   "unit": "g",
+   "pack": 300,
+   "pr": 165
+  },
+  "softcheese": {
+   "unit": "g",
+   "pack": 200,
+   "pr": 130
+  },
+  "bagels": {
+   "unit": "bagels",
+   "pack": 5,
+   "pr": 99,
+   "g": 85
+  },
+  "avocado": {
+   "unit": "avocados",
+   "pack": 2,
+   "pr": 150,
+   "g": 110
+  },
+  "mushrooms": {
+   "unit": "g",
+   "pack": 465,
+   "pr": 150
+  },
+  "courgette": {
+   "unit": "g",
+   "pack": 500,
+   "pr": 139
+  },
+  "bakepot": {
+   "unit": "potatoes",
+   "pack": 4,
+   "pr": 79,
+   "g": 250
+  },
+  "potatoes": {
+   "unit": "g",
+   "pack": 1250,
+   "pr": 145
+  },
+  "sweetpot": {
+   "unit": "g",
+   "pack": 1000,
+   "pr": 119
+  },
+  "peas": {
+   "unit": "g",
+   "pack": 1000,
+   "pr": 165
+  },
+  "chips": {
+   "unit": "g",
+   "pack": 1200,
+   "pr": 200
+  },
+  "passata": {
+   "unit": "g",
+   "pack": 500,
+   "pr": 45
+  },
+  "tikka": {
+   "unit": "g",
+   "pack": 180,
+   "pr": 195
+  },
+  "coconut": {
+   "unit": "ml",
+   "pack": 400,
+   "pr": 100
+  },
+  "pesto": {
+   "unit": "g",
+   "pack": 190,
+   "pr": 89
+  },
+  "chickpeas": {
+   "unit": "g",
+   "pack": 240,
+   "pr": 37
+  },
+  "lentils": {
+   "unit": "g",
+   "pack": 500,
+   "pr": 210
+  },
+  "beans": {
+   "unit": "g",
+   "pack": 410,
+   "pr": 37
+  },
+  "bbq": {
+   "unit": "g",
+   "pack": 300,
+   "pr": 165
+  },
+  "pbutter": {
+   "unit": "g",
+   "pack": 1000,
+   "pr": 399
+  },
+  "ricecakes": {
+   "unit": "g",
+   "pack": 100,
+   "pr": 95
+  },
+  "crackers": {
+   "unit": "g",
+   "pack": 300,
+   "pr": 49
+  },
+  "tomsoup": {
+   "unit": "g",
+   "pack": 400,
+   "pr": 65
+  },
+  "mixveg": {
+   "unit": "g",
+   "pack": 1000,
+   "pr": 98
+  },
+  "naan": {
+   "unit": "naans",
+   "pack": 4,
+   "pr": 100,
+   "g": 50
+  },
+  "wholeloaf": {
+   "unit": "g",
+   "pack": 800,
+   "pr": 75
+  },
+  "stock": {
+   "unit": "g",
+   "cp": [
+    130,
+    120
+   ],
+   "neg": 1
+  },
+  "cumin": {
+   "unit": "g",
+   "neg": 1
+  },
+  "paprika": {
+   "unit": "g",
+   "neg": 1
+  },
+  "curry": {
+   "unit": "g",
+   "neg": 1
+  },
+  "chilliflakes": {
+   "unit": "g",
+   "neg": 1
+  },
+  "celery": {
+   "unit": "sticks",
+   "pack": 10,
+   "pr": 74,
+   "g": 40
+  },
+  "flour": {
+   "unit": "g",
+   "cp": [
+    53,
+    500
+   ]
+  },
+  "vinegar": {
+   "unit": "g",
+   "cp": [
+    116,
+    350
+   ]
+  },
+  "chorizo": {
+   "unit": "g",
+   "pack": 140,
+   "pr": 150
+  },
+  "greenbeans": {
+   "unit": "g",
+   "pack": 170,
+   "pr": 139
+  },
+  "breadcrumbs": {
+   "unit": "g",
+   "cp": [
+    120,
+    175
+   ]
+  },
+  "butterbeans": {
+   "unit": "g",
+   "pack": 240,
+   "pr": 45
+  },
+  "coriander": {
+   "unit": "g",
+   "pack": 30,
+   "pr": 50
+  },
+  "lime": {
+   "unit": "limes",
+   "pack": 4,
+   "pr": 92,
+   "neg": 1
+  },
+  "cabbage": {
+   "unit": "g",
+   "pack": 900,
+   "pr": 89
+  },
+  "turkeyslices": {
+   "unit": "g",
+   "pack": 120,
+   "pr": 275
+  },
+  "thinchicken": {
+   "unit": "g",
+   "pack": 400,
+   "pr": 250
+  },
+  "proteinpitta": {
+   "unit": "pittas",
+   "pack": 4,
+   "pr": 140,
+   "g": 63
+  },
+  "gnocchi": {
+   "unit": "g",
+   "pack": 500,
+   "pr": 190
+  },
+  "orzo": {
+   "unit": "g",
+   "cp": [
+    215,
+    500
+   ]
+  },
+  "couscous": {
+   "unit": "g",
+   "cp": [
+    130,
+    500
+   ]
+  },
+  "harissa": {
+   "unit": "g",
+   "pack": 170,
+   "pr": 340
+  },
+  "gochujang": {
+   "unit": "g",
+   "pack": 135,
+   "pr": 260
+  },
+  "thaicurry": {
+   "unit": "g",
+   "pack": 180,
+   "pr": 230
+  },
+  "fishsauce": {
+   "unit": "ml",
+   "cp": [
+    240,
+    725
+   ]
+  },
+  "oystersauce": {
+   "unit": "ml",
+   "cp": [
+    280,
+    510
+   ]
+  },
+  "darksoy": {
+   "unit": "ml",
+   "cp": [
+    190,
+    150
+   ]
+  },
+  "ricenoodles": {
+   "unit": "g",
+   "pack": 400,
+   "pr": 200
+  },
+  "sugarsnap": {
+   "unit": "g",
+   "pack": 150,
+   "pr": 139
+  },
+  "pineapple": {
+   "unit": "g",
+   "pack": 260,
+   "pr": 115
+  },
+  "edamame": {
+   "unit": "g",
+   "pack": 500,
+   "pr": 285
+  },
+  "leeks": {
+   "unit": "g",
+   "pack": 500,
+   "pr": 137
+  },
+  "pastry": {
+   "unit": "g",
+   "pack": 320,
+   "pr": 135
+  },
+  "aubergine": {
+   "unit": "aubergines",
+   "pack": 1,
+   "pr": 95,
+   "g": 250
+  },
+  "lambsteaks": {
+   "unit": "g",
+   "pack": 300,
+   "pr": 600
+  },
+  "rosemary": {
+   "unit": "g",
+   "pack": 20,
+   "pr": 50,
+   "neg": 1
+  },
+  "thaibasil": {
+   "unit": "g",
+   "pack": 20,
+   "pr": 90,
+   "neg": 1
+  },
+  "basil": {
+   "unit": "g",
+   "pack": 30,
+   "pr": 50,
+   "neg": 1
+  },
+  "ginger": {
+   "unit": "g",
+   "pack": 125,
+   "pr": 155
+  },
+  "sesameseeds": {
+   "unit": "g",
+   "cp": [
+    113,
+    100
+   ]
+  },
+  "sesameoil": {
+   "unit": "ml",
+   "cp": [
+    265,
+    250
+   ]
+  },
+  "jerk": {
+   "unit": "g",
+   "cp": [
+    120,
+    100
+   ],
+   "neg": 1
+  },
+  "cinnamon": {
+   "unit": "g",
+   "cp": [
+    109,
+    32
+   ],
+   "neg": 1
+  },
+  "nutmeg": {
+   "unit": "g",
+   "cp": [
+    109,
+    42
+   ],
+   "neg": 1
+  },
+  "dijon": {
+   "unit": "g",
+   "cp": [
+    45,
+    185
+   ]
+  },
+  "wholegrainmustard": {
+   "unit": "g",
+   "cp": [
+    44,
+    175
+   ]
+  },
+  "capers": {
+   "unit": "g",
+   "cp": [
+    185,
+    99
+   ]
+  },
+  "sweetchilli": {
+   "unit": "ml",
+   "pack": 455,
+   "pr": 200
+  },
+  "babycorn": {
+   "unit": "g",
+   "pack": 125,
+   "pr": 145
+  },
+  "mozzarella": {
+   "unit": "g",
+   "pack": 125,
+   "pr": 130
+  },
+  "ricevinegar": {
+   "unit": "ml",
+   "cp": [
+    275,
+    350
+   ]
+  },
+  "tandoori": {
+   "unit": "g",
+   "pack": 312,
+   "pr": 275
+  },
+  "basmati": {
+   "unit": "g",
+   "cp": [
+    179,
+    1000
+   ]
+  },
+  "katsu": {
+   "unit": "g",
+   "pack": 340,
+   "pr": 125
+  },
+  "panko": {
+   "unit": "g",
+   "cp": [
+    210,
+    150
+   ]
+  },
+  "kormapaste": {
+   "unit": "g",
+   "pack": 180,
+   "pr": 190
+  },
+  "paellarice": {
+   "unit": "g",
+   "cp": [
+    250,
+    500
+   ]
+  },
+  "seafoodmix": {
+   "unit": "g",
+   "pack": 350,
+   "pr": 400
+  },
+  "sundried": {
+   "unit": "g",
+   "pack": 280,
+   "pr": 325
+  },
+  "mascarpone": {
+   "unit": "g",
+   "pack": 250,
+   "pr": 225
+  },
+  "sourcream": {
+   "unit": "ml",
+   "pack": 300,
+   "pr": 85
+  },
+  "cranberry": {
+   "unit": "g",
+   "pack": 200,
+   "pr": 195
+  }
+ },
+ "recipes": {
+  "apple-and-almonds": {
+   "c": "snack",
+   "s": 1,
+   "l": [
+    [
+     "apple",
+     1
+    ],
+    [
+     "nuts",
+     15
+    ]
+   ]
+  },
+  "apple-and-peanut-butter": {
+   "c": "snack",
+   "s": 1,
+   "l": [
+    [
+     "apple",
+     1
+    ],
+    [
+     "pbutter",
+     20
+    ]
+   ]
+  },
+  "avocado-and-egg-on-toast": {
+   "c": "breakfast",
+   "s": 1,
+   "l": [
+    [
+     "loaf",
+     2
+    ],
+    [
+     "avocado",
+     0.5
+    ],
+    [
+     "eggs",
+     2
+    ],
+    [
+     "oil",
+     3
+    ]
+   ]
+  },
+  "avocado-toast-chilli-salmon": {
+   "c": "breakfast",
+   "s": 1,
+   "l": [
+    [
+     "avocado",
+     0.5
+    ],
+    [
+     "softcheese",
+     40
+    ],
+    [
+     "loaf",
+     2
+    ],
+    [
+     "smokedsalmon",
+     60
+    ],
+    [
+     "chilli",
+     2
+    ],
+    [
+     "lemon",
+     0.25
+    ],
+    [
+     "honey",
+     8
+    ]
+   ]
+  },
+  "avocado-tuna-spinach-salad": {
+   "c": "lunch",
+   "s": 1,
+   "l": [
+    [
+     "avocado",
+     0.25
+    ],
+    [
+     "plum",
+     60
+    ],
+    [
+     "onions",
+     0.1
+    ],
+    [
+     "spinach",
+     60
+    ],
+    [
+     "lemon",
+     0.5
+    ],
+    [
+     "pittas",
+     1
+    ],
+    [
+     "tuna",
+     100
+    ],
+    [
+     "oil",
+     8
+    ],
+    [
+     "honey",
+     3
+    ],
+    [
+     "nuts",
+     10
+    ]
+   ]
+  },
+  "babybel-2": {
+   "c": "snack",
+   "s": 1,
+   "l": [
+    [
+     "babybel",
+     2
+    ]
+   ]
+  },
+  "bacon-and-broccoli-mac-and-cheese": {
+   "c": "dinner",
+   "s": 2,
+   "l": [
+    [
+     "bacon",
+     6
+    ],
+    [
+     "brocc",
+     200
+    ],
+    [
+     "milk",
+     400
+    ],
+    [
+     "fusilli",
+     180
+    ],
+    [
+     "cheddar",
+     120
+    ],
+    [
+     "cornflour",
+     20
+    ],
+    [
+     "oil",
+     3
+    ]
+   ]
+  },
+  "bacon-and-egg-bowl": {
+   "c": "breakfast",
+   "s": 1,
+   "l": [
+    [
+     "bacon",
+     3
+    ],
+    [
+     "eggs",
+     2
+    ],
+    [
+     "plum",
+     80
+    ],
+    [
+     "spinach",
+     40
+    ],
+    [
+     "oil",
+     3
+    ]
+   ]
+  },
+  "bacon-and-egg-breakfast-wrap": {
+   "c": "breakfast",
+   "s": 1,
+   "l": [
+    [
+     "bacon",
+     3
+    ],
+    [
+     "eggs",
+     2
+    ],
+    [
+     "mission",
+     1
+    ]
+   ]
+  },
+  "bacon-avocado-breakfast-tacos": {
+   "c": "breakfast",
+   "s": 1,
+   "l": [
+    [
+     "bacon",
+     2
+    ],
+    [
+     "eggs",
+     3
+    ],
+    [
+     "wraps",
+     1
+    ],
+    [
+     "avocado",
+     0.35
+    ],
+    [
+     "coriander",
+     5
+    ],
+    [
+     "butter",
+     7
+    ]
+   ]
+  },
+  "bacon-breakfast-burrito": {
+   "c": "breakfast",
+   "s": 1,
+   "l": [
+    [
+     "bacon",
+     2
+    ],
+    [
+     "onions",
+     0.5
+    ],
+    [
+     "pepper",
+     0.5
+    ],
+    [
+     "avocado",
+     0.3
+    ],
+    [
+     "wraps",
+     1
+    ],
+    [
+     "eggs",
+     2
+    ],
+    [
+     "feta",
+     20
+    ],
+    [
+     "coriander",
+     5
+    ],
+    [
+     "oil",
+     6
+    ]
+   ]
+  },
+  "bacon-butty": {
+   "c": "breakfast",
+   "s": 1,
+   "l": [
+    [
+     "bacon",
+     4
+    ],
+    [
+     "loaf",
+     2
+    ],
+    [
+     "butter",
+     10
+    ]
+   ]
+  },
+  "bacon-carbonara-pasta": {
+   "c": "dinner",
+   "s": 4,
+   "l": [
+    [
+     "eggs",
+     3
+    ],
+    [
+     "bacon",
+     6
+    ],
+    [
+     "peas",
+     200
+    ],
+    [
+     "fusilli",
+     320
+    ],
+    [
+     "parmesan",
+     40
+    ],
+    [
+     "garlic",
+     8
+    ],
+    [
+     "chilliflakes",
+     1
+    ]
+   ]
+  },
+  "bacon-egg-breakfast-naan": {
+   "c": "breakfast",
+   "s": 1,
+   "l": [
+    [
+     "bacon",
+     2
+    ],
+    [
+     "eggs",
+     1
+    ],
+    [
+     "greek",
+     40
+    ],
+    [
+     "coriander",
+     5
+    ],
+    [
+     "naan",
+     2
+    ],
+    [
+     "oil",
+     5
+    ]
+   ]
+  },
+  "banana-peanut-shake": {
+   "c": "snack",
+   "s": 1,
+   "l": [
+    [
+     "milk",
+     300
+    ],
+    [
+     "banana",
+     1
+    ],
+    [
+     "oats",
+     20
+    ],
+    [
+     "pbutter",
+     15
+    ]
+   ]
+  },
+  "banana-porridge": {
+   "c": "breakfast",
+   "s": 1,
+   "l": [
+    [
+     "oats",
+     50
+    ],
+    [
+     "milk",
+     250
+    ],
+    [
+     "banana",
+     1
+    ],
+    [
+     "honey",
+     10
+    ]
+   ]
+  },
+  "banana-yogurt-smoothie": {
+   "c": "breakfast",
+   "s": 1,
+   "l": [
+    [
+     "milk",
+     250
+    ],
+    [
+     "banana",
+     1
+    ],
+    [
+     "greek",
+     100
+    ]
+   ]
+  },
+  "banoffee-overnight-oats": {
+   "c": "breakfast",
+   "s": 1,
+   "l": [
+    [
+     "oats",
+     40
+    ],
+    [
+     "milk",
+     120
+    ],
+    [
+     "greek",
+     100
+    ],
+    [
+     "banana",
+     1.5
+    ],
+    [
+     "pbutter",
+     10
+    ],
+    [
+     "honey",
+     10
+    ]
+   ]
+  },
+  "bbq-chicken-and-sweetcorn-rice": {
+   "c": "dinner",
+   "s": 2,
+   "l": [
+    [
+     "breast",
+     300
+    ],
+    [
+     "bbq",
+     60
+    ],
+    [
+     "pepper",
+     1
+    ],
+    [
+     "onions",
+     0.5
+    ],
+    [
+     "rice",
+     180
+    ],
+    [
+     "sweetcorn",
+     100
+    ],
+    [
+     "oil",
+     8
+    ]
+   ]
+  },
+  "bbq-chicken-gyros-cabbage-salad": {
+   "c": "dinner",
+   "s": 2,
+   "l": [
+    [
+     "thigh",
+     500
+    ],
+    [
+     "greek",
+     200
+    ],
+    [
+     "cabbage",
+     150
+    ],
+    [
+     "plum",
+     60
+    ],
+    [
+     "onions",
+     0.5
+    ],
+    [
+     "lemon",
+     1
+    ],
+    [
+     "coriander",
+     10
+    ],
+    [
+     "pittas",
+     2
+    ],
+    [
+     "garlic",
+     6
+    ],
+    [
+     "oil",
+     25
+    ],
+    [
+     "cumin",
+     3
+    ],
+    [
+     "paprika",
+     2
+    ],
+    [
+     "oregano",
+     2
+    ],
+    [
+     "chilliflakes",
+     1
+    ]
+   ]
+  },
+  "bbq-chicken-herb-slaw-wrap": {
+   "c": "lunch",
+   "s": 1,
+   "l": [
+    [
+     "breast",
+     140
+    ],
+    [
+     "cabbage",
+     70
+    ],
+    [
+     "carrots",
+     60
+    ],
+    [
+     "greek",
+     20
+    ],
+    [
+     "coriander",
+     5
+    ],
+    [
+     "chilli",
+     3
+    ],
+    [
+     "bbq",
+     40
+    ],
+    [
+     "wraps",
+     1
+    ],
+    [
+     "avocado",
+     0.45
+    ],
+    [
+     "mayo",
+     20
+    ],
+    [
+     "paprika",
+     1
+    ],
+    [
+     "oil",
+     5
+    ]
+   ]
+  },
+  "bbq-chicken-wrap": {
+   "c": "lunch",
+   "s": 1,
+   "l": [
+    [
+     "breast",
+     100
+    ],
+    [
+     "wraps",
+     1
+    ],
+    [
+     "iceberg",
+     0.15
+    ],
+    [
+     "bbq",
+     20
+    ],
+    [
+     "cheddar",
+     15
+    ],
+    [
+     "oil",
+     5
+    ]
+   ]
+  },
+  "bean-and-cheese-quesadilla": {
+   "c": "lunch",
+   "s": 1,
+   "l": [
+    [
+     "wraps",
+     2
+    ],
+    [
+     "kidney",
+     100
+    ],
+    [
+     "pepper",
+     0.5
+    ],
+    [
+     "cheddar",
+     40
+    ],
+    [
+     "sweetcorn",
+     40
+    ],
+    [
+     "oil",
+     5
+    ]
+   ]
+  },
+  "bean-and-vegetable-chilli": {
+   "c": "dinner",
+   "s": 2,
+   "l": [
+    [
+     "kidney",
+     400
+    ],
+    [
+     "chickpeas",
+     240
+    ],
+    [
+     "ctoms",
+     400
+    ],
+    [
+     "onions",
+     1
+    ],
+    [
+     "mixpep",
+     2
+    ],
+    [
+     "rice",
+     140
+    ],
+    [
+     "cheddar",
+     40
+    ],
+    [
+     "puree",
+     15
+    ],
+    [
+     "oil",
+     10
+    ],
+    [
+     "paprika",
+     3
+    ],
+    [
+     "cumin",
+     3
+    ]
+   ]
+  },
+  "beans-and-cheese-on-toast": {
+   "c": "breakfast",
+   "s": 1,
+   "l": [
+    [
+     "loaf",
+     2
+    ],
+    [
+     "beans",
+     200
+    ],
+    [
+     "cheddar",
+     30
+    ]
+   ]
+  },
+  "beef-and-broccoli-noodles": {
+   "c": "dinner",
+   "s": 2,
+   "l": [
+    [
+     "sizzle",
+     320
+    ],
+    [
+     "brocc",
+     250
+    ],
+    [
+     "carrots",
+     100
+    ],
+    [
+     "noodles",
+     150
+    ],
+    [
+     "soy",
+     20
+    ],
+    [
+     "teriyaki",
+     40
+    ],
+    [
+     "garlic",
+     6
+    ],
+    [
+     "oil",
+     10
+    ]
+   ]
+  },
+  "beef-burrito-bowl": {
+   "c": "dinner",
+   "s": 4,
+   "l": [
+    [
+     "mince",
+     350
+    ],
+    [
+     "onions",
+     1
+    ],
+    [
+     "ctoms",
+     400
+    ],
+    [
+     "plum",
+     150
+    ],
+    [
+     "mixpep",
+     2
+    ],
+    [
+     "kidney",
+     200
+    ],
+    [
+     "avocado",
+     1
+    ],
+    [
+     "spring",
+     0.25
+    ],
+    [
+     "coriander",
+     10
+    ],
+    [
+     "lime",
+     1
+    ],
+    [
+     "greek",
+     60
+    ],
+    [
+     "rice",
+     240
+    ],
+    [
+     "puree",
+     15
+    ],
+    [
+     "garlic",
+     4
+    ],
+    [
+     "paprika",
+     3
+    ],
+    [
+     "chilliflakes",
+     1
+    ],
+    [
+     "oil",
+     20
+    ]
+   ]
+  },
+  "beef-meatball-goulash": {
+   "c": "dinner",
+   "s": 4,
+   "l": [
+    [
+     "mince",
+     500
+    ],
+    [
+     "onions",
+     1
+    ],
+    [
+     "ctoms",
+     230
+    ],
+    [
+     "mixpep",
+     2
+    ],
+    [
+     "spaghetti",
+     300
+    ],
+    [
+     "oil",
+     15
+    ],
+    [
+     "garlic",
+     6
+    ],
+    [
+     "paprika",
+     6
+    ],
+    [
+     "stock",
+     6
+    ]
+   ]
+  },
+  "beef-noodle-stir-fry": {
+   "c": "dinner",
+   "s": 2,
+   "l": [
+    [
+     "sizzle",
+     320
+    ],
+    [
+     "onions",
+     1
+    ],
+    [
+     "mushrooms",
+     160
+    ],
+    [
+     "stirfry",
+     150
+    ],
+    [
+     "spring",
+     0.25
+    ],
+    [
+     "noodles",
+     85
+    ],
+    [
+     "soy",
+     15
+    ],
+    [
+     "vinegar",
+     10
+    ],
+    [
+     "garlic",
+     6
+    ],
+    [
+     "oil",
+     10
+    ]
+   ]
+  },
+  "beef-tacos": {
+   "c": "dinner",
+   "s": 2,
+   "l": [
+    [
+     "mince",
+     250
+    ],
+    [
+     "kidney",
+     400
+    ],
+    [
+     "wraps",
+     4
+    ],
+    [
+     "iceberg",
+     0.15
+    ],
+    [
+     "plum",
+     40
+    ],
+    [
+     "greek",
+     50
+    ],
+    [
+     "puree",
+     15
+    ],
+    [
+     "fajita",
+     8
+    ],
+    [
+     "garlic",
+     6
+    ],
+    [
+     "cheddar",
+     40
+    ]
+   ]
+  },
+  "berries-and-greek-yogurt": {
+   "c": "snack",
+   "s": 1,
+   "l": [
+    [
+     "greek",
+     100
+    ],
+    [
+     "blueb",
+     80
+    ]
+   ]
+  },
+  "berry-cheesecake-overnight-oats": {
+   "c": "breakfast",
+   "s": 1,
+   "l": [
+    [
+     "oats",
+     40
+    ],
+    [
+     "softcheese",
+     30
+    ],
+    [
+     "greek",
+     80
+    ],
+    [
+     "milk",
+     100
+    ],
+    [
+     "honey",
+     8
+    ],
+    [
+     "frozenfruit",
+     100
+    ]
+   ]
+  },
+  "berry-overnight-oats": {
+   "c": "breakfast",
+   "s": 1,
+   "l": [
+    [
+     "oats",
+     50
+    ],
+    [
+     "greek",
+     100
+    ],
+    [
+     "milk",
+     150
+    ],
+    [
+     "frozenfruit",
+     80
+    ],
+    [
+     "honey",
+     10
+    ]
+   ]
+  },
+  "blt-sandwich": {
+   "c": "lunch",
+   "s": 1,
+   "l": [
+    [
+     "loaf",
+     2
+    ],
+    [
+     "bacon",
+     2
+    ],
+    [
+     "iceberg",
+     0.05
+    ],
+    [
+     "plum",
+     60
+    ],
+    [
+     "mayo",
+     12
+    ]
+   ]
+  },
+  "blueberry-french-toast": {
+   "c": "breakfast",
+   "s": 1,
+   "l": [
+    [
+     "eggs",
+     2
+    ],
+    [
+     "greek",
+     60
+    ],
+    [
+     "loaf",
+     2
+    ],
+    [
+     "blueb",
+     70
+    ],
+    [
+     "flour",
+     10
+    ],
+    [
+     "butter",
+     5
+    ],
+    [
+     "honey",
+     15
+    ]
+   ]
+  },
+  "boiled-eggs-and-soldiers": {
+   "c": "breakfast",
+   "s": 1,
+   "l": [
+    [
+     "eggs",
+     3
+    ],
+    [
+     "loaf",
+     2
+    ],
+    [
+     "butter",
+     10
+    ]
+   ]
+  },
+  "boiled-eggs": {
+   "c": "snack",
+   "s": 1,
+   "l": [
+    [
+     "eggs",
+     2
+    ]
+   ]
+  },
+  "budget-chicken-mayo-sandwich": {
+   "c": "lunch",
+   "s": 1,
+   "l": [
+    [
+     "loaf",
+     2
+    ],
+    [
+     "thinchicken",
+     90
+    ],
+    [
+     "salad",
+     20
+    ],
+    [
+     "mayo",
+     15
+    ]
+   ]
+  },
+  "budget-crispy-chilli-beef": {
+   "c": "dinner",
+   "s": 2,
+   "l": [
+    [
+     "mince",
+     260
+    ],
+    [
+     "peas",
+     130
+    ],
+    [
+     "brocc",
+     130
+    ],
+    [
+     "pbutter",
+     30
+    ],
+    [
+     "rice",
+     120
+    ],
+    [
+     "garlic",
+     6
+    ],
+    [
+     "chilliflakes",
+     2
+    ],
+    [
+     "oil",
+     10
+    ],
+    [
+     "soy",
+     20
+    ]
+   ]
+  },
+  "budget-spring-roll-bowl": {
+   "c": "dinner",
+   "s": 2,
+   "l": [
+    [
+     "porkmince",
+     260
+    ],
+    [
+     "mushrooms",
+     160
+    ],
+    [
+     "cabbage",
+     160
+    ],
+    [
+     "carrots",
+     150
+    ],
+    [
+     "spring",
+     0.3
+    ],
+    [
+     "noodles",
+     140
+    ],
+    [
+     "garlic",
+     6
+    ],
+    [
+     "oil",
+     10
+    ],
+    [
+     "soy",
+     20
+    ]
+   ]
+  },
+  "buttery-tomatoes-cheese-on-toast": {
+   "c": "lunch",
+   "s": 2,
+   "l": [
+    [
+     "loaf",
+     4
+    ],
+    [
+     "plum",
+     200
+    ],
+    [
+     "cheddar",
+     60
+    ],
+    [
+     "garlic",
+     3
+    ],
+    [
+     "butter",
+     25
+    ],
+    [
+     "chilliflakes",
+     1
+    ],
+    [
+     "herbs",
+     1
+    ],
+    [
+     "oil",
+     10
+    ]
+   ]
+  },
+  "caprese-sandwich": {
+   "c": "lunch",
+   "s": 1,
+   "l": [
+    [
+     "loaf",
+     2
+    ],
+    [
+     "basil",
+     8
+    ],
+    [
+     "mozzarella",
+     55
+    ],
+    [
+     "plum",
+     60
+    ],
+    [
+     "sundried",
+     10
+    ],
+    [
+     "vinegar",
+     3
+    ]
+   ]
+  },
+  "caribbean-fish-curry": {
+   "c": "dinner",
+   "s": 4,
+   "l": [
+    [
+     "cod",
+     600
+    ],
+    [
+     "sweetpot",
+     400
+    ],
+    [
+     "onions",
+     1
+    ],
+    [
+     "chilli",
+     10
+    ],
+    [
+     "plum",
+     150
+    ],
+    [
+     "lime",
+     1
+    ],
+    [
+     "coriander",
+     10
+    ],
+    [
+     "rice",
+     280
+    ],
+    [
+     "oil",
+     10
+    ],
+    [
+     "garlic",
+     6
+    ],
+    [
+     "paprika",
+     3
+    ],
+    [
+     "curry",
+     8
+    ],
+    [
+     "cumin",
+     3
+    ],
+    [
+     "stock",
+     6
+    ]
+   ]
+  },
+  "cheese-and-bean-jacket-potato": {
+   "c": "lunch",
+   "s": 1,
+   "l": [
+    [
+     "bakepot",
+     1
+    ],
+    [
+     "beans",
+     200
+    ],
+    [
+     "cheddar",
+     40
+    ]
+   ]
+  },
+  "cheese-and-crackers": {
+   "c": "snack",
+   "s": 1,
+   "l": [
+    [
+     "crackers",
+     25
+    ],
+    [
+     "cheddar",
+     30
+    ]
+   ]
+  },
+  "cheese-and-spinach-omelette": {
+   "c": "breakfast",
+   "s": 1,
+   "l": [
+    [
+     "eggs",
+     3
+    ],
+    [
+     "spinach",
+     40
+    ],
+    [
+     "loaf",
+     1
+    ],
+    [
+     "cheddar",
+     30
+    ],
+    [
+     "oil",
+     5
+    ]
+   ]
+  },
+  "cheese-tomato-sandwich": {
+   "c": "lunch",
+   "s": 1,
+   "l": [
+    [
+     "loaf",
+     2
+    ],
+    [
+     "plum",
+     80
+    ],
+    [
+     "salad",
+     15
+    ],
+    [
+     "cheddar",
+     40
+    ],
+    [
+     "butter",
+     8
+    ]
+   ]
+  },
+  "cheesy-beef-veg-skillet": {
+   "c": "dinner",
+   "s": 4,
+   "l": [
+    [
+     "mince",
+     500
+    ],
+    [
+     "onions",
+     1
+    ],
+    [
+     "pepper",
+     2
+    ],
+    [
+     "courgette",
+     200
+    ],
+    [
+     "ctoms",
+     400
+    ],
+    [
+     "paprika",
+     4
+    ],
+    [
+     "chilliflakes",
+     1
+    ],
+    [
+     "oregano",
+     2
+    ],
+    [
+     "cheddar",
+     80
+    ],
+    [
+     "oil",
+     15
+    ]
+   ]
+  },
+  "cheesy-tuna-pasta-bake": {
+   "c": "dinner",
+   "s": 2,
+   "l": [
+    [
+     "onions",
+     0.5
+    ],
+    [
+     "passata",
+     300
+    ],
+    [
+     "fusilli",
+     160
+    ],
+    [
+     "tuna",
+     224
+    ],
+    [
+     "sweetcorn",
+     120
+    ],
+    [
+     "cheddar",
+     80
+    ],
+    [
+     "oil",
+     5
+    ]
+   ]
+  },
+  "chicken-and-avocado-salad": {
+   "c": "lunch",
+   "s": 1,
+   "l": [
+    [
+     "breast",
+     120
+    ],
+    [
+     "avocado",
+     0.5
+    ],
+    [
+     "salad",
+     60
+    ],
+    [
+     "plum",
+     80
+    ],
+    [
+     "cuc",
+     0.25
+    ],
+    [
+     "oil",
+     5
+    ]
+   ]
+  },
+  "chicken-and-avocado-sandwich": {
+   "c": "lunch",
+   "s": 1,
+   "l": [
+    [
+     "loaf",
+     2
+    ],
+    [
+     "roast",
+     70
+    ],
+    [
+     "avocado",
+     0.5
+    ],
+    [
+     "salad",
+     20
+    ]
+   ]
+  },
+  "chicken-and-bean-quesadillas": {
+   "c": "dinner",
+   "s": 2,
+   "l": [
+    [
+     "wraps",
+     4
+    ],
+    [
+     "breast",
+     300
+    ],
+    [
+     "kidney",
+     200
+    ],
+    [
+     "pepper",
+     1
+    ],
+    [
+     "cheddar",
+     80
+    ],
+    [
+     "fajita",
+     6
+    ],
+    [
+     "oil",
+     10
+    ]
+   ]
+  },
+  "chicken-and-chorizo-rice": {
+   "c": "dinner",
+   "s": 4,
+   "l": [
+    [
+     "breast",
+     530
+    ],
+    [
+     "chorizo",
+     170
+    ],
+    [
+     "mixpep",
+     3
+    ],
+    [
+     "chickpeas",
+     330
+    ],
+    [
+     "rice",
+     320
+    ],
+    [
+     "garlic",
+     12
+    ],
+    [
+     "paprika",
+     6
+    ],
+    [
+     "puree",
+     30
+    ],
+    [
+     "stock",
+     15
+    ]
+   ]
+  },
+  "chicken-and-egg-fried-rice": {
+   "c": "lunch",
+   "s": 1,
+   "l": [
+    [
+     "breast",
+     80
+    ],
+    [
+     "eggs",
+     2
+    ],
+    [
+     "peas",
+     60
+    ],
+    [
+     "spring",
+     0.25
+    ],
+    [
+     "rice",
+     70
+    ],
+    [
+     "soy",
+     10
+    ],
+    [
+     "oil",
+     8
+    ]
+   ]
+  },
+  "chicken-and-hummus-wrap": {
+   "c": "lunch",
+   "s": 1,
+   "l": [
+    [
+     "roast",
+     80
+    ],
+    [
+     "houm",
+     30
+    ],
+    [
+     "iceberg",
+     0.15
+    ],
+    [
+     "plum",
+     40
+    ],
+    [
+     "wraps",
+     1
+    ]
+   ]
+  },
+  "chicken-and-leek-pie": {
+   "c": "dinner",
+   "s": 4,
+   "l": [
+    [
+     "breast",
+     600
+    ],
+    [
+     "leeks",
+     250
+    ],
+    [
+     "greek",
+     250
+    ],
+    [
+     "pastry",
+     250
+    ],
+    [
+     "brocc",
+     240
+    ],
+    [
+     "butter",
+     10
+    ],
+    [
+     "herbs",
+     2
+    ],
+    [
+     "stock",
+     5
+    ],
+    [
+     "wholegrainmustard",
+     20
+    ]
+   ]
+  },
+  "chicken-and-pineapple-kebabs-with-spicy-rice": {
+   "c": "dinner",
+   "s": 2,
+   "l": [
+    [
+     "thigh",
+     300
+    ],
+    [
+     "pineapple",
+     120
+    ],
+    [
+     "onions",
+     1
+    ],
+    [
+     "spring",
+     0.5
+    ],
+    [
+     "greek",
+     100
+    ],
+    [
+     "lime",
+     1
+    ],
+    [
+     "rice",
+     120
+    ],
+    [
+     "oil",
+     15
+    ],
+    [
+     "paprika",
+     2
+    ],
+    [
+     "jerk",
+     6
+    ]
+   ]
+  },
+  "chicken-and-sweet-potato-bowl": {
+   "c": "lunch",
+   "s": 1,
+   "l": [
+    [
+     "breast",
+     120
+    ],
+    [
+     "sweetpot",
+     200
+    ],
+    [
+     "brocc",
+     100
+    ],
+    [
+     "oil",
+     5
+    ],
+    [
+     "paprika",
+     2
+    ]
+   ]
+  },
+  "chicken-and-tomato-gnocchi-bake": {
+   "c": "dinner",
+   "s": 2,
+   "l": [
+    [
+     "roast",
+     170
+    ],
+    [
+     "gnocchi",
+     250
+    ],
+    [
+     "ctoms",
+     400
+    ],
+    [
+     "bacon",
+     2
+    ],
+    [
+     "puree",
+     15
+    ],
+    [
+     "garlic",
+     4
+    ],
+    [
+     "oil",
+     5
+    ],
+    [
+     "breadcrumbs",
+     30
+    ],
+    [
+     "cheddar",
+     60
+    ]
+   ]
+  },
+  "chicken-and-veg-traybake": {
+   "c": "dinner",
+   "s": 2,
+   "l": [
+    [
+     "thigh",
+     400
+    ],
+    [
+     "potatoes",
+     400
+    ],
+    [
+     "carrots",
+     150
+    ],
+    [
+     "courgette",
+     200
+    ],
+    [
+     "onions",
+     1
+    ],
+    [
+     "oil",
+     15
+    ],
+    [
+     "herbs",
+     2
+    ]
+   ]
+  },
+  "chicken-avocado-blt-wrap": {
+   "c": "lunch",
+   "s": 1,
+   "l": [
+    [
+     "wraps",
+     1
+    ],
+    [
+     "spinach",
+     25
+    ],
+    [
+     "roast",
+     55
+    ],
+    [
+     "plum",
+     60
+    ],
+    [
+     "bacon",
+     1
+    ],
+    [
+     "avocado",
+     0.25
+    ]
+   ]
+  },
+  "chicken-bacon-chopped-salad": {
+   "c": "lunch",
+   "s": 2,
+   "l": [
+    [
+     "breast",
+     300
+    ],
+    [
+     "bacon",
+     4
+    ],
+    [
+     "brocc",
+     150
+    ],
+    [
+     "iceberg",
+     0.5
+    ],
+    [
+     "lemon",
+     1
+    ],
+    [
+     "rice",
+     100
+    ],
+    [
+     "honey",
+     10
+    ],
+    [
+     "oil",
+     15
+    ]
+   ]
+  },
+  "chicken-bean-fajita-traybake": {
+   "c": "dinner",
+   "s": 4,
+   "l": [
+    [
+     "breast",
+     450
+    ],
+    [
+     "mixpep",
+     3
+    ],
+    [
+     "onions",
+     1
+    ],
+    [
+     "butterbeans",
+     480
+    ],
+    [
+     "wraps",
+     8
+    ],
+    [
+     "lime",
+     1
+    ],
+    [
+     "greek",
+     120
+    ],
+    [
+     "fajita",
+     12
+    ],
+    [
+     "puree",
+     30
+    ],
+    [
+     "oil",
+     30
+    ],
+    [
+     "garlic",
+     4
+    ]
+   ]
+  },
+  "chicken-blt-wrap": {
+   "c": "lunch",
+   "s": 1,
+   "l": [
+    [
+     "wraps",
+     1
+    ],
+    [
+     "iceberg",
+     0.05
+    ],
+    [
+     "roast",
+     60
+    ],
+    [
+     "plum",
+     60
+    ],
+    [
+     "bacon",
+     1
+    ],
+    [
+     "mayo",
+     15
+    ]
+   ]
+  },
+  "chicken-broccoli-cheesy-bean-traybake": {
+   "c": "dinner",
+   "s": 4,
+   "l": [
+    [
+     "breast",
+     600
+    ],
+    [
+     "brocc",
+     400
+    ],
+    [
+     "butterbeans",
+     480
+    ],
+    [
+     "creme",
+     150
+    ],
+    [
+     "lemon",
+     1
+    ],
+    [
+     "garlic",
+     6
+    ],
+    [
+     "oil",
+     10
+    ],
+    [
+     "cheddar",
+     100
+    ]
+   ]
+  },
+  "chicken-burrito-bowl": {
+   "c": "lunch",
+   "s": 1,
+   "l": [
+    [
+     "breast",
+     130
+    ],
+    [
+     "kidney",
+     80
+    ],
+    [
+     "plum",
+     50
+    ],
+    [
+     "rice",
+     60
+    ],
+    [
+     "sweetcorn",
+     50
+    ],
+    [
+     "fajita",
+     4
+    ],
+    [
+     "cheddar",
+     20
+    ],
+    [
+     "oil",
+     5
+    ]
+   ]
+  },
+  "chicken-caesar-pasta": {
+   "c": "dinner",
+   "s": 4,
+   "l": [
+    [
+     "breast",
+     340
+    ],
+    [
+     "bacon",
+     4
+    ],
+    [
+     "softcheese",
+     180
+    ],
+    [
+     "lemon",
+     1.5
+    ],
+    [
+     "loaf",
+     3
+    ],
+    [
+     "fusilli",
+     200
+    ],
+    [
+     "parmesan",
+     15
+    ],
+    [
+     "garlic",
+     9
+    ],
+    [
+     "stock",
+     10
+    ],
+    [
+     "oil",
+     10
+    ]
+   ]
+  },
+  "chicken-caesar-wrap": {
+   "c": "lunch",
+   "s": 1,
+   "l": [
+    [
+     "wraps",
+     1
+    ],
+    [
+     "roast",
+     80
+    ],
+    [
+     "salad",
+     40
+    ],
+    [
+     "parmesan",
+     10
+    ],
+    [
+     "mayo",
+     15
+    ]
+   ]
+  },
+  "chicken-caprese-sandwich": {
+   "c": "lunch",
+   "s": 1,
+   "l": [
+    [
+     "wholeloaf",
+     70
+    ],
+    [
+     "greek",
+     15
+    ],
+    [
+     "pesto",
+     15
+    ],
+    [
+     "mozzarella",
+     55
+    ],
+    [
+     "roast",
+     60
+    ],
+    [
+     "plum",
+     60
+    ],
+    [
+     "basil",
+     15
+    ],
+    [
+     "butter",
+     7
+    ]
+   ]
+  },
+  "chicken-chorizo-fajita-wraps": {
+   "c": "dinner",
+   "s": 2,
+   "l": [
+    [
+     "breast",
+     300
+    ],
+    [
+     "chorizo",
+     40
+    ],
+    [
+     "mixpep",
+     2
+    ],
+    [
+     "onions",
+     1
+    ],
+    [
+     "avocado",
+     1
+    ],
+    [
+     "lime",
+     0.5
+    ],
+    [
+     "wraps",
+     4
+    ],
+    [
+     "creme",
+     60
+    ],
+    [
+     "coriander",
+     10
+    ],
+    [
+     "fajita",
+     10
+    ],
+    [
+     "oil",
+     10
+    ]
+   ]
+  },
+  "chicken-chorizo-traybake": {
+   "c": "dinner",
+   "s": 4,
+   "l": [
+    [
+     "thigh",
+     500
+    ],
+    [
+     "chorizo",
+     75
+    ],
+    [
+     "sweetpot",
+     400
+    ],
+    [
+     "bakepot",
+     2
+    ],
+    [
+     "onions",
+     2
+    ],
+    [
+     "mixpep",
+     2
+    ],
+    [
+     "chilli",
+     10
+    ],
+    [
+     "greek",
+     60
+    ],
+    [
+     "lemon",
+     1
+    ],
+    [
+     "garlic",
+     6
+    ],
+    [
+     "stock",
+     10
+    ],
+    [
+     "herbs",
+     3
+    ],
+    [
+     "vinegar",
+     20
+    ],
+    [
+     "paprika",
+     3
+    ],
+    [
+     "oil",
+     15
+    ],
+    [
+     "nuts",
+     20
+    ]
+   ]
+  },
+  "chicken-fajita-pasta": {
+   "c": "dinner",
+   "s": 4,
+   "l": [
+    [
+     "breast",
+     450
+    ],
+    [
+     "onions",
+     1
+    ],
+    [
+     "pepper",
+     2
+    ],
+    [
+     "passata",
+     250
+    ],
+    [
+     "greek",
+     100
+    ],
+    [
+     "fusilli",
+     320
+    ],
+    [
+     "fajita",
+     20
+    ],
+    [
+     "puree",
+     20
+    ],
+    [
+     "cheddar",
+     50
+    ],
+    [
+     "oil",
+     15
+    ]
+   ]
+  },
+  "chicken-fajitas": {
+   "c": "dinner",
+   "s": 2,
+   "l": [
+    [
+     "breast",
+     300
+    ],
+    [
+     "pepper",
+     1
+    ],
+    [
+     "onions",
+     0.5
+    ],
+    [
+     "wraps",
+     4
+    ],
+    [
+     "fajita",
+     8
+    ],
+    [
+     "oil",
+     15
+    ],
+    [
+     "cheddar",
+     40
+    ]
+   ]
+  },
+  "chicken-fried-rice": {
+   "c": "dinner",
+   "s": 2,
+   "l": [
+    [
+     "breast",
+     300
+    ],
+    [
+     "eggs",
+     2
+    ],
+    [
+     "onions",
+     0.5
+    ],
+    [
+     "pepper",
+     0.5
+    ],
+    [
+     "spring",
+     0.5
+    ],
+    [
+     "rice",
+     140
+    ],
+    [
+     "soy",
+     20
+    ],
+    [
+     "teriyaki",
+     30
+    ],
+    [
+     "garlic",
+     6
+    ]
+   ]
+  },
+  "chicken-hummus-salad-pot": {
+   "c": "lunch",
+   "s": 1,
+   "l": [
+    [
+     "roast",
+     100
+    ],
+    [
+     "salad",
+     60
+    ],
+    [
+     "plum",
+     80
+    ],
+    [
+     "cuc",
+     0.25
+    ],
+    [
+     "houm",
+     40
+    ],
+    [
+     "pittas",
+     1
+    ]
+   ]
+  },
+  "chicken-katsu-curry": {
+   "c": "dinner",
+   "s": 2,
+   "l": [
+    [
+     "breast",
+     300
+    ],
+    [
+     "katsu",
+     200
+    ],
+    [
+     "spring",
+     0.5
+    ],
+    [
+     "carrots",
+     80
+    ],
+    [
+     "cuc",
+     0.33
+    ],
+    [
+     "chilli",
+     5
+    ],
+    [
+     "lime",
+     1
+    ],
+    [
+     "panko",
+     40
+    ],
+    [
+     "oil",
+     8
+    ],
+    [
+     "basmati",
+     140
+    ]
+   ]
+  },
+  "chicken-korma": {
+   "c": "dinner",
+   "s": 4,
+   "l": [
+    [
+     "breast",
+     600
+    ],
+    [
+     "onions",
+     1
+    ],
+    [
+     "ginger",
+     10
+    ],
+    [
+     "kormapaste",
+     70
+    ],
+    [
+     "greek",
+     150
+    ],
+    [
+     "coriander",
+     10
+    ],
+    [
+     "garlic",
+     6
+    ],
+    [
+     "nuts",
+     50
+    ],
+    [
+     "stock",
+     6
+    ],
+    [
+     "basmati",
+     300
+    ],
+    [
+     "oil",
+     10
+    ]
+   ]
+  },
+  "chicken-mayo-protein-wrap": {
+   "c": "lunch",
+   "s": 1,
+   "l": [
+    [
+     "mission",
+     1
+    ],
+    [
+     "roast",
+     100
+    ],
+    [
+     "salad",
+     20
+    ],
+    [
+     "mayo",
+     15
+    ]
+   ]
+  },
+  "chicken-mayo-sandwich": {
+   "c": "lunch",
+   "s": 1,
+   "l": [
+    [
+     "roast",
+     80
+    ],
+    [
+     "loaf",
+     2
+    ],
+    [
+     "salad",
+     20
+    ],
+    [
+     "mayo",
+     15
+    ],
+    [
+     "butter",
+     10
+    ]
+   ]
+  },
+  "chicken-milanese-pasta": {
+   "c": "dinner",
+   "s": 2,
+   "l": [
+    [
+     "breast",
+     300
+    ],
+    [
+     "eggs",
+     1
+    ],
+    [
+     "passata",
+     260
+    ],
+    [
+     "spaghetti",
+     160
+    ],
+    [
+     "flour",
+     10
+    ],
+    [
+     "breadcrumbs",
+     30
+    ],
+    [
+     "oil",
+     10
+    ],
+    [
+     "parmesan",
+     25
+    ],
+    [
+     "garlic",
+     3
+    ],
+    [
+     "herbs",
+     2
+    ]
+   ]
+  },
+  "chicken-noodle-soup": {
+   "c": "lunch",
+   "s": 1,
+   "l": [
+    [
+     "breast",
+     120
+    ],
+    [
+     "carrots",
+     80
+    ],
+    [
+     "spring",
+     0.25
+    ],
+    [
+     "loaf",
+     1
+    ],
+    [
+     "noodles",
+     40
+    ],
+    [
+     "stock",
+     5
+    ]
+   ]
+  },
+  "chicken-pepper-cucumber-salad": {
+   "c": "lunch",
+   "s": 2,
+   "l": [
+    [
+     "breast",
+     300
+    ],
+    [
+     "pepper",
+     1
+    ],
+    [
+     "cuc",
+     1
+    ],
+    [
+     "coriander",
+     10
+    ],
+    [
+     "cottage",
+     100
+    ],
+    [
+     "nuts",
+     20
+    ],
+    [
+     "vinegar",
+     10
+    ],
+    [
+     "oil",
+     10
+    ]
+   ]
+  },
+  "chicken-pepper-harissa-orzo": {
+   "c": "dinner",
+   "s": 4,
+   "l": [
+    [
+     "breast",
+     500
+    ],
+    [
+     "mixpep",
+     3
+    ],
+    [
+     "sundried",
+     40
+    ],
+    [
+     "harissa",
+     40
+    ],
+    [
+     "mascarpone",
+     60
+    ],
+    [
+     "orzo",
+     300
+    ],
+    [
+     "garlic",
+     12
+    ],
+    [
+     "stock",
+     10
+    ],
+    [
+     "vinegar",
+     10
+    ],
+    [
+     "oil",
+     15
+    ]
+   ]
+  },
+  "chicken-pepper-risotto": {
+   "c": "dinner",
+   "s": 2,
+   "l": [
+    [
+     "breast",
+     300
+    ],
+    [
+     "mixpep",
+     1
+    ],
+    [
+     "onions",
+     1
+    ],
+    [
+     "spring",
+     0.25
+    ],
+    [
+     "paellarice",
+     160
+    ],
+    [
+     "puree",
+     30
+    ],
+    [
+     "paprika",
+     3
+    ],
+    [
+     "curry",
+     1
+    ],
+    [
+     "stock",
+     6
+    ],
+    [
+     "cheddar",
+     40
+    ],
+    [
+     "garlic",
+     9
+    ],
+    [
+     "chilliflakes",
+     1
+    ],
+    [
+     "honey",
+     10
+    ],
+    [
+     "ricevinegar",
+     10
+    ],
+    [
+     "butter",
+     10
+    ],
+    [
+     "oil",
+     10
+    ]
+   ]
+  },
+  "chicken-pesto-pasta-salad": {
+   "c": "lunch",
+   "s": 1,
+   "l": [
+    [
+     "breast",
+     100
+    ],
+    [
+     "pesto",
+     30
+    ],
+    [
+     "plum",
+     80
+    ],
+    [
+     "spinach",
+     30
+    ],
+    [
+     "fusilli",
+     70
+    ],
+    [
+     "oil",
+     5
+    ]
+   ]
+  },
+  "chicken-salad-protein-pitta": {
+   "c": "lunch",
+   "s": 1,
+   "l": [
+    [
+     "proteinpitta",
+     2
+    ],
+    [
+     "thinchicken",
+     80
+    ],
+    [
+     "salad",
+     25
+    ],
+    [
+     "plum",
+     60
+    ],
+    [
+     "mayo",
+     10
+    ]
+   ]
+  },
+  "chicken-salad-sandwich": {
+   "c": "lunch",
+   "s": 1,
+   "l": [
+    [
+     "wholeloaf",
+     80
+    ],
+    [
+     "roast",
+     80
+    ],
+    [
+     "salad",
+     25
+    ],
+    [
+     "plum",
+     60
+    ],
+    [
+     "cuc",
+     0.1
+    ],
+    [
+     "mayo",
+     10
+    ]
+   ]
+  },
+  "chicken-salad-tostadas": {
+   "c": "lunch",
+   "s": 1,
+   "l": [
+    [
+     "mission",
+     1
+    ],
+    [
+     "salad",
+     80
+    ],
+    [
+     "roast",
+     70
+    ],
+    [
+     "sourcream",
+     20
+    ],
+    [
+     "lime",
+     0.25
+    ],
+    [
+     "sweetcorn",
+     30
+    ],
+    [
+     "cheddar",
+     15
+    ]
+   ]
+  },
+  "chicken-spinach-lasagne": {
+   "c": "dinner",
+   "s": 4,
+   "l": [
+    [
+     "thigh",
+     600
+    ],
+    [
+     "ctoms",
+     400
+    ],
+    [
+     "onions",
+     2
+    ],
+    [
+     "spinach",
+     160
+    ],
+    [
+     "milk",
+     700
+    ],
+    [
+     "lasagne",
+     240
+    ],
+    [
+     "flour",
+     60
+    ],
+    [
+     "butter",
+     60
+    ],
+    [
+     "cheddar",
+     80
+    ],
+    [
+     "puree",
+     30
+    ],
+    [
+     "stock",
+     10
+    ],
+    [
+     "oregano",
+     2
+    ],
+    [
+     "garlic",
+     6
+    ],
+    [
+     "oil",
+     15
+    ]
+   ]
+  },
+  "chicken-sweetcorn-tacos": {
+   "c": "dinner",
+   "s": 4,
+   "l": [
+    [
+     "breast",
+     450
+    ],
+    [
+     "wraps",
+     6
+    ],
+    [
+     "cabbage",
+     150
+    ],
+    [
+     "kidney",
+     200
+    ],
+    [
+     "lime",
+     2
+    ],
+    [
+     "coriander",
+     15
+    ],
+    [
+     "greek",
+     100
+    ],
+    [
+     "sweetcorn",
+     160
+    ],
+    [
+     "fajita",
+     15
+    ],
+    [
+     "garlic",
+     4
+    ],
+    [
+     "oil",
+     15
+    ]
+   ]
+  },
+  "chicken-thigh-special-fried-rice": {
+   "c": "dinner",
+   "s": 2,
+   "l": [
+    [
+     "thigh",
+     350
+    ],
+    [
+     "eggs",
+     3
+    ],
+    [
+     "peas",
+     100
+    ],
+    [
+     "spring",
+     1
+    ],
+    [
+     "carrots",
+     100
+    ],
+    [
+     "rice",
+     140
+    ],
+    [
+     "soy",
+     20
+    ],
+    [
+     "oil",
+     15
+    ]
+   ]
+  },
+  "chicken-tikka-curry": {
+   "c": "dinner",
+   "s": 2,
+   "l": [
+    [
+     "breast",
+     300
+    ],
+    [
+     "onions",
+     1
+    ],
+    [
+     "tikka",
+     60
+    ],
+    [
+     "coconut",
+     200
+    ],
+    [
+     "passata",
+     200
+    ],
+    [
+     "rice",
+     140
+    ],
+    [
+     "oil",
+     10
+    ]
+   ]
+  },
+  "chicken-tikka-wrap": {
+   "c": "lunch",
+   "s": 1,
+   "l": [
+    [
+     "breast",
+     140
+    ],
+    [
+     "greek",
+     60
+    ],
+    [
+     "tikka",
+     15
+    ],
+    [
+     "wraps",
+     1
+    ],
+    [
+     "plum",
+     60
+    ],
+    [
+     "cuc",
+     0.25
+    ],
+    [
+     "coriander",
+     5
+    ],
+    [
+     "oil",
+     5
+    ]
+   ]
+  },
+  "chicken-tzatziki-wraps": {
+   "c": "lunch",
+   "s": 1,
+   "l": [
+    [
+     "breast",
+     125
+    ],
+    [
+     "greek",
+     60
+    ],
+    [
+     "cuc",
+     0.25
+    ],
+    [
+     "wraps",
+     1
+    ],
+    [
+     "plum",
+     120
+    ],
+    [
+     "oil",
+     8
+    ]
+   ]
+  },
+  "chickpea-and-spinach-curry": {
+   "c": "dinner",
+   "s": 2,
+   "l": [
+    [
+     "chickpeas",
+     480
+    ],
+    [
+     "spinach",
+     100
+    ],
+    [
+     "tikka",
+     60
+    ],
+    [
+     "coconut",
+     200
+    ],
+    [
+     "passata",
+     200
+    ],
+    [
+     "onions",
+     1
+    ],
+    [
+     "rice",
+     140
+    ],
+    [
+     "oil",
+     10
+    ]
+   ]
+  },
+  "chilli-con-carne": {
+   "c": "dinner",
+   "s": 2,
+   "l": [
+    [
+     "mince",
+     300
+    ],
+    [
+     "kidney",
+     400
+    ],
+    [
+     "ctoms",
+     400
+    ],
+    [
+     "onions",
+     1
+    ],
+    [
+     "pepper",
+     1
+    ],
+    [
+     "rice",
+     140
+    ],
+    [
+     "puree",
+     20
+    ],
+    [
+     "oil",
+     10
+    ],
+    [
+     "paprika",
+     3
+    ],
+    [
+     "cumin",
+     3
+    ],
+    [
+     "chilliflakes",
+     1
+    ]
+   ]
+  },
+  "chilli-pork-brothy-rice": {
+   "c": "dinner",
+   "s": 2,
+   "l": [
+    [
+     "porkmince",
+     250
+    ],
+    [
+     "cabbage",
+     150
+    ],
+    [
+     "spring",
+     1
+    ],
+    [
+     "rice",
+     140
+    ],
+    [
+     "garlic",
+     9
+    ],
+    [
+     "soy",
+     20
+    ],
+    [
+     "stock",
+     10
+    ],
+    [
+     "vinegar",
+     10
+    ],
+    [
+     "chilliflakes",
+     2
+    ],
+    [
+     "fivespice",
+     1
+    ],
+    [
+     "teriyaki",
+     20
+    ],
+    [
+     "oil",
+     15
+    ]
+   ]
+  },
+  "chilli-pork-pasta-bake": {
+   "c": "dinner",
+   "s": 4,
+   "l": [
+    [
+     "porkmince",
+     400
+    ],
+    [
+     "onions",
+     1
+    ],
+    [
+     "ctoms",
+     400
+    ],
+    [
+     "kidney",
+     120
+    ],
+    [
+     "fusilli",
+     300
+    ],
+    [
+     "sweetcorn",
+     120
+    ],
+    [
+     "fajita",
+     15
+    ],
+    [
+     "stock",
+     10
+    ],
+    [
+     "cheddar",
+     50
+    ],
+    [
+     "oil",
+     8
+    ]
+   ]
+  },
+  "chilli-wraps": {
+   "c": "lunch",
+   "s": 1,
+   "l": [
+    [
+     "mince",
+     120
+    ],
+    [
+     "onions",
+     0.5
+    ],
+    [
+     "ctoms",
+     130
+    ],
+    [
+     "kidney",
+     60
+    ],
+    [
+     "wraps",
+     2
+    ],
+    [
+     "coriander",
+     5
+    ],
+    [
+     "greek",
+     20
+    ],
+    [
+     "oil",
+     5
+    ],
+    [
+     "garlic",
+     3
+    ],
+    [
+     "cumin",
+     1.5
+    ],
+    [
+     "paprika",
+     1.5
+    ],
+    [
+     "chilliflakes",
+     0.5
+    ]
+   ]
+  },
+  "chinese-5-spice-stir-fry": {
+   "c": "dinner",
+   "s": 2,
+   "l": [
+    [
+     "thigh",
+     500
+    ],
+    [
+     "stirfry",
+     400
+    ],
+    [
+     "rice",
+     140
+    ],
+    [
+     "soy",
+     20
+    ],
+    [
+     "fivespice",
+     4
+    ]
+   ]
+  },
+  "chinese-chicken-curry": {
+   "c": "dinner",
+   "s": 4,
+   "l": [
+    [
+     "breast",
+     600
+    ],
+    [
+     "onions",
+     1
+    ],
+    [
+     "ginger",
+     5
+    ],
+    [
+     "peas",
+     80
+    ],
+    [
+     "cornflour",
+     10
+    ],
+    [
+     "oil",
+     15
+    ],
+    [
+     "garlic",
+     3
+    ],
+    [
+     "curry",
+     4
+    ],
+    [
+     "stock",
+     6
+    ],
+    [
+     "soy",
+     5
+    ],
+    [
+     "rice",
+     300
+    ]
+   ]
+  },
+  "chorizo-potato-hash-eggs": {
+   "c": "breakfast",
+   "s": 1,
+   "l": [
+    [
+     "chorizo",
+     50
+    ],
+    [
+     "onions",
+     0.5
+    ],
+    [
+     "pepper",
+     0.5
+    ],
+    [
+     "potatoes",
+     140
+    ],
+    [
+     "spinach",
+     20
+    ],
+    [
+     "roast",
+     60
+    ],
+    [
+     "eggs",
+     1
+    ],
+    [
+     "coriander",
+     5
+    ],
+    [
+     "chilliflakes",
+     0.3
+    ]
+   ]
+  },
+  "chorizo-seafood-paella": {
+   "c": "dinner",
+   "s": 4,
+   "l": [
+    [
+     "chorizo",
+     250
+    ],
+    [
+     "onions",
+     1
+    ],
+    [
+     "pepper",
+     1
+    ],
+    [
+     "seafoodmix",
+     350
+    ],
+    [
+     "peas",
+     150
+    ],
+    [
+     "lemon",
+     1
+    ],
+    [
+     "paellarice",
+     250
+    ],
+    [
+     "oil",
+     15
+    ],
+    [
+     "paprika",
+     3
+    ],
+    [
+     "stock",
+     10
+    ]
+   ]
+  },
+  "cod-chips-and-peas": {
+   "c": "dinner",
+   "s": 2,
+   "l": [
+    [
+     "cod",
+     220
+    ],
+    [
+     "chips",
+     600
+    ],
+    [
+     "peas",
+     200
+    ],
+    [
+     "lemon",
+     0.5
+    ],
+    [
+     "oil",
+     5
+    ]
+   ]
+  },
+  "coronation-chicken-salad": {
+   "c": "lunch",
+   "s": 1,
+   "l": [
+    [
+     "roast",
+     120
+    ],
+    [
+     "greek",
+     15
+    ],
+    [
+     "apple",
+     0.3
+    ],
+    [
+     "salad",
+     40
+    ],
+    [
+     "spinach",
+     20
+    ],
+    [
+     "lemon",
+     0.1
+    ],
+    [
+     "mayo",
+     15
+    ],
+    [
+     "curry",
+     1
+    ],
+    [
+     "honey",
+     5
+    ],
+    [
+     "nuts",
+     15
+    ]
+   ]
+  },
+  "coronation-chicken-wrap": {
+   "c": "lunch",
+   "s": 1,
+   "l": [
+    [
+     "wraps",
+     1
+    ],
+    [
+     "roast",
+     90
+    ],
+    [
+     "greek",
+     40
+    ],
+    [
+     "salad",
+     20
+    ],
+    [
+     "curry",
+     2
+    ],
+    [
+     "honey",
+     5
+    ]
+   ]
+  },
+  "cottage-cheese-and-blueberries": {
+   "c": "snack",
+   "s": 1,
+   "l": [
+    [
+     "cottage",
+     120
+    ],
+    [
+     "blueb",
+     60
+    ]
+   ]
+  },
+  "cottage-cheese-and-cucumber": {
+   "c": "snack",
+   "s": 1,
+   "l": [
+    [
+     "cottage",
+     100
+    ],
+    [
+     "cuc",
+     0.25
+    ]
+   ]
+  },
+  "cottage-cheese-berry-bowl": {
+   "c": "breakfast",
+   "s": 1,
+   "l": [
+    [
+     "cottage",
+     150
+    ],
+    [
+     "blueb",
+     80
+    ],
+    [
+     "nuts",
+     10
+    ]
+   ]
+  },
+  "cottage-cheese-pancakes": {
+   "c": "breakfast",
+   "s": 1,
+   "l": [
+    [
+     "eggs",
+     2
+    ],
+    [
+     "cottage",
+     110
+    ],
+    [
+     "flour",
+     30
+    ],
+    [
+     "honey",
+     7
+    ],
+    [
+     "oil",
+     5
+    ]
+   ]
+  },
+  "cottage-cheese-rice-cakes": {
+   "c": "snack",
+   "s": 1,
+   "l": [
+    [
+     "ricecakes",
+     20
+    ],
+    [
+     "cottage",
+     80
+    ],
+    [
+     "cuc",
+     0.2
+    ]
+   ]
+  },
+  "cowboy-beans-poached-egg": {
+   "c": "breakfast",
+   "s": 1,
+   "l": [
+    [
+     "sausages",
+     2
+    ],
+    [
+     "ctoms",
+     150
+    ],
+    [
+     "butterbeans",
+     200
+    ],
+    [
+     "eggs",
+     1
+    ],
+    [
+     "oil",
+     5
+    ],
+    [
+     "puree",
+     8
+    ],
+    [
+     "paprika",
+     2
+    ],
+    [
+     "honey",
+     5
+    ]
+   ]
+  },
+  "creamy-cajun-chicken-pasta": {
+   "c": "dinner",
+   "s": 2,
+   "l": [
+    [
+     "breast",
+     270
+    ],
+    [
+     "peas",
+     80
+    ],
+    [
+     "onions",
+     1
+    ],
+    [
+     "softcheese",
+     80
+    ],
+    [
+     "fusilli",
+     140
+    ],
+    [
+     "oil",
+     10
+    ],
+    [
+     "paprika",
+     4
+    ],
+    [
+     "cumin",
+     2
+    ],
+    [
+     "oregano",
+     2
+    ],
+    [
+     "chilliflakes",
+     1
+    ],
+    [
+     "garlic",
+     3
+    ]
+   ]
+  },
+  "creamy-chicken-caesar-sandwich": {
+   "c": "lunch",
+   "s": 1,
+   "l": [
+    [
+     "roast",
+     90
+    ],
+    [
+     "greek",
+     20
+    ],
+    [
+     "spinach",
+     30
+    ],
+    [
+     "loaf",
+     2
+    ],
+    [
+     "coriander",
+     3
+    ],
+    [
+     "lemon",
+     0.1
+    ],
+    [
+     "mayo",
+     10
+    ],
+    [
+     "garlic",
+     1
+    ],
+    [
+     "parmesan",
+     8
+    ],
+    [
+     "oil",
+     3
+    ]
+   ]
+  },
+  "creamy-chicken-mushroom-pasta": {
+   "c": "dinner",
+   "s": 2,
+   "l": [
+    [
+     "breast",
+     160
+    ],
+    [
+     "mushrooms",
+     120
+    ],
+    [
+     "courgette",
+     300
+    ],
+    [
+     "creme",
+     80
+    ],
+    [
+     "lemon",
+     0.5
+    ],
+    [
+     "spaghetti",
+     160
+    ],
+    [
+     "oil",
+     10
+    ],
+    [
+     "garlic",
+     6
+    ],
+    [
+     "herbs",
+     2
+    ],
+    [
+     "parmesan",
+     20
+    ]
+   ]
+  },
+  "creamy-chicken-mushroom-stew": {
+   "c": "dinner",
+   "s": 4,
+   "l": [
+    [
+     "thigh",
+     600
+    ],
+    [
+     "onions",
+     2
+    ],
+    [
+     "carrots",
+     150
+    ],
+    [
+     "mushrooms",
+     300
+    ],
+    [
+     "potatoes",
+     600
+    ],
+    [
+     "creme",
+     150
+    ],
+    [
+     "flour",
+     20
+    ],
+    [
+     "stock",
+     10
+    ],
+    [
+     "herbs",
+     2
+    ],
+    [
+     "garlic",
+     6
+    ],
+    [
+     "butter",
+     20
+    ],
+    [
+     "oil",
+     10
+    ]
+   ]
+  },
+  "creamy-chicken-pasta": {
+   "c": "dinner",
+   "s": 2,
+   "l": [
+    [
+     "breast",
+     280
+    ],
+    [
+     "creme",
+     100
+    ],
+    [
+     "spinach",
+     80
+    ],
+    [
+     "fusilli",
+     160
+    ],
+    [
+     "parmesan",
+     20
+    ],
+    [
+     "garlic",
+     6
+    ]
+   ]
+  },
+  "creamy-egg-on-toast": {
+   "c": "breakfast",
+   "s": 1,
+   "l": [
+    [
+     "eggs",
+     3
+    ],
+    [
+     "greek",
+     15
+    ],
+    [
+     "softcheese",
+     15
+    ],
+    [
+     "loaf",
+     2
+    ],
+    [
+     "paprika",
+     2
+    ],
+    [
+     "chilliflakes",
+     1
+    ]
+   ]
+  },
+  "creamy-pork-mushroom-pasta": {
+   "c": "dinner",
+   "s": 4,
+   "l": [
+    [
+     "porkloin",
+     400
+    ],
+    [
+     "mushrooms",
+     300
+    ],
+    [
+     "onions",
+     2
+    ],
+    [
+     "creme",
+     150
+    ],
+    [
+     "fusilli",
+     400
+    ],
+    [
+     "parmesan",
+     50
+    ],
+    [
+     "stock",
+     5
+    ],
+    [
+     "herbs",
+     2
+    ],
+    [
+     "garlic",
+     6
+    ],
+    [
+     "oil",
+     15
+    ]
+   ]
+  },
+  "creamy-salmon-pasta-bake": {
+   "c": "dinner",
+   "s": 4,
+   "l": [
+    [
+     "salmon",
+     350
+    ],
+    [
+     "leeks",
+     250
+    ],
+    [
+     "milk",
+     250
+    ],
+    [
+     "greek",
+     60
+    ],
+    [
+     "lemon",
+     0.5
+    ],
+    [
+     "fusilli",
+     320
+    ],
+    [
+     "garlic",
+     6
+    ],
+    [
+     "butter",
+     25
+    ],
+    [
+     "flour",
+     10
+    ],
+    [
+     "breadcrumbs",
+     30
+    ],
+    [
+     "oil",
+     10
+    ],
+    [
+     "wholegrainmustard",
+     15
+    ]
+   ]
+  },
+  "creamy-sun-dried-tomato-pasta-salad": {
+   "c": "lunch",
+   "s": 1,
+   "l": [
+    [
+     "cottage",
+     100
+    ],
+    [
+     "pesto",
+     20
+    ],
+    [
+     "plum",
+     40
+    ],
+    [
+     "spinach",
+     40
+    ],
+    [
+     "fusilli",
+     75
+    ],
+    [
+     "garlic",
+     2
+    ],
+    [
+     "parmesan",
+     10
+    ]
+   ]
+  },
+  "crispy-beef-noodle-stir-fry": {
+   "c": "dinner",
+   "s": 2,
+   "l": [
+    [
+     "mince",
+     250
+    ],
+    [
+     "mixveg",
+     300
+    ],
+    [
+     "noodles",
+     150
+    ],
+    [
+     "soy",
+     25
+    ],
+    [
+     "teriyaki",
+     40
+    ],
+    [
+     "garlic",
+     6
+    ],
+    [
+     "oil",
+     10
+    ]
+   ]
+  },
+  "crispy-chicken-garlic-beans": {
+   "c": "dinner",
+   "s": 2,
+   "l": [
+    [
+     "breast",
+     300
+    ],
+    [
+     "brocc",
+     160
+    ],
+    [
+     "greenbeans",
+     160
+    ],
+    [
+     "butterbeans",
+     240
+    ],
+    [
+     "lemon",
+     1
+    ],
+    [
+     "greek",
+     30
+    ],
+    [
+     "breadcrumbs",
+     30
+    ],
+    [
+     "garlic",
+     6
+    ],
+    [
+     "herbs",
+     1
+    ],
+    [
+     "oil",
+     15
+    ]
+   ]
+  },
+  "crispy-chicken-spicy-honey-noodles": {
+   "c": "dinner",
+   "s": 2,
+   "l": [
+    [
+     "thigh",
+     300
+    ],
+    [
+     "spring",
+     0.5
+    ],
+    [
+     "chilli",
+     10
+    ],
+    [
+     "noodles",
+     120
+    ],
+    [
+     "soy",
+     30
+    ],
+    [
+     "vinegar",
+     15
+    ],
+    [
+     "honey",
+     30
+    ],
+    [
+     "garlic",
+     6
+    ],
+    [
+     "puree",
+     15
+    ],
+    [
+     "chilliflakes",
+     2
+    ],
+    [
+     "oil",
+     10
+    ]
+   ]
+  },
+  "crispy-sweet-chilli-beef-noodles": {
+   "c": "dinner",
+   "s": 2,
+   "l": [
+    [
+     "sizzle",
+     320
+    ],
+    [
+     "onions",
+     1
+    ],
+    [
+     "pepper",
+     2
+    ],
+    [
+     "spring",
+     0.5
+    ],
+    [
+     "chilli",
+     10
+    ],
+    [
+     "cornflour",
+     30
+    ],
+    [
+     "oil",
+     20
+    ],
+    [
+     "garlic",
+     9
+    ],
+    [
+     "honey",
+     25
+    ],
+    [
+     "puree",
+     15
+    ],
+    [
+     "vinegar",
+     15
+    ],
+    [
+     "soy",
+     15
+    ],
+    [
+     "noodles",
+     140
+    ]
+   ]
+  },
+  "cucumber-and-houmous": {
+   "c": "snack",
+   "s": 1,
+   "l": [
+    [
+     "cuc",
+     0.5
+    ],
+    [
+     "houm",
+     40
+    ]
+   ]
+  },
+  "curried-satay-noodles": {
+   "c": "dinner",
+   "s": 2,
+   "l": [
+    [
+     "pepper",
+     1
+    ],
+    [
+     "carrots",
+     90
+    ],
+    [
+     "ginger",
+     10
+    ],
+    [
+     "chilli",
+     5
+    ],
+    [
+     "peas",
+     100
+    ],
+    [
+     "lemon",
+     0.5
+    ],
+    [
+     "pbutter",
+     50
+    ],
+    [
+     "puree",
+     15
+    ],
+    [
+     "noodles",
+     150
+    ],
+    [
+     "oil",
+     10
+    ],
+    [
+     "garlic",
+     9
+    ],
+    [
+     "cumin",
+     1
+    ],
+    [
+     "curry",
+     3
+    ],
+    [
+     "stock",
+     3
+    ]
+   ]
+  },
+  "drunken-noodles": {
+   "c": "dinner",
+   "s": 4,
+   "l": [
+    [
+     "breast",
+     450
+    ],
+    [
+     "ricenoodles",
+     300
+    ],
+    [
+     "onions",
+     1
+    ],
+    [
+     "chilli",
+     15
+    ],
+    [
+     "spring",
+     1
+    ],
+    [
+     "mixpep",
+     2
+    ],
+    [
+     "garlic",
+     12
+    ],
+    [
+     "fishsauce",
+     20
+    ],
+    [
+     "oystersauce",
+     30
+    ],
+    [
+     "soy",
+     30
+    ],
+    [
+     "darksoy",
+     15
+    ],
+    [
+     "honey",
+     15
+    ],
+    [
+     "oil",
+     30
+    ]
+   ]
+  },
+  "easy-butter-chicken": {
+   "c": "dinner",
+   "s": 4,
+   "l": [
+    [
+     "thigh",
+     500
+    ],
+    [
+     "greek",
+     200
+    ],
+    [
+     "lemon",
+     0.5
+    ],
+    [
+     "onions",
+     1
+    ],
+    [
+     "ginger",
+     10
+    ],
+    [
+     "coriander",
+     10
+    ],
+    [
+     "puree",
+     45
+    ],
+    [
+     "cumin",
+     4
+    ],
+    [
+     "paprika",
+     4
+    ],
+    [
+     "chilliflakes",
+     1
+    ],
+    [
+     "oil",
+     26
+    ],
+    [
+     "garlic",
+     9
+    ],
+    [
+     "stock",
+     6
+    ],
+    [
+     "nuts",
+     30
+    ],
+    [
+     "basmati",
+     300
+    ]
+   ]
+  },
+  "egg-and-tomatoes": {
+   "c": "snack",
+   "s": 1,
+   "l": [
+    [
+     "eggs",
+     1
+    ],
+    [
+     "plum",
+     80
+    ]
+   ]
+  },
+  "egg-avocado-protein-wrap": {
+   "c": "lunch",
+   "s": 1,
+   "l": [
+    [
+     "mission",
+     1
+    ],
+    [
+     "eggs",
+     2
+    ],
+    [
+     "avocado",
+     0.25
+    ],
+    [
+     "plum",
+     40
+    ],
+    [
+     "mayo",
+     8
+    ]
+   ]
+  },
+  "egg-avocado-toast": {
+   "c": "lunch",
+   "s": 1,
+   "l": [
+    [
+     "eggs",
+     2
+    ],
+    [
+     "avocado",
+     0.5
+    ],
+    [
+     "celery",
+     0.25
+    ],
+    [
+     "lemon",
+     0.25
+    ],
+    [
+     "wholeloaf",
+     70
+    ],
+    [
+     "chilliflakes",
+     0.3
+    ]
+   ]
+  },
+  "egg-mayo-sandwich": {
+   "c": "lunch",
+   "s": 1,
+   "l": [
+    [
+     "loaf",
+     2
+    ],
+    [
+     "eggs",
+     2
+    ],
+    [
+     "salad",
+     20
+    ],
+    [
+     "mayo",
+     20
+    ]
+   ]
+  },
+  "eggs-and-avocado-plate": {
+   "c": "breakfast",
+   "s": 1,
+   "l": [
+    [
+     "eggs",
+     2
+    ],
+    [
+     "avocado",
+     0.5
+    ],
+    [
+     "plum",
+     60
+    ]
+   ]
+  },
+  "french-toast-crispy-bacon": {
+   "c": "breakfast",
+   "s": 1,
+   "l": [
+    [
+     "eggs",
+     2
+    ],
+    [
+     "milk",
+     60
+    ],
+    [
+     "wholeloaf",
+     70
+    ],
+    [
+     "bacon",
+     2
+    ],
+    [
+     "oil",
+     3
+    ],
+    [
+     "honey",
+     20
+    ]
+   ]
+  },
+  "full-english-breakfast": {
+   "c": "breakfast",
+   "s": 1,
+   "l": [
+    [
+     "bacon",
+     3
+    ],
+    [
+     "sausages",
+     2
+    ],
+    [
+     "eggs",
+     2
+    ],
+    [
+     "beans",
+     150
+    ],
+    [
+     "mushrooms",
+     80
+    ],
+    [
+     "plum",
+     80
+    ],
+    [
+     "loaf",
+     1
+    ],
+    [
+     "oil",
+     10
+    ]
+   ]
+  },
+  "garlic-butter-prawn-noodles": {
+   "c": "dinner",
+   "s": 2,
+   "l": [
+    [
+     "prawns",
+     300
+    ],
+    [
+     "spinach",
+     100
+    ],
+    [
+     "chilli",
+     8
+    ],
+    [
+     "spring",
+     0.25
+    ],
+    [
+     "noodles",
+     140
+    ],
+    [
+     "butter",
+     30
+    ],
+    [
+     "garlic",
+     9
+    ],
+    [
+     "soy",
+     20
+    ],
+    [
+     "honey",
+     10
+    ],
+    [
+     "nuts",
+     20
+    ],
+    [
+     "oil",
+     5
+    ]
+   ]
+  },
+  "greek-chicken-gyros": {
+   "c": "dinner",
+   "s": 2,
+   "l": [
+    [
+     "thigh",
+     500
+    ],
+    [
+     "pittas",
+     2
+    ],
+    [
+     "iceberg",
+     0.2
+    ],
+    [
+     "plum",
+     40
+    ],
+    [
+     "cuc",
+     0.25
+    ],
+    [
+     "greek",
+     150
+    ],
+    [
+     "lemon",
+     0.5
+    ],
+    [
+     "oregano",
+     2
+    ],
+    [
+     "garlic",
+     6
+    ],
+    [
+     "oil",
+     10
+    ]
+   ]
+  },
+  "greek-pasta-salad": {
+   "c": "lunch",
+   "s": 1,
+   "l": [
+    [
+     "chickpeas",
+     80
+    ],
+    [
+     "plum",
+     80
+    ],
+    [
+     "cuc",
+     0.25
+    ],
+    [
+     "onions",
+     0.5
+    ],
+    [
+     "pepper",
+     0.5
+    ],
+    [
+     "feta",
+     50
+    ],
+    [
+     "fusilli",
+     60
+    ],
+    [
+     "vinegar",
+     10
+    ],
+    [
+     "garlic",
+     3
+    ],
+    [
+     "oregano",
+     1
+    ]
+   ]
+  },
+  "greek-salad-pitta": {
+   "c": "lunch",
+   "s": 1,
+   "l": [
+    [
+     "pittas",
+     2
+    ],
+    [
+     "feta",
+     40
+    ],
+    [
+     "cuc",
+     0.25
+    ],
+    [
+     "plum",
+     60
+    ],
+    [
+     "houm",
+     40
+    ]
+   ]
+  },
+  "greek-yogurt-and-honey": {
+   "c": "snack",
+   "s": 1,
+   "l": [
+    [
+     "greek",
+     150
+    ],
+    [
+     "honey",
+     10
+    ]
+   ]
+  },
+  "greek-yogurt-berries-and-nuts": {
+   "c": "breakfast",
+   "s": 1,
+   "l": [
+    [
+     "greek",
+     150
+    ],
+    [
+     "frozenfruit",
+     80
+    ],
+    [
+     "nuts",
+     15
+    ]
+   ]
+  },
+  "grenade-oreo-bar": {
+   "c": "snack",
+   "s": 1,
+   "l": [
+    [
+     "grenade",
+     1
+    ]
+   ]
+  },
+  "halloumi-and-veg-traybake": {
+   "c": "dinner",
+   "s": 2,
+   "l": [
+    [
+     "halloumi",
+     200
+    ],
+    [
+     "courgette",
+     300
+    ],
+    [
+     "mixpep",
+     2
+    ],
+    [
+     "onions",
+     2
+    ],
+    [
+     "rice",
+     140
+    ],
+    [
+     "oil",
+     15
+    ],
+    [
+     "herbs",
+     2
+    ]
+   ]
+  },
+  "halloumi-and-veg-wrap": {
+   "c": "lunch",
+   "s": 1,
+   "l": [
+    [
+     "wraps",
+     1
+    ],
+    [
+     "halloumi",
+     60
+    ],
+    [
+     "houm",
+     40
+    ],
+    [
+     "carrots",
+     50
+    ],
+    [
+     "cuc",
+     0.15
+    ],
+    [
+     "spinach",
+     30
+    ]
+   ]
+  },
+  "ham-and-cheese-omelette-wrap": {
+   "c": "lunch",
+   "s": 1,
+   "l": [
+    [
+     "eggs",
+     2
+    ],
+    [
+     "wraps",
+     1
+    ],
+    [
+     "ham",
+     40
+    ],
+    [
+     "cheddar",
+     25
+    ],
+    [
+     "oil",
+     3
+    ]
+   ]
+  },
+  "ham-and-cheese-sandwich": {
+   "c": "lunch",
+   "s": 1,
+   "l": [
+    [
+     "ham",
+     60
+    ],
+    [
+     "loaf",
+     2
+    ],
+    [
+     "salad",
+     20
+    ],
+    [
+     "cheddar",
+     30
+    ],
+    [
+     "butter",
+     10
+    ]
+   ]
+  },
+  "ham-and-cheese-toastie": {
+   "c": "breakfast",
+   "s": 1,
+   "l": [
+    [
+     "loaf",
+     2
+    ],
+    [
+     "ham",
+     60
+    ],
+    [
+     "cheddar",
+     30
+    ],
+    [
+     "butter",
+     8
+    ]
+   ]
+  },
+  "ham-cheese-protein-wrap": {
+   "c": "lunch",
+   "s": 1,
+   "l": [
+    [
+     "mission",
+     1
+    ],
+    [
+     "ham",
+     40
+    ],
+    [
+     "salad",
+     20
+    ],
+    [
+     "plum",
+     50
+    ],
+    [
+     "cheddar",
+     25
+    ]
+   ]
+  },
+  "ham-salad-wrap": {
+   "c": "lunch",
+   "s": 1,
+   "l": [
+    [
+     "wraps",
+     1
+    ],
+    [
+     "ham",
+     50
+    ],
+    [
+     "salad",
+     25
+    ],
+    [
+     "plum",
+     60
+    ],
+    [
+     "cuc",
+     0.15
+    ],
+    [
+     "mayo",
+     10
+    ]
+   ]
+  },
+  "harissa-turkey-meatball-pittas": {
+   "c": "dinner",
+   "s": 2,
+   "l": [
+    [
+     "turkeymince",
+     300
+    ],
+    [
+     "harissa",
+     30
+    ],
+    [
+     "cuc",
+     0.5
+    ],
+    [
+     "greek",
+     150
+    ],
+    [
+     "lemon",
+     0.5
+    ],
+    [
+     "coriander",
+     10
+    ],
+    [
+     "pepper",
+     1
+    ],
+    [
+     "pittas",
+     2
+    ],
+    [
+     "oregano",
+     1
+    ],
+    [
+     "oil",
+     5
+    ]
+   ]
+  },
+  "healthy-seafood-spaghetti": {
+   "c": "dinner",
+   "s": 2,
+   "l": [
+    [
+     "celery",
+     3
+    ],
+    [
+     "onions",
+     1
+    ],
+    [
+     "lemon",
+     0.5
+    ],
+    [
+     "seafoodmix",
+     300
+    ],
+    [
+     "basil",
+     10
+    ],
+    [
+     "puree",
+     45
+    ],
+    [
+     "oil",
+     26
+    ],
+    [
+     "spaghetti",
+     150
+    ],
+    [
+     "chilliflakes",
+     1
+    ],
+    [
+     "garlic",
+     9
+    ]
+   ]
+  },
+  "herby-mayo-chicken-sandwich": {
+   "c": "lunch",
+   "s": 1,
+   "l": [
+    [
+     "roast",
+     90
+    ],
+    [
+     "loaf",
+     2
+    ],
+    [
+     "spring",
+     0.15
+    ],
+    [
+     "coriander",
+     4
+    ],
+    [
+     "lemon",
+     0.1
+    ],
+    [
+     "cuc",
+     0.1
+    ],
+    [
+     "plum",
+     60
+    ],
+    [
+     "salad",
+     25
+    ],
+    [
+     "mayo",
+     20
+    ]
+   ]
+  },
+  "honey-and-soy-chicken": {
+   "c": "dinner",
+   "s": 2,
+   "l": [
+    [
+     "breast",
+     280
+    ],
+    [
+     "brocc",
+     240
+    ],
+    [
+     "rice",
+     140
+    ],
+    [
+     "soy",
+     20
+    ],
+    [
+     "honey",
+     20
+    ],
+    [
+     "cornflour",
+     10
+    ],
+    [
+     "garlic",
+     6
+    ]
+   ]
+  },
+  "honey-pork-noodles": {
+   "c": "dinner",
+   "s": 2,
+   "l": [
+    [
+     "porkloin",
+     300
+    ],
+    [
+     "stirfry",
+     200
+    ],
+    [
+     "honey",
+     30
+    ],
+    [
+     "soy",
+     20
+    ],
+    [
+     "fivespice",
+     2
+    ],
+    [
+     "paprika",
+     1
+    ],
+    [
+     "noodles",
+     140
+    ],
+    [
+     "oil",
+     5
+    ]
+   ]
+  },
+  "honey-sriracha-chicken-bowls": {
+   "c": "dinner",
+   "s": 4,
+   "l": [
+    [
+     "thigh",
+     700
+    ],
+    [
+     "chilli",
+     30
+    ],
+    [
+     "spring",
+     1
+    ],
+    [
+     "rice",
+     300
+    ],
+    [
+     "honey",
+     40
+    ],
+    [
+     "soy",
+     45
+    ],
+    [
+     "puree",
+     20
+    ],
+    [
+     "garlic",
+     12
+    ],
+    [
+     "oil",
+     10
+    ]
+   ]
+  },
+  "houmous-and-carrot-sticks": {
+   "c": "snack",
+   "s": 1,
+   "l": [
+    [
+     "houm",
+     50
+    ],
+    [
+     "carrots",
+     100
+    ]
+   ]
+  },
+  "lamb-kofta-pittas": {
+   "c": "dinner",
+   "s": 2,
+   "l": [
+    [
+     "lambmince",
+     300
+    ],
+    [
+     "onions",
+     0.5
+    ],
+    [
+     "pittas",
+     4
+    ],
+    [
+     "greek",
+     100
+    ],
+    [
+     "cuc",
+     0.5
+    ],
+    [
+     "plum",
+     80
+    ],
+    [
+     "iceberg",
+     0.15
+    ],
+    [
+     "cumin",
+     3
+    ],
+    [
+     "garlic",
+     6
+    ],
+    [
+     "oil",
+     5
+    ]
+   ]
+  },
+  "lamb-leg-steaks-with-rosemary-potatoes": {
+   "c": "dinner",
+   "s": 2,
+   "l": [
+    [
+     "lambsteaks",
+     260
+    ],
+    [
+     "potatoes",
+     400
+    ],
+    [
+     "rosemary",
+     6
+    ],
+    [
+     "brocc",
+     80
+    ],
+    [
+     "greenbeans",
+     80
+    ],
+    [
+     "garlic",
+     3
+    ],
+    [
+     "oil",
+     10
+    ],
+    [
+     "capers",
+     30
+    ],
+    [
+     "dijon",
+     5
+    ]
+   ]
+  },
+  "lamb-meatball-pitta-wraps": {
+   "c": "dinner",
+   "s": 4,
+   "l": [
+    [
+     "lambmince",
+     350
+    ],
+    [
+     "pittas",
+     4
+    ],
+    [
+     "onions",
+     0.5
+    ],
+    [
+     "plum",
+     150
+    ],
+    [
+     "harissa",
+     10
+    ],
+    [
+     "greek",
+     150
+    ],
+    [
+     "houm",
+     60
+    ],
+    [
+     "coriander",
+     10
+    ],
+    [
+     "oregano",
+     2
+    ],
+    [
+     "sesameseeds",
+     5
+    ],
+    [
+     "oil",
+     10
+    ],
+    [
+     "vinegar",
+     10
+    ],
+    [
+     "honey",
+     5
+    ],
+    [
+     "nuts",
+     20
+    ]
+   ]
+  },
+  "lamb-moussaka": {
+   "c": "dinner",
+   "s": 4,
+   "l": [
+    [
+     "lambmince",
+     400
+    ],
+    [
+     "onions",
+     2
+    ],
+    [
+     "aubergine",
+     2
+    ],
+    [
+     "milk",
+     400
+    ],
+    [
+     "eggs",
+     1
+    ],
+    [
+     "ctoms",
+     400
+    ],
+    [
+     "potatoes",
+     600
+    ],
+    [
+     "garlic",
+     6
+    ],
+    [
+     "oil",
+     10
+    ],
+    [
+     "cinnamon",
+     2
+    ],
+    [
+     "oregano",
+     2
+    ],
+    [
+     "puree",
+     25
+    ],
+    [
+     "stock",
+     5
+    ],
+    [
+     "butter",
+     20
+    ],
+    [
+     "flour",
+     30
+    ],
+    [
+     "parmesan",
+     20
+    ],
+    [
+     "nutmeg",
+     0.5
+    ]
+   ]
+  },
+  "lasagne": {
+   "c": "dinner",
+   "s": 2,
+   "l": [
+    [
+     "mince",
+     300
+    ],
+    [
+     "onions",
+     1
+    ],
+    [
+     "carrots",
+     80
+    ],
+    [
+     "ctoms",
+     400
+    ],
+    [
+     "milk",
+     300
+    ],
+    [
+     "lasagne",
+     150
+    ],
+    [
+     "cornflour",
+     20
+    ],
+    [
+     "cheddar",
+     60
+    ],
+    [
+     "puree",
+     15
+    ]
+   ]
+  },
+  "lean-beef-and-veg-stew": {
+   "c": "dinner",
+   "s": 2,
+   "l": [
+    [
+     "mince",
+     250
+    ],
+    [
+     "potatoes",
+     400
+    ],
+    [
+     "carrots",
+     200
+    ],
+    [
+     "onions",
+     1
+    ],
+    [
+     "ctoms",
+     400
+    ],
+    [
+     "kidney",
+     200
+    ],
+    [
+     "puree",
+     20
+    ],
+    [
+     "oil",
+     6
+    ]
+   ]
+  },
+  "lean-cottage-pie": {
+   "c": "dinner",
+   "s": 2,
+   "l": [
+    [
+     "mince",
+     300
+    ],
+    [
+     "potatoes",
+     600
+    ],
+    [
+     "carrots",
+     150
+    ],
+    [
+     "peas",
+     100
+    ],
+    [
+     "passata",
+     200
+    ],
+    [
+     "onions",
+     1
+    ],
+    [
+     "butter",
+     15
+    ],
+    [
+     "oil",
+     5
+    ]
+   ]
+  },
+  "lemon-pork-with-sweet-potato": {
+   "c": "dinner",
+   "s": 2,
+   "l": [
+    [
+     "porkloin",
+     300
+    ],
+    [
+     "sweetpot",
+     400
+    ],
+    [
+     "brocc",
+     200
+    ],
+    [
+     "lemon",
+     1
+    ],
+    [
+     "oil",
+     10
+    ],
+    [
+     "herbs",
+     2
+    ]
+   ]
+  },
+  "lentil-and-tomato-soup": {
+   "c": "lunch",
+   "s": 1,
+   "l": [
+    [
+     "lentils",
+     50
+    ],
+    [
+     "passata",
+     200
+    ],
+    [
+     "carrots",
+     80
+    ],
+    [
+     "onions",
+     0.5
+    ],
+    [
+     "cumin",
+     2
+    ],
+    [
+     "oil",
+     4
+    ]
+   ]
+  },
+  "lentil-and-veg-soup": {
+   "c": "lunch",
+   "s": 1,
+   "l": [
+    [
+     "lentils",
+     60
+    ],
+    [
+     "carrots",
+     80
+    ],
+    [
+     "onions",
+     0.5
+    ],
+    [
+     "passata",
+     150
+    ],
+    [
+     "loaf",
+     2
+    ],
+    [
+     "stock",
+     5
+    ],
+    [
+     "cumin",
+     2
+    ],
+    [
+     "oil",
+     5
+    ]
+   ]
+  },
+  "light-chicken-and-chickpea-curry": {
+   "c": "dinner",
+   "s": 2,
+   "l": [
+    [
+     "breast",
+     300
+    ],
+    [
+     "chickpeas",
+     240
+    ],
+    [
+     "passata",
+     300
+    ],
+    [
+     "spinach",
+     100
+    ],
+    [
+     "onions",
+     1
+    ],
+    [
+     "tikka",
+     60
+    ],
+    [
+     "rice",
+     70
+    ],
+    [
+     "oil",
+     6
+    ]
+   ]
+  },
+  "malaysian-coconut-chicken-and-rice": {
+   "c": "dinner",
+   "s": 2,
+   "l": [
+    [
+     "thigh",
+     320
+    ],
+    [
+     "cuc",
+     0.5
+    ],
+    [
+     "onions",
+     0.5
+    ],
+    [
+     "chilli",
+     20
+    ],
+    [
+     "ginger",
+     10
+    ],
+    [
+     "lime",
+     1
+    ],
+    [
+     "coconut",
+     80
+    ],
+    [
+     "basmati",
+     130
+    ],
+    [
+     "ricevinegar",
+     15
+    ],
+    [
+     "curry",
+     3
+    ],
+    [
+     "nuts",
+     20
+    ],
+    [
+     "soy",
+     10
+    ],
+    [
+     "garlic",
+     6
+    ],
+    [
+     "honey",
+     5
+    ],
+    [
+     "oil",
+     15
+    ]
+   ]
+  },
+  "marry-me-chicken-and-orzo": {
+   "c": "dinner",
+   "s": 4,
+   "l": [
+    [
+     "breast",
+     500
+    ],
+    [
+     "mascarpone",
+     150
+    ],
+    [
+     "spinach",
+     160
+    ],
+    [
+     "lemon",
+     1
+    ],
+    [
+     "sundried",
+     40
+    ],
+    [
+     "basil",
+     10
+    ],
+    [
+     "orzo",
+     250
+    ],
+    [
+     "garlic",
+     12
+    ],
+    [
+     "parmesan",
+     40
+    ],
+    [
+     "stock",
+     5
+    ],
+    [
+     "paprika",
+     4
+    ],
+    [
+     "oregano",
+     2
+    ],
+    [
+     "chilliflakes",
+     1
+    ],
+    [
+     "herbs",
+     2
+    ],
+    [
+     "oil",
+     10
+    ],
+    [
+     "butter",
+     10
+    ]
+   ]
+  },
+  "marry-me-chicken-loaded-fries": {
+   "c": "dinner",
+   "s": 2,
+   "l": [
+    [
+     "potatoes",
+     500
+    ],
+    [
+     "breast",
+     300
+    ],
+    [
+     "pesto",
+     40
+    ],
+    [
+     "softcheese",
+     60
+    ],
+    [
+     "garlic",
+     6
+    ],
+    [
+     "paprika",
+     3
+    ],
+    [
+     "herbs",
+     2
+    ],
+    [
+     "oregano",
+     1
+    ],
+    [
+     "oil",
+     15
+    ]
+   ]
+  },
+  "marry-me-chicken-pasta-bake": {
+   "c": "dinner",
+   "s": 2,
+   "l": [
+    [
+     "roast",
+     200
+    ],
+    [
+     "cottage",
+     150
+    ],
+    [
+     "pesto",
+     40
+    ],
+    [
+     "passata",
+     100
+    ],
+    [
+     "plum",
+     100
+    ],
+    [
+     "fusilli",
+     160
+    ],
+    [
+     "puree",
+     15
+    ],
+    [
+     "garlic",
+     3
+    ],
+    [
+     "chilliflakes",
+     1
+    ],
+    [
+     "paprika",
+     2
+    ],
+    [
+     "parmesan",
+     20
+    ]
+   ]
+  },
+  "marry-me-spaghetti-meatballs": {
+   "c": "dinner",
+   "s": 2,
+   "l": [
+    [
+     "mince",
+     300
+    ],
+    [
+     "onions",
+     1
+    ],
+    [
+     "pesto",
+     40
+    ],
+    [
+     "creme",
+     100
+    ],
+    [
+     "spaghetti",
+     160
+    ],
+    [
+     "oil",
+     10
+    ],
+    [
+     "garlic",
+     4
+    ],
+    [
+     "oregano",
+     2
+    ],
+    [
+     "herbs",
+     1
+    ],
+    [
+     "stock",
+     5
+    ],
+    [
+     "puree",
+     15
+    ],
+    [
+     "parmesan",
+     15
+    ]
+   ]
+  },
+  "meatball-cowboy-pie": {
+   "c": "dinner",
+   "s": 4,
+   "l": [
+    [
+     "mince",
+     250
+    ],
+    [
+     "sausages",
+     4
+    ],
+    [
+     "onions",
+     1
+    ],
+    [
+     "eggs",
+     1
+    ],
+    [
+     "beans",
+     410
+    ],
+    [
+     "bbq",
+     45
+    ],
+    [
+     "potatoes",
+     800
+    ],
+    [
+     "milk",
+     60
+    ],
+    [
+     "breadcrumbs",
+     30
+    ],
+    [
+     "herbs",
+     2
+    ],
+    [
+     "butter",
+     20
+    ],
+    [
+     "cheddar",
+     40
+    ],
+    [
+     "garlic",
+     4
+    ],
+    [
+     "oil",
+     15
+    ]
+   ]
+  },
+  "middle-eastern-meatball-wraps": {
+   "c": "dinner",
+   "s": 2,
+   "l": [
+    [
+     "mince",
+     175
+    ],
+    [
+     "mixpep",
+     1
+    ],
+    [
+     "greek",
+     90
+    ],
+    [
+     "lemon",
+     0.5
+    ],
+    [
+     "wraps",
+     2
+    ],
+    [
+     "spinach",
+     50
+    ],
+    [
+     "coriander",
+     15
+    ],
+    [
+     "cumin",
+     3
+    ],
+    [
+     "oil",
+     5
+    ]
+   ]
+  },
+  "moroccan-chicken-couscous": {
+   "c": "dinner",
+   "s": 4,
+   "l": [
+    [
+     "breast",
+     600
+    ],
+    [
+     "lemon",
+     1
+    ],
+    [
+     "sundried",
+     40
+    ],
+    [
+     "cuc",
+     0.5
+    ],
+    [
+     "basil",
+     10
+    ],
+    [
+     "greek",
+     200
+    ],
+    [
+     "couscous",
+     240
+    ],
+    [
+     "oil",
+     15
+    ],
+    [
+     "garlic",
+     10
+    ],
+    [
+     "cumin",
+     4
+    ],
+    [
+     "paprika",
+     4
+    ],
+    [
+     "oregano",
+     2
+    ],
+    [
+     "curry",
+     3
+    ],
+    [
+     "stock",
+     6
+    ],
+    [
+     "vinegar",
+     10
+    ]
+   ]
+  },
+  "one-pan-gnocchi-bake": {
+   "c": "dinner",
+   "s": 4,
+   "l": [
+    [
+     "gnocchi",
+     500
+    ],
+    [
+     "breast",
+     500
+    ],
+    [
+     "ctoms",
+     400
+    ],
+    [
+     "mixpep",
+     1
+    ],
+    [
+     "greenbeans",
+     200
+    ],
+    [
+     "mozzarella",
+     80
+    ],
+    [
+     "oil",
+     15
+    ]
+   ]
+  },
+  "one-pot-chicken-and-rice": {
+   "c": "dinner",
+   "s": 2,
+   "l": [
+    [
+     "thigh",
+     400
+    ],
+    [
+     "onions",
+     1
+    ],
+    [
+     "carrots",
+     100
+    ],
+    [
+     "peas",
+     100
+    ],
+    [
+     "rice",
+     180
+    ],
+    [
+     "stock",
+     10
+    ],
+    [
+     "paprika",
+     4
+    ],
+    [
+     "oil",
+     10
+    ]
+   ]
+  },
+  "pad-see-ew-chicken-noodles": {
+   "c": "dinner",
+   "s": 2,
+   "l": [
+    [
+     "thigh",
+     300
+    ],
+    [
+     "brocc",
+     200
+    ],
+    [
+     "ricenoodles",
+     180
+    ],
+    [
+     "eggs",
+     2
+    ],
+    [
+     "chilli",
+     10
+    ],
+    [
+     "cuc",
+     0.5
+    ],
+    [
+     "garlic",
+     9
+    ],
+    [
+     "fishsauce",
+     15
+    ],
+    [
+     "darksoy",
+     15
+    ],
+    [
+     "oystersauce",
+     20
+    ],
+    [
+     "soy",
+     15
+    ],
+    [
+     "ricevinegar",
+     15
+    ],
+    [
+     "sesameoil",
+     15
+    ],
+    [
+     "honey",
+     5
+    ],
+    [
+     "nuts",
+     15
+    ]
+   ]
+  },
+  "paprika-chicken-chorizo-wrap": {
+   "c": "lunch",
+   "s": 1,
+   "l": [
+    [
+     "breast",
+     120
+    ],
+    [
+     "onions",
+     0.25
+    ],
+    [
+     "chorizo",
+     30
+    ],
+    [
+     "softcheese",
+     30
+    ],
+    [
+     "wraps",
+     1
+    ],
+    [
+     "paprika",
+     3
+    ],
+    [
+     "puree",
+     10
+    ],
+    [
+     "cheddar",
+     20
+    ]
+   ]
+  },
+  "parmesan-chicken-caesar-wrap": {
+   "c": "lunch",
+   "s": 1,
+   "l": [
+    [
+     "breast",
+     120
+    ],
+    [
+     "salad",
+     50
+    ],
+    [
+     "wraps",
+     1
+    ],
+    [
+     "herbs",
+     1
+    ],
+    [
+     "oil",
+     5
+    ],
+    [
+     "mayo",
+     20
+    ],
+    [
+     "vinegar",
+     3
+    ],
+    [
+     "garlic",
+     2
+    ],
+    [
+     "parmesan",
+     10
+    ],
+    [
+     "cheddar",
+     15
+    ]
+   ]
+  },
+  "peanut-butter-banana-overnight-oats": {
+   "c": "breakfast",
+   "s": 1,
+   "l": [
+    [
+     "oats",
+     45
+    ],
+    [
+     "milk",
+     120
+    ],
+    [
+     "greek",
+     100
+    ],
+    [
+     "pbutter",
+     15
+    ],
+    [
+     "blueb",
+     30
+    ],
+    [
+     "banana",
+     1
+    ],
+    [
+     "honey",
+     8
+    ]
+   ]
+  },
+  "peanut-butter-banana-toast": {
+   "c": "breakfast",
+   "s": 1,
+   "l": [
+    [
+     "loaf",
+     2
+    ],
+    [
+     "pbutter",
+     30
+    ],
+    [
+     "banana",
+     1
+    ]
+   ]
+  },
+  "peanut-butter-porridge": {
+   "c": "breakfast",
+   "s": 1,
+   "l": [
+    [
+     "oats",
+     60
+    ],
+    [
+     "milk",
+     300
+    ],
+    [
+     "pbutter",
+     20
+    ],
+    [
+     "banana",
+     0.5
+    ]
+   ]
+  },
+  "peanut-butter-rice-cakes": {
+   "c": "snack",
+   "s": 1,
+   "l": [
+    [
+     "ricecakes",
+     30
+    ],
+    [
+     "pbutter",
+     25
+    ]
+   ]
+  },
+  "peri-peri-chicken-thighs": {
+   "c": "dinner",
+   "s": 2,
+   "l": [
+    [
+     "thigh",
+     600
+    ],
+    [
+     "pouch",
+     350
+    ],
+    [
+     "cobs",
+     2
+    ],
+    [
+     "peri",
+     10
+    ],
+    [
+     "oil",
+     10
+    ]
+   ]
+  },
+  "pesto-chicken-and-roast-veg": {
+   "c": "dinner",
+   "s": 2,
+   "l": [
+    [
+     "breast",
+     350
+    ],
+    [
+     "pesto",
+     40
+    ],
+    [
+     "courgette",
+     300
+    ],
+    [
+     "plum",
+     200
+    ],
+    [
+     "potatoes",
+     300
+    ],
+    [
+     "oil",
+     5
+    ]
+   ]
+  },
+  "pesto-chicken-courgette-pasta": {
+   "c": "dinner",
+   "s": 4,
+   "l": [
+    [
+     "roast",
+     270
+    ],
+    [
+     "courgette",
+     300
+    ],
+    [
+     "plum",
+     250
+    ],
+    [
+     "pesto",
+     100
+    ],
+    [
+     "fusilli",
+     300
+    ],
+    [
+     "parmesan",
+     20
+    ],
+    [
+     "oil",
+     10
+    ]
+   ]
+  },
+  "pesto-sausage-bean-traybake": {
+   "c": "dinner",
+   "s": 4,
+   "l": [
+    [
+     "sausages",
+     4
+    ],
+    [
+     "potatoes",
+     500
+    ],
+    [
+     "onions",
+     1
+    ],
+    [
+     "plum",
+     200
+    ],
+    [
+     "spring",
+     0.5
+    ],
+    [
+     "butterbeans",
+     480
+    ],
+    [
+     "pesto",
+     90
+    ],
+    [
+     "lemon",
+     1
+    ],
+    [
+     "stock",
+     10
+    ],
+    [
+     "oil",
+     10
+    ]
+   ]
+  },
+  "pork-and-potato-breakfast-burrito": {
+   "c": "breakfast",
+   "s": 1,
+   "l": [
+    [
+     "potatoes",
+     150
+    ],
+    [
+     "porkmince",
+     60
+    ],
+    [
+     "eggs",
+     2
+    ],
+    [
+     "mission",
+     1
+    ],
+    [
+     "bbq",
+     15
+    ],
+    [
+     "oil",
+     8
+    ],
+    [
+     "paprika",
+     2
+    ],
+    [
+     "puree",
+     5
+    ],
+    [
+     "butter",
+     5
+    ],
+    [
+     "cheddar",
+     20
+    ]
+   ]
+  },
+  "pork-broccoli-honey-noodles": {
+   "c": "dinner",
+   "s": 4,
+   "l": [
+    [
+     "porkloin",
+     450
+    ],
+    [
+     "brocc",
+     250
+    ],
+    [
+     "pepper",
+     1
+    ],
+    [
+     "chilli",
+     8
+    ],
+    [
+     "noodles",
+     240
+    ],
+    [
+     "honey",
+     30
+    ],
+    [
+     "soy",
+     30
+    ],
+    [
+     "cornflour",
+     6
+    ],
+    [
+     "garlic",
+     3
+    ],
+    [
+     "oil",
+     15
+    ]
+   ]
+  },
+  "pork-steaks-roast-potatoes-and-veg": {
+   "c": "dinner",
+   "s": 2,
+   "l": [
+    [
+     "porkloin",
+     300
+    ],
+    [
+     "potatoes",
+     500
+    ],
+    [
+     "mixveg",
+     300
+    ],
+    [
+     "oil",
+     15
+    ],
+    [
+     "herbs",
+     2
+    ]
+   ]
+  },
+  "prawn-and-avocado-wrap": {
+   "c": "lunch",
+   "s": 1,
+   "l": [
+    [
+     "wraps",
+     1
+    ],
+    [
+     "prawns",
+     80
+    ],
+    [
+     "avocado",
+     0.5
+    ],
+    [
+     "salad",
+     30
+    ],
+    [
+     "mayo",
+     10
+    ]
+   ]
+  },
+  "prawn-egg-fried-rice": {
+   "c": "dinner",
+   "s": 4,
+   "l": [
+    [
+     "prawns",
+     300
+    ],
+    [
+     "eggs",
+     3
+    ],
+    [
+     "peas",
+     150
+    ],
+    [
+     "medley",
+     100
+    ],
+    [
+     "onions",
+     1
+    ],
+    [
+     "spring",
+     0.5
+    ],
+    [
+     "rice",
+     240
+    ],
+    [
+     "garlic",
+     6
+    ],
+    [
+     "soy",
+     20
+    ],
+    [
+     "vinegar",
+     10
+    ],
+    [
+     "oil",
+     20
+    ]
+   ]
+  },
+  "prawn-harissa-spaghetti": {
+   "c": "dinner",
+   "s": 2,
+   "l": [
+    [
+     "brocc",
+     100
+    ],
+    [
+     "plum",
+     150
+    ],
+    [
+     "prawns",
+     150
+    ],
+    [
+     "harissa",
+     20
+    ],
+    [
+     "lemon",
+     0.5
+    ],
+    [
+     "spaghetti",
+     180
+    ],
+    [
+     "oil",
+     30
+    ],
+    [
+     "garlic",
+     5
+    ]
+   ]
+  },
+  "prawn-mayo-sandwich": {
+   "c": "lunch",
+   "s": 1,
+   "l": [
+    [
+     "loaf",
+     2
+    ],
+    [
+     "prawns",
+     80
+    ],
+    [
+     "salad",
+     20
+    ],
+    [
+     "lemon",
+     0.1
+    ],
+    [
+     "mayo",
+     15
+    ]
+   ]
+  },
+  "prawn-salad": {
+   "c": "lunch",
+   "s": 1,
+   "l": [
+    [
+     "prawns",
+     150
+    ],
+    [
+     "iceberg",
+     0.25
+    ],
+    [
+     "cuc",
+     0.25
+    ],
+    [
+     "plum",
+     60
+    ],
+    [
+     "seafood",
+     30
+    ]
+   ]
+  },
+  "prawn-teriyaki-noodles": {
+   "c": "dinner",
+   "s": 2,
+   "l": [
+    [
+     "prawns",
+     300
+    ],
+    [
+     "stirfry",
+     400
+    ],
+    [
+     "eggs",
+     2
+    ],
+    [
+     "noodles",
+     150
+    ],
+    [
+     "teriyaki",
+     50
+    ],
+    [
+     "soy",
+     10
+    ],
+    [
+     "nuts",
+     30
+    ],
+    [
+     "oil",
+     8
+    ]
+   ]
+  },
+  "prep-ahead-chicken-mayo-wrap": {
+   "c": "lunch",
+   "s": 1,
+   "l": [
+    [
+     "roast",
+     120
+    ],
+    [
+     "wraps",
+     2
+    ],
+    [
+     "plum",
+     100
+    ],
+    [
+     "cuc",
+     0.25
+    ],
+    [
+     "iceberg",
+     0.1
+    ],
+    [
+     "mayo",
+     40
+    ],
+    [
+     "garlic",
+     2
+    ]
+   ]
+  },
+  "protein-grab-bag": {
+   "c": "lunch",
+   "s": 1,
+   "l": [
+    [
+     "grenade",
+     1
+    ],
+    [
+     "yog",
+     1
+    ],
+    [
+     "apple",
+     1
+    ]
+   ]
+  },
+  "protein-pancakes": {
+   "c": "breakfast",
+   "s": 1,
+   "l": [
+    [
+     "oats",
+     40
+    ],
+    [
+     "banana",
+     1
+    ],
+    [
+     "eggs",
+     2
+    ],
+    [
+     "milk",
+     100
+    ],
+    [
+     "pbutter",
+     15
+    ],
+    [
+     "oil",
+     5
+    ]
+   ]
+  },
+  "protein-pops": {
+   "c": "snack",
+   "s": 1,
+   "l": [
+    [
+     "pops",
+     1
+    ]
+   ]
+  },
+  "protein-smoothie": {
+   "c": "breakfast",
+   "s": 1,
+   "l": [
+    [
+     "banana",
+     1
+    ],
+    [
+     "milk",
+     200
+    ],
+    [
+     "isolate",
+     30
+    ],
+    [
+     "frozenfruit",
+     60
+    ]
+   ]
+  },
+  "protein-wafer": {
+   "c": "snack",
+   "s": 1,
+   "l": [
+    [
+     "wafer",
+     1
+    ]
+   ]
+  },
+  "protein-yogurt-pot": {
+   "c": "snack",
+   "s": 1,
+   "l": [
+    [
+     "yog",
+     1
+    ]
+   ]
+  },
+  "salmon-and-potato-salad": {
+   "c": "lunch",
+   "s": 1,
+   "l": [
+    [
+     "salmon",
+     110
+    ],
+    [
+     "potatoes",
+     150
+    ],
+    [
+     "cuc",
+     0.25
+    ],
+    [
+     "salad",
+     40
+    ],
+    [
+     "lemon",
+     0.5
+    ],
+    [
+     "oil",
+     4
+    ]
+   ]
+  },
+  "salmon-and-veg-parcels": {
+   "c": "dinner",
+   "s": 2,
+   "l": [
+    [
+     "salmon",
+     220
+    ],
+    [
+     "potatoes",
+     300
+    ],
+    [
+     "brocc",
+     200
+    ],
+    [
+     "lemon",
+     0.5
+    ],
+    [
+     "oil",
+     5
+    ]
+   ]
+  },
+  "salmon-corn-tacos": {
+   "c": "dinner",
+   "s": 2,
+   "l": [
+    [
+     "salmon",
+     260
+    ],
+    [
+     "wraps",
+     3
+    ],
+    [
+     "avocado",
+     0.5
+    ],
+    [
+     "plum",
+     160
+    ],
+    [
+     "cabbage",
+     80
+    ],
+    [
+     "coriander",
+     15
+    ],
+    [
+     "lime",
+     2
+    ],
+    [
+     "greek",
+     30
+    ],
+    [
+     "sweetcorn",
+     160
+    ],
+    [
+     "paprika",
+     2
+    ],
+    [
+     "chilliflakes",
+     1
+    ],
+    [
+     "oil",
+     10
+    ]
+   ]
+  },
+  "salmon-rice-and-broccoli": {
+   "c": "dinner",
+   "s": 2,
+   "l": [
+    [
+     "salmon",
+     220
+    ],
+    [
+     "brocc",
+     240
+    ],
+    [
+     "rice",
+     140
+    ],
+    [
+     "soy",
+     15
+    ],
+    [
+     "honey",
+     15
+    ],
+    [
+     "oil",
+     8
+    ]
+   ]
+  },
+  "salt-and-pepper-chicken": {
+   "c": "dinner",
+   "s": 2,
+   "l": [
+    [
+     "breast",
+     280
+    ],
+    [
+     "pepper",
+     1
+    ],
+    [
+     "onions",
+     1
+    ],
+    [
+     "chilli",
+     10
+    ],
+    [
+     "spring",
+     0.5
+    ],
+    [
+     "eggs",
+     2
+    ],
+    [
+     "rice",
+     140
+    ],
+    [
+     "cornflour",
+     20
+    ],
+    [
+     "fivespice",
+     4
+    ]
+   ]
+  },
+  "satay-chicken-rice-bowls": {
+   "c": "dinner",
+   "s": 4,
+   "l": [
+    [
+     "breast",
+     450
+    ],
+    [
+     "pbutter",
+     60
+    ],
+    [
+     "coconut",
+     100
+    ],
+    [
+     "medley",
+     250
+    ],
+    [
+     "lime",
+     2
+    ],
+    [
+     "coriander",
+     15
+    ],
+    [
+     "rice",
+     240
+    ],
+    [
+     "soy",
+     20
+    ],
+    [
+     "chilliflakes",
+     1
+    ],
+    [
+     "oil",
+     10
+    ]
+   ]
+  },
+  "saucy-sausage-sweet-potato-beans": {
+   "c": "dinner",
+   "s": 4,
+   "l": [
+    [
+     "sausages",
+     8
+    ],
+    [
+     "sweetpot",
+     500
+    ],
+    [
+     "onions",
+     1
+    ],
+    [
+     "butterbeans",
+     240
+    ],
+    [
+     "lemon",
+     1
+    ],
+    [
+     "garlic",
+     6
+    ],
+    [
+     "puree",
+     30
+    ],
+    [
+     "herbs",
+     2
+    ],
+    [
+     "oil",
+     10
+    ]
+   ]
+  },
+  "sausage-and-mash": {
+   "c": "dinner",
+   "s": 2,
+   "l": [
+    [
+     "sausages",
+     6
+    ],
+    [
+     "potatoes",
+     500
+    ],
+    [
+     "peas",
+     160
+    ],
+    [
+     "onions",
+     1
+    ],
+    [
+     "milk",
+     60
+    ],
+    [
+     "butter",
+     20
+    ],
+    [
+     "oil",
+     5
+    ],
+    [
+     "stock",
+     5
+    ]
+   ]
+  },
+  "sausage-and-potato-traybake": {
+   "c": "dinner",
+   "s": 2,
+   "l": [
+    [
+     "sausages",
+     6
+    ],
+    [
+     "potatoes",
+     600
+    ],
+    [
+     "carrots",
+     150
+    ],
+    [
+     "onions",
+     2
+    ],
+    [
+     "courgette",
+     200
+    ],
+    [
+     "oil",
+     15
+    ],
+    [
+     "herbs",
+     2
+    ]
+   ]
+  },
+  "sausage-egg-and-beans": {
+   "c": "breakfast",
+   "s": 1,
+   "l": [
+    [
+     "sausages",
+     3
+    ],
+    [
+     "eggs",
+     2
+    ],
+    [
+     "beans",
+     100
+    ],
+    [
+     "loaf",
+     1
+    ],
+    [
+     "oil",
+     5
+    ]
+   ]
+  },
+  "sausage-pepper-rice-stew": {
+   "c": "dinner",
+   "s": 2,
+   "l": [
+    [
+     "sausages",
+     4
+    ],
+    [
+     "onions",
+     1
+    ],
+    [
+     "celery",
+     1
+    ],
+    [
+     "pepper",
+     1
+    ],
+    [
+     "plum",
+     200
+    ],
+    [
+     "chilli",
+     10
+    ],
+    [
+     "spring",
+     0.25
+    ],
+    [
+     "garlic",
+     6
+    ],
+    [
+     "rice",
+     150
+    ],
+    [
+     "paprika",
+     3
+    ],
+    [
+     "stock",
+     10
+    ],
+    [
+     "flour",
+     10
+    ],
+    [
+     "vinegar",
+     15
+    ],
+    [
+     "oil",
+     10
+    ]
+   ]
+  },
+  "scrambled-eggs-on-toast": {
+   "c": "breakfast",
+   "s": 1,
+   "l": [
+    [
+     "eggs",
+     3
+    ],
+    [
+     "loaf",
+     2
+    ],
+    [
+     "butter",
+     15
+    ]
+   ]
+  },
+  "shakshuka-with-feta": {
+   "c": "dinner",
+   "s": 2,
+   "l": [
+    [
+     "eggs",
+     5
+    ],
+    [
+     "ctoms",
+     800
+    ],
+    [
+     "onions",
+     1
+    ],
+    [
+     "pepper",
+     1
+    ],
+    [
+     "feta",
+     80
+    ],
+    [
+     "loaf",
+     4
+    ],
+    [
+     "oil",
+     10
+    ],
+    [
+     "paprika",
+     3
+    ],
+    [
+     "cumin",
+     3
+    ]
+   ]
+  },
+  "singapore-noodles-with-prawns": {
+   "c": "dinner",
+   "s": 2,
+   "l": [
+    [
+     "prawns",
+     240
+    ],
+    [
+     "onions",
+     1
+    ],
+    [
+     "chilli",
+     10
+    ],
+    [
+     "greenbeans",
+     100
+    ],
+    [
+     "mixpep",
+     1
+    ],
+    [
+     "spinach",
+     100
+    ],
+    [
+     "noodles",
+     100
+    ],
+    [
+     "oil",
+     10
+    ],
+    [
+     "garlic",
+     6
+    ],
+    [
+     "curry",
+     8
+    ],
+    [
+     "nuts",
+     40
+    ],
+    [
+     "soy",
+     20
+    ]
+   ]
+  },
+  "smashed-eggs-avocado-chilli": {
+   "c": "breakfast",
+   "s": 1,
+   "l": [
+    [
+     "eggs",
+     3
+    ],
+    [
+     "avocado",
+     0.3
+    ],
+    [
+     "lime",
+     0.5
+    ],
+    [
+     "wholeloaf",
+     80
+    ],
+    [
+     "coriander",
+     5
+    ],
+    [
+     "butter",
+     4
+    ],
+    [
+     "paprika",
+     1
+    ],
+    [
+     "chilliflakes",
+     1
+    ]
+   ]
+  },
+  "smoked-salmon-and-egg-plate": {
+   "c": "breakfast",
+   "s": 1,
+   "l": [
+    [
+     "smokedsalmon",
+     50
+    ],
+    [
+     "eggs",
+     2
+    ],
+    [
+     "cuc",
+     0.15
+    ],
+    [
+     "avocado",
+     0.25
+    ]
+   ]
+  },
+  "smoked-salmon-bagel": {
+   "c": "breakfast",
+   "s": 1,
+   "l": [
+    [
+     "bagels",
+     1
+    ],
+    [
+     "softcheese",
+     40
+    ],
+    [
+     "smokedsalmon",
+     50
+    ]
+   ]
+  },
+  "smoked-salmon-scrambled-eggs": {
+   "c": "breakfast",
+   "s": 1,
+   "l": [
+    [
+     "eggs",
+     3
+    ],
+    [
+     "smokedsalmon",
+     50
+    ],
+    [
+     "loaf",
+     2
+    ],
+    [
+     "butter",
+     10
+    ]
+   ]
+  },
+  "smoky-beef-enchiladas": {
+   "c": "dinner",
+   "s": 4,
+   "l": [
+    [
+     "mince",
+     500
+    ],
+    [
+     "onions",
+     2
+    ],
+    [
+     "wraps",
+     8
+    ],
+    [
+     "plum",
+     250
+    ],
+    [
+     "spring",
+     0.25
+    ],
+    [
+     "coriander",
+     10
+    ],
+    [
+     "puree",
+     30
+    ],
+    [
+     "stock",
+     10
+    ],
+    [
+     "cumin",
+     3
+    ],
+    [
+     "paprika",
+     5
+    ],
+    [
+     "chilliflakes",
+     1
+    ],
+    [
+     "cheddar",
+     80
+    ],
+    [
+     "oil",
+     15
+    ]
+   ]
+  },
+  "spaghetti-bolognese": {
+   "c": "dinner",
+   "s": 2,
+   "l": [
+    [
+     "mince",
+     250
+    ],
+    [
+     "onions",
+     1
+    ],
+    [
+     "carrots",
+     80
+    ],
+    [
+     "pepper",
+     0.5
+    ],
+    [
+     "ctoms",
+     400
+    ],
+    [
+     "spaghetti",
+     150
+    ],
+    [
+     "puree",
+     20
+    ],
+    [
+     "herbs",
+     2
+    ],
+    [
+     "parmesan",
+     20
+    ],
+    [
+     "garlic",
+     6
+    ]
+   ]
+  },
+  "spanish-chicken-stew": {
+   "c": "dinner",
+   "s": 4,
+   "l": [
+    [
+     "thigh",
+     500
+    ],
+    [
+     "pepper",
+     1
+    ],
+    [
+     "onions",
+     1
+    ],
+    [
+     "oil",
+     25
+    ],
+    [
+     "garlic",
+     6
+    ],
+    [
+     "vinegar",
+     15
+    ],
+    [
+     "paprika",
+     8
+    ],
+    [
+     "stock",
+     6
+    ],
+    [
+     "nuts",
+     50
+    ],
+    [
+     "rice",
+     300
+    ]
+   ]
+  },
+  "spanish-shakshuka": {
+   "c": "breakfast",
+   "s": 1,
+   "l": [
+    [
+     "chorizo",
+     40
+    ],
+    [
+     "onions",
+     0.5
+    ],
+    [
+     "pepper",
+     1
+    ],
+    [
+     "ctoms",
+     135
+    ],
+    [
+     "eggs",
+     2
+    ],
+    [
+     "greek",
+     30
+    ],
+    [
+     "wholeloaf",
+     70
+    ],
+    [
+     "oil",
+     2
+    ],
+    [
+     "paprika",
+     3
+    ],
+    [
+     "cumin",
+     2
+    ],
+    [
+     "puree",
+     10
+    ]
+   ]
+  },
+  "speedy-chicken-noodle-soup-with-egg": {
+   "c": "dinner",
+   "s": 2,
+   "l": [
+    [
+     "eggs",
+     2
+    ],
+    [
+     "spinach",
+     100
+    ],
+    [
+     "roast",
+     120
+    ],
+    [
+     "coriander",
+     10
+    ],
+    [
+     "noodles",
+     120
+    ],
+    [
+     "stock",
+     10
+    ],
+    [
+     "soy",
+     15
+    ],
+    [
+     "chilliflakes",
+     1
+    ]
+   ]
+  },
+  "spiced-chicken-ciabatta-herby-potatoes": {
+   "c": "dinner",
+   "s": 2,
+   "l": [
+    [
+     "breast",
+     300
+    ],
+    [
+     "potatoes",
+     450
+    ],
+    [
+     "loaf",
+     4
+    ],
+    [
+     "spring",
+     0.25
+    ],
+    [
+     "iceberg",
+     0.25
+    ],
+    [
+     "oregano",
+     2
+    ],
+    [
+     "chilliflakes",
+     1
+    ],
+    [
+     "garlic",
+     3
+    ],
+    [
+     "vinegar",
+     15
+    ],
+    [
+     "oil",
+     30
+    ],
+    [
+     "mayo",
+     30
+    ]
+   ]
+  },
+  "spiced-chicken-rice-traybake": {
+   "c": "dinner",
+   "s": 4,
+   "l": [
+    [
+     "thigh",
+     700
+    ],
+    [
+     "onions",
+     2
+    ],
+    [
+     "mixpep",
+     3
+    ],
+    [
+     "cobs",
+     1
+    ],
+    [
+     "greek",
+     40
+    ],
+    [
+     "rice",
+     300
+    ],
+    [
+     "paprika",
+     10
+    ],
+    [
+     "cumin",
+     5
+    ],
+    [
+     "chilliflakes",
+     2
+    ],
+    [
+     "oil",
+     20
+    ]
+   ]
+  },
+  "spiced-turkey-shawarma-rice-bowl": {
+   "c": "dinner",
+   "s": 2,
+   "l": [
+    [
+     "turkeymince",
+     300
+    ],
+    [
+     "onions",
+     1
+    ],
+    [
+     "plum",
+     160
+    ],
+    [
+     "cuc",
+     0.5
+    ],
+    [
+     "greek",
+     120
+    ],
+    [
+     "lemon",
+     1
+    ],
+    [
+     "coriander",
+     10
+    ],
+    [
+     "rice",
+     120
+    ],
+    [
+     "garlic",
+     8
+    ],
+    [
+     "oil",
+     20
+    ],
+    [
+     "cumin",
+     3
+    ],
+    [
+     "paprika",
+     4
+    ],
+    [
+     "chilliflakes",
+     1
+    ],
+    [
+     "puree",
+     15
+    ]
+   ]
+  },
+  "spicy-bean-and-rice-bowl": {
+   "c": "lunch",
+   "s": 1,
+   "l": [
+    [
+     "kidney",
+     120
+    ],
+    [
+     "pepper",
+     0.5
+    ],
+    [
+     "rice",
+     70
+    ],
+    [
+     "sweetcorn",
+     60
+    ],
+    [
+     "cheddar",
+     25
+    ],
+    [
+     "oil",
+     5
+    ],
+    [
+     "paprika",
+     2
+    ],
+    [
+     "cumin",
+     2
+    ]
+   ]
+  },
+  "spicy-gochujang-beef-pasta": {
+   "c": "dinner",
+   "s": 4,
+   "l": [
+    [
+     "mince",
+     400
+    ],
+    [
+     "onions",
+     1
+    ],
+    [
+     "ginger",
+     15
+    ],
+    [
+     "chilli",
+     10
+    ],
+    [
+     "spring",
+     1
+    ],
+    [
+     "lime",
+     1
+    ],
+    [
+     "gochujang",
+     45
+    ],
+    [
+     "fusilli",
+     320
+    ],
+    [
+     "garlic",
+     9
+    ],
+    [
+     "puree",
+     30
+    ],
+    [
+     "darksoy",
+     15
+    ],
+    [
+     "honey",
+     20
+    ],
+    [
+     "sesameoil",
+     10
+    ],
+    [
+     "sesameseeds",
+     6
+    ],
+    [
+     "oil",
+     5
+    ]
+   ]
+  },
+  "spicy-soy-chicken-and-cabbage": {
+   "c": "dinner",
+   "s": 2,
+   "l": [
+    [
+     "thigh",
+     350
+    ],
+    [
+     "cabbage",
+     250
+    ],
+    [
+     "chilli",
+     10
+    ],
+    [
+     "coriander",
+     5
+    ],
+    [
+     "rice",
+     140
+    ],
+    [
+     "garlic",
+     6
+    ],
+    [
+     "soy",
+     25
+    ],
+    [
+     "honey",
+     10
+    ],
+    [
+     "oil",
+     15
+    ]
+   ]
+  },
+  "spinach-and-mushroom-frittata": {
+   "c": "lunch",
+   "s": 1,
+   "l": [
+    [
+     "eggs",
+     3
+    ],
+    [
+     "spinach",
+     60
+    ],
+    [
+     "mushrooms",
+     60
+    ],
+    [
+     "plum",
+     50
+    ],
+    [
+     "cheddar",
+     20
+    ],
+    [
+     "oil",
+     5
+    ]
+   ]
+  },
+  "spinach-feta-white-bean-pan": {
+   "c": "dinner",
+   "s": 2,
+   "l": [
+    [
+     "spring",
+     1
+    ],
+    [
+     "butterbeans",
+     400
+    ],
+    [
+     "spinach",
+     150
+    ],
+    [
+     "lemon",
+     1
+    ],
+    [
+     "feta",
+     100
+    ],
+    [
+     "coriander",
+     10
+    ],
+    [
+     "pittas",
+     2
+    ],
+    [
+     "garlic",
+     6
+    ],
+    [
+     "oil",
+     15
+    ]
+   ]
+  },
+  "steak-and-chips": {
+   "c": "dinner",
+   "s": 2,
+   "l": [
+    [
+     "rump",
+     400
+    ],
+    [
+     "chips",
+     500
+    ],
+    [
+     "peas",
+     200
+    ],
+    [
+     "mushrooms",
+     150
+    ],
+    [
+     "oil",
+     10
+    ],
+    [
+     "butter",
+     10
+    ]
+   ]
+  },
+  "steak-and-eggs-potatoes": {
+   "c": "breakfast",
+   "s": 1,
+   "l": [
+    [
+     "rump",
+     135
+    ],
+    [
+     "potatoes",
+     100
+    ],
+    [
+     "onions",
+     0.5
+    ],
+    [
+     "mixpep",
+     0.5
+    ],
+    [
+     "eggs",
+     2
+    ],
+    [
+     "oil",
+     8
+    ]
+   ]
+  },
+  "steak-chimichurri-chickpea-salad": {
+   "c": "dinner",
+   "s": 2,
+   "l": [
+    [
+     "rump",
+     300
+    ],
+    [
+     "chickpeas",
+     240
+    ],
+    [
+     "coriander",
+     20
+    ],
+    [
+     "chilli",
+     10
+    ],
+    [
+     "plum",
+     150
+    ],
+    [
+     "spinach",
+     60
+    ],
+    [
+     "garlic",
+     6
+    ],
+    [
+     "chilliflakes",
+     1
+    ],
+    [
+     "oregano",
+     1
+    ],
+    [
+     "vinegar",
+     15
+    ],
+    [
+     "oil",
+     25
+    ]
+   ]
+  },
+  "steak-fajitas": {
+   "c": "dinner",
+   "s": 2,
+   "l": [
+    [
+     "sizzle",
+     320
+    ],
+    [
+     "mixpep",
+     3
+    ],
+    [
+     "onions",
+     1
+    ],
+    [
+     "wraps",
+     3
+    ],
+    [
+     "fajita",
+     8
+    ]
+   ]
+  },
+  "steak-night": {
+   "c": "dinner",
+   "s": 2,
+   "l": [
+    [
+     "rump",
+     400
+    ],
+    [
+     "slices",
+     300
+    ],
+    [
+     "medley",
+     250
+    ],
+    [
+     "oil",
+     10
+    ]
+   ]
+  },
+  "sticky-sesame-turkey-meatballs": {
+   "c": "dinner",
+   "s": 2,
+   "l": [
+    [
+     "turkeymince",
+     300
+    ],
+    [
+     "spring",
+     1
+    ],
+    [
+     "eggs",
+     1
+    ],
+    [
+     "ginger",
+     5
+    ],
+    [
+     "brocc",
+     200
+    ],
+    [
+     "lime",
+     1
+    ],
+    [
+     "rice",
+     140
+    ],
+    [
+     "garlic",
+     6
+    ],
+    [
+     "breadcrumbs",
+     25
+    ],
+    [
+     "chilliflakes",
+     1
+    ],
+    [
+     "soy",
+     35
+    ],
+    [
+     "sesameoil",
+     5
+    ],
+    [
+     "honey",
+     25
+    ],
+    [
+     "cornflour",
+     6
+    ],
+    [
+     "sesameseeds",
+     6
+    ]
+   ]
+  },
+  "summer-bbq-chicken-corn": {
+   "c": "dinner",
+   "s": 2,
+   "l": [
+    [
+     "thigh",
+     300
+    ],
+    [
+     "bbq",
+     50
+    ],
+    [
+     "avocado",
+     1
+    ],
+    [
+     "plum",
+     80
+    ],
+    [
+     "salad",
+     120
+    ],
+    [
+     "cabbage",
+     130
+    ],
+    [
+     "cobs",
+     2
+    ],
+    [
+     "greek",
+     40
+    ],
+    [
+     "butter",
+     10
+    ],
+    [
+     "oil",
+     15
+    ],
+    [
+     "vinegar",
+     5
+    ]
+   ]
+  },
+  "summer-fruit-cheesecake-bagel": {
+   "c": "breakfast",
+   "s": 1,
+   "l": [
+    [
+     "bagels",
+     1
+    ],
+    [
+     "softcheese",
+     60
+    ],
+    [
+     "greek",
+     25
+    ],
+    [
+     "lemon",
+     0.1
+    ],
+    [
+     "honey",
+     8
+    ],
+    [
+     "frozenfruit",
+     60
+    ]
+   ]
+  },
+  "sweet-chilli-beef-skewers-and-rice": {
+   "c": "dinner",
+   "s": 4,
+   "l": [
+    [
+     "sizzle",
+     300
+    ],
+    [
+     "plum",
+     170
+    ],
+    [
+     "sweetchilli",
+     175
+    ],
+    [
+     "babycorn",
+     100
+    ],
+    [
+     "sugarsnap",
+     75
+    ],
+    [
+     "spring",
+     0.5
+    ],
+    [
+     "lime",
+     1
+    ],
+    [
+     "coriander",
+     10
+    ],
+    [
+     "rice",
+     240
+    ],
+    [
+     "oil",
+     5
+    ]
+   ]
+  },
+  "sweet-potato-and-chickpea-curry-with-naan": {
+   "c": "dinner",
+   "s": 2,
+   "l": [
+    [
+     "sweetpot",
+     400
+    ],
+    [
+     "chickpeas",
+     240
+    ],
+    [
+     "spinach",
+     100
+    ],
+    [
+     "tikka",
+     60
+    ],
+    [
+     "coconut",
+     200
+    ],
+    [
+     "passata",
+     200
+    ],
+    [
+     "naan",
+     4
+    ],
+    [
+     "oil",
+     8
+    ]
+   ]
+  },
+  "sweet-potato-and-egg-hash": {
+   "c": "breakfast",
+   "s": 1,
+   "l": [
+    [
+     "sweetpot",
+     200
+    ],
+    [
+     "eggs",
+     2
+    ],
+    [
+     "onions",
+     0.5
+    ],
+    [
+     "pepper",
+     0.5
+    ],
+    [
+     "oil",
+     5
+    ],
+    [
+     "paprika",
+     2
+    ]
+   ]
+  },
+  "sweet-potato-chilli-bake": {
+   "c": "dinner",
+   "s": 2,
+   "l": [
+    [
+     "sweetpot",
+     600
+    ],
+    [
+     "kidney",
+     400
+    ],
+    [
+     "ctoms",
+     400
+    ],
+    [
+     "onions",
+     1
+    ],
+    [
+     "mixpep",
+     1
+    ],
+    [
+     "cheddar",
+     60
+    ],
+    [
+     "cumin",
+     3
+    ],
+    [
+     "paprika",
+     3
+    ],
+    [
+     "oil",
+     8
+    ]
+   ]
+  },
+  "sweet-potato-cottage-pie": {
+   "c": "dinner",
+   "s": 4,
+   "l": [
+    [
+     "mince",
+     500
+    ],
+    [
+     "onions",
+     1
+    ],
+    [
+     "carrots",
+     100
+    ],
+    [
+     "ctoms",
+     400
+    ],
+    [
+     "sweetpot",
+     800
+    ],
+    [
+     "greek",
+     150
+    ],
+    [
+     "peas",
+     200
+    ],
+    [
+     "stock",
+     10
+    ],
+    [
+     "oregano",
+     1
+    ],
+    [
+     "oil",
+     10
+    ]
+   ]
+  },
+  "tandoori-chicken-kebab-bean-biryani": {
+   "c": "dinner",
+   "s": 4,
+   "l": [
+    [
+     "thigh",
+     600
+    ],
+    [
+     "tikka",
+     45
+    ],
+    [
+     "greek",
+     30
+    ],
+    [
+     "greenbeans",
+     200
+    ],
+    [
+     "onions",
+     1
+    ],
+    [
+     "coriander",
+     15
+    ],
+    [
+     "lemon",
+     1
+    ],
+    [
+     "rice",
+     300
+    ],
+    [
+     "stock",
+     12
+    ],
+    [
+     "butter",
+     25
+    ],
+    [
+     "oil",
+     10
+    ],
+    [
+     "curry",
+     4
+    ]
+   ]
+  },
+  "tandoori-chicken-skewers-and-rice": {
+   "c": "dinner",
+   "s": 2,
+   "l": [
+    [
+     "breast",
+     350
+    ],
+    [
+     "greek",
+     150
+    ],
+    [
+     "lemon",
+     0.5
+    ],
+    [
+     "lime",
+     0.5
+    ],
+    [
+     "coriander",
+     10
+    ],
+    [
+     "rice",
+     150
+    ],
+    [
+     "paprika",
+     5
+    ],
+    [
+     "cumin",
+     3
+    ],
+    [
+     "curry",
+     5
+    ],
+    [
+     "puree",
+     15
+    ],
+    [
+     "garlic",
+     6
+    ]
+   ]
+  },
+  "teriyaki-chicken-egg-rice-bowl": {
+   "c": "dinner",
+   "s": 2,
+   "l": [
+    [
+     "thigh",
+     300
+    ],
+    [
+     "eggs",
+     2
+    ],
+    [
+     "spring",
+     0.25
+    ],
+    [
+     "peas",
+     100
+    ],
+    [
+     "rice",
+     150
+    ],
+    [
+     "teriyaki",
+     40
+    ],
+    [
+     "soy",
+     10
+    ],
+    [
+     "garlic",
+     3
+    ],
+    [
+     "oil",
+     10
+    ]
+   ]
+  },
+  "teriyaki-chicken-noodles": {
+   "c": "dinner",
+   "s": 2,
+   "l": [
+    [
+     "breast",
+     280
+    ],
+    [
+     "stirfry",
+     400
+    ],
+    [
+     "noodles",
+     120
+    ],
+    [
+     "teriyaki",
+     60
+    ]
+   ]
+  },
+  "texan-beef-burritos": {
+   "c": "dinner",
+   "s": 4,
+   "l": [
+    [
+     "mince",
+     500
+    ],
+    [
+     "bbq",
+     200
+    ],
+    [
+     "ctoms",
+     200
+    ],
+    [
+     "kidney",
+     380
+    ],
+    [
+     "wraps",
+     8
+    ],
+    [
+     "avocado",
+     1.5
+    ],
+    [
+     "oil",
+     15
+    ],
+    [
+     "cheddar",
+     100
+    ]
+   ]
+  },
+  "thai-basil-chicken-stir-fry": {
+   "c": "dinner",
+   "s": 2,
+   "l": [
+    [
+     "breast",
+     300
+    ],
+    [
+     "pepper",
+     1
+    ],
+    [
+     "onions",
+     1
+    ],
+    [
+     "chilli",
+     10
+    ],
+    [
+     "greenbeans",
+     100
+    ],
+    [
+     "thaibasil",
+     20
+    ],
+    [
+     "eggs",
+     2
+    ],
+    [
+     "lime",
+     1
+    ],
+    [
+     "rice",
+     150
+    ],
+    [
+     "garlic",
+     9
+    ],
+    [
+     "fishsauce",
+     25
+    ],
+    [
+     "oystersauce",
+     20
+    ],
+    [
+     "soy",
+     15
+    ],
+    [
+     "darksoy",
+     10
+    ],
+    [
+     "honey",
+     5
+    ],
+    [
+     "ricevinegar",
+     10
+    ],
+    [
+     "oil",
+     20
+    ]
+   ]
+  },
+  "thai-chicken-and-broccoli-curry": {
+   "c": "dinner",
+   "s": 4,
+   "l": [
+    [
+     "thigh",
+     450
+    ],
+    [
+     "onions",
+     1
+    ],
+    [
+     "brocc",
+     300
+    ],
+    [
+     "carrots",
+     100
+    ],
+    [
+     "thaicurry",
+     60
+    ],
+    [
+     "coconut",
+     250
+    ],
+    [
+     "rice",
+     300
+    ],
+    [
+     "oil",
+     15
+    ]
+   ]
+  },
+  "thai-red-curry-cod-parcels": {
+   "c": "dinner",
+   "s": 2,
+   "l": [
+    [
+     "cod",
+     220
+    ],
+    [
+     "thaicurry",
+     30
+    ],
+    [
+     "coconut",
+     100
+    ],
+    [
+     "sugarsnap",
+     150
+    ],
+    [
+     "lime",
+     1.5
+    ],
+    [
+     "chilli",
+     5
+    ],
+    [
+     "coriander",
+     8
+    ],
+    [
+     "basmati",
+     120
+    ],
+    [
+     "fishsauce",
+     10
+    ],
+    [
+     "oil",
+     5
+    ]
+   ]
+  },
+  "thai-red-turkey-meatball-curry": {
+   "c": "dinner",
+   "s": 2,
+   "l": [
+    [
+     "turkeymince",
+     300
+    ],
+    [
+     "spring",
+     0.5
+    ],
+    [
+     "greenbeans",
+     100
+    ],
+    [
+     "thaicurry",
+     40
+    ],
+    [
+     "coconut",
+     200
+    ],
+    [
+     "basil",
+     8
+    ],
+    [
+     "coriander",
+     8
+    ],
+    [
+     "lime",
+     1
+    ],
+    [
+     "eggs",
+     1
+    ],
+    [
+     "rice",
+     120
+    ],
+    [
+     "garlic",
+     6
+    ],
+    [
+     "breadcrumbs",
+     20
+    ],
+    [
+     "fishsauce",
+     10
+    ],
+    [
+     "sesameseeds",
+     5
+    ],
+    [
+     "oil",
+     10
+    ]
+   ]
+  },
+  "tikka-coconut-cod-traybake": {
+   "c": "dinner",
+   "s": 2,
+   "l": [
+    [
+     "plum",
+     200
+    ],
+    [
+     "onions",
+     1
+    ],
+    [
+     "cod",
+     300
+    ],
+    [
+     "chickpeas",
+     240
+    ],
+    [
+     "coconut",
+     150
+    ],
+    [
+     "tikka",
+     40
+    ],
+    [
+     "peas",
+     100
+    ],
+    [
+     "lime",
+     1
+    ],
+    [
+     "rice",
+     80
+    ],
+    [
+     "garlic",
+     6
+    ],
+    [
+     "oil",
+     10
+    ]
+   ]
+  },
+  "tomato-soup-and-cheese-toastie": {
+   "c": "lunch",
+   "s": 1,
+   "l": [
+    [
+     "tomsoup",
+     400
+    ],
+    [
+     "loaf",
+     2
+    ],
+    [
+     "cheddar",
+     40
+    ],
+    [
+     "butter",
+     10
+    ]
+   ]
+  },
+  "tortilla-breakfast-pizza": {
+   "c": "breakfast",
+   "s": 1,
+   "l": [
+    [
+     "eggs",
+     2
+    ],
+    [
+     "wraps",
+     1
+    ],
+    [
+     "plum",
+     60
+    ],
+    [
+     "onions",
+     0.25
+    ],
+    [
+     "cheddar",
+     30
+    ]
+   ]
+  },
+  "tuna-and-bean-salad": {
+   "c": "lunch",
+   "s": 1,
+   "l": [
+    [
+     "kidney",
+     100
+    ],
+    [
+     "plum",
+     100
+    ],
+    [
+     "cuc",
+     0.25
+    ],
+    [
+     "spring",
+     0.25
+    ],
+    [
+     "lemon",
+     0.5
+    ],
+    [
+     "tuna",
+     112
+    ],
+    [
+     "oil",
+     5
+    ]
+   ]
+  },
+  "tuna-and-sweetcorn-jacket-potato": {
+   "c": "lunch",
+   "s": 1,
+   "l": [
+    [
+     "bakepot",
+     1
+    ],
+    [
+     "tuna",
+     112
+    ],
+    [
+     "sweetcorn",
+     60
+    ],
+    [
+     "mayo",
+     20
+    ]
+   ]
+  },
+  "tuna-chickpea-salad": {
+   "c": "lunch",
+   "s": 1,
+   "l": [
+    [
+     "chickpeas",
+     135
+    ],
+    [
+     "plum",
+     80
+    ],
+    [
+     "cuc",
+     0.25
+    ],
+    [
+     "onions",
+     0.5
+    ],
+    [
+     "lemon",
+     0.5
+    ],
+    [
+     "feta",
+     30
+    ],
+    [
+     "pittas",
+     1
+    ],
+    [
+     "tuna",
+     100
+    ],
+    [
+     "oil",
+     5
+    ]
+   ]
+  },
+  "tuna-cucumber-protein-wrap": {
+   "c": "lunch",
+   "s": 1,
+   "l": [
+    [
+     "mission",
+     1
+    ],
+    [
+     "greek",
+     30
+    ],
+    [
+     "cuc",
+     0.25
+    ],
+    [
+     "lemon",
+     0.25
+    ],
+    [
+     "tuna",
+     100
+    ]
+   ]
+  },
+  "tuna-mayo-pasta-salad": {
+   "c": "lunch",
+   "s": 1,
+   "l": [
+    [
+     "salad",
+     30
+    ],
+    [
+     "tuna",
+     112
+    ],
+    [
+     "fusilli",
+     60
+    ],
+    [
+     "mayo",
+     20
+    ],
+    [
+     "sweetcorn",
+     50
+    ]
+   ]
+  },
+  "tuna-mayo-sandwich": {
+   "c": "lunch",
+   "s": 1,
+   "l": [
+    [
+     "loaf",
+     2
+    ],
+    [
+     "spring",
+     0.1
+    ],
+    [
+     "salad",
+     15
+    ],
+    [
+     "tuna",
+     80
+    ],
+    [
+     "mayo",
+     15
+    ]
+   ]
+  },
+  "tuna-melt-toastie": {
+   "c": "lunch",
+   "s": 1,
+   "l": [
+    [
+     "loaf",
+     2
+    ],
+    [
+     "tuna",
+     80
+    ],
+    [
+     "mayo",
+     15
+    ],
+    [
+     "cheddar",
+     30
+    ],
+    [
+     "butter",
+     8
+    ]
+   ]
+  },
+  "tuna-on-crackers": {
+   "c": "snack",
+   "s": 1,
+   "l": [
+    [
+     "crackers",
+     30
+    ],
+    [
+     "tuna",
+     60
+    ],
+    [
+     "mayo",
+     10
+    ]
+   ]
+  },
+  "tuna-rice-cake": {
+   "c": "snack",
+   "s": 1,
+   "l": [
+    [
+     "ricecakes",
+     20
+    ],
+    [
+     "cuc",
+     0.1
+    ],
+    [
+     "tuna",
+     60
+    ]
+   ]
+  },
+  "tuna-stuffed-jacket-potatoes": {
+   "c": "dinner",
+   "s": 2,
+   "l": [
+    [
+     "bakepot",
+     2
+    ],
+    [
+     "plum",
+     100
+    ],
+    [
+     "tuna",
+     224
+    ],
+    [
+     "sweetcorn",
+     120
+    ],
+    [
+     "mayo",
+     40
+    ]
+   ]
+  },
+  "tuna-sweetcorn-salad-pot": {
+   "c": "lunch",
+   "s": 1,
+   "l": [
+    [
+     "salad",
+     60
+    ],
+    [
+     "plum",
+     80
+    ],
+    [
+     "cuc",
+     0.25
+    ],
+    [
+     "greek",
+     30
+    ],
+    [
+     "lemon",
+     0.25
+    ],
+    [
+     "pittas",
+     1
+    ],
+    [
+     "tuna",
+     100
+    ],
+    [
+     "sweetcorn",
+     60
+    ]
+   ]
+  },
+  "tuna-sweetcorn-wrap": {
+   "c": "lunch",
+   "s": 1,
+   "l": [
+    [
+     "wraps",
+     1
+    ],
+    [
+     "salad",
+     20
+    ],
+    [
+     "tuna",
+     80
+    ],
+    [
+     "mayo",
+     15
+    ],
+    [
+     "sweetcorn",
+     40
+    ]
+   ]
+  },
+  "tuna-veg-pasta-bake": {
+   "c": "dinner",
+   "s": 4,
+   "l": [
+    [
+     "courgette",
+     200
+    ],
+    [
+     "pepper",
+     1
+    ],
+    [
+     "onions",
+     1
+    ],
+    [
+     "plum",
+     150
+    ],
+    [
+     "passata",
+     500
+    ],
+    [
+     "tuna",
+     290
+    ],
+    [
+     "fusilli",
+     300
+    ],
+    [
+     "cheddar",
+     100
+    ],
+    [
+     "herbs",
+     3
+    ],
+    [
+     "oil",
+     10
+    ]
+   ]
+  },
+  "turkey-and-bean-chilli-with-rice": {
+   "c": "dinner",
+   "s": 2,
+   "l": [
+    [
+     "turkeymince",
+     300
+    ],
+    [
+     "kidney",
+     200
+    ],
+    [
+     "ctoms",
+     400
+    ],
+    [
+     "onions",
+     1
+    ],
+    [
+     "mixpep",
+     1
+    ],
+    [
+     "rice",
+     90
+    ],
+    [
+     "paprika",
+     3
+    ],
+    [
+     "cumin",
+     3
+    ],
+    [
+     "oil",
+     6
+    ]
+   ]
+  },
+  "turkey-and-veg-soup": {
+   "c": "lunch",
+   "s": 1,
+   "l": [
+    [
+     "turkeymince",
+     120
+    ],
+    [
+     "carrots",
+     80
+    ],
+    [
+     "onions",
+     0.5
+    ],
+    [
+     "passata",
+     200
+    ],
+    [
+     "cumin",
+     2
+    ],
+    [
+     "oil",
+     4
+    ]
+   ]
+  },
+  "turkey-bolognese": {
+   "c": "dinner",
+   "s": 4,
+   "l": [
+    [
+     "turkeymince",
+     500
+    ],
+    [
+     "onions",
+     1
+    ],
+    [
+     "carrots",
+     120
+    ],
+    [
+     "celery",
+     2
+    ],
+    [
+     "mushrooms",
+     150
+    ],
+    [
+     "ctoms",
+     400
+    ],
+    [
+     "passata",
+     250
+    ],
+    [
+     "spaghetti",
+     300
+    ],
+    [
+     "puree",
+     30
+    ],
+    [
+     "stock",
+     10
+    ],
+    [
+     "oregano",
+     1
+    ],
+    [
+     "garlic",
+     6
+    ],
+    [
+     "oil",
+     15
+    ]
+   ]
+  },
+  "turkey-cheese-protein-wrap": {
+   "c": "lunch",
+   "s": 1,
+   "l": [
+    [
+     "mission",
+     1
+    ],
+    [
+     "turkeyslices",
+     50
+    ],
+    [
+     "salad",
+     20
+    ],
+    [
+     "plum",
+     50
+    ],
+    [
+     "cheddar",
+     25
+    ]
+   ]
+  },
+  "turkey-cranberry-wrap": {
+   "c": "lunch",
+   "s": 1,
+   "l": [
+    [
+     "wraps",
+     1
+    ],
+    [
+     "softcheese",
+     40
+    ],
+    [
+     "salad",
+     30
+    ],
+    [
+     "turkeyslices",
+     85
+    ],
+    [
+     "cranberry",
+     30
+    ]
+   ]
+  },
+  "turkey-hummus-protein-pitta": {
+   "c": "lunch",
+   "s": 1,
+   "l": [
+    [
+     "proteinpitta",
+     2
+    ],
+    [
+     "turkeyslices",
+     60
+    ],
+    [
+     "houm",
+     40
+    ],
+    [
+     "cuc",
+     0.2
+    ],
+    [
+     "plum",
+     60
+    ]
+   ]
+  },
+  "turkey-keema-curry": {
+   "c": "dinner",
+   "s": 2,
+   "l": [
+    [
+     "turkeymince",
+     300
+    ],
+    [
+     "onions",
+     1
+    ],
+    [
+     "peas",
+     100
+    ],
+    [
+     "tikka",
+     60
+    ],
+    [
+     "passata",
+     200
+    ],
+    [
+     "rice",
+     140
+    ],
+    [
+     "curry",
+     4
+    ],
+    [
+     "oil",
+     10
+    ]
+   ]
+  },
+  "turkey-meatball-pepper-pasta": {
+   "c": "dinner",
+   "s": 2,
+   "l": [
+    [
+     "turkeymince",
+     300
+    ],
+    [
+     "pepper",
+     2
+    ],
+    [
+     "greek",
+     80
+    ],
+    [
+     "spaghetti",
+     130
+    ],
+    [
+     "herbs",
+     3
+    ],
+    [
+     "oil",
+     8
+    ],
+    [
+     "garlic",
+     4
+    ]
+   ]
+  },
+  "turkey-meatball-traybake": {
+   "c": "dinner",
+   "s": 2,
+   "l": [
+    [
+     "turkeymince",
+     300
+    ],
+    [
+     "eggs",
+     1
+    ],
+    [
+     "onions",
+     1
+    ],
+    [
+     "potatoes",
+     400
+    ],
+    [
+     "carrots",
+     200
+    ],
+    [
+     "oil",
+     12
+    ],
+    [
+     "herbs",
+     2
+    ]
+   ]
+  },
+  "turkey-meatballs-and-spaghetti": {
+   "c": "dinner",
+   "s": 2,
+   "l": [
+    [
+     "turkeymince",
+     300
+    ],
+    [
+     "eggs",
+     1
+    ],
+    [
+     "onions",
+     1
+    ],
+    [
+     "passata",
+     400
+    ],
+    [
+     "spaghetti",
+     180
+    ],
+    [
+     "parmesan",
+     20
+    ],
+    [
+     "garlic",
+     6
+    ],
+    [
+     "herbs",
+     2
+    ],
+    [
+     "oil",
+     8
+    ]
+   ]
+  },
+  "turkey-salad-sandwich": {
+   "c": "lunch",
+   "s": 1,
+   "l": [
+    [
+     "wholeloaf",
+     80
+    ],
+    [
+     "turkeyslices",
+     60
+    ],
+    [
+     "salad",
+     25
+    ],
+    [
+     "plum",
+     60
+    ],
+    [
+     "cuc",
+     0.1
+    ],
+    [
+     "mayo",
+     10
+    ]
+   ]
+  },
+  "veggie-omelette": {
+   "c": "breakfast",
+   "s": 1,
+   "l": [
+    [
+     "eggs",
+     2
+    ],
+    [
+     "mushrooms",
+     60
+    ],
+    [
+     "spinach",
+     40
+    ],
+    [
+     "plum",
+     50
+    ],
+    [
+     "oil",
+     4
+    ]
+   ]
+  },
+  "yogurt-and-banana-bowl": {
+   "c": "breakfast",
+   "s": 1,
+   "l": [
+    [
+     "yog",
+     1
+    ],
+    [
+     "banana",
+     1
+    ],
+    [
+     "nuts",
+     20
+    ]
+   ]
+  },
+  "yogurt-berries-and-granola": {
+   "c": "breakfast",
+   "s": 1,
+   "l": [
+    [
+     "yog",
+     1
+    ],
+    [
+     "blueb",
+     100
+    ],
+    [
+     "granola",
+     40
+    ]
+   ]
+  }
+ }
+}
