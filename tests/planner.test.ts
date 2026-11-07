@@ -161,15 +161,15 @@ describe('planner: shopping + waste', () => {
     expect(s.lines.length).toBeGreaterThan(8);
   });
 
-  it('planWeek picks a week no more expensive than the first candidate', () => {
+  it('planWeek never picks a week that scores worse than the first candidate (cost, spoiling leftovers, variety)', () => {
     const input = base();
-    const single = buildShopping(generatePlan(input, 1)).totalPence;
-    const best = buildShopping(planWeek(input, 12, 1)).totalPence;
+    const single = weekScore(generatePlan(input, 1));
+    const best = weekScore(planWeek(input, 12, 1));
     expect(best).toBeLessThanOrEqual(single);
   });
 });
 
-import { explainMisses } from '@/lib/planner/solve';
+import { explainMisses, weekScore } from '@/lib/planner/solve';
 import type { PlannedDay } from '@/lib/planner/types';
 
 describe('planner: honest messages for days that miss', () => {

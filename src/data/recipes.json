@@ -1526,6 +1526,38 @@
   ]
  },
  {
+  "id": "beef-jerky",
+  "c": "snack",
+  "e": "🥩",
+  "n": "Beef Jerky",
+  "p": 18,
+  "k": 127,
+  "serves": 1,
+  "cb": 10,
+  "f": 2,
+  "cost": 338,
+  "b": "high",
+  "img": {
+   "a": "Illustrative photo: a white bowl of mixed nuts",
+   "c": "#080808",
+   "ph": "food-snack"
+  },
+  "t": 1,
+  "macros_only": false,
+  "fresh": [
+   [
+    "jerky",
+    2
+   ]
+  ],
+  "cup": [],
+  "m": [],
+  "allergens": [
+   "gluten",
+   "soya"
+  ]
+ },
+ {
   "id": "beef-meatball-goulash",
   "c": "dinner",
   "e": "🍝",
@@ -1870,6 +1902,35 @@
    "gluten",
    "milk"
   ]
+ },
+ {
+  "id": "biltong-pack",
+  "c": "snack",
+  "e": "🥩",
+  "n": "Biltong",
+  "p": 23,
+  "k": 110,
+  "serves": 1,
+  "cb": 1,
+  "f": 2,
+  "cost": 395,
+  "b": "high",
+  "img": {
+   "a": "Illustrative photo: a white bowl of mixed nuts",
+   "c": "#080808",
+   "ph": "food-snack"
+  },
+  "t": 1,
+  "macros_only": false,
+  "fresh": [
+   [
+    "biltong",
+    1
+   ]
+  ],
+  "cup": [],
+  "m": [],
+  "allergens": []
  },
  {
   "id": "blt-sandwich",
@@ -8198,6 +8259,72 @@
   ]
  },
  {
+  "id": "getpro-pot",
+  "c": "snack",
+  "e": "🥛",
+  "n": "GetPRO Protein Yoghurt",
+  "p": 15,
+  "k": 85,
+  "serves": 1,
+  "cb": 6,
+  "f": 0,
+  "cost": 125,
+  "b": "high",
+  "img": {
+   "a": "Illustrative photo: a white bowl of mixed nuts",
+   "c": "#080808",
+   "ph": "food-snack"
+  },
+  "t": 1,
+  "macros_only": false,
+  "fresh": [
+   [
+    "getpro",
+    1
+   ]
+  ],
+  "cup": [],
+  "m": [],
+  "allergens": [
+   "milk"
+  ]
+ },
+ {
+  "id": "grapes-and-babybel",
+  "c": "snack",
+  "e": "🍇",
+  "n": "Grapes and Babybel",
+  "p": 10,
+  "k": 183,
+  "serves": 1,
+  "cb": 16,
+  "f": 9,
+  "cost": 132,
+  "b": "high",
+  "img": {
+   "a": "Illustrative photo: a white bowl of mixed nuts",
+   "c": "#080808",
+   "ph": "food-snack"
+  },
+  "t": 1,
+  "macros_only": false,
+  "fresh": [
+   [
+    "grapes",
+    100
+   ],
+   [
+    "babybel",
+    2
+   ]
+  ],
+  "cup": [],
+  "m": [],
+  "allergens": [
+   "milk"
+  ]
+ },
+ {
   "id": "greek-chicken-gyros",
   "c": "dinner",
   "e": "🥙",
@@ -9307,6 +9434,37 @@
   ],
   "allergens": [
    "sesame"
+  ]
+ },
+ {
+  "id": "kvarg-pot",
+  "c": "snack",
+  "e": "🥛",
+  "n": "Kvarg Vanilla Pot",
+  "p": 15,
+  "k": 81,
+  "serves": 1,
+  "cb": 5,
+  "f": 0,
+  "cost": 145,
+  "b": "high",
+  "img": {
+   "a": "Illustrative photo: a white bowl of mixed nuts",
+   "c": "#080808",
+   "ph": "food-snack"
+  },
+  "t": 1,
+  "macros_only": false,
+  "fresh": [
+   [
+    "kvarg",
+    1
+   ]
+  ],
+  "cup": [],
+  "m": [],
+  "allergens": [
+   "milk"
   ]
  },
  {
@@ -12031,6 +12189,37 @@
   ]
  },
  {
+  "id": "pro-mlk-chocolate",
+  "c": "snack",
+  "e": "🥤",
+  "n": "Pro MLK Chocolate Protein Drink",
+  "p": 26,
+  "k": 205,
+  "serves": 1,
+  "cb": 22,
+  "f": 2,
+  "cost": 115,
+  "b": "high",
+  "img": {
+   "a": "Illustrative photo: a white bowl of mixed nuts",
+   "c": "#080808",
+   "ph": "food-snack"
+  },
+  "t": 1,
+  "macros_only": false,
+  "fresh": [
+   [
+    "promlk",
+    1
+   ]
+  ],
+  "cup": [],
+  "m": [],
+  "allergens": [
+   "milk"
+  ]
+ },
+ {
   "id": "protein-grab-bag",
   "c": "lunch",
   "e": "🍫",
@@ -13176,6 +13365,41 @@
    "nuts",
    "peanuts",
    "soya"
+  ]
+ },
+ {
+  "id": "skyr-and-blueberries",
+  "c": "snack",
+  "e": "🫐",
+  "n": "Skyr and Blueberries",
+  "p": 14,
+  "k": 101,
+  "serves": 1,
+  "cb": 11,
+  "f": 0,
+  "cost": 142,
+  "b": "high",
+  "img": {
+   "a": "Illustrative photo: a bowl of yogurt with blueberries and granola",
+   "c": "#e8e8d8",
+   "ph": "food-yogurt"
+  },
+  "t": 1,
+  "macros_only": false,
+  "fresh": [
+   [
+    "skyr",
+    150
+   ],
+   [
+    "blueb",
+    60
+   ]
+  ],
+  "cup": [],
+  "m": [],
+  "allergens": [
+   "milk"
   ]
  },
  {
@@ -17252,6 +17476,37 @@
    "gluten",
    "mustard",
    "soya"
+  ]
+ },
+ {
+  "id": "ufit-chocolate-shake",
+  "c": "snack",
+  "e": "🥤",
+  "n": "Ufit Chocolate Protein Milkshake",
+  "p": 50,
+  "k": 295,
+  "serves": 1,
+  "cb": 18,
+  "f": 2,
+  "cost": 300,
+  "b": "high",
+  "img": {
+   "a": "Illustrative photo: a pink smoothie in a glass with a straw",
+   "c": "#584838",
+   "ph": "food-smoothie"
+  },
+  "t": 1,
+  "macros_only": false,
+  "fresh": [
+   [
+    "ufit",
+    1
+   ]
+  ],
+  "cup": [],
+  "m": [],
+  "allergens": [
+   "milk"
   ]
  },
  {

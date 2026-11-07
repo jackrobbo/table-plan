@@ -275,6 +275,14 @@ export function generatePlan(input: PlanInput, seed = 1): Plan {
   return { seed, days, issues, notes };
 }
 
+/** What planWeek minimises: shopping cost, plus a penalty for leftovers that spoil and for a samey mix of proteins, plus a large one per day out of band. */
+export function weekScore(plan: Plan): number {
+  const misses = plan.days.filter((d) => !d.inBand).length;
+  const shop = buildShopping(plan);
+  const dinnerRecipes = plan.days.flatMap((d) => d.meals.filter((m) => m.slot === 'dinner').map((m) => RECIPES.find((r) => r.id === m.recipeId))).filter((r): r is Recipe => !!r);
+  return shop.totalPence + shoppingLeftover(shop.lines) + varietyPenalty(dinnerRecipes) + misses * 100000;
+}
+
 /**
  * Build several candidate weeks and keep the best: cheapest shopping list, fewest leftovers that would spoil, a varied mix of
  * proteins, preferring weeks where every day lands in band.
@@ -284,10 +292,7 @@ export function planWeek(input: PlanInput, candidates = 24, baseSeed = 1): Plan 
   for (let i = 0; i < candidates; i++) {
     const plan = generatePlan(input, baseSeed + i * 7919);
     if (!plan.days.length) return plan;
-    const misses = plan.days.filter((d) => !d.inBand).length;
-    const shop = buildShopping(plan);
-    const dinnerRecipes = plan.days.flatMap((d) => d.meals.filter((m) => m.slot === 'dinner').map((m) => RECIPES.find((r) => r.id === m.recipeId))).filter((r): r is Recipe => !!r);
-    const cost = shop.totalPence + shoppingLeftover(shop.lines) + varietyPenalty(dinnerRecipes) + misses * 100000;
+    const cost = weekScore(plan);
     if (!best || cost < best.cost) best = { plan, cost };
   }
   return best!.plan;

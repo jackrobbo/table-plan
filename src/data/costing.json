@@ -1903,6 +1903,16 @@
     ]
    ]
   },
+  "beef-jerky": {
+   "c": "snack",
+   "s": 1,
+   "l": [
+    [
+     "jerky",
+     2
+    ]
+   ]
+  },
   "beef-meatball-goulash": {
    "c": "dinner",
    "s": 4,
@@ -2104,6 +2114,16 @@
     [
      "honey",
      10
+    ]
+   ]
+  },
+  "biltong-pack": {
+   "c": "snack",
+   "s": 1,
+   "l": [
+    [
+     "biltong",
+     1
     ]
    ]
   },
@@ -5967,6 +5987,30 @@
     ]
    ]
   },
+  "getpro-pot": {
+   "c": "snack",
+   "s": 1,
+   "l": [
+    [
+     "getpro",
+     1
+    ]
+   ]
+  },
+  "grapes-and-babybel": {
+   "c": "snack",
+   "s": 1,
+   "l": [
+    [
+     "grapes",
+     100
+    ],
+    [
+     "babybel",
+     2
+    ]
+   ]
+  },
   "greek-chicken-gyros": {
    "c": "dinner",
    "s": 2,
@@ -6580,6 +6624,16 @@
     [
      "carrots",
      100
+    ]
+   ]
+  },
+  "kvarg-pot": {
+   "c": "snack",
+   "s": 1,
+   "l": [
+    [
+     "kvarg",
+     1
     ]
    ]
   },
@@ -8315,6 +8369,16 @@
     ]
    ]
   },
+  "pro-mlk-chocolate": {
+   "c": "snack",
+   "s": 1,
+   "l": [
+    [
+     "promlk",
+     1
+    ]
+   ]
+  },
   "protein-grab-bag": {
    "c": "lunch",
    "s": 1,
@@ -8956,6 +9020,20 @@
     [
      "soy",
      20
+    ]
+   ]
+  },
+  "skyr-and-blueberries": {
+   "c": "snack",
+   "s": 1,
+   "l": [
+    [
+     "skyr",
+     150
+    ],
+    [
+     "blueb",
+     60
     ]
    ]
   },
@@ -11464,6 +11542,16 @@
     [
      "mayo",
      10
+    ]
+   ]
+  },
+  "ufit-chocolate-shake": {
+   "c": "snack",
+   "s": 1,
+   "l": [
+    [
+     "ufit",
+     1
     ]
    ]
   },
