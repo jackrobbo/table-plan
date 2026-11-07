@@ -1,0 +1,61 @@
+{
+ "slug": "pesto-sausage-bean-traybake",
+ "name": "Pesto Sausage & Bean Traybake",
+ "course": "dinner",
+ "emoji": "🫘",
+ "serves": 4,
+ "status": "draft",
+ "time": {
+  "prep": 10,
+  "cook": 45
+ },
+ "ingredients": [
+  {
+   "ingredient": "sausages",
+   "qty": 4
+  },
+  {
+   "ingredient": "potatoes",
+   "qty": 500
+  },
+  {
+   "ingredient": "onions",
+   "qty": 1
+  },
+  {
+   "ingredient": "plum",
+   "qty": 200
+  },
+  {
+   "ingredient": "spring",
+   "qty": 0.5
+  },
+  {
+   "ingredient": "butterbeans",
+   "qty": 480
+  },
+  {
+   "ingredient": "pesto",
+   "qty": 90
+  },
+  {
+   "ingredient": "lemon",
+   "qty": 1
+  }
+ ],
+ "cupboard": [
+  "stock",
+  "oil"
+ ],
+ "cupboard_qty": {
+  "stock": 10,
+  "oil": 10
+ },
+ "method": [
+  "Heat the oven to 200C (180C fan). Slice the potatoes thinly and cut the onion into wedges.",
+  "Tip the potatoes, onion, tomatoes, spring onions and sausage chunks into a large tray with the oil. Roast for 20 minutes.",
+  "Stir in the drained beans, stock cube dissolved in 200ml hot water, and half the pesto, with lemon wedges alongside.",
+  "Roast for 20 to 25 minutes more until the potatoes are tender, then drizzle with the rest of the pesto."
+ ],
+ "source": "idea: BBC Good Food"
+}

@@ -1,0 +1,55 @@
+{
+ "slug": "beef-noodle-stir-fry",
+ "name": "Beef & Mushroom Noodle Stir-Fry",
+ "course": "dinner",
+ "emoji": "🥢",
+ "serves": 2,
+ "status": "draft",
+ "time": {
+  "prep": 10,
+  "cook": 10
+ },
+ "ingredients": [
+  {
+   "ingredient": "sizzle",
+   "qty": 320
+  },
+  {
+   "ingredient": "onions",
+   "qty": 1
+  },
+  {
+   "ingredient": "mushrooms",
+   "qty": 160
+  },
+  {
+   "ingredient": "stirfry",
+   "qty": 150
+  },
+  {
+   "ingredient": "spring",
+   "qty": 0.25
+  }
+ ],
+ "cupboard": [
+  "noodles",
+  "soy",
+  "vinegar",
+  "garlic",
+  "oil"
+ ],
+ "cupboard_qty": {
+  "noodles": 85,
+  "soy": 15,
+  "vinegar": 10,
+  "garlic": 6,
+  "oil": 10
+ },
+ "method": [
+  "Cook the noodles to the packet instructions, drain and set aside.",
+  "Fry the sliced beef in half the oil over a high heat for 2 minutes, then lift out.",
+  "Soften the sliced onion, mushrooms and garlic in the rest of the oil for 4 minutes, then add the stir-fry vegetables for 2 minutes.",
+  "Return the beef, add the noodles, soy sauce and vinegar and toss for a minute. Top with sliced spring onion."
+ ],
+ "source": "idea: BBC Good Food"
+}

@@ -1,0 +1,59 @@
+{
+ "slug": "prawn-egg-fried-rice",
+ "name": "Prawn & Egg Fried Rice",
+ "course": "dinner",
+ "emoji": "🍚",
+ "serves": 4,
+ "status": "draft",
+ "time": {
+  "prep": 10,
+  "cook": 20
+ },
+ "ingredients": [
+  {
+   "ingredient": "prawns",
+   "qty": 300
+  },
+  {
+   "ingredient": "eggs",
+   "qty": 3
+  },
+  {
+   "ingredient": "peas",
+   "qty": 150
+  },
+  {
+   "ingredient": "medley",
+   "qty": 100
+  },
+  {
+   "ingredient": "onions",
+   "qty": 1
+  },
+  {
+   "ingredient": "spring",
+   "qty": 0.5
+  }
+ ],
+ "cupboard": [
+  "rice",
+  "garlic",
+  "soy",
+  "vinegar",
+  "oil"
+ ],
+ "cupboard_qty": {
+  "rice": 240,
+  "garlic": 6,
+  "soy": 20,
+  "vinegar": 10,
+  "oil": 20
+ },
+ "method": [
+  "Cook the rice, drain and spread out to cool a little.",
+  "Fry the chopped onion and garlic in half the oil for 5 minutes. Add the prawns and cook until pink, then push to the side.",
+  "Pour the beaten eggs into the pan and scramble briefly, then add the rice, peas and green vegetables and stir-fry over a high heat for 4 to 5 minutes.",
+  "Season with the soy sauce and vinegar and serve scattered with sliced spring onion."
+ ],
+ "source": "idea: BBC Good Food"
+}

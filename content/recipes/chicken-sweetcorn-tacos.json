@@ -1,0 +1,61 @@
+{
+ "slug": "chicken-sweetcorn-tacos",
+ "name": "Chicken & Sweetcorn Tacos",
+ "course": "dinner",
+ "emoji": "🌮",
+ "serves": 4,
+ "status": "draft",
+ "time": {
+  "prep": 15,
+  "cook": 15
+ },
+ "ingredients": [
+  {
+   "ingredient": "breast",
+   "qty": 450
+  },
+  {
+   "ingredient": "wraps",
+   "qty": 8
+  },
+  {
+   "ingredient": "cabbage",
+   "qty": 150
+  },
+  {
+   "ingredient": "kidney",
+   "qty": 200
+  },
+  {
+   "ingredient": "lime",
+   "qty": 2
+  },
+  {
+   "ingredient": "coriander",
+   "qty": 15
+  },
+  {
+   "ingredient": "greek",
+   "qty": 100
+  }
+ ],
+ "cupboard": [
+  "sweetcorn",
+  "fajita",
+  "garlic",
+  "oil"
+ ],
+ "cupboard_qty": {
+  "sweetcorn": 160,
+  "fajita": 15,
+  "garlic": 4,
+  "oil": 15
+ },
+ "method": [
+  "Slice the chicken into strips, toss with the fajita seasoning and fry in the oil with the garlic for 6 to 8 minutes until cooked through.",
+  "Shred the cabbage and toss with the juice of one lime and half the coriander.",
+  "Mix the drained beans and sweetcorn and warm through in a pan or microwave.",
+  "Warm the wraps. Fill with chicken, slaw and the bean and corn mix, then top with yoghurt, the remaining coriander and lime wedges."
+ ],
+ "source": "idea: BBC Good Food"
+}
