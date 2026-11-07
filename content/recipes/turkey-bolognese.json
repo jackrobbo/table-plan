@@ -1,0 +1,65 @@
+{
+ "slug": "turkey-bolognese",
+ "name": "Turkey Bolognese",
+ "course": "dinner",
+ "emoji": "🍝",
+ "serves": 4,
+ "status": "draft",
+ "time": {
+  "prep": 15,
+  "cook": 40
+ },
+ "ingredients": [
+  {
+   "ingredient": "turkeymince",
+   "qty": 500
+  },
+  {
+   "ingredient": "onions",
+   "qty": 1
+  },
+  {
+   "ingredient": "carrots",
+   "qty": 120
+  },
+  {
+   "ingredient": "celery",
+   "qty": 2
+  },
+  {
+   "ingredient": "mushrooms",
+   "qty": 150
+  },
+  {
+   "ingredient": "ctoms",
+   "qty": 400
+  },
+  {
+   "ingredient": "passata",
+   "qty": 250
+  }
+ ],
+ "cupboard": [
+  "spaghetti",
+  "puree",
+  "stock",
+  "oregano",
+  "garlic",
+  "oil"
+ ],
+ "cupboard_qty": {
+  "spaghetti": 300,
+  "puree": 30,
+  "stock": 10,
+  "oregano": 1,
+  "garlic": 6,
+  "oil": 15
+ },
+ "method": [
+  "Finely chop the onion, carrot, celery and mushrooms. Brown the turkey in the oil in a large pan, breaking it up, then set aside.",
+  "In the same pan, soften the vegetables and garlic for about 8 minutes, then stir in the tomato puree for a minute.",
+  "Return the turkey with the tomatoes, passata, oregano and crumbled stock cube. Simmer gently for 30 minutes until thick, adding a splash of water if it dries out.",
+  "Cook the spaghetti to the packet instructions and serve topped with the sauce."
+ ],
+ "source": "idea: Morrisons recipes"
+}

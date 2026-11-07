@@ -1,0 +1,57 @@
+{
+ "slug": "satay-chicken-rice-bowls",
+ "name": "Satay Chicken Rice Bowls",
+ "course": "dinner",
+ "emoji": "🥜",
+ "serves": 4,
+ "status": "draft",
+ "time": {
+  "prep": 10,
+  "cook": 15
+ },
+ "ingredients": [
+  {
+   "ingredient": "breast",
+   "qty": 450
+  },
+  {
+   "ingredient": "pbutter",
+   "qty": 60
+  },
+  {
+   "ingredient": "coconut",
+   "qty": 100
+  },
+  {
+   "ingredient": "medley",
+   "qty": 250
+  },
+  {
+   "ingredient": "lime",
+   "qty": 2
+  },
+  {
+   "ingredient": "coriander",
+   "qty": 15
+  }
+ ],
+ "cupboard": [
+  "rice",
+  "soy",
+  "chilliflakes",
+  "oil"
+ ],
+ "cupboard_qty": {
+  "rice": 240,
+  "soy": 20,
+  "chilliflakes": 1,
+  "oil": 10
+ },
+ "method": [
+  "Cook the rice. Slice the chicken into strips, season and fry in the oil over a high heat for about 5 minutes until browned.",
+  "Mix the peanut butter, soy sauce, coconut milk and chilli flakes with the juice of one lime and a splash of boiled water.",
+  "Pour the sauce over the chicken, add the green vegetables and cook for 3 to 4 minutes, then stir through the rice until piping hot.",
+  "Serve with coriander and wedges of the second lime."
+ ],
+ "source": "idea: Mob"
+}

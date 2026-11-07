@@ -1,0 +1,45 @@
+{
+ "slug": "honey-pork-noodles",
+ "name": "Honey Pork Noodles",
+ "course": "dinner",
+ "emoji": "🍯",
+ "serves": 2,
+ "status": "draft",
+ "time": {
+  "prep": 10,
+  "cook": 20
+ },
+ "ingredients": [
+  {
+   "ingredient": "porkloin",
+   "qty": 300
+  },
+  {
+   "ingredient": "stirfry",
+   "qty": 200
+  }
+ ],
+ "cupboard": [
+  "honey",
+  "soy",
+  "fivespice",
+  "paprika",
+  "noodles",
+  "oil"
+ ],
+ "cupboard_qty": {
+  "honey": 30,
+  "soy": 20,
+  "fivespice": 2,
+  "paprika": 1,
+  "noodles": 140,
+  "oil": 5
+ },
+ "method": [
+  "Heat the grill to high. Mix the honey, soy sauce, five spice, paprika and oil in a bowl and turn the sliced pork in it.",
+  "Lay the pork on a foil-lined tray and pour the leftover marinade into a small pan. Grill the pork for 8 to 10 minutes, turning, until lightly charred and cooked through.",
+  "Boil the spare marinade for about 3 minutes until thick and glossy and spoon it over the pork.",
+  "Boil the noodles for 3 minutes, adding the stir-fry vegetables for the last 2, then drain and serve with the pork."
+ ],
+ "source": "idea: Joe Wicks"
+}

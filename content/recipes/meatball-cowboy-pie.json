@@ -1,0 +1,70 @@
+{
+ "slug": "meatball-cowboy-pie",
+ "name": "Meatball Cowboy Pie",
+ "course": "dinner",
+ "emoji": "🤠",
+ "serves": 4,
+ "status": "draft",
+ "time": {
+  "prep": 25,
+  "cook": 45
+ },
+ "ingredients": [
+  {
+   "ingredient": "mince",
+   "qty": 250
+  },
+  {
+   "ingredient": "sausages",
+   "qty": 4
+  },
+  {
+   "ingredient": "onions",
+   "qty": 1
+  },
+  {
+   "ingredient": "eggs",
+   "qty": 1
+  },
+  {
+   "ingredient": "beans",
+   "qty": 410
+  },
+  {
+   "ingredient": "bbq",
+   "qty": 45
+  },
+  {
+   "ingredient": "potatoes",
+   "qty": 800
+  },
+  {
+   "ingredient": "milk",
+   "qty": 60
+  }
+ ],
+ "cupboard": [
+  "breadcrumbs",
+  "herbs",
+  "butter",
+  "cheddar",
+  "garlic",
+  "oil"
+ ],
+ "cupboard_qty": {
+  "breadcrumbs": 30,
+  "herbs": 2,
+  "butter": 20,
+  "cheddar": 40,
+  "garlic": 4,
+  "oil": 15
+ },
+ "method": [
+  "Heat the oven to 200C (180C fan). Peel and chop the potatoes and boil for 15 minutes.",
+  "Squeeze the sausagemeat out of the skins and mix with the mince, half the grated onion, breadcrumbs, egg and herbs. Roll into about 16 small meatballs and brown in half the oil.",
+  "Soften the remaining chopped onion and garlic in the rest of the oil, then add the baked beans and BBQ sauce and simmer for 3 minutes.",
+  "Put the meatballs in an ovenproof dish and pour the beans over. Mash the potatoes with the butter and milk, spread on top and sprinkle with cheese.",
+  "Bake for 25 to 30 minutes until golden."
+ ],
+ "source": "idea: Morrisons / Good Food"
+}

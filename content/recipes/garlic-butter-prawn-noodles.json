@@ -1,0 +1,56 @@
+{
+ "slug": "garlic-butter-prawn-noodles",
+ "name": "Garlic Butter Prawn Noodles",
+ "course": "dinner",
+ "emoji": "🍤",
+ "serves": 2,
+ "status": "draft",
+ "time": {
+  "prep": 10,
+  "cook": 15
+ },
+ "ingredients": [
+  {
+   "ingredient": "prawns",
+   "qty": 300
+  },
+  {
+   "ingredient": "spinach",
+   "qty": 100
+  },
+  {
+   "ingredient": "chilli",
+   "qty": 8
+  },
+  {
+   "ingredient": "spring",
+   "qty": 0.25
+  }
+ ],
+ "cupboard": [
+  "noodles",
+  "butter",
+  "garlic",
+  "soy",
+  "honey",
+  "nuts",
+  "oil"
+ ],
+ "cupboard_qty": {
+  "noodles": 140,
+  "butter": 30,
+  "garlic": 9,
+  "soy": 20,
+  "honey": 10,
+  "nuts": 20,
+  "oil": 5
+ },
+ "method": [
+  "Mix the soy sauce and honey in a small bowl. Finely slice the chilli and grate the garlic.",
+  "Melt the butter with the oil in a wok or large pan over a medium heat and fry the garlic and chilli for 2 to 3 minutes.",
+  "Add the prawns and cook for about a minute on each side until pink. Meanwhile boil the noodles and drain.",
+  "Add the spinach and let it wilt, then toss in the noodles and sauce over a high heat for a minute or two until glossy.",
+  "Top with chopped nuts and sliced spring onion."
+ ],
+ "source": "idea: Mob"
+}

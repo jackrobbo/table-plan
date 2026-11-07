@@ -1,0 +1,55 @@
+{
+ "slug": "tuna-veg-pasta-bake",
+ "name": "Tuna & Veg Pasta Bake",
+ "course": "dinner",
+ "emoji": "🐟",
+ "serves": 4,
+ "status": "draft",
+ "time": {
+  "prep": 15,
+  "cook": 30
+ },
+ "ingredients": [
+  {
+   "ingredient": "courgette",
+   "qty": 200
+  },
+  {
+   "ingredient": "pepper",
+   "qty": 1
+  },
+  {
+   "ingredient": "onions",
+   "qty": 1
+  },
+  {
+   "ingredient": "plum",
+   "qty": 150
+  },
+  {
+   "ingredient": "passata",
+   "qty": 500
+  }
+ ],
+ "cupboard": [
+  "tuna",
+  "fusilli",
+  "cheddar",
+  "herbs",
+  "oil"
+ ],
+ "cupboard_qty": {
+  "tuna": 290,
+  "fusilli": 300,
+  "cheddar": 100,
+  "herbs": 3,
+  "oil": 10
+ },
+ "method": [
+  "Heat the oven to 190C (170C fan). Cook the pasta for 10 minutes, then drain.",
+  "Meanwhile soften the chopped onion, courgette and pepper in the oil for 6 minutes. Add the halved tomatoes, passata and herbs and simmer for 5 minutes.",
+  "Mix the pasta, sauce and drained, flaked tuna in a baking dish. Scatter over the grated cheese.",
+  "Bake for 20 to 25 minutes until golden and bubbling."
+ ],
+ "source": "idea: Morrisons / Princes recipes"
+}

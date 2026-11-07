@@ -88,6 +88,7 @@ Morrisons now blocks scripted product-page requests (HTTP 403, new since 25 Oct)
 Agreed order: (1) ingredient principles (`design/ingredient-principles.md`, Jack to edit and answer its open questions), (2) more considered menus, text only (own method wording, photos later), (3) lock the ingredient list and update the Morrisons product list, (4) match Tesco, Sainsbury's and Asda (tooling and budget are ready: `npm run basket`, `--pass2`, `--search`, `npm run match`), (5) photos (`design/recipe-photo-shotlist.md`) and the Monday import in parallel.
 - [ ] **[JACK]** Edit `design/ingredient-principles.md`; define "better quality".
 - [ ] **[JACK / CLAUDE]** Source and draft new meals (ideas and ingredient lists may be lifted; method text and photos must be our own).
+- Parked (6 Nov): breakfasts and lunches (and snacks) for the new menu; dinners first. Backlogs so far: `design/meal-shortlist.md`, `design/meal-drafts-jamie-oliver.md` (5 drafted as content, 5 held), `design/meal-backlog-mob.md`, `design/meal-backlog-morrisons.md`, `design/meal-backlog-joe-wicks.md`. Next sources: Pinch of Nom (category pages), NHS Healthier Families (check terms), Gousto via Chrome. Jack Monroe's old site address redirects to unrelated domains: do not open it.
 - State: Tesco 86 of 116 ingredients confirmed, 30 reopened for review; Sainsbury's and Asda not reviewed yet. Availability report: `design/ingredient-availability.md` (70 ingredients have a match at all three shops).
 
 ## Brand (2 Nov)

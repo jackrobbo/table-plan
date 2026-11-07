@@ -1,0 +1,51 @@
+{
+ "slug": "teriyaki-chicken-egg-rice-bowl",
+ "name": "Teriyaki Chicken & Egg Rice Bowl",
+ "course": "dinner",
+ "emoji": "🍳",
+ "serves": 2,
+ "status": "draft",
+ "time": {
+  "prep": 10,
+  "cook": 25
+ },
+ "ingredients": [
+  {
+   "ingredient": "thigh",
+   "qty": 300
+  },
+  {
+   "ingredient": "eggs",
+   "qty": 2
+  },
+  {
+   "ingredient": "spring",
+   "qty": 0.25
+  },
+  {
+   "ingredient": "peas",
+   "qty": 100
+  }
+ ],
+ "cupboard": [
+  "rice",
+  "teriyaki",
+  "soy",
+  "garlic",
+  "oil"
+ ],
+ "cupboard_qty": {
+  "rice": 150,
+  "teriyaki": 40,
+  "soy": 10,
+  "garlic": 3,
+  "oil": 10
+ },
+ "method": [
+  "Cook the rice. Boil the eggs for 7 minutes, cool under cold water, peel and halve.",
+  "Cut the chicken into bite-sized pieces and fry in the oil over a medium-high heat for 6 to 7 minutes until golden and cooked through.",
+  "Add the garlic, teriyaki sauce and soy sauce with a splash of water and cook for 3 to 5 minutes until thick and glossy. Cook the peas in boiling water for 3 minutes.",
+  "Serve the rice topped with the chicken, peas and eggs, finished with sliced spring onion."
+ ],
+ "source": "idea: Mob"
+}
