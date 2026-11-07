@@ -37,8 +37,11 @@ const wordsFor = (slug: string): string[] => {
 const minutesIn = (text: string): number[] => [...text.matchAll(/(\d+)(?:\s*(?:to|-|–)\s*(\d+))?\s*(?:minutes?|mins?)\b/gi)].map((m) => (m[2] ? (Number(m[1]) + Number(m[2])) / 2 : Number(m[1])));
 
 // New and in-review dinners must pass. Dinners already live were written before these checks; they are audited (count printed), not gated.
-const live = recipes.filter((r) => r.status === 'live');
-const gated = recipes.filter((r) => r.status !== 'live');
+const outlineKeys = new Set(Object.keys(JSON.parse(fs.readFileSync(path.join(root, 'tests/fixtures/method-outlines.json'), 'utf8')) as Record<string, unknown>));
+// 'New' = not live yet, or part of the menu set that has a recorded original outline (these stay gated after going live).
+const isNew = (r: RecipeDef) => r.status !== 'live' || outlineKeys.has(r.slug);
+const live = recipes.filter((r) => !isNew(r));
+const gated = recipes.filter(isNew);
 describe(`methods make sense (${gated.length} new dinners gated, ${live.length} live audited in the sweep below)`, () => {
   for (const r of gated) {
     const text = r.method.join(' ').toLowerCase();

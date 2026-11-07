@@ -4,10 +4,10 @@
  "course": "dinner",
  "emoji": "🥦",
  "serves": 4,
- "status": "draft",
+ "status": "live",
  "time": {
   "prep": 10,
-  "cook": 15
+  "cook": 18
  },
  "ingredients": [
   {
@@ -45,9 +45,10 @@
  },
  "method": [
   "Slice the pork into 1cm strips. Mix the cornflour with a tablespoon of water and set aside.",
-  "Cook the noodles to the packet instructions and drain.",
-  "Stir-fry the pork in the oil over a high heat for 3 to 4 minutes, then add the broccoli, sliced pepper, garlic and chilli and cook for 4 minutes.",
-  "Add the soy sauce, honey and cornflour mixture and bubble for a minute until glossy, then toss through the noodles."
+  "Stir-fry the pork in half the oil over a high heat for 3 to 4 minutes until just cooked, then lift out.",
+  "Add the broccoli and cook for 2 to 3 minutes, then add the rest of the oil, garlic and chilli for 2 minutes, then the sliced pepper for another 2 to 3 minutes.",
+  "Stir the soy sauce, half the honey and the cornflour mixture into the pan, return the pork and mix well.",
+  "Cook the noodles to the packet instructions, drain, toss with the rest of the honey and serve topped with the stir-fry."
  ],
  "source": "idea: Sainsbury's recipes"
 }

@@ -4,7 +4,7 @@
  "course": "dinner",
  "emoji": "🍗",
  "serves": 2,
- "status": "draft",
+ "status": "live",
  "time": {
   "prep": 10,
   "cook": 10
@@ -49,9 +49,9 @@
  },
  "method": [
   "Slice each chicken breast through the middle to make two thin pieces and flatten them with a rolling pin. Press both sides into the breadcrumbs mixed with the grated lemon zest and herbs.",
-  "Boil or steam the green beans and broccoli for 4 to 5 minutes until just tender.",
-  "Pan-fry the chicken in half the oil for 3 to 4 minutes each side, until golden and cooked right through.",
-  "Warm the drained butter beans in the rest of the oil with the sliced garlic, take off the heat and stir in the yoghurt and a squeeze of lemon.",
+  "Steam or boil the green beans and broccoli for 5 to 6 minutes until just tender.",
+  "Pan-fry the chicken in half the oil for 3 to 4 minutes each side (about 6 minutes in all), until golden and cooked right through.",
+  "Warm the drained butter beans in the rest of the oil with the sliced garlic, simmering for 2 minutes, then take off the heat and stir in the yoghurt and a squeeze of lemon.",
   "Serve the chicken on the beans with the greens alongside."
  ],
  "source": "idea: Jamie Oliver"

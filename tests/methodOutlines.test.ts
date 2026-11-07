@@ -22,8 +22,9 @@ const temps = (text: string): number[] => [...text.matchAll(/(\d{3})\s?c\b/gi)].
 const has = (sentence: string, words: string[]) => words.some((w) => (w === 'oven' ? /\b(oven|preheat)\b/i : new RegExp(`\\b${w}`, 'i')).test(sentence));
 
 describe('methods keep the original cooking', () => {
-  it('has an outline for every new dinner we sourced from a recipe we could read', () => {
-    expect(Object.keys(outlines).filter((k) => k !== '_about').length).toBeGreaterThanOrEqual(17);
+  it('has an outline for every dinner that is not live yet, so nothing goes live unchecked against its original', () => {
+    const missing = [...recipes.values()].filter((r) => r.course === 'dinner' && r.status !== 'live' && !outlines[r.slug]).map((r) => r.slug);
+    expect(missing, `no outline for: ${missing.join(', ')}`).toEqual([]);
   });
   for (const [slug, o] of Object.entries(outlines)) {
     if (slug === '_about') continue;

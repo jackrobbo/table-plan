@@ -4,10 +4,10 @@
  "course": "dinner",
  "emoji": "🌭",
  "serves": 2,
- "status": "draft",
+ "status": "live",
  "time": {
   "prep": 10,
-  "cook": 30
+  "cook": 40
  },
  "ingredients": [
   {
@@ -58,11 +58,11 @@
   "oil": 10
  },
  "method": [
-  "Brown the sausages in the oil in a wide, deep pan, then lift them out and cut each into 3 or 4 chunks.",
-  "In the same pan, soften the chopped onion, celery and pepper with the garlic for about 8 minutes.",
-  "Stir in the rice, paprika and flour, then add the chopped chilli and tomatoes, the stock cube dissolved in 500ml hot water, and the vinegar. Return the sausage to the pan.",
-  "Cover and simmer for 20 to 25 minutes until the rice is tender and the sauce is thick, adding a splash of water if it catches.",
-  "Scatter over the sliced spring onions and serve."
+  "Brown the sausages in the oil in a wide, deep pan for 10 minutes, turning, then lift them out and cut each into 3 or 4 chunks. Meanwhile cook the rice to the packet instructions, drain and keep covered.",
+  "In the same pan, cook the chopped onion, celery, pepper, garlic and paprika with the chopped chilli, covered, for 10 to 15 minutes until soft.",
+  "Sprinkle over the flour and stir, then add the tomatoes, vinegar, sausage chunks and the stock cube dissolved in 350ml hot water, and bring to the boil.",
+  "Squash the tomatoes into the sauce and simmer for 10 minutes until thick.",
+  "Serve the stew over the rice with sliced spring onions."
  ],
  "source": "idea: Jamie Oliver"
 }

@@ -4,10 +4,10 @@
  "course": "dinner",
  "emoji": "🌶️",
  "serves": 4,
- "status": "draft",
+ "status": "live",
  "time": {
   "prep": 10,
-  "cook": 20
+  "cook": 25
  },
  "ingredients": [
   {
@@ -47,9 +47,10 @@
  },
  "method": [
   "Cook the pasta to the packet instructions, saving a mug of the cooking water, then drain.",
-  "Toss the sliced chicken in the fajita seasoning and fry in the oil for 6 to 8 minutes. Add the sliced onion and peppers and cook for 5 minutes more.",
-  "Stir in the tomato puree and passata and simmer for 5 minutes, loosening with a splash of the pasta water if needed.",
-  "Mix in the pasta and yoghurt, scatter over the grated cheese and serve. It is also good cold the next day."
+  "Toss the sliced chicken in half the fajita seasoning and fry in half the oil for 5 to 6 minutes until golden and nearly cooked, then lift out.",
+  "Fry the sliced onion with the rest of the seasoning in the remaining oil for 3 to 4 minutes, then add the peppers and cook for another 3 to 4 minutes.",
+  "Return the chicken with the tomato puree and cook for 2 minutes, then stir in the passata, pasta and yoghurt and heat through, loosening with pasta water if needed.",
+  "Scatter over the grated cheese and serve. It is also good cold the next day."
  ],
  "source": "idea: Sainsbury's recipes"
 }

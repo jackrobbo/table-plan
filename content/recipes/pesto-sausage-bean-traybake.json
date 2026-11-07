@@ -4,10 +4,10 @@
  "course": "dinner",
  "emoji": "🫘",
  "serves": 4,
- "status": "draft",
+ "status": "live",
  "time": {
   "prep": 10,
-  "cook": 45
+  "cook": 55
  },
  "ingredients": [
   {
@@ -54,8 +54,9 @@
  "method": [
   "Heat the oven to 200C (180C fan). Slice the potatoes thinly and cut the onion into wedges.",
   "Tip the potatoes, onion, tomatoes, spring onions and sausage chunks into a large tray with the oil. Roast for 20 minutes, until the sausages are browned.",
-  "Stir in the drained beans, stock cube dissolved in 200ml hot water, and half the pesto, with lemon wedges alongside.",
-  "Roast for 20 to 25 minutes more until the potatoes are tender and the sausages are cooked through, then drizzle with the rest of the pesto."
+  "Stir in the drained beans and the stock cube dissolved in 200ml hot water, with lemon wedges alongside.",
+  "Roast for 30 to 35 minutes more until the potatoes are tender and the sausages are cooked through.",
+  "Swirl through the pesto and serve."
  ],
  "source": "idea: BBC Good Food"
 }

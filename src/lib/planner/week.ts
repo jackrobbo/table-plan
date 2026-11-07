@@ -40,18 +40,21 @@ export function pickDinners(o: PickOptions): Recipe[] {
     return out.length ? out : fixed;
   }
   const jit = new Map(pool.map((r) => [r, o.R.next() * (o.jitter ?? 120)]));
+  // With a big bank of meals, try a random sample of swaps per position rather than every meal: the best week barely changes, the cost does.
+  const SAMPLE = 24;
   const nudge = (r: Recipe) => jit.get(r) ?? 0;
   const score = (free: Recipe[]) => weekObjective([...fixed, ...free], o, nudge);
 
   let best: Recipe[] | null = null, bestScore = Infinity;
-  for (let start = 0; start < 8; start++) {
+  for (let start = 0; start < 4; start++) {
     const cur: Recipe[] = [];
     while (cur.length < free) { const c = o.R.pick(pool); if (!cur.includes(c)) cur.push(c); }
     let cs = score(cur);
-    for (let pass = 0; pass < 4; pass++) {
+    for (let pass = 0; pass < 3; pass++) {
       let improved = false;
       for (let i = 0; i < free; i++) {
-        for (const c of pool) {
+        const tryList = pool.length > SAMPLE ? Array.from({ length: SAMPLE }, () => o.R.pick(pool)) : pool;
+        for (const c of tryList) {
           if (cur.includes(c)) continue;
           const prev = cur[i]; cur[i] = c;
           const s = score(cur);

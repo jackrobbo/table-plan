@@ -4,7 +4,7 @@
  "course": "dinner",
  "emoji": "🍚",
  "serves": 4,
- "status": "draft",
+ "status": "live",
  "time": {
   "prep": 10,
   "cook": 20
@@ -50,10 +50,11 @@
   "oil": 20
  },
  "method": [
-  "Cook the rice, drain and spread out to cool a little.",
-  "Fry the chopped onion and garlic in half the oil for 5 minutes. Add the prawns and cook until pink, then push to the side.",
-  "Pour the beaten eggs into the pan and scramble briefly, then add the rice, peas and green vegetables and stir-fry over a high heat for 4 to 5 minutes.",
-  "Season with the soy sauce and vinegar and serve scattered with sliced spring onion."
+  "Cook the rice to the packet instructions and drain. Boil the peas and green vegetables for 1 minute, then drain.",
+  "Fry the chopped onion in half the oil over a medium heat for 10 minutes until golden, then add the garlic for a minute.",
+  "Tip in the blanched vegetables and fry for 5 minutes, then add the prawns and fry for 2 minutes until pink.",
+  "Stir in the rice, push everything to one side and scramble the beaten eggs in the gap.",
+  "Fold everything together with the soy sauce and vinegar and scatter over the sliced spring onion."
  ],
  "source": "idea: BBC Good Food"
 }

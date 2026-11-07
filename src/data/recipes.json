@@ -820,6 +820,167 @@
   ]
  },
  {
+  "id": "beef-burrito-bowl",
+  "c": "dinner",
+  "e": "🥗",
+  "n": "Beef Burrito Bowl",
+  "p": 27,
+  "k": 505,
+  "serves": 4,
+  "cb": 64,
+  "f": 16,
+  "cost": 215,
+  "b": "medium",
+  "img": {
+   "a": "Illustrative photo: a bowl of curry with a spoon",
+   "c": "#e8a808",
+   "ph": "food-curry"
+  },
+  "t": 40,
+  "macros_only": false,
+  "fresh": [
+   [
+    "mince",
+    350
+   ],
+   [
+    "onions",
+    1
+   ],
+   [
+    "ctoms",
+    400
+   ],
+   [
+    "plum",
+    150
+   ],
+   [
+    "mixpep",
+    2
+   ],
+   [
+    "kidney",
+    200
+   ],
+   [
+    "avocado",
+    1
+   ],
+   [
+    "spring",
+    0.25
+   ],
+   [
+    "coriander",
+    10
+   ],
+   [
+    "lime",
+    1
+   ],
+   [
+    "greek",
+    60
+   ]
+  ],
+  "cup": [
+   "rice",
+   "puree",
+   "garlic",
+   "paprika",
+   "chilliflakes",
+   "oil"
+  ],
+  "cq": {
+   "rice": 240,
+   "puree": 15,
+   "garlic": 4,
+   "paprika": 3,
+   "chilliflakes": 1,
+   "oil": 20
+  },
+  "m": [
+   "Fry the chopped onion in half the oil over a high heat for 5 to 7 minutes until soft and starting to colour. Add the garlic for a minute, then the mince, breaking it up until browned.",
+   "Stir in the paprika, chilli flakes and tomato puree for a minute, then add the tinned tomatoes and half a tin of water. Simmer for 20 minutes.",
+   "Meanwhile quarter the cherry tomatoes and mix with the sliced spring onion and coriander for a salsa. Slice the avocado and squeeze over the lime.",
+   "Fry the sliced peppers in the rest of the oil for 3 to 4 minutes, add the drained beans and heat through. Cook the rice, then stir the peppers and beans through it.",
+   "Divide the rice between bowls and top with the chilli, salsa, avocado and a spoonful of yoghurt."
+  ],
+  "allergens": [
+   "milk"
+  ]
+ },
+ {
+  "id": "beef-noodle-stir-fry",
+  "c": "dinner",
+  "e": "🥢",
+  "n": "Beef & Mushroom Noodle Stir-Fry",
+  "p": 46,
+  "k": 467,
+  "serves": 2,
+  "cb": 40,
+  "f": 14,
+  "cost": 374,
+  "b": "high",
+  "img": {
+   "a": "Illustrative photo: a bowl of noodles with vegetables",
+   "c": "#181808",
+   "ph": "food-noodles"
+  },
+  "t": 20,
+  "macros_only": false,
+  "fresh": [
+   [
+    "sizzle",
+    320
+   ],
+   [
+    "onions",
+    1
+   ],
+   [
+    "mushrooms",
+    160
+   ],
+   [
+    "stirfry",
+    150
+   ],
+   [
+    "spring",
+    0.25
+   ]
+  ],
+  "cup": [
+   "noodles",
+   "soy",
+   "vinegar",
+   "garlic",
+   "oil"
+  ],
+  "cq": {
+   "noodles": 85,
+   "soy": 15,
+   "vinegar": 10,
+   "garlic": 6,
+   "oil": 10
+  },
+  "m": [
+   "Cook the noodles to the packet instructions, drain and set aside.",
+   "Stir-fry the sliced beef in half the oil over a high heat for about a minute until browned, then lift out.",
+   "Soften the sliced onion in the rest of the oil for 2 to 3 minutes, then add the mushrooms and garlic and fry for 3 minutes.",
+   "Add the stir-fry vegetables for a minute or two until piping hot.",
+   "Toss in the noodles with the soy sauce, vinegar and a splash of water, then the beef and spring onion, and cook for 2 minutes more."
+  ],
+  "allergens": [
+   "eggs",
+   "gluten",
+   "soya",
+   "sulphites"
+  ]
+ },
+ {
   "id": "beef-tacos",
   "c": "dinner",
   "e": "🌮",
@@ -1186,6 +1347,71 @@
    "gluten",
    "milk",
    "soya"
+  ]
+ },
+ {
+  "id": "cheesy-beef-veg-skillet",
+  "c": "dinner",
+  "e": "🧀",
+  "n": "Cheesy Beef & Veg Skillet",
+  "p": 32,
+  "k": 317,
+  "serves": 4,
+  "cb": 8,
+  "f": 16,
+  "cost": 230,
+  "b": "medium",
+  "img": {
+   "a": "Illustrative photo: a plate of roast meat and vegetables",
+   "c": "#282828",
+   "ph": "food-traybake"
+  },
+  "t": 35,
+  "macros_only": false,
+  "fresh": [
+   [
+    "mince",
+    500
+   ],
+   [
+    "onions",
+    1
+   ],
+   [
+    "pepper",
+    2
+   ],
+   [
+    "courgette",
+    200
+   ],
+   [
+    "ctoms",
+    400
+   ]
+  ],
+  "cup": [
+   "paprika",
+   "chilliflakes",
+   "oregano",
+   "cheddar",
+   "oil"
+  ],
+  "cq": {
+   "paprika": 4,
+   "chilliflakes": 1,
+   "oregano": 2,
+   "cheddar": 80,
+   "oil": 15
+  },
+  "m": [
+   "Fry the chopped onion, peppers and beef mince in the oil in a large pan for a few minutes until the mince is browned.",
+   "Add the diced courgette and cook for 3 minutes more.",
+   "Stir in the tomatoes, smoked paprika, chilli flakes and oregano. Simmer on a low heat for 10 minutes.",
+   "Scatter over the cheese and serve from the pan, or heat the grill to high and brown the top for 2 to 3 minutes."
+  ],
+  "allergens": [
+   "milk"
   ]
  },
  {
@@ -1611,6 +1837,79 @@
   "allergens": []
  },
  {
+  "id": "chicken-bean-fajita-traybake",
+  "c": "dinner",
+  "e": "🌯",
+  "n": "Chicken & Bean Fajita Traybake",
+  "p": 46,
+  "k": 701,
+  "serves": 4,
+  "cb": 91,
+  "f": 17,
+  "cost": 212,
+  "b": "medium",
+  "img": {
+   "a": "Illustrative photo: three tacos with meat and lettuce on a white plate",
+   "c": "#080808",
+   "ph": "food-tacos"
+  },
+  "t": 50,
+  "macros_only": false,
+  "fresh": [
+   [
+    "breast",
+    450
+   ],
+   [
+    "mixpep",
+    3
+   ],
+   [
+    "onions",
+    1
+   ],
+   [
+    "butterbeans",
+    480
+   ],
+   [
+    "wraps",
+    8
+   ],
+   [
+    "lime",
+    1
+   ],
+   [
+    "greek",
+    120
+   ]
+  ],
+  "cup": [
+   "fajita",
+   "puree",
+   "oil",
+   "garlic"
+  ],
+  "cq": {
+   "fajita": 12,
+   "puree": 30,
+   "oil": 30,
+   "garlic": 4
+  },
+  "m": [
+   "Heat the oven to 200C (180C fan). Slice the chicken, peppers and onion into strips.",
+   "Tip everything into a large tray with the drained beans, fajita seasoning, tomato puree, oil, garlic and 2 tablespoons of water. Mix well and spread out in one layer.",
+   "Roast for 30 to 35 minutes until the chicken is cooked through and the peppers are soft.",
+   "Warm the wraps in foil on the shelf below for the last 5 minutes. Serve with lime wedges and a spoonful of yoghurt."
+  ],
+  "allergens": [
+   "gluten",
+   "milk",
+   "sulphites"
+  ]
+ },
+ {
   "id": "chicken-burrito-bowl",
   "c": "lunch",
   "e": "🥗",
@@ -1716,6 +2015,164 @@
    "gluten",
    "milk",
    "mustard"
+  ]
+ },
+ {
+  "id": "chicken-chorizo-traybake",
+  "c": "dinner",
+  "e": "🍗",
+  "n": "Chicken & Chorizo Tray Bake",
+  "p": 38,
+  "k": 512,
+  "serves": 4,
+  "cb": 51,
+  "f": 17,
+  "cost": 212,
+  "b": "medium",
+  "img": {
+   "a": "Illustrative photo: a plate of roast meat and vegetables",
+   "c": "#282828",
+   "ph": "food-traybake"
+  },
+  "t": 70,
+  "macros_only": false,
+  "fresh": [
+   [
+    "thigh",
+    500
+   ],
+   [
+    "chorizo",
+    75
+   ],
+   [
+    "sweetpot",
+    400
+   ],
+   [
+    "bakepot",
+    2
+   ],
+   [
+    "onions",
+    2
+   ],
+   [
+    "mixpep",
+    2
+   ],
+   [
+    "chilli",
+    10
+   ],
+   [
+    "greek",
+    60
+   ],
+   [
+    "lemon",
+    1
+   ]
+  ],
+  "cup": [
+   "garlic",
+   "stock",
+   "herbs",
+   "vinegar",
+   "paprika",
+   "oil",
+   "nuts"
+  ],
+  "cq": {
+   "garlic": 6,
+   "stock": 10,
+   "herbs": 3,
+   "vinegar": 20,
+   "paprika": 3,
+   "oil": 15,
+   "nuts": 20
+  },
+  "m": [
+   "Heat the oven to 200C (180C fan). Chop the potatoes and sweet potatoes into chunky pieces, the onions into wedges and the peppers into strips, and tip everything into a deep tray with the oil.",
+   "Fry the diced chorizo in a pan until the oil runs, add the sliced garlic and herbs, then pour in the stock cube dissolved in 200ml hot water and the vinegar.",
+   "Season the chicken with the paprika, sit it on the vegetables and pour the chorizo stock over. Cover with foil and bake for 35 minutes.",
+   "Take the foil off and bake for another 20 minutes, until the chicken is golden and cooked through and the vegetables are tender.",
+   "Serve with a spoonful of yoghurt, the chopped chilli, crushed almonds and a squeeze of lemon."
+  ],
+  "allergens": [
+   "eggs",
+   "milk",
+   "nuts",
+   "peanuts",
+   "sulphites"
+  ]
+ },
+ {
+  "id": "chicken-fajita-pasta",
+  "c": "dinner",
+  "e": "🌶️",
+  "n": "Chicken Fajita Pasta",
+  "p": 42,
+  "k": 542,
+  "serves": 4,
+  "cb": 68,
+  "f": 13,
+  "cost": 167,
+  "b": "low",
+  "img": {
+   "a": "Illustrative photo: penne pasta with a meat sauce",
+   "c": "#d8e8f8",
+   "ph": "food-pasta"
+  },
+  "t": 35,
+  "macros_only": false,
+  "fresh": [
+   [
+    "breast",
+    450
+   ],
+   [
+    "onions",
+    1
+   ],
+   [
+    "pepper",
+    2
+   ],
+   [
+    "passata",
+    250
+   ],
+   [
+    "greek",
+    100
+   ]
+  ],
+  "cup": [
+   "fusilli",
+   "fajita",
+   "puree",
+   "cheddar",
+   "oil"
+  ],
+  "cq": {
+   "fusilli": 320,
+   "fajita": 20,
+   "puree": 20,
+   "cheddar": 50,
+   "oil": 15
+  },
+  "m": [
+   "Cook the pasta to the packet instructions, saving a mug of the cooking water, then drain.",
+   "Toss the sliced chicken in half the fajita seasoning and fry in half the oil for 5 to 6 minutes until golden and nearly cooked, then lift out.",
+   "Fry the sliced onion with the rest of the seasoning in the remaining oil for 3 to 4 minutes, then add the peppers and cook for another 3 to 4 minutes.",
+   "Return the chicken with the tomato puree and cook for 2 minutes, then stir in the passata, pasta and yoghurt and heat through, loosening with pasta water if needed.",
+   "Scatter over the grated cheese and serve. It is also good cold the next day."
+  ],
+  "allergens": [
+   "gluten",
+   "milk",
+   "sulphites"
   ]
  },
  {
@@ -2005,6 +2462,155 @@
   ]
  },
  {
+  "id": "chicken-spinach-lasagne",
+  "c": "dinner",
+  "e": "🍽️",
+  "n": "Chicken & Spinach Lasagne",
+  "p": 53,
+  "k": 787,
+  "serves": 4,
+  "cb": 74,
+  "f": 31,
+  "cost": 217,
+  "b": "medium",
+  "img": {
+   "a": "Illustrative photo: penne pasta with a meat sauce",
+   "c": "#d8e8f8",
+   "ph": "food-pasta"
+  },
+  "t": 75,
+  "macros_only": false,
+  "fresh": [
+   [
+    "thigh",
+    600
+   ],
+   [
+    "ctoms",
+    400
+   ],
+   [
+    "onions",
+    2
+   ],
+   [
+    "spinach",
+    160
+   ],
+   [
+    "milk",
+    700
+   ]
+  ],
+  "cup": [
+   "lasagne",
+   "flour",
+   "butter",
+   "cheddar",
+   "puree",
+   "stock",
+   "oregano",
+   "garlic",
+   "oil"
+  ],
+  "cq": {
+   "lasagne": 240,
+   "flour": 60,
+   "butter": 60,
+   "cheddar": 80,
+   "puree": 30,
+   "stock": 10,
+   "oregano": 2,
+   "garlic": 6,
+   "oil": 15
+  },
+  "m": [
+   "Heat the oven to 200C (180C fan). Roast the chicken thighs on a tray with a little oil for 18 minutes until cooked through, then shred with two forks.",
+   "Soften the chopped onion in the oil, add the garlic, then the tomatoes, puree, oregano and stock cube in 300ml hot water. Simmer for 10 to 15 minutes, then stir in the shredded chicken.",
+   "Melt the butter, stir in the flour for a minute, then whisk in the milk gradually until smooth and thick for a white sauce.",
+   "Wilt the spinach in a colander with boiling water, rinse and squeeze dry.",
+   "Layer the chicken sauce, lasagne sheets and spinach in a dish, finish with white sauce and cheese and bake for 20 to 25 minutes until golden. Rest for 5 minutes before serving."
+  ],
+  "allergens": [
+   "eggs",
+   "gluten",
+   "milk"
+  ]
+ },
+ {
+  "id": "chicken-sweetcorn-tacos",
+  "c": "dinner",
+  "e": "🌮",
+  "n": "Chicken & Sweetcorn Tacos",
+  "p": 39,
+  "k": 519,
+  "serves": 4,
+  "cb": 64,
+  "f": 11,
+  "cost": 155,
+  "b": "low",
+  "img": {
+   "a": "Illustrative photo: three tacos with meat and lettuce on a white plate",
+   "c": "#080808",
+   "ph": "food-tacos"
+  },
+  "t": 30,
+  "macros_only": false,
+  "fresh": [
+   [
+    "breast",
+    450
+   ],
+   [
+    "wraps",
+    6
+   ],
+   [
+    "cabbage",
+    150
+   ],
+   [
+    "kidney",
+    200
+   ],
+   [
+    "lime",
+    2
+   ],
+   [
+    "coriander",
+    15
+   ],
+   [
+    "greek",
+    100
+   ]
+  ],
+  "cup": [
+   "sweetcorn",
+   "fajita",
+   "garlic",
+   "oil"
+  ],
+  "cq": {
+   "sweetcorn": 160,
+   "fajita": 15,
+   "garlic": 4,
+   "oil": 15
+  },
+  "m": [
+   "Slice the chicken into strips, toss with the fajita seasoning and fry in the oil with the garlic for 6 to 8 minutes until golden and cooked through.",
+   "Shred the cabbage and toss with the juice of one lime and half the coriander.",
+   "In a second hot pan, fry the sweetcorn until sizzling and charred in places, then stir in the drained beans and warm through.",
+   "Warm the wraps. Fill with chicken, slaw and the bean and corn mix, then top with yoghurt, the remaining coriander and lime wedges."
+  ],
+  "allergens": [
+   "gluten",
+   "milk",
+   "sulphites"
+  ]
+ },
+ {
   "id": "chicken-thigh-special-fried-rice",
   "c": "dinner",
   "e": "🍳",
@@ -2244,6 +2850,72 @@
    "Serve over the cooked rice."
   ],
   "allergens": []
+ },
+ {
+  "id": "chilli-pork-pasta-bake",
+  "c": "dinner",
+  "e": "🍝",
+  "n": "Chilli Pork Pasta Bake",
+  "p": 37,
+  "k": 530,
+  "serves": 4,
+  "cb": 69,
+  "f": 13,
+  "cost": 108,
+  "b": "low",
+  "img": {
+   "a": "Illustrative photo: penne pasta with a meat sauce",
+   "c": "#d8e8f8",
+   "ph": "food-pasta"
+  },
+  "t": 40,
+  "macros_only": false,
+  "fresh": [
+   [
+    "porkmince",
+    400
+   ],
+   [
+    "onions",
+    1
+   ],
+   [
+    "ctoms",
+    400
+   ],
+   [
+    "kidney",
+    120
+   ]
+  ],
+  "cup": [
+   "fusilli",
+   "sweetcorn",
+   "fajita",
+   "stock",
+   "cheddar",
+   "oil"
+  ],
+  "cq": {
+   "fusilli": 300,
+   "sweetcorn": 120,
+   "fajita": 15,
+   "stock": 10,
+   "cheddar": 50,
+   "oil": 8
+  },
+  "m": [
+   "Heat the oven to 180C (160C fan). Cook the pasta until just tender, then drain.",
+   "Fry the chopped onion and pork mince in the oil for about 5 minutes until browned.",
+   "Stir in the fajita seasoning, tomatoes, drained beans and sweetcorn, then add 300ml hot water with the stock cube crumbled in. Simmer for a few minutes until slightly thickened.",
+   "Stir in the pasta, tip into a baking dish, scatter over the cheese and bake for 15 to 20 minutes until golden."
+  ],
+  "allergens": [
+   "eggs",
+   "gluten",
+   "milk",
+   "sulphites"
+  ]
  },
  {
   "id": "chinese-5-spice-stir-fry",
@@ -2509,6 +3181,79 @@
   ]
  },
  {
+  "id": "creamy-chicken-mushroom-stew",
+  "c": "dinner",
+  "e": "🍲",
+  "n": "Creamy Chicken & Mushroom Stew",
+  "p": 37,
+  "k": 471,
+  "serves": 4,
+  "cb": 44,
+  "f": 17,
+  "cost": 189,
+  "b": "low",
+  "img": {
+   "a": "Illustrative photo: a bowl of creamy soup with parsley and bread",
+   "c": "#e89808",
+   "ph": "food-soup"
+  },
+  "t": 65,
+  "macros_only": false,
+  "fresh": [
+   [
+    "thigh",
+    600
+   ],
+   [
+    "onions",
+    2
+   ],
+   [
+    "carrots",
+    150
+   ],
+   [
+    "mushrooms",
+    300
+   ],
+   [
+    "potatoes",
+    600
+   ],
+   [
+    "creme",
+    150
+   ]
+  ],
+  "cup": [
+   "flour",
+   "stock",
+   "herbs",
+   "garlic",
+   "butter",
+   "oil"
+  ],
+  "cq": {
+   "flour": 20,
+   "stock": 10,
+   "herbs": 2,
+   "garlic": 6,
+   "butter": 20,
+   "oil": 10
+  },
+  "m": [
+   "Heat the oven to 200C (180C fan). Brown the chicken thighs in the oil in a lidded ovenproof pan.",
+   "Add the onion wedges, sliced carrot, garlic and flour and mix well. Pour in 400ml hot water with the stock cube, add the mushrooms and herbs and bring to the boil.",
+   "Cover and bake for 40 minutes until the chicken and vegetables are tender. Prick the potatoes and bake on a tray alongside.",
+   "Stir the crème fraîche through the stew. Crush the potatoes with the butter and a pinch of salt and serve alongside."
+  ],
+  "allergens": [
+   "eggs",
+   "gluten",
+   "milk"
+  ]
+ },
+ {
   "id": "creamy-chicken-pasta",
   "c": "dinner",
   "e": "🍝",
@@ -2557,6 +3302,71 @@
    "Toss with pasta, finish with parmesan."
   ],
   "allergens": [
+   "gluten",
+   "milk"
+  ]
+ },
+ {
+  "id": "creamy-pork-mushroom-pasta",
+  "c": "dinner",
+  "e": "🍄",
+  "n": "Creamy Pork & Mushroom Pasta",
+  "p": 38,
+  "k": 746,
+  "serves": 4,
+  "cb": 83,
+  "f": 31,
+  "cost": 204,
+  "b": "medium",
+  "img": {
+   "a": "Illustrative photo: penne pasta with a meat sauce",
+   "c": "#d8e8f8",
+   "ph": "food-pasta"
+  },
+  "t": 40,
+  "macros_only": false,
+  "fresh": [
+   [
+    "porkloin",
+    400
+   ],
+   [
+    "mushrooms",
+    300
+   ],
+   [
+    "onions",
+    2
+   ],
+   [
+    "creme",
+    150
+   ]
+  ],
+  "cup": [
+   "fusilli",
+   "parmesan",
+   "stock",
+   "herbs",
+   "garlic",
+   "oil"
+  ],
+  "cq": {
+   "fusilli": 400,
+   "parmesan": 50,
+   "stock": 5,
+   "herbs": 2,
+   "garlic": 6,
+   "oil": 15
+  },
+  "m": [
+   "Heat the oven to 200C (180C fan). Sear the pork steaks in the oil for 2 minutes each side, then roast on a tray for 8 to 10 minutes until cooked through. Cover and rest.",
+   "Cook the pasta to the packet instructions and drain.",
+   "In the pork pan, soften the chopped onion and garlic for a minute, add the quartered mushrooms for a minute, then the stock cube in 200ml hot water. Simmer for 5 minutes and stir in the crème fraîche and herbs.",
+   "Toss the pasta through the sauce, top with sliced pork and grated parmesan."
+  ],
+  "allergens": [
+   "eggs",
    "gluten",
    "milk"
   ]
@@ -2613,6 +3423,75 @@
    "gluten",
    "sesame",
    "soya"
+  ]
+ },
+ {
+  "id": "crispy-chicken-garlic-beans",
+  "c": "dinner",
+  "e": "🍗",
+  "n": "Crispy Chicken & Garlicky Beans",
+  "p": 51,
+  "k": 437,
+  "serves": 2,
+  "cb": 33,
+  "f": 12,
+  "cost": 269,
+  "b": "high",
+  "img": {
+   "a": "Illustrative photo: a colourful bowl of meat and vegetables",
+   "c": "#e8e8e8",
+   "ph": "slide-targets"
+  },
+  "t": 20,
+  "macros_only": false,
+  "fresh": [
+   [
+    "breast",
+    300
+   ],
+   [
+    "brocc",
+    160
+   ],
+   [
+    "greenbeans",
+    160
+   ],
+   [
+    "butterbeans",
+    240
+   ],
+   [
+    "lemon",
+    1
+   ],
+   [
+    "greek",
+    30
+   ]
+  ],
+  "cup": [
+   "breadcrumbs",
+   "garlic",
+   "herbs",
+   "oil"
+  ],
+  "cq": {
+   "breadcrumbs": 30,
+   "garlic": 6,
+   "herbs": 1,
+   "oil": 15
+  },
+  "m": [
+   "Slice each chicken breast through the middle to make two thin pieces and flatten them with a rolling pin. Press both sides into the breadcrumbs mixed with the grated lemon zest and herbs.",
+   "Steam or boil the green beans and broccoli for 5 to 6 minutes until just tender.",
+   "Pan-fry the chicken in half the oil for 3 to 4 minutes each side (about 6 minutes in all), until golden and cooked right through.",
+   "Warm the drained butter beans in the rest of the oil with the sliced garlic, simmering for 2 minutes, then take off the heat and stir in the yoghurt and a squeeze of lemon.",
+   "Serve the chicken on the beans with the greens alongside."
+  ],
+  "allergens": [
+   "gluten",
+   "milk"
   ]
  },
  {
@@ -2849,6 +3728,78 @@
    "gluten",
    "soya",
    "sulphites"
+  ]
+ },
+ {
+  "id": "garlic-butter-prawn-noodles",
+  "c": "dinner",
+  "e": "🍤",
+  "n": "Garlic Butter Prawn Noodles",
+  "p": 28,
+  "k": 533,
+  "serves": 2,
+  "cb": 59,
+  "f": 21,
+  "cost": 351,
+  "b": "high",
+  "img": {
+   "a": "Illustrative photo: a bowl of noodles with vegetables",
+   "c": "#181808",
+   "ph": "food-noodles"
+  },
+  "t": 22,
+  "macros_only": false,
+  "fresh": [
+   [
+    "prawns",
+    300
+   ],
+   [
+    "spinach",
+    100
+   ],
+   [
+    "chilli",
+    8
+   ],
+   [
+    "spring",
+    0.25
+   ]
+  ],
+  "cup": [
+   "noodles",
+   "butter",
+   "garlic",
+   "soy",
+   "honey",
+   "nuts",
+   "oil"
+  ],
+  "cq": {
+   "noodles": 140,
+   "butter": 30,
+   "garlic": 9,
+   "soy": 20,
+   "honey": 10,
+   "nuts": 20,
+   "oil": 5
+  },
+  "m": [
+   "Mix the soy sauce and honey in a small bowl. Finely slice the chilli and grate the garlic.",
+   "Melt the butter with the oil in a wok or large pan over a medium heat and fry the garlic and chilli for 2 to 3 minutes.",
+   "Add the prawns and cook for about a minute on each side until pink. Meanwhile boil the noodles for 4 minutes and drain.",
+   "Add the spinach and let it wilt, then toss in the noodles and sauce over a high heat for a minute or two until glossy.",
+   "Top with chopped nuts and sliced spring onion."
+  ],
+  "allergens": [
+   "crustaceans",
+   "eggs",
+   "gluten",
+   "milk",
+   "nuts",
+   "peanuts",
+   "soya"
   ]
  },
  {
@@ -3404,6 +4355,63 @@
   ]
  },
  {
+  "id": "honey-pork-noodles",
+  "c": "dinner",
+  "e": "🍯",
+  "n": "Honey Pork Noodles",
+  "p": 40,
+  "k": 683,
+  "serves": 2,
+  "cb": 67,
+  "f": 30,
+  "cost": 239,
+  "b": "medium",
+  "img": {
+   "a": "Illustrative photo: a bowl of noodles with vegetables",
+   "c": "#181808",
+   "ph": "food-noodles"
+  },
+  "t": 30,
+  "macros_only": false,
+  "fresh": [
+   [
+    "porkloin",
+    300
+   ],
+   [
+    "stirfry",
+    200
+   ]
+  ],
+  "cup": [
+   "honey",
+   "soy",
+   "fivespice",
+   "paprika",
+   "noodles",
+   "oil"
+  ],
+  "cq": {
+   "honey": 30,
+   "soy": 20,
+   "fivespice": 2,
+   "paprika": 1,
+   "noodles": 140,
+   "oil": 5
+  },
+  "m": [
+   "Heat the grill to high. Mix the honey, soy sauce, five spice, paprika and oil in a bowl and turn the sliced pork in it.",
+   "Lay the pork on a foil-lined tray and pour the leftover marinade into a small pan. Grill the pork for 8 to 10 minutes, turning, until lightly charred and cooked through.",
+   "Boil the spare marinade for about 3 minutes until thick and glossy and spoon it over the pork.",
+   "Boil the noodles for 3 minutes, adding the stir-fry vegetables for the last 2, then drain and serve with the pork."
+  ],
+  "allergens": [
+   "eggs",
+   "gluten",
+   "soya"
+  ]
+ },
+ {
   "id": "houmous-and-carrot-sticks",
   "c": "snack",
   "e": "🥕",
@@ -3917,6 +4925,89 @@
   "allergens": []
  },
  {
+  "id": "meatball-cowboy-pie",
+  "c": "dinner",
+  "e": "🤠",
+  "n": "Meatball Cowboy Pie",
+  "p": 36,
+  "k": 640,
+  "serves": 4,
+  "cb": 69,
+  "f": 24,
+  "cost": 169,
+  "b": "low",
+  "img": {
+   "a": "Illustrative photo: a plate of roast meat and vegetables",
+   "c": "#282828",
+   "ph": "food-traybake"
+  },
+  "t": 70,
+  "macros_only": false,
+  "fresh": [
+   [
+    "mince",
+    250
+   ],
+   [
+    "sausages",
+    4
+   ],
+   [
+    "onions",
+    1
+   ],
+   [
+    "eggs",
+    1
+   ],
+   [
+    "beans",
+    410
+   ],
+   [
+    "bbq",
+    45
+   ],
+   [
+    "potatoes",
+    800
+   ],
+   [
+    "milk",
+    60
+   ]
+  ],
+  "cup": [
+   "breadcrumbs",
+   "herbs",
+   "butter",
+   "cheddar",
+   "garlic",
+   "oil"
+  ],
+  "cq": {
+   "breadcrumbs": 30,
+   "herbs": 2,
+   "butter": 20,
+   "cheddar": 40,
+   "garlic": 4,
+   "oil": 15
+  },
+  "m": [
+   "Heat the oven to 200C (180C fan). Peel and chop the potatoes and boil for 15 minutes.",
+   "Squeeze the sausagemeat out of the skins and mix with the mince, half the grated onion, breadcrumbs, egg and herbs. Roll into about 16 small meatballs and brown in half the oil.",
+   "Soften the remaining chopped onion and garlic in the rest of the oil, then add the baked beans and BBQ sauce and simmer for 3 minutes.",
+   "Put the meatballs in an ovenproof dish and pour the beans over. Mash the potatoes with the butter and milk, spread on top and sprinkle with cheese.",
+   "Bake for 25 to 30 minutes until golden, then serve with peas or greens."
+  ],
+  "allergens": [
+   "eggs",
+   "gluten",
+   "milk",
+   "sulphites"
+  ]
+ },
+ {
   "id": "one-pot-chicken-and-rice",
   "c": "dinner",
   "e": "🍗",
@@ -4216,6 +5307,208 @@
   ]
  },
  {
+  "id": "pesto-chicken-courgette-pasta",
+  "c": "dinner",
+  "e": "🌿",
+  "n": "Pesto Chicken & Courgette Pasta",
+  "p": 31,
+  "k": 491,
+  "serves": 4,
+  "cb": 63,
+  "f": 14,
+  "cost": 220,
+  "b": "medium",
+  "img": {
+   "a": "Illustrative photo: penne pasta with a meat sauce",
+   "c": "#d8e8f8",
+   "ph": "food-pasta"
+  },
+  "t": 25,
+  "macros_only": false,
+  "fresh": [
+   [
+    "roast",
+    270
+   ],
+   [
+    "courgette",
+    300
+   ],
+   [
+    "plum",
+    250
+   ],
+   [
+    "pesto",
+    100
+   ]
+  ],
+  "cup": [
+   "fusilli",
+   "parmesan",
+   "oil"
+  ],
+  "cq": {
+   "fusilli": 300,
+   "parmesan": 20,
+   "oil": 10
+  },
+  "m": [
+   "Cook the pasta for 10 to 12 minutes, then drain, keeping a little of the water.",
+   "Meanwhile fry the sliced courgette in the oil for 5 minutes until softened and lightly golden.",
+   "Add the chopped chicken and diced tomatoes and warm through for a couple of minutes.",
+   "Toss everything with the pasta and pesto, loosening with a splash of pasta water, and top with shavings of parmesan."
+  ],
+  "allergens": [
+   "eggs",
+   "gluten",
+   "milk",
+   "nuts"
+  ]
+ },
+ {
+  "id": "pesto-sausage-bean-traybake",
+  "c": "dinner",
+  "e": "🫘",
+  "n": "Pesto Sausage & Bean Traybake",
+  "p": 20,
+  "k": 440,
+  "serves": 4,
+  "cb": 51,
+  "f": 18,
+  "cost": 115,
+  "b": "low",
+  "img": {
+   "a": "Illustrative photo: a plate of roast meat and vegetables",
+   "c": "#282828",
+   "ph": "food-traybake"
+  },
+  "t": 65,
+  "macros_only": false,
+  "fresh": [
+   [
+    "sausages",
+    4
+   ],
+   [
+    "potatoes",
+    500
+   ],
+   [
+    "onions",
+    1
+   ],
+   [
+    "plum",
+    200
+   ],
+   [
+    "spring",
+    0.5
+   ],
+   [
+    "butterbeans",
+    480
+   ],
+   [
+    "pesto",
+    90
+   ],
+   [
+    "lemon",
+    1
+   ]
+  ],
+  "cup": [
+   "stock",
+   "oil"
+  ],
+  "cq": {
+   "stock": 10,
+   "oil": 10
+  },
+  "m": [
+   "Heat the oven to 200C (180C fan). Slice the potatoes thinly and cut the onion into wedges.",
+   "Tip the potatoes, onion, tomatoes, spring onions and sausage chunks into a large tray with the oil. Roast for 20 minutes, until the sausages are browned.",
+   "Stir in the drained beans and the stock cube dissolved in 200ml hot water, with lemon wedges alongside.",
+   "Roast for 30 to 35 minutes more until the potatoes are tender and the sausages are cooked through.",
+   "Swirl through the pesto and serve."
+  ],
+  "allergens": [
+   "eggs",
+   "gluten",
+   "milk",
+   "nuts",
+   "sulphites"
+  ]
+ },
+ {
+  "id": "pork-broccoli-honey-noodles",
+  "c": "dinner",
+  "e": "🥦",
+  "n": "Pork, Broccoli & Honey Stir-Fry",
+  "p": 33,
+  "k": 551,
+  "serves": 4,
+  "cb": 55,
+  "f": 24,
+  "cost": 192,
+  "b": "low",
+  "img": {
+   "a": "Illustrative photo: a bowl of noodles with vegetables",
+   "c": "#181808",
+   "ph": "food-noodles"
+  },
+  "t": 28,
+  "macros_only": false,
+  "fresh": [
+   [
+    "porkloin",
+    450
+   ],
+   [
+    "brocc",
+    250
+   ],
+   [
+    "pepper",
+    1
+   ],
+   [
+    "chilli",
+    8
+   ]
+  ],
+  "cup": [
+   "noodles",
+   "honey",
+   "soy",
+   "cornflour",
+   "garlic",
+   "oil"
+  ],
+  "cq": {
+   "noodles": 240,
+   "honey": 30,
+   "soy": 30,
+   "cornflour": 6,
+   "garlic": 3,
+   "oil": 15
+  },
+  "m": [
+   "Slice the pork into 1cm strips. Mix the cornflour with a tablespoon of water and set aside.",
+   "Stir-fry the pork in half the oil over a high heat for 3 to 4 minutes until just cooked, then lift out.",
+   "Add the broccoli and cook for 2 to 3 minutes, then add the rest of the oil, garlic and chilli for 2 minutes, then the sliced pepper for another 2 to 3 minutes.",
+   "Stir the soy sauce, half the honey and the cornflour mixture into the pan, return the pork and mix well.",
+   "Cook the noodles to the packet instructions, drain, toss with the rest of the honey and serve topped with the stir-fry."
+  ],
+  "allergens": [
+   "eggs",
+   "gluten",
+   "soya"
+  ]
+ },
+ {
   "id": "pork-steaks-roast-potatoes-and-veg",
   "c": "dinner",
   "e": "🥩",
@@ -4315,6 +5608,81 @@
    "eggs",
    "gluten",
    "mustard"
+  ]
+ },
+ {
+  "id": "prawn-egg-fried-rice",
+  "c": "dinner",
+  "e": "🍚",
+  "n": "Prawn & Egg Fried Rice",
+  "p": 20,
+  "k": 401,
+  "serves": 4,
+  "cb": 58,
+  "f": 10,
+  "cost": 204,
+  "b": "medium",
+  "img": {
+   "a": "Illustrative photo: a bowl of noodles with vegetables",
+   "c": "#181808",
+   "ph": "food-noodles"
+  },
+  "t": 30,
+  "macros_only": false,
+  "fresh": [
+   [
+    "prawns",
+    300
+   ],
+   [
+    "eggs",
+    3
+   ],
+   [
+    "peas",
+    150
+   ],
+   [
+    "medley",
+    100
+   ],
+   [
+    "onions",
+    1
+   ],
+   [
+    "spring",
+    0.5
+   ]
+  ],
+  "cup": [
+   "rice",
+   "garlic",
+   "soy",
+   "vinegar",
+   "oil"
+  ],
+  "cq": {
+   "rice": 240,
+   "garlic": 6,
+   "soy": 20,
+   "vinegar": 10,
+   "oil": 20
+  },
+  "m": [
+   "Cook the rice to the packet instructions and drain. Boil the peas and green vegetables for 1 minute, then drain.",
+   "Fry the chopped onion in half the oil over a medium heat for 10 minutes until golden, then add the garlic for a minute.",
+   "Tip in the blanched vegetables and fry for 5 minutes, then add the prawns and fry for 2 minutes until pink.",
+   "Stir in the rice, push everything to one side and scramble the beaten eggs in the gap.",
+   "Fold everything together with the soy sauce and vinegar and scatter over the sliced spring onion."
+  ],
+  "allergens": [
+   "crustaceans",
+   "eggs",
+   "gluten",
+   "milk",
+   "soya",
+   "sulphites"
   ]
  },
  {
@@ -4785,6 +6153,83 @@
   ]
  },
  {
+  "id": "salmon-corn-tacos",
+  "c": "dinner",
+  "e": "🌮",
+  "n": "Salmon & Sweetcorn Tacos",
+  "p": 37,
+  "k": 747,
+  "serves": 2,
+  "cb": 67,
+  "f": 35,
+  "cost": 422,
+  "b": "high",
+  "img": {
+   "a": "Illustrative photo: three tacos with meat and lettuce on a white plate",
+   "c": "#080808",
+   "ph": "food-tacos"
+  },
+  "t": 18,
+  "macros_only": false,
+  "fresh": [
+   [
+    "salmon",
+    260
+   ],
+   [
+    "wraps",
+    3
+   ],
+   [
+    "avocado",
+    0.5
+   ],
+   [
+    "plum",
+    160
+   ],
+   [
+    "cabbage",
+    80
+   ],
+   [
+    "coriander",
+    15
+   ],
+   [
+    "lime",
+    2
+   ],
+   [
+    "greek",
+    30
+   ]
+  ],
+  "cup": [
+   "sweetcorn",
+   "paprika",
+   "chilliflakes",
+   "oil"
+  ],
+  "cq": {
+   "sweetcorn": 160,
+   "paprika": 2,
+   "chilliflakes": 1,
+   "oil": 10
+  },
+  "m": [
+   "Roughly chop half the sweetcorn with the coriander and tomatoes and stir in the juice of one lime for a chunky salsa.",
+   "Shred the cabbage and toss it with the yoghurt, paprika, chilli flakes and the juice of the second lime.",
+   "Cut each salmon fillet lengthways into 3 strips. Fry in the oil for 2 minutes on each side (4 minutes in all) until golden and cooked through.",
+   "Warm the wraps for a minute. Fill with cabbage, salmon, salsa, sliced avocado and the rest of the sweetcorn, and serve."
+  ],
+  "allergens": [
+   "fish",
+   "gluten",
+   "milk"
+  ]
+ },
+ {
   "id": "salmon-rice-and-broccoli",
   "c": "dinner",
   "e": "🍣",
@@ -4897,6 +6342,141 @@
   ],
   "allergens": [
    "eggs"
+  ]
+ },
+ {
+  "id": "satay-chicken-rice-bowls",
+  "c": "dinner",
+  "e": "🥜",
+  "n": "Satay Chicken Rice Bowls",
+  "p": 38,
+  "k": 541,
+  "serves": 4,
+  "cb": 57,
+  "f": 18,
+  "cost": 174,
+  "b": "low",
+  "img": {
+   "a": "Illustrative photo: a bowl of curry with a spoon",
+   "c": "#e8a808",
+   "ph": "food-curry"
+  },
+  "t": 25,
+  "macros_only": false,
+  "fresh": [
+   [
+    "breast",
+    450
+   ],
+   [
+    "pbutter",
+    60
+   ],
+   [
+    "coconut",
+    100
+   ],
+   [
+    "medley",
+    250
+   ],
+   [
+    "lime",
+    2
+   ],
+   [
+    "coriander",
+    15
+   ]
+  ],
+  "cup": [
+   "rice",
+   "soy",
+   "chilliflakes",
+   "oil"
+  ],
+  "cq": {
+   "rice": 240,
+   "soy": 20,
+   "chilliflakes": 1,
+   "oil": 10
+  },
+  "m": [
+   "Cook the rice. Slice the chicken into strips, season and fry in the oil over a high heat for about 5 minutes until browned.",
+   "Mix the peanut butter, soy sauce, coconut milk and chilli flakes with the juice of one lime and a splash of boiled water.",
+   "Pour the sauce over the chicken, add the green vegetables and cook for 3 to 4 minutes, then stir through the rice until piping hot.",
+   "Serve with coriander and wedges of the second lime."
+  ],
+  "allergens": [
+   "gluten",
+   "milk",
+   "peanuts",
+   "soya"
+  ]
+ },
+ {
+  "id": "saucy-sausage-sweet-potato-beans",
+  "c": "dinner",
+  "e": "🌭",
+  "n": "Saucy Sausage, Sweet Potato & Beans",
+  "p": 24,
+  "k": 453,
+  "serves": 4,
+  "cb": 47,
+  "f": 20,
+  "cost": 95,
+  "b": "low",
+  "img": {
+   "a": "Illustrative photo: a plate of roast meat and vegetables",
+   "c": "#282828",
+   "ph": "food-traybake"
+  },
+  "t": 35,
+  "macros_only": false,
+  "fresh": [
+   [
+    "sausages",
+    8
+   ],
+   [
+    "sweetpot",
+    500
+   ],
+   [
+    "onions",
+    1
+   ],
+   [
+    "butterbeans",
+    240
+   ],
+   [
+    "lemon",
+    1
+   ]
+  ],
+  "cup": [
+   "garlic",
+   "puree",
+   "herbs",
+   "oil"
+  ],
+  "cq": {
+   "garlic": 6,
+   "puree": 30,
+   "herbs": 2,
+   "oil": 10
+  },
+  "m": [
+   "Peel the sweet potatoes and cut into 3cm cubes.",
+   "Brown the sausages and sweet potato in the oil in a large pan over a medium heat for about 5 minutes.",
+   "Turn the heat down, add the sliced onion, garlic, tomato puree and herbs and cook for a few minutes until the onion softens.",
+   "Add the drained beans and 250ml water, cover and cook for about 10 minutes until the potato is soft.",
+   "Finish with the grated lemon zest and a squeeze of juice."
+  ],
+  "allergens": [
+   "gluten",
+   "sulphites"
   ]
  },
  {
@@ -5071,6 +6651,87 @@
    "eggs",
    "gluten",
    "soya",
+   "sulphites"
+  ]
+ },
+ {
+  "id": "sausage-pepper-rice-stew",
+  "c": "dinner",
+  "e": "🌭",
+  "n": "Sausage, Pepper & Rice Stew",
+  "p": 25,
+  "k": 643,
+  "serves": 2,
+  "cb": 86,
+  "f": 23,
+  "cost": 167,
+  "b": "low",
+  "img": {
+   "a": "Illustrative photo: a bowl of creamy soup with parsley and bread",
+   "c": "#e89808",
+   "ph": "food-soup"
+  },
+  "t": 50,
+  "macros_only": false,
+  "fresh": [
+   [
+    "sausages",
+    4
+   ],
+   [
+    "onions",
+    1
+   ],
+   [
+    "celery",
+    1
+   ],
+   [
+    "pepper",
+    1
+   ],
+   [
+    "plum",
+    200
+   ],
+   [
+    "chilli",
+    10
+   ],
+   [
+    "spring",
+    0.25
+   ]
+  ],
+  "cup": [
+   "garlic",
+   "rice",
+   "paprika",
+   "stock",
+   "flour",
+   "vinegar",
+   "oil"
+  ],
+  "cq": {
+   "garlic": 6,
+   "rice": 150,
+   "paprika": 3,
+   "stock": 10,
+   "flour": 10,
+   "vinegar": 15,
+   "oil": 10
+  },
+  "m": [
+   "Brown the sausages in the oil in a wide, deep pan for 10 minutes, turning, then lift them out and cut each into 3 or 4 chunks. Meanwhile cook the rice to the packet instructions, drain and keep covered.",
+   "In the same pan, cook the chopped onion, celery, pepper, garlic and paprika with the chopped chilli, covered, for 10 to 15 minutes until soft.",
+   "Sprinkle over the flour and stir, then add the tomatoes, vinegar, sausage chunks and the stock cube dissolved in 350ml hot water, and bring to the boil.",
+   "Squash the tomatoes into the sauce and simmer for 10 minutes until thick.",
+   "Serve the stew over the rice with sliced spring onions."
+  ],
+  "allergens": [
+   "celery",
+   "eggs",
+   "gluten",
    "sulphites"
   ]
  },
@@ -5332,6 +6993,82 @@
   ]
  },
  {
+  "id": "smoky-beef-enchiladas",
+  "c": "dinner",
+  "e": "🌯",
+  "n": "Smoky Beef Enchiladas",
+  "p": 41,
+  "k": 665,
+  "serves": 4,
+  "cb": 75,
+  "f": 21,
+  "cost": 244,
+  "b": "medium",
+  "img": {
+   "a": "Illustrative photo: a plate of roast meat and vegetables",
+   "c": "#282828",
+   "ph": "food-traybake"
+  },
+  "t": 40,
+  "macros_only": false,
+  "fresh": [
+   [
+    "mince",
+    500
+   ],
+   [
+    "onions",
+    2
+   ],
+   [
+    "wraps",
+    8
+   ],
+   [
+    "plum",
+    250
+   ],
+   [
+    "spring",
+    0.25
+   ],
+   [
+    "coriander",
+    10
+   ]
+  ],
+  "cup": [
+   "puree",
+   "stock",
+   "cumin",
+   "paprika",
+   "chilliflakes",
+   "cheddar",
+   "oil"
+  ],
+  "cq": {
+   "puree": 30,
+   "stock": 10,
+   "cumin": 3,
+   "paprika": 5,
+   "chilliflakes": 1,
+   "cheddar": 80,
+   "oil": 15
+  },
+  "m": [
+   "Heat the oven to 200C (180C fan). Soften the chopped onions in half the oil for 4 to 5 minutes.",
+   "Add the mince, cumin, paprika and chilli flakes, turn the heat up and brown for 4 to 5 minutes, breaking it up.",
+   "Dissolve the stock cube and tomato puree in 400ml hot water, pour into the pan and simmer for 5 minutes until thick and no longer wet.",
+   "Divide the mince between the wraps, roll up and place in an oiled dish. Top with the grated cheese and bake for 8 to 10 minutes until crisp at the edges.",
+   "Chop the tomatoes, spring onion and coriander with a splash of oil for a quick salsa and spoon over to serve."
+  ],
+  "allergens": [
+   "eggs",
+   "gluten",
+   "milk"
+  ]
+ },
+ {
   "id": "spaghetti-bolognese",
   "c": "dinner",
   "e": "🍝",
@@ -5393,6 +7130,72 @@
   ],
   "allergens": [
    "gluten",
+   "milk"
+  ]
+ },
+ {
+  "id": "spiced-chicken-rice-traybake",
+  "c": "dinner",
+  "e": "🍗",
+  "n": "Spiced Chicken & Rice Traybake",
+  "p": 45,
+  "k": 565,
+  "serves": 4,
+  "cb": 73,
+  "f": 13,
+  "cost": 215,
+  "b": "medium",
+  "img": {
+   "a": "Illustrative photo: a plate of roast meat and vegetables",
+   "c": "#282828",
+   "ph": "food-traybake"
+  },
+  "t": 70,
+  "macros_only": false,
+  "fresh": [
+   [
+    "thigh",
+    700
+   ],
+   [
+    "onions",
+    2
+   ],
+   [
+    "mixpep",
+    3
+   ],
+   [
+    "cobs",
+    1
+   ],
+   [
+    "greek",
+    40
+   ]
+  ],
+  "cup": [
+   "rice",
+   "paprika",
+   "cumin",
+   "chilliflakes",
+   "oil"
+  ],
+  "cq": {
+   "rice": 300,
+   "paprika": 10,
+   "cumin": 5,
+   "chilliflakes": 2,
+   "oil": 20
+  },
+  "m": [
+   "Heat the oven to 180C (160C fan). Cut the onions and peppers into chunky wedges and tip them into a large roasting tray with half the oil.",
+   "Rub the chicken with the paprika, cumin and chilli flakes, sit it on top of the veg and roast for 30 minutes until the veg is soft and the chicken is golden and cooked through.",
+   "Take the tray out, pour the rice around the chicken with 600ml boiling water, slice the sweetcorn into rounds and poke it in, then stir.",
+   "Cook for 20 minutes until the rice and chicken are tender, then turn the oven up to 200C (180C fan) for 5 minutes for a crispy top.",
+   "Serve with a spoonful of yoghurt on each portion."
+  ],
+  "allergens": [
    "milk"
   ]
  },
@@ -5839,6 +7642,140 @@
   ]
  },
  {
+  "id": "sweet-potato-cottage-pie",
+  "c": "dinner",
+  "e": "🥧",
+  "n": "Sweet Potato Cottage Pie",
+  "p": 32,
+  "k": 460,
+  "serves": 4,
+  "cb": 56,
+  "f": 12,
+  "cost": 214,
+  "b": "medium",
+  "img": {
+   "a": "Illustrative photo: a plate of sausages, mushrooms and mashed potato",
+   "c": "#282818",
+   "ph": "food-sausage"
+  },
+  "t": 55,
+  "macros_only": false,
+  "fresh": [
+   [
+    "mince",
+    500
+   ],
+   [
+    "onions",
+    1
+   ],
+   [
+    "carrots",
+    100
+   ],
+   [
+    "ctoms",
+    400
+   ],
+   [
+    "sweetpot",
+    800
+   ],
+   [
+    "greek",
+    150
+   ],
+   [
+    "peas",
+    200
+   ]
+  ],
+  "cup": [
+   "stock",
+   "oregano",
+   "oil"
+  ],
+  "cq": {
+   "stock": 10,
+   "oregano": 1,
+   "oil": 10
+  },
+  "m": [
+   "Peel the sweet potatoes, cut into chunks and boil for 15 minutes until soft. Drain, mash and stir in the yoghurt.",
+   "Brown the mince in the oil in a large pan, then add the chopped onion and grated carrot and cook for 5 minutes.",
+   "Add the tomatoes, crumbled stock cube, oregano and a splash of water and simmer for 10 minutes until thick.",
+   "Spoon the mince into a dish, top with the mash and grill or bake at 200C for 10 to 15 minutes until crisp at the edges. Serve with the peas."
+  ],
+  "allergens": [
+   "eggs",
+   "milk"
+  ]
+ },
+ {
+  "id": "teriyaki-chicken-egg-rice-bowl",
+  "c": "dinner",
+  "e": "🍳",
+  "n": "Teriyaki Chicken & Egg Rice Bowl",
+  "p": 46,
+  "k": 595,
+  "serves": 2,
+  "cb": 73,
+  "f": 15,
+  "cost": 176,
+  "b": "low",
+  "img": {
+   "a": "Illustrative photo: a bowl of noodles with vegetables",
+   "c": "#181808",
+   "ph": "food-noodles"
+  },
+  "t": 35,
+  "macros_only": false,
+  "fresh": [
+   [
+    "thigh",
+    300
+   ],
+   [
+    "eggs",
+    2
+   ],
+   [
+    "spring",
+    0.25
+   ],
+   [
+    "peas",
+    100
+   ]
+  ],
+  "cup": [
+   "rice",
+   "teriyaki",
+   "soy",
+   "garlic",
+   "oil"
+  ],
+  "cq": {
+   "rice": 150,
+   "teriyaki": 40,
+   "soy": 10,
+   "garlic": 3,
+   "oil": 10
+  },
+  "m": [
+   "Cook the rice. Boil the eggs for 7 minutes, cool under cold water, peel and halve.",
+   "Cut the chicken into bite-sized pieces and fry in the oil over a medium-high heat for 6 to 7 minutes until golden and cooked through.",
+   "Add the garlic, teriyaki sauce and soy sauce with a splash of water and cook for 3 to 5 minutes until thick and glossy. Cook the peas in boiling water for 3 minutes.",
+   "Serve the rice topped with the chicken, peas and eggs, finished with sliced spring onion."
+  ],
+  "allergens": [
+   "eggs",
+   "gluten",
+   "sesame",
+   "soya"
+  ]
+ },
+ {
   "id": "teriyaki-chicken-noodles",
   "c": "dinner",
   "e": "🍜",
@@ -6269,6 +8206,73 @@
   ]
  },
  {
+  "id": "tuna-veg-pasta-bake",
+  "c": "dinner",
+  "e": "🐟",
+  "n": "Tuna & Veg Pasta Bake",
+  "p": 36,
+  "k": 520,
+  "serves": 4,
+  "cb": 66,
+  "f": 13,
+  "cost": 134,
+  "b": "low",
+  "img": {
+   "a": "Illustrative photo: penne pasta with a meat sauce",
+   "c": "#d8e8f8",
+   "ph": "food-pasta"
+  },
+  "t": 45,
+  "macros_only": false,
+  "fresh": [
+   [
+    "courgette",
+    200
+   ],
+   [
+    "pepper",
+    1
+   ],
+   [
+    "onions",
+    1
+   ],
+   [
+    "plum",
+    150
+   ],
+   [
+    "passata",
+    500
+   ]
+  ],
+  "cup": [
+   "tuna",
+   "fusilli",
+   "cheddar",
+   "herbs",
+   "oil"
+  ],
+  "cq": {
+   "tuna": 290,
+   "fusilli": 300,
+   "cheddar": 100,
+   "herbs": 3,
+   "oil": 10
+  },
+  "m": [
+   "Heat the oven to 190C (170C fan). Cook the pasta for 10 minutes, then drain.",
+   "Meanwhile soften the chopped onion, courgette and pepper in the oil for 6 minutes. Add the halved tomatoes, passata and herbs and simmer for 5 minutes.",
+   "Mix the pasta, sauce and drained, flaked tuna in a baking dish. Scatter over the grated cheese.",
+   "Bake for 20 to 25 minutes until golden and bubbling, then serve hot."
+  ],
+  "allergens": [
+   "fish",
+   "gluten",
+   "milk"
+  ]
+ },
+ {
   "id": "turkey-and-bean-chilli-with-rice",
   "c": "dinner",
   "e": "🌶️",
@@ -6377,6 +8381,83 @@
    "Add the cumin, passata and 300 ml water and simmer for 15 minutes."
   ],
   "allergens": []
+ },
+ {
+  "id": "turkey-bolognese",
+  "c": "dinner",
+  "e": "🍝",
+  "n": "Turkey Bolognese",
+  "p": 38,
+  "k": 497,
+  "serves": 4,
+  "cb": 68,
+  "f": 8,
+  "cost": 175,
+  "b": "low",
+  "img": {
+   "a": "Illustrative photo: penne pasta with a meat sauce",
+   "c": "#d8e8f8",
+   "ph": "food-pasta"
+  },
+  "t": 55,
+  "macros_only": false,
+  "fresh": [
+   [
+    "turkeymince",
+    500
+   ],
+   [
+    "onions",
+    1
+   ],
+   [
+    "carrots",
+    120
+   ],
+   [
+    "celery",
+    2
+   ],
+   [
+    "mushrooms",
+    150
+   ],
+   [
+    "ctoms",
+    400
+   ],
+   [
+    "passata",
+    250
+   ]
+  ],
+  "cup": [
+   "spaghetti",
+   "puree",
+   "stock",
+   "oregano",
+   "garlic",
+   "oil"
+  ],
+  "cq": {
+   "spaghetti": 300,
+   "puree": 30,
+   "stock": 10,
+   "oregano": 1,
+   "garlic": 6,
+   "oil": 15
+  },
+  "m": [
+   "Finely chop the onion, carrot, celery and mushrooms. Brown the turkey in the oil in a large pan, breaking it up, then set aside.",
+   "In the same pan, soften the vegetables and garlic for 5 to 8 minutes, then stir in the tomato puree for a minute.",
+   "Return the turkey with the tomatoes, passata, oregano and crumbled stock cube. Simmer gently for 30 minutes until thick, adding a splash of water if it dries out.",
+   "Cook the spaghetti to the packet instructions and serve topped with the sauce."
+  ],
+  "allergens": [
+   "celery",
+   "eggs",
+   "gluten"
+  ]
  },
  {
   "id": "turkey-keema-curry",

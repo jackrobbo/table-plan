@@ -1,20 +1,1084 @@
 {
-  "_about": "Technique outline of each recipe's original method: the order of the cooking steps, oven temperatures and key timings (facts, not wording). tests/methodOutlines.test.ts checks our own-words method keeps the same order, temperatures and timings. A step with a 'deviation' is a deliberate change and says why.",
-  "chicken-bean-fajita-traybake": { "source": "Morrisons / Good Food", "steps": [ { "do": ["oven"], "temp": 200 }, { "do": ["roast"], "mins": [30, 35] }, { "do": ["warm"], "mins": [5, 5] } ] },
-  "turkey-bolognese": { "source": "Morrisons recipes", "steps": [ { "do": ["brown"] }, { "do": ["soften"], "mins": [5, 5] }, { "do": ["simmer"], "mins": [60, 120], "deviation": "shortened to 30 minutes: the original is a 1 to 2 hour slow simmer, too long for a weeknight" } ] },
-  "tuna-veg-pasta-bake": { "source": "Morrisons / Princes", "steps": [ { "do": ["oven"], "temp": 190 }, { "do": ["pasta"], "mins": [10, 12] }, { "do": ["soften"], "mins": [5, 6] }, { "do": ["bake"], "mins": [20, 25] } ] },
-  "meatball-cowboy-pie": { "source": "Morrisons / Good Food", "steps": [ { "do": ["oven"], "temp": 200 }, { "do": ["potatoes", "boil"], "mins": [12, 16] }, { "do": ["brown"] }, { "do": ["soften"] }, { "do": ["bake"], "mins": [25, 30] } ] },
-  "sweet-potato-cottage-pie": { "source": "Joe Wicks", "steps": [ { "do": ["boil"], "mins": [3, 4], "deviation": "boiled 15 minutes for four portions instead of microwaved 3 to 4 minutes for one" }, { "do": ["brown"] }, { "do": ["simmer"], "mins": [5, 6], "deviation": "simmered 10 minutes: four portions of mince need longer than one" }, { "do": ["grill", "bake"], "mins": [3, 4], "deviation": "10 to 15 minutes baked at 200C instead of 3 to 4 under the grill, to crisp a whole dish" } ] },
-  "chilli-pork-pasta-bake": { "source": "Joe Wicks", "steps": [ { "do": ["oven"], "temp": 180 }, { "do": ["pasta"] }, { "do": ["fry"], "mins": [5, 5] }, { "do": ["bake"], "mins": [15, 20] } ] },
-  "cheesy-beef-veg-skillet": { "source": "Joe Wicks", "steps": [ { "do": ["fry"] }, { "do": ["simmer"], "mins": [10, 10] }, { "do": ["cheese"] } ] },
-  "saucy-sausage-sweet-potato-beans": { "source": "Mob", "steps": [ { "do": ["brown"], "mins": [5, 5] }, { "do": ["onion"] }, { "do": ["cover"], "mins": [10, 10] }, { "do": ["lemon"] } ] },
-  "honey-pork-noodles": { "source": "Joe Wicks", "steps": [ { "do": ["grill"] }, { "do": ["grill"], "mins": [8, 10] }, { "do": ["boil"], "mins": [3, 3] }, { "do": ["noodles"], "mins": [3, 3] } ] },
-  "teriyaki-chicken-egg-rice-bowl": { "source": "Mob", "steps": [ { "do": ["eggs"], "mins": [7, 7] }, { "do": ["chicken"], "mins": [6, 7] }, { "do": ["sauce", "teriyaki"], "mins": [3, 5] } ] },
-  "satay-chicken-rice-bowls": { "source": "Mob", "steps": [ { "do": ["chicken"], "mins": [5, 5] }, { "do": ["sauce"] }, { "do": ["rice"] } ] },
-  "garlic-butter-prawn-noodles": { "source": "Mob", "steps": [ { "do": ["garlic"], "mins": [2, 3] }, { "do": ["prawns"], "mins": [1, 1] }, { "do": ["noodles"] }, { "do": ["spinach"] }, { "do": ["toss"], "mins": [1, 2] } ] },
-  "beef-burrito-bowl": { "source": "Tesco", "steps": [ { "do": ["onion"], "mins": [5, 7] }, { "do": ["mince"] }, { "do": ["simmer"], "mins": [20, 20] }, { "do": ["peppers"], "mins": [3, 4] } ] },
-  "smoky-beef-enchiladas": { "source": "Gousto", "steps": [ { "do": ["oven"], "temp": 200 }, { "do": ["onion"], "mins": [4, 5] }, { "do": ["mince"], "mins": [4, 5] }, { "do": ["simmer"], "mins": [5, 5] }, { "do": ["bake"], "mins": [8, 10] } ] },
-  "creamy-pork-mushroom-pasta": { "source": "Gousto", "steps": [ { "do": ["oven"], "temp": 200 }, { "do": ["sear"], "mins": [2, 2] }, { "do": ["roast"], "mins": [8, 10] }, { "do": ["simmer"], "mins": [5, 5] } ] },
-  "creamy-chicken-mushroom-stew": { "source": "Gousto", "steps": [ { "do": ["oven"], "temp": 200 }, { "do": ["brown"] }, { "do": ["bake"], "mins": [40, 40] }, { "do": ["crème", "creme"] } ] },
-  "chicken-spinach-lasagne": { "source": "Gousto", "steps": [ { "do": ["oven"], "temp": 200 }, { "do": ["roast"], "mins": [17, 18] }, { "do": ["simmer"], "mins": [10, 15] }, { "do": ["white sauce", "roux"] }, { "do": ["bake"], "mins": [20, 25] }, { "do": ["rest"], "mins": [5, 5] } ] }
+ "_about": "Technique outline of each recipe's original method: the order of the cooking steps, oven temperatures and key timings (facts, not wording). tests/methodOutlines.test.ts checks our own-words method keeps the same order, temperatures and timings. A step with a 'deviation' is a deliberate change and says why.",
+ "chicken-bean-fajita-traybake": {
+  "source": "Morrisons / Good Food",
+  "steps": [
+   {
+    "do": [
+     "oven"
+    ],
+    "temp": 200
+   },
+   {
+    "do": [
+     "roast"
+    ],
+    "mins": [
+     30,
+     35
+    ]
+   },
+   {
+    "do": [
+     "warm"
+    ],
+    "mins": [
+     5,
+     5
+    ]
+   }
+  ]
+ },
+ "turkey-bolognese": {
+  "source": "Morrisons recipes",
+  "steps": [
+   {
+    "do": [
+     "brown"
+    ]
+   },
+   {
+    "do": [
+     "soften"
+    ],
+    "mins": [
+     5,
+     5
+    ]
+   },
+   {
+    "do": [
+     "simmer"
+    ],
+    "mins": [
+     60,
+     120
+    ],
+    "deviation": "shortened to 30 minutes: the original is a 1 to 2 hour slow simmer, too long for a weeknight"
+   }
+  ]
+ },
+ "tuna-veg-pasta-bake": {
+  "source": "Morrisons / Princes",
+  "steps": [
+   {
+    "do": [
+     "oven"
+    ],
+    "temp": 190
+   },
+   {
+    "do": [
+     "pasta"
+    ],
+    "mins": [
+     10,
+     12
+    ]
+   },
+   {
+    "do": [
+     "soften"
+    ],
+    "mins": [
+     5,
+     6
+    ]
+   },
+   {
+    "do": [
+     "bake"
+    ],
+    "mins": [
+     20,
+     25
+    ]
+   }
+  ]
+ },
+ "meatball-cowboy-pie": {
+  "source": "Morrisons / Good Food",
+  "steps": [
+   {
+    "do": [
+     "oven"
+    ],
+    "temp": 200
+   },
+   {
+    "do": [
+     "potatoes",
+     "boil"
+    ],
+    "mins": [
+     12,
+     16
+    ]
+   },
+   {
+    "do": [
+     "brown"
+    ]
+   },
+   {
+    "do": [
+     "soften"
+    ]
+   },
+   {
+    "do": [
+     "bake"
+    ],
+    "mins": [
+     25,
+     30
+    ]
+   }
+  ]
+ },
+ "sweet-potato-cottage-pie": {
+  "source": "Joe Wicks",
+  "steps": [
+   {
+    "do": [
+     "boil"
+    ],
+    "mins": [
+     3,
+     4
+    ],
+    "deviation": "boiled 15 minutes for four portions instead of microwaved 3 to 4 minutes for one"
+   },
+   {
+    "do": [
+     "brown"
+    ]
+   },
+   {
+    "do": [
+     "simmer"
+    ],
+    "mins": [
+     5,
+     6
+    ],
+    "deviation": "simmered 10 minutes: four portions of mince need longer than one"
+   },
+   {
+    "do": [
+     "grill",
+     "bake"
+    ],
+    "mins": [
+     3,
+     4
+    ],
+    "deviation": "10 to 15 minutes baked at 200C instead of 3 to 4 under the grill, to crisp a whole dish"
+   }
+  ]
+ },
+ "chilli-pork-pasta-bake": {
+  "source": "Joe Wicks",
+  "steps": [
+   {
+    "do": [
+     "oven"
+    ],
+    "temp": 180
+   },
+   {
+    "do": [
+     "pasta"
+    ]
+   },
+   {
+    "do": [
+     "fry"
+    ],
+    "mins": [
+     5,
+     5
+    ]
+   },
+   {
+    "do": [
+     "bake"
+    ],
+    "mins": [
+     15,
+     20
+    ]
+   }
+  ]
+ },
+ "cheesy-beef-veg-skillet": {
+  "source": "Joe Wicks",
+  "steps": [
+   {
+    "do": [
+     "fry"
+    ]
+   },
+   {
+    "do": [
+     "simmer"
+    ],
+    "mins": [
+     10,
+     10
+    ]
+   },
+   {
+    "do": [
+     "cheese"
+    ]
+   }
+  ]
+ },
+ "saucy-sausage-sweet-potato-beans": {
+  "source": "Mob",
+  "steps": [
+   {
+    "do": [
+     "brown"
+    ],
+    "mins": [
+     5,
+     5
+    ]
+   },
+   {
+    "do": [
+     "onion"
+    ]
+   },
+   {
+    "do": [
+     "cover"
+    ],
+    "mins": [
+     10,
+     10
+    ]
+   },
+   {
+    "do": [
+     "lemon"
+    ]
+   }
+  ]
+ },
+ "honey-pork-noodles": {
+  "source": "Joe Wicks",
+  "steps": [
+   {
+    "do": [
+     "grill"
+    ]
+   },
+   {
+    "do": [
+     "grill"
+    ],
+    "mins": [
+     8,
+     10
+    ]
+   },
+   {
+    "do": [
+     "boil"
+    ],
+    "mins": [
+     3,
+     3
+    ]
+   },
+   {
+    "do": [
+     "noodles"
+    ],
+    "mins": [
+     3,
+     3
+    ]
+   }
+  ]
+ },
+ "teriyaki-chicken-egg-rice-bowl": {
+  "source": "Mob",
+  "steps": [
+   {
+    "do": [
+     "eggs"
+    ],
+    "mins": [
+     7,
+     7
+    ]
+   },
+   {
+    "do": [
+     "chicken"
+    ],
+    "mins": [
+     6,
+     7
+    ]
+   },
+   {
+    "do": [
+     "sauce",
+     "teriyaki"
+    ],
+    "mins": [
+     3,
+     5
+    ]
+   }
+  ]
+ },
+ "satay-chicken-rice-bowls": {
+  "source": "Mob",
+  "steps": [
+   {
+    "do": [
+     "chicken"
+    ],
+    "mins": [
+     5,
+     5
+    ]
+   },
+   {
+    "do": [
+     "sauce"
+    ]
+   },
+   {
+    "do": [
+     "rice"
+    ]
+   }
+  ]
+ },
+ "garlic-butter-prawn-noodles": {
+  "source": "Mob",
+  "steps": [
+   {
+    "do": [
+     "garlic"
+    ],
+    "mins": [
+     2,
+     3
+    ]
+   },
+   {
+    "do": [
+     "prawns"
+    ],
+    "mins": [
+     1,
+     1
+    ]
+   },
+   {
+    "do": [
+     "noodles"
+    ]
+   },
+   {
+    "do": [
+     "spinach"
+    ]
+   },
+   {
+    "do": [
+     "toss"
+    ],
+    "mins": [
+     1,
+     2
+    ]
+   }
+  ]
+ },
+ "beef-burrito-bowl": {
+  "source": "Tesco",
+  "steps": [
+   {
+    "do": [
+     "onion"
+    ],
+    "mins": [
+     5,
+     7
+    ]
+   },
+   {
+    "do": [
+     "mince"
+    ]
+   },
+   {
+    "do": [
+     "simmer"
+    ],
+    "mins": [
+     20,
+     20
+    ]
+   },
+   {
+    "do": [
+     "peppers"
+    ],
+    "mins": [
+     3,
+     4
+    ]
+   }
+  ]
+ },
+ "smoky-beef-enchiladas": {
+  "source": "Gousto",
+  "steps": [
+   {
+    "do": [
+     "oven"
+    ],
+    "temp": 200
+   },
+   {
+    "do": [
+     "onion"
+    ],
+    "mins": [
+     4,
+     5
+    ]
+   },
+   {
+    "do": [
+     "mince"
+    ],
+    "mins": [
+     4,
+     5
+    ]
+   },
+   {
+    "do": [
+     "simmer"
+    ],
+    "mins": [
+     5,
+     5
+    ]
+   },
+   {
+    "do": [
+     "bake"
+    ],
+    "mins": [
+     8,
+     10
+    ]
+   }
+  ]
+ },
+ "creamy-pork-mushroom-pasta": {
+  "source": "Gousto",
+  "steps": [
+   {
+    "do": [
+     "oven"
+    ],
+    "temp": 200
+   },
+   {
+    "do": [
+     "sear"
+    ],
+    "mins": [
+     2,
+     2
+    ]
+   },
+   {
+    "do": [
+     "roast"
+    ],
+    "mins": [
+     8,
+     10
+    ]
+   },
+   {
+    "do": [
+     "simmer"
+    ],
+    "mins": [
+     5,
+     5
+    ]
+   }
+  ]
+ },
+ "creamy-chicken-mushroom-stew": {
+  "source": "Gousto",
+  "steps": [
+   {
+    "do": [
+     "oven"
+    ],
+    "temp": 200
+   },
+   {
+    "do": [
+     "brown"
+    ]
+   },
+   {
+    "do": [
+     "bake"
+    ],
+    "mins": [
+     40,
+     40
+    ]
+   },
+   {
+    "do": [
+     "crème",
+     "creme"
+    ]
+   }
+  ]
+ },
+ "chicken-spinach-lasagne": {
+  "source": "Gousto",
+  "steps": [
+   {
+    "do": [
+     "oven"
+    ],
+    "temp": 200
+   },
+   {
+    "do": [
+     "roast"
+    ],
+    "mins": [
+     17,
+     18
+    ]
+   },
+   {
+    "do": [
+     "simmer"
+    ],
+    "mins": [
+     10,
+     15
+    ]
+   },
+   {
+    "do": [
+     "white sauce",
+     "roux"
+    ]
+   },
+   {
+    "do": [
+     "bake"
+    ],
+    "mins": [
+     20,
+     25
+    ]
+   },
+   {
+    "do": [
+     "rest"
+    ],
+    "mins": [
+     5,
+     5
+    ]
+   }
+  ]
+ },
+ "spiced-chicken-rice-traybake": {
+  "source": "Jamie Oliver",
+  "steps": [
+   {
+    "do": [
+     "oven"
+    ],
+    "temp": 180
+   },
+   {
+    "do": [
+     "roast"
+    ],
+    "mins": [
+     40,
+     40
+    ],
+    "deviation": "30 minutes: boneless thigh fillets cook faster than the original's bone-in, skin-on thighs"
+   },
+   {
+    "do": [
+     "rice"
+    ]
+   },
+   {
+    "do": [
+     "cook"
+    ],
+    "mins": [
+     20,
+     20
+    ]
+   },
+   {
+    "do": [
+     "crispy"
+    ],
+    "temp": 200,
+    "mins": [
+     5,
+     5
+    ]
+   }
+  ]
+ },
+ "sausage-pepper-rice-stew": {
+  "source": "Jamie Oliver",
+  "steps": [
+   {
+    "do": [
+     "brown"
+    ],
+    "mins": [
+     10,
+     10
+    ]
+   },
+   {
+    "do": [
+     "covered"
+    ],
+    "mins": [
+     10,
+     15
+    ]
+   },
+   {
+    "do": [
+     "flour"
+    ]
+   },
+   {
+    "do": [
+     "simmer"
+    ],
+    "mins": [
+     10,
+     10
+    ]
+   }
+  ]
+ },
+ "chicken-chorizo-traybake": {
+  "source": "Jamie Oliver",
+  "steps": [
+   {
+    "do": [
+     "oven"
+    ],
+    "temp": 200
+   },
+   {
+    "do": [
+     "chorizo"
+    ]
+   },
+   {
+    "do": [
+     "foil"
+    ],
+    "mins": [
+     30,
+     30
+    ]
+   },
+   {
+    "do": [
+     "foil"
+    ],
+    "mins": [
+     30,
+     30
+    ]
+   }
+  ]
+ },
+ "crispy-chicken-garlic-beans": {
+  "source": "Jamie Oliver",
+  "steps": [
+   {
+    "do": [
+     "steam",
+     "boil"
+    ],
+    "mins": [
+     6,
+     6
+    ]
+   },
+   {
+    "do": [
+     "pan-fry",
+     "fry"
+    ],
+    "mins": [
+     6,
+     6
+    ]
+   },
+   {
+    "do": [
+     "beans"
+    ],
+    "mins": [
+     2,
+     2
+    ]
+   }
+  ]
+ },
+ "salmon-corn-tacos": {
+  "source": "Jamie Oliver",
+  "steps": [
+   {
+    "do": [
+     "salsa"
+    ]
+   },
+   {
+    "do": [
+     "fry"
+    ],
+    "mins": [
+     2,
+     2
+    ]
+   },
+   {
+    "do": [
+     "warm"
+    ]
+   }
+  ]
+ },
+ "chicken-sweetcorn-tacos": {
+  "source": "BBC Good Food",
+  "steps": [
+   {
+    "do": [
+     "fry"
+    ]
+   },
+   {
+    "do": [
+     "cabbage"
+    ]
+   },
+   {
+    "do": [
+     "sweetcorn"
+    ]
+   },
+   {
+    "do": [
+     "wrap"
+    ]
+   }
+  ]
+ },
+ "prawn-egg-fried-rice": {
+  "source": "BBC Good Food",
+  "steps": [
+   {
+    "do": [
+     "rice"
+    ]
+   },
+   {
+    "do": [
+     "boil"
+    ],
+    "mins": [
+     1,
+     1
+    ]
+   },
+   {
+    "do": [
+     "onion"
+    ],
+    "mins": [
+     10,
+     10
+    ]
+   },
+   {
+    "do": [
+     "vegetables"
+    ],
+    "mins": [
+     5,
+     5
+    ]
+   },
+   {
+    "do": [
+     "prawns"
+    ],
+    "mins": [
+     2,
+     2
+    ]
+   },
+   {
+    "do": [
+     "scramble"
+    ]
+   },
+   {
+    "do": [
+     "fold"
+    ]
+   }
+  ]
+ },
+ "beef-noodle-stir-fry": {
+  "source": "BBC Good Food",
+  "steps": [
+   {
+    "do": [
+     "noodles"
+    ]
+   },
+   {
+    "do": [
+     "beef"
+    ],
+    "mins": [
+     0.5,
+     1
+    ]
+   },
+   {
+    "do": [
+     "onion"
+    ],
+    "mins": [
+     2,
+     3
+    ]
+   },
+   {
+    "do": [
+     "mushrooms"
+    ],
+    "mins": [
+     3,
+     3
+    ]
+   },
+   {
+    "do": [
+     "vegetables"
+    ]
+   },
+   {
+    "do": [
+     "toss"
+    ]
+   }
+  ]
+ },
+ "pesto-sausage-bean-traybake": {
+  "source": "BBC Good Food",
+  "steps": [
+   {
+    "do": [
+     "oven"
+    ],
+    "temp": 200
+   },
+   {
+    "do": [
+     "roast"
+    ],
+    "mins": [
+     20,
+     20
+    ]
+   },
+   {
+    "do": [
+     "beans"
+    ]
+   },
+   {
+    "do": [
+     "roast"
+    ],
+    "mins": [
+     35,
+     35
+    ]
+   },
+   {
+    "do": [
+     "pesto"
+    ]
+   }
+  ]
+ },
+ "chicken-fajita-pasta": {
+  "source": "Sainsbury's recipes",
+  "steps": [
+   {
+    "do": [
+     "pasta"
+    ]
+   },
+   {
+    "do": [
+     "chicken"
+    ],
+    "mins": [
+     5,
+     6
+    ]
+   },
+   {
+    "do": [
+     "onion"
+    ],
+    "mins": [
+     3,
+     4
+    ]
+   },
+   {
+    "do": [
+     "peppers"
+    ],
+    "mins": [
+     3,
+     4
+    ]
+   },
+   {
+    "do": [
+     "return"
+    ],
+    "mins": [
+     2,
+     2
+    ]
+   },
+   {
+    "do": [
+     "cheese"
+    ]
+   }
+  ]
+ },
+ "pork-broccoli-honey-noodles": {
+  "source": "Sainsbury's recipes",
+  "steps": [
+   {
+    "do": [
+     "pork"
+    ],
+    "mins": [
+     3,
+     4
+    ]
+   },
+   {
+    "do": [
+     "broccoli"
+    ],
+    "mins": [
+     2,
+     3
+    ]
+   },
+   {
+    "do": [
+     "garlic"
+    ],
+    "mins": [
+     2,
+     2
+    ]
+   },
+   {
+    "do": [
+     "pepper"
+    ],
+    "mins": [
+     2,
+     3
+    ]
+   },
+   {
+    "do": [
+     "soy"
+    ]
+   },
+   {
+    "do": [
+     "noodles"
+    ]
+   }
+  ]
+ },
+ "pesto-chicken-courgette-pasta": {
+  "source": "Sainsbury's recipes",
+  "steps": [
+   {
+    "do": [
+     "pasta"
+    ],
+    "mins": [
+     10,
+     10
+    ]
+   },
+   {
+    "do": [
+     "courgette"
+    ],
+    "mins": [
+     5,
+     5
+    ]
+   },
+   {
+    "do": [
+     "parmesan"
+    ]
+   }
+  ]
+ }
 }

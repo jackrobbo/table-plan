@@ -4,10 +4,10 @@
  "course": "dinner",
  "emoji": "🍗",
  "serves": 4,
- "status": "draft",
+ "status": "live",
  "time": {
   "prep": 15,
-  "cook": 60
+  "cook": 55
  },
  "ingredients": [
   {
@@ -46,11 +46,11 @@
   "oil": 20
  },
  "method": [
-  "Heat the oven to 200C (180C fan). Cut the onions and peppers into chunky wedges and tip them into a large roasting tray with the oil.",
-  "Rub the chicken with the paprika, cumin and chilli flakes, sit it on top of the veg and roast for 20 minutes.",
-  "Stir the rice into the tray with 600ml boiling water, slice the sweetcorn into rounds and tuck it in, then cover the tray tightly with foil.",
-  "Bake for 30 to 35 minutes, until the rice is tender and the chicken is cooked right through. Take the foil off for the last 5 minutes to colour the top.",
-  "Serve in the tray with a spoonful of yoghurt on each portion."
+  "Heat the oven to 180C (160C fan). Cut the onions and peppers into chunky wedges and tip them into a large roasting tray with half the oil.",
+  "Rub the chicken with the paprika, cumin and chilli flakes, sit it on top of the veg and roast for 30 minutes until the veg is soft and the chicken is golden and cooked through.",
+  "Take the tray out, pour the rice around the chicken with 600ml boiling water, slice the sweetcorn into rounds and poke it in, then stir.",
+  "Cook for 20 minutes until the rice and chicken are tender, then turn the oven up to 200C (180C fan) for 5 minutes for a crispy top.",
+  "Serve with a spoonful of yoghurt on each portion."
  ],
  "source": "idea: Jamie Oliver"
 }

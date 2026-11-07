@@ -14,6 +14,8 @@ const recipes = fs.readdirSync(path.join(root, 'content/recipes')).filter((f) =>
   const v = JSON.parse(fs.readFileSync(path.join(root, 'content/recipes', f), 'utf8')) as RecipeDef | RecipeDef[];
   return Array.isArray(v) ? v : [v];
 }).filter((r) => !r.macros_only);
+const outlineKeys = new Set(Object.keys(JSON.parse(fs.readFileSync(path.join(root, 'tests/fixtures/method-outlines.json'), 'utf8')) as Record<string, unknown>));
+const isNew = (r: RecipeDef) => r.status !== 'live' || outlineKeys.has(r.slug);
 const src = JSON.parse(fs.readFileSync(path.join(root, 'tests/fixtures/source-nutrition.json'), 'utf8')) as Record<string, { kcal: number; source: string; tolerance: number; note?: string }>;
 
 // Known gaps in live meals that use branded items we have no data for yet (tracked in design/todo.md). New recipes may not use them.
@@ -40,7 +42,7 @@ describe('ingredient nutrition is internally consistent', () => {
 
 describe('every recipe is costed from verified ingredients', () => {
   const needed = (r: RecipeDef) => recipeLines(r, ing).map((l) => l.slug);
-  for (const r of recipes.filter((x) => x.status !== 'live')) {
+  for (const r of recipes.filter(isNew)) {
     it(`${r.slug}: every ingredient has verified data`, () => {
       const bad = needed(r).filter((k) => { const d = ing.get(k); return d && !d.negligible && !(d.per100 && d.cofid?.verified); });
       expect(bad, `no verified nutrition for: ${bad.join(', ')}`).toEqual([]);
@@ -48,7 +50,7 @@ describe('every recipe is costed from verified ingredients', () => {
     });
   }
   it('live meals only miss data for the known branded items', () => {
-    for (const r of recipes.filter((x) => x.status === 'live')) {
+    for (const r of recipes.filter((x) => !isNew(x))) {
       const bad = needed(r).filter((k) => { const d = ing.get(k); return d && !d.negligible && !(d.per100 && d.cofid?.verified); });
       expect(bad.filter((k) => !KNOWN_NO_DATA.has(k)), `${r.slug} is missing data for`).toEqual([]);
     }
@@ -56,7 +58,7 @@ describe('every recipe is costed from verified ingredients', () => {
 });
 
 describe('recipe totals look like real food', () => {
-  for (const r of recipes.filter((x) => x.course === 'dinner' && x.status !== 'live')) {
+  for (const r of recipes.filter((x) => x.course === 'dinner' && isNew(x))) {
     it(r.slug, () => {
       const c = computePerPortion(r, ing);
       expect(c.missing).toEqual([]);

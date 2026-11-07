@@ -4,7 +4,7 @@
  "course": "dinner",
  "emoji": "🥢",
  "serves": 2,
- "status": "draft",
+ "status": "live",
  "time": {
   "prep": 10,
   "cook": 10
@@ -47,9 +47,10 @@
  },
  "method": [
   "Cook the noodles to the packet instructions, drain and set aside.",
-  "Fry the sliced beef in half the oil over a high heat for 2 minutes, then lift out.",
-  "Soften the sliced onion, mushrooms and garlic in the rest of the oil for 4 minutes, then add the stir-fry vegetables for 2 minutes.",
-  "Return the beef, add the noodles, soy sauce and vinegar and toss for a minute. Top with sliced spring onion."
+  "Stir-fry the sliced beef in half the oil over a high heat for about a minute until browned, then lift out.",
+  "Soften the sliced onion in the rest of the oil for 2 to 3 minutes, then add the mushrooms and garlic and fry for 3 minutes.",
+  "Add the stir-fry vegetables for a minute or two until piping hot.",
+  "Toss in the noodles with the soy sauce, vinegar and a splash of water, then the beef and spring onion, and cook for 2 minutes more."
  ],
  "source": "idea: BBC Good Food"
 }

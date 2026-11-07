@@ -662,5 +662,61 @@
   "u": "g",
   "s": "morrisons-wholemeal-medium-sliced-bread-800g/102370256",
   "c": "Bakery"
+ },
+ "celery": {
+  "n": "Morrisons Celery",
+  "pr": 74,
+  "pack": 10,
+  "u": "sticks",
+  "s": "morrisons-celery/108336032",
+  "c": "Fruit & veg"
+ },
+ "chorizo": {
+  "n": "Morrisons Sliced Chorizo 140g",
+  "pr": 150,
+  "pack": 140,
+  "u": "g",
+  "s": "morrisons-sliced-chorizo/115399293",
+  "c": "Meat & fish"
+ },
+ "greenbeans": {
+  "n": "Morrisons Fine Beans 170g",
+  "pr": 139,
+  "pack": 170,
+  "u": "g",
+  "s": "morrisons-fine-beans-170g/113430859",
+  "c": "Fruit & veg"
+ },
+ "butterbeans": {
+  "n": "Morrisons Butter Beans In Water (400g)",
+  "pr": 45,
+  "pack": 240,
+  "u": "g",
+  "s": "morrisons-butter-beans-in-water-400g/110428155",
+  "c": "Tins, jars & sauces"
+ },
+ "coriander": {
+  "n": "Morrisons Fresh Coriander",
+  "pr": 50,
+  "pack": 30,
+  "u": "g",
+  "s": "morrisons-fresh-coriander/110429684",
+  "c": "Fruit & veg"
+ },
+ "lime": {
+  "n": "Morrisons Limes 4 Pack",
+  "pr": 92,
+  "pack": 4,
+  "u": "limes",
+  "s": "morrisons-limes-4-pack/109567748",
+  "c": "Fruit & veg"
+ },
+ "cabbage": {
+  "n": "Morrisons British White Cabbage",
+  "pr": 89,
+  "pack": 900,
+  "u": "g",
+  "s": "morrisons-british-white-cabbage/108300785",
+  "c": "Fruit & veg"
  }
 }

@@ -4,7 +4,7 @@
  "course": "dinner",
  "emoji": "🌮",
  "serves": 4,
- "status": "draft",
+ "status": "live",
  "time": {
   "prep": 15,
   "cook": 15
@@ -52,9 +52,9 @@
   "oil": 15
  },
  "method": [
-  "Slice the chicken into strips, toss with the fajita seasoning and fry in the oil with the garlic for 6 to 8 minutes until cooked through.",
+  "Slice the chicken into strips, toss with the fajita seasoning and fry in the oil with the garlic for 6 to 8 minutes until golden and cooked through.",
   "Shred the cabbage and toss with the juice of one lime and half the coriander.",
-  "Mix the drained beans and sweetcorn and warm through in a pan or microwave.",
+  "In a second hot pan, fry the sweetcorn until sizzling and charred in places, then stir in the drained beans and warm through.",
   "Warm the wraps. Fill with chicken, slaw and the bean and corn mix, then top with yoghurt, the remaining coriander and lime wedges."
  ],
  "source": "idea: BBC Good Food"

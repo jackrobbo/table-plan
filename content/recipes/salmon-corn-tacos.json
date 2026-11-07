@@ -4,10 +4,10 @@
  "course": "dinner",
  "emoji": "🌮",
  "serves": 2,
- "status": "draft",
+ "status": "live",
  "time": {
   "prep": 10,
-  "cook": 10
+  "cook": 8
  },
  "ingredients": [
   {
@@ -58,7 +58,7 @@
  "method": [
   "Roughly chop half the sweetcorn with the coriander and tomatoes and stir in the juice of one lime for a chunky salsa.",
   "Shred the cabbage and toss it with the yoghurt, paprika, chilli flakes and the juice of the second lime.",
-  "Fry the salmon in the oil, skin-side down first, for 3 to 4 minutes each side (about 8 minutes in all) until cooked through, then flake it into big pieces.",
+  "Cut each salmon fillet lengthways into 3 strips. Fry in the oil for 2 minutes on each side (4 minutes in all) until golden and cooked through.",
   "Warm the wraps for a minute. Fill with cabbage, salmon, salsa, sliced avocado and the rest of the sweetcorn, and serve."
  ],
  "source": "idea: Jamie Oliver"
