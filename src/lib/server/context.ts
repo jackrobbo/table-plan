@@ -4,6 +4,7 @@ import type { ServerUser, SubscriptionStore } from '../billing/server';
 import type { Subscription } from '../billing/types';
 import type { AccountStore } from './account';
 import type { SignupStore } from './signup';
+import type { RunRecord } from '../pricing/health';
 import { shapeSnapshot, type PriceSnapshot } from '../pricing/snapshot';
 import type { FeedDb } from './feed';
 import type { RateStore } from './guard';
@@ -235,5 +236,17 @@ export function getFeedDb(): FeedDb | null {
         must('recipe_costs', (await sb.from('recipe_costs').upsert(chunk, { onConflict: 'store,recipe_slug' })).error);
       }
     },
+  };
+}
+
+/** The last 10 days of price runs, for the feed health check. Null without the service role key. */
+export function getFeedRunsLoader(): (() => Promise<RunRecord[]>) | null {
+  const sb = admin();
+  if (!sb) return null;
+  return async () => {
+    const since = new Date(Date.now() - 10 * 86_400_000).toISOString();
+    const { data, error } = await sb.from('price_runs').select('id, stores, status, started_at, finished_at, rows_expected, rows_received, rows_held, notes').gte('started_at', since).order('started_at', { ascending: false });
+    if (error) throw new Error(`price_runs: ${error.message}`);
+    return (data ?? []) as RunRecord[];
   };
 }

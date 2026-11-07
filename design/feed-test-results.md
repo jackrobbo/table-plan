@@ -71,3 +71,7 @@ Two things the first attempt (17:50) taught us, both fixed in `7d0d874`:
 - Apify marked the runs "Failed" even though they pushed every row (exit code 0). The ingest now reads any run that has a dataset and lets the coverage check decide.
 - The secret header is trimmed on both sides (`pbcopy` adds a trailing newline).
 Four test runs from that attempt were closed as failed in `price_runs`. Real cost of a full two-store run: about $0.53 (Morrisons $0.31, Tesco $0.22). Runs take 2 to 4 minutes.
+
+## Feed health alert (7 Nov 2026)
+`/api/cron/price-feed-health` runs Monday and Thursday at 08:00 UTC (three hours after the weekly run, and again mid-week to catch a missed run). It reads the last 10 days of `price_runs` and flags, per store: no run started, a run stuck "running" over 3 hours (the webhook never arrived), a failed latest run, or a newest good run over 9 days old. Held prices and thin coverage are warnings. Problems make the route answer 500 (red on Vercel's Cron Jobs page) and, if `ALERT_WEBHOOK_URL` is set in Vercel, send one message there. Supported: an ntfy.sh topic URL (phone push, no account), a Slack incoming webhook, or a Discord webhook. The URL is a secret: only ever put it in Vercel.
+Rules are in `src/lib/pricing/health.ts`, tested in `tests/feedHealth.test.ts`.

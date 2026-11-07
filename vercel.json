@@ -8,6 +8,10 @@
     {
       "path": "/api/cron/price-feed",
       "schedule": "0 5 * * 1"
+    },
+    {
+      "path": "/api/cron/price-feed-health",
+      "schedule": "0 8 * * 1,4"
     }
   ]
 }
