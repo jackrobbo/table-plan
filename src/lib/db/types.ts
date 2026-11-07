@@ -1,6 +1,7 @@
 import type { Recipe } from '@/data';
 import type { BillingService } from '../billing/types';
 import type { Profile } from '../profile';
+import type { PriceSnapshot } from '../pricing/snapshot';
 
 export interface Session { userId: string; email: string }
 
@@ -37,7 +38,10 @@ export interface AccountService {
   deleteAccount(userId: string): Promise<void>;
 }
 
-export interface Backend { auth: AuthService; profiles: ProfileRepo; recipes: RecipeRepo; billing: BillingService; account: AccountService }
+/** The dated price book for a store (prices, stock and meal costs), read from the weekly feed. Optional: the mock backend has none and the bundled prices are used. */
+export interface PriceService { snapshot(store: string): Promise<PriceSnapshot | null> }
+
+export interface Backend { auth: AuthService; profiles: ProfileRepo; recipes: RecipeRepo; billing: BillingService; account: AccountService; prices?: PriceService }
 
 export interface KV {
   getItem(k: string): string | null;

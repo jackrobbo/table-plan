@@ -3,6 +3,7 @@ import { useCallback, useEffect, useRef, useState } from 'react';
 import { getBackend, type Session } from './db';
 import { clearStatus, setStatus } from './status';
 import { emptyProfile, type Profile } from './profile';
+import { ensureLivePrices } from './pricing/live';
 
 /** Loads the session + profile; `update` applies a pure transform and persists it. */
 export function useProfile() {
@@ -17,7 +18,10 @@ export function useProfile() {
       const s = await auth.getSession();
       setSession(s);
       if (s) {
-        const p = (await profiles.load(s.userId)) ?? emptyProfile();
+        // Latest prices and meal costs load alongside the profile, so nothing is planned or priced on stale numbers
+        // (a bounded wait; the bundled prices stay if it fails).
+        const [, loaded] = await Promise.all([ensureLivePrices(), profiles.load(s.userId)]);
+        const p = loaded ?? emptyProfile();
         latest.current = p;
         setProfile(p);
       }

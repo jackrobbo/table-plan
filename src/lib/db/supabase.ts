@@ -3,7 +3,8 @@ import type { Recipe } from '@/data';
 import { createSupabaseBilling } from '../billing/supabase';
 import { profileToRow, rowToProfile } from './profileRow';
 import { clearStatus, setStatus } from '../status';
-import { AuthUnavailableError, type AccountService, type AuthService, type Backend, type ProfileRepo, type RecipeRepo, type Session } from './types';
+import { AuthUnavailableError, type AccountService, type AuthService, type Backend, type PriceService, type ProfileRepo, type RecipeRepo, type Session } from './types';
+import { parseSnapshot } from '../pricing/snapshot';
 
 const toSession = (s: { user: { id: string; email?: string | null } } | null): Session | null =>
   s ? { userId: s.user.id, email: s.user.email ?? '' } : null;
@@ -105,5 +106,13 @@ export function createSupabaseBackend(sb: SupabaseClient): Backend {
     },
   };
 
-  return { auth, profiles, recipes, billing: createSupabaseBilling(sb), account };
+  const prices: PriceService = {
+    async snapshot(store) {
+      const r = await fetch(`/api/prices?store=${encodeURIComponent(store)}`, { headers: { authorization: `Bearer ${await token()}` } });
+      if (!r.ok) return null;
+      return parseSnapshot(await r.json().catch(() => null));
+    },
+  };
+
+  return { auth, profiles, recipes, billing: createSupabaseBilling(sb), account, prices };
 }

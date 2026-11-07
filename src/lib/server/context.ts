@@ -4,6 +4,7 @@ import type { ServerUser, SubscriptionStore } from '../billing/server';
 import type { Subscription } from '../billing/types';
 import type { AccountStore } from './account';
 import type { SignupStore } from './signup';
+import { shapeSnapshot, type PriceSnapshot } from '../pricing/snapshot';
 import type { RateStore } from './guard';
 import { fileWaitlistStore } from './waitlistFile';
 
@@ -156,6 +157,24 @@ export function getRateStore(): RateStore | null {
       const { data, error } = await sb.rpc('rate_limit_hit', { p_key: key, p_limit: limit, p_window_seconds: windowSeconds });
       if (error) throw new Error(error.message);
       return data === true;
+    },
+  };
+}
+
+/** The latest price book for a store, read with the service role (the price tables have no browser access). Null when the database is not configured. */
+export interface PriceStore { snapshot(store: string): Promise<PriceSnapshot | null> }
+export function getPriceStore(): PriceStore | null {
+  const sb = admin();
+  if (!sb) return null;
+  return {
+    async snapshot(store) {
+      const [products, prices, costs] = await Promise.all([
+        sb.from('store_products').select('ingredient_slug, product_ref, pack_size').eq('store', store),
+        sb.from('latest_prices').select('product_ref, price_pence, was_price_pence, in_stock, priced_at').eq('store', store),
+        sb.from('recipe_costs').select('recipe_slug, cost_pence, budget_tier, complete').eq('store', store),
+      ]);
+      for (const r of [products, prices, costs]) if (r.error) throw new Error(r.error.message);
+      return shapeSnapshot({ store, products: products.data ?? [], prices: prices.data ?? [], costs: costs.data ?? [] });
     },
   };
 }
