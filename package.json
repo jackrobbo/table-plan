@@ -12,6 +12,7 @@
     "content:import": "tsx scripts/import-content.ts",
     "content:verify": "tsx scripts/verify-content.ts",
     "match": "tsx scripts/match-products.ts",
+    "review:recipes": "tsx scripts/review-recipes.ts",
     "basket": "tsx scripts/yappman-basket.ts",
     "prices:refresh": "NODE_USE_ENV_PROXY=1 tsx scripts/refresh-prices.ts",
     "beta:invites": "tsx scripts/make-invites.ts",
