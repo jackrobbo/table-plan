@@ -75,9 +75,14 @@ describe('weekly price job: ingesting a finished run', () => {
     const r = await ingestFeed(dep(db, okFetch(items(5))), body);
     expect(r.status).toBe('failed'); expect(r.reason).toMatch(/50%/); expect(calls.rows).toHaveLength(0); expect(calls.costs).toHaveLength(0);
   });
-  it('fails the run when Apify says it failed, or the dataset cannot be read', async () => {
+  it('still reads the data when Apify labels the run failed but it has a dataset', async () => {
+    const { db, calls } = fakeDb(targets(5));
+    const r = await ingestFeed(dep(db, okFetch(items(5))), { ...body, eventType: 'ACTOR.RUN.FAILED' });
+    expect(r.status).toBe('ok'); expect(calls.rows).toHaveLength(5); expect(String((calls.finished[0] as { notes: string }).notes)).toContain('ACTOR.RUN.FAILED');
+  });
+  it('fails the run when Apify gives no data, or the dataset cannot be read', async () => {
     const a = fakeDb(targets(3));
-    expect((await ingestFeed(dep(a.db), { ...body, eventType: 'ACTOR.RUN.FAILED' })).status).toBe('failed');
+    expect((await ingestFeed(dep(a.db), { runId: RUN, store: 'morrisons', eventType: 'ACTOR.RUN.FAILED' })).status).toBe('failed');
     const b = fakeDb(targets(3));
     const bad = vi.fn(async () => new Response('nope apify_api_SECRETSECRET', { status: 500 })) as unknown as typeof fetch;
     const r = await ingestFeed(dep(b.db, bad), body);

@@ -53,7 +53,7 @@ export async function startFeed(d: FeedDeps, stores: FeedStore[]): Promise<{ sto
       eventTypes: ['ACTOR.RUN.SUCCEEDED', 'ACTOR.RUN.FAILED', 'ACTOR.RUN.TIMED_OUT', 'ACTOR.RUN.ABORTED'],
       requestUrl: `${site}/api/feed/ingest`,
       payloadTemplate: `{"runId":"${runId}","store":"${store}","eventType":{{eventType}},"datasetId":{{resource.defaultDatasetId}}}`,
-      headersTemplate: JSON.stringify({ 'x-feed-secret': d.env.FEED_SECRET }),
+      headersTemplate: JSON.stringify({ 'x-feed-secret': d.env.FEED_SECRET?.trim() }),
     }];
     try {
       const r = await f(`https://api.apify.com/v2/acts/${ACTOR}/runs?webhooks=${encodeURIComponent(b64(JSON.stringify(hook)))}`, {
@@ -84,8 +84,9 @@ export async function ingestFeed(d: FeedDeps, body: IngestBody): Promise<IngestR
   if (!run || run.status !== 'running') return { status: 'ignored', reason: 'unknown or already finished run' };
   const fail = async (notes: string): Promise<IngestResult> => { await d.db.finishRun(run.id, { status: 'failed', rowsReceived: 0, rowsHeld: 0, notes }); return { status: 'failed', reason: notes }; };
 
-  if (body.eventType !== 'ACTOR.RUN.SUCCEEDED') return fail(`Apify run did not succeed: ${body.eventType ?? 'unknown event'}`);
-  if (!body.datasetId || !/^[A-Za-z0-9]+$/.test(body.datasetId)) return fail('no dataset id');
+  // Apify can mark a run failed after it has pushed all its rows (seen on 7 Nov 2026), so judge the data, not the label:
+  // any run with a dataset is read, and the coverage check below decides whether it is good enough to serve.
+  if (!body.datasetId || !/^[A-Za-z0-9]+$/.test(body.datasetId)) return fail(`Apify run ended without data (${body.eventType ?? 'unknown event'})`);
 
   let raw: Record<string, unknown>[];
   try {
@@ -113,6 +114,6 @@ export async function ingestFeed(d: FeedDeps, body: IngestBody): Promise<IngestR
     costs = c.length;
   }
   const status: RunStatus = held.size || v.coverage < 1 ? 'partial' : 'ok';
-  await d.db.finishRun(run.id, { status, rowsReceived: rows.length, rowsHeld: held.size, notes: `coverage ${(v.coverage * 100).toFixed(0)}%, ${v.issues.filter((i) => i.level === 'warn').length} warnings` });
+  await d.db.finishRun(run.id, { status, rowsReceived: rows.length, rowsHeld: held.size, notes: `coverage ${(v.coverage * 100).toFixed(0)}%, ${v.issues.filter((i) => i.level === 'warn').length} warnings${body.eventType === 'ACTOR.RUN.SUCCEEDED' ? '' : `, apify event ${body.eventType}`}` });
   return { status, rows: rows.length, held: held.size, coverage: v.coverage, costs };
 }

@@ -6,12 +6,14 @@ import { ingestFeed, type IngestBody } from '@/lib/server/feed';
 
 const same = (a: string, b: string) => a.length === b.length && timingSafeEqual(Buffer.from(a), Buffer.from(b));
 
+export const maxDuration = 60;
+
 /**
  * Apify's webhook, called when a price run finishes. It proves itself with the `x-feed-secret` header, and the run id in the body
  * must be a run we created that is still open, so a stray or repeated call changes nothing.
  */
 export async function POST(req: Request) {
-  const secret = process.env.FEED_SECRET, got = req.headers.get('x-feed-secret') ?? '';
+  const secret = process.env.FEED_SECRET?.trim(), got = (req.headers.get('x-feed-secret') ?? '').trim();
   if (!secret || !same(got, secret)) return Response.json({ error: 'Not allowed.' }, { status: 401, headers: { 'Cache-Control': 'no-store' } });
   const db = getFeedDb();
   if (!db) return Response.json({ error: 'Not configured.' }, { status: 503, headers: { 'Cache-Control': 'no-store' } });
